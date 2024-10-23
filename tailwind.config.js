@@ -4,7 +4,13 @@ export default {
     "./*.{html,js}",
     "./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        helvetica: ['helvetica', 'sans-serif'],
+        inter: ['inter'],
+        montserrat: ['montserrat'],
+      },
+    },
   },
   plugins: [],
 }
