@@ -19,7 +19,7 @@
             </div>
             <div class="flex items-center gap-5 px-3">
               <div>
-                  <a href="#"><img src="/asset/search.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mt-1 hidden md:inline lg:inline"></a>
+                  <a href="#"><img src="/public/search.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mt-1 hidden md:inline lg:inline"></a>
               </div>
 
               <div>
@@ -27,7 +27,7 @@
               </div>
 
               <div>
-                  <a href="#"><img src="/asset/menu.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mb-2"></a>
+                  <a href="#"><img src="/public/menu.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mb-2"></a>
               </div>
             </div>
           </nav>
@@ -97,30 +97,31 @@
             </div>
           </div>
 
-          <div class="absolute px-[20px] bottom-[50px] lg:bottom-16 left-0 right-0 flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] lg:px-[80px] font-helvetica">
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 ">Living Room</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 ">Dining Room</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 ">Workspace</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 ">Bedroom</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 ">Bathroom</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 ">All Product →</button>
-            <div class="lg:flex w-full items-center gap-4 hidden md:block">
-              <span class="text-xl text-white">01</span>
-                <div class="w-[821px] h-1 bg-gray-300">
-                    <div class="w-[80px] h-1 bg-orange-500"></div>
-                </div>
-                <span class="text-xl text-white">05</span>
+          <div class="absolute bottom-[50px] lg:bottom-[60px] left-0 right-0 flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] lg:px-[80px] font-helvetica">
+            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(0)">Living Room</button>
+            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(1)">Dining Room</button>
+            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(2)">Workspace</button>
+            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(3)">Bedroom</button>
+            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(4)">Bathroom</button>
+            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
+          
+      
+            <!-- Slider Indicator -->
+            <div class=" lg:flex w-full items-center gap-4 hidden md:block">
+              <span id="slider-index" class="text-xl text-white">01</span>
+              <div class="w-[821px] h-1 bg-white relative">
+                <div id="progress-bar" class="absolute top-0 left-0 h-1 bg-[#FF7813]" style="width: 20%;"></div>
+              </div>
+              <span class="text-xl text-white">05</span>
 
-                <div class="flex items-end gap-4 ml-auto">
-                     <button class="flex justify-center items-center w-16 h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none">
-                        &#8592; 
-                    </button>
-                    <button class="flex justify-center items-center w-16 h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none">
-                        &#8594; 
-                    </button>
-                </div>
-            </div>
+              <!-- Navigation Buttons -->
+              <div class="flex items-end gap-4 ml-auto">
+                <button class="flex justify-center items-center w-16 h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black" onclick="prevSlide()">&#8592;</button>
+                <button class="flex justify-center items-center w-16 h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black" onclick="nextSlide()">&#8594;</button>
+              </div>
+            </div>  
           </div>
+        </div>
       </div>
       </header>
 
@@ -210,23 +211,26 @@
         </div>
       </section>
       
-      <section class="container w-full mx-auto md:flex items-start py-[50px] lg:py-[100px] gap-5 ">
+      <section class="container w-full mx-auto md:flex items-start py-[50px] lg:py-[100px] gap-[77px] ">
           <!-- Title Section -->
-          <div class="w-full md:w-1/2 mb-8 px-4 md:mb-0 md:px-0">
-              <div class=" text-black text-left font-helvetica">
+          <div class="mb-8 px-4 md:mb-0 md:px-0">
+              <div class=" text-black text-left font-helvetica lg:w-[475px]">
                   <h1 class="text-[28px] md:text-5xl font-normal leading-9 lg:leading-[60px]">Exploring Our Diverse Categories</h1>
                   <p class="text-sm lg:text-xl text-[#6A7182]  lg:mt-[24px]">There are many categories that you can explore and view for your dream home.</p>
               </div>
           </div>
       
           <!-- Categories Section -->
-          <div class="categories w-full md:w-1/2 px-4 md:px-0 grid grid-cols-1 gap-[10px] lg:gap-[14px]"> 
+          <div class="categories w-full px-4 md:px-0 grid grid-cols-1 gap-[10px] lg:gap-[14px]"> 
             <div class="category-item relative group text-left font-helvetica">
               <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Eaves & Ceiling</h2>
               <p class="text-xs lg:text-sm text-[#6A7182] group-hover:text-gray-300 transition">Interior Design, Furniture And Workspace</p>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-44 md:h-56 rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.4deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
-                    <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
                 </div>
             </div>
 
@@ -236,8 +240,11 @@
               <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Walls</h2>
               <p class="text-xs lg:text-sm text-[#6A7182] group-hover:text-gray-300 transition">Interior Design, Furniture And Workspace</p>
             
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-44 md:h-56 rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.4deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
-                    <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
                 </div>
             </div>
 
@@ -247,8 +254,11 @@
               <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Decoratives</h2>
               <p class="text-xs lg:text-sm text-[#6A7182] group-hover:text-gray-300 transition">Interior Design, Furniture And Workspace</p>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-44 md:h-56 rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.4deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
-                    <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
                 </div>
             </div>
 
@@ -258,8 +268,11 @@
               <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Floors</h2>
               <p class="text-xs lg:text-sm text-[#6A7182] group-hover:text-gray-300 transition">Interior Design, Furniture And Workspace</p>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-44 md:h-56 rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.4deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
-                    <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
                 </div>
             </div>
 
@@ -269,8 +282,11 @@
               <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Accessories</h2>
               <p class="text-xs lg:text-sm text-[#6A7182] group-hover:text-gray-300 transition">Interior Design, Furniture And Workspace</p>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-44 md:h-56 rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.4deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
-                    <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] left-[230px] lg:left-[64%] top-1/2 -translate-y-1/2 ">
+                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
                 </div>
             </div>   
           </div>
@@ -396,33 +412,34 @@
           </button>
         </div>
       
-      <section class="container px-5 lg:px-0 lg:max-w-full text-center">
+        <section class="container px-5 lg:px-0 lg:max-w-full text-center">
+        
           <div class="flex justify-center gap-2 lg:gap-5 pt-[50px] lg:pt-[100px]">
-              <div class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden hover:scale-[1.2] transform transition-transform duration-300">
-                <img src="/asset/gambar3.png" alt="User 1" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden hover:scale-[1.2] transform transition-transform duration-300">
-                <img src="/asset/gambar2.png" alt="User 2" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden hover:scale-[1.2] transform transition-transform duration-300">
-                <img src="/asset/gambar1.png" alt="User 3" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden hover:scale-[1.2] transform transition-transform duration-300">
-                <img src="/asset/gambar4.png" alt="User 4" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden hover:scale-[1.2] transform transition-transform duration-300">
-                <img src="/asset/gambar5.png" alt="User 5" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
+            <div onclick="showCaption(0)" class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <img src="/asset/gambar3.png" alt="User 1" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div onclick="showCaption(1)" class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <img src="/asset/gambar2.png" alt="User 2" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div onclick="showCaption(2)" class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <img src="/asset/gambar1.png" alt="User 3" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div onclick="showCaption(3)" class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <img src="/asset/gambar4.png" alt="User 4" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <div onclick="showCaption(4)" class="w-7 h-7 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <img src="/asset/gambar5.png" alt="User 5" class="w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
+            </div>
           </div>
-          
-            <p class="mx-auto text-lg lg:text-[32px] font-normal text-[#070C17] my-[30px] lg:my-[60px] lg:w-[924px] font-helvetica">
-                Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.
-            </p>
-          
-            <p class="text-sm lg:text-xl font-normal text-[#070C17] lg:mb-[6px] font-helvetica">Michael Cristopher</p>
-            <p class="text-[10px] lg:text-sm text-[#6A7182] mb-[100px] font-helvetica">Owner PT. Airbander</p>
-         
-      </section>
+      
+          <div id="caption-container" class="mx-auto text-lg lg:text-[32px] font-normal text-[#070C17] my-[30px] lg:my-[60px] lg:w-[924px] font-helvetica"> 
+            <p id="caption-text">Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.</p>
+          </div>
+      
+          <p id="caption-name" class="text-sm lg:text-xl font-normal text-[#070C17] lg:mb-[6px] font-helvetica">Michael Cristopher</p>
+          <p id="caption-position" class="text-[10px] lg:text-sm text-[#6A7182] mb-[100px] font-helvetica">Owner PT. Airbander</p>
+      
+        </section>
     </main>
     
     <footer class="bg-[#F8F4F1]">
@@ -436,23 +453,23 @@
             <div class="w-full lg:w-[360px] flex flex-col lg:gap-[30px] md:items-end">
               <div class="flex gap-4 ml-0 md:ml-6 mt-2 md:mt-0 justify-center">
                   <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/asset/facebook.svg" alt="Facebook" class="w-3 h-3">
+                      <img src="/public/facebook.svg" alt="Facebook" class="w-3 h-3">
                   </a>
                   <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/asset/twitter.svg" alt="Twitter" class="w-3 h-3">
+                      <img src="/public/twitter.svg" alt="Twitter" class="w-3 h-3">
                   </a>
                   <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/asset/instagram.svg" alt="Instagram" class="w-3 h-3">
+                      <img src="/public/instagram.svg" alt="Instagram" class="w-3 h-3">
                   </a>
                   <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/asset/linkedin.svg" alt="LinkedIn" class="w-3 h-3">
+                      <img src="/public/linkedin.svg" alt="LinkedIn" class="w-3 h-3">
                   </a>
               </div>
               <div class="mt-[30px] w-full">
                   <h3 class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica">Newsletter</h3>
                   <form class="flex items-center mt-3 w-full">
-                      <input type="email" placeholder="Your Email" class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-gray-600 bg-transparent">
-                        <button type="submit" class="border-b border-gray-400 text-gray-600 bg-transparent py-1 focus:outline-none">
+                      <input type="email" placeholder="Your Email" class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent">
+                        <button type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
                             → 
                         </button>
                   </form>
@@ -486,8 +503,74 @@
               <a href="#" class="hover:text-gray-700 font-normal">Privacy Policy</a>
           </div>
       </div>
-  </footer>
+    </footer>
 
+    <!-- script slider -->
+    <script>
+      let currentIndex = 0;
+      const totalSlides = 5;
+
+      function updateSlider() {
+        document.getElementById("slider-index").innerText = String(currentIndex + 1).padStart(2, '0');
+
+        const progressBar = document.getElementById("progress-bar");
+        progressBar.style.width = ((currentIndex + 1) / totalSlides) * 100 + "%";
+      }
+
+      function selectSlide(index) {
+        currentIndex = index;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      updateSlider();
+    </script>
+
+    <!-- script caption -->
+    <script>
+      const captions = [
+        {
+          text: "The design and results from Kayyon truly matched our expectations. Elegant and functional!",
+          name: "Johnson",
+          position: "Creative Director at DesignHub"
+        },
+        {
+          text: "Kayyon's service was very professional. We are pleased with the results of this collaboration.",
+          name: "David Lee",
+          position: "CEO of InnovateCorp"
+        },
+        {
+          text: "Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.",
+          name: "Michael Cristopher",
+          position: "Owner PT. Airbander"
+        },
+        {
+          text: "The quality of Kayyon's product and design details is highly satisfying, perfect for our business needs.",
+          name: "Adams",
+          position: "Managing Director at Luxe Interiors"
+        },
+        {
+          text: "A very productive collaboration with outstanding results. We will definitely work together again.",
+          name: "Alex Gomez",
+          position: "Project Manager at UrbanSpaces"
+        }
+      ];
+  
+      function showCaption(index) {
+        document.getElementById("caption-text").innerText = captions[index].text;
+        document.getElementById("caption-name").innerText = captions[index].name;
+        document.getElementById("caption-position").innerText = captions[index].position;
+      }
+    </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
