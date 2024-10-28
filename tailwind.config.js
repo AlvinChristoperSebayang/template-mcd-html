@@ -2,10 +2,14 @@
 export default {
   content: [
     "./*.{html,js}",
-    "./src/**/*.{html,js}"],
+    "./src/**/*.{html,js}"
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'], 
+      },
+    },
   },
   plugins: [],
 }
-
