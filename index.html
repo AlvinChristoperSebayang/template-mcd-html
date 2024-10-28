@@ -2,15 +2,96 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Vite App</title>
+    <style>
+      a, h1, h2, h3, p, span{
+        @apply font-instrument !important
+      }
+    </style>
   </head>
   <body>
-    <header id="site-header"></header>
-    <main id="site-main">
+    <header class="w-full p-4 ">
+      <div class="max-w-screen-xl mx-auto flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+              <img src="logo.png" alt="Logo" class="w-[38px] h-[38px] sm:w[15px] sm:h-[20px] md:w[35px] md:h-[40px] lg:w[63px] lg:h-[58px] xl:w[63px] xl:h-[48px]">
+              <h1 class="text-[10px] sm:text[10px] md:text-[15px] lg:text-[25px] xl:text-[25px] text-black items-center font-medium">Makan Samurai</h1>
+          </div>
+          <nav>
+              <ul class="flex font-medium gap-[20px] sm:gap-[20px] md:gap-[40px] lg:gap-[63px] xl:gap-[73px]">
+                  <li><a href="#" class="text-black text-[7px] sm:text-base md:text-[10px] lg:text-[15px] xl:text-[15px]">Product</a></li>
+                  <li><a href="#" class="text-black text-[7px] sm:text-base md:text-[10px] lg:text-[15px] xl:text-[15px]">About</a></li>
+                  <li><a href="#" class="text-black text-[7px] sm:text-base md:text-[10px] lg:text-[15px] xl:text-[15px]">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
 
-    </main>
+  <main id="site-main">
+    <section class="Hero-Section w-full h-auto py-10">
+      <div class="container mx-auto flex items-center ">
+        <!-- Kontainer Teks dan Kategori Makanan -->
+        <div class="w-1/2 space-y-6">
+          <h1 class="text-[85px] font-semibold leading-[103px]">
+            Discovering <br>
+            <span class="text-[#730202B2]">Indonesia’s</span> <br>
+            classic dishes
+          </h1>
+          <div class="mx-w-[50%]">
+          <p class="text-gray-600 mb-8 w-[511px] h-[72px] leading-[24px]">
+            Bringing Indonesia’s culinary heritage to life in the modern kitchen with classic recipes that capture authentic flavors and techniques while encouraging a new generation of food lovers to explore this rich cuisine.
+          </p>
+        </div>
+          <div class="flex space-x-4">
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center w-1/3">
+              <img alt="Ayam Gulai" class="w-16 h-16 mx-auto mb-2 rounded-full" src="nasiUduk.png"/>
+              <h2 class="text-lg font-bold">Ayam Gulai</h2>
+              <p class="text-gray-500 text-sm">Nasi putih, ayam gulai, dan sambal terasi</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center w-1/3">
+              <img alt="Nasi Sate Lilit" class="w-16 h-16 mx-auto mb-2 rounded-full" src="nasiUduk.png"/>
+              <h2 class="text-lg font-bold">Nasi Sate Lilit</h2>
+              <p class="text-gray-500 text-sm">Nasi putih, sate lilit, dan sayur urap</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 text-center w-1/3">
+              <img alt="Gorengan" class="w-16 h-16 mx-auto mb-2 rounded-full" src="nasiUduk.png"/>
+              <h2 class="text-lg font-bold">Gorengan</h2>
+              <p class="text-gray-500 text-sm">Berbagai macam gorengan, tempe, dan tahu</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Kontainer Gambar Utama -->
+        <div class="w-1/2 relative flex justify-center">
+          <img alt="img utama" class=" rounded-full w-[650px] h-[648px] object-cover" src="nasiUduk.png"/>
+          
+          <!-- card Diskon -->
+          <div class="absolute top-[92px] left-6 w-[219px] h-[105px] bg-white bg-opacity-50 backdrop-blur-md p-2 rounded-lg shadow-lg text-center">
+            <p class="text-red-600 font-bold text-lg">5%</p>
+            <p class="text-gray-600 text-sm">Discount for 2 orders</p>
+          </div>
+  
+          <!-- rating -->
+          <div class="absolute bottom-6 right-6 flex items-center bg-white p-2 rounded-lg shadow-lg">
+            <img alt="User profile picture" class="w-10 h-10 rounded-full mr-2" src="nasiUduk.png"/>
+            <div>
+              <p class="text-gray-800 font-bold">Our Happy Guests</p>
+              <p class="text-yellow-500 text-sm">
+                <i class="fas fa-star"></i> 4.8 (123 Reviews)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  
+
     <footer id="site-footer"></footer>
     <script type="module" src="/main.js"></script>
   </body>

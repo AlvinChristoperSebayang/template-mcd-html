@@ -4,7 +4,11 @@ export default {
     "./*.{html,js}",
     "./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'instrument': ['"Instrument Sans"'],
+      },
+    },
   },
   plugins: [],
 }
