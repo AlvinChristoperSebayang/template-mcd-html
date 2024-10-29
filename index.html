@@ -97,16 +97,24 @@
             </div>
           </div>
 
-          <div class="absolute bottom-[50px] lg:bottom-[60px] left-0 right-0 flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] lg:px-[80px] font-helvetica">
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(0)">Living Room</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(1)">Dining Room</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(2)">Workspace</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(3)">Bedroom</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(4)">Bathroom</button>
-            <button class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
-          
-      
-            <!-- Slider Indicator -->
+          <div class="absolute bottom-[160px] lg:bottom-[60px] left-0 right-0 flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-[80px] font-helvetica">
+
+            <select class="md:hidden text-sm text-white bg-transparent border border-[#DADADA] py-[8px] px-[10px] rounded-full" onchange="handleDropdownChange(event)">
+              <option class="text-black" value="all">See More Product</option>
+              <option class="text-black" value="0">Living Room</option>
+              <option class="text-black" value="1">Dining Room</option>
+              <option class="text-black" value="2">Workspace</option>
+              <option class="text-black" value="3">Bedroom</option>
+              <option class="text-black" value="4">Bathroom</option>
+            </select>
+
+            <button class="hidden md:inline-block text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(0)">Living Room</button>
+            <button class="hidden md:inline-block text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(1)">Dining Room</button>
+            <button class="hidden md:inline-block text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(2)">Workspace</button>
+            <button class="hidden md:inline-block text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(3)">Bedroom</button>
+            <button class="hidden md:inline-block text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(4)">Bathroom</button>
+            <button class="hidden md:inline-block text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
+                
             <div class=" lg:flex w-full items-center gap-4 hidden md:block">
               <span id="slider-index" class="text-xl text-white">01</span>
               <div class="w-[821px] h-1 bg-white relative">
@@ -114,7 +122,6 @@
               </div>
               <span class="text-xl text-white">05</span>
 
-              <!-- Navigation Buttons -->
               <div class="flex items-end gap-4 ml-auto">
                 <button class="flex justify-center items-center w-16 h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black" onclick="prevSlide()">&#8592;</button>
                 <button class="flex justify-center items-center w-16 h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black" onclick="nextSlide()">&#8594;</button>
@@ -134,7 +141,7 @@
         <div class="product px-[20px] lg:px-0 pt-10 ">
             <div class="lg:flex gap-[15px]">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-[413px] h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                    <img src="/asset/image1.png" alt="Table" class="w-full h-full object-cover ">
+                  <img src="/asset/image1.png" alt="Table" class="w-full h-full object-cover ">
         
                     <div class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
                         <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
@@ -150,14 +157,14 @@
                             <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
                         </div>
                     </div>
-        
+
                     <div class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
                         <h2 class="text-lg lg:text-2xl font-normal">Tables</h2>
                         <p class="text-gray-500">Bok extendable table</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-[413px] h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                    <img src="/asset/image2.png" alt="Table" class="w-full h-full object-cover">
+                  <img src="/asset/image2.png" alt="Table" class="w-full h-full object-cover">
         
                     <div class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
                         <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
@@ -180,7 +187,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-[413px] h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                    <img src="/asset/image3.png" alt="Table" class="w-full h-full object-cover">
+                  <img src="/asset/image3.png" alt="Table" class="w-full h-full object-cover">
         
                     <div class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
                         <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
@@ -204,7 +211,7 @@
                 </div>
             </div>
             <div class="relatative bottom-0 w-full text-left pt-10">
-                <button class=" bg-transparent  text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-gray-300 transition-all md:px-10 md:py-3 px-[6px] py-[3px] text-[10px] md:text-[16px] font-helvetica">
+                <button class=" bg-transparent  text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all md:px-10 md:py-3 px-[6px] py-[3px] text-[10px] md:text-[16px] font-helvetica">
                     See more product →
                 </button>
             </div>
@@ -296,7 +303,7 @@
           <h1 class="text-[24px] lg:text-[64px] font-normal lg:w-[714px] font-helvetica">Standing Desk Touch - Table Workspace</h1>
           <div class="flex justify-between w-full">
               <h1 class="text-xs lg:text-xl font-helvetica">Interior Design, Furniture And Workspace</h1>
-              <a href="#" class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-gray-300 transition">See Product →</a>
+              <a href="#" class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white transition">See Product →</a>
           </div>
 
           <!-- card 1 -->
@@ -407,7 +414,7 @@
           </div>
         </div>
         <div class="relatative w-full text-center pt-5 pb-[50px] lg:pt-10 lg:pb-[100px]">
-          <button class=" bg-transparent text-xs lg:text-base text-center text-black font-normal border-[1px] px-[12px] py-[5px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-gray-300 transition-all font-helvetica">
+          <button class=" bg-transparent text-xs lg:text-base text-center text-black font-normal border-[1px] px-[12px] py-[5px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-black hover:text-white transition-all font-helvetica">
               Our more project →
           </button>
         </div>
@@ -504,6 +511,19 @@
           </div>
       </div>
     </footer>
+
+    <!-- dropdown mobile -->
+    <script>
+      function handleDropdownChange(event) {
+        const value = event.target.value;
+        if (value === "all") {
+         
+          console.log("Tampilkan semua produk");
+        } else {
+          selectSlide(parseInt(value));
+        }
+      }
+    </script>
 
     <!-- script slider -->
     <script>
