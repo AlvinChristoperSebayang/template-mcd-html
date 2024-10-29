@@ -5,9 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Vite App</title>
     <style>
-      li, span, h1{
+      li, span, h1, p{
         @apply font-plus-jakarta
       }
       .hidden {
@@ -83,16 +84,16 @@
       </div>
 
       <!-- Button Sign In -->
-      <button class="hidden md:flex justify-center items-center md:py-[12px] md:px-[20px] lg:py-[16px] lg:px-[24px] rounded-[100px] bg-black">
+      <a class="hidden md:flex justify-center items-center md:py-[12px] md:px-[20px] lg:py-[16px] lg:px-[24px] rounded-[100px] bg-black">
         <span class="font-semibold text-white md:text-[12px] lg:text-[16px] md:leading-[16px] lg:leading-[20px]">Sign Up</span>
-      </button>  
+      </a>  
 
     </header>
 
     <main id="site-main" class="flex flex-col w-auto h-auto">
 
       <!-- Hero Section -->
-      <section class="w-full h-auto bg-[#F4FFE6] py-[16px] px-[30px] md:py-[20px] md:px-[70px] lg:py-[24px] lg:px-[120px]">
+      <section class="w-full h-auto bg-[#F4FFE6] py-[16px] px-[30px] md:py-[20px] md:px-[70px] xl:py-[24px] xl:px-[120px]">
 
         <h1 class="font-bold text-black text-center text-[128px] leading-[128px]">
           Boost Your Productivity. Simplify Your Day.
@@ -100,13 +101,162 @@
 
         <div class="flex flex-col w-[336px] h-auto gap-[16px] mt-[103px]">
 
-          <span>
+          <span class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">
             Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
           </span>
 
-          <button class="w-fit justify-center items-center md:py-[12px] md:px-[20px] lg:py-[16px] lg:px-[32px] rounded-[100px] bg-black">
+          <a class="w-fit justify-center items-center md:py-[12px] md:px-[20px] lg:py-[16px] lg:px-[32px] rounded-[100px] bg-black">
             <span class="font-bold text-white md:text-[12px] lg:text-[16px] md:leading-[20px] lg:leading-[24px]">Download Now</span>
-          </button>
+          </a>
+
+        </div>
+
+        <!-- <figure class="absolute left-1/2 transform -translate-x-1/2 -mt-[560px] justify-items-center">
+          <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="w-[426px] h-[880px] justify-center items-end">
+        </figure> -->
+
+        <div class="flex flex-row w-[220px] h-[62px] gap-[40px] ml-auto -mt-[31px]">
+
+          <div class="flex flex-col w-[82px] h-[62px] gap-[3px]">
+            <span class="font-bold text-[32px] leading-[32px] text-black">2K+</span>
+            <span class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">Active Users</span>
+          </div>
+
+          <div class="flex flex-col w-[98px] h-[62px] gap-[3px]">
+            <span class="font-bold text-[32px] leading-[32px] text-black">100K+</span>
+            <span class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">Download</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="flex flex-col w-full h-auto py-[16px] px-[30px] md:py-[20px] md:px-[70px] lg:py-[80px] lg:px-[120px] gap-[24px]">
+
+        <div class="flex flex-row justify-between">
+          <span class="w-[507px] font-semibold text-[48px] leading-[58px]">Used by various roles in various companies</span>
+          <p class="w-[501px] self-end font-normal text-[14px] leading-[26px] text-right text-[#6D6D6D]">
+            Empowering Professionals in Every Industry—From Managers to Creatives—Prodify Helps Teams Stay Organized, Improve Collaboration, and Reach Their Productivity Goals Faste</p>
+        </div>
+
+        <div class="bg-[#F6F6F6] h-[139px] flex flex-row items-center gap-[48px] py-[48px] rounded-[16px]">
+          <span class="font-bold text-[36px] leading-[43px] text-[#888888]">Student</span>
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
+          <span class="font-bold text-[36px] leading-[43px] text-[#888888]">CEO</span>
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
+          <span class="font-bold text-[36px] leading-[43px] text-[#888888]">Trainer</span>
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
+          <span class="font-bold text-[36px] leading-[43px] text-[#888888]">Product Manager</span>
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
+          <span class="font-bold text-[36px] leading-[43px] text-[#888888]">Designer</span>
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
+        </div>
+
+      </section>
+
+      <section class="flex flex-col w-full h-auto gap-[20px] py-[80px] px-[120px]">
+
+        <div class="flex flex-row gap-[20px]">
+
+          <div class="flex flex-col w-[50%] h-[556px] justify-between rounded-[24px] p-[48px] bg-[#F4FFE6]">
+
+            <span class="font-semibold text-[48px] leading-[48px]">All-in-One Productivity Solution</span>
+
+            <div class="flex flex-col gap-[24px]">
+              <span class="font-normal text-[14px] leading-[26px]">From task management to reminders, calendar integration to focus mode, Prodify gives you the tools to boost your productivity and take control of your time.</span>
+
+              <a class="w-fit justify-center items-center md:py-[12px] md:px-[20px] lg:py-[16px] lg:px-[32px] rounded-[100px] bg-black">
+                <span class="font-bold text-white md:text-[12px] lg:text-[16px] md:leading-[20px] lg:leading-[24px]">Download Now</span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="flex flex-col w-[50%] h-[556px] justify-between items-center rounded-[24px] p-[48px] border border-[#E7E7E7]">
+
+            <figure>
+              <img src="public/illustration.png" class="w-[355px] h-[304px] items-center" alt="illustration">
+            </figure>
+
+            <span class="font-semibold text-[48px] leading-[48px]">Do more and stay productive</span>
+            
+          </div>
+
+        </div>
+
+        <div class="flex flex-row gap-[20px]">
+
+          <div class="flex flex-col items-center w-[33.33%] h-[499px] rounded-[24px] p-[24px] gap-[32px] border border-[#E7E7E7]">
+
+            <figure>
+              <img src="todolist.png" class="object-cover object-left w-auto h-[296px] items-center" alt="calendar">
+            </figure>
+
+            <div class="flex flex-col gap-[8px]">
+              <span class="font-bold text-[32px] leading-[40px]">To-do Lists</span>
+              <p class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">
+                Organize tasks with categories, priorities, and deadlines. Break down tasks with subtasks and track your progress with ease.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex flex-col items-center w-[33.33%] h-[499px] rounded-[24px] p-[24px] gap-[24px] border border-[#E7E7E7]">
+
+            <div class="flex flex-col gap-[8px]">
+              <span class="font-bold text-[32px] leading-[40px]">Smart Calendar</span>
+              <p class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">
+                Integrate with your favorite calendar apps and manage tasks alongside events. Stay on top of your schedule with color-coded views and smart reminders.
+              </p>
+            </div>
+
+            <figure>
+              <img src="calendar.png" class="w-[338px] h-[278px] items-center" alt="calendar">
+            </figure>
+
+          </div>
+
+          <div class="flex flex-col items-center w-[33.33%] h-[499px] rounded-[24px] p-[24px] gap-[32px] border border-[#E7E7E7]">
+
+            <figure>
+              <img src="timer.png" alt="Focus-Mode" class="w-[339px] h-[307px]">
+            </figure>
+
+            <div class="flex flex-col gap-[8px]">
+              <span class="font-bold text-[32px] leading-[40px]">Focus Mode</span>
+              <p class="font-normal text-[14px] leading-[26px] text-[#6D6D6D]">
+                Use the Pomodoro timer to stay focused. Block distractions and track your productive time.
+              </p>
+            </div>
+
+          </div>
+      
+        </div>
+
+      </section>
+
+      <section class="flex flex-col w-full h-auto items-center gap-[72px] py-[80px] px-[120px]">
+
+        <span class="font-semibold text-[48px] leading-[60px] w-[715px] text-center">Word of praise from others about our presence.</span>
+
+      </section>
+
+      <section class="flex flex-col w-full h-auto gap-[72px] py-[80px] px-[120px]">
+
+        <div class="bg-[#F4FFE6] w-full h-[296px] py-[48px] px-[72px] gap-[96px] rounded-[16px]">
+
+          <div class="flex flex-col gap-[24px] items-center">
+
+            <div class="flex flex-col w-full items-center gap-[8px]">
+              <span class="font-semibold text-[64px] leading-[80px] text-center">Download Now</span>
+              <p class="font-normal text-[14px] leading-[26px]">“Prodify has changed the way I work! The focus mode and reminders have boosted my productivity significantly.”</p>
+            </div>
+
+            <a href="/" class="w-fit justify-center items-center md:py-[12px] md:px-[20px] lg:py-[16px] lg:px-[32px] rounded-[100px] bg-black">
+              <span class="font-bold text-white md:text-[12px] lg:text-[16px] md:leading-[20px] lg:leading-[24px]">Download Now</span>
+            </a>
+
+          </div>
 
         </div>
 
@@ -114,7 +264,68 @@
 
     </main>
 
-    <footer id="site-footer">
+    <footer id="site-footer" class="flex flex-col w-full h-auto gap-[72px] py-[80px] px-[120px]">
+
+      <div class="flex flex-row w-full h-auto justify-between">
+
+        <span class="font-bold text-[48px] leading-[60px] w-[25.58%]">All in one productivity software</span>
+
+        <ul class="flex flex-col gap-[16px] w-auto h-auto">
+          <li class="font-semibold text-[24px] leading-[30px]">
+            <a href="">Menu</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Home</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Features</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">About Us</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Download</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Blog</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="flex flex-col gap-[16px] w-auto h-auto">
+          <li class="font-semibold text-[24px] leading-[30px]">
+            <a href="">Support</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">FAQ</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Tutorial</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Help Cneter</a>
+          </li>
+        </ul>
+
+        <ul class="flex flex-col gap-[16px] w-auto h-auto">
+          <li class="font-semibold text-[24px] leading-[30px]">
+            <a href="">Legal</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Tem Of Service</a>
+          </li>
+          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
+            <a href="">Privacy policy</a>
+          </li>
+        </ul>
+
+        <div class="flex flex-row gap-[16px]"></div>
+
+        <div class="flex flex-row gap-[16px]"></div>
+
+      </div>
 
     </footer>
 
