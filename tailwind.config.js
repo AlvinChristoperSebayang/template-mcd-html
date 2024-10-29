@@ -7,7 +7,11 @@ export default {
     extend: {
       fontFamily: {
         'instrument': ['"Instrument Sans"'],
+        'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'], 
       },
+      rotate: {
+        '-180': '-180deg',
+      }
     },
   },
   plugins: [],
