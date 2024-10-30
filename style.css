@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
+html {
+  scroll-behavior: smooth;
+}
+
+#site-header .navigation-wrapper {
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }
 
@@ -10,6 +14,193 @@
   min-height: calc(100vh - 240px);
 }
 
-#site-footer .footer-wrapper{
+#site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
+}
+
+.hero {
+  @apply container sm:mt-[29px] md:mt-[33px] relative;
+}
+
+.hero svg {
+  @apply absolute top-[50px] right-0;
+}
+
+.hero-title {
+  @apply xl:w-[682px];
+}
+
+.hero-gallery {
+  @apply flex flex-row sm:mt-[51px] md:mt-[33px];
+}
+
+.hero-gallery :nth-child(2) {
+  @apply sm:hidden md:block;
+}
+
+.wedding-section {
+  @apply flex flex-col items-center sm:mt-[43px] md:mt-[83px];
+}
+
+.wedding-section .content {
+  @apply flex sm:flex-col md:flex-row sm:mt-[13px] md:mt-[105px] sm:justify-center sm:items-center md:gap-9 md:w-full;
+}
+
+.wedding-section img:nth-child(1) {
+  @apply sm:max-md:w-[99px] w-full max-w-[2000px];
+}
+
+.wedding-section .ornament-and img {
+  @apply w-[240px] my-[12px];
+}
+
+.wedding-section .content figure {
+  @apply sm:flex sm:items-center sm:justify-center;
+}
+
+.wedding-section img:nth-child(3) {
+  @apply sm:mt-[25px] sm:max-w-[99px];
+}
+
+.name-group {
+  @apply flex flex-col sm:mt-[45px];
+}
+
+.story-section {
+  @apply pt-[89px] text-center;
+}
+
+.story-section h3 {
+  @apply mt-[8px];
+}
+
+.story-section .text-content {
+  @apply gap-[8px];
+}
+
+.story-section img {
+  @apply w-full;
+}
+
+.story-section .title-description {
+  @apply flex flex-col gap-[28px];
+}
+
+.title-description {
+  @apply w-full text-center flex flex-col sm:gap-[17px] items-center;
+}
+
+.title-description p {
+  @apply md:w-1/2 text-center;
+}
+
+.story-section .content-group {
+  @apply flex sm:flex-col md:flex-row  mt-[45px] text-left gap-[26px];
+}
+
+.story-section .content-group div div {
+  @apply flex flex-col sm:max-md:w-[250px];
+}
+
+.schedule-section {
+  @apply pt-[89px] text-center flex flex-col justify-between md:h-[996px];
+}
+
+.schedule-section .title-description {
+  @apply flex flex-col gap-[28px] text-center;
+}
+
+.schedule-section li {
+  @apply flex flex-row  gap-[6px] items-start;
+}
+
+.schedule-section ul {
+  @apply flex flex-col gap-[12px] w-[269px] text-left mt-[23px];
+}
+
+.schedule-section .button {
+  @apply md:flex md:flex-row  gap-[12px] mt-[12px];
+}
+
+.gallery-section {
+  @apply pt-[89px] text-center flex flex-col justify-between;
+}
+
+.gallery-section .content {
+  @apply grid sm:grid-cols-2 md:grid-cols-4 grid-rows-3  gap-[24px] mt-[39px];
+}
+
+.gallery-section figure * {
+  @apply md:w-[315px] md:h-[311px] h-[117px] sm:w-full relative;
+}
+
+.gallery-section img {
+  @apply object-cover w-full;
+}
+
+.gift-section {
+  @apply sm:mt-[36px] md:pt-[89px] text-center flex flex-col justify-between xl:h-[676px] gap-[43px];
+}
+
+.gift-section .content {
+  @apply flex sm:flex-col md:flex-row justify-center;
+}
+
+.gift-section figure {
+  @apply flex place-content-center;
+}
+
+.digital-gift {
+  @apply px-[51px] py-[41px] sm:space-y-2 flex-col;
+}
+
+.digital-gift p {
+  @apply items-start text-start;
+}
+
+.digital-gift form {
+  @apply flex sm:flex-col md:flex-row sm:items-center mt-[8px];
+}
+
+.offline-gift {
+  @apply bg-[#9D7C6B] px-[51px] py-[41px] space-y-[24px];
+}
+
+.offline-gift p {
+  @apply items-start text-start;
+}
+
+footer figure {
+  @apply sm:scale-75;
+}
+
+footer figure:nth-child(1) {
+  @apply sm:hidden;
+}
+
+.navbar-mobile.open {
+  left: 0; /* Pindahkan navbar ke posisi terlihat */
+}
+
+/* Menampilkan menu dengan efek fade-in */
+#navigation-mobile.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Agar tidak bisa scroll saat menu aktif */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#navigation-mobile {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none; /* Mencegah interaksi saat tersembunyi */
 }

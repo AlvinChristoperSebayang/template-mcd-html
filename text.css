@@ -1,0 +1,31 @@
+html {
+  @apply text-[#9D7C6B] md:text-[16px] sm:text-[12px] font-playfair md:font-normal;
+}
+
+h2 {
+  @apply md:text-[48px] sm:text-[24px] font-dancing font-bold;
+}
+
+h3 {
+  @apply font-bold text-[18px];
+}
+
+#countdown p {
+  @apply sm:text-[14px];
+}
+
+#countdown p:nth-child(2) {
+  @apply sm:text-[24px] md:text-[48px];
+}
+
+#schedule-countdown p:nth-child(2) {
+  @apply sm:text-[24px] md:text-[48px];
+}
+
+.schedule-section li {
+  @apply sm:text-[14px] md:text-[20px];
+}
+
+.navigation-mobile a {
+  @apply text-[24px];
+}

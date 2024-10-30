@@ -1,0 +1,27 @@
+.hero .countdown {
+  @apply w-full flex flex-col items-center sm:mt-[19px] md:mt-[13px] justify-center sm:gap-[12px] md:gap-[16px] xl:gap-[24px];
+}
+
+.hero .countdown div {
+  @apply md:gap-[16px] xl:gap-[24px] sm:gap-[8px];
+}
+
+.schedule-section .countdown {
+  @apply sm:mt-[32px] w-full flex flex-col items-center md:mt-[13px] justify-center sm:gap-[12px] md:gap-[24px];
+}
+
+.schedule-section .countdown div {
+  @apply md:gap-[24px] xl:gap-[34px] sm:gap-[12px];
+}
+
+.schedule-section .button * {
+  @apply px-[10px] py-[5px] border border-[#9D7C6B] rounded-lg sm:mt-[8px];
+}
+
+.offline-gift button {
+  @apply px-[10px] py-[5px] border border-white;
+}
+
+.gift-section input {
+  @apply sm:w-full sm:py-[8px] md:w-[315px] pl-[12px] border border-[#9D7C6B] rounded-lg;
+}

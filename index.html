@@ -1,17 +1,636 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/animate.css" />
+    <link href="./hamburgers.css" rel="stylesheet" />
     <title>Vite App</title>
   </head>
   <body>
-    <header id="site-header"></header>
-    <main id="site-main">
+    <header id="site-header">
+      <div class="sm:block md:hidden hamburger container z-10">
+        <button id="hamburger" class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <nav
+        id="navigation-mobile"
+        class="open sm:block md:hidden z-50 w-screen h-screen bg-white absolute has-[:checked]:translate-x-[100px] transition-all duration-500"
+      >
+        <div class="container">
+          <ul class="flex flex-col items-center h-full gap-28">
+            <li class="hover:scale-110 duration-200">
+              <a href="#home">Home</a>
+            </li>
+            <li class="hover:scale-110 duration-200">
+              <a href="#event">Event</a>
+            </li>
+            <li class="hover:scale-110 duration-200">
+              <a href="#story">Our Story</a>
+            </li>
+            <li class="hover:scale-110 duration-200">
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="hover:scale-110 duration-200">
+              <a href="#gift">Gift</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
+      <nav
+        data-aos="fade-down"
+        class="navigation-desktop sm:hidden md:flex container mt-[32px]"
+      >
+        <ul class="flex flex-row justify-end gap-[32px]">
+          <li class="hover:scale-110 duration-200">
+            <a href="#home">Home</a>
+          </li>
+          <li class="hover:scale-110 duration-200">
+            <a href="#event">Event</a>
+          </li>
+          <li class="hover:scale-110 duration-200">
+            <a href="#story">Our Story</a>
+          </li>
+          <li class="hover:scale-110 duration-200">
+            <a href="#gallery">Gallery</a>
+          </li>
+          <li class="hover:scale-110 duration-200">
+            <a href="#gift">Gift</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="site-main">
+      <section id="home" class="hero">
+        <div
+          data-aos="fade-left"
+          class="flex sm:flex-col md:flex-row sm:items-center md:justify-between"
+        >
+          <figure class="sm:block md:hidden place-self-end">
+            <img
+              class="ring-symbol sm:h-[38px] md:w-[104px] md:h-[73px] w-auto top-0"
+              src="./public/ornament/ring.svg"
+              alt=" Ring"
+            />
+          </figure>
+
+          <h1
+            data-aos="fade-right"
+            class="hero-title md:w-1/2 md:text-left xl:text-[120px] md:text-7xl sm:text-[40px] sm:text-center leading-tight md:font-normal sm:font-bold"
+          >
+            Wedding
+            <br />
+            Invitation
+          </h1>
+          <div
+            data-aos="fade-left"
+            class="flex md:w-1/2 h-full flex-col items-end relative"
+          >
+            <figure class="sm:hidden md:block w-100px top-[30px]">
+              <img
+                class="ring-symbol sm:h-[38px] md:w-[104px] md:h-[73px] w-auto top-0"
+                src="./public/ornament/ring.svg"
+                alt=" Ring"
+              />
+            </figure>
+
+            <p
+              class="hero-quote md:place-content-end sm:text-center sm:mt-[12px] xl:w-[334px] sm:text-[14px] md:text-start xl:text-[16px] md:text-[14px] md:w-[280px]"
+            >
+              With Your blessing, you brought us together in a holy marriage
+              bond
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-zoom-in"
+          class="hero-gallery sm:before:hidden sm:after:hidden md:before:block md:after:block md:scale-90 xl:scale-100 relative after:-z-10 before:-z-10 after:h-52 after:w-[95px] after:bg-no-repeat md:after:scale-[0.7] xl:after:scale-100 after:bg-[url('./public/ornament/flower_right.svg')] after:absolute md:after:end-[-70px] xl:after:end-[-58px] after:bottom-[-60px] before:h-52 before:w-[150px] before:bg-no-repeat md:before:scale-[0.7] xl:before:scale-100 before:bg-[url('./public/ornament/flower_left.svg')] before:absolute md:before:left-[-85px] xl:before:left-[-55px] before:bottom-[-60px]"
+        >
+          <figure data-aos="zoom-out" data-aos-delay="500">
+            <img src="./src/img/image (1).png" alt="Wedding Pict 1" />
+          </figure>
+          <figure data-aos="zoom-out" data-aos-delay="1000">
+            <img src="./src/img/image (2).png" alt="Wedding Pict 1" />
+          </figure>
+          <figure data-aos="zoom-out" data-aos-delay="1500">
+            <img src="./src/img/image (3).png" alt="Wedding Pict 1" />
+          </figure>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          class="countdown relative after:bg-[url('./public/ornament/countdown_underline.svg')] sm:after:hidden md:after:block after:absolute after:h-96 after:w-[1300px] md:after:scale-[0.55] xl:after:scale-100 md:after:mt-32 xl:after:mt-20 after:mx-auto"
+        >
+          <h3 class="font-serif md:text-[48px] sm:text-[24px]">Countdown</h3>
+          <div id="countdown" class="flex flex-row text-center">
+            <div class="flex flex-col">
+              <p>Day</p>
+              <p class="font-bold" id="days"></p>
+            </div>
+            <div class="flex flex-col">
+              <p>Hours</p>
+              <p class="font-bold" id="hours"></p>
+            </div>
+            <div class="flex flex-col">
+              <p>Minutes</p>
+              <p class="font-bold" id="minutes"></p>
+            </div>
+            <div class="flex flex-col">
+              <p>Seconds</p>
+              <p class="font-bold" id="seconds"></p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="md:hidden">
+          <img src="./public/ornament/countdown_underline.svg" alt="" />
+        </figure>
+      </section>
+
+      <section id="event" class="wedding-section container">
+        <div class="title-description">
+          <h2 class="font-bold font-dancing sm:text-[24px] md:text-[48px] tlt">
+            The Wedding
+          </h2>
+          <!-- prettier-ignore -->
+          <p
+            class="description sm:text-[12px] md:text-[16px] xl:text-[24px] tlt"
+          >Maha Suci Allah SWT yang telah menciptakan makhluk berpasangan. Ya Allah, terimalah dan berkahi kami</p>
+        </div>
+
+        <div class="content">
+          <div
+            class="animate-element"
+            data-aos="fade-zoom-in"
+            data-aos-anchor=".female-name"
+          >
+            <figure class="ornament relative md:scale-[0.6] xl:scale-75 scale">
+              <img src="./src/img/male.png" alt="Pict of male" />
+              <img
+                class="absolute md:bottom-[-50px] sm:bottom-[-20px] scale-[1.8]"
+                src="./public/ornament/pict_flower.svg"
+                alt="Flower Background"
+              />
+            </figure>
+          </div>
+
+          <div data-aos="fade-down" class="name-group">
+            <div class="male-name text-center flex flex-col sm:gap-[8px]">
+              <p
+                class="text-center sm:text-[24px] md:text-[36px] font-dancing font-bold"
+              >
+                Andhika Oktasandira
+              </p>
+              <p class="sm:text-[12px] md:text-[14px]">Putra Dari :</p>
+              <p class="sm:text-[12px] md:text-[14px]">
+                Bapak Didi dan Ibu Rahayu
+              </p>
+            </div>
+
+            <figure class="ornament-and">
+              <img src="./public/and_ornament.svg" alt="Word 'And' Ornament" />
+            </figure>
+
+            <div class="female-name text-center flex flex-col sm:gap-[8px]">
+              <p
+                class="text-center text-[24px] md:text-[36px] font-dancing font-bold"
+              >
+                Diana Putri
+              </p>
+              <p class="sm:text-[12px] md:text-[14px]">Putri Dari :</p>
+              <p class="sm:text-[12px] md:text-[14px]">
+                Bapak Asep dan Ibu Ningsih
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="animate-element"
+            data-aos="fade-zoom-in"
+            data-aos-anchor=".female-name"
+          >
+            <figure
+              class="ornament relative sm:mt-[25px] md:mt-0 md:scale-[0.6] xl:scale-75"
+            >
+              <img src="./src/img/female.png" alt="pict of female" />
+              <img
+                class="absolute md:bottom-[-50px] sm:bottom-[-20px] scale-[1.8]"
+                src="./public/ornament/pict_flower.svg"
+                alt="Flower Background"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="story-section container overflow-hidden">
+        <div class="title-description">
+          <h2 class="sm:text-[24px] md:text-[48px] tlt">Our Story</h2>
+
+          <!-- prettier-ignore -->
+          <p
+            class="sm:text-[12px] md:text-[16px] xl:text-[24px] font-normal tlt"
+          >Semuanya dimulai dengan sapaan sederhana, sebuah momen yang memicu perjalanan cinta dan petualangan seumur hidup. Dari pertemuan tak terduga hingga percakapan larut malam, perjalanan kami dipenuhi dengan tawa, mimpi, dan momen-momen kecil yang semakin mendekatkan kami.</p>
+        </div>
+
+        <div class="content-group">
+          <div
+            class="w-full grid md:grid-cols-2 sm:grid-cols-1 sm:grid-rows-4 md:grid-rows-2 gap-[24px]"
+          >
+            <div data-aos="fade-up-right" class="content">
+              <figure>
+                <img src="./src/img/cafe_sukabumi.png" alt="Cafe Sukabumi" />
+              </figure>
+              <div class="text-content">
+                <h3 class="sm:text-[14px] md:text-[18px]">
+                  Cafe Kota Sukabumi
+                </h3>
+                <p class="sm:w-full md:w-4/5">
+                  Kami berdua menikmati waktu dan saling memberitahu tentang
+                  keinginan kami berdua kelak dimasa depan
+                </p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up-right"
+              class="content md:col-start-1 md:row-start-2 sm:row-start-3"
+            >
+              <figure>
+                <img
+                  src="./src/img/taman_nusput.png"
+                  alt="Taman Kampus Nusa Putra"
+                />
+              </figure>
+              <div class="text-content">
+                <h3 class="sm:text-[14px] md:text-[18px]">
+                  Taman Kampus Universitas Nusaputra
+                </h3>
+                <p class="sm:w-full md:w-4/5">
+                  Kami berdua menyempatkan bertemu dikala waktu sibuk belajar di
+                  kampus dan salaing memberikan semangat. taman kampus menjadi
+                  sangat indah pada saat itu.
+                </p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up-left"
+              class="content justify-self-end md:mt-[178px]"
+            >
+              <figure>
+                <img src="./src/img/pelabuhan_ratu.png" alt="Pelabuhan Ratu" />
+              </figure>
+              <div class="text-content">
+                <h3 class="sm:text-[14px] md:text-[18px]">Pelabuhan Ratu</h3>
+                <p class="sm:w-full md:w-4/5">
+                  Bibir pantai pertemuan pertama kita dikala senja menyemburkan
+                  sinar kepada kami berdua yang sedang duduk. pada saat itu kami
+                  cuma sekedar teman.
+                </p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up-left"
+              class="content md:mt-[178px] justify-self-end"
+            >
+              <figure>
+                <img src="./src/img/ring.png" alt="Pantai" />
+              </figure>
+              <div class="text-content">
+                <h3 class="sm:text-[14px] md:text-[18px]">Engagement</h3>
+                <p class="sm:w-full md:w-4/5">
+                  Pada akhirnya kami berdua memutuskan untuk ke jenjang serius
+                  setelah itu kami melakukan kunjungan kerumah untuk menemui
+                  orangtua kita masing-masing
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="schedule-section">
+        <!-- prettier-ignore -->
+        <div class="container title-description">
+          <h2 class="sm:text-[18px] md:text-[48px] tlt">Assalamualaikum Warohmatullahi Wabarakatu</h2>
+          <p class="sm:text-[12px] md:text-[16px] xl:text-[24px] tlt">Dengan memohon rahmat dan ridho Allah SWT. Kami bermaksud akan mengadakan pesta pernikahan putra dan putri kami, yang Insya Allah akan dilaksanakan pada</p>
+        </div>
+
+        <div
+          class="countdown relative md:before:top-[0px] xl:before:top-[-100px] md:before:absolute md:before:bg-contain xl:before:bg-auto before:bg-no-repeat before:w-full md:before:h-[900px] md:before:bg-[url('./public/ornament/big_flower_group.svg')]"
+        >
+          <div data-aos="fade-up" class="container">
+            <h3 class="md:text-[48px] sm:text-[18px] font-dancing">
+              Countdown
+            </h3>
+            <div
+              id="schedule-countdown"
+              class="flex flex-row text-center justify-center"
+            >
+              <div class="flex flex-col">
+                <p>Day</p>
+                <p id="schedule-days"></p>
+              </div>
+              <div class="flex flex-col">
+                <p>Hours</p>
+                <p id="schedule-hours"></p>
+              </div>
+              <div class="flex flex-col">
+                <p>Minutes</p>
+                <p id="schedule-minutes"></p>
+              </div>
+              <div class="flex flex-col">
+                <p>Seconds</p>
+                <p id="schedule-seconds"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="md:container sm:relative md:flex md:flex-row justify-between sm:mt-[12px]"
+        >
+          <div
+            class="md:before:hidden sm:before:block before:absolute before:end-0 sm:before:bg-[url('./public/ornament/schedule_section_ornament_right.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px]"
+          >
+            <div data-aos="fade-right" class="max-md:container">
+              <h3 class="sm:text-[24px] md:text-[36px] font-dancing font-bold">
+                Akad
+              </h3>
+              <ul>
+                <li>
+                  <img src="./public/calendar.svg" alt="" />02 Oktober 2024
+                </li>
+                <li>
+                  <img src="./public/clock.svg" alt="" />09:00 s/d Selesai
+                </li>
+                <li>
+                  <img src="./public/location_pin.svg" alt="" />Kp Peundeuy RT
+                  002/009 Desa Warnajati Kec Cibadak kab Sukabumi
+                </li>
+              </ul>
+              <div class="button">
+                <button
+                  class="sm:text-[12px] hover:bg-[#9D7C6B] hover:text-white duration-200"
+                >
+                  Buka Google Map
+                </button>
+                <br />
+                <button
+                  class="sm:text-[12px] hover:bg-[#9D7C6B] hover:text-white duration-200"
+                >
+                  Tambahkan ke kalender
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="sm:overflow-hidden mt-[12px] md:before:hidden sm:before:block before:absolute before:start-0 before:bottom-[-80px] sm:before:bg-[url('./public/ornament/schedule_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px]"
+          >
+            <div data-aos="fade-left" class="max-md:container">
+              <h3 class="sm:text-[24px] md:text-[36px] font-dancing font-bold">
+                Resepsi
+              </h3>
+              <ul>
+                <li>
+                  <img src="./public/calendar.svg" alt="" />02 Oktober 2024
+                </li>
+                <li>
+                  <img src="./public/clock.svg" alt="" />09:00 s/d Selesai
+                </li>
+                <li>
+                  <img src="./public/location_pin.svg" alt="" />Kp Peundeuy RT
+                  002/009 Desa Warnajati Kec Cibadak kab Sukabumi
+                </li>
+              </ul>
+              <div class="button gap-2">
+                <button
+                  class="sm:text-[12px] hover:bg-[#9D7C6B] hover:text-white duration-200"
+                >
+                  Buka Google Map
+                </button>
+                <br />
+                <button
+                  class="sm:text-[12px] hover:bg-[#9D7C6B] hover:text-white duration-200"
+                >
+                  Tambahkan ke kalender
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery-section">
+        <div class="container">
+          <h2 class="sm:text-[24px] md:text-[48px] tlt">Gallery</h2>
+          <div class="content">
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="200"
+              class="col-span-2"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery1.png"
+                alt="gallery1"
+              />
+            </figure>
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="400"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery2.png"
+                alt="gallery2"
+              />
+            </figure>
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="600"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery3.png"
+                alt="galery3"
+              />
+            </figure>
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="800"
+              class="col-span-2"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery4.png"
+                alt="gallery4"
+              />
+            </figure>
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="1000"
+              class="col-span-2"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery5.png"
+                alt="gallery5"
+              />
+            </figure>
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="1200"
+              class="col-span-2"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery6.png"
+                alt="gallery6"
+              />
+            </figure>
+            <figure
+              data-aos="fade-zoom-in"
+              data-aos-anchor=".gallery-section"
+              data-aos-delay="1400"
+              class="col-span-2 relative"
+            >
+              <img
+                class="hover:scale-105 duration-200"
+                src="./src/img/gallery7.png"
+                alt="gallery7"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="gift"
+        class="gift-section relative md:before:top-[0px] xl:before:top-[120px] md:before:absolute md:before:bg-contain xl:before:bg-auto before:bg-no-repeat before:w-full md:before:h-[900px] md:before:bg-[url('./public/ornament/gift_ornament_group.svg')]"
+      >
+        <div class="md:container">
+          <div class="title-description max-md:container">
+            <h2 class="sm:text-[24px] md:text-[48px] tlt">Give a Gift</h2>
+            <!-- prettier-ignore -->
+            <p
+              class="sm:text-[12px] md:text-[16px] md:mt-[43px] md:w-1/2 place-self-center tlt"
+            >“Terkadang, kebahagiaan datang dari hal-hal kecil yang tak terduga. Sebuah hadiah yang penuh makna bisa menjadi ungkapan cinta yang tidak terucap, menyampaikan pesan kasih yang hangat kepada mereka yang kita sayangi. Mari berbagi kebahagiaan, karena setiap hadiah adalah sebuah cerita yang bisa dikenang sepanjang waktu.” </p>
+          </div>
+
+          <div class="sm:relative sm:mt-[54px] md:mt-[121px]">
+            <div
+              class="content md:before:hidden sm:before:block before:absolute before:start-0 before:top-[110px] sm:before:bg-[url('./public/ornament/gift_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px] md:after:hidden sm:after:block after:absolute after:end-0 after:top-0 sm:after:bg-[url('./public/ornament/gift_section_ornament_right.svg')] after:w-[70px] after:bg-no-repeat after:h-[160px]"
+            >
+              <div class="max-md:container">
+                <div data-aos="fade-zoom-in" class="digital-gift">
+                  <div class="text-content">
+                    <h3 class="sm:text-[24px] md:text-[40px] font-dancing">
+                      Digital Wallet
+                    </h3>
+                    <p class="sm:text-[12px] md:text-[14px]">
+                      Note : Tap to copy bank number
+                    </p>
+                  </div>
+                  <form action="">
+                    <input
+                      type="text"
+                      id="account-number"
+                      value="1234567890"
+                      readonly
+                      onclick="copyToClipboard()"
+                      style="cursor: pointer"
+                      value="1234567890"
+                      readonly
+                    />
+                  </form>
+                  <figure>
+                    <img src="./src/img/bank_mandiri.png" alt="Bank Mandiri" />
+                  </figure>
+                </div>
+              </div>
+
+              <div class="max-md:container">
+                <div data-aos="fade-zoom-in" class="offline-gift">
+                  <h3
+                    class="sm:text-[24px] md:text-[40px] text-white font-dancing"
+                  >
+                    Offline Gift
+                  </h3>
+                  <p class="sm:text-[12px] md:text-[14px] text-white">
+                    Kp. Peundeuy RT 002/009 Desa Warnajati Kec. Cibadak
+                    Kab. Sukabumi
+                  </p>
+                  <button
+                    class="sm:text-[12px] md:text-[14px] text-white hover:bg-white hover:text-[#9D7C6B] duration-200"
+                  >
+                    Open Map
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
+    <footer id="site-footer">
+      <div
+        class="relative bg-[url('./src/img/bg-footer.png')] bg-cover bg-center mt-[66px]"
+      >
+        <div
+          data-aos="fade-zoom-in"
+          class="container flex flex-col items-center z-50 relative py-[16px]"
+        >
+          <figure>
+            <img src="./public/footer_symbol.svg" alt="Footer Symbol" />
+          </figure>
+
+          <h2 class="sm:text-[36px] md:text-[64px] text-white">Andhika</h2>
+          <figure>
+            <img src="./public/footer_and.svg" alt="word 'And' ornament" />
+          </figure>
+          <h2 class="sm:text-[36px] md:text-[64px] text-white">Diana</h2>
+          <p class="text-white md:text-[16px]">
+            © 2024 mangcoding. All rights reserved.
+          </p>
+        </div>
+        <div class="bg-black py-[16px] absolute inset-0 opacity-50"></div>
+      </div>
+    </footer>
+    <script defer type="module" src="/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="/assets/jquery.fittext.js"></script>
+    <script src="/assets/jquery.lettering.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
