@@ -7,16 +7,29 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/animate.css" />
     <link href="./hamburgers.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <title>Vite App</title>
   </head>
   <body>
     <header id="site-header">
-      <div class="sm:block md:hidden hamburger container z-10">
-        <button id="hamburger" class="hamburger hamburger--spin" type="button">
+      <div
+        id="mobile-navbar"
+        class="sm:block md:hidden hamburger container z-50 pl-[10px] pt-[1px] absolute top-0"
+      >
+        <button
+          id="hamburger"
+          class="hamburger hamburger--spin scale-[0.5]"
+          type="button"
+        >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
@@ -24,24 +37,40 @@
       </div>
       <nav
         id="navigation-mobile"
-        class="open sm:block md:hidden z-50 w-screen h-screen bg-white absolute has-[:checked]:translate-x-[100px] transition-all duration-500"
+        class="open sm:block md:hidden z-10 w-screen h-fit bg-[#9D7C6B] absolute has-[:checked]:translate-x-[100px] transition-all duration-500 top-0"
       >
         <div class="container">
-          <ul class="flex flex-col items-center h-full gap-28">
-            <li class="hover:scale-110 duration-200">
-              <a href="#home">Home</a>
+          <ul class="flex flex-col items-center h-fit p-[24px]">
+            <li
+              class="hover:scale-110 duration-200 py-[10px] w-full text-center border-b-2"
+            >
+              <a href="#home"><div class="text-white font-Inter">Home</div></a>
             </li>
-            <li class="hover:scale-110 duration-200">
-              <a href="#event">Event</a>
+            <li
+              class="hover:scale-110 duration-200 py-[10px] w-full text-center border-b-2"
+            >
+              <a href="#event"
+                ><div class="text-white font-Inter">Event</div></a
+              >
             </li>
-            <li class="hover:scale-110 duration-200">
-              <a href="#story">Our Story</a>
+            <li
+              class="hover:scale-110 duration-200 py-[10px] w-full text-center border-b-2"
+            >
+              <a href="#story"
+                ><div class="text-white font-Inter">Our Story</div></a
+              >
             </li>
-            <li class="hover:scale-110 duration-200">
-              <a href="#gallery">Gallery</a>
+            <li
+              class="hover:scale-110 duration-200 py-[10px] w-full text-center border-b-2"
+            >
+              <a href="#gallery"
+                ><div class="text-white font-Inter">Gallery</div></a
+              >
             </li>
-            <li class="hover:scale-110 duration-200">
-              <a href="#gift">Gift</a>
+            <li
+              class="hover:scale-110 duration-200 py-[10px] w-full text-center border-b-2"
+            >
+              <a href="#gift"><div class="text-white font-Inter">Gift</div></a>
             </li>
           </ul>
         </div>
@@ -74,12 +103,12 @@
       <section id="home" class="hero">
         <div
           data-aos="fade-left"
-          class="flex sm:flex-col md:flex-row sm:items-center md:justify-between"
+          class="container flex sm:flex-col md:flex-row sm:items-center md:justify-between"
         >
           <figure class="sm:block md:hidden place-self-end">
             <img
               class="ring-symbol sm:h-[38px] md:w-[104px] md:h-[73px] w-auto top-0"
-              src="./public/ornament/ring.svg"
+              src="./ornament/ring.svg"
               alt=" Ring"
             />
           </figure>
@@ -99,7 +128,7 @@
             <figure class="sm:hidden md:block w-100px top-[30px]">
               <img
                 class="ring-symbol sm:h-[38px] md:w-[104px] md:h-[73px] w-auto top-0"
-                src="./public/ornament/ring.svg"
+                src="./ornament/ring.svg"
                 alt=" Ring"
               />
             </figure>
@@ -113,24 +142,27 @@
           </div>
         </div>
 
-        <div
-          data-aos="fade-zoom-in"
-          class="hero-gallery sm:before:hidden sm:after:hidden md:before:block md:after:block md:scale-90 xl:scale-100 relative after:-z-10 before:-z-10 after:h-52 after:w-[95px] after:bg-no-repeat md:after:scale-[0.7] xl:after:scale-100 after:bg-[url('./public/ornament/flower_right.svg')] after:absolute md:after:end-[-70px] xl:after:end-[-58px] after:bottom-[-60px] before:h-52 before:w-[150px] before:bg-no-repeat md:before:scale-[0.7] xl:before:scale-100 before:bg-[url('./public/ornament/flower_left.svg')] before:absolute md:before:left-[-85px] xl:before:left-[-55px] before:bottom-[-60px]"
-        >
-          <figure data-aos="zoom-out" data-aos-delay="500">
-            <img src="./src/img/image (1).png" alt="Wedding Pict 1" />
-          </figure>
-          <figure data-aos="zoom-out" data-aos-delay="1000">
-            <img src="./src/img/image (2).png" alt="Wedding Pict 1" />
-          </figure>
-          <figure data-aos="zoom-out" data-aos-delay="1500">
-            <img src="./src/img/image (3).png" alt="Wedding Pict 1" />
-          </figure>
+        <div data-aos="fade-zoom-in" class="overflow-hidden">
+          <div class="container">
+            <div
+              class="hero-gallery sm:before:hidden sm:after:hidden md:before:block md:after:block md:scale-90 xl:scale-100 relative after:-z-10 before:-z-10 after:h-52 after:w-[95px] after:bg-no-repeat md:after:scale-[0.7] xl:after:scale-100 after:bg-[url('./ornament/flower_right.svg')] after:absolute md:after:end-[-70px] xl:after:end-[-58px] after:bottom-[-60px] before:h-52 before:w-[150px] before:bg-no-repeat md:before:scale-[0.7] xl:before:scale-100 before:bg-[url('./ornament/flower_left.svg')] before:absolute md:before:left-[-85px] xl:before:left-[-55px] before:bottom-[-60px]"
+            >
+              <figure data-aos="zoom-out" data-aos-delay="300">
+                <img src="./src/img/image (1).png" alt="Wedding Pict 1" />
+              </figure>
+              <figure data-aos="zoom-out" data-aos-delay="600">
+                <img src="./src/img/image (2).png" alt="Wedding Pict 1" />
+              </figure>
+              <figure data-aos="zoom-out" data-aos-delay="900">
+                <img src="./src/img/image (3).png" alt="Wedding Pict 1" />
+              </figure>
+            </div>
+          </div>
         </div>
 
         <div
           data-aos="fade-up"
-          class="countdown relative after:bg-[url('./public/ornament/countdown_underline.svg')] sm:after:hidden md:after:block after:absolute after:h-96 after:w-[1300px] md:after:scale-[0.55] xl:after:scale-100 md:after:mt-32 xl:after:mt-20 after:mx-auto"
+          class="countdown relative after:bg-[url('./ornament/countdown_underline.svg')] sm:after:hidden md:after:block after:absolute after:h-96 after:w-[1300px] md:after:scale-[0.55] xl:after:scale-100 md:after:mt-32 xl:after:mt-20 after:mx-auto"
         >
           <h3 class="font-serif md:text-[48px] sm:text-[24px]">Countdown</h3>
           <div id="countdown" class="flex flex-row text-center">
@@ -154,7 +186,7 @@
         </div>
 
         <figure class="md:hidden">
-          <img src="./public/ornament/countdown_underline.svg" alt="" />
+          <img src="./ornament/countdown_underline.svg" alt="" />
         </figure>
       </section>
 
@@ -179,7 +211,7 @@
               <img src="./src/img/male.png" alt="Pict of male" />
               <img
                 class="absolute md:bottom-[-50px] sm:bottom-[-20px] scale-[1.8]"
-                src="./public/ornament/pict_flower.svg"
+                src="./ornament/pict_flower.svg"
                 alt="Flower Background"
               />
             </figure>
@@ -199,7 +231,7 @@
             </div>
 
             <figure class="ornament-and">
-              <img src="./public/and_ornament.svg" alt="Word 'And' Ornament" />
+              <img src="./and_ornament.svg" alt="Word 'And' Ornament" />
             </figure>
 
             <div class="female-name text-center flex flex-col sm:gap-[8px]">
@@ -226,7 +258,7 @@
               <img src="./src/img/female.png" alt="pict of female" />
               <img
                 class="absolute md:bottom-[-50px] sm:bottom-[-20px] scale-[1.8]"
-                src="./public/ornament/pict_flower.svg"
+                src="./ornament/pict_flower.svg"
                 alt="Flower Background"
               />
             </figure>
@@ -322,7 +354,7 @@
         </div>
       </section>
 
-      <section class="schedule-section">
+      <section class="schedule-section overflow-hidden">
         <!-- prettier-ignore -->
         <div class="container title-description">
           <h2 class="sm:text-[18px] md:text-[48px] tlt">Assalamualaikum Warohmatullahi Wabarakatu</h2>
@@ -330,7 +362,7 @@
         </div>
 
         <div
-          class="countdown relative md:before:top-[0px] xl:before:top-[-100px] md:before:absolute md:before:bg-contain xl:before:bg-auto before:bg-no-repeat before:w-full md:before:h-[900px] md:before:bg-[url('./public/ornament/big_flower_group.svg')]"
+          class="countdown relative xl:before:bg-contain md:before:top-[-100px] md:after:top-[-100px] md:before:absolute md:before:bg-contain xl:before:bg-auto before:bg-no-repeat before:w-[330px] md:before:bg-ornamentTablet xl:before:bg-ornamentDesktop md:after:bg-ornamentTablet xl:after:bg-ornamentDesktop md:before:h-[900px] xl:after:right-0 md:before:left-0 xl:after:bg-cover md:before:bg-[url('./ornament/flower_left_desktop.svg')] xl:after:top-[-100px] md:after:absolute md:after:bg-contain xl:after:bg-auto after:bg-no-repeat after:w-[330px] md:after:h-[900px] md:after:bg-[url('./ornament/flower_right_desktop.svg')] md:after:right-[-100px]"
         >
           <div data-aos="fade-up" class="container">
             <h3 class="md:text-[48px] sm:text-[18px] font-dancing">
@@ -364,22 +396,18 @@
           class="md:container sm:relative md:flex md:flex-row justify-between sm:mt-[12px]"
         >
           <div
-            class="md:before:hidden sm:before:block before:absolute before:end-0 sm:before:bg-[url('./public/ornament/schedule_section_ornament_right.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px]"
+            class="md:before:hidden sm:before:block before:absolute before:end-0 sm:before:bg-[url('./ornament/schedule_section_ornament_right.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px]"
           >
             <div data-aos="fade-right" class="max-md:container">
               <h3 class="sm:text-[24px] md:text-[36px] font-dancing font-bold">
                 Akad
               </h3>
               <ul>
+                <li><img src="./calendar.svg" alt="" />02 Oktober 2024</li>
+                <li><img src="./clock.svg" alt="" />09:00 s/d Selesai</li>
                 <li>
-                  <img src="./public/calendar.svg" alt="" />02 Oktober 2024
-                </li>
-                <li>
-                  <img src="./public/clock.svg" alt="" />09:00 s/d Selesai
-                </li>
-                <li>
-                  <img src="./public/location_pin.svg" alt="" />Kp Peundeuy RT
-                  002/009 Desa Warnajati Kec Cibadak kab Sukabumi
+                  <img src="./location_pin.svg" alt="" />Kp Peundeuy RT 002/009
+                  Desa Warnajati Kec Cibadak kab Sukabumi
                 </li>
               </ul>
               <div class="button">
@@ -399,22 +427,18 @@
           </div>
 
           <div
-            class="sm:overflow-hidden mt-[12px] md:before:hidden sm:before:block before:absolute before:start-0 before:bottom-[-80px] sm:before:bg-[url('./public/ornament/schedule_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px]"
+            class="sm:overflow-hidden mt-[12px] md:before:hidden sm:before:block before:absolute before:start-0 before:bottom-[-80px] sm:before:bg-[url('./ornament/schedule_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px]"
           >
             <div data-aos="fade-left" class="max-md:container">
               <h3 class="sm:text-[24px] md:text-[36px] font-dancing font-bold">
                 Resepsi
               </h3>
               <ul>
+                <li><img src="./calendar.svg" alt="" />02 Oktober 2024</li>
+                <li><img src="./clock.svg" alt="" />09:00 s/d Selesai</li>
                 <li>
-                  <img src="./public/calendar.svg" alt="" />02 Oktober 2024
-                </li>
-                <li>
-                  <img src="./public/clock.svg" alt="" />09:00 s/d Selesai
-                </li>
-                <li>
-                  <img src="./public/location_pin.svg" alt="" />Kp Peundeuy RT
-                  002/009 Desa Warnajati Kec Cibadak kab Sukabumi
+                  <img src="./location_pin.svg" alt="" />Kp Peundeuy RT 002/009
+                  Desa Warnajati Kec Cibadak kab Sukabumi
                 </li>
               </ul>
               <div class="button gap-2">
@@ -443,7 +467,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="200"
-              class="col-span-2"
+              class="col-span-2 overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -455,6 +479,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="400"
+              class="sm:row-start-4 sm:col-start-1 md:row-start-1 md:col-start-3 overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -466,6 +491,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="600"
+              class="sm:row-start-4 sm:col-start-2 md:row-start-1 md:col-start-4 overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -477,7 +503,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="800"
-              class="col-span-2"
+              class="col-span-2 overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -489,7 +515,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="1000"
-              class="col-span-2"
+              class="col-span-2 overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -501,7 +527,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="1200"
-              class="col-span-2"
+              class="col-span-2 overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -513,7 +539,7 @@
               data-aos="fade-zoom-in"
               data-aos-anchor=".gallery-section"
               data-aos-delay="1400"
-              class="col-span-2 relative"
+              class="col-span-2 relative overflow-hidden"
             >
               <img
                 class="hover:scale-105 duration-200"
@@ -527,7 +553,7 @@
 
       <section
         id="gift"
-        class="gift-section relative md:before:top-[0px] xl:before:top-[120px] md:before:absolute md:before:bg-contain xl:before:bg-auto before:bg-no-repeat before:w-full md:before:h-[900px] md:before:bg-[url('./public/ornament/gift_ornament_group.svg')]"
+        class="overflow-hidden gift-section relative md:before:bg-ornamentTablet xl:before:bg-ornamentDesktop md:after:bg-ornamentTablet xl:after:bg-ornamentDesktop md:before:top-[0px] xl:before:top-[335px] md:before:absolute md:before:bg-contain xl:before:bg-auto before:bg-no-repeat before:w-[248px] md:before:h-[900px] md:before:bg-[url('./ornament/leaf_left_desktop.svg')] md:after:top-[0px] xl:after:top-[120px] md:after:absolute md:after:bg-contain md:after:right-[-75px] xl:after:right-0 xl:after:bg-auto after:bg-no-repeat md:before:bg-mobile after:w-[248px] md:after:h-[900px] md:after:bg-[url('./ornament/leaf_right_desktop.svg')]"
       >
         <div class="md:container">
           <div class="title-description max-md:container">
@@ -540,7 +566,7 @@
 
           <div class="sm:relative sm:mt-[54px] md:mt-[121px]">
             <div
-              class="content md:before:hidden sm:before:block before:absolute before:start-0 before:top-[110px] sm:before:bg-[url('./public/ornament/gift_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px] md:after:hidden sm:after:block after:absolute after:end-0 after:top-0 sm:after:bg-[url('./public/ornament/gift_section_ornament_right.svg')] after:w-[70px] after:bg-no-repeat after:h-[160px]"
+              class="content md:before:hidden sm:before:block before:absolute before:start-0 before:top-[110px] sm:before:bg-[url('./ornament/gift_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px] md:after:hidden sm:after:block after:absolute after:end-0 after:top-0 sm:after:bg-[url('./ornament/gift_section_ornament_right.svg')] after:w-[70px] after:bg-no-repeat after:h-[160px]"
             >
               <div class="max-md:container">
                 <div data-aos="fade-zoom-in" class="digital-gift">
@@ -552,8 +578,12 @@
                       Note : Tap to copy bank number
                     </p>
                   </div>
-                  <form action="">
+                  <form
+                    class="flex justify-between sm:w-full sm:py-[8px] sm:px-[12px] md:w-[315px] pl-[12px] border border-[#9D7C6B] rounded-lg"
+                    action=""
+                  >
                     <input
+                      class="w-full"
                       type="text"
                       id="account-number"
                       value="1234567890"
@@ -563,6 +593,22 @@
                       value="1234567890"
                       readonly
                     />
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.1562 11.8125H10.2812V12.6875H3.0625V3.71875H3.9375V2.84375H2.1875V13.5625H11.1562V11.8125Z"
+                        fill="#9D7C6B"
+                      />
+                      <path
+                        d="M4.8125 0.4375V10.9375H13.5625V4.19379L9.80621 0.4375H4.8125ZM12.6875 10.0625H5.6875V1.3125H8.53125V5.46875H12.6875V10.0625ZM12.6875 4.59375H9.40625V1.3125H9.44377L12.6875 4.55621V4.59375Z"
+                        fill="#9D7C6B"
+                      />
+                    </svg>
                   </form>
                   <figure>
                     <img src="./src/img/bank_mandiri.png" alt="Bank Mandiri" />
@@ -602,12 +648,12 @@
           class="container flex flex-col items-center z-50 relative py-[16px]"
         >
           <figure>
-            <img src="./public/footer_symbol.svg" alt="Footer Symbol" />
+            <img src="./footer_symbol.svg" alt="Footer Symbol" />
           </figure>
 
           <h2 class="sm:text-[36px] md:text-[64px] text-white">Andhika</h2>
           <figure>
-            <img src="./public/footer_and.svg" alt="word 'And' ornament" />
+            <img src="./footer_and.svg" alt="word 'And' ornament" />
           </figure>
           <h2 class="sm:text-[36px] md:text-[64px] text-white">Diana</h2>
           <p class="text-white md:text-[16px]">
@@ -624,7 +670,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
     <script src="/assets/jquery.fittext.js"></script>
     <script src="/assets/jquery.lettering.js"></script>
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({

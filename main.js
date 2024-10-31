@@ -85,14 +85,26 @@ window.addEventListener("load", setAOSAnimation);
 document.addEventListener("DOMContentLoaded", function () {
   function copyToClipboard() {
     const input = document.getElementById("account-number");
-    navigator.clipboard
-      .writeText(input.value)
-      .then(() => {
-        alert("Berhasil mengcopy nomor rekening");
-      })
-      .catch((err) => {
-        console.error("Gagal menyalin: ", err);
-      });
+    input.select();
+    input.setSelectionRange(0, 99999); // Untuk perangkat mobile
+
+    // Menyalin teks ke clipboard
+    document.execCommand("copy");
+
+    // Tampilkan toast
+    Toastify({
+      text: "Berhasil mengcopy nomor rekening",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "left", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #ad8a78, #9d7c6b)",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
   }
 
   // Tambahkan event listener ke input

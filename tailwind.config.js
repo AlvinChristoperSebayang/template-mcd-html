@@ -2,6 +2,10 @@
 export default {
   content: ["./*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
+    backgroundSize: {
+      ornamentTablet: "70%",
+      ornamentDesktop: "100%",
+    },
     extend: {
       content: {
         flowerRight: 'url("./public/ornament/flower_right.svg")',
@@ -17,6 +21,7 @@ export default {
           "Cambria",
           "serif",
         ],
+        Inter: ["Inter", "sans-serif"],
         dancing: ["Dancing Script", "cursive"],
         poppins: ["Poppins", "sans-serif"],
       },

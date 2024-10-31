@@ -21,7 +21,3 @@
 .offline-gift button {
   @apply px-[10px] py-[5px] border border-white;
 }
-
-.gift-section input {
-  @apply sm:w-full sm:py-[8px] md:w-[315px] pl-[12px] border border-[#9D7C6B] rounded-lg;
-}

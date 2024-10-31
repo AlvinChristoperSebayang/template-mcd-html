@@ -19,7 +19,7 @@ html {
 }
 
 .hero {
-  @apply container sm:mt-[29px] md:mt-[33px] relative;
+  @apply sm:mt-[29px] md:mt-[33px] relative;
 }
 
 .hero svg {
@@ -127,7 +127,7 @@ html {
 }
 
 .gallery-section .content {
-  @apply grid sm:grid-cols-2 md:grid-cols-4 grid-rows-3  gap-[24px] mt-[39px];
+  @apply grid sm:grid-cols-2 md:grid-cols-4 grid-rows-3  sm:gap-[12px] md:gap-[24px] mt-[39px];
 }
 
 .gallery-section figure * {
@@ -196,11 +196,11 @@ footer figure:nth-child(1) {
 #navigation-mobile {
   opacity: 0;
   transition: opacity 0.3s ease;
-  background-color: white;
+  background-color: #9d7c6b;
   position: fixed;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 100;
+  height: fit-content;
+  z-index: 10;
   pointer-events: none; /* Mencegah interaksi saat tersembunyi */
 }

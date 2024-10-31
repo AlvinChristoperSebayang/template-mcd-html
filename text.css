@@ -27,5 +27,5 @@ h3 {
 }
 
 .navigation-mobile a {
-  @apply text-[24px];
+  @apply text-[24px] text-white;
 }
