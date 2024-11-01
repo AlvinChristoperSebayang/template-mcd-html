@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Vite App</title>
     <style>
-      li, span, h1, p{
+      li, span, h1, p, a{
         @apply font-plus-jakarta
       }
       .hidden {
@@ -19,10 +19,10 @@
 
   <body class="overflow-x-hidden">
 
-    <header class="sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-[8px] px-[40px] md:px-[64px] lg:py-[12px] lg:px-[100px] xl:py-[24px] xl:px-[120px]">
+    <header class="sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px]">
 
       <!-- Logo -->
-      <svg class="w-[70px] h-[24px] md:w-[90px] md:h-[28px] lg:w-[100px] lg:h-[30px] xl:w-[107px] xl:h-[34px]" viewBox="0 0 107 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="w-[67px] h-[24px] md:w-[87px] md:h-[28px] lg:w-[107px] lg:h-[34px]" viewBox="0 0 107 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1_6096)">
         <path d="M20.1303 11.3462C20.253 13.798 19.4417 16.2041 17.8633 18.0695C17.0479 18.9496 16.0515 19.6383 14.9444 20.0871C13.8373 20.5359 12.6464 20.7339 11.4554 20.6671H8.43282H5.41022C5.01728 20.6671 4.83592 20.9116 4.83592 21.4005C4.83592 21.8895 4.83592 22.9897 4.83592 24.2427C4.83592 25.4956 4.83592 26.443 4.83592 27.0847C4.83592 27.7265 4.83592 27.3904 4.50343 27.3904H3.35483H2.23648C1.92462 27.3659 1.61135 27.3659 1.29949 27.3904H0.392698C0.0904377 27.3904 -0.0606738 27.207 -0.0606738 26.8403C-0.0606738 25.5567 -0.0606812 23.5703 0.120675 20.9421C0.302031 18.3139 0.120675 16.3581 0.120675 15.044C0.120675 11.3157 0.12066 7.31223 -0.272278 3.03378V2.7893C-0.272278 2.51425 -0.272296 2.392 0.181094 2.392H5.95427H8.46303H10.9718C12.1672 2.35708 13.3563 2.57872 14.4608 3.04227C15.5653 3.50582 16.5601 4.20076 17.3797 5.08132C19.0632 6.7315 20.049 8.97689 20.1303 11.3462ZM15.6568 11.6212C15.7331 10.0558 15.2262 8.51831 14.2362 7.31221C13.716 6.74295 13.0776 6.29707 12.367 6.00649C11.6563 5.7159 10.8908 5.58784 10.1255 5.63143C9.5814 5.63143 8.61417 5.63143 7.10287 5.63143C6.26846 5.61563 5.43547 5.70805 4.62432 5.90646C4.52107 7.94248 4.52107 9.98251 4.62432 12.0185C4.62432 12.5075 4.62432 13.2715 4.62432 14.2494C4.62432 15.2273 4.62432 16.0219 4.62432 16.5109C4.62432 16.9999 4.62433 16.6943 5.01727 16.7554C6.81296 16.9629 8.62146 17.0344 10.4277 16.9693C11.1415 17.0106 11.8556 16.8923 12.519 16.6229C13.1825 16.3535 13.7791 15.9397 14.2664 15.4107C15.1638 14.3567 15.6572 13.012 15.6568 11.6212Z" fill="#060913"/>
         <path d="M32.7955 10.3682C32.8039 11.5656 32.7129 12.7617 32.5234 13.9438C32.5234 14.2188 32.5234 14.3716 32.1607 14.3716H31.0423C30.6599 14.3471 30.2762 14.3471 29.8937 14.3716C28.4127 14.3716 27.4757 14.7688 27.0525 15.6245C26.758 16.6144 26.6353 17.6484 26.6898 18.6806V20.6364C26.6898 21.3087 26.6898 22.3478 26.6898 23.6925C26.6898 25.0371 26.6898 26.0762 26.6898 26.7485C26.6898 27.4208 26.5387 27.2375 26.2666 27.2375H22.9418C22.6697 27.2375 22.5489 27.2375 22.5489 26.8096C22.5489 25.8317 22.5489 24.3648 22.5489 22.4395C22.5489 20.5142 22.5489 19.0168 22.5489 18.0388C22.617 15.648 22.3421 13.2599 21.7327 10.9488C21.7232 10.8778 21.7232 10.8059 21.7327 10.7349C21.7297 10.6675 21.7488 10.601 21.7871 10.5457C21.8253 10.4904 21.8807 10.4495 21.9443 10.4293L23.7881 10.2154L25.5715 9.84863C25.7528 9.84863 25.8737 10.1848 25.9341 10.8877C25.9946 11.5906 25.9342 11.9573 26.2666 11.9573L27.7175 11.0099C28.2192 10.7067 28.7577 10.4705 29.3194 10.3071C29.9 10.1464 30.5012 10.0743 31.1028 10.0931C32.3421 10.0014 32.7955 10.1237 32.7955 10.3682Z" fill="#060913"/>
@@ -45,29 +45,29 @@
       <!-- Desktop Navbar -->
       <nav class="navbar-menu">
 
-        <ul class="hidden sm:flex flex-row items-center w-fit h-auto md:gap-[12px] lg:gap-[20px] xl:gap-[32px]">
+        <ul class="hidden sm:flex flex-row items-center w-fit h-auto sm:gap-[16px] lg:gap-[22px] xl:gap-[32px]">
 
-          <li class="font-normal md:text-[13px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Home</a>
           </li>
 
-          <li class="font-normal md:text-[13px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Features</a>
           </li>
 
-          <li class="font-normal md:text-[13px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">About Us</a>
           </li>
 
-          <li class="font-normal md:text-[13px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Download</a>
           </li>
 
-          <li class="font-normal md:text-[13px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Blog</a>
           </li>
 
-          <li class="font-normal md:text-[13px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Support</a>
           </li>
 
@@ -80,26 +80,45 @@
 
         <!-- Button dropdown -->
         <button id="dropdownButton" class="text-black focus:outline-none">
+
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
+
         </button>
 
         <!-- Dropdown Menu -->
-        <div id="dropdownMenu" class="hidden absolute right-0 z-10 w-48 mt-2 bg-white border border-gray-200 rounded shadow-lg">
-          <a href="#" class="block px-4 py-2 text-black text-[14px] leading-[18px] hover:bg-gray-200">Home</a>
-          <a href="#" class="block px-4 py-2 text-black text-[14px] leading-[18px] hover:bg-gray-200">Features</a>
-          <a href="#" class="block px-4 py-2 text-black text-[14px] leading-[18px] hover:bg-gray-200">About Us</a>
-          <a href="#" class="block px-4 py-2 text-black text-[14px] leading-[18px] hover:bg-gray-200">Download</a>
-          <a href="#" class="block px-4 py-2 text-black text-[14px] leading-[18px] hover:bg-gray-200">Blog</a>
-          <a href="#" class="block px-4 py-2 text-black text-[14px] leading-[18px] hover:bg-gray-200">Support</a>
-        </div>
+        <ul id="dropdownMenu" class="hidden absolute  right-0 z-10 w-full mt-auto bg-[#F4FFE6] border border-[#0000001A] shadow-md">
+
+          <li>
+            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Features</a>
+          </li>
+          <li>
+            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Download</a>
+          </li>
+          <li>
+            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Support</a>
+          </li>
+          <li>
+            <a href="#" class="block px-[20px] py-2 font-bold text-black text-[16px] leading-normal underline">Sign Up</a>
+          </li>
+
+        </ul>
 
       </div>
 
       <!-- Button Sign In -->
-      <a href="" class="hidden sm:flex justify-center items-center md:py-[14px] md:px-[20px] lg:py-[16px] lg:px-[24px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black">
-        <span class="font-semibold text-white md:text-[15px] lg:text-[16px] xl:text-[16px] leading-normal">Sign Up</span>
+      <a href="" class="hidden sm:flex justify-center items-center sm:py-[10px] sm:px-[12px] md:py-[12px] md:px-[16px] lg:py-[14px] lg:px-[20px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black">
+        <span class="font-semibold text-white sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal">Sign Up</span>
       </a>  
 
     </header>
@@ -107,34 +126,34 @@
     <main id="site-main" class="overflow-x-hidden overflow-y-hidden">
 
       <!-- Hero Section -->
-      <section class="bg-[#F4FFE6] py-[8px] px-[24px] md:px-[64px] lg:py-[12px] lg:px-[100px] xl:py-[24px] xl:px-[120px] overflow-hidden relative">
+      <section class="bg-[#F4FFE6] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px] overflow-hidden relative">
 
-        <h1 class="font-bold text-center leading-[1] text-[51px] sm:text-[] md:text-[80px] lg:text-[100px] xl:text-[128px]">
+        <h1 class="font-bold text-center leading-[1] text-[55px] sm:text-[85px] md:text-[100px] lg:text-[120px] xl:text-[128px]">
           Boost Your Productivity. Simplify Your Day.
         </h1>
 
-        <div class="flex flex-col w-[336px] gap-[8px] mt-[50px] md:mt-[90px] lg:gap-[16px] lg:mt-[103px] xl:mt-[103px]">
+        <div class="flex flex-col w-[300px] sm:w-[190px] md:w-[230px] lg:w-[265px] xl:w-[336px] mt-[40px] sm:mt-[30px] md:mt-[45px] lg:mt-[60px] xl:mt-[103px] gap-[8px] lg:gap-[16px]">
 
-          <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
+          <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] text-[#6D6D6D]">
             Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
           </span>
 
-          <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-[6px] px-[16px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[32px] xl:py-[16px] xl:px-[32px]">
-            <span class="font-bold text-white leading-[1.5] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]">
+          <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
+            <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Download Now
             </span>
           </a>
 
         </div>
 
-        <figure class="absolute left-1/2 transform -translate-x-1/2 md:top-[13%] lg:top-[14%] xl:top-[15%]">
-          <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto w-[100px] sm:w-[426px] md:w-[285px] lg:w-[385px] xl:w-[426px]">
+        <figure class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 sm:top-[30%] md:top-[20%] xl:top-[15%]">
+          <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[285px] lg:w-[385px] xl:w-[426px]">
         </figure>
 
-        <div class="flex flex-col md:flex-row w-fit ml-auto gap-[16px] md:gap-[24px] lg:gap-[32px] xl:gap-[40px] md:-mt-[31px]">
+        <div class="flex flex-row w-fit ml-auto gap-[16px] md:gap-[24px] lg:gap-[32px] xl:gap-[40px] md:-mt-[31px]">
 
           <div class="flex flex-col gap-[3px] w-fit">
-              <span class="font-bold leading-[1] text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">
+              <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">
                 2K+
               </span>
               <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
@@ -143,7 +162,7 @@
           </div>
           
           <div class="flex flex-col gap-[3px] w-fit">
-              <span class="font-bold leading-[1] text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">
+              <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">
                 100K+
               </span>
               <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
@@ -155,14 +174,14 @@
 
       </section>
 
-      <!--  -->
-      <section class="flex flex-col gap-4 xl:gap-[24px] py-[20px] px-[24px] md:px-[64px] lg:py-[60px] lg:px-[100px] xl:py-[80px] xl:px-[120px]">
+      <!-- 2 -->
+      <section class="flex flex-col gap-4 xl:gap-[24px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
 
-        <div class="flex flex-col gap-4 md:flex-row md:justify-between">
-          <span class="xl:w-[42.25%] font-semibold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] leading-[1.2]">
+        <div class="flex flex-col gap-4 lg:flex-row md:justify-between">
+          <span class="xl:w-[42.25%] font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1.2]">
             Used by various roles in various companies
           </span>
-          <p class="xl:w-[41.75%] self-end font-normal leading-[1.9] text-right text-[10px] lg:text-[12px] xl:text-[14px] text-[#6D6D6D]">
+          <p class="xl:w-[41.75%] self-end font-normal leading-[1.9] text-right text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
             Empowering Professionals in Every Industry—From Managers to Creatives—Prodify Helps Teams Stay Organized, Improve Collaboration, and Reach Their Productivity Goals Faste
           </p>
         </div>
@@ -182,34 +201,36 @@
 
       </section>
 
-      <!--  -->
-      <section class="flex flex-col xl:gap-[20px] py-[20px] px-[24px] md:px-[64px] lg:py-[60px] lg:px-[100px] xl:py-[80px] xl:px-[120px]">
+      <!-- 3 -->
+      <section class="flex flex-col gap-[20px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
 
         <div class="flex flex-col md:flex-row gap-[20px]">
 
-          <div class="flex flex-col md:w-[50%] h-[556px] justify-between rounded-[24px] p-[48px] bg-[#F4FFE6]">
+          <div class="flex flex-col md:w-[50%] md:h-[395px] lg:h-[460px] xl:h-[556px] gap-[40px] md:justify-between rounded-[24px] p-[28px] md:p-[28px] lg:p-[38px] xl:p-[48px] bg-[#F4FFE6]">
 
-            <span class="font-semibold text-[48px] leading-[48px]">All-in-One Productivity Solution</span>
+            <span class="font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1]">All-in-One Productivity Solution</span>
 
-            <div class="flex flex-col gap-[24px]">
-              <span class="font-normal text-[14px] leading-[26px]">From task management to reminders, calendar integration to focus mode, Prodify gives you the tools to boost your productivity and take control of your time.</span>
+            <div class="flex flex-col gap-[12px] md:gap-[24px]">
 
-              <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-[6px] px-[16px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[32px] xl:py-[16px] xl:px-[32px]">
-                <span class="font-bold text-white leading-[1.5] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]">
+              <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">From task management to reminders, calendar integration to focus mode, Prodify gives you the tools to boost your productivity and take control of your time.</span>
+
+              <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
+                <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
                   Download Now
                 </span>
               </a>
+
             </div>
 
           </div>
 
-          <div class="flex flex-col md:w-[50%] h-[556px] justify-between items-center rounded-[24px] p-[48px] border border-[#E7E7E7]">
+          <div class="flex flex-col md:w-[50%] md:h-[395px] lg:h-[460px] xl:h-[556px] gap-[20px] md:justify-between items-center rounded-[24px] p-[28px] md:p-[28px] lg:p-[38px] xl:p-[48px] border border-[#E7E7E7]">
 
             <figure>
-              <img src="public/illustration.png" class="w-[355px] h-[304px] items-center" alt="illustration">
+              <img src="public/illustration.png" class="w-[50%] md:w-[240px] lg:w-[320px] xl:w-[355px] xl:h-[304px] justify-self-center" alt="illustration">
             </figure>
 
-            <span class="font-semibold text-[48px] leading-[48px]">Do more and stay productive</span>
+            <span class="font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1]">Do more and stay productive</span>
             
           </div>
 
@@ -217,45 +238,45 @@
 
         <div class="flex flex-col md:flex-row gap-[20px]">
 
-          <div class="flex flex-col items-center md:w-[33.33%] h-[499px] rounded-[24px] p-[24px] gap-[32px] border border-[#E7E7E7]">
+          <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[32px] border border-[#E7E7E7]">
 
             <figure>
-              <img src="todolist.png" class="object-cover object-left w-auto h-[296px] items-center" alt="calendar">
+              <img src="todolist.png" class="object-cover object-left md:h-[165px] lg:h-[240px] xl:h-[296px] items-center" alt="calendar">
             </figure>
 
             <div class="flex flex-col gap-[8px]">
-              <span class="font-bold text-[32px] leading-[40px]">To-do Lists</span>
-              <p class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">
+              <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">To-do Lists</span>
+              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
                 Organize tasks with categories, priorities, and deadlines. Break down tasks with subtasks and track your progress with ease.
               </p>
             </div>
 
           </div>
 
-          <div class="flex flex-col items-center md:w-[33.33%] h-[499px] rounded-[24px] p-[24px] gap-[24px] border border-[#E7E7E7]">
+          <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[24px] border border-[#E7E7E7]">
 
             <div class="flex flex-col gap-[8px]">
-              <span class="font-bold text-[32px] leading-[40px]">Smart Calendar</span>
-              <p class="font-normal text-[14px] leading-[25px] text-[#6D6D6D]">
+              <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">Smart Calendar</span>
+              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
                 Integrate with your favorite calendar apps and manage tasks alongside events. Stay on top of your schedule with color-coded views and smart reminders.
               </p>
             </div>
 
             <figure>
-              <img src="calendar.png" class="w-[338px] h-[278px] items-center object-cover" alt="calendar">
+              <img src="calendar.png" class="w-[360px] md:h-auto lg:h-[225px] xl:h-[278px] items-center object-cover" alt="calendar">
             </figure>
 
           </div>
 
-          <div class="flex flex-col items-center md:w-[33.33%] h-[499px] rounded-[24px] p-[24px] gap-[32px] border border-[#E7E7E7]">
+          <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[32px] border border-[#E7E7E7]">
 
             <figure>
-              <img src="timer.png" alt="Focus-Mode" class="object-cover w-[339px] h-[307px]">
+              <img src="timer.png" alt="Focus-Mode" class="justify-self-center object-cover w-[360px] md:h-[150px] lg:h-[205px] xl:h-[307px]">
             </figure>
 
             <div class="flex flex-col gap-[8px]">
-              <span class="font-bold text-[32px] leading-[40px]">Focus Mode</span>
-              <p class="font-normal text-[14px] leading-[26px] text-[#6D6D6D]">
+              <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">Focus Mode</span>
+              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
                 Use the Pomodoro timer to stay focused. Block distractions and track your productive time.
               </p>
             </div>
@@ -266,9 +287,10 @@
 
       </section>
 
-      <section class="flex flex-col xl:gap-[72px] items-center py-[20px] px-[24px] md:px-[64px] lg:py-[60px] lg:px-[100px] xl:py-[80px] xl:px-[120px]">
+      <!-- Testimonial Section -->
+      <section class="flex flex-col gap-[32px] md:gap-[54px] xl:gap-[72px] items-center py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
 
-        <span class="font-semibold text-[48px] leading-[60px] w-[715px] text-center">Word of praise from others about our presence.</span>
+        <span class="font-semibold text-center text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal md:w-[490px] lg:w-[540px] xl:w-[715px]">Word of praise from others about our presence.</span>
 
         <div class="flex flex-col w-auto h-auto gap-[20px]">
 
@@ -507,19 +529,20 @@
 
       </section>
 
-      <section class="flex flex-col xl:gap-[72px] py-[20px] px-[24px] md:px-[64px] lg:py-[60px] lg:px-[100px] xl:py-[80px] xl:px-[120px]">
+      <!-- Download Link -->
+      <section class="flex flex-col gap-[32px] md:gap-[54px] xl:gap-[72px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
 
-        <div class="bg-[#F4FFE6] py-[28px] px-[52px] md:py-[38px] md:px-[62px] lg:py-[48px] lg:px-[72px] lg:gap-[96px] rounded-[16px]">
+        <div class="bg-[#F4FFE6] py-[16px] px-[30px] md:py-[24px] md:px-[35px] xl:py-[48px] xl:px-[72px] xl:gap-[96px] rounded-[16px]">
 
-          <div class="flex flex-col gap-[12px] lg:gap-[24px] items-center">
+          <div class="flex flex-col gap-[16px] sm:gap-[18px] md:gap-[20px] lg:gap-[22px] xl:gap-[24px] items-center">
 
             <div class="flex flex-col items-center gap-[4px] lg:gap-[8px]">
-              <span class="font-semibold text-[24px] md:text-[34px] lg:text-[64px] leading-normal text-center">Download Now</span>
-              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">“Prodify has changed the way I work! The focus mode and reminders have boosted my productivity significantly.”</p>
+              <span class="font-semibold text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-normal text-center">Download Now</span>
+              <p class="font-normal text-center text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">“Prodify has changed the way I work! The focus mode and reminders have boosted my productivity significantly.”</p>
             </div>
 
-            <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-[6px] px-[16px] md:py-[12px] md:px-[24px] lg:py-[14px] lg:px-[32px] xl:py-[16px] xl:px-[32px]">
-              <span class="font-bold text-white leading-[1.5] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]">
+            <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
+              <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
                 Download Now
               </span>
             </a>
