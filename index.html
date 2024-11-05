@@ -14,6 +14,39 @@
       .hidden {
        display: none;
       }
+
+      /* Slide */
+      .marquee-content {
+        display: flex;
+        animation: slide 2000ms linear infinite; 
+      }
+
+      .marquee-left {
+        animation: slide-left 10s linear infinite;
+      }
+
+      .marquee-right {
+        animation: slide-right 10s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+      }
+
+      /* Animated Figure */
+      #animated-figure {
+        top: 100%;
+        transition: top 6000ms ease-out; 
+      }
+
+      #animated-figure.animate-top {
+        top: var(--target-top, 30%); 
+      }
     </style>
   </head>
 
@@ -146,7 +179,7 @@
 
         </div>
 
-        <figure class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 sm:top-[30%] md:top-[20%] xl:top-[15%]">
+        <figure id="animated-figure" class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 sm:top-[30%] md:top-[20%] xl:top-[15%]">
           <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[285px] lg:w-[385px] xl:w-[426px]">
         </figure>
 
@@ -186,17 +219,70 @@
           </p>
         </div>
 
-        <div class="bg-[#F6F6F6] h-fit flex flex-row items-center gap-[24px] py-[24px] md:gap-[32px] md:py-[32px] lg:gap-[48px] lg:py-[48px] rounded-[16px]">
-          <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Student</span>
-          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
-          <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">CEO</span>
-          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
-          <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Trainer</span>
-          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
-          <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Product Manager</span>
-          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
-          <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Designer</span>
-          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8.5" r="8" fill="#888888"/></svg>
+        <div class="bg-[#F6F6F6] py-[24px] md:py-[32px] lg:py-[48px] rounded-[16px] overflow-x-hidden">
+
+          <div class="b-slider marquee-slider flex flex-row items-center gap-[24px] md:gap-[32px] lg:gap-[48px]">
+
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Student</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">CEO</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Trainer</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Designer</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Student</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">CEO</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Trainer</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
+            </div>
+            <div class="b-slider__slide">
+              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+            </div>
+            <div class="b-slider__slide">
+              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Designer</span>
+            </div>
+
+          </div>
+
         </div>
 
       </section>
@@ -292,103 +378,30 @@
 
         <span class="font-semibold text-center text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal md:w-[490px] lg:w-[540px] xl:w-[715px]">Word of praise from others about our presence.</span>
 
-        <div class="flex flex-col w-auto h-auto gap-[20px]">
+        <div class="marquee-wrapper flex flex-col w-auto h-auto gap-[15px] lg:gap-[20px]">
 
-          <div class="flex flex-row gap-[20px] justify-center">
+          <div class="marquee-slider marquee-content flex flex-row gap-[15px] lg:gap-[20px] justify-center">
 
             <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
+            <div class="b-slider__slide-left flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
 
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
               </svg>
 
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
               </p>
 
               <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
 
-                <figure class="w-[56px] h-[56px] rounded-full">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
                   <img src="avatar.png" alt="Profile picture">
                 </figure>
 
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
-            </div>
-
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
-
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
-                Prodify has completely transformed how I manage my day. From organizing tasks to staying focused, it's the only tool I need to stay productive              </p>
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[56px] h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
-            </div>
-
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
-
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
-                Prodify has changed the way I work! The focus mode and reminders have boosted my productivity significantly.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[56px] h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
-            </div>
-
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
-
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[56px] h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
                 </div>
               </div>
                 
@@ -396,128 +409,103 @@
 
           </div>
 
-          <div class="flex flex-row gap-[20px] justify-center">
+          <div class="marquee-slider-right marquee-content flex flex-row gap-[15px] lg:gap-[20px] justify-center">
             
             <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
+            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
 
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
               </svg>
 
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
               </p>
 
               <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
 
-                <figure class="w-[56px] h-[56px] rounded-full">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
                   <img src="avatar.png" alt="Profile picture">
                 </figure>
 
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
                 </div>
               </div>
                 
             </div>
 
             <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
+            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
 
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
               </svg>
 
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
               </p>
 
               <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
 
-                <figure class="w-[56px] h-[56px] rounded-full">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
                   <img src="avatar.png" alt="Profile picture">
                 </figure>
 
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
                 </div>
               </div>
                 
             </div>
 
             <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
+            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
 
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
               </svg>
 
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
               </p>
 
               <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
 
-                <figure class="w-[56px] h-[56px] rounded-full">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
                   <img src="avatar.png" alt="Profile picture">
                 </figure>
 
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
                 </div>
               </div>
                 
             </div>
 
             <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
+            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
 
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
               </svg>
 
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
               </p>
 
               <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
 
-                <figure class="w-[56px] h-[56px] rounded-full">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
                   <img src="avatar.png" alt="Profile picture">
                 </figure>
 
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
-            </div>
-
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[32px] w-[386px] h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[24px]">
-
-              <svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[16px] leading-[25px] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[56px] h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[6px]">
-                  <span class="font-semibold text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[14px] leading-[18px] text-[#B0B0B0]">Project Manager</span>
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
                 </div>
               </div>
                 
@@ -555,97 +543,117 @@
 
     </main>
 
-    <footer id="site-footer" class="flex flex-col w-full h-auto xl:gap-[40px] xl:pt-[100px] xl:px-[120px] relative overflow-hidden">
+    <footer id="site-footer" class="flex flex-col gap-[40px] pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-[120px] relative overflow-hidden">
 
-      <div class="flex flex-row w-full h-auto justify-between">
+      <div class="flex flex-col gap-[15px] lg:flex-row lg:justify-between">
 
-        <span class="font-bold text-[48px] leading-[60px] w-[25.58%]">All in one productivity software</span>
+        <span class="font-bold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal lg:w-[25.58%]">All in one productivity software</span>
 
-        <ul class="flex flex-col gap-[16px] w-auto h-auto">
-          <li class="font-semibold text-[24px] leading-[30px]">
-            <a href="">Menu</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Home</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Features</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">About Us</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Download</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Blog</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Contact</a>
-          </li>
-        </ul>
+        <div class="flex flex-col gap-[15px] sm:flex-row lg:w-[66.42%] justify-between">
+          
+          <div class="flex flex-row justify-between sm:w-[62.75%]">
 
-        <ul class="flex flex-col gap-[16px] w-auto h-auto">
-          <li class="font-semibold text-[24px] leading-[30px]">
-            <a href="">Support</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">FAQ</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Tutorial</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Help Cneter</a>
-          </li>
-        </ul>
+            <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]">
+              <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
+                <a href="">Menu</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Home</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Features</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">About Us</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Download</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Blog</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Contact</a>
+              </li>
+            </ul>
+    
+            <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]">
+              <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
+                <a href="">Support</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">FAQ</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Tutorial</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Help Cneter</a>
+              </li>
+            </ul>
+    
+            <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]">
+              <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
+                <a href="">Legal</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Tem Of Service</a>
+              </li>
+              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+                <a href="">Privacy policy</a>
+              </li>
+            </ul>
 
-        <ul class="flex flex-col gap-[16px] w-auto h-auto">
-          <li class="font-semibold text-[24px] leading-[30px]">
-            <a href="">Legal</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Tem Of Service</a>
-          </li>
-          <li class="font-normal text-[16px] leading-[20px] text-[#888888]">
-            <a href="">Privacy policy</a>
-          </li>
-        </ul>
+          </div>
+  
+          <div>
 
-        <ul class="flex flex-row gap-[12px] w-auto h-auto">
-          <li class="">
-            <a href="">
-              <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
-              <path d="M24 14.1665C22.6868 14.1665 21.3864 14.4252 20.1732 14.9277C18.9599 15.4303 17.8575 16.1669 16.9289 17.0954C15.0536 18.9708 14 21.5143 14 24.1665C14 28.5865 16.87 32.3365 20.84 33.6665C21.34 33.7465 21.5 33.4365 21.5 33.1665V31.4765C18.73 32.0765 18.14 30.1365 18.14 30.1365C17.68 28.9765 17.03 28.6665 17.03 28.6665C16.12 28.0465 17.1 28.0665 17.1 28.0665C18.1 28.1365 18.63 29.0965 18.63 29.0965C19.5 30.6165 20.97 30.1665 21.54 29.9265C21.63 29.2765 21.89 28.8365 22.17 28.5865C19.95 28.3365 17.62 27.4765 17.62 23.6665C17.62 22.5565 18 21.6665 18.65 20.9565C18.55 20.7065 18.2 19.6665 18.75 18.3165C18.75 18.3165 19.59 18.0465 21.5 19.3365C22.29 19.1165 23.15 19.0065 24 19.0065C24.85 19.0065 25.71 19.1165 26.5 19.3365C28.41 18.0465 29.25 18.3165 29.25 18.3165C29.8 19.6665 29.45 20.7065 29.35 20.9565C30 21.6665 30.38 22.5565 30.38 23.6665C30.38 27.4865 28.04 28.3265 25.81 28.5765C26.17 28.8865 26.5 29.4965 26.5 30.4265V33.1665C26.5 33.4365 26.66 33.7565 27.17 33.6665C31.14 32.3265 34 28.5865 34 24.1665C34 22.8533 33.7413 21.5529 33.2388 20.3397C32.7362 19.1264 31.9997 18.024 31.0711 17.0954C30.1425 16.1669 29.0401 15.4303 27.8268 14.9277C26.6136 14.4252 25.3132 14.1665 24 14.1665Z" fill="black"/>
-              </svg>
-            </a>
-          </li>
-          <li class="">
-            <a href="">
-              <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
-                <path d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z" fill="black"/>
-                <path d="M28 15.1665C30.76 15.1665 33 17.4065 33 20.1665V28.1665C33 30.9265 30.76 33.1665 28 33.1665H20C17.24 33.1665 15 30.9265 15 28.1665V20.1665C15 17.4065 17.24 15.1665 20 15.1665H24H28Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M24 20.1665C26.21 20.1665 28 21.9565 28 24.1665C28 26.3765 26.21 28.1665 24 28.1665C21.79 28.1665 20 26.3765 20 24.1665C20 21.9565 21.79 20.1665 24 20.1665Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>                
-            </a>
-          </li>
-          <li class="">
-            <a href="">
-              <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 16.1665C24.855 16.1665 25.732 16.1885 26.582 16.2245L27.586 16.2725L28.547 16.3295L29.447 16.3905L30.269 16.4545C31.1612 16.5224 32.0008 16.9029 32.64 17.5291C33.2791 18.1553 33.6768 18.9869 33.763 19.8775L33.803 20.3025L33.878 21.2125C33.948 22.1555 34 23.1835 34 24.1665C34 25.1495 33.948 26.1775 33.878 27.1205L33.803 28.0305L33.763 28.4555C33.6768 29.3463 33.2789 30.178 32.6396 30.8042C32.0002 31.4304 31.1604 31.8108 30.268 31.8785L29.448 31.9415L28.548 32.0035L27.586 32.0605L26.582 32.1085C25.7218 32.1458 24.861 32.1651 24 32.1665C23.139 32.1651 22.2782 32.1458 21.418 32.1085L20.414 32.0605L19.453 32.0035L18.553 31.9415L17.731 31.8785C16.8388 31.8106 15.9992 31.4301 15.36 30.8039C14.7209 30.1777 14.3232 29.3461 14.237 28.4555L14.197 28.0305L14.122 27.1205C14.0458 26.1376 14.0051 25.1523 14 24.1665C14 23.1835 14.052 22.1555 14.122 21.2125L14.197 20.3025L14.237 19.8775C14.3232 18.9871 14.7207 18.1556 15.3597 17.5294C15.9986 16.9033 16.838 16.5226 17.73 16.4545L18.551 16.3905L19.451 16.3295L20.413 16.2725L21.417 16.2245C22.2775 16.1872 23.1387 16.1679 24 16.1665ZM22 21.7415V26.5915C22 27.0535 22.5 27.3415 22.9 27.1115L27.1 24.6865C27.1914 24.6339 27.2673 24.5581 27.3201 24.4668C27.3729 24.3755 27.4007 24.272 27.4007 24.1665C27.4007 24.0611 27.3729 23.9575 27.3201 23.8662C27.2673 23.7749 27.1914 23.6991 27.1 23.6465L22.9 21.2225C22.8088 21.1698 22.7053 21.1421 22.5999 21.1421C22.4945 21.1421 22.3911 21.1699 22.2998 21.2226C22.2086 21.2753 22.1329 21.3511 22.0802 21.4424C22.0276 21.5336 21.9999 21.6371 22 21.7425V21.7415Z" fill="black"/>
-              </svg>                
-            </a>
-          </li>
-        </ul>
+            <ul class="flex flex-row gap-[12px] w-auto h-auto">
+
+              <li>
+                <a href="">
+                  <svg 
+                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" 
+                    viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
+                    <path d="M24 14.1665C22.6868 14.1665 21.3864 14.4252 20.1732 14.9277C18.9599 15.4303 17.8575 16.1669 16.9289 17.0954C15.0536 18.9708 14 21.5143 14 24.1665C14 28.5865 16.87 32.3365 20.84 33.6665C21.34 33.7465 21.5 33.4365 21.5 33.1665V31.4765C18.73 32.0765 18.14 30.1365 18.14 30.1365C17.68 28.9765 17.03 28.6665 17.03 28.6665C16.12 28.0465 17.1 28.0665 17.1 28.0665C18.1 28.1365 18.63 29.0965 18.63 29.0965C19.5 30.6165 20.97 30.1665 21.54 29.9265C21.63 29.2765 21.89 28.8365 22.17 28.5865C19.95 28.3365 17.62 27.4765 17.62 23.6665C17.62 22.5565 18 21.6665 18.65 20.9565C18.55 20.7065 18.2 19.6665 18.75 18.3165C18.75 18.3165 19.59 18.0465 21.5 19.3365C22.29 19.1165 23.15 19.0065 24 19.0065C24.85 19.0065 25.71 19.1165 26.5 19.3365C28.41 18.0465 29.25 18.3165 29.25 18.3165C29.8 19.6665 29.45 20.7065 29.35 20.9565C30 21.6665 30.38 22.5565 30.38 23.6665C30.38 27.4865 28.04 28.3265 25.81 28.5765C26.17 28.8865 26.5 29.4965 26.5 30.4265V33.1665C26.5 33.4365 26.66 33.7565 27.17 33.6665C31.14 32.3265 34 28.5865 34 24.1665C34 22.8533 33.7413 21.5529 33.2388 20.3397C32.7362 19.1264 31.9997 18.024 31.0711 17.0954C30.1425 16.1669 29.0401 15.4303 27.8268 14.9277C26.6136 14.4252 25.3132 14.1665 24 14.1665Z" fill="black"/>
+                  </svg>
+                </a>
+              </li>              
+              <li class="">
+                <a href="">
+                  <svg
+                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
+                    viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
+                    <path d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z" fill="black"/>
+                    <path d="M28 15.1665C30.76 15.1665 33 17.4065 33 20.1665V28.1665C33 30.9265 30.76 33.1665 28 33.1665H20C17.24 33.1665 15 30.9265 15 28.1665V20.1665C15 17.4065 17.24 15.1665 20 15.1665H24H28Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24 20.1665C26.21 20.1665 28 21.9565 28 24.1665C28 26.3765 26.21 28.1665 24 28.1665C21.79 28.1665 20 26.3765 20 24.1665C20 21.9565 21.79 20.1665 24 20.1665Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                
+                </a>
+              </li>
+              <li class="">
+                <a href="">
+                  <svg 
+                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" 
+                    viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 16.1665C24.855 16.1665 25.732 16.1885 26.582 16.2245L27.586 16.2725L28.547 16.3295L29.447 16.3905L30.269 16.4545C31.1612 16.5224 32.0008 16.9029 32.64 17.5291C33.2791 18.1553 33.6768 18.9869 33.763 19.8775L33.803 20.3025L33.878 21.2125C33.948 22.1555 34 23.1835 34 24.1665C34 25.1495 33.948 26.1775 33.878 27.1205L33.803 28.0305L33.763 28.4555C33.6768 29.3463 33.2789 30.178 32.6396 30.8042C32.0002 31.4304 31.1604 31.8108 30.268 31.8785L29.448 31.9415L28.548 32.0035L27.586 32.0605L26.582 32.1085C25.7218 32.1458 24.861 32.1651 24 32.1665C23.139 32.1651 22.2782 32.1458 21.418 32.1085L20.414 32.0605L19.453 32.0035L18.553 31.9415L17.731 31.8785C16.8388 31.8106 15.9992 31.4301 15.36 30.8039C14.7209 30.1777 14.3232 29.3461 14.237 28.4555L14.197 28.0305L14.122 27.1205C14.0458 26.1376 14.0051 25.1523 14 24.1665C14 23.1835 14.052 22.1555 14.122 21.2125L14.197 20.3025L14.237 19.8775C14.3232 18.9871 14.7207 18.1556 15.3597 17.5294C15.9986 16.9033 16.838 16.5226 17.73 16.4545L18.551 16.3905L19.451 16.3295L20.413 16.2725L21.417 16.2245C22.2775 16.1872 23.1387 16.1679 24 16.1665ZM22 21.7415V26.5915C22 27.0535 22.5 27.3415 22.9 27.1115L27.1 24.6865C27.1914 24.6339 27.2673 24.5581 27.3201 24.4668C27.3729 24.3755 27.4007 24.272 27.4007 24.1665C27.4007 24.0611 27.3729 23.9575 27.3201 23.8662C27.2673 23.7749 27.1914 23.6991 27.1 23.6465L22.9 21.2225C22.8088 21.1698 22.7053 21.1421 22.5999 21.1421C22.4945 21.1421 22.3911 21.1699 22.2998 21.2226C22.2086 21.2753 22.1329 21.3511 22.0802 21.4424C22.0276 21.5336 21.9999 21.6371 22 21.7425V21.7415Z" fill="black"/>
+                  </svg>                
+                </a>
+              </li>
+              
+            </ul>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <div class="w-auto h-[169px] overflow-x-hidden">
-        <div class="absolute">
-          <svg class="xl:h-[339px] xl:w-[1200px]" viewBox="0 0 1200 339" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="w-auto h-[50px] sm:h-[85px] md:h-[100px] lg:h-[145px] xl:h-[169px] overflow-x-hidden">
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+          <svg class="w-[340px] sm:w-[557px] md:w-[647px] lg:w-[1000px] xl:h-[339px] xl:w-[1200px]" viewBox="0 0 1200 339" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1046.03 338.796C1041.41 338.796 1036.79 338.333 1032.16 337.408C1027.77 336.715 1023.73 335.559 1020.03 333.941V300.304C1022.8 300.997 1026.15 301.575 1030.08 302.038C1034.01 302.731 1037.83 303.078 1041.53 303.078C1052.39 303.078 1060.37 300.651 1065.45 295.796C1070.77 291.172 1075.51 284.006 1079.67 274.296L1092.15 245.861L1091.46 278.804L1010.32 74.9025H1052.28L1112.27 231.296H1098.05L1157.69 74.9025H1200L1117.12 282.965C1112.73 294.062 1107.18 303.772 1100.48 312.094C1094 320.648 1086.26 327.237 1077.24 331.86C1068.46 336.484 1058.06 338.796 1046.03 338.796Z" fill="black"/>
             <path d="M911.02 262.506V110.273H876.343V74.9026H911.02V65.193C911.02 51.091 913.91 39.3008 919.69 29.8224C925.469 20.1127 933.445 12.7149 943.617 7.62898C954.02 2.54299 965.926 0 979.334 0C981.877 0 984.767 0.231178 988.004 0.693534C991.24 0.924726 993.899 1.2715 995.979 1.73386V35.7175C994.13 35.2551 992.049 35.0239 989.738 35.0239C987.426 34.7927 985.576 34.6772 984.189 34.6772C973.786 34.6772 965.464 37.1045 959.222 41.9593C952.98 46.583 949.859 54.3275 949.859 65.193V74.9026H992.858V110.273H949.859V262.506H911.02Z" fill="black"/>
             <path d="M804.867 262.506V74.903H844.052V262.506H804.867ZM804.867 49.2419V4.16162H844.052V49.2419H804.867Z" fill="black"/>
@@ -660,12 +668,93 @@
     </footer>
 
     <script type="module" src="/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      document.getElementById("dropdownButton").addEventListener("click", function() {
+      
+    // Slider untuk elemen b-slider__slide
+    const marqueeSlider = document.querySelector('.marquee-slider');
+    const marqueeSliderLeft = document.querySelector('.marquee-slider-left');
+    const marqueeSliderRight = document.querySelector('.marquee-slider-right');
+
+    const slides = document.querySelectorAll('.b-slider__slide');
+
+    const slidesLeft = document.querySelectorAll('.b-slider__slide-left');
+
+    const slidesRight = document.querySelectorAll('.b-slider__slide-right');
+
+    let sliderPosition = 0;
+    const sliderSpeed = 1;
+
+    function animateSlider() {
+        sliderPosition -= sliderSpeed;
+        if (sliderPosition <= -marqueeSlider.offsetWidth / 2) {
+            sliderPosition = 0;
+        }
+        marqueeSlider.style.transform = `translateX(${sliderPosition}px)`;
+        requestAnimationFrame(animateSlider);
+    }
+
+    let sliderPositionLeft = 0;
+    const sliderSpeedLeft = 1;
+
+    function animateSliderLeft() {
+      sliderPositionLeft -= sliderSpeedLeft;
+      if (sliderPositionLeft <= -marqueeSliderLeft.offsetWidth / 2) {
+          sliderPositionLeft = 0; 
+      }
+      marqueeSliderLeft.style.transform = `translateX(${sliderPositionLeft}px)`;
+      requestAnimationFrame(animateSliderLeft);
+    }
+
+    let sliderPositionRight = 0;
+    const sliderSpeedRight = 1;
+
+    function animateSliderRight() {
+        sliderPositionRight += sliderSpeedRight;
+        if (sliderPositionRight >= marqueeSliderRight.offsetWidth / 2) {
+            sliderPositionRight = 0; 
+        }
+        marqueeSliderRight.style.transform = `translateX(${sliderPositionRight}px)`;
+        requestAnimationFrame(animateSliderRight);
+    }
+
+    animateSlider();
+    animateSliderLeft();
+    animateSliderRight();
+
+    // Klik untuk dropdown
+    document.getElementById("dropdownButton").addEventListener("click", function() {
         const dropdownMenu = document.getElementById("dropdownMenu");
-        dropdownMenu.classList.toggle("hidden"); // Toggles the visibility of the dropdown
+        dropdownMenu.classList.toggle("hidden");
+        dropdownMenu.classList.toggle("visible");
+    });
+
+      // Animated Figure
+      document.addEventListener("DOMContentLoaded", function () {
+        const figure = document.getElementById("animated-figure");
+
+        function setTopPosition() {
+            if (window.innerWidth >= 1280) {
+                figure.style.setProperty("--target-top", "15%");
+            } else if (window.innerWidth >= 768) {
+                figure.style.setProperty("--target-top", "20%");
+            } else if (window.innerWidth >= 640) {
+                figure.style.setProperty("--target-top", "30%");
+            } else {
+                figure.style.setProperty("--target-top", "100%");
+            }
+        }
+
+          setTopPosition();
+
+          setTimeout(() => {
+              figure.classList.add("animate-top");
+          }, 100);
+
+          window.addEventListener("resize", setTopPosition);
       });
-    </script>
+
+  </script>
     
   </body>
 </html>
