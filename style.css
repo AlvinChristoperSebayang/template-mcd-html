@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'helvetica';
-  src: url('/font/helvetica.ttf') format('truetype');
+  src: url ('/font/helvetica.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,3 +29,26 @@
   scrollbar-width: none;
 }
 
+.image-wrapper.active .image {
+  opacity: 1;
+}
+
+.image-wrapper.active {
+  transform: scale(1.2);
+}
+
+
+#navbar.bg-scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.category-item {
+  position: relative;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #F8F4F1;
+}
