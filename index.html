@@ -1,75 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
     <title>Vite App</title>
     <style>
-      li, span, h1, p, a{
-        @apply font-plus-jakarta
+      /* Swiper container */
+      .swiper-container {
+      width: 100%;
+      max-width: 1440px; /* Batas lebar maksimum */
+      height: 186px; /* Sesuaikan dengan tinggi gambar Anda */
+      overflow: hidden; /* Mencegah overflow */
+      margin: auto; /* Pusatkan kontainer */
+      }
+      .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      .swiper-slide img {
+      max-height: 100%; /* Sesuaikan dengan tinggi yang diinginkan */
+      max-width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+      object-fit: contain;
+      }
+      /* Custom Swiper style */
+      .sample-slider .swiper-wrapper {
+      transition-timing-function: linear;
+      }
+      @media (max-width: 769px) {
+      .swiper-container {
+      height: 72px; /* Tinggi untuk perangkat mobile */
+      }
+      }
+      </style>
+    <style>
+      li, span, h1, p, a {
+        @apply font-plus-jakarta;
       }
       .hidden {
-       display: none;
+        display: none;
       }
 
-      /* Slide */
-      .marquee-content {
-        display: flex;
-        animation: slide 2000ms linear infinite; 
-      }
-
-      .marquee-left {
-        animation: slide-left 10s linear infinite;
-      }
-
-      .marquee-right {
-        animation: slide-right 10s linear infinite;
-      }
-
-      @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-      }
-
+      /* Slider Testimonial */
+  
       /* Animated Figure */
       #animated-figure {
         top: 100%;
-        transition: top 6000ms ease-out; 
+        transition: top 6000ms ease-out;
       }
 
       #animated-figure.animate-top {
-        top: var(--target-top, 30%); 
+        top: var(--target-top, 30%);
       }
+      /* END */
+
+      /* Slide */
+      @keyframes b-slider {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .marquee-slider {
+        animation: b-slider 20s linear infinite;
+        white-space: nowrap;
+      }
+      /* END */
+
     </style>
+
   </head>
 
   <body class="overflow-x-hidden">
-
     <header class="sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px]">
 
       <!-- Logo -->
       <svg class="w-[67px] h-[24px] md:w-[87px] md:h-[28px] lg:w-[107px] lg:h-[34px]" viewBox="0 0 107 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1_6096)">
-        <path d="M20.1303 11.3462C20.253 13.798 19.4417 16.2041 17.8633 18.0695C17.0479 18.9496 16.0515 19.6383 14.9444 20.0871C13.8373 20.5359 12.6464 20.7339 11.4554 20.6671H8.43282H5.41022C5.01728 20.6671 4.83592 20.9116 4.83592 21.4005C4.83592 21.8895 4.83592 22.9897 4.83592 24.2427C4.83592 25.4956 4.83592 26.443 4.83592 27.0847C4.83592 27.7265 4.83592 27.3904 4.50343 27.3904H3.35483H2.23648C1.92462 27.3659 1.61135 27.3659 1.29949 27.3904H0.392698C0.0904377 27.3904 -0.0606738 27.207 -0.0606738 26.8403C-0.0606738 25.5567 -0.0606812 23.5703 0.120675 20.9421C0.302031 18.3139 0.120675 16.3581 0.120675 15.044C0.120675 11.3157 0.12066 7.31223 -0.272278 3.03378V2.7893C-0.272278 2.51425 -0.272296 2.392 0.181094 2.392H5.95427H8.46303H10.9718C12.1672 2.35708 13.3563 2.57872 14.4608 3.04227C15.5653 3.50582 16.5601 4.20076 17.3797 5.08132C19.0632 6.7315 20.049 8.97689 20.1303 11.3462ZM15.6568 11.6212C15.7331 10.0558 15.2262 8.51831 14.2362 7.31221C13.716 6.74295 13.0776 6.29707 12.367 6.00649C11.6563 5.7159 10.8908 5.58784 10.1255 5.63143C9.5814 5.63143 8.61417 5.63143 7.10287 5.63143C6.26846 5.61563 5.43547 5.70805 4.62432 5.90646C4.52107 7.94248 4.52107 9.98251 4.62432 12.0185C4.62432 12.5075 4.62432 13.2715 4.62432 14.2494C4.62432 15.2273 4.62432 16.0219 4.62432 16.5109C4.62432 16.9999 4.62433 16.6943 5.01727 16.7554C6.81296 16.9629 8.62146 17.0344 10.4277 16.9693C11.1415 17.0106 11.8556 16.8923 12.519 16.6229C13.1825 16.3535 13.7791 15.9397 14.2664 15.4107C15.1638 14.3567 15.6572 13.012 15.6568 11.6212Z" fill="#060913"/>
-        <path d="M32.7955 10.3682C32.8039 11.5656 32.7129 12.7617 32.5234 13.9438C32.5234 14.2188 32.5234 14.3716 32.1607 14.3716H31.0423C30.6599 14.3471 30.2762 14.3471 29.8937 14.3716C28.4127 14.3716 27.4757 14.7688 27.0525 15.6245C26.758 16.6144 26.6353 17.6484 26.6898 18.6806V20.6364C26.6898 21.3087 26.6898 22.3478 26.6898 23.6925C26.6898 25.0371 26.6898 26.0762 26.6898 26.7485C26.6898 27.4208 26.5387 27.2375 26.2666 27.2375H22.9418C22.6697 27.2375 22.5489 27.2375 22.5489 26.8096C22.5489 25.8317 22.5489 24.3648 22.5489 22.4395C22.5489 20.5142 22.5489 19.0168 22.5489 18.0388C22.617 15.648 22.3421 13.2599 21.7327 10.9488C21.7232 10.8778 21.7232 10.8059 21.7327 10.7349C21.7297 10.6675 21.7488 10.601 21.7871 10.5457C21.8253 10.4904 21.8807 10.4495 21.9443 10.4293L23.7881 10.2154L25.5715 9.84863C25.7528 9.84863 25.8737 10.1848 25.9341 10.8877C25.9946 11.5906 25.9342 11.9573 26.2666 11.9573L27.7175 11.0099C28.2192 10.7067 28.7577 10.4705 29.3194 10.3071C29.9 10.1464 30.5012 10.0743 31.1028 10.0931C32.3421 10.0014 32.7955 10.1237 32.7955 10.3682Z" fill="#060913"/>
-        <path d="M50.7798 18.4666C50.8188 20.8313 49.9524 23.1197 48.3617 24.8537C47.5802 25.7162 46.6298 26.4049 45.5708 26.876C44.5119 27.3471 43.3676 27.5904 42.2107 27.5904C41.0538 27.5904 39.9096 27.3471 38.8507 26.876C37.7917 26.4049 36.8413 25.7162 36.0598 24.8537C34.4859 23.1132 33.6131 20.8403 33.6131 18.4819C33.6131 16.1236 34.4859 13.8506 36.0598 12.1101C36.8229 11.2561 37.7559 10.5751 38.7978 10.1116C39.8397 9.64807 40.9667 9.41265 42.105 9.42076C43.2441 9.40676 44.3729 9.63953 45.4157 10.1034C46.4584 10.5673 47.3908 11.2515 48.1502 12.1101C48.986 12.9384 49.6493 13.9277 50.101 15.0194C50.5526 16.1111 50.7834 17.2833 50.7798 18.4666ZM47.0318 18.4666C47.068 17.099 46.5932 15.7677 45.7019 14.7383C45.2753 14.2194 44.7385 13.8043 44.1315 13.5239C43.5245 13.2435 42.8629 13.105 42.1957 13.1186C41.5294 13.1115 40.8698 13.253 40.2638 13.5329C39.6578 13.8128 39.1202 14.2244 38.6894 14.7383C37.8291 15.786 37.3582 17.1049 37.3582 18.4666C37.3582 19.8284 37.8291 21.1473 38.6894 22.195C39.1144 22.72 39.6494 23.1431 40.2557 23.4338C40.862 23.7245 41.5246 23.8755 42.1957 23.8758C42.8685 23.8866 43.5347 23.7406 44.1428 23.4491C44.7508 23.1576 45.2843 22.7285 45.7019 22.195C46.5513 21.2128 47.0233 19.9547 47.0318 18.65V18.4666Z" fill="#060913"/>
-        <path d="M70.3059 2.20862C70.3059 3.73663 70.3059 6.05925 70.0943 9.11528C69.8828 12.1713 69.8828 14.4939 69.8828 16.0219C69.8828 20.7587 69.8828 24.3037 70.185 26.7485V26.9625C70.185 26.9625 70.185 27.1764 69.7014 27.207H68.7342H68.0692H67.2833H66.4974C66.3161 27.207 66.2254 26.7791 66.1952 25.954C66.2663 25.5394 66.2663 25.1156 66.1952 24.701L65.9231 24.915C65.2224 25.7624 64.3463 26.444 63.3566 26.9117C62.3669 27.3794 61.2878 27.6218 60.1953 27.6218C59.1029 27.6218 58.0237 27.3794 57.034 26.9117C56.0443 26.444 55.1682 25.7624 54.4675 24.915C53.0477 23.1131 52.2745 20.8775 52.2745 18.5737C52.2745 16.2699 53.0477 14.0342 54.4675 12.2324C55.2036 11.3434 56.1309 10.6361 57.1786 10.1648C58.2263 9.69338 59.3667 9.47029 60.5127 9.51253C61.9243 9.47669 63.3038 9.94163 64.4118 10.8266L65.9231 12.1713C65.9444 12.1341 65.9556 12.092 65.9556 12.049C65.9556 12.0061 65.9444 11.964 65.9231 11.9268V6.12033C65.9231 5.72305 65.9231 5.14244 65.9231 4.34788C65.9231 3.55331 65.9231 2.94208 65.9231 2.51424C65.9231 2.08639 65.9232 2.0864 66.1952 2.0864C66.8497 2.11978 67.5054 2.11978 68.1599 2.0864H70.0943C70.185 1.84191 70.3059 1.96413 70.3059 2.20862ZM65.8627 18.6501C65.8919 17.2796 65.4303 15.9447 64.563 14.8912C64.1596 14.3453 63.6346 13.9031 63.0307 13.6005C62.4268 13.2978 61.761 13.1432 61.087 13.1492C60.3968 13.1301 59.7118 13.275 59.0871 13.5723C58.4624 13.8695 57.9154 14.3107 57.4901 14.8606C56.5864 15.943 56.1124 17.3261 56.1602 18.7418C56.1405 20.1176 56.6374 21.4499 57.5506 22.4701C57.9773 23.0008 58.5168 23.4276 59.1291 23.7185C59.7413 24.0095 60.4105 24.1573 61.087 24.1509C61.7631 24.1629 62.4325 24.0142 63.0415 23.717C63.6504 23.4198 64.1819 22.9823 64.5932 22.4396C65.4471 21.3684 65.8969 20.0254 65.8627 18.6501Z" fill="#060913"/>
-        <path d="M78.0433 10.6128C78.0433 11.5296 78.0433 12.9354 77.8922 14.7996C77.741 16.6638 77.7108 18.039 77.7108 18.9558C77.7108 19.8726 77.7108 21.1561 77.7108 22.8675C77.7108 24.5789 77.7108 25.9235 77.7108 26.7792C77.7108 27.0237 77.7108 27.1459 77.3783 27.1459H73.9326C73.6908 27.1459 73.5698 26.9014 73.5698 26.4125C73.5698 25.5873 73.5698 24.3649 73.5698 22.7147C73.5698 21.0644 73.5698 19.6587 73.5698 18.9558C73.5698 18.2529 73.5699 16.6332 73.3583 14.769C73.1467 12.9048 73.1467 11.5296 73.1467 10.5822C73.1467 10.3989 73.1467 10.2766 73.5396 10.2766H74.5069H75.5043H76.5018H77.4992C77.8317 10.2766 77.9224 10.3989 77.9224 10.6128H78.0433Z" fill="#060913"/>
-        <path d="M75.6252 7.98461C77.2574 7.98461 78.0433 7.25116 78.0433 5.78426C78.0501 5.47953 77.9915 5.17696 77.8715 4.89734C77.7515 4.61772 77.5729 4.3677 77.3481 4.16457C76.8731 3.74084 76.2586 3.51196 75.6252 3.52283C75.0066 3.51387 74.4056 3.73089 73.9326 4.13403C73.6876 4.33006 73.4916 4.58151 73.3604 4.86815C73.2291 5.15478 73.1663 5.46858 73.1769 5.78426C73.1769 7.25116 73.993 7.98461 75.6252 7.98461Z" fill="#6DD210"/>
-        <path d="M90.5875 4.22561C90.5875 4.37841 90.5875 4.4701 90.2551 4.4701L88.5322 4.65345C87.9558 4.70976 87.4139 4.95682 86.9906 5.35633C86.2329 6.84255 85.9379 8.52588 86.1443 10.1849H89.8622C90.1644 10.1849 90.2853 10.1849 90.2853 10.521C90.2853 10.8572 90.2853 11.3462 90.2853 12.0185C90.2853 12.6908 90.2853 13.1492 90.2853 13.4854C90.2853 13.8215 90.2853 13.8215 89.9226 13.8215H88.0486H86.1746V19.1696C86.1746 19.9947 86.1746 21.2783 86.1746 22.9591C86.1746 24.6399 86.1746 26.0151 86.1746 26.7791C86.1746 27.0847 86.0536 27.2375 85.8118 27.2375H82.8497C82.5474 27.2375 82.3963 27.0542 82.3963 26.6875V14.4633C82.3963 14.1577 82.0336 13.9743 81.3082 14.0049C80.898 14.075 80.4791 14.075 80.0689 14.0049C80.0317 13.7824 80.0317 13.5551 80.0689 13.3326C80.0689 13.0881 80.0689 12.6908 80.0689 12.1713C80.0689 11.6518 80.0689 11.2545 80.0689 10.9795C80.0689 10.7044 80.8246 10.5822 82.3359 10.4905C82.3359 9.72648 82.3359 9.11527 82.3359 8.6263C82.2032 6.99647 82.5955 5.36697 83.4542 3.98112C84.2489 3.01533 85.2963 2.29519 86.4768 1.90304C87.6165 1.46558 88.8245 1.23788 90.0435 1.23071C90.0435 1.23071 90.2249 1.23069 90.2853 1.44461C90.3458 1.65853 90.2853 1.96415 90.5875 2.94208C90.8898 3.92001 90.5875 4.19505 90.5875 4.22561Z" fill="#060913"/>
-        <path d="M107.03 14.7383C107.067 15.9526 107.017 17.1681 106.879 18.375C105.556 20.803 104.092 23.15 102.496 25.4039C100.988 27.8281 99.3326 30.1551 97.539 32.3716C96.0977 32.9793 94.5256 33.2004 92.9749 33.0134C92.7869 33.0654 92.5886 33.0654 92.4006 33.0134C92.1465 32.6021 91.9434 32.1608 91.7961 31.6993C91.5765 31.2427 91.4141 30.7602 91.3125 30.2629C91.3125 30.0185 91.6147 29.8656 92.2495 29.8656C93.2871 29.9484 94.3282 29.759 95.2721 29.3156C95.6633 28.9572 95.9905 28.5333 96.2393 28.0626C96.5457 27.644 96.7619 27.1651 96.8741 26.6568C96.1973 25.2876 95.3323 24.0221 94.3048 22.8979C93.1359 21.5403 92.1219 20.0539 91.2822 18.4667C91.0679 17.3085 90.9868 16.1292 91.0405 14.9522V12.9047C91.0405 11.9879 91.0405 11.3155 91.0405 10.8266C91.0405 10.3376 91.0405 10.4599 91.4636 10.4599C91.8868 10.4599 92.4006 10.4599 93.126 10.4599H94.8187C95.0001 10.4599 95.0907 10.4598 95.0907 10.8571C95.0907 11.2544 95.0907 11.6823 95.0907 12.3546C95.0907 13.0269 95.0907 13.5159 95.0907 13.852C95.0303 14.9412 95.0303 16.0329 95.0907 17.122C95.5951 18.3194 96.2449 19.4486 97.0252 20.4837C98.2342 22.2867 98.9899 23.2035 99.2921 23.2035C99.5944 23.2035 100.108 22.3172 101.196 20.5447C101.886 19.5099 102.463 18.4034 102.919 17.2442C102.986 16.1655 102.986 15.0836 102.919 14.0048C102.919 13.6381 102.919 13.1491 102.919 12.4768C102.919 11.8045 102.919 11.285 102.919 10.9488C102.919 10.6126 102.919 10.4904 103.222 10.4904C103.524 10.4904 104.159 10.4904 104.914 10.4904H106.637C106.849 10.3682 107.03 11.8351 107.03 14.7383Z" fill="#060913"/>
+          <path d="M20.1303 11.3462C20.253 13.798 19.4417 16.2041 17.8633 18.0695C17.0479 18.9496 16.0515 19.6383 14.9444 20.0871C13.8373 20.5359 12.6464 20.7339 11.4554 20.6671H8.43282H5.41022C5.01728 20.6671 4.83592 20.9116 4.83592 21.4005C4.83592 21.8895 4.83592 22.9897 4.83592 24.2427C4.83592 25.4956 4.83592 26.443 4.83592 27.0847C4.83592 27.7265 4.83592 27.3904 4.50343 27.3904H3.35483H2.23648C1.92462 27.3659 1.61135 27.3659 1.29949 27.3904H0.392698C0.0904377 27.3904 -0.0606738 27.207 -0.0606738 26.8403C-0.0606738 25.5567 -0.0606812 23.5703 0.120675 20.9421C0.302031 18.3139 0.120675 16.3581 0.120675 15.044C0.120675 11.3157 0.12066 7.31223 -0.272278 3.03378V2.7893C-0.272278 2.51425 -0.272296 2.392 0.181094 2.392H5.95427H8.46303H10.9718C12.1672 2.35708 13.3563 2.57872 14.4608 3.04227C15.5653 3.50582 16.5601 4.20076 17.3797 5.08132C19.0632 6.7315 20.049 8.97689 20.1303 11.3462ZM15.6568 11.6212C15.7331 10.0558 15.2262 8.51831 14.2362 7.31221C13.716 6.74295 13.0776 6.29707 12.367 6.00649C11.6563 5.7159 10.8908 5.58784 10.1255 5.63143C9.5814 5.63143 8.61417 5.63143 7.10287 5.63143C6.26846 5.61563 5.43547 5.70805 4.62432 5.90646C4.52107 7.94248 4.52107 9.98251 4.62432 12.0185C4.62432 12.5075 4.62432 13.2715 4.62432 14.2494C4.62432 15.2273 4.62432 16.0219 4.62432 16.5109C4.62432 16.9999 4.62433 16.6943 5.01727 16.7554C6.81296 16.9629 8.62146 17.0344 10.4277 16.9693C11.1415 17.0106 11.8556 16.8923 12.519 16.6229C13.1825 16.3535 13.7791 15.9397 14.2664 15.4107C15.1638 14.3567 15.6572 13.012 15.6568 11.6212Z" fill="#060913" />
+          <path d="M32.7955 10.3682C32.8039 11.5656 32.7129 12.7617 32.5234 13.9438C32.5234 14.2188 32.5234 14.3716 32.1607 14.3716H31.0423C30.6599 14.3471 30.2762 14.3471 29.8937 14.3716C28.4127 14.3716 27.4757 14.7688 27.0525 15.6245C26.758 16.6144 26.6353 17.6484 26.6898 18.6806V20.6364C26.6898 21.3087 26.6898 22.3478 26.6898 23.6925C26.6898 25.0371 26.6898 26.0762 26.6898 26.7485C26.6898 27.4208 26.5387 27.2375 26.2666 27.2375H22.9418C22.6697 27.2375 22.5489 27.2375 22.5489 26.8096C22.5489 25.8317 22.5489 24.3648 22.5489 22.4395C22.5489 20.5142 22.5489 19.0168 22.5489 18.0388C22.617 15.648 22.3421 13.2599 21.7327 10.9488C21.7232 10.8778 21.7232 10.8059 21.7327 10.7349C21.7297 10.6675 21.7488 10.601 21.7871 10.5457C21.8253 10.4904 21.8807 10.4495 21.9443 10.4293L23.7881 10.2154L25.5715 9.84863C25.7528 9.84863 25.8737 10.1848 25.9341 10.8877C25.9946 11.5906 25.9342 11.9573 26.2666 11.9573L27.7175 11.0099C28.2192 10.7067 28.7577 10.4705 29.3194 10.3071C29.9 10.1464 30.5012 10.0743 31.1028 10.0931C32.3421 10.0014 32.7955 10.1237 32.7955 10.3682Z" fill="#060913"/>
+          <path d="M50.7798 18.4666C50.8188 20.8313 49.9524 23.1197 48.3617 24.8537C47.5802 25.7162 46.6298 26.4049 45.5708 26.876C44.5119 27.3471 43.3676 27.5904 42.2107 27.5904C41.0538 27.5904 39.9096 27.3471 38.8507 26.876C37.7917 26.4049 36.8413 25.7162 36.0598 24.8537C34.4859 23.1132 33.6131 20.8403 33.6131 18.4819C33.6131 16.1236 34.4859 13.8506 36.0598 12.1101C36.8229 11.2561 37.7559 10.5751 38.7978 10.1116C39.8397 9.64807 40.9667 9.41265 42.105 9.42076C43.2441 9.40676 44.3729 9.63953 45.4157 10.1034C46.4584 10.5673 47.3908 11.2515 48.1502 12.1101C48.986 12.9384 49.6493 13.9277 50.101 15.0194C50.5526 16.1111 50.7834 17.2833 50.7798 18.4666ZM47.0318 18.4666C47.068 17.099 46.5932 15.7677 45.7019 14.7383C45.2753 14.2194 44.7385 13.8043 44.1315 13.5239C43.5245 13.2435 42.8629 13.105 42.1957 13.1186C41.5294 13.1115 40.8698 13.253 40.2638 13.5329C39.6578 13.8128 39.1202 14.2244 38.6894 14.7383C37.8291 15.786 37.3582 17.1049 37.3582 18.4666C37.3582 19.8284 37.8291 21.1473 38.6894 22.195C39.1144 22.72 39.6494 23.1431 40.2557 23.4338C40.862 23.7245 41.5246 23.8755 42.1957 23.8758C42.8685 23.8866 43.5347 23.7406 44.1428 23.4491C44.7508 23.1576 45.2843 22.7285 45.7019 22.195C46.5513 21.2128 47.0233 19.9547 47.0318 18.65V18.4666Z" fill="#060913"/>
+          <path d="M70.3059 2.20862C70.3059 3.73663 70.3059 6.05925 70.0943 9.11528C69.8828 12.1713 69.8828 14.4939 69.8828 16.0219C69.8828 20.7587 69.8828 24.3037 70.185 26.7485V26.9625C70.185 26.9625 70.185 27.1764 69.7014 27.207H68.7342H68.0692H67.2833H66.4974C66.3161 27.207 66.2254 26.7791 66.1952 25.954C66.2663 25.5394 66.2663 25.1156 66.1952 24.701L65.9231 24.915C65.2224 25.7624 64.3463 26.444 63.3566 26.9117C62.3669 27.3794 61.2878 27.6218 60.1953 27.6218C59.1029 27.6218 58.0237 27.3794 57.034 26.9117C56.0443 26.444 55.1682 25.7624 54.4675 24.915C53.0477 23.1131 52.2745 20.8775 52.2745 18.5737C52.2745 16.2699 53.0477 14.0342 54.4675 12.2324C55.2036 11.3434 56.1309 10.6361 57.1786 10.1648C58.2263 9.69338 59.3667 9.47029 60.5127 9.51253C61.9243 9.47669 63.3038 9.94163 64.4118 10.8266L65.9231 12.1713C65.9444 12.1341 65.9556 12.092 65.9556 12.049C65.9556 12.0061 65.9444 11.964 65.9231 11.9268V6.12033C65.9231 5.72305 65.9231 5.14244 65.9231 4.34788C65.9231 3.55331 65.9231 2.94208 65.9231 2.51424C65.9231 2.08639 65.9232 2.0864 66.1952 2.0864C66.8497 2.11978 67.5054 2.11978 68.1599 2.0864H70.0943C70.185 1.84191 70.3059 1.96413 70.3059 2.20862ZM65.8627 18.6501C65.8919 17.2796 65.4303 15.9447 64.563 14.8912C64.1596 14.3453 63.6346 13.9031 63.0307 13.6005C62.4268 13.2978 61.761 13.1432 61.087 13.1492C60.3968 13.1301 59.7118 13.275 59.0871 13.5723C58.4624 13.8695 57.9154 14.3107 57.4901 14.8606C56.5864 15.943 56.1124 17.3261 56.1602 18.7418C56.1405 20.1176 56.6374 21.4499 57.5506 22.4701C57.9773 23.0008 58.5168 23.4276 59.1291 23.7185C59.7413 24.0095 60.4105 24.1573 61.087 24.1509C61.7631 24.1629 62.4325 24.0142 63.0415 23.717C63.6504 23.4198 64.1819 22.9823 64.5932 22.4396C65.4471 21.3684 65.8969 20.0254 65.8627 18.6501Z" fill="#060913"/>
+          <path d="M78.0433 10.6128C78.0433 11.5296 78.0433 12.9354 77.8922 14.7996C77.741 16.6638 77.7108 18.039 77.7108 18.9558C77.7108 19.8726 77.7108 21.1561 77.7108 22.8675C77.7108 24.5789 77.7108 25.9235 77.7108 26.7792C77.7108 27.0237 77.7108 27.1459 77.3783 27.1459H73.9326C73.6908 27.1459 73.5698 26.9014 73.5698 26.4125C73.5698 25.5873 73.5698 24.3649 73.5698 22.7147C73.5698 21.0644 73.5698 19.6587 73.5698 18.9558C73.5698 18.2529 73.5699 16.6332 73.3583 14.769C73.1467 12.9048 73.1467 11.5296 73.1467 10.5822C73.1467 10.3989 73.1467 10.2766 73.5396 10.2766H74.5069H75.5043H76.5018H77.4992C77.8317 10.2766 77.9224 10.3989 77.9224 10.6128H78.0433Z" fill="#060913"/>
+          <path d="M75.6252 7.98461C77.2574 7.98461 78.0433 7.25116 78.0433 5.78426C78.0501 5.47953 77.9915 5.17696 77.8715 4.89734C77.7515 4.61772 77.5729 4.3677 77.3481 4.16457C76.8731 3.74084 76.2586 3.51196 75.6252 3.52283C75.0066 3.51387 74.4056 3.73089 73.9326 4.13403C73.6876 4.33006 73.4916 4.58151 73.3604 4.86815C73.2291 5.15478 73.1663 5.46858 73.1769 5.78426C73.1769 7.25116 73.993 7.98461 75.6252 7.98461Z" fill="#6DD210"/>
+          <path d="M90.5875 4.22561C90.5875 4.37841 90.5875 4.4701 90.2551 4.4701L88.5322 4.65345C87.9558 4.70976 87.4139 4.95682 86.9906 5.35633C86.2329 6.84255 85.9379 8.52588 86.1443 10.1849H89.8622C90.1644 10.1849 90.2853 10.1849 90.2853 10.521C90.2853 10.8572 90.2853 11.3462 90.2853 12.0185C90.2853 12.6908 90.2853 13.1492 90.2853 13.4854C90.2853 13.8215 90.2853 13.8215 89.9226 13.8215H88.0486H86.1746V19.1696C86.1746 19.9947 86.1746 21.2783 86.1746 22.9591C86.1746 24.6399 86.1746 26.0151 86.1746 26.7791C86.1746 27.0847 86.0536 27.2375 85.8118 27.2375H82.8497C82.5474 27.2375 82.3963 27.0542 82.3963 26.6875V14.4633C82.3963 14.1577 82.0336 13.9743 81.3082 14.0049C80.898 14.075 80.4791 14.075 80.0689 14.0049C80.0317 13.7824 80.0317 13.5551 80.0689 13.3326C80.0689 13.0881 80.0689 12.6908 80.0689 12.1713C80.0689 11.6518 80.0689 11.2545 80.0689 10.9795C80.0689 10.7044 80.8246 10.5822 82.3359 10.4905C82.3359 9.72648 82.3359 9.11527 82.3359 8.6263C82.2032 6.99647 82.5955 5.36697 83.4542 3.98112C84.2489 3.01533 85.2963 2.29519 86.4768 1.90304C87.6165 1.46558 88.8245 1.23788 90.0435 1.23071C90.0435 1.23071 90.2249 1.23069 90.2853 1.44461C90.3458 1.65853 90.2853 1.96415 90.5875 2.94208C90.8898 3.92001 90.5875 4.19505 90.5875 4.22561Z" fill="#060913" />
+          <path d="M107.03 14.7383C107.067 15.9526 107.017 17.1681 106.879 18.375C105.556 20.803 104.092 23.15 102.496 25.4039C100.988 27.8281 99.3326 30.1551 97.539 32.3716C96.0977 32.9793 94.5256 33.2004 92.9749 33.0134C92.7869 33.0654 92.5886 33.0654 92.4006 33.0134C92.1465 32.6021 91.9434 32.1608 91.7961 31.6993C91.5765 31.2427 91.4141 30.7602 91.3125 30.2629C91.3125 30.0185 91.6147 29.8656 92.2495 29.8656C93.2871 29.9484 94.3282 29.759 95.2721 29.3156C95.6633 28.9572 95.9905 28.5333 96.2393 28.0626C96.5457 27.644 96.7619 27.1651 96.8741 26.6568C96.1973 25.2876 95.3323 24.0221 94.3048 22.8979C93.1359 21.5403 92.1219 20.0539 91.2822 18.4667C91.0679 17.3085 90.9868 16.1292 91.0405 14.9522V12.9047C91.0405 11.9879 91.0405 11.3155 91.0405 10.8266C91.0405 10.3376 91.0405 10.4599 91.4636 10.4599C91.8868 10.4599 92.4006 10.4599 93.126 10.4599H94.8187C95.0001 10.4599 95.0907 10.4598 95.0907 10.8571C95.0907 11.2544 95.0907 11.6823 95.0907 12.3546C95.0907 13.0269 95.0907 13.5159 95.0907 13.852C95.0303 14.9412 95.0303 16.0329 95.0907 17.122C95.5951 18.3194 96.2449 19.4486 97.0252 20.4837C98.2342 22.2867 98.9899 23.2035 99.2921 23.2035C99.5944 23.2035 100.108 22.3172 101.196 20.5447C101.886 19.5099 102.463 18.4034 102.919 17.2442C102.986 16.1655 102.986 15.0836 102.919 14.0048C102.919 13.6381 102.919 13.1491 102.919 12.4768C102.919 11.8045 102.919 11.285 102.919 10.9488C102.919 10.6126 102.919 10.4904 103.222 10.4904C103.524 10.4904 104.159 10.4904 104.914 10.4904H106.637C106.849 10.3682 107.03 11.8351 107.03 14.7383Z" fill="#060913"/>
         </g>
         <defs>
-        <clipPath id="clip0_1_6096">
-        <rect width="107" height="32.0272" fill="white" transform="translate(0 0.986328)"/>
-        </clipPath>
+          <clipPath id="clip0_1_6096">
+            <rect width="107" height="32.0272" fill="white" transform="translate(0 0.986328)"/>
+          </clipPath>
         </defs>
       </svg>
 
@@ -77,82 +103,56 @@
 
       <!-- Desktop Navbar -->
       <nav class="navbar-menu">
-
         <ul class="hidden sm:flex flex-row items-center w-fit h-auto sm:gap-[16px] lg:gap-[22px] xl:gap-[32px]">
-
           <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Home</a>
           </li>
-
           <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Features</a>
           </li>
-
           <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">About Us</a>
           </li>
-
           <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Download</a>
           </li>
-
           <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Blog</a>
           </li>
-
           <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Support</a>
           </li>
-
         </ul>
-
       </nav>
+      
 
       <!-- Mobile Navbar -->
       <div class="sm:hidden">
 
         <!-- Button dropdown -->
         <button id="dropdownButton" class="text-black focus:outline-none">
-
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
           </svg>
-
+        </button>
+        
         </button>
 
         <!-- Dropdown Menu -->
-        <ul id="dropdownMenu" class="hidden absolute  right-0 z-10 w-full mt-auto bg-[#F4FFE6] border border-[#0000001A] shadow-md">
-
-          <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Features</a>
-          </li>
-          <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">About Us</a>
-          </li>
-          <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Download</a>
-          </li>
-          <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Blog</a>
-          </li>
-          <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Support</a>
-          </li>
-          <li>
-            <a href="#" class="block px-[20px] py-2 font-bold text-black text-[16px] leading-normal underline">Sign Up</a>
-          </li>
-
+        <ul id="dropdownMenu" class="hidden absolute right-0 z-10 w-full mt-auto bg-[#F4FFE6] border border-[#0000001A] shadow-md">
+          <li><a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Home</a></li>
+          <li><a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Features</a></li>
+          <li><a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">About Us</a></li>
+          <li><a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Download</a></li>
+          <li><a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Blog</a></li>
+          <li><a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">Support</a></li>
+          <li><a href="#" class="block px-[20px] py-2 font-bold text-black text-[16px] leading-normal underline">Sign Up</a></li>
         </ul>
 
       </div>
 
       <!-- Button Sign In -->
-      <a href="" class="hidden sm:flex justify-center items-center sm:py-[10px] sm:px-[12px] md:py-[12px] md:px-[16px] lg:py-[14px] lg:px-[20px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black">
-        <span class="font-semibold text-white sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal">Sign Up</span>
-      </a>  
+      <a href="" class="hidden sm:flex justify-center items-center sm:py-[10px] sm:px-[12px] md:py-[12px] md:px-[16px] lg:py-[14px] lg:px-[20px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black"><span class="font-semibold text-white sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal">Sign Up</span></a>
 
     </header>
 
@@ -160,69 +160,48 @@
 
       <!-- Hero Section -->
       <section class="bg-[#F4FFE6] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px] overflow-hidden relative">
-
         <h1 class="font-bold text-center leading-[1] text-[55px] sm:text-[85px] md:text-[100px] lg:text-[120px] xl:text-[128px]">
           Boost Your Productivity. Simplify Your Day.
         </h1>
-
         <div class="flex flex-col w-[300px] sm:w-[190px] md:w-[230px] lg:w-[265px] xl:w-[336px] mt-[40px] sm:mt-[30px] md:mt-[45px] lg:mt-[60px] xl:mt-[103px] gap-[8px] lg:gap-[16px]">
-
           <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] text-[#6D6D6D]">
             Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
           </span>
-
           <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
             <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
               Download Now
             </span>
           </a>
-
         </div>
-
         <figure id="animated-figure" class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 sm:top-[30%] md:top-[20%] xl:top-[15%]">
-          <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[285px] lg:w-[385px] xl:w-[426px]">
+          <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[285px] lg:w-[385px] xl:w-[426px]" />
         </figure>
-
         <div class="flex flex-row w-fit ml-auto gap-[16px] md:gap-[24px] lg:gap-[32px] xl:gap-[40px] md:-mt-[31px]">
-
           <div class="flex flex-col gap-[3px] w-fit">
-              <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">
-                2K+
-              </span>
-              <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
-                Active Users
-              </span>
+            <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">2K+</span>
+            <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">Active Users</span>
           </div>
-          
           <div class="flex flex-col gap-[3px] w-fit">
-              <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">
-                100K+
-              </span>
-              <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
-                Download
-              </span>
-          </div>        
-
+            <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">100K+</span>
+            <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">Download</span>
+          </div>
         </div>
-
       </section>
-
+      
       <!-- 2 -->
       <section class="flex flex-col gap-4 xl:gap-[24px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
-
         <div class="flex flex-col gap-4 lg:flex-row md:justify-between">
           <span class="xl:w-[42.25%] font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1.2]">
             Used by various roles in various companies
           </span>
           <p class="xl:w-[41.75%] self-end font-normal leading-[1.9] text-right text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
-            Empowering Professionals in Every Industry—From Managers to Creatives—Prodify Helps Teams Stay Organized, Improve Collaboration, and Reach Their Productivity Goals Faste
+            Empowering Professionals in Every Industry—From Managers to Creatives—Prodify Helps Teams Stay Organized, Improve Collaboration,
+            and Reach Their Productivity Goals Faster.
           </p>
         </div>
-
+      
         <div class="bg-[#F6F6F6] py-[24px] md:py-[32px] lg:py-[48px] rounded-[16px] overflow-x-hidden">
-
           <div class="b-slider marquee-slider flex flex-row items-center gap-[24px] md:gap-[32px] lg:gap-[48px]">
-
             <div class="b-slider__slide">
               <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Student</span>
             </div>
@@ -280,259 +259,162 @@
             <div class="b-slider__slide">
               <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Designer</span>
             </div>
-
           </div>
-
         </div>
-
-      </section>
+      </section>      
 
       <!-- 3 -->
       <section class="flex flex-col gap-[20px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
-
         <div class="flex flex-col md:flex-row gap-[20px]">
-
           <div class="flex flex-col md:w-[50%] md:h-[395px] lg:h-[460px] xl:h-[556px] gap-[40px] md:justify-between rounded-[24px] p-[28px] md:p-[28px] lg:p-[38px] xl:p-[48px] bg-[#F4FFE6]">
-
             <span class="font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1]">All-in-One Productivity Solution</span>
-
+      
             <div class="flex flex-col gap-[12px] md:gap-[24px]">
-
-              <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">From task management to reminders, calendar integration to focus mode, Prodify gives you the tools to boost your productivity and take control of your time.</span>
-
+              <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">
+                From task management to reminders, calendar integration to focus mode, Prodify gives you the tools to boost your productivity and take control of your time.
+              </span>
+      
               <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
                 <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
                   Download Now
                 </span>
               </a>
-
             </div>
-
           </div>
-
+      
           <div class="flex flex-col md:w-[50%] md:h-[395px] lg:h-[460px] xl:h-[556px] gap-[20px] md:justify-between items-center rounded-[24px] p-[28px] md:p-[28px] lg:p-[38px] xl:p-[48px] border border-[#E7E7E7]">
-
             <figure>
-              <img src="public/illustration.png" class="w-[50%] md:w-[240px] lg:w-[320px] xl:w-[355px] xl:h-[304px] justify-self-center" alt="illustration">
+              <img src="public/illustration.png" class="w-[50%] md:w-[240px] lg:w-[320px] xl:w-[355px] xl:h-[304px] justify-self-center" alt="illustration" />
             </figure>
-
+      
             <span class="font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1]">Do more and stay productive</span>
-            
           </div>
-
         </div>
-
+      
         <div class="flex flex-col md:flex-row gap-[20px]">
-
           <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[32px] border border-[#E7E7E7]">
-
             <figure>
-              <img src="todolist.png" class="object-cover object-left md:h-[165px] lg:h-[240px] xl:h-[296px] items-center" alt="calendar">
+              <img src="todolist.png" class="object-cover object-left md:h-[165px] lg:h-[240px] xl:h-[296px] items-center" alt="calendar" />
             </figure>
-
+      
             <div class="flex flex-col gap-[8px]">
               <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">To-do Lists</span>
               <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
                 Organize tasks with categories, priorities, and deadlines. Break down tasks with subtasks and track your progress with ease.
               </p>
             </div>
-
           </div>
-
+      
           <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[24px] border border-[#E7E7E7]">
-
             <div class="flex flex-col gap-[8px]">
               <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">Smart Calendar</span>
               <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
                 Integrate with your favorite calendar apps and manage tasks alongside events. Stay on top of your schedule with color-coded views and smart reminders.
               </p>
             </div>
-
+      
             <figure>
-              <img src="calendar.png" class="w-[360px] md:h-auto lg:h-[225px] xl:h-[278px] items-center object-cover" alt="calendar">
+              <img src="calendar.png" class="w-[360px] md:h-auto lg:h-[225px] xl:h-[278px] items-center object-cover" alt="calendar" />
             </figure>
-
           </div>
-
+      
           <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[32px] border border-[#E7E7E7]">
-
             <figure>
-              <img src="timer.png" alt="Focus-Mode" class="justify-self-center object-cover w-[360px] md:h-[150px] lg:h-[205px] xl:h-[307px]">
+              <img src="timer.png" alt="Focus-Mode" class="justify-self-center object-cover w-[360px] md:h-[150px] lg:h-[205px] xl:h-[307px]" />
             </figure>
-
+      
             <div class="flex flex-col gap-[8px]">
               <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">Focus Mode</span>
               <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
                 Use the Pomodoro timer to stay focused. Block distractions and track your productive time.
               </p>
             </div>
-
           </div>
-      
         </div>
-
-      </section>
+      </section>      
 
       <!-- Testimonial Section -->
       <section class="flex flex-col gap-[32px] md:gap-[54px] xl:gap-[72px] items-center py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
 
-        <span class="font-semibold text-center text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal md:w-[490px] lg:w-[540px] xl:w-[715px]">Word of praise from others about our presence.</span>
+        <span class="font-semibold text-center text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal md:w-[490px] lg:w-[540px] xl:w-[715px]">
+          Word of praise from others about our presence.
+        </span>
 
-        <div class="marquee-wrapper flex flex-col w-auto h-auto gap-[15px] lg:gap-[20px]">
-
-          <div class="marquee-slider marquee-content flex flex-row gap-[15px] lg:gap-[20px] justify-center">
-
-            <!-- Testimonial Card -->
-            <div class="b-slider__slide-left flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
-
-              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
-                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
-            </div>
-
-          </div>
-
-          <div class="marquee-slider-right marquee-content flex flex-row gap-[15px] lg:gap-[20px] justify-center">
+        <div class="swiper-container sample-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <div class="swiper-wrapper" id="swiper-wrapper-f9d257a8e2a52fe0" aria-live="off" style="transition-duration: 3000ms; transform: translate3d(-1045px, 0px, 0px);">
             
-            <!-- Testimonial Card -->
-            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
-
-              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
-                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo_ramen-removebg-preview-1.png" alt="Sponsor 4 Logo" title="Company">
             </div>
-
-            <!-- Testimonial Card -->
-            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
-
-              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
-                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
+            
+            <div class="swiper-slide" role="group" aria-label="3 / 10" data-swiper-slide-index="2" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/taq-removebg-preview-1-1.png" alt="Sponsor 3 Logo" title="Company">
             </div>
-
-            <!-- Testimonial Card -->
-            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
-
-              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
-                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
+            
+            <div class="swiper-slide" role="group" aria-label="4 / 10" data-swiper-slide-index="3" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/almond-logo-removebg-preview-1.png" alt="Sponsor 2 Logo" title="Company">
             </div>
-
-            <!-- Testimonial Card -->
-            <div class="b-slider__slide-right flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] item-center p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
-
-              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913"/>
-              </svg>
-
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
-                As a project lead, Prodify helps me keep track of my team’s progress while staying on top of my own tasks. It’s been a game-changer for our productivity.
-              </p>
-
-              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
-
-                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full">
-                  <img src="avatar.png" alt="Profile picture">
-                </figure>
-
-                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
-                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">James M</span>
-                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">Project Manager</span>
-                </div>
-              </div>
-                
+            
+            <div class="swiper-slide" role="group" aria-label="5 / 10" data-swiper-slide-index="4" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/images-removebg-preview-1.png" alt="Sponsor 1 Logo" title="Company">
             </div>
-
+            
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 10" data-swiper-slide-index="5" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo2-removebg-preview-1.png" alt="Sponsor 5 Logo" title="Company">
+            </div>
+            
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="7 / 10" data-swiper-slide-index="6" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/Group-3525.png" alt="Sponsor 4 Logo" title="Company">
+            </div>
+            
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 10" data-swiper-slide-index="7" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo6-removebg-preview-1.png" alt="Sponsor 1 Logo" title="Company">
+            </div>
+            
+            <div class="swiper-slide" role="group" aria-label="9 / 10" data-swiper-slide-index="8" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo3-removebg-preview.png" alt="Sponsor 2 Logo" title="Company">
+            </div>
+            
+            <div class="swiper-slide" role="group" aria-label="10 / 10" data-swiper-slide-index="9" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/Group-3524.png" alt="Sponsor 3 Logo" title="Company">
+            </div>
+            
+            <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 179px; margin-right: 30px;">
+              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/1ab296_128b14ad1e38457a87c9f76755b0c462_mv2-removebg-preview-1-1.png" alt="Sponsor 5 Logo" title="Company">
+            </div>
+            
           </div>
-
+          
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
         </div>
+        
 
       </section>
 
       <!-- Download Link -->
       <section class="flex flex-col gap-[32px] md:gap-[54px] xl:gap-[72px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
-
+        
         <div class="bg-[#F4FFE6] py-[16px] px-[30px] md:py-[24px] md:px-[35px] xl:py-[48px] xl:px-[72px] xl:gap-[96px] rounded-[16px]">
 
           <div class="flex flex-col gap-[16px] sm:gap-[18px] md:gap-[20px] lg:gap-[22px] xl:gap-[24px] items-center">
 
             <div class="flex flex-col items-center gap-[4px] lg:gap-[8px]">
+
               <span class="font-semibold text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-normal text-center">Download Now</span>
-              <p class="font-normal text-center text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">“Prodify has changed the way I work! The focus mode and reminders have boosted my productivity significantly.”</p>
+
+              <p class="font-normal text-center text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">
+                “Prodify has changed the way I work! The focus mode and
+                reminders have boosted my productivity significantly.”
+              </p>
+
             </div>
 
             <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
+              
               <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
                 Download Now
               </span>
+              
             </a>
 
           </div>
@@ -550,7 +432,7 @@
         <span class="font-bold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal lg:w-[25.58%]">All in one productivity software</span>
 
         <div class="flex flex-col gap-[15px] sm:flex-row lg:w-[66.42%] justify-between">
-          
+
           <div class="flex flex-row justify-between sm:w-[62.75%]">
 
             <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]">
@@ -576,7 +458,7 @@
                 <a href="">Contact</a>
               </li>
             </ul>
-    
+
             <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]">
               <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
                 <a href="">Support</a>
@@ -584,14 +466,18 @@
               <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
                 <a href="">FAQ</a>
               </li>
-              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+              <li
+                class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]"
+              >
                 <a href="">Tutorial</a>
               </li>
-              <li class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]">
+              <li
+                class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal text-[#888888]"
+              >
                 <a href="">Help Cneter</a>
               </li>
             </ul>
-    
+
             <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]">
               <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
                 <a href="">Legal</a>
@@ -603,158 +489,213 @@
                 <a href="">Privacy policy</a>
               </li>
             </ul>
-
           </div>
-  
+
           <div>
-
             <ul class="flex flex-row gap-[12px] w-auto h-auto">
-
               <li>
                 <a href="">
-                  <svg 
-                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" 
-                    viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
-                    <path d="M24 14.1665C22.6868 14.1665 21.3864 14.4252 20.1732 14.9277C18.9599 15.4303 17.8575 16.1669 16.9289 17.0954C15.0536 18.9708 14 21.5143 14 24.1665C14 28.5865 16.87 32.3365 20.84 33.6665C21.34 33.7465 21.5 33.4365 21.5 33.1665V31.4765C18.73 32.0765 18.14 30.1365 18.14 30.1365C17.68 28.9765 17.03 28.6665 17.03 28.6665C16.12 28.0465 17.1 28.0665 17.1 28.0665C18.1 28.1365 18.63 29.0965 18.63 29.0965C19.5 30.6165 20.97 30.1665 21.54 29.9265C21.63 29.2765 21.89 28.8365 22.17 28.5865C19.95 28.3365 17.62 27.4765 17.62 23.6665C17.62 22.5565 18 21.6665 18.65 20.9565C18.55 20.7065 18.2 19.6665 18.75 18.3165C18.75 18.3165 19.59 18.0465 21.5 19.3365C22.29 19.1165 23.15 19.0065 24 19.0065C24.85 19.0065 25.71 19.1165 26.5 19.3365C28.41 18.0465 29.25 18.3165 29.25 18.3165C29.8 19.6665 29.45 20.7065 29.35 20.9565C30 21.6665 30.38 22.5565 30.38 23.6665C30.38 27.4865 28.04 28.3265 25.81 28.5765C26.17 28.8865 26.5 29.4965 26.5 30.4265V33.1665C26.5 33.4365 26.66 33.7565 27.17 33.6665C31.14 32.3265 34 28.5865 34 24.1665C34 22.8533 33.7413 21.5529 33.2388 20.3397C32.7362 19.1264 31.9997 18.024 31.0711 17.0954C30.1425 16.1669 29.0401 15.4303 27.8268 14.9277C26.6136 14.4252 25.3132 14.1665 24 14.1665Z" fill="black"/>
+                  <svg
+                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
+                    viewBox="0 0 48 49"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.166504"
+                      width="48"
+                      height="48"
+                      rx="24"
+                      fill="#F6F6F6"
+                    />
+                    <path
+                      d="M24 14.1665C22.6868 14.1665 21.3864 14.4252 20.1732 14.9277C18.9599 15.4303 17.8575 16.1669 16.9289 17.0954C15.0536 18.9708 14 21.5143 14 24.1665C14 28.5865 16.87 32.3365 20.84 33.6665C21.34 33.7465 21.5 33.4365 21.5 33.1665V31.4765C18.73 32.0765 18.14 30.1365 18.14 30.1365C17.68 28.9765 17.03 28.6665 17.03 28.6665C16.12 28.0465 17.1 28.0665 17.1 28.0665C18.1 28.1365 18.63 29.0965 18.63 29.0965C19.5 30.6165 20.97 30.1665 21.54 29.9265C21.63 29.2765 21.89 28.8365 22.17 28.5865C19.95 28.3365 17.62 27.4765 17.62 23.6665C17.62 22.5565 18 21.6665 18.65 20.9565C18.55 20.7065 18.2 19.6665 18.75 18.3165C18.75 18.3165 19.59 18.0465 21.5 19.3365C22.29 19.1165 23.15 19.0065 24 19.0065C24.85 19.0065 25.71 19.1165 26.5 19.3365C28.41 18.0465 29.25 18.3165 29.25 18.3165C29.8 19.6665 29.45 20.7065 29.35 20.9565C30 21.6665 30.38 22.5565 30.38 23.6665C30.38 27.4865 28.04 28.3265 25.81 28.5765C26.17 28.8865 26.5 29.4965 26.5 30.4265V33.1665C26.5 33.4365 26.66 33.7565 27.17 33.6665C31.14 32.3265 34 28.5865 34 24.1665C34 22.8533 33.7413 21.5529 33.2388 20.3397C32.7362 19.1264 31.9997 18.024 31.0711 17.0954C30.1425 16.1669 29.0401 15.4303 27.8268 14.9277C26.6136 14.4252 25.3132 14.1665 24 14.1665Z"
+                      fill="black"
+                    />
                   </svg>
                 </a>
-              </li>              
+              </li>
               <li class="">
                 <a href="">
                   <svg
                     class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
-                    viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
-                    <path d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z" fill="black"/>
-                    <path d="M28 15.1665C30.76 15.1665 33 17.4065 33 20.1665V28.1665C33 30.9265 30.76 33.1665 28 33.1665H20C17.24 33.1665 15 30.9265 15 28.1665V20.1665C15 17.4065 17.24 15.1665 20 15.1665H24H28Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M24 20.1665C26.21 20.1665 28 21.9565 28 24.1665C28 26.3765 26.21 28.1665 24 28.1665C21.79 28.1665 20 26.3765 20 24.1665C20 21.9565 21.79 20.1665 24 20.1665Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                
+                    viewBox="0 0 48 49"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.166504"
+                      width="48"
+                      height="48"
+                      rx="24"
+                      fill="#F6F6F6"
+                    />
+                    <path
+                      d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M28 15.1665C30.76 15.1665 33 17.4065 33 20.1665V28.1665C33 30.9265 30.76 33.1665 28 33.1665H20C17.24 33.1665 15 30.9265 15 28.1665V20.1665C15 17.4065 17.24 15.1665 20 15.1665H24H28Z"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M24 20.1665C26.21 20.1665 28 21.9565 28 24.1665C28 26.3765 26.21 28.1665 24 28.1665C21.79 28.1665 20 26.3765 20 24.1665C20 21.9565 21.79 20.1665 24 20.1665Z"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </a>
               </li>
               <li class="">
                 <a href="">
-                  <svg 
-                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" 
-                    viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 16.1665C24.855 16.1665 25.732 16.1885 26.582 16.2245L27.586 16.2725L28.547 16.3295L29.447 16.3905L30.269 16.4545C31.1612 16.5224 32.0008 16.9029 32.64 17.5291C33.2791 18.1553 33.6768 18.9869 33.763 19.8775L33.803 20.3025L33.878 21.2125C33.948 22.1555 34 23.1835 34 24.1665C34 25.1495 33.948 26.1775 33.878 27.1205L33.803 28.0305L33.763 28.4555C33.6768 29.3463 33.2789 30.178 32.6396 30.8042C32.0002 31.4304 31.1604 31.8108 30.268 31.8785L29.448 31.9415L28.548 32.0035L27.586 32.0605L26.582 32.1085C25.7218 32.1458 24.861 32.1651 24 32.1665C23.139 32.1651 22.2782 32.1458 21.418 32.1085L20.414 32.0605L19.453 32.0035L18.553 31.9415L17.731 31.8785C16.8388 31.8106 15.9992 31.4301 15.36 30.8039C14.7209 30.1777 14.3232 29.3461 14.237 28.4555L14.197 28.0305L14.122 27.1205C14.0458 26.1376 14.0051 25.1523 14 24.1665C14 23.1835 14.052 22.1555 14.122 21.2125L14.197 20.3025L14.237 19.8775C14.3232 18.9871 14.7207 18.1556 15.3597 17.5294C15.9986 16.9033 16.838 16.5226 17.73 16.4545L18.551 16.3905L19.451 16.3295L20.413 16.2725L21.417 16.2245C22.2775 16.1872 23.1387 16.1679 24 16.1665ZM22 21.7415V26.5915C22 27.0535 22.5 27.3415 22.9 27.1115L27.1 24.6865C27.1914 24.6339 27.2673 24.5581 27.3201 24.4668C27.3729 24.3755 27.4007 24.272 27.4007 24.1665C27.4007 24.0611 27.3729 23.9575 27.3201 23.8662C27.2673 23.7749 27.1914 23.6991 27.1 23.6465L22.9 21.2225C22.8088 21.1698 22.7053 21.1421 22.5999 21.1421C22.4945 21.1421 22.3911 21.1699 22.2998 21.2226C22.2086 21.2753 22.1329 21.3511 22.0802 21.4424C22.0276 21.5336 21.9999 21.6371 22 21.7425V21.7415Z" fill="black"/>
-                  </svg>                
+                  <svg
+                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
+                    viewBox="0 0 48 49"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.166504"
+                      width="48"
+                      height="48"
+                      rx="24"
+                      fill="#F6F6F6"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M24 16.1665C24.855 16.1665 25.732 16.1885 26.582 16.2245L27.586 16.2725L28.547 16.3295L29.447 16.3905L30.269 16.4545C31.1612 16.5224 32.0008 16.9029 32.64 17.5291C33.2791 18.1553 33.6768 18.9869 33.763 19.8775L33.803 20.3025L33.878 21.2125C33.948 22.1555 34 23.1835 34 24.1665C34 25.1495 33.948 26.1775 33.878 27.1205L33.803 28.0305L33.763 28.4555C33.6768 29.3463 33.2789 30.178 32.6396 30.8042C32.0002 31.4304 31.1604 31.8108 30.268 31.8785L29.448 31.9415L28.548 32.0035L27.586 32.0605L26.582 32.1085C25.7218 32.1458 24.861 32.1651 24 32.1665C23.139 32.1651 22.2782 32.1458 21.418 32.1085L20.414 32.0605L19.453 32.0035L18.553 31.9415L17.731 31.8785C16.8388 31.8106 15.9992 31.4301 15.36 30.8039C14.7209 30.1777 14.3232 29.3461 14.237 28.4555L14.197 28.0305L14.122 27.1205C14.0458 26.1376 14.0051 25.1523 14 24.1665C14 23.1835 14.052 22.1555 14.122 21.2125L14.197 20.3025L14.237 19.8775C14.3232 18.9871 14.7207 18.1556 15.3597 17.5294C15.9986 16.9033 16.838 16.5226 17.73 16.4545L18.551 16.3905L19.451 16.3295L20.413 16.2725L21.417 16.2245C22.2775 16.1872 23.1387 16.1679 24 16.1665ZM22 21.7415V26.5915C22 27.0535 22.5 27.3415 22.9 27.1115L27.1 24.6865C27.1914 24.6339 27.2673 24.5581 27.3201 24.4668C27.3729 24.3755 27.4007 24.272 27.4007 24.1665C27.4007 24.0611 27.3729 23.9575 27.3201 23.8662C27.2673 23.7749 27.1914 23.6991 27.1 23.6465L22.9 21.2225C22.8088 21.1698 22.7053 21.1421 22.5999 21.1421C22.4945 21.1421 22.3911 21.1699 22.2998 21.2226C22.2086 21.2753 22.1329 21.3511 22.0802 21.4424C22.0276 21.5336 21.9999 21.6371 22 21.7425V21.7415Z"
+                      fill="black"
+                    />
+                  </svg>
                 </a>
               </li>
-              
             </ul>
-
           </div>
 
         </div>
-
       </div>
 
-      <div class="w-auto h-[50px] sm:h-[85px] md:h-[100px] lg:h-[145px] xl:h-[169px] overflow-x-hidden">
+      <div
+        class="w-auto h-[50px] sm:h-[85px] md:h-[100px] lg:h-[145px] xl:h-[169px] overflow-x-hidden"
+      >
         <div class="absolute left-1/2 transform -translate-x-1/2">
-          <svg class="w-[340px] sm:w-[557px] md:w-[647px] lg:w-[1000px] xl:h-[339px] xl:w-[1200px]" viewBox="0 0 1200 339" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1046.03 338.796C1041.41 338.796 1036.79 338.333 1032.16 337.408C1027.77 336.715 1023.73 335.559 1020.03 333.941V300.304C1022.8 300.997 1026.15 301.575 1030.08 302.038C1034.01 302.731 1037.83 303.078 1041.53 303.078C1052.39 303.078 1060.37 300.651 1065.45 295.796C1070.77 291.172 1075.51 284.006 1079.67 274.296L1092.15 245.861L1091.46 278.804L1010.32 74.9025H1052.28L1112.27 231.296H1098.05L1157.69 74.9025H1200L1117.12 282.965C1112.73 294.062 1107.18 303.772 1100.48 312.094C1094 320.648 1086.26 327.237 1077.24 331.86C1068.46 336.484 1058.06 338.796 1046.03 338.796Z" fill="black"/>
-            <path d="M911.02 262.506V110.273H876.343V74.9026H911.02V65.193C911.02 51.091 913.91 39.3008 919.69 29.8224C925.469 20.1127 933.445 12.7149 943.617 7.62898C954.02 2.54299 965.926 0 979.334 0C981.877 0 984.767 0.231178 988.004 0.693534C991.24 0.924726 993.899 1.2715 995.979 1.73386V35.7175C994.13 35.2551 992.049 35.0239 989.738 35.0239C987.426 34.7927 985.576 34.6772 984.189 34.6772C973.786 34.6772 965.464 37.1045 959.222 41.9593C952.98 46.583 949.859 54.3275 949.859 65.193V74.9026H992.858V110.273H949.859V262.506H911.02Z" fill="black"/>
-            <path d="M804.867 262.506V74.903H844.052V262.506H804.867ZM804.867 49.2419V4.16162H844.052V49.2419H804.867Z" fill="black"/>
-            <path d="M659.25 266.667C641.218 266.667 625.035 262.39 610.702 253.837C596.6 245.052 585.388 233.262 577.065 218.466C568.974 203.67 564.928 187.025 564.928 168.531C564.928 150.036 569.09 133.391 577.412 118.596C585.735 103.8 596.947 92.1256 611.049 83.5719C625.151 75.0182 641.102 70.7414 658.903 70.7414C673.93 70.7414 687.223 73.7467 698.782 79.7574C710.341 85.7681 719.473 94.0907 726.177 104.725L720.282 113.741V0H759.12V262.506H722.016V224.361L726.524 231.643C720.051 242.971 710.804 251.641 698.782 257.651C686.761 263.662 673.583 266.667 659.25 266.667ZM663.065 230.256C673.93 230.256 683.64 227.598 692.193 222.281C700.978 216.963 707.798 209.681 712.653 200.434C717.739 190.956 720.282 180.321 720.282 168.531C720.282 156.741 717.739 146.222 712.653 136.975C707.798 127.728 700.978 120.445 692.193 115.128C683.64 109.811 673.93 107.152 663.065 107.152C652.199 107.152 642.374 109.811 633.589 115.128C624.804 120.445 617.984 127.728 613.13 136.975C608.275 146.222 605.847 156.741 605.847 168.531C605.847 180.321 608.275 190.956 613.13 200.434C617.984 209.681 624.689 216.963 633.242 222.281C642.027 227.598 651.968 230.256 663.065 230.256Z" fill="black"/>
-            <path d="M436.512 266.667C418.48 266.667 401.95 262.39 386.924 253.836C372.128 245.283 360.338 233.608 351.553 218.812C342.768 204.017 338.376 187.256 338.376 168.53C338.376 149.574 342.768 132.813 351.553 118.249C360.338 103.453 372.128 91.8939 386.924 83.5714C401.719 75.0177 418.249 70.7408 436.512 70.7408C455.006 70.7408 471.536 75.0177 486.1 83.5714C500.896 91.8939 512.571 103.453 521.124 118.249C529.909 132.813 534.301 149.574 534.301 168.53C534.301 187.487 529.909 204.363 521.124 219.159C512.339 233.955 500.549 245.629 485.753 254.183C470.958 262.505 454.544 266.667 436.512 266.667ZM436.512 230.256C447.609 230.256 457.434 227.597 465.988 222.28C474.541 216.963 481.245 209.681 486.1 200.433C491.186 190.955 493.729 180.321 493.729 168.53C493.729 156.74 491.186 146.221 486.1 136.974C481.245 127.727 474.541 120.445 465.988 115.128C457.434 109.81 447.609 107.152 436.512 107.152C425.646 107.152 415.821 109.81 407.036 115.128C398.483 120.445 391.663 127.727 386.577 136.974C381.722 146.221 379.295 156.74 379.295 168.53C379.295 180.321 381.722 190.955 386.577 200.433C391.663 209.681 398.483 216.963 407.036 222.28C415.821 227.597 425.646 230.256 436.512 230.256Z" fill="black"/>
-            <path d="M220.367 262.506V74.9025H257.819V112.701L254.351 107.152C258.512 94.8997 265.216 86.1148 274.464 80.7976C283.711 75.2493 294.808 72.4751 307.754 72.4751H319.197V108.193H302.899C289.953 108.193 279.434 112.238 271.343 120.33C263.483 128.19 259.552 139.518 259.552 154.313V262.506H220.367Z" fill="black"/>
-            <path d="M0 262.506V4.16162H93.9751C111.314 4.16162 126.572 7.39816 139.749 13.8712C153.157 20.1131 163.561 29.3604 170.958 41.613C178.356 53.6344 182.055 68.0832 182.055 84.9594C182.055 101.604 178.241 115.938 170.612 127.959C163.214 139.98 152.926 149.228 139.749 155.701C126.572 162.174 111.314 165.41 93.9751 165.41H40.919V262.506H0ZM40.919 128.999H95.0154C104.263 128.999 112.354 127.15 119.289 123.451C126.225 119.752 131.658 114.666 135.588 108.193C139.518 101.489 141.483 93.6287 141.483 84.6126C141.483 75.5966 139.518 67.852 135.588 61.3789C131.658 54.6747 126.225 49.5887 119.289 46.121C112.354 42.4221 104.263 40.5726 95.0154 40.5726H40.919V128.999Z" fill="black"/>
-            </svg>          
+          <svg
+            class="w-[340px] sm:w-[557px] md:w-[647px] lg:w-[1000px] xl:h-[339px] xl:w-[1200px]"
+            viewBox="0 0 1200 339"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1046.03 338.796C1041.41 338.796 1036.79 338.333 1032.16 337.408C1027.77 336.715 1023.73 335.559 1020.03 333.941V300.304C1022.8 300.997 1026.15 301.575 1030.08 302.038C1034.01 302.731 1037.83 303.078 1041.53 303.078C1052.39 303.078 1060.37 300.651 1065.45 295.796C1070.77 291.172 1075.51 284.006 1079.67 274.296L1092.15 245.861L1091.46 278.804L1010.32 74.9025H1052.28L1112.27 231.296H1098.05L1157.69 74.9025H1200L1117.12 282.965C1112.73 294.062 1107.18 303.772 1100.48 312.094C1094 320.648 1086.26 327.237 1077.24 331.86C1068.46 336.484 1058.06 338.796 1046.03 338.796Z"
+              fill="black"
+            />
+            <path
+              d="M911.02 262.506V110.273H876.343V74.9026H911.02V65.193C911.02 51.091 913.91 39.3008 919.69 29.8224C925.469 20.1127 933.445 12.7149 943.617 7.62898C954.02 2.54299 965.926 0 979.334 0C981.877 0 984.767 0.231178 988.004 0.693534C991.24 0.924726 993.899 1.2715 995.979 1.73386V35.7175C994.13 35.2551 992.049 35.0239 989.738 35.0239C987.426 34.7927 985.576 34.6772 984.189 34.6772C973.786 34.6772 965.464 37.1045 959.222 41.9593C952.98 46.583 949.859 54.3275 949.859 65.193V74.9026H992.858V110.273H949.859V262.506H911.02Z"
+              fill="black"
+            />
+            <path
+              d="M804.867 262.506V74.903H844.052V262.506H804.867ZM804.867 49.2419V4.16162H844.052V49.2419H804.867Z"
+              fill="black"
+            />
+            <path
+              d="M659.25 266.667C641.218 266.667 625.035 262.39 610.702 253.837C596.6 245.052 585.388 233.262 577.065 218.466C568.974 203.67 564.928 187.025 564.928 168.531C564.928 150.036 569.09 133.391 577.412 118.596C585.735 103.8 596.947 92.1256 611.049 83.5719C625.151 75.0182 641.102 70.7414 658.903 70.7414C673.93 70.7414 687.223 73.7467 698.782 79.7574C710.341 85.7681 719.473 94.0907 726.177 104.725L720.282 113.741V0H759.12V262.506H722.016V224.361L726.524 231.643C720.051 242.971 710.804 251.641 698.782 257.651C686.761 263.662 673.583 266.667 659.25 266.667ZM663.065 230.256C673.93 230.256 683.64 227.598 692.193 222.281C700.978 216.963 707.798 209.681 712.653 200.434C717.739 190.956 720.282 180.321 720.282 168.531C720.282 156.741 717.739 146.222 712.653 136.975C707.798 127.728 700.978 120.445 692.193 115.128C683.64 109.811 673.93 107.152 663.065 107.152C652.199 107.152 642.374 109.811 633.589 115.128C624.804 120.445 617.984 127.728 613.13 136.975C608.275 146.222 605.847 156.741 605.847 168.531C605.847 180.321 608.275 190.956 613.13 200.434C617.984 209.681 624.689 216.963 633.242 222.281C642.027 227.598 651.968 230.256 663.065 230.256Z"
+              fill="black"
+            />
+            <path
+              d="M436.512 266.667C418.48 266.667 401.95 262.39 386.924 253.836C372.128 245.283 360.338 233.608 351.553 218.812C342.768 204.017 338.376 187.256 338.376 168.53C338.376 149.574 342.768 132.813 351.553 118.249C360.338 103.453 372.128 91.8939 386.924 83.5714C401.719 75.0177 418.249 70.7408 436.512 70.7408C455.006 70.7408 471.536 75.0177 486.1 83.5714C500.896 91.8939 512.571 103.453 521.124 118.249C529.909 132.813 534.301 149.574 534.301 168.53C534.301 187.487 529.909 204.363 521.124 219.159C512.339 233.955 500.549 245.629 485.753 254.183C470.958 262.505 454.544 266.667 436.512 266.667ZM436.512 230.256C447.609 230.256 457.434 227.597 465.988 222.28C474.541 216.963 481.245 209.681 486.1 200.433C491.186 190.955 493.729 180.321 493.729 168.53C493.729 156.74 491.186 146.221 486.1 136.974C481.245 127.727 474.541 120.445 465.988 115.128C457.434 109.81 447.609 107.152 436.512 107.152C425.646 107.152 415.821 109.81 407.036 115.128C398.483 120.445 391.663 127.727 386.577 136.974C381.722 146.221 379.295 156.74 379.295 168.53C379.295 180.321 381.722 190.955 386.577 200.433C391.663 209.681 398.483 216.963 407.036 222.28C415.821 227.597 425.646 230.256 436.512 230.256Z"
+              fill="black"
+            />
+            <path
+              d="M220.367 262.506V74.9025H257.819V112.701L254.351 107.152C258.512 94.8997 265.216 86.1148 274.464 80.7976C283.711 75.2493 294.808 72.4751 307.754 72.4751H319.197V108.193H302.899C289.953 108.193 279.434 112.238 271.343 120.33C263.483 128.19 259.552 139.518 259.552 154.313V262.506H220.367Z"
+              fill="black"
+            />
+            <path
+              d="M0 262.506V4.16162H93.9751C111.314 4.16162 126.572 7.39816 139.749 13.8712C153.157 20.1131 163.561 29.3604 170.958 41.613C178.356 53.6344 182.055 68.0832 182.055 84.9594C182.055 101.604 178.241 115.938 170.612 127.959C163.214 139.98 152.926 149.228 139.749 155.701C126.572 162.174 111.314 165.41 93.9751 165.41H40.919V262.506H0ZM40.919 128.999H95.0154C104.263 128.999 112.354 127.15 119.289 123.451C126.225 119.752 131.658 114.666 135.588 108.193C139.518 101.489 141.483 93.6287 141.483 84.6126C141.483 75.5966 139.518 67.852 135.588 61.3789C131.658 54.6747 126.225 49.5887 119.289 46.121C112.354 42.4221 104.263 40.5726 95.0154 40.5726H40.919V128.999Z"
+              fill="black"
+            />
+          </svg>
         </div>
       </div>
 
     </footer>
 
     <script type="module" src="/main.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      
-    // Slider untuk elemen b-slider__slide
-    const marqueeSlider = document.querySelector('.marquee-slider');
-    const marqueeSliderLeft = document.querySelector('.marquee-slider-left');
-    const marqueeSliderRight = document.querySelector('.marquee-slider-right');
 
-    const slides = document.querySelectorAll('.b-slider__slide');
-
-    const slidesLeft = document.querySelectorAll('.b-slider__slide-left');
-
-    const slidesRight = document.querySelectorAll('.b-slider__slide-right');
-
-    let sliderPosition = 0;
-    const sliderSpeed = 1;
-
-    function animateSlider() {
-        sliderPosition -= sliderSpeed;
-        if (sliderPosition <= -marqueeSlider.offsetWidth / 2) {
-            sliderPosition = 0;
-        }
-        marqueeSlider.style.transform = `translateX(${sliderPosition}px)`;
-        requestAnimationFrame(animateSlider);
-    }
-
-    let sliderPositionLeft = 0;
-    const sliderSpeedLeft = 1;
-
-    function animateSliderLeft() {
-      sliderPositionLeft -= sliderSpeedLeft;
-      if (sliderPositionLeft <= -marqueeSliderLeft.offsetWidth / 2) {
-          sliderPositionLeft = 0; 
-      }
-      marqueeSliderLeft.style.transform = `translateX(${sliderPositionLeft}px)`;
-      requestAnimationFrame(animateSliderLeft);
-    }
-
-    let sliderPositionRight = 0;
-    const sliderSpeedRight = 1;
-
-    function animateSliderRight() {
-        sliderPositionRight += sliderSpeedRight;
-        if (sliderPositionRight >= marqueeSliderRight.offsetWidth / 2) {
-            sliderPositionRight = 0; 
-        }
-        marqueeSliderRight.style.transform = `translateX(${sliderPositionRight}px)`;
-        requestAnimationFrame(animateSliderRight);
-    }
-
-    animateSlider();
-    animateSliderLeft();
-    animateSliderRight();
-
-    // Klik untuk dropdown
-    document.getElementById("dropdownButton").addEventListener("click", function() {
-        const dropdownMenu = document.getElementById("dropdownMenu");
-        dropdownMenu.classList.toggle("hidden");
-        dropdownMenu.classList.toggle("visible");
-    });
+      // dropdown
+      document
+        .getElementById("dropdownButton")
+        .addEventListener("click", function () {
+          const dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.classList.toggle("hidden");
+          dropdownMenu.classList.toggle("visible");
+        });
+      // Dropdown N
 
       // Animated Figure
       document.addEventListener("DOMContentLoaded", function () {
         const figure = document.getElementById("animated-figure");
 
         function setTopPosition() {
-            if (window.innerWidth >= 1280) {
-                figure.style.setProperty("--target-top", "15%");
-            } else if (window.innerWidth >= 768) {
-                figure.style.setProperty("--target-top", "20%");
-            } else if (window.innerWidth >= 640) {
-                figure.style.setProperty("--target-top", "30%");
-            } else {
-                figure.style.setProperty("--target-top", "100%");
-            }
+          if (window.innerWidth >= 1280) {
+            figure.style.setProperty("--target-top", "15%");
+          } else if (window.innerWidth >= 768) {
+            figure.style.setProperty("--target-top", "20%");
+          } else if (window.innerWidth >= 640) {
+            figure.style.setProperty("--target-top", "30%");
+          } else {
+            figure.style.setProperty("--target-top", "100%");
+          }
         }
 
-          setTopPosition();
+        setTopPosition();
 
-          setTimeout(() => {
-              figure.classList.add("animate-top");
-          }, 100);
+        setTimeout(() => {
+          figure.classList.add("animate-top");
+        }, 100);
 
-          window.addEventListener("resize", setTopPosition);
+        window.addEventListener("resize", setTopPosition);
       });
+      // Animated Figure N
 
+    </script>
+
+<script>
+  const swiper = new Swiper(".sample-slider", {
+  loop: true,
+  autoplay: {
+  delay: 0,
+  pauseOnMouseEnter: true,
+  disableOnInteraction: true,
+  },
+  speed: 3000,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  breakpoints: {
+  320: {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  },
+  // when window width is >= 480px
+  480: {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  },
+  640: {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  },
+  1024: {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  },
+  },
+  });
   </script>
-    
-  </body>
-</html>
