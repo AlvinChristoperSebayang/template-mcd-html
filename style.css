@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
+#site-header .navigation-wrapper {
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }
 
@@ -10,6 +10,12 @@
   min-height: calc(100vh - 240px);
 }
 
-#site-footer .footer-wrapper{
+#site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
+
+.bg-dark {
+  background-color: rgba(82, 80, 80, 0.8);
+
+}
+

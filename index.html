@@ -1,17 +1,444 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header id="site-header"></header>
-    <main id="site-main">
 
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-transparent transition-colors duration-300">
+    <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
+      <div class="flex flex-1 items-center">
+        <a href="#" class="-m-1.5 p-1.5">
+          <h1 class="text-[24px] leading-[29.52px] md:text-3xl font-bold text-white">Kayyon</h1>
+        </a>
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex md:ml-12 md:gap-x-12">
+          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" data-aos="fade-up" data-aos-delay="0">Furniture</a>
+          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" data-aos="fade-up" data-aos-delay="500">Accessory</a>
+          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" data-aos="fade-up" data-aos-delay="800">Collaboration</a>
+        </div>
+      </div>
+      <!-- Tombol Menu Mobile -->
+      <div class="flex md:hidden">
+        <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
+          onclick="toggleMobileMenu()">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <!-- Tombol Pencarian untuk Desktop -->
+      <div class="hidden md:flex lg:flex-1 lg:justify-end">
+        <a href="product.html"
+          class="px-4 py-2 border border-white rounded-full text-white hover:text-white hover:bg-black transition" data-aos="fade-up" data-aos-delay="1000">
+          Search A product
+        </a>
+      </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobileMenu">
+      <div class="flex items-center justify-between">
+        <a href="#" class="-m-1.5 p-1.5">
+          <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
+        </a>
+        <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
+          <span class="sr-only">Close menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 space-y-2 py-6">
+        <a href="#"
+          class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
+        <a href="#"
+          class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
+        <a href="#"
+          class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
+      </div>
+      <div class="py-6">
+        <a href="product.html"
+          class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
+          A product</a>
+      </div>
+    </div>
+
+    <!-- Border pemisah di bawah header -->
+    <div class="border-t border-white mt-4"></div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+      <!-- Swiper Container -->
+      <div class="swiper-container relative w-full h-auto md:h-screen max-w-screen">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide relative w-full h-full">
+            <img src="/img/background.png" alt="Kayyon Working Table" class="w-full h-full object-cover">
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide relative w-full h-full">
+            <img src="/img/detail.png" alt="Product Detail" class="w-full h-full object-cover">
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide relative w-full h-full">
+            <img src="/img/detail.png" alt="Product Detail" class="w-full h-full object-cover">
+          </div>
+        </div>
+        
+        <!-- Content Overlay -->
+        <div class="absolute px-4 bottom-0 w-full pb-8 md:pb-14 lg:pb-16 z-10 max-w-screen">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-2 md:mb-0 text-center md:text-left">
+              <h1 class="text-white text-xl md:text-4xl lg:text-[48px] leading-tight md:leading-[59.04px] font-bold" data-aos="fade-right" data-aos-delay="0">
+                Kayyon Working Table
+              </h1>
+            </div>
+            <div class="text-white text-sm md:text-xl lg:text-2xl md:leading-[29.52px] text-center md:text-left" data-aos="fade-left" data-aos-delay="500">
+              <p>On Sale 50% off</p>
+            </div>
+          </div>
+          
+          <div class="border border-white w-full h-px mt-3 md:mt-6"></div>
+          
+          <div class="flex flex-col md:flex-row justify-between w-full pt-3 md:pt-6">
+            <div class="text-white mb-2 md:mb-0 text-center md:text-left">
+              <p class="text-xs md:text-base lg:text-lg" data-aos="fade-down" data-aos-delay="500">New Product</p>
+              <p class="text-xs md:text-base lg:text-lg" data-aos="fade-down" data-aos-delay="800">Now Arrives</p>
+            </div>
+            
+            <div class="text-white mb-4 md:mb-0 text-center md:text-left">
+              <p class="text-xs md:text-base lg:text-lg" data-aos="fade-down" data-aos-delay="0">Oak Lumber</p>
+              <p class="text-xs md:text-base lg:text-lg py-1 md:py-1 lg:py-2" data-aos="fade-down" data-aos-delay="300">1000mm X 1800mm X 1200cm</p>
+              <p class="text-xs md:text-base lg:text-lg pb-2" data-aos="fade-down" data-aos-delay="500">Steel Feet</p>
+              <button class="px-3 py-1 border border-white rounded-full text-white hover:text-black hover:bg-white transition">
+                Buy Product
+              </button>
+            </div>
+            
+            <!-- Custom Navigation Buttons -->
+            <div class="flex items-center justify-center space-x-2 md:space-x-1 mt-4 md:mt-0">
+              <button class="button-custom-prev flex justify-center items-center w-[44px] h-[32px] border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
+                &#8592;
+              </button>
+              <button class="button-custom-next flex justify-center items-center w-[44px] h-[32px] border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
+                &#8594;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container mx-auto px-4 pt-[50px] md:pt-[150px]">
+      <div class="">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+          <div data-aos="fade-down" data-aos-delay="0">
+            <h2 class="text-[48px] leading-[48px] text-[#61513F]">Everythink you need for your house</h2>
+            <p class="text-[14px] leading-[26.6px] text-[#877C6F] pt-[24px]">Kayyon is a company operating in the
+              furniture sector, which prioritizes quality and aesthetics in every product it produces. With a focus on
+              modern yet functional designs, Kayyon offers a wide selection of furniture suitable for various
+              residential styles, from minimalist to contemporary.</p>
+          </div>
+          <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-down" data-aos-delay="500">
+            <div class="flex justify-center items-center">
+              <img class="w-[full] h-[auto] object-cover rounded-lg" src="/img/kursi1.png" alt="">
+            </div>
+            <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
+            <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+          </div>
+          <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-down" data-aos-delay="800">
+            <div class="flex justify-center items-center">
+              <img class="w-[full] h-[auto] object-cover rounded-lg" src="/img/cabinet.png" alt="">
+            </div>
+            <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon shelf</h2>
+            <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+          </div>
+          <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="flex justify-center items-center">
+              <img class="w-[full] h-[auto] object-cover rounded-lg" src="/img/shelf.png" alt="">
+            </div>
+            <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon shelf</h2>
+            <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+          </div>
+          <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex justify-center items-center">
+              <img class="w-[full] h-[auto] object-cover rounded-lg" src="/img/vase.png" alt="">
+            </div>
+            <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon vase</h2>
+            <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+          </div>
+          <div class="flex flex-col" data-aos="fade-up" data-aos-delay="800">
+            <p class="text-[14px] leading-[26.6px] text-[#877C6F] pb-[30px]">
+              The company also adheres to sustainable values, prioritizing the use of environmentally friendly materials
+              and efficient production processes. In this way, Kayyon not only contributes to residential comfort, but
+              also to environmental preservation.
+            </p>
+            <button
+              class="md:w-[50%] h-auto mt-auto flex justify-between items-center gap-2 px-2 py-2 border bg-[#61513F] border-[#61513F] rounded-full text-white hover:text-[#61513F] hover:bg-white transition">
+              <p>Browse our products</p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mx-auto px-4">
+      <div class="relative flex flex-col lg:flex-row gap-[50px] md:gap-[138px] items-start pt-[50px] md:pt-[100px] ">
+        <!-- Text Section -->
+        <div class="flex flex-col">
+          <p class="text-sm text-[#877C6F] font-normal object-cover w-[335px]">
+            At Kayyon, we understand that every space has its own unique character and needs. Discover the perfect
+            furniture for your home by exploring our carefully curated categories.
+          </p>
+          <button class="md:w-[60%] h-auto mt-[360px] flex justify-between items-center gap-2 px-2 py-2 border bg-[#61513F] border-[#61513F] rounded-full text-white hover:text-[#61513F] hover:bg-white transition">
+            <p>Browse all product</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+          </button>
+        </div>
+        <!-- Image Section with Scrollbar -->
+        <div id="scrollContainer" class="flex gap-5 w-full h-[494px] overflow-x-scroll scrollbar-hide">
+          <div class="relative bg-[#F1F0EE] min-w-[335px] min-h-[494px]">
+            <div class="absolute px-5 bottom-[63px]">
+              <img class="w-[294px] h-[294px] object-cover" src="/img/sofa.png" alt="gambar1">
+            </div>
+            <p class="absolute bottom-5 pl-5 text-sm font-normal">Sofa</p>
+            <p class="absolute bottom-5 left-[239px] text-[#BBB3AB] text-sm font-normal">123 Product</p>
+          </div>
+          <div class="relative bg-[#F1F0EE] min-w-[335px] min-h-[494px]">
+            <div class="absolute px-5 bottom-[63px]">
+              <img class="w-[294px] h-[294px] object-cover" src="/img/tables.png" alt="gambar1">
+            </div>
+            <p class="absolute bottom-5 pl-5 text-sm font-normal">Sofa</p>
+            <p class="absolute bottom-5 left-[239px] text-[#BBB3AB] text-sm font-normal">123 Product</p>
+          </div>
+          <div class="relative bg-[#F1F0EE] min-w-[335px] min-h-[494px]">
+            <div class="absolute px-5 bottom-[63px]">
+              <img class="w-[294px] h-[294px] object-cover" src="/img/chair.png" alt="gambar1">
+            </div>
+            <p class="absolute bottom-5 pl-5 text-sm font-normal">Sofa</p>
+            <p class="absolute bottom-5 left-[239px] text-[#BBB3AB] text-sm font-normal">123 Product</p>
+          </div>
+          <div class="relative bg-[#F1F0EE] min-w-[335px] min-h-[494px]">
+            <div class="absolute px-5 bottom-[63px]">
+              <img class="w-[294px] h-[294px] object-cover" src="/img/sofa.png" alt="gambar1">
+            </div>
+            <p class="absolute bottom-5 pl-5 text-sm font-normal">Sofa</p>
+            <p class="absolute bottom-5 left-[239px] text-[#BBB3AB] text-sm font-normal">123 Product</p>
+          </div>
+          <div class="relative bg-[#F1F0EE] min-w-[335px] min-h-[494px]">
+            <div class="absolute px-5 bottom-[63px]">
+              <img class="w-[294px] h-[294px] object-cover" src="/img/sofa.png" alt="gambar1">
+            </div>
+            <p class="absolute bottom-5 pl-5 text-sm font-normal">Sofa</p>
+            <p class="absolute bottom-5 left-[239px] text-[#BBB3AB] text-sm font-normal">123 Product</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mx-auto px-4 py-8">
+      <div class="relative flex items-start pt-[100px] w-full overflow-hidden">
+        <!-- Text Section -->
+        <div>
+          <p class="text-[48px] leading-[48px] text-[#61513F] font-normal object-cover w-[335px]">
+            don’t trust us, see what they say about us
+          </p>
+        </div>
+        <div class="">
+          <div class="relative w-full overflow-hidden">
+            <div id="testimonial-container" class="flex transition-transform duration-300 ease-in-out gap-[20px] ">
+              <div class="testimonial-card flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]">
+                <div class="flex flex-col items-start mr-6">
+                  <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
+                  <div class="flex flex-col mt-auto">
+                    <p class="text-sm text-gray-600">Idaho, USA</p>
+                  </div>
+                </div>
+                <div class="border-l h-[150px] border-gray-300 mx-4 "></div>
+                <div class="text-gray-700 text-[16px] leading-[30.4px] items-center">
+                  <p>“Kayyon has completely transformed my living room! The sofa I purchased is not only stylish but also incredibly comfortable. The craftsmanship is top-notch, and the delivery was smooth and on time. I'll definitely be returning for more pieces”</p>
+                </div>
+              </div>
+              <div class="testimonial-card flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]">
+                <div class="flex flex-col items-start mr-6">
+                  <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
+                  <div class="flex flex-col mt-auto">
+                    <p class="text-sm text-gray-600">Idaho, USA</p>
+                  </div>
+                </div>
+                <div class="border-l h-[150px] border-gray-300 mx-4 "></div>
+                <div class="text-gray-700 text-[16px] leading-[30.4px] items-center">
+                  <p>“Kayyon has completely transformed my living room! The sofa I purchased is not only stylish but also incredibly comfortable. The craftsmanship is top-notch, and the delivery was smooth and on time. I'll definitely be returning for more pieces”</p>
+                </div>
+              </div>
+      
+              <div class="testimonial-card flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]">
+                <div class="flex flex-col items-start mr-6">
+                  <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
+                  <div class="flex flex-col mt-auto">
+                    <p class="text-sm text-gray-600">Idaho, USA</p>
+                  </div>
+                </div>
+                <div class="border-l h-[150px] border-gray-300 mx-4 "></div>
+                <div class="text-gray-700 text-[16px] leading-[30.4px] items-center">
+                  <p>“Kayyon has completely transformed my living room! The sofa I purchased is not only stylish but also incredibly comfortable. The craftsmanship is top-notch, and the delivery was smooth and on time. I'll definitely be returning for more pieces”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Slider Controls -->
+          <div class="flex space-x-4 pt-4">
+            <button title="prev" onclick="prevSlide()" class="flex justify-center items-center w-[88px] h-[32px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+              </svg>
+            </button>
+            <button title="next" onclick="nextSlide()" class="flex justify-center items-center w-[88px] h-[32px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#5F4A3E] text-white pt-16 pb-6 px-4 md:px-16 lg:px-32">
+    <div class="container mx-auto">
+      <!-- Left Section -->
+      <div class="mb-8 md:mb-0">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Kayyon&copy;</h2>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+        <div class="mb-6 md:mb-0">
+          <address class="text-sm md:text-base leading-5">
+            1234 Serenity St, Furniture<br>City, ST 56789<br>
+            <a href="tel:+18001234567" class="block mt-2">+1 (800) 123-4567</a>
+            <a href="mailto:support@kayyon.com" class="block mt-2">support@kayyon.com</a>
+            <p class="mt-2">Mon-Fri 9:00 AM - 6:00 PM</p>
+          </address>
+        </div>
+        <div class="">
+          <h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
+          <form action="#" method="POST" class="relative">
+            <input type="email" placeholder="Your Email"
+              class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white">
+            <button type="submit" class="absolute inset-y-0 right-0 flex items-center px-4 text-white">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white mt-8"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center mt-6">
+      <div class="text-center text-sm">
+        &copy; 2024 Kayyon. All Rights Reserved.
+      </div>
+      <!-- Social Links -->
+      <div class="flex items-center space-x-4 mt-4 md:mt-0">
+        <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/twiter.svg" alt="Twitter"></a>
+        <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/etsy.svg" alt="Etsy"></a>
+        <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/ig.svg" alt="Instagram"></a>
+        <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/facebook.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  <script>
+    // Fungsi untuk menambahkan kelas 'bg-dark' ketika scroll ke bawah
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
+        header.classList.add("bg-dark");
+      } else {
+        header.classList.remove("bg-dark");
+      }
+    });
+  </script>
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const slider = document.querySelector('.w-3/4 .flex');
+
+    // Automatic scrolling (Optional, can be removed if not needed)
+    setInterval(() => {
+      slider.scrollBy({ left: 300, behavior: 'smooth' });
+    }, 3000);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.button-custom-next',
+        prevEl: '.button-custom-prev',
+      },
+    });
+  </script>
+  <script>
+  let currentIndex = 0;
+  
+  function updateSlider() {
+    const container = document.getElementById('testimonial-container');
+    const testimonialWidth = container.querySelector('.testimonial-card').offsetWidth;
+    container.style.transform = `translateX(-${currentIndex * (testimonialWidth + 20)}px)`;
+  }
+
+  function prevSlide() {
+    const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
+    currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+    updateSlider();
+  }
+
+  function nextSlide() {
+    const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
+    currentIndex = (currentIndex + 1) % totalTestimonials;
+    updateSlider();
+  }
+</script>
+
+</body>
+
 </html>

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+        /* Tambahkan gaya untuk menampilkan dropdown */
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown-content.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-transparent transition-colors duration-300">
+        <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
+          <div class="flex flex-1 items-center">
+            <a href="index.html" class="-m-1.5 p-1.5">
+              <h1 class="text-[24px] leading-[29.52px] md:text-3xl font-bold text-[#61513F]">Kayyon</h1>
+            </a>
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex md:ml-12 md:gap-x-12">
+              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" data-aos="fade-up" data-aos-delay="0">Furniture</a>
+              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" data-aos="fade-up" data-aos-delay="500">Accessory</a>
+              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" data-aos="fade-up" data-aos-delay="800">Collaboration</a>
+            </div>
+          </div>
+          <!-- Tombol Menu Mobile -->
+          <div class="flex md:hidden">
+            <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
+              onclick="toggleMobileMenu()">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <!-- Tombol Pencarian untuk Desktop -->
+          <div class="hidden md:flex lg:flex-1 lg:justify-end">
+            <a href="product.html"
+              class="px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] hover:text-white hover:bg-black transition" data-aos="fade-up" data-aos-delay="1000">
+              Search A product
+            </a>
+          </div>
+        </nav>
+    
+        <!-- Menu Mobile -->
+        <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobileMenu">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
+            </a>
+            <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 space-y-2 py-6">
+            <a href="#"
+              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
+            <a href="#"
+              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
+            <a href="#"
+              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
+          </div>
+          <div class="py-6">
+            <a href="product.html"
+              class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
+              A product</a>
+          </div>
+        </div>
+    
+        <!-- Border pemisah di bawah header -->
+        <div class="border-t border-white mt-4"></div>
+      </header>
+    <main>
+        <section class="container mx-auto px-4 pt-[150px]">
+            <div class="">
+                <div class="flex justify-between items-center py-[20px]">
+                    <!-- Dropdown 1 -->
+                    <div class="relative inline-block text-right">
+                        <button type="button"
+                            class="inline-flex justify-end w-full gap-x-1.5 rounded-full pl-[24px] py-[13.5px] pr-[5.5px] text-[#61513F] bg-white text-sm font-semibold shadow-sm ring-1 ring-inset ring-[#61513F] hover:bg-gray-50"
+                            onclick="toggleDropdown('dropdown1')">
+                            category
+                            <svg class="mr-[20px] h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div id="dropdown1"
+                            class="dropdown-content hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dropdown 2 -->
+                    <div class="relative inline-block text-right">
+                        <button type="button"
+                            class="inline-flex justify-end w-full gap-x-1.5 rounded-full pl-[24px] py-[13.5px] pr-[5.5px] text-[#61513F] bg-white text-sm font-semibold shadow-sm ring-1 ring-inset ring-[#61513F] hover:bg-gray-50"
+                            onclick="toggleDropdown('dropdown2')">
+                            Filter
+                            <svg class="mr-[20px] h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div id="dropdown2"
+                            class="dropdown-content hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-shelf.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/shelf.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Shelf</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-product.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/kursi1.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-cabinet.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/cabinet.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-vase.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/vase.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Vase</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-product.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/kursi1.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-cabinet.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/cabinet.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-vase.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/vase.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon vase</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-product.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/kursi1.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-cabinet.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/cabinet.png" alt=""></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:border-b"></div>
+                <!-- Pagination -->
+                <div id="pagination" class="pagination flex flex-col md:flex-row justify-center my-5">
+                    <!-- Tombol Previous -->
+                    <button id="prevButton"
+                        class="flex justify-center items-center gap-2 px-4 py-2 border bg-white text-[#61513F] border-[#61513F] rounded-full hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                        </svg>
+                        <span class="hidden">Previous</span> <!-- Label untuk tampilan desktop -->
+                    </button>
+
+
+                    <!-- Tombol Pagination -->
+                    <div class="flex flex-wrap justify-center mb-2 md:mb-0">
+                        <button
+                            class="page-btn mx-1 items-center gap-2 px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] bg-white hover:bg-[#61513F] hover:text-white"
+                            data-page="1">1</button>
+                        <button
+                            class="page-btn mx-1 items-center gap-2 px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] bg-white hover:bg-[#61513F] hover:text-white"
+                            data-page="2">2</button>
+                        <button
+                            class="page-btn mx-1 items-center gap-2 px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] bg-white hover:bg-[#61513F] hover:text-white"
+                            data-page="3">3</button>
+                        <button
+                            class="page-btn mx-1 items-center gap-2 px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] bg-white hover:bg-[#61513F] hover:text-white"
+                            data-page="4">4</button>
+                        <button
+                            class="page-btn mx-1 items-center gap-2 px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] bg-white hover:bg-[#61513F] hover:text-white"
+                            data-page="last">Last</button>
+                    </div>
+
+                    <!-- Tombol Next -->
+                    <button id="nextButton"
+                        class="flex justify-between items-center gap-2 px-4 py-2 border bg-white text-[#61513F] border-[#61513F] rounded-full hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                        <span class="hidden">Next</span> <!-- Label untuk tampilan desktop -->
+                    </button>
+                </div>
+
+        </section>
+    </main>
+
+    <footer class="bg-[#5F4A3E] text-white pt-16 pb-6 px-4 md:px-16 lg:px-32">
+        <div class="container mx-auto">
+            <!-- Left Section -->
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Kayyon&copy;</h2>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+                <div class="mb-6 md:mb-0">
+                    <address class="text-sm md:text-base leading-5">
+                        1234 Serenity St, Furniture<br>City, ST 56789<br>
+                        <a href="tel:+18001234567" class="block mt-2">+1 (800) 123-4567</a>
+                        <a href="mailto:support@kayyon.com" class="block mt-2">support@kayyon.com</a>
+                        <p class="mt-2">Mon-Fri 9:00 AM - 6:00 PM</p>
+                    </address>
+                </div>
+                <div class="">
+                    <h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
+                    <form action="#" method="POST" class="relative">
+                        <input type="email" placeholder="Your Email"
+                            class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white">
+                        <button type="submit" class="absolute inset-y-0 right-0 flex items-center px-4 text-white">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white mt-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center mt-6">
+            <div class="text-center text-sm">
+                &copy; 2024 Kayyon. All Rights Reserved.
+            </div>
+            <!-- Social Links -->
+            <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/twiter.svg"
+                        alt="Twitter"></a>
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/etsy.svg" alt="Etsy"></a>
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/ig.svg" alt="Instagram"></a>
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/facebook.svg"
+                        alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <script>
+        // Fungsi untuk menambahkan kelas 'bg-dark' ketika scroll ke bawah
+        window.addEventListener("scroll", function () {
+          const header = document.querySelector("header");
+          if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
+            header.classList.add("bg-dark");
+          } else {
+            header.classList.remove("bg-dark");
+          }
+        });
+      </script>
+    <script>
+        // Fungsi untuk toggle dropdown
+        function toggleDropdown(id) {
+            document.getElementById(id).classList.toggle('show');
+        }
+
+        // Menutup dropdown ketika klik di luar
+        window.onclick = function (event) {
+            if (!event.target.matches('button')) {
+                document.querySelectorAll('.dropdown-content').forEach(function (dropdown) {
+                    dropdown.classList.remove('show');
+                });
+            }
+        }
+    </script>
+    <script>
+        // Logika Pagination dengan JavaScript Vanilla
+        let currentPage = 1;
+        const totalPages = 50;
+
+        // Dapatkan elemen tombol
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const pageButtons = document.querySelectorAll('.page-btn');
+
+        // Fungsi untuk mengganti halaman
+        function changePage(page) {
+            // Batasi nilai halaman agar berada dalam rentang yang benar
+            if (page < 1 || page > totalPages) return;
+
+            currentPage = page;
+
+            // Update tombol previous dan next
+            prevButton.disabled = (currentPage === 1);
+            nextButton.disabled = (currentPage === totalPages);
+
+            // Update style tombol previous dan next
+            prevButton.classList.toggle('cursor-not-allowed', currentPage === 1);
+            prevButton.classList.toggle('opacity-50', currentPage === 1);
+            nextButton.classList.toggle('cursor-not-allowed', currentPage === totalPages);
+            nextButton.classList.toggle('opacity-50', currentPage === totalPages);
+
+            // Update tampilan tombol pagination
+            pageButtons.forEach(button => {
+                const pageNum = parseInt(button.getAttribute('data-page'), 10);
+                if (pageNum === currentPage) {
+                    button.classList.add('bg-[#61513F]', 'text-white');
+                    button.classList.remove('bg-white');
+                } else {
+                    button.classList.remove('bg-[#61513F]', 'text-white');
+                    button.classList.add('bg-white');
+                }
+            });
+
+            // Lakukan sesuatu dengan data yang ditampilkan berdasarkan halaman
+            console.log('Menampilkan halaman:', currentPage);
+        }
+
+        // Event listener untuk tombol previous dan next
+        prevButton.addEventListener('click', () => changePage(currentPage - 1));
+        nextButton.addEventListener('click', () => changePage(currentPage + 1));
+
+        // Event listener untuk tombol halaman
+        pageButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const page = parseInt(button.getAttribute('data-page'), 10);
+                changePage(page);
+            });
+        });
+    </script>
+</body>
+
+</html>

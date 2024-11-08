@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-white   ">
+        <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
+            <div class="flex flex-1 items-center">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
+                </a>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex md:ml-12 md:gap-x-12">
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-300">Furniture</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-300">Accessory</a>
+                    <a href="#"
+                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-300">Collaboration</a>
+                </div>
+            </div>
+            <!-- Tombol Menu Mobile -->
+            <div class="flex md:hidden">
+                <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
+                    onclick="toggleMobileMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Tombol Pencarian untuk Desktop -->
+            <div class="hidden md:flex lg:flex-1 lg:justify-end">
+                <a href="product.html"
+                    class="px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">
+                    Search A product
+                </a>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            id="mobileMenu">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
+                </a>
+                <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 space-y-2 py-6">
+                <a href="#"
+                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
+            </div>
+            <div class="py-6">
+                <a href="product.html"
+                    class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
+                    A product</a>
+            </div>
+        </div>
+
+        <!-- Border pemisah di bawah header -->
+        <div class="border-t border-black mt-4"></div>
+    </header>
+    <main>
+        <section class="px-[20px] pt-[150px]">
+            <div class="flex flex-col md:flex-row gap-10 bg-gray-50">
+                <!-- Left Section: Image and Thumbnails -->
+                <div class="flex flex-col items-center space-y-4 md:w-[50%] ">
+                    <!-- Gambar Utama -->
+                     <div class="bg-[#F1F0EE]">
+                         <img id="mainImage" src="/img/vase.png" alt="Kayyon Minimalist Chair"
+                         class="w-[573px] h-[571px] rounded-lg ">
+                     </div>
+                
+                    <!-- Pagination dengan Gambar Thumbnail -->
+                    <div id="pagination" class="pagination flex justify-center my-5">
+                        <div class="flex flex-wrap justify-center space-x-4">
+                            <!-- Tombol Thumbnail untuk Halaman 1 -->
+                            <button class="page-btn mx-1 items-center  gap-2 px-4 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white"
+                                data-page="/img/vase.png">
+                                <img src="/img/vase.png" alt="Thumbnail 1" class="w-[179px] h-[180px] object-cover rounded-lg">
+                            </button>
+                            
+                            <!-- Tombol Thumbnail untuk Halaman 2 -->
+                            <button class="page-btn mx-1 items-center gap-2 px-4 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white"
+                                data-page="/img/vase1.jpeg">
+                                <img src="/img/vase1.jpeg" alt="Thumbnail 2" class="w-[179px] h-[180px] object-cover rounded-lg">
+                            </button>
+                            
+                            <!-- Tombol Thumbnail untuk Halaman 3 -->
+                            <button class="page-btn mx-1 items-center gap-2 px-4 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white"
+                                data-page="/img/vase2.jpeg">
+                                <img src="/img/vase2.jpeg" alt="Thumbnail 3" class="w-[179px] h-[180px] object-cover rounded-lg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Section: Product Details -->
+                <div class="md:w-[50%] ">
+                    <p class="text-sm text-[#A59B8F]">Seating / Vase</p>
+                    <h1 class="text-4xl font-bold text-[#61513F] pt-[16px]">Kayyon Vase</h1>
+                    <p class="text-sm text-[#A59B8F] pt-[27px]">Seating height: 46cm - 18"</p>
+                    <p class="text-[#A59B8F] pt-[4px]">Made from copper with w brown finish</p>
+                    <p class="text-[#A59B8F] mt-[27px]">
+                        Elevate your space with the sleek and sophisticated Kayyon Minimalist Chair. Designed with clean
+                        lines and a modern aesthetic, this chair is the perfect blend of form and function. Whether
+                        you're furnishing a contemporary office or a cozy reading nook, the Kayyon Minimalist Chair adds
+                        a touch of elegance to any room.
+                    </p>
+
+                    <!-- Product Specifications -->
+                    <div class="space-y-2 mt-[27px]">
+                        <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                            onclick="toggleDropdown('materialDropdown')">
+                            <span class="text-[#877C6F] font-semibold">Material : <span
+                                    class="text-[#877C6F]">Cooper</span></span>
+                            <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <!-- Konten Dropdown Material -->
+                        <div id="materialDropdown" class="hidden mt-2">
+                            <p class="text-[#A59B8F]">Material ini adalah campuran khusus dari tembaga yang dirancang
+                                untuk ketahanan dan estetika. Sangat cocok untuk furnitur modern dengan sentuhan klasik.
+                            </p>
+                        </div>
+
+                        <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                            onclick="toggleDropdown('colorDropdown')">
+                            <span class="text-[#877C6F] font-semibold">Colour : <span
+                                    class="text-[#877C6F]">Beige</span></span>
+                            <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <!-- Konten Dropdown Colour -->
+                        <div id="colorDropdown" class="hidden mt-2">
+                            <p class="text-[#A59B8F]">Warna beige yang netral ini memberikan nuansa hangat dan mudah
+                                dipadukan dengan berbagai gaya dekorasi.</p>
+                        </div>
+
+                        <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                            onclick="toggleDropdown('finishingDropdown')">
+                            <span class="text-[#877C6F] font-semibold">Finishing : <span
+                                    class="text-[#877C6F]">Varnished</span></span>
+                            <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <!-- Konten Dropdown Finishing -->
+                        <div id="finishingDropdown" class="hidden mt-2">
+                            <p class="text-[#A59B8F]">Finishing varnished memberikan tampilan yang mengilap dan
+                                melindungi permukaan dari goresan serta kelembapan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Button -->
+                    <button
+                        class="w-full py-3 mt-[23px] bg-[#61513F] text-white font-medium rounded-full hover:bg-[#4e4033] transition">
+                        Contact Us (Whatsapp)
+                    </button>
+
+                    <!-- Store Information -->
+                    <div class="border border-black rounded-[24px] mt-[16px]">
+                        <div class="py-[32px] px-[32px]">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h2 class="text-[24px] leading-[26.11px] font-semibold text-[#61513F]">3 Oak
+                                        Handcrafted</h2>
+                                </div>
+                                <div class="flex flex-col space-y-2 text-sm text-[#877C6F]">
+                                    <p>Indoor and Outdoor Furniture</p>
+                                    <p>Preferred Retailer</p>
+                                </div>
+                            </div>
+
+                            <!-- Social Media Icons -->
+                            <div class="flex items-center justify-between pt-[32px] ">
+                                <div>
+                                    <p class="text-sm text-[#877C6F]">14 E main Street<br>Brevard, NC 28712<br>United
+                                        States</p>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <a href="#" class=" rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700">
+                                        <img src="/img/telepon.svg" alt="">
+                                    </a>
+                                    <a href="#" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700">
+                                        <img src="/img/globe.svg" alt="">
+                                    </a>
+                                    <a href="#" class=" rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700">
+                                        <img src="/img/kanan.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="px-[20px] pt-[100px]">
+            <div class="relative w-full max-w-full mx-auto">
+                <!-- Slideshow Container -->
+                <div class="overflow-hidden">
+                    <div id="slides" class="flex transition-transform duration-500">
+                        <!-- Slide 1 -->
+                        <div class="min-w-full h-auto">
+                            <img src="/img/detail.png" alt="Image 1" class="w-full h-auto">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="min-w-full h-auto">
+                            <img src="/img/detail.png" alt="Image 2" class="w-full h-auto">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="min-w-full h-auto">
+                            <img src="/img/detail.png" alt="Image 3" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+            </div>
+            <div class=" bottom-4 pt-[20px] flex space-x-4">
+                <button title="prev" onclick="prevSlide()"
+                    class="flex justify-center items-center w-[88px] h-[32px] px-[32px] py-[16px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                    </svg>
+                </button>
+                <button title="next" onclick="nextSlide()"
+                    class="flex justify-between items-center w-[88px] h-[32px] px-[32px] py-[16px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="px-[138px] pt-[100px] pb-[150px]">
+            <div class="space-y-2 mt-[27px]">
+                <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                    onclick="togglebawah('ProductDropdown')">
+                    <span class="text-[#877C6F] font-semibold">Product Dimensions</span>
+                    <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div id="ProductDropdown" class="hidden mt-2">
+                    <p class="text-[#A59B8F]">Material ini adalah campuran khusus dari tembaga yang dirancang
+                        untuk ketahanan dan estetika. Sangat cocok untuk furnitur modern dengan sentuhan klasik.
+                    </p>
+                </div>
+
+                <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                    onclick="togglebawah('SpecificationsDropdown')">
+                    <span class="text-[#877C6F] font-semibold">Product Specifications</span>
+                    <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div id="SpecificationsDropdown" class="hidden mt-2">
+                    <p class="text-[#A59B8F]">Warna beige yang netral ini memberikan nuansa hangat dan mudah
+                        dipadukan dengan berbagai gaya dekorasi.</p>
+                </div>
+
+                <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                    onclick="togglebawah('CareDropdown')">
+                    <span class="text-[#877C6F] font-semibold">Care & Maintenance</span>
+                    <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <!-- Konten Dropdown Finishing -->
+                <div id="CareDropdown" class="hidden mt-2">
+                    <p class="text-[#A59B8F]">Finishing varnished memberikan tampilan yang mengilap dan
+                        melindungi permukaan dari goresan serta kelembapan.</p>
+                </div>
+                <div class="border-t py-2 flex justify-between items-center cursor-pointer"
+                    onclick="togglebawah('DownloadsDropdown')">
+                    <span class="text-[#877C6F] font-semibold">Downloads</span>
+                    <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.23 8.25a.75.75 0 01-.02-1.06z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <!-- Konten Dropdown Finishing -->
+                <div id="DownloadsDropdown" class="hidden mt-2">
+                    <p class="text-[#A59B8F]">Finishing varnished memberikan tampilan yang mengilap dan
+                        melindungi permukaan dari goresan serta kelembapan.</p>
+                </div>
+                <div class="border-t py-2 flex justify-between items-center cursor-pointer"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#5F4A3E] text-white pt-16 pb-6 px-4 md:px-16 lg:px-32">
+        <div class="container mx-auto">
+            <!-- Left Section -->
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Kayyon&copy;</h2>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+                <div class="mb-6 md:mb-0">
+                    <address class="text-sm md:text-base leading-5">
+                        1234 Serenity St, Furniture<br>City, ST 56789<br>
+                        <a href="tel:+18001234567" class="block mt-2">+1 (800) 123-4567</a>
+                        <a href="mailto:support@kayyon.com" class="block mt-2">support@kayyon.com</a>
+                        <p class="mt-2">Mon-Fri 9:00 AM - 6:00 PM</p>
+                    </address>
+                </div>
+                <div class="">
+                    <h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
+                    <form action="#" method="POST" class="relative">
+                        <input type="email" placeholder="Your Email"
+                            class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white">
+                        <button type="submit" class="absolute inset-y-0 right-0 flex items-center px-4 text-white">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white mt-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center mt-6">
+            <div class="text-center text-sm">
+                &copy; 2024 Kayyon. All Rights Reserved.
+            </div>
+            <!-- Social Links -->
+            <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/twiter.svg"
+                        alt="Twitter"></a>
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/etsy.svg" alt="Etsy"></a>
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/ig.svg" alt="Instagram"></a>
+                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/facebook.svg"
+                        alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Script untuk mengubah gambar utama berdasarkan pagination -->
+<script>
+    // Ambil elemen gambar utama
+    const mainImage = document.getElementById('mainImage');
+
+    // Ambil semua tombol pagination
+    const pageButtons = document.querySelectorAll('.page-btn');
+
+    // Tambahkan event listener untuk setiap tombol pagination
+    pageButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Ambil URL gambar dari atribut data-page tombol yang diklik
+            const newImageSrc = this.getAttribute('data-page');
+
+            // Ganti src gambar utama dengan URL baru
+            mainImage.src = newImageSrc;
+        });
+    });
+</script>
+    <script>
+        const slider = document.querySelector('.w-3/4 .flex');
+        // Automatic scrolling (Optional, can be removed if not needed)
+        setInterval(() => {
+            slider.scrollBy({ left: 300, behavior: 'smooth' });
+        }, 3000);
+    </script>
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            dropdown.classList.toggle("hidden");
+        }
+    </script>
+    <script>
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            const slides = document.getElementById("slides");
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            const totalSlides = document.querySelectorAll("#slides > div").length;
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosition();
+        }
+
+        function prevSlide() {
+            const totalSlides = document.querySelectorAll("#slides > div").length;
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        }
+    </script>
+    <script>
+        function togglebawah(id) {
+            const dropdown = document.getElementById(id);
+            dropdown.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

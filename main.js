@@ -1,5 +1,6 @@
 import './style.css'
 
+
 document.querySelector('#site-header').innerHTML = `
   <div class="navigation-wrapper">
     <div>Header Area</div>
