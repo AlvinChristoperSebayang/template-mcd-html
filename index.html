@@ -722,25 +722,48 @@
     });
 
     // slide
-        const swiper = new Swiper(".mySwiper", {
+        // const swiper = new Swiper(".mySwiper", {
       
-          spaceBetween: 20,
-          loop: true,
-          speed: 600, 
-          pagination: {
-            el: ".swiper-pagination",
-            type: "bullets",
-            clickable: true,
+        //   spaceBetween: 20,
+        //   loop: true,
+        //   speed: 400, 
+        //   pagination: {
+        //     el: ".swiper-pagination",
+        //     type: "bullets",
+        //     clickable: true,
+        //   },
+        //   breakpoints:{
+        //       640:{
+        //         slidesPerView: 3,
+        //       },
+        //       1024:{
+        //         slidesPerView: 4,
+        //       }
+        //   }
+        // });
+
+        const swiper = new Swiper(".mySwiper", {
+        spaceBetween: 20,
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 3000, 
+          disableOnInteraction: false, 
+        },
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   type: "bullets",
+        //   clickable: true,
+        // },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
           },
-          breakpoints:{
-              640:{
-                slidesPerView: 3,
-              },
-              1024:{
-                slidesPerView: 4,
-              }
+          1024: {
+            slidesPerView: 4,
           }
-        });
+        }
+      });
 
     // btnView
         function showAllCategories() {
