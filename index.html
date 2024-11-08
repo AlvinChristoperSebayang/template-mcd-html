@@ -17,6 +17,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <link href="./lightbox.css" rel="stylesheet" />
     <title>Vite App</title>
   </head>
   <body>
@@ -101,6 +102,14 @@
     </header>
     <main id="site-main">
       <section id="home" class="hero">
+        <!-- <audio
+          id="audio"
+          autoplay
+          src="./src/audio/Instrumental Music for Inspirational & Wedding Videos - Royalty Free Background Music.mp3"
+          loop
+          controls
+        ></audio> -->
+
         <div
           data-aos="fade-left"
           class="container flex sm:flex-col md:flex-row sm:items-center md:justify-between"
@@ -469,11 +478,13 @@
               data-aos-delay="200"
               class="col-span-2 overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery1.png"
-                alt="gallery1"
-              />
+              <a href="./src/img/gallery1.png" data-lightbox="gallery1">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery1.png"
+                  alt="gallery1"
+                />
+              </a>
             </figure>
             <figure
               data-aos="fade-zoom-in"
@@ -481,11 +492,13 @@
               data-aos-delay="400"
               class="sm:row-start-4 sm:col-start-1 md:row-start-1 md:col-start-3 overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery2.png"
-                alt="gallery2"
-              />
+              <a href="./src/img/gallery2.png" data-lightbox="gallery2">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery2.png"
+                  alt="gallery2"
+                />
+              </a>
             </figure>
             <figure
               data-aos="fade-zoom-in"
@@ -493,11 +506,13 @@
               data-aos-delay="600"
               class="sm:row-start-4 sm:col-start-2 md:row-start-1 md:col-start-4 overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery3.png"
-                alt="galery3"
-              />
+              <a href="./src/img/gallery3.png" data-lightbox="gallery3">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery3.png"
+                  alt="galery3"
+                />
+              </a>
             </figure>
             <figure
               data-aos="fade-zoom-in"
@@ -505,11 +520,13 @@
               data-aos-delay="800"
               class="col-span-2 overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery4.png"
-                alt="gallery4"
-              />
+              <a href="./src/img/gallery4.png" data-lightbox="gallery4">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery4.png"
+                  alt="gallery4"
+                />
+              </a>
             </figure>
             <figure
               data-aos="fade-zoom-in"
@@ -517,11 +534,13 @@
               data-aos-delay="1000"
               class="col-span-2 overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery5.png"
-                alt="gallery5"
-              />
+              <a href="./src/img/gallery5.png" data-lightbox="gallery5">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery5.png"
+                  alt="gallery5"
+                />
+              </a>
             </figure>
             <figure
               data-aos="fade-zoom-in"
@@ -529,11 +548,13 @@
               data-aos-delay="1200"
               class="col-span-2 overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery6.png"
-                alt="gallery6"
-              />
+              <a href="./src/img/gallery6.png" data-lightbox="gallery6">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery6.png"
+                  alt="gallery6"
+                />
+              </a>
             </figure>
             <figure
               data-aos="fade-zoom-in"
@@ -541,11 +562,13 @@
               data-aos-delay="1400"
               class="col-span-2 relative overflow-hidden"
             >
-              <img
-                class="hover:scale-105 duration-200"
-                src="./src/img/gallery7.png"
-                alt="gallery7"
-              />
+              <a href="./src/img/gallery7.png" data-lightbox="gallery7">
+                <img
+                  class="hover:scale-105 duration-200"
+                  src="./src/img/gallery7.png"
+                  alt="gallery7"
+                />
+              </a>
             </figure>
           </div>
         </div>
@@ -681,5 +704,6 @@
         once: true,
       });
     </script>
+    <script src="./lightbox.js"></script>
   </body>
 </html>

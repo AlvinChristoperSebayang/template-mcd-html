@@ -159,7 +159,7 @@ html {
 }
 
 .digital-gift form {
-  @apply flex sm:flex-col md:flex-row sm:items-center mt-[8px];
+  @apply flex md:flex-row sm:items-center mt-[8px];
 }
 
 .offline-gift {
