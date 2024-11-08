@@ -1,17 +1,732 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header id="site-header"></header>
-    <main id="site-main">
 
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <header id="site-header" class="w-full bg-primary">
+    <!-- navigation area -->
+    <nav class="container mx-auto">
+      <div class="flex items-center justify-between py-[29px]">
+        <div>
+          <p class="text-white font-lato text-[20px] leading-[24px] font-bold">Furnituran</p>
+        </div>
+        <ul
+          class="md:flex text-white lg:text-[16px] md:text-[14px] leading-[19.2px] font-lato xl:gap-[32px] lg:gap-[16px] md:gap-[16px] hover:cursor-pointer hidden">
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <figure class="md:flex hidden lg:gap-[16px] md:gap-[14px] gap-[12px]">
+          <div class="rounded-[24px] border border-white p-[10px]">
+            <img src="/svg/Search.svg" alt="seaarch">
+          </div>
+          <div class="rounded-full border border-white p-[10px]">
+            <img src="/svg/Cart.svg" alt="Cart">
+          </div>
+          <div class="rounded-full border border-white p-[10px]">
+            <img src="/svg/User.svg" alt="User">
+          </div>
+        </figure>
+        <!-- mobile -->
+        <div class="md:hidden block z-10">
+          <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" class="size-6">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+          </svg>
+          <div id="mobile-menu" class="bg-primary absolute w-full top-0 right-0 h-auto px-[16px] pt-[29px] pb-[20px] hidden">
+            <div class="flex justify-between border-b border-white pb-[12px]">
+              <p class="text-white font-lato text-[20px] leading-[24px] font-bold">Furnituran</p>
+              <svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" class="size-6">
+              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <ul
+              class="md:hidden text-white font-bold lg:text-[16px] md:text-[14px] leading-[19.2px] font-lato xl:gap-[32px] lg:gap-[16px] md:gap-[16px] hover:cursor-pointer flex flex-col gap-[12px] mt-[24px] mb-[40px]">
+              <li><a href="#">Collection</a></li>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <figure class="flex justify-between items-center lg:gap-[16px] md:gap-[14px] gap-[12px border border-white py-[10px] px-[20px] rounded-xl">
+              <div class="rounded-[24px] border border-white p-[10px]">
+                <img src="/svg/Search.svg" alt="seaarch">
+              </div>
+              <div class="rounded-full border border-white p-[10px]">
+                <img src="/svg/Cart.svg" alt="Cart">
+              </div>
+              <div class="rounded-full border border-white p-[10px]">
+                <img src="/svg/User.svg" alt="User">
+              </div>
+            </figure>
+          </div>              
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="site-main">
+    <!-- hero section -->
+    <section>
+      <div class="w-full bg-primary">
+        <div class="container mx-auto mt-[-1px] pb-[41px] xl:pt-[62px] lg:pt-[54px] md:pt-[24px]">
+          <h1
+          data-aos="fade-down"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+            class="xl:text-[80px] xl:leading-[96px] lg:text-[60px] lg:leading-[80px] text-[50px] leading-[60px] text-white font-extrabold font-lato mb-[24px]">
+            Good quality furniture, for your 
+            <span data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+             class="text-secondary">dream home</span></h1>
+          <div class="flex items-center justify-between">
+            <p
+              id="typed-output"
+              class="md:text-[16px] md:leading-[24px] text-[14px] leading-[24px] font-lato text-white xl:max-w-[615px] lg:w-[590px] md:w-[470px] w-[290px] h-[50px]"></p>
+            <div class="xl:p-[26px] lg:p-[15px] p-[10px] rounded-full border border-white md:mt-[-50px]">
+              <img src="/svg/arrow-up.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img class="object-cover object-center w-full" src="/image/heroBg.png" alt="background image hero">
+      </div>
+    </section>
+    <!-- partner & services section -->
+    <section>
+      <div class="container mx-auto">
+        <!-- partner -->
+        <!-- <figure
+          class="flex overflow-scroll items-center justify-center xl:gap-[47px] lg:gap-[20px] md:gap-[15px] lg:mt-[80px] md:mt-[40px] xl:mb-[120px] lg:mb-[100px] md:mb-[80px] mb-[50px]">
+          <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/kronheims.svg" alt="kronheims">
+          <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/ikea.svg" alt="ikea">
+          <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/haworth.svg" alt="hworth">
+          <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/garda.svg" alt="garda">
+          <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/bassett.svg" alt="bassett">
+        </figure> -->
+        <marquee behavior="scroll" direction="left" scrollamount="12" class="mt-[20px]">
+          <figure
+          class="flex items-center justify-center xl:gap-[47px] lg:gap-[20px] md:gap-[15px] lg:mt-[80px] md:mt-[40px] xl:mb-[120px] lg:mb-[100px] md:mb-[80px] mb-[50px]">
+            <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/kronheims.svg" alt="kronheims">
+            <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/ikea.svg" alt="ikea">
+            <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/haworth.svg" alt="hworth">
+            <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/garda.svg" alt="garda">
+            <img class="xl:w-[189px] lg:w-[170px] md:w-[130px] w-[200px]" src="/svg/bassett.svg" alt="bassett">
+          </figure>
+        </marquee>
+        <!-- card services -->
+        <div class="grid grid-cols-2 lg:grid-cols-4">
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          data-aos-anchor-placement="center-bottom"
+            class="card text-primary p-[24px] hover:cursor-pointer hover:shadow-md hover:text-white hover:bg-primary transition ease-out font-lato">
+            <p class="text-[24px] leading-[28.8px] font-semibold transition ease-out">Home Office</p>
+            <svg class="transition ease-out mt-[59px] mb-[24px]" width="60" height="60" viewBox="0 0 60 60" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_66_467)">
+                <path class="svg-path"
+                  d="M24.964 16.072C28.0377 16.072 30.5294 13.5935 30.5294 10.536C30.5294 7.47855 28.0377 5 24.964 5C21.8904 5 19.3987 7.47855 19.3987 10.536C19.3987 13.5935 21.8904 16.072 24.964 16.072Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M16.726 38.5127C16.9829 38.5951 17.2549 38.6425 17.5362 38.655C18.0123 38.7105 18.4895 38.7232 18.9478 38.7174C19.3624 38.7122 19.7345 38.6996 20.0653 38.6619H27.3449L31.0258 52.7C31.3885 54.0834 32.6423 55 34.0155 55C34.2737 55 34.5363 54.9676 34.7979 54.8997C36.4502 54.471 37.4403 52.7911 37.0093 51.1475L32.7255 34.8102C32.3704 33.4558 31.1408 32.5108 29.7337 32.5108H21.8737C21.8833 30.9185 22.0652 29.2901 22.3126 27.7267L17.744 22.6952C17.288 22.1929 17.0556 21.5439 17.0904 20.8678C17.1249 20.1918 17.422 19.5696 17.9269 19.1159C18.3962 18.6945 19.0023 18.4624 19.6342 18.4624C20.354 18.4624 21.0431 18.7669 21.5253 19.2979L27.8479 26.2613H35.1935L37.1425 25.7865C38.204 25.5279 38.8537 24.4624 38.5938 23.4065C38.3339 22.3506 37.2631 21.7048 36.2011 21.9628L28.2694 23.895L22.4448 17.3699C22.3485 17.2622 22.2426 17.1684 22.1302 17.0867C21.8041 16.8086 21.4271 16.6036 21.001 16.4979C18.8893 15.9741 15.8284 17.115 14.5829 20.7177C12.8998 25.6814 12.5379 28.9121 13.1776 34.378C13.7057 37.0817 15.1449 38.129 16.726 38.5127Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M33.6006 33.983H46.875V52.2723H38.1765V54.4047H55.862V52.2723H50.7089V33.983H55.862V31.8506H33.6006V33.983Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M9.38946 41.1529C9.87317 42.2084 12.4346 43.0539 15.7366 43.2704V43.7059H16.7879V48.886L9.55295 51.1003V52.0066C9.08937 52.2341 8.76965 52.7075 8.76965 53.2565C8.76965 54.0265 9.39717 54.6507 10.1713 54.6507C10.9454 54.6507 11.5729 54.0265 11.5729 53.2565C11.5729 52.7087 11.2546 52.2361 10.7927 52.0081L16.7879 50.1732V52.0066C16.3243 52.2341 16.0046 52.7075 16.0046 53.2565C16.0046 54.0265 16.6321 54.6507 17.4062 54.6507C18.1804 54.6507 18.8079 54.0265 18.8079 53.2565C18.8079 52.7076 18.4882 52.2341 18.0247 52.0067V50.1732L24.0198 52.0081C23.5579 52.2361 23.2396 52.7087 23.2396 53.2565C23.2396 54.0265 23.8671 54.6507 24.6412 54.6507C25.4153 54.6507 26.0429 54.0265 26.0429 53.2565C26.0429 52.7076 25.7232 52.2341 25.2596 52.0067V51.1003L18.0247 48.886V43.7059H19.0759V43.2704C22.7486 43.0296 25.5069 42.0108 25.5069 40.7902C25.5069 39.6074 13.9384 39.4242 10.3528 40.2404L7.57977 32.8944C8.76218 34.7295 9.98067 35.7701 10.8012 35.4636C12.1185 34.9715 6.42327 19.8842 5.10598 20.3762C4.03229 20.7772 3.97159 23.3603 4.83734 26.5579C4.73958 26.5449 4.63782 26.5521 4.53906 26.589C4.21936 26.7085 4.05752 27.0631 4.17758 27.3811L9.33665 41.048C9.35079 41.0855 9.36917 41.12 9.38946 41.1529Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M38.9949 30.7639H47.7017C47.972 30.7639 48.2208 30.6177 48.3515 30.3823L54.5147 19.2693L53.2152 18.5562L47.2636 29.2876H39.8921C39.7744 29.8795 39.4492 30.3975 38.9949 30.7639Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M21.1032 19.6772C20.371 18.8707 19.1195 18.8073 18.3084 19.5358C17.4975 20.2644 17.4338 21.5092 18.1664 22.3159L25.2477 30.1149C25.6228 30.528 26.1564 30.7639 26.7161 30.7639H36.2412H37.3934C38.4862 30.7639 39.3722 29.8827 39.3722 28.7955C39.3722 27.7084 38.4862 26.8272 37.3934 26.8272H27.5954L21.1032 19.6772Z"
+                  fill="#152D32" />
+              </g>
+              <defs>
+                <clipPath id="clip0_66_467">
+                  <rect width="60" height="60" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="text-paragraf hover:text-white">We provide a variety of furniture for your workspace</p>
+          </div>  
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="300"
+            class="card text-primary p-[24px] hover:cursor-pointer hover:shadow-md hover:text-white hover:bg-primary transition ease-out font-lato">
+            <p class="text-[24px] leading-[28.8px] font-semibold transition ease-out">Bedroom</p>
+            <svg class="transition ease-out mt-[59px] mb-[24px]" width="60" height="60" viewBox="0 0 60 60" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_66_479)">
+                <path class="svg-path"
+                  d="M43.9998 7.99982H16.0002C13.8006 7.99982 12 9.80102 12 12V28.0002H16.0002V22.0002C16.0002 20.9004 16.9008 19.9998 18 19.9998H25.9998C27.0996 19.9998 27.9996 20.9004 27.9996 22.0002V28.0002H31.9998V22.0002C31.9998 20.9004 32.9004 19.9998 34.0002 19.9998H42C43.0998 19.9998 43.9998 20.9004 43.9998 22.0002V28.0002H48V12C48 9.80102 46.1994 7.99982 43.9998 7.99982Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M54 44.0004H6V48H10.0002V52.0002H13.9998V48H46.0002V52.0002H49.9998V48H54V44.0004Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M52.0002 40.0002V36C52.0002 33.801 50.199 32.0004 48 32.0004H12C9.79976 32.0004 7.99976 33.801 7.99976 36V40.0002H52.0002Z"
+                  fill="#152D32" />
+              </g>
+              <defs>
+                <clipPath id="clip0_66_479">
+                  <rect width="60" height="60" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <p class="text-paragraf">We provide a variety of furniture for your workspace</p>
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="400"
+            class="card text-primary p-[24px] hover:cursor-pointer hover:shadow-md hover:text-white hover:bg-primary transition ease-out font-lato">
+            <p class="text-[24px] leading-[28.8px] font-semibold transition ease-out">Kitchen</p>
+            <svg class="transition ease-out mt-[59px] mb-[24px]" width="60" height="60" viewBox="0 0 60 60" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_66_487)">
+                <path class="svg-path"
+                  d="M30 12C20.058 12 12 20.058 12 30C12 39.942 20.058 48 30 48C39.942 48 48 39.942 48 30C48 20.058 39.942 12 30 12ZM30 44C22.268 44 16 37.734 16 30C16 22.266 22.268 16 30 16C37.732 16 44 22.266 44 30C44 37.734 37.732 44 30 44Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M30 42C36.6274 42 42 36.6274 42 30C42 23.3726 36.6274 18 30 18C23.3726 18 18 23.3726 18 30C18 36.6274 23.3726 42 30 42Z"
+                  fill="#152D32" />
+                <path class="svg-path" d="M8 12V22H6V12H4V22H2V12H0V26H4V48H6V26H10V12H8Z" fill="#152D32" />
+                <path class="svg-path"
+                  d="M60 20C60 15.582 57.762 12 55 12C52.238 12 50 15.582 50 20C50 23.872 51.718 27.098 54 27.84V48H56V27.84C58.284 27.098 60 23.872 60 20Z"
+                  fill="#152D32" />
+              </g>
+              <defs>
+                <clipPath id="clip0_66_487">
+                  <rect width="60" height="36" fill="white" transform="translate(0 12)" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <p class="text-paragraf">We provide a variety of furniture for your workspace</p>
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-delay="500"
+            class="card text-primary p-[24px] hover:cursor-pointer hover:shadow-md hover:text-white hover:bg-primary transition ease-out font-lato">
+            <p class="text-[24px] leading-[28.8px] font-semibold transition ease-out">Bathroom</p>
+            <svg class="transition ease-out mt-[59px] mb-[24px]" width="60" height="60" viewBox="0 0 60 60" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_66_498)">
+                <path class="svg-path"
+                  d="M17.3775 7.33628C17.665 7.04878 17.9738 6.79378 18.2913 6.55128C17.2438 5.55378 15.8788 4.99878 14.4238 4.99878C11.2863 4.99878 8.74878 7.53628 8.74878 10.6738V22.4988H11.2488V10.675C11.2488 8.92503 12.6738 7.50003 14.4238 7.50003C15.2088 7.50003 15.9538 7.79503 16.5388 8.32378C16.7925 7.98003 17.0663 7.64628 17.3763 7.33628H17.3775Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M21.0374 19.0687C20.8186 19.0687 20.5986 19.0112 20.4011 18.895C19.8911 18.5925 19.4899 18.29 19.1424 17.9412C16.7086 15.5062 16.7086 11.54 19.1449 9.10374C21.5811 6.66749 25.5461 6.66749 27.9824 9.10374C28.3299 9.45124 28.6336 9.85249 28.9349 10.3612C29.2236 10.8537 29.1449 11.4787 28.7424 11.8812L21.9211 18.7025C21.6811 18.9425 21.3611 19.0687 21.0374 19.0687Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M51.25 54.6625C50.05 55.35 48.525 54.95 47.8375 53.75L47.75 53.65C49.2875 52.975 50.7 52.0625 51.95 50.975L52.1625 51.25C52.85 52.45 52.45 53.975 51.25 54.6625Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M12.2499 53.65L12.1624 53.75C11.4749 54.95 9.94988 55.35 8.74988 54.6625C7.54988 53.975 7.14988 52.45 7.83738 51.25L8.04988 50.975C9.29988 52.0625 10.7124 52.975 12.2499 53.65Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M54.375 33.75H5.625C5.4125 33.75 5.2 33.7375 5 33.7125V38.75C5 46.3375 11.1625 52.5 18.75 52.5H41.25C48.8375 52.5 55 46.3375 55 38.75V33.7125C54.8 33.7375 54.5875 33.75 54.375 33.75Z"
+                  fill="#152D32" />
+                <path class="svg-path"
+                  d="M54.375 25H5.625C3.89911 25 2.5 26.3991 2.5 28.125C2.5 29.8509 3.89911 31.25 5.625 31.25H54.375C56.1009 31.25 57.5 29.8509 57.5 28.125C57.5 26.3991 56.1009 25 54.375 25Z"
+                  fill="#152D32" />
+              </g>
+              <defs>
+                <clipPath id="clip0_66_498">
+                  <rect width="60" height="60" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="text-paragraf">We provide a variety of furniture for your workspace</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- best product section -->
+    <section class="lg:mt-[120px] md:mt-[80px] mt-[50px]">
+      <div class="container mx-auto">
+        <!-- title -->
+        <div>
+          <h2 class="md:text-[48px] md:leading-[65px] text-[24px] leading-[34px] font-semibold font-lato max-w-[654px]">
+            The most popular furniture that our customers love
+          </h2>
+          <div class="lg:flex-row sm:flex-col lg:items-center justify-between">
+            <p class="text-paragraf text-[14px] leading-[24px] font-lato lg:max-w-[554px] flex flex-col mt-[16px]">Lörem
+              ipsum multivist dekadosk. Yoloa rel. Kikil sonade binat och ontofaktisk plack krotyng. Tidågt ån i lavis
+              ifall kron iskapet i pressa koka böcker</p>
+            <div class="flex lg:items-end items-start flex-col relative mt-[24px] lg:mt-0">
+              <div class="p-[13.93px] border border-black rounded-full lg:absolute bottom-[50px]">
+                <img src="/svg/arrow.svg" alt="arrow">
+              </div>
+              <p class="lg:text-[24px] md:text-[18px] leading-[28.8px] font-lato flex flex-col text-end">Our Best
+                Furniture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card product slider-->
+      <div class="w-full lg:pl-[120px] md:pl-[40px] pl-[24px]">
+        <div class="flex overflow-x-scroll gap-[24px] mt-[40px] scrollbar-hide">
+          <figure class="group hover:cursor-pointer lg:min-w-[364px] md:min-w-[264px] min-w-[163px]">
+            <div class="relative">
+              <img class="lg:h-[384px] md:h-[284px] h-[184px] w-full object-cover" src="/image/best1.jpeg"
+                alt="product1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40">
+                <div class="bg-white bg-opacity-50 p-4 rounded-full">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+              </div>
+            </div>
+            <figcaption class="mt-[24px] mb-[12px]">
+              <p class="md:text-[24px] md:leading-[24px] text-[14px] leading-[18px] font-bold font-lato">Modern Table
+                Style</p>
+              <p class="md:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">934 stock avilable</p>
+            </figcaption>
+          </figure>
+          <figure class="group hover:cursor-pointer lg:min-w-[364px] md:min-w-[264px] min-w-[163px]">
+            <div class="relative">
+              <img class="lg:h-[384px] md:h-[284px] h-[184px] w-full object-cover" src="/image/best2.png"
+                alt="product1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40">
+                <div class="bg-white bg-opacity-50 p-4 rounded-full">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+              </div>
+            </div>
+            <figcaption class="mt-[24px] mb-[12px]">
+              <p class="md:text-[24px] md:leading-[24px] text-[14px] leading-[18px] font-bold font-lato">Modern Table
+                Office Style</p>
+              <p class="md:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">567 stock avilable</p>
+            </figcaption>
+          </figure>
+          <figure class="group hover:cursor-pointer lg:min-w-[364px] md:min-w-[264px] min-w-[163px]">
+            <div class="relative">
+              <img class="lg:h-[384px] md:h-[284px] h-[184px] w-full object-cover" src="/image/best3.png"
+                alt="product1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40">
+                <div class="bg-white bg-opacity-50 p-4 rounded-full">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+              </div>
+            </div>
+            <figcaption class="mt-[24px] mb-[12px]">
+              <p class="md:text-[24px] md:leading-[24px] text-[14px] leading-[18px] font-bold font-lato">Modern Table
+                Office</p>
+              <p class="md:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">777 stock avilable</p>
+            </figcaption>
+          </figure>
+          <figure class="group hover:cursor-pointer lg:min-w-[364px] md:min-w-[264px] min-w-[163px]">
+            <div class="relative">
+              <img class="lg:h-[384px] md:h-[284px] h-[184px] w-full object-cover" src="/image/best4.jpeg"
+                alt="product1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40">
+                <div class="bg-white bg-opacity-50 p-4 rounded-full">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+              </div>
+            </div>
+            <figcaption class="mt-[24px] mb-[12px]">
+              <p class="md:text-[24px] md:leading-[24px] text-[14px] leading-[18px] font-bold font-lato">Modern Table
+                Style</p>
+              <p class="md:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">934 stock avilable</p>
+            </figcaption>
+          </figure>
+          <figure class="group hover:cursor-pointer lg:min-w-[364px] md:min-w-[264px] min-w-[163px]">
+            <div class="relative">
+              <img class="lg:h-[384px] md:h-[284px] h-[184px] w-full object-cover" src="/image/best5.jpeg"
+                alt="product1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40">
+                <div class="bg-white bg-opacity-50 p-4 rounded-full">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+              </div>
+            </div>
+            <figcaption class="mt-[24px] mb-[12px]">
+              <p class="md:text-[24px] md:leading-[24px] text-[14px] leading-[18px] font-bold font-lato">Modern Table
+                Style</p>
+              <p class="md:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">934 stock avilable</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- about us section -->
+    <section class="lg:mt-[201px] md:mt-[121px] mt-[81px]">
+      <div class="container mx-auto md:flex items-center sm:justify-center md:justify-between">
+        <!-- title -->
+        <div class="xl:w-[655px] lg:w-[555px] md:w-[455px]">
+          <p class="md:text-[24px] md:leading-[28.8px] text-[14px] leading-[24px] font-lato text-balckText">About Us</p>
+          <h2
+            class="xl:text-[48px] lg:text-[42px] md:text-[32px] text-[24px] leading-[34px] md:leading-[45px] xl:leading-[65px] lg:leading-[45px] font-lato font-semibold text-balckText mt-[24px] mb-[40px]">
+            We are a furniture manufacturing company that always pays attention to the comfort of our clients, starting
+            from how to make materials and paint</h2>
+          <div
+            class="flex lg:text-[64px] lg:leading-[65px] md:text-[42px] text-[24px] leading-[24px] font-semibold text-balckText gap-[32px]">
+            <div>
+              <p class="text-balckText">210<span class="text-secondary">+</span></p>
+              <p class="lg:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">Favorite Top Brands</p>
+            </div>
+            <div>
+              <p class="text-balckText">32<span class="text-secondary">+</span></p>
+              <p class="lg:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">Testimonial</p>
+            </div>
+            <div>
+              <p class="text-balckText">610<span class="text-secondary">+</span></p>
+              <p class="lg:text-[14px] text-[12px] leading-[24px] font-lato text-paragraf">Product Sell</p>
+            </div>
+          </div>
+        </div>
+        <!-- image -->
+        <div class="flex relative lg:h-[574px] lg:w-[461px] md:w-[400px] md:h-[474px] md:mt-0 mt-[90px] h-[360px]">
+          <div
+            class="lg:p-[27.16px] md:p-[17px] p-[15px] bg-secondary rounded-full flex justify-center items-center xl:w-[117px] xl:h-[117px] lg:w-[100px] md:h-[70px] md:w-[70px] lg:h-[100px] w-[80px] h-[80px] md:mt-[91px] mt-[20px] md:ml-0 ml-[20px]">
+            <img class="lg:min-w-[62.68px] md:w-[50px] w-[40px]" src="/svg/arrow.svg" alt="arrow">
+          </div>
+          <div class="absolute right-0">
+            <img class="lg:w-full md:w-[250px] w-[230px]" src="/image/about1.png" alt="image about 1">
+          </div>
+          <div class="absolute bottom-0">
+            <img class="lg:w-full md:w-[250px] w-[230px]" src="/image/about2.png" alt="image about 2">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- new product container -->
+    <section class="lg:mt-[120px] mt-[80px]">
+      <!-- title -->
+      <div class="container mx-auto">
+        <h2 class="md:text-[48px] md:leading-[65px] text-[24px] leading-[34px] font-semibold font-lato max-w-[654px]">
+          some of the new products we put out for you all
+        </h2>
+        <div class="lg:flex-row sm:flex-col lg:items-center justify-between">
+          <p class="text-paragraf text-[14px] leading-[24px] font-lato lg:max-w-[554px] flex flex-col mt-[16px]">Lörem
+            ipsum multivist dekadosk. Yoloa rel. Kikil sonade binat och ontofaktisk plack krotyng. Tidågt ån i lavis
+            ifall kron iskapet i pressa koka böcker</p>
+          <div class="flex lg:items-end items-start flex-col justify-center  relative mt-[24px] lg:mt-0">
+            <div class="p-[13.93px] border border-black rounded-full lg:absolute bottom-[50px]">
+              <img src="/svg/arrow.svg" alt="arrow">
+            </div>
+            <p class="lg:text-[24px] md:text-[18px] leading-[28.8px] font-lato flex flex-col text-end">New Product</p>
+          </div>
+        </div>
+      </div>
+      <!-- Slider main container -->
+      <div class="swiper mt-[40px] overflow-hidden">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper md:h-[338px] h-[200px] mt-[25%] md:mt-0">
+          <!-- Slides -->
+          <div class="swiper-slide md:h-[338px] h-[200px]">
+            <div class="relative group">
+              <img class="w-full md:h-[338px] h-[200px] object-cover" src="/image/newImage1.jpeg" alt="image1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex flex-col top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 lg:p-[24px] md:p-[14px] p-[8px]">
+                <div class="bg-white bg-opacity-50 md:p-4 p-[8px] rounded-full mt-auto">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+                <div class="mt-auto flex justify-between text-white w-full">
+                  <p
+                    class="lg:text-[24px] lg:leading-[24px] md:text-[16px] md:leading-[24px] text-[10px] font-bold font-lato">
+                    Moder Table Style</p>
+                  <p
+                    class="lg:text-[16px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] text-end font-lato">
+                    934 stock avilable</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide md:h-[338px] h-[200px]">
+            <div class="relative group">
+              <img class="w-full md:h-[338px] h-[200px] object-cover" src="/image/newImage2.jpeg" alt="image1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex flex-col top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 lg:p-[24px] md:p-[14px] p-[8px]">
+                <div class="bg-white bg-opacity-50 md:p-4 p-[8px] rounded-full mt-auto">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+                <div class="mt-auto flex justify-between text-white w-full">
+                  <p
+                    class="lg:text-[24px] lg:leading-[24px] md:text-[16px] md:leading-[24px] text-[10px] font-bold font-lato">
+                    Moder Table Style</p>
+                  <p
+                    class="lg:text-[16px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] text-end font-lato">
+                    934 stock avilable</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide md:h-[338px] h-[200px]">
+            <div class="relative group">
+              <img class="w-full md:h-[338px] h-[200px] object-cover" src="/image/newImage3.jpeg" alt="image1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex flex-col top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 lg:p-[24px] md:p-[14px] p-[8px]">
+                <div class="bg-white bg-opacity-50 md:p-4 p-[8px] rounded-full mt-auto">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+                <div class="mt-auto flex justify-between text-white w-full">
+                  <p
+                    class="lg:text-[24px] lg:leading-[24px] md:text-[16px] md:leading-[24px] text-[10px] font-bold font-lato">
+                    Moder Table Style</p>
+                  <p
+                    class="lg:text-[16px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] text-end font-lato">
+                    934 stock avilable</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide md:h-[338px] h-[200px]">
+            <div class="relative group">
+              <img class="w-full md:h-[338px] h-[200px] object-cover" src="/image/newImage4.jpeg" alt="image1">
+              <div
+                class="absolute justify-center items-center hidden group-hover:flex flex-col top-0 left-0 right-0 bottom-0 bg-black bg-opacity-20 lg:p-[24px] md:p-[14px] p-[8px]">
+                <div class="bg-white bg-opacity-50 md:p-4 p-[8px] rounded-full mt-auto">
+                  <img src="/svg/icon-explore.svg" alt="explore icon">
+                </div>
+                <div class="mt-auto flex justify-between text-white w-full">
+                  <p
+                    class="lg:text-[24px] lg:leading-[24px] md:text-[16px] md:leading-[24px] text-[10px] font-bold font-lato">
+                    Moder Table Style</p>
+                  <p
+                    class="lg:text-[16px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] text-end font-lato">
+                    934 stock avilable</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Custom Navigation buttons -->
+        <div class="custom-prev p-2 border border-balckText">
+          <img class="w-[24px] hover:w-[40px]" src="/svg/arrow-slide.svg" alt="prev arrow">
+        </div>
+        <div class="custom-next p-2 rotate-180 border border-balckText">
+          <img class="w-[24px] hover:w-[40px]" src="/svg/arrow-slide.svg" alt="next arrow">
+        </div>
+      </div>
+    </section>
+    <!-- information container -->
+    <section class="lg:mt-[200px]  mb-80px">
+      <div class="container mx-auto">
+        <!-- title -->
+        <div class="lg:flex-row flex-col flex justify-between">
+          <div class="flex flex-col mt-auto">
+            <div class="flex items-start flex-col justify-center mt-[24px] lg:mt-0">
+              <div class="p-[13.93px] border border-black rounded-full">
+                <img src="/svg/arrow.svg" alt="arrow">
+              </div>
+              <p class="lg:text-[24px] md:text-[18px] leading-[28.8px] font-lato flex flex-col text-end">Our Blog</p>
+            </div>
+          </div>
+          <div class="">
+            <h2
+              class="md:text-[48px] md:leading-[65px] text-[24px] leading-[34px] font-semibold font-lato max-w-[654px]">
+              Some information for you guys
+            </h2>
+            <p class="text-paragraf text-[14px] leading-[24px] font-lato lg:max-w-[554px] flex flex-col mt-[16px]">Lörem
+              ipsum multivist dekadosk. Yoloa rel. Kikil sonade binat och ontofaktisk plack krotyng. Tidågt ån i lavis
+              ifall kron iskapet i pressa koka böcker</p>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="flex md:gap-[24px] gap-[14px] mt-[40px]">
+          <figure 
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          class="flex flex-col md:gap-[24px] gap-[14px]">
+            <img class="w-full object-cover" src="/image/imageInformation1.png" alt="image1">
+            <figcaption class="flex flex-col md:gap-[12px] gap-[8px]">
+              <p
+                class="lg:text-[24px] lg:leading-[24px] md:text-[18px] md:leading-[28px] text-[10px] leading-[24px] font-bold font-lato text-balckText">
+                Modern Table Office Style</p>
+              <p
+                class="lg:text-[14px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] leading-[20px] font-lato text-paragraf">
+                Lörem ipsum multivist dekadosk. Yoloa rel. Kikil sonade binat och ontofaktisk plack </p>
+            </figcaption>
+          </figure>
+          <figure 
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          data-aos-delay="100"
+          class="flex flex-col md:gap-[24px] gap-[14px]">
+            <img class="w-full object-cover" src="/image/imageInformation2.png" alt="image2">
+            <figcaption class="flex flex-col md:gap-[12px] gap-[8px]">
+              <p
+                class="lg:text-[24px] lg:leading-[24px] md:text-[18px] md:leading-[28px] text-[10px] leading-[24px] font-bold font-lato text-balckText">
+                Modern Table Office Style</p>
+              <p
+                class="lg:text-[14px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] leading-[20px] font-lato text-paragraf">
+                Lörem ipsum multivist dekadosk. Yoloa rel. Kikil sonade binat och ontofaktisk plack </p>
+            </figcaption>
+          </figure>
+          <figure 
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="900"
+          data-aos-delay="200"
+          class="flex flex-col md:gap-[24px] gap-[14px]">
+            <img class="w-full object-cover" src="/image/imageinformation3.png" alt="image3">
+            <figcaption class="flex flex-col md:gap-[12px] gap-[8px]">
+              <p
+                class="lg:text-[24px] lg:leading-[24px] md:text-[18px] md:leading-[28px] text-[10px] leading-[24px] font-bold font-lato text-balckText">
+                Modern Table Office Style</p>
+              <p
+                class="lg:text-[14px] lg:leading-[24px] md:text-[12px] md:leading-[24px] text-[10px] leading-[20px] font-lato text-paragraf">
+                Lörem ipsum multivist dekadosk. Yoloa rel. Kikil sonade binat och ontofaktisk plack </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial section -->
+    <section class="lg:mt-[120px] mt-[80px] lg:mb-[150px] mb-[100px]">
+      <div class="container mx-auto">
+        <!-- title -->
+        <div class="md:flex block justify-between">
+          <h2
+            class="lg:text-[48px] lg:leading-[65px] text-[28px] leading-[38px] font-semibold font-lato text-balckText lg:w-[654px] md:w-[454px]">
+            Client's Words For Our Furniture Brand</h2>
+          <div class="w-[352px] md:mt-0 mt-[20px]">
+            <p class="text-[24px] lg:leading-[28.8px] font-lato text-balckText">Testimonial</p>
+            <img class="mt-[24px] mb-[16px]" src="/svg/person.svg" alt="icon person">
+            <p class="text-[16px] lg:leading-[24px] text-paragraf font-bold font-lato"><span
+                class="text-balckText underline-offset-2 underline">Reviews</span> from ouur client it very importan for
+              us. we listen ll your feedbacks!</p>
+          </div>
+        </div>
+        <!-- review -->
+        <div class="review wraper md:flex block justify-between lg:gap-[16px] gap-[12px]">
+          <div class="font-lato px-[14px] py-[24px] drop-shadow-md">
+            <p class="text-paragraf text-[14px] leading-[24px]">Lörem ipsum farade kroresade planat. Semipons ner,
+              deciliga men niponade. Lörem ipsum farade kroresade planat. Semipons ner, deciliga men niponade. </p>
+            <div class="flex mt-[24px] gap-[12px]">
+              <img src="/svg/person1.svg" alt="person">
+              <div class="text-[14px] leading-[24px]">
+                <p class="font-bold text-balckText">Brooklyn Simmons</p>
+                <p class="text-paragraf mt-[2px]">Client</p>
+              </div>
+            </div>
+          </div>
+          <div class="font-lato px-[14px] py-[24px] drop-shadow-md">
+            <p class="text-paragraf text-[14px] leading-[24px]">Lörem ipsum farade kroresade planat. Semipons ner,
+              deciliga men niponade. Lörem ipsum farade kroresade planat. Semipons ner, deciliga men niponade. </p>
+            <div class="flex mt-[24px] gap-[12px]">
+              <img src="/svg/person2.svg" alt="person">
+              <div class="text-[14px] leading-[24px]">
+                <p class="font-bold text-balckText">Wade Warren</p>
+                <p class="text-paragraf mt-[2px]">Client</p>
+              </div>
+            </div>
+          </div>
+          <div class="font-lato px-[14px] py-[24px] drop-shadow-md">
+            <p class="text-paragraf text-[14px] leading-[24px]">Lörem ipsum farade kroresade planat. Semipons ner,
+              deciliga men niponade. Lörem ipsum farade kroresade planat. Semipons ner, deciliga men niponade. </p>
+            <div class="flex mt-[24px] gap-[12px]">
+              <img src="/svg/person3.svg" alt="person">
+              <div class="text-[14px] leading-[24px]">
+                <p class="font-bold text-balckText">Esther Howard</p>
+                <p class="text-paragraf mt-[2px]">Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer" class="w-full bg-footer">
+    <div class="container mx-auto pt-[80px] pb-[16px] ">
+      <div class="font-lato lg:flex block items-center justify-between">
+        <div class="flex flex-col gap-[24px] w-[364px]">
+          <p class="text-[24px] leading-[28.8px] font-bold text-white">Furnituran</p>
+          <p 
+          id="typed-output-footer"
+          class="text-[14px] leading-[24px] text-white h-[50px]"></p>
+          <figure class="flex gap-[24px]">
+            <img data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="300" src="/svg/ig.svg" alt="ig">
+            <img data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="400" src="/svg/fb.svg" alt="fb">
+            <img data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="500" src="/svg/yt.svg" alt="yt">
+            <img data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="700" src="/svg/in.svg" alt="in">
+          </figure>
+        </div>
+        <div class="md:flex block justify-between xl:gap-[74px] lg:gap-[30px] lg:mt-0 mt-[50px]">
+          <!-- list -->
+          <div class="flex text-white xl:gap-[72px] lg:gap-[40px] font-lato">
+            <div class="flex flex-col gap-[24px]">
+              <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" class="text-[16px] leading-[24px] font-bold">Navigation</p>
+              <ul class="text-[14px] leading-[24px] flex flex-col gap-[16px]">
+                <li  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="100">Beranda</li>
+                <li  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="200">Company</li>
+                <li  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="300">Stories</li>
+                <li  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="400">Contact Us</li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-[24px]">
+              <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" class="text-[16px] leading-[24px] font-bold">Help Center</p>
+              <ul class="text-[14px] leading-[24px] flex flex-col gap-[16px]">
+                <li data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="100">Acount</li>
+                <li data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="200">Shiping</li>
+                <li data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="300">Return</li>
+              </ul>
+            </div>
+          </div>
+          <!-- contact -->
+          <div class="text-white font-lato lg:w-[259px] md:mt-0 mt-[40px]">
+            <p data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" class="mb-[24px] text-[16px] leading-[24px] font-bold">Contact</p>
+            <div class="flex flex-col gap-[16px]">
+              <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="100" class="flex gap-[8px]">
+                <img src="/svg/mail.svg" alt="mail">
+                <p>hello@furnituran.com</p>
+              </div>
+              <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="200" class="flex gap-[8px]">
+                <img src="/svg/phone.svg" alt="phone">
+                <p>(123) 786803</p>
+              </div>
+              <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="900" data-aos-delay="300" class="flex gap-[8px]">
+                <img src="/svg/location.svg" alt="location">
+                <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- copyright -->
+      <div class="mt-[134px] text-white fot-lato">
+        <p class="text-[14px] leading-[24px] text-left">Copy Rignt 2022, All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

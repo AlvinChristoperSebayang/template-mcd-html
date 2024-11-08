@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,4 +14,73 @@
 
 #site-footer .footer-wrapper{
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
+}
+h2{
+  @apply text-[#091416]
+}
+.card:hover{
+  .svg-path{
+    fill: white;
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} 
+.swiper {
+  height: 500px;
+}
+.custom-next, .custom-prev {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 75%;
+  z-index: 1;
+}
+.custom-next {
+  right: 46%;
+}
+
+.custom-prev {
+  left: 46%;
+}
+/* mobile */
+@media screen and (max-width: 767px) {
+  .custom-next, .custom-prev {
+    top: 80%;
+  }
+}
+/* dekstop */
+@media screen and (max-width: 1439px) {
+  .custom-next {
+    right: 44%;
+  }
+  
+  .custom-prev {
+    left: 44%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .custom-next {
+    right: 42%; 
+  }
+  .custom-prev {
+    left: 42%; 
+  }
+  
+}
+/* Penyesuaian untuk layar mobile */
+@media screen and (max-width: 767px) {
+  .custom-next {
+    right: calc(35%);
+  }
+
+  .custom-prev {
+    left: calc(35%);
+  }
 }
