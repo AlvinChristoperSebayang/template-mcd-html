@@ -49,7 +49,7 @@
       /* Animated Figure */
       #animated-figure {
         top: 100%;
-        transition: top 6000ms ease-out;
+        transition: top 4000ms ease-out;
       }
 
       #animated-figure.animate-top {
@@ -72,6 +72,13 @@
         white-space: nowrap;
       }
       /* END */
+
+      /* Count */
+      @keyframes countAnimation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
 
     </style>
 
@@ -178,14 +185,14 @@
         </figure>
         <div class="flex flex-row w-fit ml-auto gap-[16px] md:gap-[24px] lg:gap-[32px] xl:gap-[40px] md:-mt-[31px]">
           <div class="flex flex-col gap-[3px] w-fit">
-            <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">2K+</span>
+            <span id="user-count" class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">0</span>
             <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">Active Users</span>
           </div>
           <div class="flex flex-col gap-[3px] w-fit">
-            <span class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">100K+</span>
+            <span id="download-count" class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">0</span>
             <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">Download</span>
           </div>
-        </div>
+        </div>        
       </section>
       
       <!-- 2 -->
@@ -665,6 +672,39 @@
       });
       // Animated Figure N
 
+      // Number Transision
+      function animateCounter(id, start, end, duration) {
+        let element = document.getElementById(id);
+        let range = end - start;
+        let startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          let progress = timestamp - startTime;
+          let current = Math.min(start + range * (progress / duration), end); 
+
+          element.textContent = formatNumber(Math.floor(current)) + "+";
+
+          if (current < end) {
+            requestAnimationFrame(step);
+          } else {
+            element.textContent = formatNumber(end) + "+"; 
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      function formatNumber(num) {
+        if (num >= 1000) {
+          return (num / 1000).toFixed(0) + 'K'; 
+        }
+        return num.toString(); 
+      }
+
+      let duration = 4000; 
+      animateCounter("user-count", 0, 2000, duration);  
+      animateCounter("download-count", 0, 100000, duration); 
     </script>
 
 <script>
