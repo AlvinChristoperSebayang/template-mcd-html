@@ -8,43 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
     <title>Vite App</title>
     <style>
-      /* Swiper container */
-      .swiper-container {
-      width: 100%;
-      max-width: 1440px; /* Batas lebar maksimum */
-      height: 186px; /* Sesuaikan dengan tinggi gambar Anda */
-      overflow: hidden; /* Mencegah overflow */
-      margin: auto; /* Pusatkan kontainer */
-      }
-      .swiper-slide {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      }
-      .swiper-slide img {
-      max-height: 100%; /* Sesuaikan dengan tinggi yang diinginkan */
-      max-width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
-      object-fit: contain;
-      }
-      /* Custom Swiper style */
-      .sample-slider .swiper-wrapper {
-      transition-timing-function: linear;
-      }
-      @media (max-width: 769px) {
-      .swiper-container {
-      height: 72px; /* Tinggi untuk perangkat mobile */
-      }
-      }
-      </style>
-    <style>
       li, span, h1, p, a {
         @apply font-plus-jakarta;
       }
       .hidden {
         display: none;
       }
-
-      /* Slider Testimonial */
   
       /* Animated Figure */
       #animated-figure {
@@ -78,7 +47,56 @@
         0% { opacity: 0; }
         100% { opacity: 1; }
       }
+      /* END */
 
+      /* Path Animation */
+
+      @keyframes moveUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);  /* Posisi akhir */
+        }
+      }
+
+      .path-animate {
+        opacity: 0;
+        transform: translateY(20px); 
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .path-animate.visible {
+        opacity: 1;
+        transform: translateY(0); 
+        animation: moveUp 1s forwards;
+      }
+
+      /* #path1 {
+        animation-delay: 3s;
+      }
+      #path2 {
+        animation-delay: 2.5s;
+      }
+      #path3 {
+        animation-delay: 2s;
+      }
+      #path4 {
+        animation-delay: 1.5s;
+      }
+      #path5 {
+        animation-delay: 1s;
+      }
+      #path6 {
+        animation-delay: 0.5s;
+      }
+      #path7 {
+        animation-delay: 0s;
+      } */
+
+      /* Path Animation N */
 
     </style>
 
@@ -166,11 +184,11 @@
     <main id="site-main" class="overflow-x-hidden overflow-y-hidden">
 
       <!-- Hero Section -->
-      <section class="bg-[#F4FFE6] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px] overflow-hidden relative">
-        <h1 class="font-bold text-center leading-[1] text-[55px] sm:text-[85px] md:text-[100px] lg:text-[120px] xl:text-[128px]">
+      <section class="bg-[#F4FFE6] py-[8px] lg:h-[80vh] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px] overflow-hidden relative">
+        <h1 class="font-bold text-center leading-[1] text-[55px] sm:text-[85px] md:text-[100px] xl:text-[120px]">
           Boost Your Productivity. Simplify Your Day.
         </h1>
-        <div class="flex flex-col w-[300px] sm:w-[190px] md:w-[230px] lg:w-[265px] xl:w-[336px] mt-[40px] sm:mt-[30px] md:mt-[45px] lg:mt-[60px] xl:mt-[103px] gap-[8px] lg:gap-[16px]">
+        <div class="flex flex-col w-[300px] sm:w-[190px] md:w-[230px] lg:w-[265px] xl:w-[336px] mt-[40px] sm:mt-[30px] md:mt-[45px] lg:mt-[60px] xl:mt-[95px] gap-[8px] lg:gap-[16px] mb-0">
           <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] text-[#6D6D6D]">
             Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
           </span>
@@ -347,52 +365,109 @@
           Word of praise from others about our presence.
         </span>
 
-        <div class="swiper-container sample-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
-          <div class="swiper-wrapper" id="swiper-wrapper-f9d257a8e2a52fe0" aria-live="off" style="transition-duration: 3000ms; transform: translate3d(-1045px, 0px, 0px);">
-            
-            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo_ramen-removebg-preview-1.png" alt="Sponsor 4 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide" role="group" aria-label="3 / 10" data-swiper-slide-index="2" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/taq-removebg-preview-1-1.png" alt="Sponsor 3 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide" role="group" aria-label="4 / 10" data-swiper-slide-index="3" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/almond-logo-removebg-preview-1.png" alt="Sponsor 2 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide" role="group" aria-label="5 / 10" data-swiper-slide-index="4" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/images-removebg-preview-1.png" alt="Sponsor 1 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 10" data-swiper-slide-index="5" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo2-removebg-preview-1.png" alt="Sponsor 5 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="7 / 10" data-swiper-slide-index="6" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/Group-3525.png" alt="Sponsor 4 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 10" data-swiper-slide-index="7" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo6-removebg-preview-1.png" alt="Sponsor 1 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide" role="group" aria-label="9 / 10" data-swiper-slide-index="8" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo3-removebg-preview.png" alt="Sponsor 2 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide" role="group" aria-label="10 / 10" data-swiper-slide-index="9" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/Group-3524.png" alt="Sponsor 3 Logo" title="Company">
-            </div>
-            
-            <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/1ab296_128b14ad1e38457a87c9f76755b0c462_mv2-removebg-preview-1-1.png" alt="Sponsor 5 Logo" title="Company">
-            </div>
-            
+        <div class="">
+          
+          <div class="flex flex-col w-auto h-auto gap-[15px] lg:gap-[20px]">
+
+          <div class="flex flex-row gap-[15px] lg:gap-[20px] justify-center">
+        
+            <!-- Testimonial Card -->
+            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+              
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+              </svg>
+        
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                As a project lead, Prodify helps me keep track of my team’s
+                progress while staying on top of my own tasks. It’s been a
+                game-changer for our productivity.
+              </p>
+        
+              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                  <img src="avatar.png" alt="Profile picture" />
+                </figure>
+        
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                    James M
+                  </span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                    Project Manager
+                  </span>
+                </div>
+              </div>
+        
+            </div> 
+
+            <!-- Testimonial Card -->
+            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+              
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+              </svg>
+        
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                As a project lead, Prodify helps me keep track of my team’s
+                progress while staying on top of my own tasks. It’s been a
+                game-changer for our productivity.
+              </p>
+        
+              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                  <img src="avatar.png" alt="Profile picture" />
+                </figure>
+        
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                    James M
+                  </span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                    Project Manager
+                  </span>
+                </div>
+              </div>
+        
+            </div> 
+        
           </div>
           
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          <div class="flex flex-row gap-[15px] lg:gap-[20px] justify-center">
+        
+            <!-- Testimonial Card -->
+            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+              
+              <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+              </svg>
+        
+              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                As a project lead, Prodify helps me keep track of my team’s
+                progress while staying on top of my own tasks. It’s been a
+                game-changer for our productivity.
+              </p>
+        
+              <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                  <img src="avatar.png" alt="Profile picture" />
+                </figure>
+        
+                <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                  <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                    James M
+                  </span>
+                  <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                    Project Manager
+                  </span>
+                </div>
+              </div>
+        
+            </div> 
+        
+          </div>
+        
+        </div> 
         </div>
         
 
@@ -432,7 +507,7 @@
 
     </main>
 
-    <footer id="site-footer" class="flex flex-col gap-[40px] pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-[120px] relative overflow-hidden">
+    <footer id="site-footer" class="footer flex flex-col gap-[40px] pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-[120px] relative overflow-hidden">
 
       <div class="flex flex-col gap-[15px] lg:flex-row lg:justify-between">
 
@@ -537,7 +612,7 @@
                       rx="24"
                       fill="#F6F6F6"
                     />
-                    <path
+                    <path 
                       d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z"
                       fill="black"
                     />
@@ -591,38 +666,45 @@
       <div
         class="w-auto h-[50px] sm:h-[85px] md:h-[100px] lg:h-[145px] xl:h-[169px] overflow-x-hidden"
       >
-        <div class="absolute left-1/2 transform -translate-x-1/2">
+        <div class="Anime absolute left-1/2 transform -translate-x-1/2">
           <svg
-            class="w-[340px] sm:w-[557px] md:w-[647px] lg:w-[1000px] xl:h-[339px] xl:w-[1200px]"
+            class="animated-figure w-[340px] sm:w-[557px] md:w-[647px] lg:w-[1025px] xl:h-[339px] xl:w-[1200px]"
             viewBox="0 0 1200 339"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              class="path-animate"
               d="M1046.03 338.796C1041.41 338.796 1036.79 338.333 1032.16 337.408C1027.77 336.715 1023.73 335.559 1020.03 333.941V300.304C1022.8 300.997 1026.15 301.575 1030.08 302.038C1034.01 302.731 1037.83 303.078 1041.53 303.078C1052.39 303.078 1060.37 300.651 1065.45 295.796C1070.77 291.172 1075.51 284.006 1079.67 274.296L1092.15 245.861L1091.46 278.804L1010.32 74.9025H1052.28L1112.27 231.296H1098.05L1157.69 74.9025H1200L1117.12 282.965C1112.73 294.062 1107.18 303.772 1100.48 312.094C1094 320.648 1086.26 327.237 1077.24 331.86C1068.46 336.484 1058.06 338.796 1046.03 338.796Z"
               fill="black"
             />
             <path
+              class="path-animate"
               d="M911.02 262.506V110.273H876.343V74.9026H911.02V65.193C911.02 51.091 913.91 39.3008 919.69 29.8224C925.469 20.1127 933.445 12.7149 943.617 7.62898C954.02 2.54299 965.926 0 979.334 0C981.877 0 984.767 0.231178 988.004 0.693534C991.24 0.924726 993.899 1.2715 995.979 1.73386V35.7175C994.13 35.2551 992.049 35.0239 989.738 35.0239C987.426 34.7927 985.576 34.6772 984.189 34.6772C973.786 34.6772 965.464 37.1045 959.222 41.9593C952.98 46.583 949.859 54.3275 949.859 65.193V74.9026H992.858V110.273H949.859V262.506H911.02Z"
               fill="black"
             />
             <path
+              class="path-animate"
               d="M804.867 262.506V74.903H844.052V262.506H804.867ZM804.867 49.2419V4.16162H844.052V49.2419H804.867Z"
               fill="black"
             />
             <path
+              class="path-animate"
               d="M659.25 266.667C641.218 266.667 625.035 262.39 610.702 253.837C596.6 245.052 585.388 233.262 577.065 218.466C568.974 203.67 564.928 187.025 564.928 168.531C564.928 150.036 569.09 133.391 577.412 118.596C585.735 103.8 596.947 92.1256 611.049 83.5719C625.151 75.0182 641.102 70.7414 658.903 70.7414C673.93 70.7414 687.223 73.7467 698.782 79.7574C710.341 85.7681 719.473 94.0907 726.177 104.725L720.282 113.741V0H759.12V262.506H722.016V224.361L726.524 231.643C720.051 242.971 710.804 251.641 698.782 257.651C686.761 263.662 673.583 266.667 659.25 266.667ZM663.065 230.256C673.93 230.256 683.64 227.598 692.193 222.281C700.978 216.963 707.798 209.681 712.653 200.434C717.739 190.956 720.282 180.321 720.282 168.531C720.282 156.741 717.739 146.222 712.653 136.975C707.798 127.728 700.978 120.445 692.193 115.128C683.64 109.811 673.93 107.152 663.065 107.152C652.199 107.152 642.374 109.811 633.589 115.128C624.804 120.445 617.984 127.728 613.13 136.975C608.275 146.222 605.847 156.741 605.847 168.531C605.847 180.321 608.275 190.956 613.13 200.434C617.984 209.681 624.689 216.963 633.242 222.281C642.027 227.598 651.968 230.256 663.065 230.256Z"
               fill="black"
             />
             <path
+              class="path-animate"
               d="M436.512 266.667C418.48 266.667 401.95 262.39 386.924 253.836C372.128 245.283 360.338 233.608 351.553 218.812C342.768 204.017 338.376 187.256 338.376 168.53C338.376 149.574 342.768 132.813 351.553 118.249C360.338 103.453 372.128 91.8939 386.924 83.5714C401.719 75.0177 418.249 70.7408 436.512 70.7408C455.006 70.7408 471.536 75.0177 486.1 83.5714C500.896 91.8939 512.571 103.453 521.124 118.249C529.909 132.813 534.301 149.574 534.301 168.53C534.301 187.487 529.909 204.363 521.124 219.159C512.339 233.955 500.549 245.629 485.753 254.183C470.958 262.505 454.544 266.667 436.512 266.667ZM436.512 230.256C447.609 230.256 457.434 227.597 465.988 222.28C474.541 216.963 481.245 209.681 486.1 200.433C491.186 190.955 493.729 180.321 493.729 168.53C493.729 156.74 491.186 146.221 486.1 136.974C481.245 127.727 474.541 120.445 465.988 115.128C457.434 109.81 447.609 107.152 436.512 107.152C425.646 107.152 415.821 109.81 407.036 115.128C398.483 120.445 391.663 127.727 386.577 136.974C381.722 146.221 379.295 156.74 379.295 168.53C379.295 180.321 381.722 190.955 386.577 200.433C391.663 209.681 398.483 216.963 407.036 222.28C415.821 227.597 425.646 230.256 436.512 230.256Z"
               fill="black"
             />
             <path
+              class="path-animate"
               d="M220.367 262.506V74.9025H257.819V112.701L254.351 107.152C258.512 94.8997 265.216 86.1148 274.464 80.7976C283.711 75.2493 294.808 72.4751 307.754 72.4751H319.197V108.193H302.899C289.953 108.193 279.434 112.238 271.343 120.33C263.483 128.19 259.552 139.518 259.552 154.313V262.506H220.367Z"
               fill="black"
             />
             <path
+              class="path-animate just"
               d="M0 262.506V4.16162H93.9751C111.314 4.16162 126.572 7.39816 139.749 13.8712C153.157 20.1131 163.561 29.3604 170.958 41.613C178.356 53.6344 182.055 68.0832 182.055 84.9594C182.055 101.604 178.241 115.938 170.612 127.959C163.214 139.98 152.926 149.228 139.749 155.701C126.572 162.174 111.314 165.41 93.9751 165.41H40.919V262.506H0ZM40.919 128.999H95.0154C104.263 128.999 112.354 127.15 119.289 123.451C126.225 119.752 131.658 114.666 135.588 108.193C139.518 101.489 141.483 93.6287 141.483 84.6126C141.483 75.5966 139.518 67.852 135.588 61.3789C131.658 54.6747 126.225 49.5887 119.289 46.121C112.354 42.4221 104.263 40.5726 95.0154 40.5726H40.919V128.999Z"
               fill="black"
             />
@@ -637,6 +719,7 @@
     <script>
 
       // dropdown
+
       document
         .getElementById("dropdownButton")
         .addEventListener("click", function () {
@@ -644,9 +727,11 @@
           dropdownMenu.classList.toggle("hidden");
           dropdownMenu.classList.toggle("visible");
         });
+
       // Dropdown N
 
       // Animated Figure
+
       document.addEventListener("DOMContentLoaded", function () {
         const figure = document.getElementById("animated-figure");
 
@@ -670,9 +755,11 @@
 
         window.addEventListener("resize", setTopPosition);
       });
+      
       // Animated Figure N
 
       // Number Transision
+
       function animateCounter(id, start, end, duration) {
         let element = document.getElementById(id);
         let range = end - start;
@@ -705,37 +792,32 @@
       let duration = 4000; 
       animateCounter("user-count", 0, 2000, duration);  
       animateCounter("download-count", 0, 100000, duration); 
+
+      // Number Transision N
+
+      // Path Animation
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const footer = document.querySelector(".Anime");
+        const paths = document.querySelectorAll(".path-animate");
+
+        function checkVisibility() {
+          const rect = footer.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            paths.forEach((path, index) => {
+              setTimeout(() => {
+                path.classList.add("visible");
+              }, (paths.length - 1 - index) * 500); 
+            });
+          }
+        }
+
+        window.addEventListener("scroll", checkVisibility);
+
+        checkVisibility();
+      });
+
+      // Path Animation N
+
     </script>
 
-<script>
-  const swiper = new Swiper(".sample-slider", {
-  loop: true,
-  autoplay: {
-  delay: 0,
-  pauseOnMouseEnter: true,
-  disableOnInteraction: true,
-  },
-  speed: 3000,
-  slidesPerView: 5,
-  spaceBetween: 30,
-  breakpoints: {
-  320: {
-  slidesPerView: 3,
-  spaceBetween: 10,
-  },
-  // when window width is >= 480px
-  480: {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  },
-  640: {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  },
-  1024: {
-  slidesPerView: 5,
-  spaceBetween: 30,
-  },
-  },
-  });
-  </script>
