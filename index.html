@@ -13,7 +13,7 @@
 
 <body class="bg-gray-100">
   <!-- Navbar -->
-  <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-transparent transition-colors duration-300">
+  <header class=" px-4 md:px-[20px] pt-4 z-[100] fixed top-0 left-0 w-full bg-transparent transition-colors duration-300">
     <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
       <div class="flex flex-1 items-center">
         <a href="#" class="-m-1.5 p-1.5">
@@ -21,9 +21,9 @@
         </a>
         <!-- Menu Desktop -->
         <div class="hidden md:flex md:ml-12 md:gap-x-12">
-          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" data-aos="fade-up" data-aos-delay="0">Furniture</a>
-          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" data-aos="fade-up" data-aos-delay="500">Accessory</a>
-          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" data-aos="fade-up" data-aos-delay="800">Collaboration</a>
+          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" >Furniture</a>
+          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" >Accessory</a>
+          <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-white hover:text-gray-300" >Collaboration</a>
         </div>
       </div>
       <!-- Tombol Menu Mobile -->
@@ -40,7 +40,7 @@
       <!-- Tombol Pencarian untuk Desktop -->
       <div class="hidden md:flex lg:flex-1 lg:justify-end">
         <a href="product.html"
-          class="px-4 py-2 border border-white rounded-full text-white hover:text-white hover:bg-black transition" data-aos="fade-up" data-aos-delay="1000">
+          class="px-4 py-2 border border-white rounded-full text-white hover:text-white hover:bg-black transition">
           Search A product
         </a>
       </div>
@@ -131,10 +131,10 @@
             
             <!-- Custom Navigation Buttons -->
             <div class="flex items-center justify-center space-x-2 md:space-x-1 mt-4 md:mt-0">
-              <button class="button-custom-prev flex justify-center items-center w-[44px] h-[32px] border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
+              <button class="button-custom-prev py-[16px] flex justify-center items-center w-[44px] h-[32px] border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
                 &#8592;
               </button>
-              <button class="button-custom-next flex justify-center items-center w-[44px] h-[32px] border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
+              <button class="button-custom-next py-[16px] flex justify-center items-center w-[44px] h-[32px] border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
                 &#8594;
               </button>
             </div>
@@ -165,8 +165,10 @@
             <div class="flex justify-center items-center">
               <img class="w-[full] h-[auto] object-cover rounded-lg" src="/img/cabinet.png" alt="">
             </div>
-            <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon shelf</h2>
-            <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+            <div class="md:mt-[95px]">
+              <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon shelf</h2>
+              <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+            </div>
           </div>
           <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="0">
             <div class="flex justify-center items-center">
@@ -179,8 +181,10 @@
             <div class="flex justify-center items-center">
               <img class="w-[full] h-[auto] object-cover rounded-lg" src="/img/vase.png" alt="">
             </div>
-            <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon vase</h2>
-            <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+            <div class="md:mt-[50px]">
+              <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon vase</h2>
+              <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality foam</p>
+            </div>
           </div>
           <div class="flex flex-col" data-aos="fade-up" data-aos-delay="800">
             <p class="text-[14px] leading-[26.6px] text-[#877C6F] pb-[30px]">
@@ -188,13 +192,12 @@
               and efficient production processes. In this way, Kayyon not only contributes to residential comfort, but
               also to environmental preservation.
             </p>
-            <button
-              class="md:w-[50%] h-auto mt-auto flex justify-between items-center gap-2 px-2 py-2 border bg-[#61513F] border-[#61513F] rounded-full text-white hover:text-[#61513F] hover:bg-white transition">
-              <p>Browse our products</p>
+            <button class="md:w-[50%] h-auto mt-auto flex justify-between items-center gap-2 px-2 py-2 border bg-[#61513F] border-[#61513F] rounded-full text-white hover:text-[#61513F] hover:bg-white transition">
+              <p class="pl-[32px]" >Browse all product</p>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-              </svg>
+                  stroke="currentColor" class="w-6 h-6 mr-[20px]">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
             </button>
           </div>
         </div>
@@ -208,12 +211,12 @@
             At Kayyon, we understand that every space has its own unique character and needs. Discover the perfect
             furniture for your home by exploring our carefully curated categories.
           </p>
-          <button class="md:w-[60%] h-auto mt-[360px] flex justify-between items-center gap-2 px-2 py-2 border bg-[#61513F] border-[#61513F] rounded-full text-white hover:text-[#61513F] hover:bg-white transition">
-            <p>Browse all product</p>
+          <button class="md:w-[70%] h-auto mt-[20px] md:mt-[360px] flex justify-between items-center gap-2 px-2 py-2 border bg-[#61513F] border-[#61513F] rounded-full text-white hover:text-[#61513F] hover:bg-white transition">
+            <p class="pl-[32px]" >Browse all product</p>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-            </svg>
+                stroke="currentColor" class="w-6 h-6 mr-[20px]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
           </button>
         </div>
         <!-- Image Section with Scrollbar -->
@@ -256,8 +259,8 @@
         </div>
       </div>
     </section>
-    <section class="container mx-auto px-4 py-8">
-      <div class="relative flex items-start pt-[100px] w-full overflow-hidden">
+    <section class="container mx-auto px-4 pb-8">
+      <div class="relative flex flex-col-reverse md:flex-row items-start pt-[50px] md:pt-[150px] w-full overflow-hidden">
         <!-- Text Section -->
         <div>
           <p class="text-[48px] leading-[48px] text-[#61513F] font-normal object-cover w-[335px]">
@@ -341,14 +344,12 @@
             <p class="mt-2">Mon-Fri 9:00 AM - 6:00 PM</p>
           </address>
         </div>
-        <div class="">
+        <div class="w-full max-w-md">
           <h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
           <form action="#" method="POST" class="relative">
             <input type="email" placeholder="Your Email"
-              class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white">
-            <button type="submit" class="absolute inset-y-0 right-0 flex items-center px-4 text-white">
-              Submit
-            </button>
+              class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-[#BBB3AB] focus:outline-none focus:ring-2 focus:ring-[#BBB3AB] text-white placeholder-[#BBB3AB]">
+            
           </form>
         </div>
       </div>
