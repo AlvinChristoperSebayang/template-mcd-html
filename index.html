@@ -14,6 +14,42 @@
       .hidden {
         display: none;
       }
+
+      /* Dropdown Mobile */
+      #menuButton .rotate-45 {
+        transform: rotate(45deg);
+      }
+
+      #menuButton .rotate--45 {
+        transform: rotate(-45deg);
+      }
+
+      #menuButton.open #line1 {
+        transform: rotate(-45deg) translateY(10px);
+      }
+
+      #menuButton.open #line2 {
+        opacity: 0;
+      }
+
+      #menuButton.open #line3 {
+        transform: rotate(45deg) translateY(-10px);
+      }
+
+      #dropdownMenu {
+        position: fixed;
+        top: 40px;
+        transition: 0.5s ease;
+        transform: translatex(100%);
+        visibility: hidden;
+      }
+
+      #menuButton.open ~ #dropdownMenu {
+        transform: translatex(0);
+        transition: 0.5 ease;
+        visibility: visible;
+      }
+      /* Dropdown Mobile End */
   
       /* Animated Figure */
       #animated-figure {
@@ -50,7 +86,6 @@
       /* END */
 
       /* Path Animation */
-
       @keyframes moveUp {
         0% {
           opacity: 0;
@@ -73,43 +108,16 @@
         transform: translateY(0); 
         animation: moveUp 1s forwards;
       }
-
       /* Path Animation N */
 
-      /* Swiper container */
-.swiper-container {
-width: 100%;
-max-width: 1440px; /* Batas lebar maksimum */
-height: 186px; /* Sesuaikan dengan tinggi gambar Anda */
-overflow: hidden; /* Mencegah overflow */
-margin: auto; /* Pusatkan kontainer */
-}
-.swiper-slide {
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.swiper-slide img {
-max-height: 100%; /* Sesuaikan dengan tinggi yang diinginkan */
-max-width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
-object-fit: contain;
-}
-/* Custom Swiper style */
-.sample-slider .swiper-wrapper {
-transition-timing-function: linear;
-}
-@media (max-width: 769px) {
-.swiper-container {
-height: 72px; /* Tinggi untuk perangkat mobile */
-}
-}
-
+      /* Slider Tertimonial */
+      
     </style>
 
   </head>
 
   <body class="overflow-x-hidden">
-    <header class="sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px]">
+    <header class="header sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px]">
 
       <!-- Logo -->
       <svg class="w-[67px] h-[24px] md:w-[87px] md:h-[28px] lg:w-[107px] lg:h-[34px]" viewBox="0 0 107 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,15 +169,12 @@ height: 72px; /* Tinggi untuk perangkat mobile */
       <div class="sm:hidden">
 
         <!-- Button dropdown -->
-        <button id="dropdownButton" class="text-black focus:outline-none">
-          <svg id="hamburger" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-          </svg>
-          <svg id="x" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
+        <button id="menuButton" class="relative w-6 h-[16px] focus:outline-none">
+          <div id="line1" class="absolute w-full h-[2.5px] bg-black rounded transition-all duration-300 top-[0px]"></div>
+          <div id="line2" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-[7px]"></div>
+          <div id="line3" class="absolute w-full h-[2.5px] bg-black rounded transition-all duration-300 top-[14px]"></div>
         </button>
-        
+
         </button>
 
         <!-- Dropdown Menu -->
@@ -806,19 +811,21 @@ height: 72px; /* Tinggi untuk perangkat mobile */
     <script>
 
       // dropdown
+      const menuButton = document.getElementById("menuButton");
+      const dropdownMenu = document.getElementById("dropdownMenu");
 
-      document
-        .getElementById("dropdownButton")
-        .addEventListener("click", function () {
-          const dropdownMenu = document.getElementById("dropdownMenu");
-          dropdownMenu.classList.toggle("hidden");
-          dropdownMenu.classList.toggle("visible");
-        });
-        
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          dropdownMenu.classList.remove("hidden");
+        }, 0); 
+      });
+
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("open");
+      });
       // Dropdown N
 
       // Animated Figure
-
       document.addEventListener("DOMContentLoaded", function () {
         const figure = document.getElementById("animated-figure");
 
@@ -841,12 +848,10 @@ height: 72px; /* Tinggi untuk perangkat mobile */
         }, 100);
 
         window.addEventListener("resize", setTopPosition);
-      });
-      
+      });  
       // Animated Figure N
 
       // Number Transision
-
       function animateCounter(id, start, end, duration) {
         let element = document.getElementById(id);
         let range = end - start;
@@ -879,11 +884,9 @@ height: 72px; /* Tinggi untuk perangkat mobile */
       let duration = 4000; 
       animateCounter("user-count", 0, 2000, duration);  
       animateCounter("download-count", 0, 100000, duration); 
-
       // Number Transision N
 
       // Path Animation
-
       document.addEventListener("DOMContentLoaded", function () {
         const footer = document.querySelector(".Anime");
         const paths = document.querySelectorAll(".path-animate");
@@ -903,7 +906,6 @@ height: 72px; /* Tinggi untuk perangkat mobile */
 
         checkVisibility();
       });
-
       // Path Animation N
 
       // Slide Animation
