@@ -15,13 +15,35 @@
       a, h1, h2, h3, p, span{
         @apply font-instrument !important
       }
-      .imageHero{
+      /* .imageHero{
         @apply invisible opacity-0 rotate-90 absolute;
         transition: visibility 0s linear, opacity 0.5s ease, transform 0.5s ease
       }
       .imageHero.imageActive{
         @apply opacity-100 rotate-0 relative visible;
-      }
+        
+      } */
+      .imageHero {
+  @apply invisible opacity-0 rotate-90 absolute;
+  transition: visibility 0s linear 0.3s, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.imageHero.imageActive {
+  @apply opacity-100 rotate-0 relative visible;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Sama dengan transisi di .imageHero */
+  transition-delay: 0s; /* Menghilangkan delay supaya transisi berjalan langsung */
+}
+
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
       .mirror-vertical{
         transform: scaleY(-1);
       }
@@ -56,13 +78,13 @@
       <div class="max-w-screen-xl  mx-auto flex items-center justify-between px-[10px] sm:px-[10px] md:px-[30px] lg:px-[30px] xl:px-[12px]">
           <div class="flex items-center space-x-3">
               <img src="logo.png" alt="Logo" class="w-[38px] h-[38px] sm:w-[30px] sm:h-[35px] md:w-[45px] md:h-[50px] lg:w-[63px] lg:h-[58px] xl:w-[63px] xl:h-[48px] object-contain">
-              <h1 class="text-[10px] sm:text-[15px] md:text-[18px] lg:text-[25px] xl:text-[25px] text-black font-medium">Makan Samurai</h1>
+              <span class="text-[10px] sm:text-[15px] md:text-[18px] lg:text-[25px] xl:text-[25px] text-black font-medium">Makan Samurai</span>
           </div>
           <nav>
               <ul class="flex font-medium gap-[20px] sm:gap-[55px] md:gap-[40px] lg:gap-[63px] xl:gap-[73px]">
-                  <li><a href="#" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">Product</a></li>
+                  <li><a href="#product" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">Product</a></li>
                   <li><a href="#" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">About</a></li>
-                  <li><a href="#" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">Contact</a></li>
+                  <li><a href="#contact" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">Contact</a></li>
               </ul>
           </nav>
       </div>
@@ -75,9 +97,9 @@
         <!-- Kontainer Teks dan Kategori Makanan -->
         <div class="w-1/2 sm:w-[100%] md:w-[55%] lg:w-[60%] xl:w-[50%] space-y-6 gap-[83px] md:gap-[10px] lg:gap-[83px] xl:gap-[83px] ">
           <div class="container flex flex-col gap-[20px] sm:gap-[20px] md:gap-[10px] lg:gap-[20px] xl:gap-[20px]">
-            <h1 class=" w-full sm:w-[50%] md:w-[65%] lg:w-[86%] xl:w-[100%]  text-[30px] sm:text-[40px] md:text-[30px] lg:text-[50px] xl:text-[85px] font-semibold leading-[35px] sm:leading-[45px] md:leading-[40px] lg:leading-[60px] xl:leading-[85px]">
-              Discovering <br>
-              <span class="text-[#730202B2]">Indonesia’s</span> <br>
+            <h1 class=" w-full sm:w-[50%] md:w-[65%] lg:w-[86%] xl:w-[100%]  text-[20px] sm:text-[40px] md:text-[30px] lg:text-[50px] xl:text-[85px] font-semibold leading-[30px] sm:leading-[45px] md:leading-[40px] lg:leading-[60px] xl:leading-[85px]">
+              Discovering
+              <span class="text-[#730202B2]">Indonesia’s</span>
               classic dishes
             </h1>
             <div class="w-full">
@@ -182,13 +204,13 @@
   </section>
 
     <!-- 2 -->
-    <section id="target-section" class="w-full h-auto py-[60px] sm:py-[35px] md:py-[20px] lg:py-[20px] xl:py-[20px]">
-      <div class="container mx-auto text-center flex flex-col gap-[100px] sm:gap-[25px] md:gap-[35px] xl:gap-[60px]">
-          <div class="container mx-auto flex flex-col  w-full h-[20px] sm:w-full] sm:h-[210px] md:w-full md:h-[210px] xl:w-full xl:h-[218px] gap-[20px]">
-              <h1 class="font-semibold mx-auto items-center text-[16px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[42px] leading-[20px] sm:leading-[40px] md:leading-[40px] lg:leading-[51px] xl:leading-[51px]">
+    <section id="product" class="w-full h-auto py-[60px] sm:py-[35px] md:py-[20px] lg:py-[20px] xl:py-[20px]">
+      <div class="container mx-auto text-center flex flex-col gap-[45px] sm:gap-[20px] md:gap-[35px] xl:gap-[60px]">
+          <div class="container mx-auto flex flex-col  w-full h-[100%] sm:w-full] sm:h-[210px] md:w-full md:h-[210px] xl:w-full xl:h-[218px] gap-[20px]">
+              <h2 class="font-semibold mx-auto items-center text-[16px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[42px] leading-[20px] sm:leading-[40px] md:leading-[40px] lg:leading-[51px] xl:leading-[51px]">
                   A Journey Through Tradition to Explore <br> the Wonders of Sundanese Cuisine
-              </h1>
-              <p class="text-[#00000099] font-medium mx-auto items-center justify-center w-[85%]  sm:w-[90%] sm:h-[210px] md:w-[90%] md:h-[40%] lg:w-[93%] lg:h-[90%] xl:w-full xl:h-[100%] leading-[12px] text-[10px] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[20px] lg:text-[16px] lg:leading-[24px] xl:text-[20px] xl:leading-[32px]">
+              </h2>
+              <p class="text-[#00000099] font-medium mx-auto items-center justify-center w-[85%]  sm:w-[90%] sm:h-[100%] md:w-[90%] md:h-[40%] lg:w-[93%] lg:h-[90%] xl:w-full xl:h-[100%] leading-[12px] text-[10px] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[20px] lg:text-[16px] lg:leading-[24px] xl:text-[20px] xl:leading-[32px]">
                   Exploring Sundanese cuisine is an invitation to usher in the flavors, stories and communal experiences creating an
                   ever-evolving cultural landscape. Enjoying every bite means participating in a journey and honoring the past and
                   celebrating the present, ensuring that the magic of Sundanese cuisine will endure for to come.
@@ -457,7 +479,7 @@
   </div>
 
   <div class="w-full flex justify-center mt-10">
-    <button onclick="showAllCategories()" class="bg-[#000000] w-[100px] h-[40px] md:w-[125px] md:h-[45px] xl:w-[160px] xl:h-[50px] text-white rounded-full text-[12px] md:text-[15px] xl:text-[16px] font-semibold hover:bg-gray-800">
+    <button id="showCategoriesBtn" onclick="showAllCategories()" class="bg-[#000000] w-[100px] h-[40px] md:w-[125px] md:h-[45px] xl:w-[160px] xl:h-[50px] text-white rounded-full text-[12px] md:text-[15px] xl:text-[16px] font-semibold hover:bg-gray-800">
       View All
     </button>
 </div>
@@ -465,12 +487,12 @@
   </section>
 
   <!-- 3 -->
-  <section class="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 xl:px-0 xl:py-0 flex flex-col md:flex-row items-center gap-10">
+  <section id="contact" class="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 xl:px-0 xl:py-0 flex flex-col md:flex-row items-center gap-10">
     <div class="w-full px-[12px] sm:px-[25px] md:px-0 lg:px-0 xl:px-0  space-y-6 md:text-left xl:gap-[32px]">
       <div class="max-w-full">
-        <h1 class="font-semibold text-[25px] leading-[30px] md:text-[35px] lg:text-[41px] xl:text-[55px] md:leading-[50px] lg:leading-[50px] xl:leading-[66px]">
+        <h2 class="font-semibold text-[25px] leading-[30px] md:text-[35px] lg:text-[41px] xl:text-[55px] md:leading-[50px] lg:leading-[50px] xl:leading-[66px]">
           In a Culinary Adventure, Where Every <br> Bite Tells a Story!
-        </h1>
+        </h2>
       </div>
       <p class="text-[#00000099] font-normal sm:w-[500px] md:w-full text-[12px] sm:-[10px] md:text-[14px] lg:text-[18px] xl:text-[20px]">
         As the creator of this Sundanese restaurant, I am Min, opened this place
@@ -505,7 +527,7 @@
       <div class="swiper-slide bg-[#F5F5F5] rounded-lg px-[10px] py-[25px] w-full sm:w-[200px] sm:h-full md:w-[250px] md:h-full lg:w-[300px] lg:h-full xl:w-[305px] xl:h-[188px] flex items-center gap-4">
         <div class="flex-1 xl:w-[164px] xl:gap-[20px]">
           <p class="text-[#000000B2] mb-2 font-normal text-[10px] md:text-[14px] lg:text-[12px] xl:text-[14px] xl:w-[164px] xl:h-[88px]">
-            "The food was absolutely delicious! I highly recommend trying the specials!"</p>
+            "The food was absolutely delicious! I highly recommend trying the specials, last try!"</p>
           <div class="flex items-center gap-[11px]">
             <img src="profil1.jpeg" alt="profil" class="object-cover w-[40px] h-[40px] sm:w-[40px] sm:h-[40px] md:w-[40px] md:h-[40px] lg:w-[30px] lg:h-[23px] xl:w-[40px] xl:h-[40px] rounded-full" />
             <div>
@@ -799,13 +821,18 @@
       });
 
     // btnView
-        function showAllCategories() {
-      const categoryCards = document.querySelectorAll('.category-card');
-          //
-      categoryCards.forEach(card => {
-        card.classList.remove('hidden');
-      });
-    }
+    function showAllCategories() {
+  const categoryCards = document.querySelectorAll('.category-card');
+  const btn = document.getElementById('showCategoriesBtn'); // Ambil tombol berdasarkan ID
+
+  // Tampilkan semua kategori
+  categoryCards.forEach(card => {
+    card.classList.remove('hidden');
+  });
+
+  // Sembunyikan tombol setelah diklik
+  btn.classList.add('hidden'); // Tambahkan class hidden untuk menyembunyikan tombol
+}
 
     </script>
   </body>
