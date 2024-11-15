@@ -9,110 +9,102 @@
     <title>Vite App</title>
 </head>
 
-<body class="bg-gray-100">
+<body class="">
     <!-- Navbar -->
-    <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-white   ">
+    <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-transparent transition-colors duration-300">
         <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
-            <div class="flex flex-1 items-center">
-                <a href="index.html" class="-m-1.5 p-1.5">
-                    <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
-                </a>
-                <!-- Menu Desktop -->
-                <div class="hidden md:flex md:ml-12 md:gap-x-12">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-300">Furniture</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-300">Accessory</a>
-                    <a href="#"
-                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-300">Collaboration</a>
-                </div>
+          <div class="flex flex-1 items-center">
+            <a href="index.html" class="-m-1.5 p-1.5">
+              <h1 class="text-[24px] leading-[29.52px] md:text-3xl font-bold text-[#61513F]">Kayyon</h1>
+            </a>
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex md:ml-12 md:gap-x-12">
+              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" >Furniture</a>
+              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" >Accessory</a>
+              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" >Collaboration</a>
             </div>
-            <!-- Tombol Menu Mobile -->
-            <div class="flex md:hidden">
-                <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
-                    onclick="toggleMobileMenu()">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
-            <!-- Tombol Pencarian untuk Desktop -->
-            <div class="hidden md:flex lg:flex-1 lg:justify-end">
-                <a href="product.html"
-                    class="px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">
-                    Search A product
-                </a>
-            </div>
+          </div>
+          <!-- Tombol Menu Mobile -->
+          <div class="flex md:hidden">
+            <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
+              onclick="toggleMobileMenu()">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <!-- Tombol Pencarian untuk Desktop -->
+          <div class="hidden md:flex lg:flex-1 lg:justify-end">
+            <a href="product.html"
+              class="px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] hover:text-white hover:bg-[#61513F] transition">
+              Search A product
+            </a>
+          </div>
         </nav>
-
+    
         <!-- Menu Mobile -->
-        <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-            id="mobileMenu">
-            <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
-                </a>
-                <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
-                    <span class="sr-only">Close menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="mt-6 space-y-2 py-6">
-                <a href="#"
-                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
-                <a href="#"
-                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
-                <a href="#"
-                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
-            </div>
-            <div class="py-6">
-                <a href="product.html"
-                    class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
-                    A product</a>
-            </div>
+        <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobileMenu">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
+            </a>
+            <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 space-y-2 py-6">
+            <a href="#"
+              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
+            <a href="#"
+              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
+            <a href="#"
+              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
+          </div>
+          <div class="py-6">
+            <a href="product.html"
+              class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
+              A product</a>
+          </div>
         </div>
-
+    
         <!-- Border pemisah di bawah header -->
-        <div class="border-t border-black mt-4"></div>
-    </header>
+        <div class="border-t border-white mt-4"></div>
+      </header>
     <main>
-        <section class="px-[20px] pt-[150px]">
-            <div class="flex flex-col md:flex-row gap-10 bg-gray-50">
+        <section class=" px-[20px] md:px-[138px] pt-[120px] md:pt-[150px]">
+            <div class="flex flex-col justify-between md:flex-row gap-10">
                 <!-- Left Section: Image and Thumbnails -->
-                <div class="flex flex-col items-center space-y-4 md:w-[50%] ">
+                <div class="flex flex-col items-center gap-4 md:w-[50%] w-full">
                     <!-- Gambar Utama -->
-                     <div class="bg-[#F1F0EE]">
-                         <img id="mainImage" src="/img/kursi-detail1.png" alt="Kayyon Minimalist Chair"
-                         class="w-[573px] h-[571px] rounded-lg ">
-                     </div>
+                    <div class="bg-[#F1F0EE] w-full md:w-auto" data-aos="zoom-in-down" data-aos-delay="300">
+                        <img id="mainImage" src="/img/kursi-detail1.png" alt="Kayyon Minimalist Chair"
+                             class="w-full md:w-[573px] md:h-[530px] rounded-lg">
+                    </div>
                 
                     <!-- Pagination dengan Gambar Thumbnail -->
-                    <div id="pagination" class="pagination flex justify-center my-5">
-                        <div class="flex flex-wrap justify-center space-x-4">
+                    <div id="pagination" class="pagination flex justify-center my-2 ">
+                        <div class="flex justify-center gap-4 w-full md:w-auto">
                             <!-- Tombol Thumbnail untuk Halaman 1 -->
-                            <button class="page-btn mx-1 items-center  gap-2 px-4 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white"
-                                data-page="/img/kursi-detail1.png">
-                                <img src="/img/kursi-detail1.png" alt="Thumbnail 1" class="w-[179px] h-[180px] object-cover rounded-lg">
+                            <button class="page-btn flex items-center gap-2 px-2 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white w-full md:w-auto"
+                                    data-page="/img/kursi-detail1.png" data-aos="zoom-in-up" data-aos-delay="500">
+                                <img src="/img/kursi-detail1.png" alt="Thumbnail 1" class="w-[150px] h-[150px] md:w-[260px] md:h-[200px] object-contain rounded-lg">
                             </button>
-                            
+                
                             <!-- Tombol Thumbnail untuk Halaman 2 -->
-                            <button class="page-btn mx-1 items-center gap-2 px-4 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white"
-                                data-page="/img/kursi-detail2.png">
-                                <img src="/img/kursi-detail2.png" alt="Thumbnail 2" class="w-[179px] h-[180px] object-cover rounded-lg">
-                            </button>
-                            
-                            <!-- Tombol Thumbnail untuk Halaman 3 -->
-                            <button class="page-btn mx-1 items-center gap-2 px-4 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white"
-                                data-page="/img/kursi-detail3.png">
-                                <img src="/img/kursi-detail3.png" alt="Thumbnail 3" class="w-[179px] h-[180px] object-cover rounded-lg">
+                            <button class="page-btn flex items-center gap-2 px-2 py-2 text-[#61513F] bg-[#F1F0EE] hover:bg-[#B5A692] hover:text-white w-full md:w-auto"
+                                    data-page="/img/kursi-detail2.png" data-aos="zoom-in-up" data-aos-delay="800">
+                                <img src="/img/kursi-detail2.png" alt="Thumbnail 2" class="w-[150px] h-[150px] md:w-[260px] md:h-[200px] object-contain rounded-lg">
                             </button>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Right Section: Product Details -->
                 <div class="md:w-[50%] ">
                     <p class="text-sm text-[#A59B8F]">Seating / Chair</p>
@@ -129,7 +121,7 @@
                     <!-- Product Specifications -->
                     <div class="space-y-2 mt-[27px]">
                         <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                            onclick="toggleDropdown('materialDropdown')">
+                            onclick="toggleDropdown('materialDropdown')" data-aos="fade-down" data-aos-delay="300">
                             <span class="text-[#877C6F] font-semibold">Material : <span
                                     class="text-[#877C6F]">Cooper</span></span>
                             <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
@@ -146,7 +138,7 @@
                         </div>
 
                         <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                            onclick="toggleDropdown('colorDropdown')">
+                            onclick="toggleDropdown('colorDropdown')" data-aos="fade-down" data-aos-delay="500">
                             <span class="text-[#877C6F] font-semibold">Colour : <span
                                     class="text-[#877C6F]">Beige</span></span>
                             <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
@@ -162,7 +154,7 @@
                         </div>
 
                         <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                            onclick="toggleDropdown('finishingDropdown')">
+                            onclick="toggleDropdown('finishingDropdown')" data-aos="fade-down" data-aos-delay="800">
                             <span class="text-[#877C6F] font-semibold">Finishing : <span
                                     class="text-[#877C6F]">Varnished</span></span>
                             <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
@@ -221,14 +213,14 @@
                 </div>
             </div>
         </section>
-        <section class="px-[20px] pt-[100px]">
+        <section class="px-[20px] pt-[50px]  md:px-[138px] md:pt-[100px] ">
             <div class="relative w-full max-w-full mx-auto">
                 <!-- Slideshow Container -->
                 <div class="overflow-hidden">
-                    <div id="slides" class="flex transition-transform duration-500">
+                    <div id="slides" class="flex transition-transform duration-500" data-aos="zoom-out-down" data-aos-delay="300">
                         <!-- Slide 1 -->
                         <div class="min-w-full h-auto">
-                            <img src="/img/detail.png" alt="Image 1" class="w-full h-auto">
+                            <img src="/img/detail.png" alt="Image 1" class="md:w-full md:h-auto">
                         </div>
                         <!-- Slide 2 -->
                         <div class="min-w-full h-auto">
@@ -243,29 +235,29 @@
 
                 <!-- Navigation Buttons -->
             </div>
-            <div class=" bottom-4 pt-[20px] flex space-x-4">
+            <div class=" bottom-4 pt-[10px] md:pt-[20px] flex space-x-4">
                 <button title="prev" onclick="prevSlide()"
-                    class="flex justify-center items-center w-[88px] h-[32px] px-[32px] py-[16px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
+                    class="flex justify-center items-center w-[44px] h-[16px] px-[16px] py-[8px] md:w-[88px] md:h-[32px] md:px-[32px] md:py-[16px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                        stroke="currentColor" class="w-3 h-3 md:w-6 md:h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
                     </svg>
                 </button>
                 <button title="next" onclick="nextSlide()"
-                    class="flex justify-between items-center w-[88px] h-[32px] px-[32px] py-[16px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
+                    class="flex justify-between items-center w-[44px] h-[16px] px-[16px] py-[8px] md:w-[88px] md:h-[32px] md:px-[32px] md:py-[16px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition mb-2 md:mb-0">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                        stroke="currentColor" class="w-3 h-3 md:w-6 md:h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
                 </button>
             </div>
         </section>
-        <section class="px-[138px] pt-[100px] pb-[150px]">
+        <section class="px-[20px] pt-[50px] pb-[75px] md:px-[138px] md:pt-[100px] md:pb-[150px]">
             <div class="space-y-2 mt-[27px]">
                 <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                    onclick="togglebawah('ProductDropdown')">
+                    onclick="togglebawah('ProductDropdown')" data-aos="fade-down" data-aos-delay="300">
                     <span class="text-[#877C6F] font-semibold">Product Dimensions</span>
                     <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -280,7 +272,7 @@
                 </div>
 
                 <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                    onclick="togglebawah('SpecificationsDropdown')">
+                    onclick="togglebawah('SpecificationsDropdown')" data-aos="fade-down" data-aos-delay="500">
                     <span class="text-[#877C6F] font-semibold">Product Specifications</span>
                     <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -294,7 +286,7 @@
                 </div>
 
                 <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                    onclick="togglebawah('CareDropdown')">
+                    onclick="togglebawah('CareDropdown')" data-aos="fade-down" data-aos-delay="800">
                     <span class="text-[#877C6F] font-semibold">Care & Maintenance</span>
                     <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -308,7 +300,7 @@
                         melindungi permukaan dari goresan serta kelembapan.</p>
                 </div>
                 <div class="border-t py-2 flex justify-between items-center cursor-pointer"
-                    onclick="togglebawah('DownloadsDropdown')">
+                    onclick="togglebawah('DownloadsDropdown')" data-aos="fade-down" data-aos-delay="1000">
                     <span class="text-[#877C6F] font-semibold">Downloads</span>
                     <svg class="w-5 h-5 text-[#877C6F]" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -328,47 +320,43 @@
 
     <footer class="bg-[#5F4A3E] text-white pt-16 pb-6 px-4 md:px-16 lg:px-32">
         <div class="container mx-auto">
-            <!-- Left Section -->
-            <div class="mb-8 md:mb-0">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Kayyon&copy;</h2>
+          <!-- Left Section -->
+          <div class="mb-8 md:mb-0">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold" data-aos="zoom-in" data-aos-delay="300">Kayyon&copy;</h2>
+          </div>
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+            <div class="mb-6 md:mb-0" data-aos="zoom-in" data-aos-delay="300">
+              <address class="text-sm md:text-base leading-5">
+                1234 Serenity St, Furniture<br>City, ST 56789<br>
+                <a href="tel:+18001234567" class="block mt-2">+1 (800) 123-4567</a>
+                <a href="mailto:support@kayyon.com" class="block mt-2">support@kayyon.com</a>
+                <p class="mt-2">Mon-Fri 9:00 AM - 6:00 PM</p>
+              </address>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
-                <div class="mb-6 md:mb-0">
-                    <address class="text-sm md:text-base leading-5">
-                        1234 Serenity St, Furniture<br>City, ST 56789<br>
-                        <a href="tel:+18001234567" class="block mt-2">+1 (800) 123-4567</a>
-                        <a href="mailto:support@kayyon.com" class="block mt-2">support@kayyon.com</a>
-                        <p class="mt-2">Mon-Fri 9:00 AM - 6:00 PM</p>
-                    </address>
-                </div>
-                <div class="">
-                    <h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
-                    <form action="#" method="POST" class="relative">
-                        <input type="email" placeholder="Your Email"
-                            class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white">
-                        <button type="submit" class="absolute inset-y-0 right-0 flex items-center px-4 text-white">
-                            Submit
-                        </button>
-                    </form>
-                </div>
+            <div class="w-full max-w-md" data-aos="zoom-in" data-aos-delay="500">
+              <h3 class="text-lg font-semibold mb-4">Subscribe to our newsletter</h3>
+              <form action="#" method="POST" class="relative">
+                <input type="email" placeholder="Your Email"
+                  class="w-full px-4 py-2 rounded-full bg-transparent border-2 border-[#BBB3AB] focus:outline-none focus:ring-2 focus:ring-[#BBB3AB] text-white placeholder-[#BBB3AB]">
+    
+              </form>
             </div>
+          </div>
         </div>
         <div class="border-t border-white mt-8"></div>
         <div class="flex flex-col md:flex-row justify-between items-center mt-6">
-            <div class="text-center text-sm">
-                &copy; 2024 Kayyon. All Rights Reserved.
-            </div>
-            <!-- Social Links -->
-            <div class="flex items-center space-x-4 mt-4 md:mt-0">
-                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/twiter.svg"
-                        alt="Twitter"></a>
-                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/etsy.svg" alt="Etsy"></a>
-                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/ig.svg" alt="Instagram"></a>
-                <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/facebook.svg"
-                        alt="Facebook"></a>
-            </div>
+          <div class="text-center text-sm">
+            &copy; 2024 Kayyon. All Rights Reserved.
+          </div>
+          <!-- Social Links -->
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/twiter.svg" alt="Twitter"></a>
+            <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/etsy.svg" alt="Etsy"></a>
+            <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/ig.svg" alt="Instagram"></a>
+            <a href="#" class="text-white text-2xl hover:text-gray-300"><img src="/img/facebook.svg" alt="Facebook"></a>
+          </div>
         </div>
-    </footer>
+      </footer>
     <script type="module" src="/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -399,6 +387,17 @@
         });
     });
 </script>
+<script>
+    // Fungsi untuk menambahkan kelas 'bg-dark' ketika scroll ke bawah
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
+        header.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+      }
+    });
+  </script>
     <script>
         const slider = document.querySelector('.w-3/4 .flex');
         // Automatic scrolling (Optional, can be removed if not needed)

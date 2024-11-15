@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <style>
@@ -22,69 +25,74 @@
     <!-- Navbar -->
     <header class="px-4 md:px-[20px] pt-4 z-10 fixed top-0 left-0 w-full bg-transparent transition-colors duration-300">
         <nav class="flex items-center justify-between p-4 md:p-6 lg:px-8" aria-label="Global">
-          <div class="flex flex-1 items-center">
-            <a href="index.html" class="-m-1.5 p-1.5">
-              <h1 class="text-[24px] leading-[29.52px] md:text-3xl font-bold text-[#61513F]">Kayyon</h1>
-            </a>
-            <!-- Menu Desktop -->
-            <div class="hidden md:flex md:ml-12 md:gap-x-12">
-              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" data-aos="fade-up" data-aos-delay="0">Furniture</a>
-              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" data-aos="fade-up" data-aos-delay="500">Accessory</a>
-              <a href="#" class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300" data-aos="fade-up" data-aos-delay="800">Collaboration</a>
+            <div class="flex flex-1 items-center">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <h1 class="text-[24px] leading-[29.52px] md:text-3xl font-bold text-[#61513F]">Kayyon</h1>
+                </a>
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex md:ml-12 md:gap-x-12">
+                    <a href="#"
+                        class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300">Furniture</a>
+                    <a href="#"
+                        class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300">Accessory</a>
+                    <a href="#"
+                        class="text-[12px] font-semibold leading-[14.76px] text-[#61513F] hover:text-gray-300">Collaboration</a>
+                </div>
             </div>
-          </div>
-          <!-- Tombol Menu Mobile -->
-          <div class="flex md:hidden">
-            <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
-              onclick="toggleMobileMenu()">
-              <span class="sr-only">Open main menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
-          </div>
-          <!-- Tombol Pencarian untuk Desktop -->
-          <div class="hidden md:flex lg:flex-1 lg:justify-end">
-            <a href="product.html"
-              class="px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] hover:text-white hover:bg-black transition" data-aos="fade-up" data-aos-delay="1000">
-              Search A product
-            </a>
-          </div>
+            <!-- Tombol Menu Mobile -->
+            <div class="flex md:hidden">
+                <button type="button" class="inline-flex items-center justify-center p-2.5 text-gray-700"
+                    onclick="toggleMobileMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Tombol Pencarian untuk Desktop -->
+            <div class="hidden md:flex lg:flex-1 lg:justify-end">
+                <a href="product.html"
+                    class="px-4 py-2 border border-[#61513F] rounded-full text-[#61513F] hover:text-white hover:bg-[#61513F] transition">
+                    Search A product
+                </a>
+            </div>
         </nav>
-    
+
         <!-- Menu Mobile -->
-        <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobileMenu">
-          <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
-            </a>
-            <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
-              <span class="sr-only">Close menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="mt-6 space-y-2 py-6">
-            <a href="#"
-              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
-            <a href="#"
-              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
-            <a href="#"
-              class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
-          </div>
-          <div class="py-6">
-            <a href="product.html"
-              class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
-              A product</a>
-          </div>
+        <div class="hidden fixed inset-0 z-10 bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            id="mobileMenu">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <h1 class="text-2xl md:text-3xl font-bold text-black">Kayyon</h1>
+                </a>
+                <button type="button" class="rounded-md p-2.5 text-gray-700" onclick="toggleMobileMenu()">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 space-y-2 py-6">
+                <a href="#"
+                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Furniture</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Accessory</a>
+                <a href="#"
+                    class="block px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-gray-300">Collaboration</a>
+            </div>
+            <div class="py-6">
+                <a href="product.html"
+                    class="block w-full px-4 py-2 border border-black rounded-full text-black hover:text-white hover:bg-black transition">Search
+                    A product</a>
+            </div>
         </div>
-    
+
         <!-- Border pemisah di bawah header -->
         <div class="border-t border-white mt-4"></div>
-      </header>
+    </header>
     <main>
         <section class="container mx-auto px-4 pt-[150px]">
             <div class="">
@@ -104,7 +112,8 @@
                         <div id="dropdown1"
                             class="dropdown-content hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                             <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account
+                                    settings</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
                             </div>
@@ -125,7 +134,8 @@
                         <div id="dropdown2"
                             class="dropdown-content hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                             <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account settings</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account
+                                    settings</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
                             </div>
@@ -133,81 +143,105 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="0">
                         <div class="flex justify-center items-center">
-                            <a href="detail-shelf.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/shelf.png" alt="shelf"></a>
+                            <a href="detail-product.html"><img
+                                    class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/shelf.png" alt="shelf"></a>
                         </div>
                         <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Shelf</h2>
                         <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
                             foam
                         </p>
                     </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:bg-[#e7e6e3]"
+                        data-aos="fade-down" data-aos-delay="300">
                         <div class="flex justify-center items-center">
-                            <a href="detail-product.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/kursi1.png" alt="kursi"></a>
+                            <a href="detail-product.html">
+                                <img class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/kursi1.png" alt="kursi">
+                            </a>
                         </div>
-                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
-                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
-                            foam
-                        </p>
+                        <h2
+                            class="text-2xl leading-[29.52px] text-[#877C6F] font-bold mt-4 transition duration-300 hover:text-[#5f574e]">
+                            Kayyon Minimalist Chair</h2>
+                        <p class="text-[#BBB3AB] text-sm leading-[15.23px] pt-2">Oak tree <br> High quality foam</p>
                     </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-down" data-aos-delay="500">
                         <div class="flex justify-center items-center">
-                            <a href="detail-cabinet.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/cabinet.png" alt="cabinet"></a>
-                        </div>
-                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
-                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
-                            foam
-                        </p>
-                    </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
-                        <div class="flex justify-center items-center">
-                            <a href="detail-vase.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/vase.png" alt="vase"></a>
-                        </div>
-                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Vase</h2>
-                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
-                            foam
-                        </p>
-                    </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
-                        <div class="flex justify-center items-center">
-                            <a href="detail-product.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/kursi1.png" alt="kursi"></a>
-                        </div>
-                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
-                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
-                            foam
-                        </p>
-                    </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
-                        <div class="flex justify-center items-center">
-                            <a href="detail-cabinet.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/cabinet.png" alt="cabinet"></a>
+                            <a href="detail-product.html"><img
+                                    class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/cabinet.png" alt="cabinet"></a>
                         </div>
                         <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
                         <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
                             foam
                         </p>
                     </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="800">
                         <div class="flex justify-center items-center">
-                            <a href="detail-vase.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/vase.png" alt="vase"></a>
+                            <a href="detail-product.html"><img
+                                    class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/vase.png" alt="vase"></a>
                         </div>
                         <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon vase</h2>
                         <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
                             foam
                         </p>
                     </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:bg-[#e7e6e3]"
+                        data-aos="fade-down" data-aos-delay="1000">
                         <div class="flex justify-center items-center">
-                            <a href="detail-product.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/kursi1.png" alt="kursi"></a>
+                            <a href="detail-product.html">
+                                <img class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/kursi1.png" alt="kursi">
+                            </a>
                         </div>
-                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon minimalist chair</h2>
+                        <h2
+                            class="text-2xl leading-[29.52px] text-[#877C6F] font-bold mt-4 transition duration-300 hover:text-[#5f574e]">
+                            Kayyon Minimalist Chair</h2>
+                        <p class="text-[#BBB3AB] text-sm leading-[15.23px] pt-2">Oak tree <br> High quality foam</p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-down" data-aos-delay="1300">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-product.html"><img
+                                    class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/cabinet.png" alt="cabinet"></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
                         <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
                             foam
                         </p>
                     </div>
-                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6">
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="1500">
                         <div class="flex justify-center items-center">
-                            <a href="detail-cabinet.html"><img class="w-[278px] h-[300px] object-cover rounded-lg" src="/img/cabinet.png" alt="cabinet"></a>
+                            <a href="detail-product.html"><img
+                                    class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/vase.png" alt="vase"></a>
+                        </div>
+                        <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon vase</h2>
+                        <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
+                            foam
+                        </p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6 transition duration-300 hover:shadow-lg hover:bg-[#e7e6e3]"
+                        data-aos="fade-down" data-aos-delay="1800">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-product.html">
+                                <img class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/kursi1.png" alt="kursi">
+                            </a>
+                        </div>
+                        <h2
+                            class="text-2xl leading-[29.52px] text-[#877C6F] font-bold mt-4 transition duration-300 hover:text-[#5f574e]">
+                            Kayyon Minimalist Chair</h2>
+                        <p class="text-[#BBB3AB] text-sm leading-[15.23px] pt-2">Oak tree <br> High quality foam</p>
+                    </div>
+                    <div class="bg-[#F1F0EE] rounded-lg shadow-md p-6" data-aos="fade-down" data-aos-delay="800">
+                        <div class="flex justify-center items-center">
+                            <a href="detail-product.html"><img
+                                    class="w-[278px] h-[300px] object-cover rounded-lg transition duration-300 hover:scale-105"
+                                    src="/img/cabinet.png" alt="cabinet"></a>
                         </div>
                         <h2 class="text-[24px] leading-[29.52px] text-[#877C6F] font-bold">Kayyon Cabinet</h2>
                         <p class="text-[#BBB3AB] text-[14px] leading-[15.23px] pt-[8px]">Oak tree <br> High quality
@@ -309,6 +343,10 @@
     </footer>
 
     <script type="module" src="/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -318,14 +356,14 @@
     <script>
         // Fungsi untuk menambahkan kelas 'bg-dark' ketika scroll ke bawah
         window.addEventListener("scroll", function () {
-          const header = document.querySelector("header");
-          if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
-            header.classList.add("bg-dark");
-          } else {
-            header.classList.remove("bg-dark");
-          }
+            const header = document.querySelector("header");
+            if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
+                header.classList.add("bg-white");
+            } else {
+                header.classList.remove("bg-white");
+            }
         });
-      </script>
+    </script>
     <script>
         // Fungsi untuk toggle dropdown
         function toggleDropdown(id) {
