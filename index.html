@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <section class="mx-auto mb-[80px] lg:mb-[180px]">
+        <div class="relative">
+            <div class="absolute inset-0 bg-black bg-opacity-[50%]"></div>
+            <header>
+                <nav class="absolute flex items-center justify-between w-full text-[white] px-10 py-[21.5px]">
+                    <a href="#" class="font-bold lg:text-[34px] text-[18px] items-center font-montserrat">Kayyon</a>
+                    <div class="hidden lg:flex space-x-[44px] font-sans font-normal text-[16px] ">
+                        <a href="#product" class="group">Product
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#category" class="group">Category
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#contact" class="group" >Contact
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#aboutus" class="group">About Us
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        </div>
+                    <div class="hidden lg:flex items-center gap-3 md:flex lg:gap-[14px] place-content-right ">
+                    <a href="#search"><img src="/asset/search.svg" alt="search" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#chart"><img src="/asset/cart.svg" alt="cart" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#user"><img src="/asset/user.svg" alt="user" class=" lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    </div>
+                    <div class="lg:hidden flex items-center gap-3 md:flex lg:gap-[14px] place-content-right ">
+                    <a href="#search"><img src="/asset/search.svg" alt="search" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#chart"><img src="/asset/cart.svg" alt="cart" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#menu"><img src="/asset/burger.svg" alt="menu" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    </div>
+                </nav> 
+            </header>
+            <img src="/asset/home.jpg" alt="" class="object-cover lg:object-center  lg:h-[1024px] h-[812px] w-full object-left">
+            <div class="absolute top-[160px]">
+                <div class="flex flex-col items-center justify-center text-white gap-[30px] lg:gap-[100px]">
+                    <div class="lg:px-[270px] flex-col flex lg:gap-[60px] gap-7">
+                        <div class="text-center" data-aos="zoom-in" data-aos-offset="0">
+                            <h1 class="lg:text-[88px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">Discover Timeless</h1>
+                            <h2 class="lg:text-[88px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">Elegance</h2>
+                            <h3 class="lg:text-[88px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">for Every Space </h3>
+                        </div>
+                        <p class="px-4 lg:text-[16px] text-[10px] lg:leading-[25px] leading-[15px] text-center font-sans font-normal" data-aos="zoom-in" data-aos-offset="0">Elevate the beauty of your home with furniture designed with a touch of style and comfort.
+                            Explore a collection of furniture that combines craftsmanship with modern aesthetics.</p>
+                    </div>
+                    <div class="flex items-center justify-center gap-[10px] ">
+                        <div data-aos="zoom-in" data-aos-offset="0">
+                            <a href="#shopnow" class="text-[16px] font-bold font-lato text-center rounded-[8px] w-[214px] h-[68px] py-[12px] px-[34px] text-primary bg-white hover:bg-second hover:text-white">Shop Now</a>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-offset="0">
+                            <a href="#readmore" class="text-[16px] font-bold font-lato text-center rounded-[8px] w-[214px] h-[68px] py-[12px] px-[34px] text-primary bg-white hover:bg-second hover:text-white">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="container px-[23px] mx-auto mb-20 lg:mb-[180px] lg:px-0" data-aos="fade-up"  data-aos-duration="1500">
+        <div class="items-center justify-center mb-[26px] lg-[37px] text-center lg:px-56">
+            <p class="lg:text-[18px] text-[12px] font-semibold font-sans text-second">Product</p>
+            <h2 class="lg:text-[38px] text-[16px] font-bold font-sans">Our Popular Collection</h2>
+            <p class="lg:text-[18px] text-[10px] text-center font-normal font-sans text-primary">
+                Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc.
+                Velit tincidunt sagittis eget cursus cras rhoncus adipiscing tristique
+            </p>
+        </div>
+
+        <div>
+            <div class="flex justify-center">
+                <div  class="grid grid-cols-2 gap-6 mb-10 lg:gap-5 lg:grid-cols-3">
+                    <div >
+                        <div data-aos="flip-left" data-aos-duration="1500"  class="flex flex-col gap-3 lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] lg:rounded-t-[20px] rounded-t-[8px]">
+                            <a href="#SingleSofaAesthetic">
+                                <img src="/asset/card1.jpg" alt="sofa" class="lg:w-[440px] w-full object-cover lg:h-[500px] h-[172px] lg:rounded-t-[20px] rounded-t-[8px]">
+                            </a>
+                            <div class="flex flex-col gap-[14px] lg:py-3 lg:px-2">
+                                <figcaption class="font-sans lg:font-bold font-normal lg:text-[16px] text-[10px] text-forth">Chair</figcaption>
+                                <h2 class="font-sans lg:text-[24px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
+                                    Single Sofa Aesthetic
+                                </h2>
+                                <p class="font-sans lg:text-[16px] text-[10px] font-normal text-black">
+                                    Combination Of Wood And Wool
+                                </p>
+                                <p class="font-sans lg:text-[20px] text-[14px] font-bold">
+                                    $28.15
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div data-aos="flip-left" data-aos-duration="1500" class="flex flex-col gap-3 lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] lg:rounded-t-[20px] rounded-t-[8px]">
+                            <a href="#DjatiTable">
+                                <img src="/asset/card2.jpg" alt="sofa" class="lg:w-[440px] w-full object-cover lg:h-[500px] h-[172px] lg:rounded-t-[20px] rounded-t-[8px]">
+                            </a>
+                            <div class="flex flex-col gap-[14px] lg:py-3 lg:px-2">
+                                <figcaption class="font-sans lg:font-bold font-normal lg:text-[16px] text-[10px] text-forth">table</figcaption>
+                                <h2 class="font-sans lg:text-[24px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
+                                    Djati Table
+                                </h2>
+                                <p class="font-sans lg:text-[16px] text-[10px] font-normal text-black">
+                                    Combination Of Wood And Wool
+                                </p>
+                                <p class="font-sans lg:text-[20px] text-[14px] font-bold">
+                                    $33.50
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1500" class="hidden lg:block">
+                        <div class="flex flex-col gap-3 border-[2px] border-[rgba(0, 0, 0, 0.18)]lg:rounded-t-[20px] rounded-t-[8px]">
+                            <a href="#BrownAestheticSofa">
+                                <img src="/asset/card3.jpg" alt="sofa" class="lg:w-[440px] w-full object-cover lg:h-[500px] h-[172px]lg:rounded-t-[20px] rounded-t-[8px]">
+                            </a>
+                            <div class="flex flex-col gap-[14px] lg:py-3 lg:px-2">
+                                <figcaption class="font-sans lg:font-bold font-normal lg:text-[16px] text-[10px] text-forth">Sofa</figcaption>
+                                <h2 class="font-sans lg:text-[24px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
+                                    Brown Aesthetic Sofa
+                                </h2>
+                                <p class="font-sans lg:text-[16px] text-[10px] font-normal text-black">
+                                    Combination Of Wood And Wool
+                                </p>
+                                <p class="font-sans lg:text-[20px] text-[14px] font-bold">
+                                    $99.98
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="flex justify-end ">
+            <div class="lg:w-[210px]  justify-between gap-[14px] flex border-[2px] border-third rounded-[8px]  lg:py-[23px] lg:px-[31.5px] px-[11.5px] py-[10.5px]">
+                <a href="#seeall" class="text-center lg:text-[16px] text-[10px]">See All Product </a>
+                <img src="/asset/arrow-right.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto mb-[80px] lg:mb-[180px]" data-aos="fade-up" data-aos-duration="1500">
+        <div class="mb-10 text-center lg:mb-20">
+            <h2 class="font-bold lg:text-[38px] text-[16px]">Shop by Categories</h2>
+        </div>
+
+        <div class="lg:flex lg:gap-5 gap-[10px] lg:space-y-0 space-y-[10px] lg:px-0 px-6">
+            <div class="lg:w-[50%] relative" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="absolute inset-0 bg-black bg-opacity-30 lg:rounded-[20px] rounded-[10px]"></div>
+                <img src="/asset/kategori1.jpg" alt="" class="lg:h-[801px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]">
+                <h3 class="absolute bottom-0 lg:py-[26px] py-4 lg:px-[38px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up">Our Beds Collection : Your Sleep Space With Comfort and Style</h3>
+            </div>
+            <div class="lg:w-[50%] flex flex-col lg:gap-5 gap-[10px]" >
+                <div class="relative" data-aos="zoom-in" data-aos-duration="1500">
+                    <img src="/asset/kategori2.jpg" alt="" class="lg:h-[381px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]">
+                <h3 class="absolute bottom-0 lg:py-[26px] py-4 lg:px-[38px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up">See All Our Sofa Collection</h3>
+                </div>
+                <div class="lg:flex lg:gap-4 gap-[10px] lg:space-y-0 space-y-[10px]">
+                    <div class="lg:w-[50%] relative" data-aos="zoom-in" data-aos-duration="1500">
+                        <img src="/asset/kategori3.jpg" alt="" class="lg:h-[400px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]">
+                        <h3 class="absolute bottom-0 lg:py-[26px] py-4 lg:px-[29px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up">Our Chair Collection</h3>
+                    </div>
+                    <div class="lg:w-[50%] relative" data-aos="zoom-in" data-aos-duration="1500">
+                        <img src="/asset/kategori4.jpg" alt="" class="lg:h-[400px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]">
+                        <a href="#seeall" class="lg:flex lg:justify-between text-center right-14 left-14 absolute bottom-7 lg:py-[16px] py-[9.5px] px-[12.5px] lg:px-[27px] lg:text-[14px] text-[10px] bg-white lg:border-[2px] border-border rounded-[8px]" data-aos="fade-up" data-aos-duration="1500">See All Collection
+                            <img src="/asset/arrow-right.svg" alt="" class="hidden lg:block">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto mb-[80px] lg:mb-[180px]" data-aos="zoom-in" data-aos-duration="1500">
+        <div class="relative">
+            <div class="absolute inset-0 bg-black bg-opacity-35 lg:rounded-[20px]"></div>
+            <img src="/asset/talented.jpg" alt="" class="lg:h-[572px] h-[220px] object-cover w-full lg:rounded-[20px]">
+            <div class="absolute top-0 lg:py-[60px] py-[14px] lg:px-[42px] px-[30px]">
+                <div class="flex flex-col text-center lg:gap-[30px] gap-[16px] ">
+                    <div class="flex flex-col lg:gap-[26px] gap-[16px] lg:w-[60%] ">
+                        <h2 class="font-sans lg:px-0 lg:text-left px-14 text-white lg:text-[60px] text-[16px] font-bold lg:leading-[78px] leading-[20.8px]" data-aos="fade-down" data-aos-duration="1500">Crafted by talented and
+                            high quality material
+                        </h2>
+                        <p class="max-w-[630px] font-sans capitalize text-white lg:text-left lg:text-[24px] text-[10px] lg:leading-[40.8px] leading-[13.62px] font-normal" data-aos="fade-down" data-aos-duration="1500">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget cursus cras</p>
+                    </div>
+                    <div class="space-y-4 lg:space-y-16 lg:flex lg:justify-between">
+                        <div class="flex justify-between text-white lg:px-0 gap-9 " data-aos="fade-up" data-aos-duration="1500">
+                            <div>
+                                <p class="lg:text-[44px] text-[12px] font-bold">20+</p>
+                                <p class="lg:text-[22px] text-[10px] font-normal">Years Experience</p>
+                            </div>
+                            <div>
+                                <p class="lg:text-[44px] text-[12px] font-bold">483</p>
+                                <p class="lg:text-[22px] text-[10px] font-normal">Happy Client</p>
+                            </div>
+                            <div>
+                                <p class="lg:text-[44px] text-[12px] font-bold">150+</p>
+                                <p class="lg:text-[22px] text-[10px] font-normal">Project Finished</p>
+                            </div>
+                        </div>
+                        <div class="lg:order-first" data-aos="fade-down" data-aos-duration="1500">
+                            <a href="#" class="bg-white lg:rounded-[10px] rounded-[4px] lg:border-none border-border border-[2px] text-primary lg:flex-col-reverse lg:text-[18px] text-[10px] lg:font-semibold font-normal lg:py-[10px] py-[5px] px-[18px] lg:px-[28px]" >Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section class="mb-[80px] lg:mb-[180px]">
+        <div class="lg:flex bg-primary lg:py-[34px] py-[21px] px-[80px] lg:px-[38px] lg:justify-between lg:space-y-0 space-y-[30px]" >
+            <div class=" justify-between flex lg:gap-[45px] gap-3" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" >
+                <img src="/asset/delivery.svg" alt="" class="lg:w-[70px] lg:h-[70px] w-[38px] h-[38px]">
+                <div class="flex-col gap-2">
+                    <p class="font-bold font-lato lg:text-[30px] text-[16px] text-white">Free Delivery</p>
+                    <p class="lg:text-[18px] text-[12px] text-white">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="flex justify-between lg:gap-[45px] gap-3" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" data-aos-delay="400">
+                <div class="flex-col gap-2">
+                    <p class="font-bold font-lato lg:text-[30px] text-[16px] text-white">Support 24/7</p>
+                    <p class="lg:text-[18px] text-[12px] text-white">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <img src="/asset/clock.svg" alt="" class=" lg:order-first lg:w-[70px] lg:h-[70px] w-[38px] h-[38px]">
+            </div>
+            <div class="flex justify-between lg:gap-[45px] gap-3" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" data-aos-delay="700">
+                <img src="/asset/like-tag.svg" alt="" class="lg:w-[70px] lg:h-[70px] w-[38px] h-[38px]">
+                <div class="flex-col gap-2">
+                    <p class="font-bold font-lato lg:text-[30px] text-[16px] text-white">100 % Authentic</p>
+                    <p class="lg:text-[18px] text-[12px] text-white">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </section>
+
+    <section class="container mx-auto"  data-aos="fade-up"  data-aos-duration="1500">
+        <h2 class="text-center lg:text-[38px] text-[16px] font-semibold font-lato lg:mb-[60px] mb-[33px]">See how our clients happy with our services</h2>
+
+        <div class="container px-20 mx-auto swiper testi-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper ">
+            <!-- Slides -->
+            <div class="max-w-full swiper-slide">
+                <div class="flex gap-[14px] lg:gap-[136px]">
+                    <div class="flex flex-col gap-[22px] lg:gap-8">
+                        <div class="flex lg:gap-6 gap-[22px]">
+                            <img src="/asset/aboy.jpg" alt="" class="lg:h-[96px] h-[50px] lg:w-[96px] w-[50px] object-cover rounded-full">
+                            <div class="flex flex-col justify-center gap-2">
+                                <p class="font-lato font-semibold lg:text-[30px] text-[16px]">Aboy</p>
+                                <img src="/asset/star.svg" alt="" class="lg:w-[157px] w-[76px]">
+                            </div>
+                        </div>
+                        <p class="text-[12px] lg:text-[22px] font-lato capitalize text-primary font-normal">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="max-w-full swiper-slide">
+                <div class="flex  lg:grid-cols-3 grid-cols-2 gap-[14px] lg:gap-[136px]">
+                    <div class="flex flex-col gap-[22px] lg:gap-8">
+                        <div class="flex lg:gap-6 gap-[22px]">
+                            <img src="/asset/james.jpeg" alt="" class="lg:h-[96px] h-[50px] lg:w-[96px] w-[50px] object-cover rounded-full">
+                            <div class="flex flex-col justify-center gap-2">
+                                <p class="font-lato font-semibold lg:text-[30px] text-[16px]">James</p>
+                                <img src="/asset/star.svg" alt="" class="lg:w-[157px] w-[76px]">
+                            </div>
+                        </div>
+                        <p class="text-[12px] lg:text-[22px] font-lato capitalize text-primary font-normal">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="max-w-full swiper-slide">
+                <div class="flex  lg:grid-cols-3 grid-cols-2 gap-[14px] lg:gap-[136px]">
+                    <div class="flex flex-col gap-[22px] lg:gap-8">
+                        <div class="flex lg:gap-6 gap-[22px]">
+                            <img src="/asset/maya.jpeg" alt="" class="lg:h-[96px] h-[50px] lg:w-[96px] w-[50px] object-cover rounded-full">
+                            <div class="flex flex-col justify-center gap-2">
+                                <p class="font-lato font-semibold lg:text-[30px] text-[16px]">Maya</p>
+                                <img src="/asset/star.svg" alt="" class="lg:w-[157px] w-[76px]">
+                            </div>
+                        </div>
+                        <p class="text-[12px] lg:text-[22px] font-lato capitalize text-primary font-normal">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="max-w-full swiper-slide">
+                <div class="flex  lg:grid-cols-3 grid-cols-2 gap-[14px] lg:gap-[136px]">
+                    <div class="flex flex-col gap-[22px] lg:gap-8">
+                        <div class="flex lg:gap-6 gap-[22px]">
+                            <img src="/asset/aboy.jpg" alt="" class="lg:h-[96px] h-[50px] lg:w-[96px] w-[50px] object-cover rounded-full">
+                            <div class="flex flex-col justify-center gap-2">
+                                <p class="font-lato font-semibold lg:text-[30px] text-[16px]">Aboy</p>
+                                <img src="/asset/star.svg" alt="" class="lg:w-[157px] w-[76px]">
+                            </div>
+                        </div>
+                        <p class="text-[12px] lg:text-[22px] font-lato capitalize text-primary font-normal">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="flex justify-center mt-96">
+                <div class="absolute right-0 transform -translate-y-1/2 cursor-pointer custom-next top-1/2">
+                    <img src="asset/arrow-right1.svg" alt="Next" class="w-8 h-8">
+                </div>
+                <div class="absolute left-0 transform -translate-y-1/2 cursor-pointer custom-prev top-1/2">
+                    <img src="asset/arrow-left.svg" alt="Previous" class="w-8 h-8">
+                </div>
+            </div>
+            
+        </div>
+    
+        
+    </section>
+
+    
+    
+
+    <footer class="bg-primary py-[68px] px-[40px]">
+        <div class="flex flex-col lg:gap-[160px] gap-[70px]">
+            <div class="lg:flex justify-between mx-auto lg:space-y-0 space-y-[28px]">
+                <div class="flex flex-col  lg:gap-[26px] gap-2 lg:w-[37%] text-center lg:text-left">
+                    <h3 class="lg:text-[24px] text-[22px] font-bold font-montserrat text-white" data-aos="zoom-in" data-aos-offset="0">Kayyon</h3>
+                    <p class="font-normal text-[16px] leading-6 text-white" data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur. Sit tempor nibh hac turpis lacus arcu. Imperdiet tristique nisiullamcorper lacus mattis consectetur odio suscipit tristique.</p>
+                </div>
+                <div class="gap-5 text-center lg:text-left lg:flex lg:space-y-0 space-y-[25px]">
+                    <div class="flex flex-col lg:gap-[26px] gap-2">
+                        <h3 class="lg:text-[24px] text-[22px] font-bold  text-white" data-aos="zoom-in" data-aos-offset="0">About</h3>
+                        <div class="flex flex-col lg:gap-3 gap-2 text-white text-[14px] lg:text-[18px]" >
+                            <a href="#kayyonexport" data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="200">Kayyon Export</a>
+                            <a href="#ouroffice"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="350">Our Office Factory</a>
+                            <a href="#aboutus"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="400">Our Sustainability Efforts</a>
+                            <a href="#"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="450">About Us</a>
+                            <a href="#"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="600">Contact</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:gap-[26px] gap-2">
+                        <h3 class="lg:text-[24px] text-[22px] font-bold  text-white" data-aos="zoom-in" data-aos-offset="0">Support</h3>
+                        <div class="flex flex-col lg:gap-3 gap-2 text-white text-[14px] lg:text-[18px]">
+                            <a href="#FAQs" data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="200">FAQs</a>
+                            <a href="#howtoplace"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="350">How To Place And Order</a>
+                            <a href="#shippingpolicy"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="450">Shipping Policy</a>
+                            <a href="#privacypolicy"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="500">Privacy Policy</a>
+                            <a href="#careguides"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="600">Care Guides</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:gap-[26px] gap-2">
+                        <h3 class="lg:text-[24px] text-[22px] font-bold  text-white" data-aos="zoom-in" data-aos-offset="0">Shop</h3>
+                        <div class="flex flex-col lg:gap-3 gap-2 text-white text-[14px] lg:text-[18px]">
+                            <a href="#FAQs" data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="200">Entryways</a>
+                            <a href="#howtoplace"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="350">Shop By Categories</a>
+                            <a href="#shippingpolicy"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="450">All Product</a>
+                            <a href="#privacypolicy"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="500">Privacy Policy</a>
+                            <a href="#careguides"  data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="600">Trending Product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="items-center justify-center text-center lg:space-y-0 space-y-[14px] text-white lg:justify-between lg:flex">
+                <div class="flex justify-center gap-5" data-aos="zoom-in" data-aos-offset="0">
+                    <a href="#facebook">
+                        <img src="/asset/fb.svg" alt="fb">
+                    </a>
+                    <a href="#instagram">
+                        <img src="/asset/ig.svg" alt="ig">
+                    </a>
+                    <a href="#x">
+                        <img src="/asset/x.svg" alt="x">
+                    </a>
+                </div>
+                <p class="order-first" data-aos="zoom-in" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const swiper = new Swiper('.testi-slider', {
+            loop:true,
+            // Navigation arrows
+            navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+            },
+        breakpoints:{
+            375:{
+            slidesPerView:2,
+            },
+            1024:{
+            slidesPerView:3, 
+            }
+        }
+        });
+    </script>
+</body>
+</html>
