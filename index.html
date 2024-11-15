@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <title>Vite App</title>
     <style>
       li, span, h1, p, a {
@@ -25,7 +26,7 @@
       }
 
       #menuButton.open #line1 {
-        transform: rotate(-45deg) translateY(10px);
+        transform: rotate(-45deg) translateY(12px);
       }
 
       #menuButton.open #line2 {
@@ -33,7 +34,7 @@
       }
 
       #menuButton.open #line3 {
-        transform: rotate(45deg) translateY(-10px);
+        transform: rotate(45deg) translateY(-12px);
       }
 
       #dropdownMenu {
@@ -111,13 +112,25 @@
       /* Path Animation N */
 
       /* Slider Tertimonial */
+      .swiper-container {
+        width: 100%;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sample-slider .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+      /* Slider Testimonial N */
       
     </style>
 
   </head>
 
   <body class="overflow-x-hidden">
-    <header class="header sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-[8px] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px]">
+    <header class="header sticky top-0 z-50 flex flex-row justify-between items-center bg-[#F4FFE6] border-b border-[#0000001A] py-2 px-5 sm:py-3 sm:px-10 md:py-4 md:px-14 lg:py-5 lg:px-20 xl:py-6 xl:px-28">
 
       <!-- Logo -->
       <svg class="w-[67px] h-[24px] md:w-[87px] md:h-[28px] lg:w-[107px] lg:h-[34px]" viewBox="0 0 107 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,23 +155,23 @@
 
       <!-- Desktop Navbar -->
       <nav class="navbar-menu">
-        <ul class="hidden sm:flex flex-row items-center w-fit h-auto sm:gap-[16px] lg:gap-[22px] xl:gap-[32px]">
-          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+        <ul class="hidden sm:flex flex-row items-center w-fit h-auto sm:gap-4 lg:gap-6 xl:gap-8">
+          <li class="font-normal sm:text-xs md:text-sm lg:text-base text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Home</a>
           </li>
-          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-xs md:text-sm lg:text-base text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Features</a>
           </li>
-          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-xs md:text-sm lg:text-base text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">About Us</a>
           </li>
-          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-xs md:text-sm lg:text-base text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Download</a>
           </li>
-          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-xs md:text-sm lg:text-base text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Blog</a>
           </li>
-          <li class="font-normal sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal text-[#6D6D6D] hover:font-semibold hover:text-black">
+          <li class="font-normal sm:text-xs md:text-sm lg:text-base text-[#6D6D6D] hover:font-semibold hover:text-black">
             <a href="#">Support</a>
           </li>
         </ul>
@@ -169,75 +182,77 @@
       <div class="sm:hidden">
 
         <!-- Button dropdown -->
-        <button id="menuButton" class="relative w-6 h-[16px] focus:outline-none">
-          <div id="line1" class="absolute w-full h-[2.5px] bg-black rounded transition-all duration-300 top-[0px]"></div>
-          <div id="line2" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-[7px]"></div>
-          <div id="line3" class="absolute w-full h-[2.5px] bg-black rounded transition-all duration-300 top-[14px]"></div>
+        <button id="menuButton" class="relative w-6 h-4 focus:outline-none">
+          <div id="line1" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-0"></div>
+          <div id="line2" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-2"></div>
+          <div id="line3" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-4"></div>
         </button>
 
         </button>
 
         <!-- Dropdown Menu -->
-        <ul id="dropdownMenu" class="hidden flex flex-col absolute justify-between right-0 z-10 w-full h-[100vh] pb-[140px] mt-auto bg-[#F4FFE6] shadow-md">
+        <ul id="dropdownMenu" class="hidden flex flex-col absolute gap-6 right-0 z-10 w-full h-[85vh] pb-36 mt-auto bg-[#F4FFE6] shadow-md">
           <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] mt-[15px] text-[14px] leading-normal hover:font-semibold hover:text-black">
+            <a href="#" class="block px-5 py-2 text-[#6D6D6D] mt-4 text-sm leading-normal hover:font-semibold hover:text-black">
               Home 
               <div class="w-full h-[0.5px] bg-[#b4b4b4] "></div>
             </a>
           </li>
           <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">
+            <a href="#" class="block px-5 py-2 text-[#6D6D6D] text-sm leading-normal hover:font-semibold hover:text-black">
               Features
               <div class="w-full h-[0.5px] bg-[#b4b4b4] "></div></a>
             </a>
           </li>
           <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">
+            <a href="#" class="block px-5 py-2 text-[#6D6D6D] text-sm leading-normal hover:font-semibold hover:text-black">
               About Us
               <div class="w-full h-[0.5px] bg-[#b4b4b4] "></div></a>
             </a>
           </li>
           <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">
+            <a href="#" class="block px-5 py-2 text-[#6D6D6D] text-sm leading-normal hover:font-semibold hover:text-black">
               Download
               <div class="w-full h-[0.5px] bg-[#b4b4b4] "></div></a>
             </a>
           </li>
           <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">
+            <a href="#" class="block px-5 py-2 text-[#6D6D6D] text-sm leading-normal hover:font-semibold hover:text-black">
               Blog
               <div class="w-full h-[0.5px] bg-[#b4b4b4] "></div></a>
             </a>
           </li>
           <li>
-            <a href="#" class="block px-[20px] py-2 text-[#6D6D6D] text-[14px] leading-normal hover:font-semibold hover:text-black">
+            <a href="#" class="block px-5 py-2 text-[#6D6D6D] text-sm leading-normal hover:font-semibold hover:text-black">
               Support
               <div class="w-full h-[0.5px] bg-[#b4b4b4] "></div></a>
             </a>
           </li>
-          <li><a href="#" class="block px-[20px] py-2 font-bold text-black text-[16px] leading-normal underline">Sign Up</a></li>
+          <li><a href="#" class="block px-5 py-2 font-bold text-black text-base leading-normal underline">Sign Up</a></li>
         </ul>
 
       </div>
 
       <!-- Button Sign In -->
-      <a href="" class="hidden sm:flex justify-center items-center sm:py-[10px] sm:px-[12px] md:py-[12px] md:px-[16px] lg:py-[14px] lg:px-[20px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black"><span class="font-semibold text-white sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-normal">Sign Up</span></a>
+      <a href="" class="hidden sm:flex justify-center items-center sm:py-[10px] sm:px-[12px] md:py-[12px] md:px-[16px] lg:py-[14px] lg:px-[20px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black">
+        <span class="font-semibold text-white sm:text-xs lg:text-base">Sign Up</span>
+      </a>
 
     </header>
 
     <main id="site-main" class="overflow-x-hidden overflow-y-hidden">
 
       <!-- Hero Section -->
-      <section class="bg-[#F4FFE6] py-[8px] lg:h-[80vh] px-[20px] sm:py-[12px] sm:px-[40px] md:py-[16px] md:px-[60px] lg:py-[20px] lg:px-[80px] xl:py-[24px] xl:px-[120px] overflow-hidden relative">
-        <h1 class="font-bold text-center leading-[1] text-[55px] sm:text-[85px] md:text-[100px] xl:text-[120px]">
+      <section class="flex flex-col justify-between w-full h-[85vh] lg:h-[80vh] py-2 px-5 sm:py-3 sm:px-10 md:py-4 md:px-14 lg:py-5 lg:px-20 xl:py-6 xl:px-28 bg-[#F4FFE6] overflow-hidden relative">
+        <h1 class="font-bold text-center leading-[1] text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[6rem] xl:text-[7.5rem]">
           Boost Your Productivity. Simplify Your Day.
         </h1>
-        <div class="flex flex-col w-[300px] sm:w-[190px] md:w-[230px] lg:w-[265px] xl:w-[336px] mt-[40px] sm:mt-[30px] md:mt-[45px] lg:mt-[60px] xl:mt-[95px] gap-[8px] lg:gap-[16px] mb-0">
-          <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] text-[#6D6D6D]">
+        <div class="flex flex-col w-full max-w-[45%] md:max-w-[45%] lg:max-w-[25%%] xl:max-w-[25%] gap-2 lg:gap-4 mt-auto">
+          <p class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-justify lg:text-left text-[#6D6D6D]">
             Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
-          </span>
-          <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
-            <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
+          </p>
+          <a class="flex w-fit justify-center items-center rounded-full bg-black py-2 px-4 lg:py-4 lg:px-8">
+            <span class="font-bold text-white text-xs lg:text-sm xl:text-base">
               Download Now
             </span>
           </a>
@@ -245,139 +260,140 @@
         <figure id="animated-figure" class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 sm:top-[30%] md:top-[20%] xl:top-[15%]">
           <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[285px] lg:w-[385px] xl:w-[426px]" />
         </figure>
-        <div class="flex flex-row w-fit ml-auto gap-[16px] md:gap-[24px] lg:gap-[32px] xl:gap-[40px] md:-mt-[31px]">
-          <div class="flex flex-col gap-[3px] w-fit">
-            <span id="user-count" class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">0</span>
-            <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">Active Users</span>
+        <div class="flex flex-row w-fit ml-auto gap-4 md:gap-6 lg:gap-8 xl:gap-10 -mt-6 md:-mt-8">
+          <div class="flex flex-col gap-1 w-fit">
+            <h3 id="user-count" class="font-semibold leading-[1] text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem]">0</h3>
+            <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">Active Users</span>
           </div>
-          <div class="flex flex-col gap-[3px] w-fit">
-            <span id="download-count" class="font-bold leading-[1] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px]">0</span>
-            <span class="font-normal leading-[1.9] text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">Download</span>
+          <div class="flex flex-col gap-1 w-fit">
+            <h3 id="download-count" class="font-semibold leading-[1] text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem]">0</h3>
+            <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">Download</span>
           </div>
         </div>        
       </section>
       
       <!-- 2 -->
-      <section class="flex flex-col gap-4 xl:gap-[24px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
-        <div class="flex flex-col gap-4 lg:flex-row md:justify-between">
-          <span class="xl:w-[42.25%] font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1.2]">
+      <section class="flex flex-col gap-4 xl:gap-6 py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
+        <div class="flex flex-col lg:flex-row gap-4 lg:justify-between">
+          <h2 class="xl:w-[42.25%] font-semibold text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-[1.2]">
             Used by various roles in various companies
-          </span>
-          <p class="xl:w-[41.75%] self-end font-normal leading-[1.9] text-right text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-[#6D6D6D]">
+          </h2>
+          <p class="xl:w-[41.75%] font-normal self-end text-right leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">
             Empowering Professionals in Every Industry—From Managers to Creatives—Prodify Helps Teams Stay Organized, Improve Collaboration,
             and Reach Their Productivity Goals Faster.
           </p>
         </div>
       
-        <div class="bg-[#F6F6F6] py-[24px] md:py-[32px] lg:py-[48px] rounded-[16px] overflow-x-hidden">
-          <div class="b-slider marquee-slider flex flex-row items-center gap-[24px] md:gap-[32px] lg:gap-[48px]">
+        <div class="bg-[#F6F6F6] py-6 md:py-8 lg:py-12 rounded-2xl overflow-x-hidden">
+          <div class="b-slider marquee-slider flex flex-row items-center gap-6 md:gap-8 lg:gap-12">
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Student</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Student</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">CEO</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">CEO</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Trainer</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Trainer</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Designer</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Designer</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Student</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Student</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">CEO</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">CEO</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Trainer</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Trainer</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
             </div>
             <div class="b-slider__slide">
-              <div class="bg-[#888888] rounded-full min-w-[12px] h-3 w-3 sm:min-w-[14px] sm:h-3.5 sm:w-3.5 lg:min-w-[16px] lg:h-4 lg:w-4 xl:min-w-[20px] xl:h-5 xl:w-5"></div>
+              <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
             <div class="b-slider__slide">
-              <span class="font-bold text-[14px] md:text-[20px] lg:text-[28px] xl:text-[36px] leading-[1.2] text-[#888888]">Designer</span>
+              <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Designer</span>
             </div>
           </div>
         </div>
       </section>      
 
       <!-- 3 -->
-      <section class="flex flex-col gap-[20px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
-        <div class="flex flex-col md:flex-row gap-[20px]">
-          <div class="flex flex-col md:w-[50%] md:h-[395px] lg:h-[460px] xl:h-[556px] gap-[40px] md:justify-between rounded-[24px] p-[28px] md:p-[28px] lg:p-[38px] xl:p-[48px] bg-[#F4FFE6]">
-            <span class="font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1]">All-in-One Productivity Solution</span>
+      <section class="flex flex-col gap-5 py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
+
+        <div class="flex flex-col md:flex-row gap-5">
+          <div class="flex flex-col w-full md:w-[50%] md:h-[24.6rem] lg:h-[28.7rem] xl:h-[34.75rem] gap-10 md:justify-between rounded-3xl p-7 lg:p-9 xl:p-12 bg-[#F4FFE6]">
+            <h2 class="font-semibold text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-[1.2]">All-in-One Productivity Solution</h2>
       
-            <div class="flex flex-col gap-[12px] md:gap-[24px]">
-              <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">
+            <div class="flex flex-col gap-3 md:gap-6">
+              <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem]">
                 From task management to reminders, calendar integration to focus mode, Prodify gives you the tools to boost your productivity and take control of your time.
               </span>
       
-              <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
-                <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
+              <a class="flex w-fit justify-center items-center rounded-full bg-black py-2 px-4 lg:py-4 lg:px-8">
+                <span class="font-bold text-white text-xs lg:text-sm xl:text-base">
                   Download Now
                 </span>
               </a>
             </div>
           </div>
       
-          <div class="flex flex-col md:w-[50%] md:h-[395px] lg:h-[460px] xl:h-[556px] gap-[20px] md:justify-between items-center rounded-[24px] p-[28px] md:p-[28px] lg:p-[38px] xl:p-[48px] border border-[#E7E7E7]">
+          <div class="flex flex-col w-full md:w-[50%] md:h-[24.6rem] lg:h-[28.7rem] xl:h-[34.75rem] gap-5 md:justify-between items-center rounded-3xl p-7 lg:p-9 xl:p-12 border border-[#E7E7E7]">
             <figure>
               <img src="public/illustration.png" class="w-[50%] md:w-[240px] lg:w-[320px] xl:w-[355px] xl:h-[304px] justify-self-center" alt="illustration" />
             </figure>
       
-            <span class="font-semibold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[1]">Do more and stay productive</span>
+            <h2 class="font-semibold text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-[1.2]">Do more and stay productive</h2>
           </div>
         </div>
       
         <div class="flex flex-col md:flex-row gap-[20px]">
-          <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[32px] border border-[#E7E7E7]">
+          <div class="flex flex-col md:w-[33.33%] md:h-[25rem] lg:h-[28.75rem] xl:h-[31.1rem] rounded-3xl p-6 gap-5 lg:gap-8 border border-[#E7E7E7]">
             <figure>
-              <img src="todolist.png" class="object-cover object-left md:h-[165px] lg:h-[240px] xl:h-[296px] items-center" alt="calendar" />
+              <img src="todolist.png" class="object-cover object-left md:h-[165px] lg:h-[240px] xl:h-[296px] justify-self-center " alt="calendar" />
             </figure>
       
-            <div class="flex flex-col gap-[8px]">
-              <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">To-do Lists</span>
-              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
+            <div class="flex flex-col gap-2">
+              <h3 class="font-semibold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem] leading-normal">To-do Lists</h3>
+              <p class="font-normal text-[0.75rem] lg:text-[0.875rem] leading-[1.8] text-[#6D6D6D]">
                 Organize tasks with categories, priorities, and deadlines. Break down tasks with subtasks and track your progress with ease.
               </p>
             </div>
           </div>
       
-          <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[24px] border border-[#E7E7E7]">
-            <div class="flex flex-col gap-[8px]">
-              <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">Smart Calendar</span>
-              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
+          <div class="flex flex-col md:w-[33.33%] md:h-[25rem] lg:h-[28.75rem] xl:h-[31.1rem] rounded-3xl p-6 gap-5 lg:gap-8 border border-[#E7E7E7]">
+            <div class="flex flex-col gap-2">
+              <h3 class="font-semibold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem] leading-normal">Smart Calendar</h3>
+              <p class="font-normal text-[0.75rem] lg:text-[0.875rem] leading-[1.8] text-[#6D6D6D]">
                 Integrate with your favorite calendar apps and manage tasks alongside events. Stay on top of your schedule with color-coded views and smart reminders.
               </p>
             </div>
@@ -387,14 +403,14 @@
             </figure>
           </div>
       
-          <div class="flex flex-col md:w-[33.33%] md:h-[400px] lg:h-[460px] xl:h-[499px] rounded-[24px] p-[24px] gap-[20px] lg:gap-[32px] border border-[#E7E7E7]">
+          <div class="flex flex-col md:w-[33.33%] md:h-[25rem] lg:h-[28.75rem] xl:h-[31.1rem] rounded-3xl p-6 gap-5 lg:gap-8 border border-[#E7E7E7]">
             <figure>
               <img src="timer.png" alt="Focus-Mode" class="justify-self-center object-cover w-[360px] md:h-[150px] lg:h-[205px] xl:h-[307px]" />
             </figure>
       
-            <div class="flex flex-col gap-[8px]">
-              <span class="font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[32px] leading-normal">Focus Mode</span>
-              <p class="font-normal text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.8] text-[#6D6D6D]">
+            <div class="flex flex-col gap-2">
+              <h3 class="font-semibold text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem] leading-normal">Focus Mode</h3>
+              <p class="font-normal text-[0.75rem] lg:text-[0.875rem] leading-[1.8] text-[#6D6D6D]">
                 Use the Pomodoro timer to stay focused. Block distractions and track your productive time.
               </p>
             </div>
@@ -403,74 +419,284 @@
       </section>      
 
       <!-- Testimonial Section -->
-      <section class="flex flex-col gap-[32px] md:gap-[54px] xl:gap-[72px] items-center py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
+      <section class="flex flex-col gap-8 md:gap-14 xl:gap-[4.5rem] items-center py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
 
-        <span class="font-semibold text-center text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal md:w-[490px] lg:w-[540px] xl:w-[715px]">
+        <span class="font-semibold text-center text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-normal md:w-[30.62rem] lg:w-[33.75rem] xl:w-[44.68rem]">
           Word of praise from others about our presence.
         </span>
 
         <div class="swiper-container sample-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+          
           <div class="swiper-wrapper" id="swiper-wrapper-f9d257a8e2a52fe0" aria-live="off" style="transition-duration: 3000ms; transform: translate3d(-1045px, 0px, 0px);">
             
-            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1" style="width: 179px; margin-right: 30px;">
-              <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo_ramen-removebg-preview-1.png" alt="Sponsor 4 Logo" title="Company">
+            <!-- SLIDE -->
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1">
+
+              <!-- CARD -->
+              <div class="flex flex-col gap-[1rem] lg:gap-[2rem] w-[17rem] min-h-[17rem] md:w-[18rem] md:min-h-[19rem] lg:w-[23rem] lg:min-h[20rem] xl:w-[24.12rem] xl:min-h-[20.31rem] bg-[#F6F6F6] rounded-2xl items-start p-4 sm:p-5 md:p-6 lg:p-6">
+              
+                <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+                </svg>
+          
+                <p class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                  As a project lead, Prodify helps me keep track of my team’s
+                  progress while staying on top of my own tasks. It’s been a
+                  game-changer for our productivity.
+                </p>
+          
+                <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                  <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                    <img src="avatar.png" alt="Profile picture" />
+                  </figure>
+          
+                  <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                    <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                      James M
+                    </span>
+                    <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                      Project Manager
+                    </span>
+                  </div>
+                </div>
+          
+              </div> 
+
+            </div>
+
+            <!-- SLIDE -->
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1">
+
+              <!-- CARD -->
+              <div class="flex flex-col gap-[1rem] lg:gap-[2rem] w-[17rem] min-h-[17rem] md:w-[18rem] md:min-h-[19rem] lg:w-[23rem] lg:min-h[20rem] xl:w-[24.12rem] xl:min-h-[20.31rem] bg-[#F6F6F6] rounded-2xl items-start p-4 sm:p-5 md:p-6 lg:p-6">
+              
+                <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+                </svg>
+          
+                <p class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                  As a project lead, Prodify helps me keep track of my team’s
+                  progress while staying on top of my own tasks. It’s been a
+                  game-changer for our productivity.
+                </p>
+          
+                <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                  <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                    <img src="avatar.png" alt="Profile picture" />
+                  </figure>
+          
+                  <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                    <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                      James M
+                    </span>
+                    <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                      Project Manager
+                    </span>
+                  </div>
+                </div>
+          
+              </div> 
+
+            </div>
+
+            <!-- SLIDE -->
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1">
+
+              <!-- CARD -->
+              <div class="flex flex-col gap-[1rem] lg:gap-[2rem] w-[17rem] min-h-[17rem] md:w-[18rem] md:min-h-[19rem] lg:w-[23rem] lg:min-h[20rem] xl:w-[24.12rem] xl:min-h-[20.31rem] bg-[#F6F6F6] rounded-2xl items-start p-4 sm:p-5 md:p-6 lg:p-6">
+              
+                <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+                </svg>
+          
+                <p class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                  As a project lead, Prodify helps me keep track of my team’s
+                  progress while staying on top of my own tasks. It’s been a
+                  game-changer for our productivity.
+                </p>
+          
+                <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                  <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                    <img src="avatar.png" alt="Profile picture" />
+                  </figure>
+          
+                  <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                    <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                      James M
+                    </span>
+                    <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                      Project Manager
+                    </span>
+                  </div>
+                </div>
+          
+              </div> 
+
+            </div>
+
+            <!-- SLIDE -->
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1">
+
+              <!-- CARD -->
+              <div class="flex flex-col gap-[1rem] lg:gap-[2rem] w-[17rem] min-h-[17rem] md:w-[18rem] md:min-h-[19rem] lg:w-[23rem] lg:min-h[20rem] xl:w-[24.12rem] xl:min-h-[20.31rem] bg-[#F6F6F6] rounded-2xl items-start p-4 sm:p-5 md:p-6 lg:p-6">
+              
+                <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+                </svg>
+          
+                <p class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                  As a project lead, Prodify helps me keep track of my team’s
+                  progress while staying on top of my own tasks. It’s been a
+                  game-changer for our productivity.
+                </p>
+          
+                <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                  <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                    <img src="avatar.png" alt="Profile picture" />
+                  </figure>
+          
+                  <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                    <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                      James M
+                    </span>
+                    <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                      Project Manager
+                    </span>
+                  </div>
+                </div>
+          
+              </div> 
+
+            </div>
+
+            <!-- SLIDE -->
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1">
+
+              <!-- CARD -->
+              <div class="flex flex-col gap-[1rem] lg:gap-[2rem] w-[17rem] min-h-[17rem] md:w-[18rem] md:min-h-[19rem] lg:w-[23rem] lg:min-h[20rem] xl:w-[24.12rem] xl:min-h-[20.31rem] bg-[#F6F6F6] rounded-2xl items-start p-4 sm:p-5 md:p-6 lg:p-6">
+              
+                <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+                </svg>
+          
+                <p class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                  As a project lead, Prodify helps me keep track of my team’s
+                  progress while staying on top of my own tasks. It’s been a
+                  game-changer for our productivity.
+                </p>
+          
+                <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                  <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                    <img src="avatar.png" alt="Profile picture" />
+                  </figure>
+          
+                  <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                    <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                      James M
+                    </span>
+                    <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                      Project Manager
+                    </span>
+                  </div>
+                </div>
+          
+              </div> 
+              
+            </div>
+               
+          </div>
+          
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+
+        <!-- <div class="swiper-container sample-slider-right swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <div class="swiper-wrapper" id="swiper-wrapper-f9d257a8e2a52fe0" aria-live="off" style="transition-duration: 3000ms; transform: translate3d(-1045px, 0px, 0px);">
+            
+            <div class="swiper-slide" role="group" aria-label="2 / 10" data-swiper-slide-index="1" style="width: 600px; margin-right: 30px;">
+              <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] min-h-[300px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+              
+                <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
+                </svg>
+          
+                <p class="line-clamp-1 font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+                  As a project lead, Prodify helps me keep track of my team’s
+                  progress while staying on top of my own tasks. It’s been a
+                  game-changer for our productivity.
+                </p>
+          
+                <div class="flex flex-row gap-[16px] w-auto h-auto items-center">
+                  <figure class="w-[48px] h-[48px] sm:w-[50px] sm:h-[50px] md:w-[52px] md:h-[52px] lg:w-[56px] lg:h-[56px] rounded-full overflow-hidden">
+                    <img src="avatar.png" alt="Profile picture" />
+                  </figure>
+          
+                  <div class="flex flex-col gap-[3px] lg:gap-[6px]">
+                    <span class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[20px]">
+                      James M
+                    </span>
+                    <span class="font-normal text-[10px] md:text-[12px] lg:text-[14px] leading-normal text-[#B0B0B0]">
+                      Project Manager
+                    </span>
+                  </div>
+                </div>
+          
+              </div> 
             </div>
             
-            <div class="swiper-slide" role="group" aria-label="3 / 10" data-swiper-slide-index="2" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide" role="group" aria-label="3 / 10" data-swiper-slide-index="2" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/taq-removebg-preview-1-1.png" alt="Sponsor 3 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide" role="group" aria-label="4 / 10" data-swiper-slide-index="3" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide" role="group" aria-label="4 / 10" data-swiper-slide-index="3" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/almond-logo-removebg-preview-1.png" alt="Sponsor 2 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide" role="group" aria-label="5 / 10" data-swiper-slide-index="4" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide" role="group" aria-label="5 / 10" data-swiper-slide-index="4" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/images-removebg-preview-1.png" alt="Sponsor 1 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 10" data-swiper-slide-index="5" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 10" data-swiper-slide-index="5" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo2-removebg-preview-1.png" alt="Sponsor 5 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="7 / 10" data-swiper-slide-index="6" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="7 / 10" data-swiper-slide-index="6" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/Group-3525.png" alt="Sponsor 4 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 10" data-swiper-slide-index="7" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="8 / 10" data-swiper-slide-index="7" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo6-removebg-preview-1.png" alt="Sponsor 1 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide" role="group" aria-label="9 / 10" data-swiper-slide-index="8" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide" role="group" aria-label="9 / 10" data-swiper-slide-index="8" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/logo3-removebg-preview.png" alt="Sponsor 2 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide" role="group" aria-label="10 / 10" data-swiper-slide-index="9" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide" role="group" aria-label="10 / 10" data-swiper-slide-index="9" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/Group-3524.png" alt="Sponsor 3 Logo" title="Company">
             </div>
             
-            <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 179px; margin-right: 30px;">
+            <div class="swiper-slide" role="group" aria-label="1 / 10" data-swiper-slide-index="0" style="width: 600px;">
               <img decoding="async" src="https://bikpays.com/wp-content/uploads/2024/07/1ab296_128b14ad1e38457a87c9f76755b0c462_mv2-removebg-preview-1-1.png" alt="Sponsor 5 Logo" title="Company">
             </div>
             
           </div>
           
           <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
+        </div> -->
 
         <div class="">
           
           <div class="flex flex-col w-auto h-auto gap-[15px] lg:gap-[20px]">
 
-          <div class="flex flex-row gap-[15px] lg:gap-[20px] justify-center">
+          <!-- <div class="flex flex-row gap-[15px] lg:gap-[20px] justify-center">
         
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] min-h-[300px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
               
               <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
               </svg>
         
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+              <p class="line-clamp-1 font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s
                 progress while staying on top of my own tasks. It’s been a
                 game-changer for our productivity.
@@ -493,14 +719,13 @@
         
             </div> 
 
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] min-h-[300px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
               
               <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
               </svg>
         
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+              <p class="line-clamp-1 font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s
                 progress while staying on top of my own tasks. It’s been a
                 game-changer for our productivity.
@@ -523,18 +748,17 @@
         
             </div> 
         
-          </div>
+          </div> -->
           
-          <div class="flex flex-row gap-[15px] lg:gap-[20px] justify-center">
+          <!-- <div class="flex flex-row gap-[15px] lg:gap-[20px] justify-center">
         
-            <!-- Testimonial Card -->
-            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] h-[240px] sm:h-[260px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
+            <div class="flex flex-col gap-[16px] lg:gap-[32px] w-[280px] min-h-[300px] md:w-[290px] md:h-[275px] lg:w-[360px] lg:h-[300px] xl:w-[386px] xl:h-[325px] bg-[#F6F6F6] rounded-[16px] items-start p-[18px] sm:p-[20px] md:p-[22px] lg:p-[24px]">
               
               <svg class="w-[30px] h-[24px] md:w-[34px] md:h-[26px] lg:w-[39px] lg:h-[31px]" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6105 30.5864V22.0405C21.6105 16.2777 23.0184 11.5627 25.8343 7.89544C28.6502 4.16272 32.8086 1.73973 38.3095 0.626465V7.99367C36.0174 8.51756 34.1183 9.49985 32.6122 10.9406C31.1715 12.3158 30.2219 13.9529 29.7635 15.852H36.3449V30.5864H21.6105ZM0 30.5864V22.0405C0 16.2777 1.40795 11.5627 4.22386 7.89544C7.03977 4.16272 11.1981 1.73973 16.699 0.626465V7.99367C14.407 8.51756 12.5079 9.49985 11.0017 10.9406C9.56099 12.3158 8.61144 13.9529 8.15304 15.852H14.7344V30.5864H0Z" fill="#060913" />
               </svg>
         
-              <p class="font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
+              <p class="line-clamp-1 font-semibold text-[12px] sm:text-[14px] lg:text-[16px] leading-[1.6] w-auto h-[128px]">
                 As a project lead, Prodify helps me keep track of my team’s
                 progress while staying on top of my own tasks. It’s been a
                 game-changer for our productivity.
@@ -557,7 +781,7 @@
         
             </div> 
         
-          </div>
+          </div> -->
         
         </div> 
         </div>
@@ -566,29 +790,27 @@
       </section>
 
       <!-- Download Link -->
-      <section class="flex flex-col gap-[32px] md:gap-[54px] xl:gap-[72px] py-[30px] px-[20px] sm:py-[40px] sm:px-[40px] md:px-[60px] lg:py-[60px] lg:px-[80px] xl:py-[80px] xl:px-[120px]">
+      <section class="flex flex-col gap-8 md:gap-14 xl:gap-[4.5rem] py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
         
-        <div class="bg-[#F4FFE6] py-[16px] px-[30px] md:py-[24px] md:px-[35px] xl:py-[48px] xl:px-[72px] xl:gap-[96px] rounded-[16px]">
+        <div class="bg-[#F4FFE6] py-4 px-8 md:py-6 md:px-9 xl:py-12 xl:px-[4.5rem] xl:gap-24 rounded-2xl">
 
-          <div class="flex flex-col gap-[16px] sm:gap-[18px] md:gap-[20px] lg:gap-[22px] xl:gap-[24px] items-center">
+          <div class="flex flex-col gap-4 md:gap-5 lg:gap-6 items-center">
 
-            <div class="flex flex-col items-center gap-[4px] lg:gap-[8px]">
+            <div class="flex flex-col items-center gap-2">
 
-              <span class="font-semibold text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-normal text-center">Download Now</span>
+              <h2 class="lg:w-[606px] font-semibold text-[2.5rem] md:text-[3rem] lg:text-[4rem] leading-[1.1] lg:leading-[76px] text-center">Start Your Productive Journey</h2>
 
-              <p class="font-normal text-center text-[10px] md:text-[12px] lg:text-[14px] xl:text-[14px] leading-[1.9]">
+              <p class="font-normal text-center leading-[1.9] text-[0.75rem] lg:text-[0.875rem]">
                 “Prodify has changed the way I work! The focus mode and
                 reminders have boosted my productivity significantly.”
               </p>
 
             </div>
 
-            <a class="flex w-fit justify-center items-center rounded-[100px] bg-black py-2 px-4 lg:py-[16px] lg:px-[32px]">
-              
-              <span class="font-bold text-white leading-[1.5] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
+            <a class="flex w-fit justify-center items-center rounded-full bg-black py-2 px-4 lg:py-4 lg:px-8">
+              <span class="font-bold text-white text-xs lg:text-sm xl:text-base">
                 Download Now
               </span>
-              
             </a>
 
           </div>
@@ -599,7 +821,7 @@
 
     </main>
 
-    <footer id="site-footer" class="footer flex flex-col gap-[40px] pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-[120px] relative overflow-hidden">
+    <footer id="site-footer" class="footer flex flex-col gap-[40px] pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-28 relative overflow-hidden">
 
       <div class="flex flex-col gap-[15px] lg:flex-row lg:justify-between">
 
@@ -807,7 +1029,7 @@
     </footer>
 
     <script type="module" src="/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
 
       // dropdown
@@ -832,12 +1054,14 @@
         function setTopPosition() {
           if (window.innerWidth >= 1280) {
             figure.style.setProperty("--target-top", "15%");
+          } else if (window.innerWidth >= 1024) {
+            figure.style.setProperty("--target-top", "25%")
           } else if (window.innerWidth >= 768) {
             figure.style.setProperty("--target-top", "20%");
           } else if (window.innerWidth >= 640) {
             figure.style.setProperty("--target-top", "30%");
           } else {
-            figure.style.setProperty("--target-top", "100%");
+            figure.style.setProperty("--target-top", "58%");
           }
         }
 
@@ -908,9 +1132,98 @@
       });
       // Path Animation N
 
-      // Slide Animation
+      // Slide Tertimonial
+      // const swiper = new Swiper(".sample-slider", {
+      //   loop: true,
+      //     autoplay: {
+      //     delay: 0,
+      //     pauseOnMouseEnter: true,
+      //     disableOnInteraction: true,
+      //   },
+      //   speed: 3000,
+      //   spaceBetween: 0,
+      //   breakpoints: {
+      //     320: {
+      //     slidesPerView: 'auto',
+      //     spaceBetween: 0,
+      //     },
+      //     480: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 10,
+      //     },
+      //     640: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 20,
+      //     },
+      //     768: {
+      //       slidesPerView: 2,
+      //       spaceBetween: 10,
+      //     },
+      //     850: {
+      //       slidesPerView: 3,
+      //       spaceBetween: 15,
+      //     },
+      //     1220: {
+      //       slidesPerView: 3,
+      //       spaceBetween: 20,
+      //     },
+      //   },
+      // });
+      
+      function initSwiper(selector, reverseDirection = false) {
+      new Swiper(selector, {
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: reverseDirection, 
+        },
+    
+        speed: 3000,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        direction: 'horizontal',
+        breakpoints: {
+          320: {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          850: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1220: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          
+        },
+      });
+  
+        if (reverseDirection) {
+          swiper.autoplay.stop();  
+          setInterval(() => {
+            swiper.slidePrev(); 
+          }, 3000); 
+        }
+      }
 
-      // N
+    initSwiper('.sample-slider');      
+    initSwiper('.sample-slider-right', true); 
+
+      // Slide Tertimonial N
 
 
     </script>
