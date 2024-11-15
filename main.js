@@ -1,4 +1,5 @@
 import './style.css'
+AOS.init();
 
 document.querySelector('#site-header').innerHTML = `
   <div class="navigation-wrapper">

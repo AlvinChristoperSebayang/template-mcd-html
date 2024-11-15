@@ -5,12 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
-  
     <header id="navbar" class="z-10 fixed top-0 left-0 w-full bg-transparent mx-auto transition duration-300 ease-in-out">
       <div class="container mx-auto">
         <nav class="flex justify-between items-center text-white px-[20px] py-[10px] lg:px-0 lg:py-[20px]">
@@ -21,10 +21,10 @@
           </div>
           <div class="flex items-center gap-5 px-3">
             <div>
-              <a href="#"><img src="/search.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mt-1 hidden md:inline lg:inline"></a>
+              <a href="#"><img src="/search.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mt-1 hidden"></a>
             </div>
             <div>
-              <a href="#" class="text-xl text-white hidden md:inline lg:inline font-helvetica">Menu</a>
+              <a href="#" class="text-xl text-white hidden md:inline font-helvetica lg:hidden">Menu</a>
             </div>
             <div class="relative">
               <a href="javascript:void(0);" onclick="toggleDropdown()">
@@ -52,12 +52,12 @@
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
                   <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[120px]">
-                    <h1 class="text-white">Living Room Is Always </h1>
-                    <h2 class="text-white">Beautiful With Light Theme</h2>
+                    <h1 class="text-white text-slide1">Living Room Is Always </h1>
+                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
                   </div>
             
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[400px] lg:bottom-64 left-[10%] md:left-[35%] group z-20">
+                  <div class="absolute bottom-[400px] lg:bottom-64 left-[10%] md:left-[35%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -77,7 +77,7 @@
                   </div>
                    
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[300px] lg:bottom-60 left-[50%] lg:left-[68%] group z-20">
+                  <div class="absolute bottom-[300px] lg:bottom-60 left-[50%] lg:left-[68%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -97,7 +97,7 @@
                   </div>
                    
                   <!-- Card 3 -->
-                  <div class="absolute bottom-[480px] lg:bottom-[561px] left-[55%] lg:left-[64%] group z-20">
+                  <div class="absolute bottom-[480px] lg:bottom-[561px] left-[55%] lg:left-[64%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -118,11 +118,11 @@
             
                   <div class=" absolute bottom-[60px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-0 font-helvetica z-20">
                     
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(0)">Living Room</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(1)">Dining Room</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(2)">Workspace</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(3)">Bedroom</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300" onclick="selectSlide(4)">Bathroom</button>
+                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Living Room</button>
+                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Dining Room</button>
+                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Workspace</button>
+                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bedroom</button>
+                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bathroom</button>
                     <a href="#all" class="">
                       <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[8px] px-[18px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
                     </a>
@@ -134,8 +134,12 @@
               <!-- home 2 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
+                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[120px]">
+                    <h1 class="text-white text-slide1">Dining Room Is Always </h1>
+                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[400px] lg:bottom-64 left-[10%] md:left-[35%] group z-20">
+                  <div class="absolute bottom-[400px] lg:bottom-64 left-[10%] md:left-[35%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -155,7 +159,7 @@
                   </div>
               
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[220px] lg:bottom-[340px] left-[15%] md:left-[60%] group z-20">
+                  <div class="absolute bottom-[220px] lg:bottom-[340px] left-[15%] md:left-[60%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -175,7 +179,7 @@
                   </div>
               
                   <!-- Card 3 -->
-                  <div class="absolute bottom-[280px] lg:bottom-[475px] left-[55%] md:left-[53%] group z-20">
+                  <div class="absolute bottom-[280px] lg:bottom-[475px] left-[55%] md:left-[53%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -200,8 +204,12 @@
               <!-- home 3 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
+                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[120px]">
+                    <h1 class="text-white text-slide1">Workspace Is Always </h1>
+                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[600px] lg:bottom-64 left-[10%] md:left-[25%] group z-20">
+                  <div class="absolute bottom-[600px] lg:bottom-64 left-[10%] md:left-[25%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -221,7 +229,7 @@
                   </div>
               
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[200px] lg:bottom-[320px] left-[19%] md:left-[78%] group z-20">
+                  <div class="absolute bottom-[200px] lg:bottom-[320px] left-[19%] md:left-[78%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -241,7 +249,7 @@
                   </div>
               
                   <!-- Card 3 -->
-                  <div class="absolute bottom-[300px] lg:bottom-[475px] left-[57%] md:left-[55s%] group z-20">
+                  <div class="absolute bottom-[300px] lg:bottom-[475px] left-[57%] md:left-[55s%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -266,8 +274,12 @@
               <!-- home 4 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
+                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[120px]">
+                    <h1 class="text-white text-slide1">Bedroom Is Always </h1>
+                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[625px] lg:bottom-96 left-[18%] md:left-[12%] group z-20">
+                  <div class="absolute bottom-[625px] lg:bottom-96 left-[18%] md:left-[12%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -287,7 +299,7 @@
                   </div>
               
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[350px] lg:bottom-[320px] left-[10%] md:left-[70%] group z-20">
+                  <div class="absolute bottom-[350px] lg:bottom-[320px] left-[10%] md:left-[70%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -307,7 +319,7 @@
                   </div>
               
                   <!-- Card 3 -->
-                  <div class="absolute bottom-[200px] lg:bottom-[375px] left-[50%] md:left-[50%] group z-20">
+                  <div class="absolute bottom-[200px] lg:bottom-[375px] left-[50%] md:left-[50%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -332,8 +344,12 @@
               <!-- home 5 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
+                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[120px]">
+                    <h1 class="text-white text-slide1">Bathroom Is Always </h1>
+                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[530px] lg:bottom-96 left-[50%] md:left-[20%] group z-20">
+                  <div class="absolute bottom-[530px] lg:bottom-96 left-[50%] md:left-[20%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -353,7 +369,7 @@
                   </div>
               
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[350px] lg:bottom-[280px] left-[10%] md:left-[70%] group z-20">
+                  <div class="absolute bottom-[350px] lg:bottom-[280px] left-[10%] md:left-[70%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -373,7 +389,7 @@
                   </div>
               
                   <!-- Card 3 -->
-                  <div class="absolute bottom-[200px] lg:bottom-[575px] left-[40%] md:left-[50%] group z-20">
+                  <div class="absolute bottom-[200px] lg:bottom-[475px] left-[40%] md:left-[50%] group z-20 contentPopup">
                     <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
                       <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
                     </a>
@@ -416,15 +432,15 @@
 
       <section id="all" class="container w-full mx-auto">
         <div class="text-[22px] md:text-[24px] lg:text-[48px] pt-[60px] md:pt-20 px-[20px] lg:px-0 lg:pt-[100px] font-helvetica">
-          <h1 class="text-black ">Upgrade Your Home With</h1>
-          <h2 class="text-black ">Our New Furniture Line</h2>
+          <h1 class="text-black" data-aos="fade-down" aos-data-delay="250">Upgrade Your Home With</h1>
+          <h2 class="text-black" data-aos="fade-down" aos-data-delay="250">Our New Furniture Line</h2>
         </div>
         <div class="product px-[20px] lg:px-0 pt-10 ">
             <div class="lg:flex gap-[15px]">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image1.png" alt="Table" class="w-full h-full object-cover ">
+                  <img src="/asset/image1.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover ">
         
-                    <div class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
+                    <div data-aos="fade-right" aos-data-delay="250" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
                         <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
                             <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                         </div>
@@ -439,15 +455,15 @@
                         </div>
                     </div>
 
-                    <div class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                    <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
                         <h2 class="text-lg lg:text-2xl font-normal">Tables</h2>
                         <p class="text-gray-500">Bok extendable table</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image2.png" alt="Table" class="w-full h-full object-cover">
+                  <img src="/asset/image2.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover">
         
-                    <div class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
+                    <div data-aos="fade-right" aos-data-delay="400" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
                         <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
                             <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                         </div>
@@ -462,15 +478,15 @@
                         </div>
                     </div>
         
-                    <div class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                    <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
                         <h2 class="text-lg lg:text-2xl font-normal">Chair</h2>
                         <p class="text-xs lg:text-base text-gray-500">Bok chair</p>
                     </div>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image3.png" alt="Table" class="w-full h-full object-cover">
+                  <img src="/asset/image3.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover">
         
-                    <div class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
+                    <div data-aos="fade-right" aos-data-delay="400" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
                         <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
                             <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                         </div>
@@ -485,13 +501,13 @@
                         </div>
                     </div>
         
-                    <div class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                    <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
                         <h2 class="text-lg lg:text-2xl font-normal">Cupboard</h2>
                         <p class="text-xs lg:text-base text-gray-500">Ligna cupboard</p>
                     </div>
                 </div>
             </div>
-            <div class="relatative bottom-0 w-full text-left pt-10">
+            <div data-aos="fade-up" data-aos-delay="300" class="relatative bottom-0 w-full text-left pt-10">
                 <button class=" bg-transparent  text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica">
                     See more product →
                 </button>
@@ -503,16 +519,16 @@
           <!-- Title Section -->
           <div class="mb-8 px-4 md:mb-0 md:px-0">
               <div class=" text-black text-left font-helvetica lg:w-[475px]">
-                  <h1 class="text-[28px] md:text-5xl font-normal leading-9 lg:leading-[60px]">Exploring Our Diverse Categories</h1>
-                  <p class="text-sm lg:text-xl text-[#6A7182] mt-[10px] lg:mt-[24px]">There are many categories that you can explore and view for your dream home.</p>
+                  <h1 data-aos="fade-down" data-aos-delay="150" class="text-[28px] md:text-5xl font-normal leading-9 lg:leading-[60px]">Exploring Our Diverse Categories</h1>
+                  <p data-aos="fade-down" data-aos-delay="150" class="text-sm lg:text-xl text-[#6A7182] mt-[10px] lg:mt-[24px]">There are many categories that you can explore and view for your dream home.</p>
               </div>
           </div>
       
           <!-- Categories Section -->
           <div class="categories w-full px-4 md:px-0 grid grid-cols-1 gap-[10px] lg:gap-[14px]"> 
             <div class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"> 
-              <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Eaves & Ceiling</h2>
-              <p class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+              <h2 data-aos="fade-down" data-aos-delay="400" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Eaves & Ceiling</h2>
+              <p data-aos="fade-down" data-aos-delay="400" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
 
                 <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2">
                   <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
@@ -525,8 +541,8 @@
             <div class="border-b border-gray-300"></div>
          
             <div class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Walls</h2>
-              <p class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+              <h2 data-aos="fade-down" data-aos-delay="400" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Walls</h2>
+              <p data-aos="fade-down" data-aos-delay="400" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
             
                 <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
                   <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
@@ -539,8 +555,8 @@
             <div class="border-b border-gray-300"></div>
           
             <div class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Decoratives</h2>
-              <p class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+              <h2 data-aos="fade-down" data-aos-delay="400" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Decoratives</h2>
+              <p data-aos="fade-down" data-aos-delay="400" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
 
                 <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
                   <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
@@ -553,8 +569,8 @@
             <div class="border-b border-gray-300"></div>
    
             <div class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Floors</h2>
-              <p class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+              <h2 data-aos="fade-down" data-aos-delay="400" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Floors</h2>
+              <p data-aos="fade-down" data-aos-delay="400" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
 
                 <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
                   <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
@@ -567,8 +583,8 @@
             <div class="border-b border-gray-300"></div>
   
             <div class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Accessories</h2>
-              <p class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+              <h2 data-aos="fade-down" data-aos-delay="400" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Accessories</h2>
+              <p data-aos="fade-down" data-aos-delay="400" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
 
                 <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
                   <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
@@ -585,15 +601,15 @@
 
         <div class="container relative mx-auto z-10">
           <div class="px-5 lg:px-0">
-            <h1 class="text-[24px] lg:text-[64px] font-normal lg:w-[714px] font-helvetica">Standing Desk Touch - Table Workspace</h1>
+            <h1 data-aos="fade-down" data-aos-delay="200" class="text-[24px] lg:text-[64px] font-normal lg:w-[714px] font-helvetica">Standing Desk Touch - Table Workspace</h1>
           </div>
           <div class="flex justify-between w-full px-5 lg:px-0">
-            <h1 class="text-xs lg:text-xl font-helvetica">Interior Design, Furniture And Workspace</h1>
-            <a href="#" class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white transition duration-500">See Product →</a>
+            <h1 data-aos="fade-down" data-aos-delay="200" class="text-xs lg:text-xl font-helvetica">Interior Design, Furniture And Workspace</h1>
+            <a href="#" data-aos="fade-down" data-aos-delay="500" class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white transition duration-500">See Product →</a>
           </div>
         </div>
         <!-- card 1 -->
-        <div class="absolute bottom-[245px] lg:bottom-[270px] left-[10%] md:left-[55.5%] group z-20">
+        <div data-aos="zoom-in" data-aos-delay="200" class="absolute bottom-[245px] lg:bottom-[270px] left-[10%] md:left-[55.5%] group z-20">
           <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
             <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
           </a>
@@ -613,7 +629,7 @@
         </div>
 
         <!-- card 2 -->
-        <div class="absolute bottom-[180px] lg:bottom-[32px] left-[40%] md:left-[67.5%] group z-20">
+        <div data-aos="zoom-in" data-aos-delay="200" class="absolute bottom-[180px] lg:bottom-[32px] left-[40%] md:left-[67.5%] group z-20">
           <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
             <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
           </a>
@@ -633,7 +649,7 @@
         </div>
 
         <!-- card 3 -->
-        <div class="absolute bottom-[220px] lg:bottom-[380px] left-[55%] md:left-[77%] group z-20">
+        <div data-aos="zoom-in" data-aos-delay="200" class="absolute bottom-[220px] lg:bottom-[380px] left-[55%] md:left-[77%] group z-20">
           <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
             <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
           </a>
@@ -655,13 +671,13 @@
 
         
         <div class="container mx-auto px-5 lg:px-0 text-center pt-[50px] pb-5 lg:w-[680px] lg:pt-[100px] lg:pb-[40px] font-helvetica">
-          <h1 class="text-2xl lg:text-5xl font-normal mb-2">Transforming Vision Into Reality</h1>
-          <p class="text-[#6A7182] text-xs lg:text-xl font-normal ">Our latest project offers a sleek, minimalist design that prioritizes both elegance and functionality, ensuring a seamless user.</p>
+          <h1 data-aos="zoom-out" data-aos-delay="200" class="text-2xl lg:text-5xl font-normal mb-2">Transforming Vision Into Reality</h1>
+          <p data-aos="zoom-out" data-aos-delay="300" class="text-[#6A7182] text-xs lg:text-xl font-normal ">Our latest project offers a sleek, minimalist design that prioritizes both elegance and functionality, ensuring a seamless user.</p>
         </div>
       
         <div class="relative max-w-full pl-5 lg:pl-[5.5%]">
           <div id="scrollContainer" class="flex gap-[15px] lg:gap-[30px] overflow-x-scroll scrollbar-hide h-[450px] lg:h-[600px]">
-            <div class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
+            <div data-aos="fade-right" data-aos-delay="200" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
               <div class="group flex flex-col items-left">
                 <figure
                   class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden">
@@ -673,7 +689,7 @@
               </figcaption>
               </div>
             </div>
-            <div class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
+            <div data-aos="fade-right" data-aos-delay="400" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
               <div class="group flex flex-col items-left">
                 <figure
                   class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden">
@@ -685,7 +701,7 @@
               </figcaption>
               </div>
             </div>
-            <div class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
+            <div data-aos="fade-right" data-aos-delay="600" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
               <div class="group flex flex-col items-left">
                 <figure
                   class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden">
@@ -697,7 +713,7 @@
               </figcaption>
               </div>
             </div>
-            <div class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
+            <div data-aos="fade-right" data-aos-delay="800" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
               <div class="group flex flex-col items-left">
                 <figure
                   class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden">
@@ -709,7 +725,7 @@
               </figcaption>
               </div>
             </div>
-            <div class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
+            <div data-aos="fade-right" data-aos-delay="850" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
               <div class="group flex flex-col items-left">
                 <figure
                   class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden">
@@ -721,7 +737,7 @@
               </figcaption>
               </div>
             </div>
-            <div class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
+            <div data-aos="fade-right" data-aos-delay="900" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
               <div class="group flex flex-col items-left">
                 <figure
                   class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden">
@@ -736,7 +752,20 @@
           </div>
         </div>
 
-        <div class="relatative w-full text-center pt-5 pb-[50px] lg:pt-10 lg:pb-[100px]">
+        <div class="container mx-auto flex gap-3">
+          <div data-aos="fade-right" data-aos-delay="200" class="pl-5 lg:pl-0">
+            <button id="scrollLeft" class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+          </div>
+          <div data-aos="fade-left" data-aos-delay="400">
+            <button id="scrollRight" class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div data-aos="zoom-out" data-aos-delay="300" class="relatative w-full text-center pt-5 pb-[50px] lg:pt-10 lg:pb-[100px]">
           <button class=" bg-transparent text-sm lg:text-base text-center text-black font-normal border-[1px] px-[15px] py-[4px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 font-helvetica">
               Our more project →
           </button>
@@ -744,61 +773,60 @@
 
         <section class="container px-5 lg:px-0 lg:max-w-full text-center">
           <div class="flex justify-center gap-2 lg:gap-5 pt-[50px] lg:pt-[100px]">
-              <div onclick="showCaption(0)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <div data-aos="fade-down" data-aos-delay="100" onclick="showCaption(0)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
                   <img src="/asset/gambar3.png" alt="User 1" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
               </div>
-              <div onclick="showCaption(1)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <div data-aos="fade-down" data-aos-delay="300" onclick="showCaption(1)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
                   <img src="/asset/gambar2.png" alt="User 2" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
               </div>
-              <div onclick="showCaption(2)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <div data-aos="fade-down" data-aos-delay="500" onclick="showCaption(2)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
                   <img src="/asset/gambar1.png" alt="User 3" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
               </div>
-              <div onclick="showCaption(3)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <div data-aos="fade-down" data-aos-delay="700" onclick="showCaption(3)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
                   <img src="/asset/gambar4.png" alt="User 4" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
               </div>
-              <div onclick="showCaption(4)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
+              <div data-aos="fade-down" data-aos-delay="900" onclick="showCaption(4)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
                   <img src="/asset/gambar5.png" alt="User 5" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
               </div>
           </div>
       
           <div id="caption-container" class="mx-auto text-lg lg:text-[32px] font-normal text-[#070C17] my-[30px] lg:my-[60px] lg:w-[924px] font-helvetica"> 
-              <p id="caption-text">Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.</p>
+              <p data-aos="fade-down" data-aos-delay="350" id="caption-text">Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.</p>
           </div>
       
-          <p id="caption-name" class="text-sm lg:text-xl font-normal text-[#070C17] lg:mb-[6px] font-helvetica">Michael Cristopher</p>
-          <p id="caption-position" class="text-[10px] lg:text-sm text-[#6A7182] mb-[100px] font-helvetica">Owner PT. Airbander</p>
+          <p data-aos="fade-up" data-aos-delay="250" id="caption-name" class="text-sm lg:text-xl font-normal text-[#070C17] lg:mb-[6px] font-helvetica">Michael Cristopher</p>
+          <p data-aos="fade-up" data-aos-delay="250" id="caption-position" class="text-[10px] lg:text-sm text-[#6A7182] mb-[100px] font-helvetica">Owner PT. Airbander</p>
         </section>
-
     </main>
     
     <footer class="bg-[#F8F4F1]">
       <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-0">
 
           <div class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left">
-              <h2 class="text-[32px] font-extrabold text-#050811 font-montserrat">Kayyon</h2>
-              <p class="text-[#6A7182] mt-6 text-base lg:text-xl font-normal font-helvetica">Our latest project offers a sleek, minimalist design that prioritizes both elegance and functionality, ensuring a seamless user</p>
+              <h2 data-aos="fade-right" data-aos-delay="200" class="text-[32px] font-extrabold text-#050811 font-montserrat">Kayyon</h2>
+              <p data-aos="fade-right" data-aos-delay="200" class="text-[#6A7182] mt-6 text-base lg:text-xl font-normal font-helvetica">Our latest project offers a sleek, minimalist design that prioritizes both elegance and functionality, ensuring a seamless user</p>
           </div>
    
             <div class="w-full lg:w-[360px] flex flex-col lg:gap-[30px] md:items-end">
               <div class="flex gap-4 ml-0 md:ml-6 mt-2 md:mt-0 justify-center">
-                  <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
+                  <a href="#" data-aos="fade-left" data-aos-delay="800" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
                       <img src="/facebook.svg" alt="Facebook" class="w-3 h-3">
                   </a>
-                  <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
+                  <a href="#" data-aos="fade-left" data-aos-delay="600" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
                       <img src="/twitter.svg" alt="Twitter" class="w-3 h-3">
                   </a>
-                  <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
+                  <a href="#" data-aos="fade-left" data-aos-delay="400" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
                       <img src="/instagram.svg" alt="Instagram" class="w-3 h-3">
                   </a>
-                  <a href="#" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
+                  <a href="#" data-aos="fade-left" data-aos-delay="200" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
                       <img src="/linkedin.svg" alt="LinkedIn" class="w-3 h-3">
                   </a>
               </div>
               <div class="mt-[30px] w-full">
-                  <h3 class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica">Newsletter</h3>
-                  <form class="flex items-center mt-3 w-full">
+                  <h3 data-aos="fade-left" data-aos-delay="300" class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica">Newsletter</h3>
+                  <form data-aos="fade-left" data-aos-delay="400" class="flex items-center mt-3 w-full">
                       <input type="email" placeholder="Your Email" class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent">
-                        <button type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
+                        <button data-aos="fade-left" data-aos-delay="600" type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
                             → 
                         </button>
                   </form>
@@ -945,6 +973,23 @@
       }
     </script>
 
+    <!-- button -->
+    <script>
+      const scrollContainer = document.getElementById('scrollContainer');
+      const scrollAmount = 400; // Atur jumlah scroll (piksel)
+
+      document.getElementById('scrollLeft').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      document.getElementById('scrollRight').addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    </script>
+
+    <!-- AOS -->
     <script type="module" src="/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
+

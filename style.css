@@ -51,3 +51,31 @@
 .category-item:hover {
   background-color: #F8F4F1;
 }
+
+.swiper-slide{
+  @apply overflow-hidden
+}
+.swiper-slide .text-slide1{
+  @apply opacity-0 mt-8 duration-[800ms] delay-200
+}
+.swiper-slide.swiper-slide-active .text-slide1{
+  @apply opacity-100 mt-0
+}
+.swiper-slide .text-slide2{
+  @apply opacity-0 mt-8 duration-[800ms] delay-500
+}
+.swiper-slide.swiper-slide-active .text-slide2{
+  @apply opacity-100 mt-0
+}
+.swiper-slide .contentPopup{
+  @apply scale-0 duration-1000 delay-300;
+}
+.swiper-slide.swiper-slide-active .contentPopup{
+  @apply scale-100
+}
+.swiper-slide img{
+  @apply scale-[1.2] duration-700 ease-linear
+}
+.swiper-slide.swiper-slide-active img{
+  @apply scale-100
+}
