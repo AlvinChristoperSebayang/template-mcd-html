@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <title>Vite App</title>
     <style>
@@ -23,20 +24,21 @@
         @apply opacity-100 rotate-0 relative visible;
         
       } */
+
       .imageHero {
           @apply invisible opacity-0 rotate-90 absolute;
-          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s ;
+          transition: opacity 0.6s ease-in-out, transform 0.5s ease-in-out, visibility 0s ;
       }
 
       .imageHero.imageActive {
           @apply opacity-100 rotate-0 relative visible;
-          transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s;
-          animation: rotateImage 0.5s ease-in-out;
+          transition: opacity 0.6s ease-in-out, visibility 0s;
+          animation: rotateImage 0.7s ease-in-out;
       }
 
       @keyframes rotateImage {
           from {
-              transform: rotate(90deg);
+              transform: rotate(180deg);
           }
           to {
               transform: rotate(0deg);
@@ -97,15 +99,15 @@
     <section class="Hero-Section w-full h-auto ">
       <div class="container mx-auto px-10 sm:px-[50px] md:px-[50px]  xl:px-[20px] sm:py-[30px] md:py-[20px] flex flex-col md:flex-row items-start md:items-center">
         <!-- Kontainer Teks dan Kategori Makanan -->
-        <div class="w-1/2 sm:w-[100%] md:w-[55%] lg:w-[60%] xl:w-[50%] space-y-6 gap-[83px] md:gap-[10px] lg:gap-[83px] xl:gap-[83px] ">
+        <div class="w-[100%] sm:w-[100%] md:w-[55%] lg:w-[60%] xl:w-[50%] space-y-6 gap-[83px] md:gap-[10px] lg:gap-[83px] xl:gap-[83px] ">
           <div class="container flex flex-col gap-[20px] sm:gap-[20px] md:gap-[10px] lg:gap-[20px] xl:gap-[20px]">
-            <h1 class=" w--[50%] sm:w-[50%] md:w-[65%] lg:w-[86%] xl:w-[100%]  text-[20px] sm:text-[40px] md:text-[30px] lg:text-[50px] xl:text-[85px] font-semibold leading-[30px] sm:leading-[45px] md:leading-[40px] lg:leading-[60px] xl:leading-[85px]">
+            <h1  data-aos="fade-right" class=" w-[85%] sm:w-[50%] md:w-[65%] lg:w-[80%] xl:w-[100%]  text-[38px] sm:text-[40px] md:text-[30px] lg:text-[50px] xl:text-[85px] font-semibold leading-[40px] sm:leading-[45px] md:leading-[40px] lg:leading-[60px] xl:leading-[85px]">
               Discovering
               <span class="text-[#730202B2]">Indonesia’s</span>
               classic dishes
             </h1>
             <div class="w-full">
-              <p class="text-gray-600  w-[255px] h-full font-medium leading-[15px] sm:leading-[18px] text-[12px] sm:text-[14px] md:text-[12px] md:leading-[20px] lg:text-[15px] lg:leading-[24px] xl:text-[15px] xl:leading-[24px] sm:w-[462px] sm:h-[73px] md:w-[350px] md:h-[75px] lg:w-[520px] lg:h-[70px] xl:w-auto xl:h-[75px]">
+              <p data-aos="fade-left" class="text-gray-600  w-[255px] h-full font-medium leading-[15px] sm:leading-[18px] text-[12px] sm:text-[14px] md:text-[12px] md:leading-[20px] lg:text-[15px] lg:leading-[24px] xl:text-[15px] xl:leading-[24px] sm:w-[462px] sm:h-[73px] md:w-[350px] md:h-[75px] lg:w-[520px] lg:h-[70px] xl:w-auto xl:h-[75px]">
                 Bringing Indonesia’s culinary heritage to life in the modern kitchen with classic recipes that capture authentic flavors and techniques while encouraging a new generation of food lovers to explore this rich cuisine.
               </p>
             </div>
@@ -113,25 +115,25 @@
           
           <div class=" flex flex-row sm:flex-row md:flex-row xl:flex-row md:items-start  gap-[70px] sm:gap-[100px] md:gap-[33px] lg:gap-[30px] xl:gap-[22px]">
             <!-- 1 -->
-            <div class="hidden md:block relative w-1/4 cursor-pointer" onclick="changeMainImage('ayamGulai', this)">
+            <div data-aos="fade-up" class="hidden md:block relative w-1/4 cursor-pointer" onclick="changeMainImage('ayamGulai', this)">
               <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[118px] md:h-[116px] lg:w-[140px] lg:h-[150px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-[47px] xl:pt-[70px] mt-10 text-center">
-              <img alt="card 1" src="ayamGulai.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[70px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[100px] mx-auto mt-14 sm:mt-10 md:mt-[27px] lg:md:mt-10 xl:mt-10  rounded-full absolute -top-12 left-11 sm:left-1/2 md:left-[23px] lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
+              <img data-aos="fade-up" alt="card 1" src="ayamGulai.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[70px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[100px] mx-auto mt-14 sm:mt-10 md:mt-[27px] lg:md:mt-10 xl:mt-10  rounded-full absolute -top-12 left-11 sm:left-1/2 md:left-[23px] lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
                 <h2 class="text-[10px] sm:text-[14px] md:text-[12px] lg:text-[17px] xl:text-[17px] mb-2 font-medium">Ayam Gulai</h2>
                 <p class="font-medium text-[8px] sm:text-[10px] md:text-[9px] lg:text-[11px] xl:text-[12px] items-center" style="color: rgba(0, 0, 0, 0.6);">Nasi putih, ayam gulai, dan sambal ijo.</p>
               </div>
             </div>
             <!-- 2 -->
-            <div class="hidden md:block relative w-1/4 cursor-pointer" onclick="changeMainImage('sateLilit', this)">
+            <div data-aos="fade-up" class="hidden md:block relative w-1/4 cursor-pointer" onclick="changeMainImage('sateLilit', this)">
               <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[118px] md:h-[116px] lg:w-[140px] lg:h-[150px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-[47px] xl:pt-[70px] mt-10 text-center">
-              <img alt="card 1" src="sateLilit.png" class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[70px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[100px] mx-auto mt-14 sm:mt-10 md:mt-[27px] lg:md:mt-10 xl:mt-10  rounded-full absolute -top-12 left-11 sm:left-1/2 md:left-[23px] lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
+              <img data-aos="fade-up" alt="card 1" src="sateLilit.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[70px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[100px] mx-auto mt-14 sm:mt-10 md:mt-[27px] lg:md:mt-10 xl:mt-10  rounded-full absolute -top-12 left-11 sm:left-1/2 md:left-[23px] lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
                 <h2 class="text-[9px] sm:text-[14px] md:text-[12px] lg:text-[17px] xl:text-[17px] mb-2 font-medium">Nasi Sate Lilit</h2>
                 <p class="font-medium text-[8px] sm:text-[10px] md:text-[9px] lg:text-[11px] xl:text-[12px] items-center" style="color: rgba(0, 0, 0, 0.6);">Nasi putih, sate lilit daging babi.</p>
               </div>
             </div>
             <!-- 3 -->
-            <div class="hidden md:block relative w-1/4 cursor-pointer" onclick="changeMainImage('gorengan', this)">
+            <div data-aos="fade-up" class="hidden md:block relative w-1/4 cursor-pointer" onclick="changeMainImage('gorengan', this)">
               <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[118px] md:h-[116px] lg:w-[140px] lg:h-[150px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-[47px] xl:pt-[70px] mt-10 text-center">
-              <img alt="card 1" src="gorengan.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[70px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[100px] mx-auto mt-14 sm:mt-10 md:mt-[27px] lg:md:mt-10 xl:mt-10 rounded-full absolute -top-12 left-11 sm:left-1/2 md:left-[23px] lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0"  />
+              <img data-aos="fade-up" alt="card 1" src="gorengan.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[70px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[100px] mx-auto mt-14 sm:mt-10 md:mt-[27px] lg:md:mt-10 xl:mt-10 rounded-full absolute -top-12 left-11 sm:left-1/2 md:left-[23px] lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0"  />
                 <h2 class="text-[9px] sm:text-[14px] md:text-[12px] lg:text-[17px] xl:text-[17px] mb-2 font-medium">Gorengan</h2>
                 <p class="font-medium text-[8px] sm:text-[10px] md:text-[9px] lg:text-[11px] xl:text-[12px] items-center" style="color: rgba(0, 0, 0, 0.6);">Berbagai macam gorengan.</p>
               </div>
@@ -141,10 +143,10 @@
   
         <div class="w-[100%] sm:w-[100%] md:w-[50%] lg:w-[50%] xl:w-[50%] relative flex justify-center">
           <!-- ini utama -->
-          <img alt="img utama" src="nasiUduk.png" id="mainImage" class="nasiUduk   mt-[-45px]   imageHero imageActive sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0  lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover -translate-y-6 md:-translate-y-20 lg:-translate-y-20 xl:-translate-y-15 2xl:-translate-y-0" />
-          <img alt="img utama" src="gorengan.png" id="mainImage" class="gorengan   mt-[-45px]   imageHero sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0 lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover -translate-y-6 md:-translate-y-20 lg:-translate-y-20 xl:-translate-y-15 2xl:-translate-y-0" />
-          <img alt="img utama" src="sateLilit.png" id="mainImage" class="sateLilit mt-[-45px]   imageHero sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0 lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover -translate-y-6 md:-translate-y-20 lg:-translate-y-20 xl:-translate-y-15 2xl:-translate-y-0" />
-          <img alt="img utama" src="ayamGulai.png" id="mainImage" class="ayamGulai mt-[-45px]   imageHero sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0 lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover -translate-y-6 md:-translate-y-20 lg:-translate-y-20 xl:-translate-y-15 2xl:-translate-y-0" />
+          <img alt="img utama" src="nasiUduk.png" id="mainImage" class="nasiUduk   mt-[-45px] bottom-[28px] sm:bottom-0 md:bottom-[78px] lg:bottom-[85px] xl:bottom-[85px]     imageHero imageActive sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0  lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover " />
+          <img alt="img utama" src="gorengan.png" id="mainImage" class="gorengan   mt-[-45px] bottom-[28px] sm:bottom-0 md:bottom-[78px] lg:bottom-[85px] xl:bottom-[85px]    imageHero sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0 lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover " />
+          <img alt="img utama" src="sateLilit.png" id="mainImage" class="sateLilit mt-[-45px] bottom-[28px] sm:bottom-0 md:bottom-[78px] lg:bottom-[85px] xl:bottom-[85px]    imageHero sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0 lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover " />
+          <img alt="img utama" src="ayamGulai.png" id="mainImage" class="ayamGulai mt-[-45px] bottom-[28px] sm:bottom-0 md:bottom-[78px] lg:bottom-[85px] xl:bottom-[85px]    imageHero sm:mt-[-95px] md:mt-0 lg:mt-0 xl:mt-0 rounded-full mb-0 sm:mb-0 lg:mb-0 xl:mb-0 w-[100%] h-full sm:w-[70%] sm:h-full md:w-[90%] md:h-[100%] lg:w-[100%] lg:h-[88%] xl:w-[100%] xl:h-[648px] object-cover " />
 
           <div class="absolute top-[95px] left-2  w-[80px] h-[40px] sm:w-[140px] sm:h-[75px] sm:top-[60px] sm:left-[60px] md:top-[40px] md:left-[-20px] lg:top-[65px] lg:left-[-40px] xl:top-[60px] xl:left-[2px]  md:w-[120px] md:h-[60px] lg:h-[100px] lg:w-[200px] xl:w-[219px] xl:h-[105px] bg-white bg-opacity-50 backdrop-blur-md p-2 border border-[#DFDFDF] rounded-lg shadow-lg">
               <p class="text-black font-semibold mt-[-6px] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 text-[15px] sm:text-[27px] md:text-[18px] lg:text-[35px] xl:text-[40px] ml-0  sm:ml-[-3px] md:ml-2 lg:ml-3 xl:ml-4">5%</p>
@@ -152,11 +154,11 @@
           </div>
       
           <!-- Rating -->
-          <div class="absolute bottom-[106px] sm:bottom-[90px] md:bottom-[147px] sm:left-[255px] md:left-[130px] lg:bottom-[195px] lg:left-[155px] xl:bottom-[130px] xl:left-[300px] right-[25px] w-[130px] h-[40px] sm:w-[195px] sm:h-[50px] md:w-[177px] md:h-[45px] lg:w-[235px] lg:h-[55px] xl:w-[300px] xl:h-[80px] flex items-center justify-center bg-white bg-opacity-50 backdrop-blur-md border border-[#DFDFDF] p-2 rounded-lg shadow-lg">
+          <div  class="absolute bottom-[106px] sm:bottom-[100px] md:bottom-[147px] sm:left-[255px] md:left-[130px] lg:bottom-[195px] lg:left-[155px] xl:bottom-[130px] xl:left-[300px] right-[25px] w-[130px] h-[40px] sm:w-[195px] sm:h-[50px] md:w-[177px] md:h-[45px] lg:w-[235px] lg:h-[55px] xl:w-[300px] xl:h-[80px] flex items-center justify-center bg-white bg-opacity-50 backdrop-blur-md border border-[#DFDFDF] p-2 rounded-lg shadow-lg">
               <div class="flex -space-x-2">
-                  <img alt="profil1" class="w-[18px] h-[18px]  sm:w-[30px] sm:h-[30px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px] xl:w-[50px] xl:h-[50px] rounded-full border-2 border-white object-cover" src="profil1.jpeg" />
-                  <img alt="profil2" class="w-[18px] h-[18px]  sm:w-[30px] sm:h-[30px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px] xl:w-[50px] xl:h-[50px] rounded-full border-2 border-white object-cover" src="profil2.jpeg" />
-                  <img alt="profil3" class="w-[18px] h-[18px]  sm:w-[30px] sm:h-[30px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px] xl:w-[50px] xl:h-[50px] rounded-full border-2 border-white object-cover" src="profil3.jpeg" />
+                  <img alt="profil1" class="w-[20px] h-[20px]  sm:w-[30px] sm:h-[30px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px] xl:w-[50px] xl:h-[50px] rounded-full border-2 border-white object-cover" src="profil1.jpeg" />
+                  <img alt="profil2" class="w-[20px] h-[20px]  sm:w-[30px] sm:h-[30px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px] xl:w-[50px] xl:h-[50px] rounded-full border-2 border-white object-cover" src="profil2.jpeg" />
+                  <img alt="profil3" class="w-[20px] h-[20px]  sm:w-[30px] sm:h-[30px] md:w-[25px] md:h-[25px] lg:w-[30px] lg:h-[30px] xl:w-[50px] xl:h-[50px] rounded-full border-2 border-white object-cover" src="profil3.jpeg" />
               </div>            
               <div class="ml-2 flex flex-col justify-center">
                   <h2 class="text-[5px] sm:text-[9px]  md:text-[8px] lg:text-[10px] xl:text-[15px] ml-1 sm:ml-2 md:ml-2 lg:ml-2 xl:ml-2 font-medium mb-0 sm:mb-1 md:mb-1 lg:mb-1 xl:mb-1">
@@ -175,11 +177,11 @@
           </div>
       </div>
       <!-- mobile -->
-      <div class=" flex flex-row sm:flex-row md:flex-row xl:flex-row mt-[-70px] sm:mt-[-90px] justify-between md:items-start  gap-[5px] sm:gap-0 md:gap-[90px] lg:gap-[70px] xl:gap-[22px]">
+      <div class=" flex flex-row sm:flex-row md:flex-row xl:flex-row mt-[-70px] sm:mt-[-70px] justify-between md:items-start  gap-0 sm:gap-0 md:gap-[90px] lg:gap-[70px] xl:gap-[22px]">
         <!-- 1 -->
         <div class="block md:hidden relative w-1/4 cursor-pointer" onclick="changeMainImage('ayamGulai', this)">
           <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[162px] md:h-[173px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-18 xl:pt-18 mt-10 text-center">
-          <img alt="card 1" src="ayamGulai.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-[10px] lg:md:mt-10 xl:mt-10 rounded-full absolute -top-12 left-11 sm:left-[14px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
+          <img alt="card 1" src="ayamGulai.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-[10px] lg:md:mt-10 xl:mt-10 rounded-full absolute -top-12 left-11 sm:left-[18px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
             <h2 class="text-[10px] sm:text-[14px] md:text-[20px] lg:text-[18px] mb-2 font-medium">Ayam Gulai</h2>
             <p class="font-medium text-[8px] sm:text-[10px] md:text-[12px] items-center" style="color: rgba(0, 0, 0, 0.6);">Nasi putih, ayam gulai, dan sambal ijo.</p>
           </div>
@@ -187,7 +189,7 @@
         <!-- 2 -->
         <div class="block md:hidden relative w-1/4 cursor-pointer" onclick="changeMainImage('sateLilit', this)">
           <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[162px] md:h-[173px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-18 xl:pt-18 mt-10 text-center">
-          <img alt="card 1" src="sateLilit.png" class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-10 rounded-full absolute -top-12 left-11 sm:left-[14px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
+          <img alt="card 1" src="sateLilit.png" class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-10 rounded-full absolute -top-12 left-11 sm:left-[18px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
             <h2 class="text-[9px] sm:text-[14px] md:text-[20px] lg:text-[18px] mb-2 font-medium">Nasi Sate Lilit</h2>
             <p class="font-medium text-[8px] sm:text-[10px] md:text-[12px] items-center" style="color: rgba(0, 0, 0, 0.6);">Nasi putih, sate lilit daging babi.</p>
           </div>
@@ -195,7 +197,7 @@
         <!-- 3 -->
         <div class="block md:hidden relative w-1/4 cursor-pointer" onclick="changeMainImage('gorengan', this)">
           <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[162px] md:h-[173px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-18 xl:pt-18 mt-10 text-center">
-          <img alt="card 1" src="gorengan.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-10 rounded-full absolute -top-12 left-11 sm:left-[14px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0"  />
+          <img alt="card 1" src="gorengan.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-10 rounded-full absolute -top-12 left-11 sm:left-[18px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0"  />
             <h2 class="text-[9px] sm:text-[14px] md:text-[20px] lg:text-[18px] mb-2 font-medium">Gorengan</h2>
             <p class="font-medium text-[8px] sm:text-[10px] md:text-[12px] items-center" style="color: rgba(0, 0, 0, 0.6);">Berbagai macam gorengan.</p>
           </div>
@@ -209,16 +211,16 @@
     <section id="product" class="w-full h-auto py-[60px] sm:py-[35px] md:py-[20px] lg:py-[20px] xl:py-[20px]">
       <div class="container mx-auto text-center flex flex-col gap-[45px] sm:gap-[20px] md:gap-[35px] xl:gap-[60px]">
           <div class="container mx-auto flex flex-col  w-full h-[100%] sm:w-full] sm:h-[210px] md:w-full md:h-[210px] xl:w-full xl:h-[218px] gap-[20px]">
-              <h2 class="font-semibold mx-auto items-center text-[16px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[42px] leading-[20px] sm:leading-[40px] md:leading-[40px] lg:leading-[51px] xl:leading-[51px]">
+              <h2 data-aos="fade-down" class="font-semibold mx-auto items-center text-[16px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[42px] leading-[20px] sm:leading-[40px] md:leading-[40px] lg:leading-[51px] xl:leading-[51px]">
                   A Journey Through Tradition to Explore <br> the Wonders of Sundanese Cuisine
               </h2>
-              <p class="text-[#00000099] font-medium mx-auto items-center justify-center w-[85%]  sm:w-[90%] sm:h-[100%] md:w-[90%] md:h-[40%] lg:w-[93%] lg:h-[90%] xl:w-full xl:h-[100%] leading-[12px] text-[10px] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[20px] lg:text-[16px] lg:leading-[24px] xl:text-[20px] xl:leading-[32px]">
+              <p data-aos="fade-up" class="text-[#00000099] font-medium mx-auto items-center justify-center w-[85%]  sm:w-[90%] sm:h-[100%] md:w-[90%] md:h-[40%] lg:w-[93%] lg:h-[90%] xl:w-full xl:h-[100%] leading-[12px] text-[10px] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[20px] lg:text-[16px] lg:leading-[24px] xl:text-[20px] xl:leading-[32px]">
                   Exploring Sundanese cuisine is an invitation to usher in the flavors, stories and communal experiences creating an
                   ever-evolving cultural landscape. Enjoying every bite means participating in a journey and honoring the past and
                   celebrating the present, ensuring that the magic of Sundanese cuisine will endure for to come.
               </p>
           </div>
-          <nav class="section-navbar">
+          <nav data-aos="fade-up" class="section-navbar">
               <ul class="flex justify-center font-medium items-center gap-[25px] sm:gap-[30px] md:gap-[40px] lg:gap-[50px] xl:gap-[50px] text-[#00000099]">
                   <li><a href="all" class="active font-normal text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] hover:text-black">All</a></li>
                   <li><a href="entree" class="font-normal text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] hover:text-black">Entree</a></li>
@@ -230,7 +232,7 @@
   
       <div class="card-container flex flex-wrap justify-center gap-[25px] py-[40px] sm:py-[60px]  md:py-[60px] xl:py-[60px] ">
         <!-- 1 -->
-        <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
+        <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
           <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="ayamGeprek.png" width="100" height="100" />
           <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Ayam Geprek <br> Sambal Korek</h2>
           <p class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[17px] font-normal">Nasi putih, ayam, sambal, lalapan</p>
@@ -241,7 +243,7 @@
         </div>
         
       <!-- 2 -->
-      <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
+      <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
         <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="tumpeng.png" width="100" height="100" />
         <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Paket Tumpeng Nasi Kuning</h2>
         <p class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Nasi kuning, sambal kentang, telur </p>
@@ -252,7 +254,7 @@
       </div>
 
       <!-- 3 -->
-      <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
+      <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
         <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="mieGoreng.png" width="100" height="100" />
         <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Mie Goreng <br>Seafood</h2>
         <p class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Nasi putih, ayam, sambal, lalapan</p>
@@ -263,7 +265,7 @@
     </div>
 
     <!-- 4 -->
-    <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
+    <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all entree">
       <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="gadoGado.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Gado Gado <br> Komplit</h2>
       <p class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Nasi putih, ayam, sambal, lalapan</p>
@@ -274,7 +276,7 @@
   </div>
 
   <!-- 5 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="klepon.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Kue Klepon</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Kue rebus dari tepung ketan dengan isian gula merah dan kelapa parut.</p>
@@ -285,7 +287,7 @@
   </div>
 
   <!-- 6 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="ondeOnde.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Onde Onde</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Kue goreng dari tepung ketan isi kacang hijau ditaburi wijen.</p>
@@ -296,7 +298,7 @@
   </div>
 
   <!-- 7 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="lemperAyam.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Lemper Ayam</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Kue dari ketan berisi ayam suwir, dimasak dengan santan.</p>
@@ -307,7 +309,7 @@
   </div>
 
   <!-- 8 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all cake">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="kuePukis.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Kue Pukis</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Kue kukus dari tepung terigu dengan toping coklat, keju, atau kelapa.</p>
@@ -318,7 +320,7 @@
   </div>
 
   <!-- 9 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="kolekPisang.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Kolek Pisang</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Olahan manis pisang dan biji aren dimasak dengan santan, gula merah.</p>
@@ -328,7 +330,7 @@
     </div>
   </div>
   <!-- 10 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="esKelapaIjo.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Es Kelapa Ijo</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Minuman air dan daging kepala campur sirup hijau ditambah es serut.</p>
@@ -338,7 +340,7 @@
     </div>
   </div>
   <!-- 11 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="kueLapis2.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Kue Lupis</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Olahan ketan matang ditabur kelapa parut dan disiram gula merah cair.</p>
@@ -348,7 +350,7 @@
     </div>
   </div>
   <!-- 12 -->
-  <div class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
+  <div data-aos="fade-down" class="bg-[#90CB9266] rounded-[15px] sm:rounded-[20px] w-[145px] sm:w-[250px] md:w-[300px] lg:w-[210px] xl:w-[300px] h-[170px] sm:h-[350px] md:h-[420px] lg:h-[300px] xl:h-[420px] p-[6px] sm:p-[10px] md:p-[20px] text-center flex flex-col content all dessert">
     <img alt="ayam geprek" class="object-cover w-[60px] sm:w-[150px] md:w-[180px] lg:w-[120px] xl:w-[188px] h-[55px] sm:h-[160px] md:h-[180px] lg:h-[100px] xl:h-[177px] mx-auto rounded-full gap-[8px] sm:gap-[10px] md:gap-[15px]" src="esBuah.png" width="100" height="100" />
       <h2 class="text-[11px] sm:text-[20px] md:text-[25px] lg:text-[16px] xl:text-[25px] font-medium mb-2 items-center">Es Buah Campur</h2>
       <p  class="text-[#000000] text-[8px] sm:text-[13px] md:text-[15px] lg:text-[14px] xl:text-[15px] font-normal">Olahan berbagai buah segar, sirup manis, air kelapa dan susu kental.</p>
@@ -496,14 +498,14 @@
           In a Culinary Adventure, Where Every <br> Bite Tells a Story!
         </h2>
       </div>
-      <p class="text-[#00000099] font-normal sm:w-[500px] md:w-full text-[12px] sm:-[10px] md:text-[14px] lg:text-[18px] xl:text-[20px]">
+      <p class="text-[#00000099] font-normal sm:w-[100%] md:w-full text-[12px] sm:-[10px] md:text-[14px] lg:text-[18px] xl:text-[20px]">
         As the creator of this Sundanese restaurant, I am Min, opened this place
         driven by my love for the richness of Sundanese culture and taste. Every
         dish I prepare tells a story, made with local ingredients and treasured
         recipes. I will offer an exploration into a culinary journey where every
         bite reflects the essence of Sundanese heritage and warmth.
       </p>
-      <button class="bg-black font-bold text-white w-[100px] h-[40px] md:w-[120px] md:h-[40px] xl:w-[160px] xl:h-[50px] text-[10px] md:text-[12px] lg:text-[16px] xl:text-[16px] px-6 py-2 gap-[5px] md:gap-[10px] xl:gap-[10px] rounded-full">
+      <button class="bg-black font-bold text-white w-[100px] h-[40px] md:w-[120px] md:h-[40px] xl:w-[160px] xl:h-[50px] text-[13px] md:text-[12px] lg:text-[16px] xl:text-[16px] px-6 py-2 gap-[5px] md:gap-[10px] xl:gap-[10px] rounded-full">
         Contact
       </button>
     </div>
@@ -512,7 +514,7 @@
     <div class="w-full md:w-1/2 flex justify-center  md:flex">
       <div class="relative flex items-center justify-center">
         <div class="absolute bg-[#90CB92] rounded-full w-[90%] h-[90%] sm:w-[70%] sm:h-[90%] md:w-[100%] md:h-[88%] lg:w-[300px] lg:h-[365px] xl:w-[400px] xl:h-[459px] -z-10"></div>
-        <img src="koki.png" alt="koki" style="object-fit: contain;" class="relative w-[35%] h-[100%]  sm:w-[55%] sm:h-[90%] md:w-[100%] md:h-[100%] lg:w-[100%] lg:h-[100%] xl:w-[100%] xl:h-[100%] object-cover rounded-full xl:-mt-[15px] xl:ml-0" />
+        <img src="koki.png" alt="koki" style="object-fit: contain;" class="relative w-[35%] h-[100%]  sm:w-[25%] sm:h-[90%] md:w-[100%] md:h-[100%] lg:w-[100%] lg:h-[100%] xl:w-[100%] xl:h-[100%] object-cover rounded-full xl:-mt-[15px] xl:ml-0" />
       </div>
     </div>
 </section>
@@ -739,6 +741,8 @@
     <script type="module" src="/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      
+      // img
       function changeMainImage(imageName, cardElement) {
         let mainContent = document.querySelectorAll("#mainImage");
         mainContent.forEach(item => {
@@ -817,12 +821,21 @@
 
   // class active buat nav 1 (all)
   const productNavLink = document.querySelector('a[href="#product"]');
-  const allNavLink = document.querySelector('a[href="all"]');
+const contactNavLink = document.querySelector('a[href="#contact"]');
+const allNavLink = document.querySelector('a[href="all"]');
 
-  productNavLink.addEventListener('click', function() {
-      document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
-      allNavLink.classList.add('active');
-  });
+// Fungsi untuk mengaktifkan link 'All'
+function activateAllLink() {
+    document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
+    allNavLink.classList.add('active');
+}
+
+// Tambahkan event listener untuk #product
+productNavLink.addEventListener('click', activateAllLink);
+
+// Tambahkan event listener untuk #contact
+contactNavLink.addEventListener('click', activateAllLink);
+
 
     // slide
         // const swiper = new Swiper(".mySwiper", {
@@ -872,7 +885,15 @@
         });
         btn.classList.add('hidden');
       }
+    </script>
 
+    <!-- aos -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
     </script>
   </body>
 </html>
