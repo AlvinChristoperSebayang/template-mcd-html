@@ -416,9 +416,13 @@
         </div>
         <div class="container mx-auto">
           <div class="absolute lg:bottom-[60px] lg:flex items-center gap-4 hidden md:block">
-            <span id="slider-index" class="text-xl text-white">01</span>
+            <div class="flex gap-1  text-white text-xl relative">
+              0
+              <div id="" class="swiper-fraction absolute top-0 left-3 text-white"></div>
+            </div>
             <div class="w-[821px] h-1 bg-white relative">
               <div id="" class="absolute top-0 left-0 h-1 bg-white swiper-pagination"></div>
+             
             </div>
             <span class="text-xl text-white">05</span>
           </div>
@@ -869,6 +873,7 @@
       function toggleDropdown() {
         const dropdown = document.getElementById("dropdownMenu");
         dropdown.classList.toggle("hidden");
+     
       }
     
       // Tutup dropdown jika klik di luar dropdown
@@ -878,40 +883,11 @@
           dropdown.classList.add("hidden");
         }
       }
-    </script>
-    
-    <script>
-      // slider
+
       let currentIndex = 0;
-      const totalSlides = 5;a 
+      const totalSlides = 5;
 
-      function updateSlider() {
-        document.getElementById("slider-index").innerText = String(currentIndex + 1).padStart(2, '0');
-
-        const progressBar = document.getElementById("progress-bar");
-        progressBar.style.width = ((currentIndex + 1) / totalSlides) * 100 + "%";
-      }
-
-      function selectSlide(index) {
-        currentIndex = index;
-        updateSlider();
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateSlider();
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateSlider();
-      }
-
-      updateSlider(); 
-    </script>
-
-    <script>
-      // button
+     
       const scrollContainer = document.getElementById('scrollContainer');
       const scrollAmount = 400; // Atur jumlah scroll (piksel)
 
@@ -922,9 +898,7 @@
       document.getElementById('scrollRight').addEventListener('click', () => {
         scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       });
-    </script>
-    <script>
-      // testimoni
+      
       const captions = [
           { text: "The design and results from Kayyon truly matched our expectations. Elegant and functional!", name: "Johnson", position: "Creative Director at DesignHub" },
           { text: "Kayyon's service was very professional. We are pleased with the results of this collaboration.", name: "David Lee", position: "CEO of InnovateCorp" },
@@ -952,9 +926,6 @@
           console.log('show caption activated')
       }
       init()
-    </script>
-    <!-- button hero -->
-    <script>
       window.addEventListener("scroll", function() {
         const navbar = document.getElementById("navbar");
         if (window.scrollY > 50) { // Ubah angka 50 sesuai kebutuhan
@@ -963,9 +934,6 @@
           navbar.classList.remove("bg-scrolled");
         }
       });
-    </script>
-    <!-- script navbar -->
-    <script>
       const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
         loop: true,
@@ -974,6 +942,10 @@
           el: '.swiper-pagination',
           type:'progressbar'
         },
+        pagination: {
+        el: ".swiper-fraction",
+        type: "fraction",
+      },
     
         navigation: {
           nextEl: '.button-custom-next',
@@ -983,6 +955,28 @@
           el: '.swiper-scrollbar',
         },
       });
+      let index = 0; 
+      function updateSlider() {
+        // let pagination = document.querySelector('#slider-index');
+        // pagination.textContent = `0${index + 1}`;
+      }
+
+      function selectSlide(index) {
+    
+        updateSlider();
+      }
+
+      function prevSlide() {
+  
+        updateSlider();
+      }
+
+      function nextSlide() {
+    
+        updateSlider();
+      }
+
+      updateSlider(); 
     </script>
 
     <!-- AOS -->
