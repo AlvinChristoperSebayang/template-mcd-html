@@ -84,3 +84,14 @@
   @apply bg-[#FF7813]
 }
 
+.swiper-fraction{
+  @apply text-transparent text-xl;
+
+}
+.swiper-fraction #text{
+  @apply text-xl;
+  display: none;
+}
+.swiper-pagination-current{
+  color:white !important;
+}
