@@ -7,6 +7,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
 </head>
@@ -309,9 +310,9 @@
           </p>
         </div>
         <div class="">
-          <div class="relative w-full overflow-hidden">
-            <div id="testimonial-container" class="flex transition-transform duration-300 ease-in-out gap-[20px] ">
-              <div class="testimonial-card flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
+          <div class="swiper relative w-[1164px]">
+            <div class="swiper-wrapper flex transition-transform duration-300 ease-in-out gap-[20px] ">
+              <div class="swiper-slide flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
                 data-aos="fade-right" data-aos-delay="500">
                 <div class="flex flex-col items-start mr-6">
                   <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
@@ -326,7 +327,7 @@
                     time. I'll definitely be returning for more pieces”</p>
                 </div>
               </div>
-              <div class="testimonial-card flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
+              <div class="swiper-slide flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
                 data-aos="fade-right" data-aos-delay="800">
                 <div class="flex flex-col items-start mr-6">
                   <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
@@ -341,8 +342,22 @@
                     time. I'll definitely be returning for more pieces”</p>
                 </div>
               </div>
-
-              <div class="testimonial-card flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
+              <div class="swiper-slide flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
+                data-aos="fade-right" data-aos-delay="1000">
+                <div class="flex flex-col items-start mr-6">
+                  <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
+                  <div class="flex flex-col mt-auto">
+                    <p class="text-sm text-gray-600">Idaho, USA</p>
+                  </div>
+                </div>
+                <div class="border-l h-[150px] border-gray-300 mx-4 "></div>
+                <div class="text-gray-700 text-[16px] leading-[30.4px] items-center">
+                  <p>“Kayyon has completely transformed my living room! The sofa I purchased is not only stylish but
+                    also incredibly comfortable. The craftsmanship is top-notch, and the delivery was smooth and on
+                    time. I'll definitely be returning for more pieces”</p>
+                </div>
+              </div>
+              <div class="swiper-slide flex border border-gray-300 p-6 rounded-md w-[572px] h-[198px]"
                 data-aos="fade-right" data-aos-delay="1000">
                 <div class="flex flex-col items-start mr-6">
                   <h3 class="text-lg font-semibold text-gray-800">Haiyo</h3>
@@ -358,24 +373,22 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Slider Controls -->
-          <div class="flex space-x-4 pt-4">
-            <button title="prev" onclick="prevSlide()"
-              class="flex justify-center items-center w-[88px] h-[32px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-              </svg>
-            </button>
-            <button title="next" onclick="nextSlide()"
-              class="flex justify-center items-center w-[88px] h-[32px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-              </svg>
-            </button>
+            <div class="flex space-x-4 pt-4">
+              <button title="prev" onclick="prevSlide()"
+                class="custom-prev flex justify-center items-center w-[88px] h-[32px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                </svg>
+              </button>
+              <button title="next" onclick="nextSlide()"
+                class="custom-next flex justify-center items-center w-[88px] h-[32px] border bg-white text-[#61513F] border-[#61513F] rounded-[100px] hover:text-white hover:bg-[#61513F] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -425,6 +438,7 @@
   </footer>
   <script type="module" src="/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
@@ -462,16 +476,6 @@
     setInterval(() => {
       slider.scrollBy({ left: 300, behavior: 'smooth' });
     }, 3000);
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.button-custom-next',
-        prevEl: '.button-custom-prev',
-      },
-    });
   </script>
   <script>
     let currentIndex = 0;
