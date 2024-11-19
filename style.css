@@ -79,3 +79,8 @@
 .swiper-slide.swiper-slide-active img{
   @apply scale-100
 }
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  @apply bg-[#FF7813]
+}
+

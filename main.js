@@ -6,9 +6,9 @@ document.querySelector('#site-header').innerHTML = `
     <div>Header Area</div>
   </div>
 `
-
 document.querySelector('#site-footer').innerHTML = `
   <div class="footer-wrapper">
     <div>Footer Area</div>
   </div>
 `
+
