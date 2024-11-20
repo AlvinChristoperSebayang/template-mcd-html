@@ -19,12 +19,26 @@
       /* html {
         scroll-behavior: smooth;
       } */
+      #home{
+        scroll-margin-top: 100px;
+      }
+      #features{
+        scroll-margin-top: 60px;
+      }
+      #download{
+        scroll-margin-top: 100px;
+      }
+      @media (max-width: 640px) {
+        #download{
+          scroll-margin-top: 70px;
+        }
+      }
 
       /* Dropdown Mobile */
       #menuButton .rotate-45 {
         transform: rotate(45deg);
       }
-
+      
       #menuButton .rotate--45 {
         transform: rotate(-45deg);
       }
@@ -195,7 +209,7 @@
         </button>
 
         <!-- Dropdown Menu -->
-        <ul id="dropdownMenu" class="hidden flex flex-col absolute gap-6 right-0 z-10 w-full h-[85vh] pb-36 mt-auto bg-[#F4FFE6] shadow-md">
+        <ul id="dropdownMenu" class="hidden flex flex-col absolute gap-6 right-0 z-10 w-full h-[100vh] pb-36 mt-auto bg-[#F4FFE6] shadow-md">
           <li>
             <a href="#home" class="block px-5 py-2 text-[#6D6D6D] mt-4 text-sm leading-normal hover:font-semibold hover:text-black duration-300">
               Home 
@@ -261,7 +275,7 @@
             </span>
           </a>
         </div>
-        <figure id="animated-figure" class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 sm:top-[30%] md:top-[20%] xl:top-[15%]">
+        <figure id="animated-figure" class="absolute left-1/2 transform -translate-x-1/2">
           <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[285px] lg:w-[385px] xl:w-[426px]" />
         </figure>
         <div class="flex flex-row w-fit ml-auto gap-4 md:gap-6 lg:gap-8 xl:gap-10 -mt-6 md:-mt-8">
@@ -1052,6 +1066,7 @@
       // dropdown
       const menuButton = document.getElementById("menuButton");
       const dropdownMenu = document.getElementById("dropdownMenu");
+      const dropdownLinks = dropdownMenu.querySelectorAll("a");
 
       window.addEventListener("load", () => {
         setTimeout(() => {
@@ -1062,6 +1077,13 @@
       menuButton.addEventListener("click", () => {
         menuButton.classList.toggle("open");
       });
+
+      dropdownLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          menuButton.classList.remove("open");
+        });
+      });
+    
       // Dropdown N
 
       // Animated Figure
@@ -1077,8 +1099,11 @@
             figure.style.setProperty("--target-top", "20%");
           } else if (window.innerWidth >= 640) {
             figure.style.setProperty("--target-top", "30%");
-          } else {
-            figure.style.setProperty("--target-top", "58%");
+          } else if (window.innerWidth <= 640) {
+            const viewportHeight = window.innerHeight;
+            const topPosition = viewportHeight / 3;
+            figure.style.top = `${topPosition}px`;
+            figure.style.transform = "translate(-50%, -50%)";
           }
         }
 
@@ -1132,27 +1157,27 @@
       const footer = document.querySelector(".Anime");
       const paths = document.querySelectorAll(".path-animate");
 
-      function checkVisibility() {
-        const rect = footer.getBoundingClientRect();
+        function checkVisibility() {
+          const rect = footer.getBoundingClientRect();
 
-        // Cek apakah footer terlihat di viewport
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          paths.forEach((path, index) => {
-            setTimeout(() => {
-              path.classList.add("visible");
-            }, (paths.length - 1 - index) * 70);
-          });
-        } else {
-          // Menghapus kelas 'visible' ketika footer keluar dari viewport
-          paths.forEach((path) => {
-            path.classList.remove("visible");
-          });
+          // Cek apakah footer terlihat di viewport
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            paths.forEach((path, index) => {
+              setTimeout(() => {
+                path.classList.add("visible");
+              }, (paths.length - 1 - index) * 70);
+            });
+          } else {
+            // Menghapus kelas 'visible' ketika footer keluar dari viewport
+            paths.forEach((path) => {
+              path.classList.remove("visible");
+            });
+          }
         }
-      }
 
-      window.addEventListener("scroll", checkVisibility);
-      checkVisibility();
-    });
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility();
+      });
 
       // Path Animation N
       
@@ -1193,7 +1218,10 @@
             slidesPerView: 3,
             spaceBetween: 20,
           },
-          
+          1800: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
         },
       });
   
