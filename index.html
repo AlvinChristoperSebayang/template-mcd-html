@@ -17,6 +17,42 @@
         @apply font-instrument !important
       }
 
+      /* Dropdown Mobile */
+      #menuButton .rotate-45 {
+        transform: rotate(45deg);
+      }
+      
+      #menuButton .rotate--45 {
+        transform: rotate(-45deg);
+      }
+
+      #menuButton.open #line1 {
+        transform: rotate(-45deg) translateY(12px);
+      }
+
+      #menuButton.open #line2 {
+        opacity: 0;
+      }
+
+      #menuButton.open #line3 {
+        transform: rotate(45deg) translateY(-12px);
+      }
+
+      #dropdownMenu {
+        position: fixed;
+        top: 60px;
+        transition: 0.5s ease;
+        transform: translatex(100%);
+        visibility: hidden;
+      }
+
+      #menuButton.open ~ #dropdownMenu {
+        transform: translatex(0);
+        transition: 0.5 ease;
+        visibility: visible;
+      }
+
+
       #product{
         scroll-margin-top: 100px;
       }
@@ -24,15 +60,6 @@
       #contact{
         scroll-margin-top: 100px;
       }
-
-      /* .imageHero{
-        @apply invisible opacity-0 rotate-90 absolute;
-        transition: visibility 0s linear, opacity 0.5s ease, transform 0.5s ease
-      }
-      .imageHero.imageActive{
-        @apply opacity-100 rotate-0 relative visible;
-        
-      } */
 
       .imageHero {
           @apply invisible opacity-0 rotate-90 absolute;
@@ -85,20 +112,54 @@
   </head>
   <body class="overflow-x-hidden">
     <header class="w-full p-4 sticky top-0 z-50 bg-white">
-      <div class="container  mx-auto flex items-center justify-between px-[10px] sm:px-[10px] md:px-[30px] lg:px-[30px] xl:px-[12px]">
+      <div class="container mx-auto flex items-center justify-between px-[10px] sm:px-[10px] md:px-[30px] lg:px-[30px] xl:px-[12px]">
           <div class="flex items-center space-x-3">
               <img src="logo.png" alt="Logo" class="w-[38px] h-[38px] sm:w-[30px] sm:h-[35px] md:w-[45px] md:h-[50px] lg:w-[63px] lg:h-[58px] xl:w-[63px] xl:h-[48px] object-contain">
               <span class="text-[10px] sm:text-[15px] md:text-[18px] lg:text-[25px] xl:text-[25px] text-black font-medium">Makan Samurai</span>
           </div>
-          <nav>
+         
+          <!-- Navbar Menu -->
+          <nav class="navbar-menu hidden sm:flex">
               <ul class="flex font-medium gap-[20px] sm:gap-[55px] md:gap-[40px] lg:gap-[63px] xl:gap-[73px]">
                   <li><a href="#product" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">Product</a></li>
                   <li><a href="#" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">About</a></li>
                   <li><a href="#contact" class="text-black text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px] xl:text-[15px]">Contact</a></li>
               </ul>
           </nav>
+          <div class="sm:hidden">
+            <!-- Button dropdown -->
+            <button id="menuButton" class="relative w-6 h-4 focus:outline-none">
+                <div id="line1" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-0"></div>
+                <div id="line2" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-2"></div>
+                <div id="line3" class="absolute w-full h-[3px] bg-black rounded transition-all duration-300 top-4"></div>
+            </button>
+        
+            <!-- Dropdown Menu -->
+            <ul id="dropdownMenu" class="hidden flex flex-col absolute gap-6 right-0 z-10 w-full h-[100vh] pb-36 mt-auto bg-[#ffffff] shadow-md">
+                <li>
+                    <a href="#product" class="block px-5 py-2 text-[#070707] mt-4 text-sm leading-normal hover:font-semibold hover:text-black duration-300">
+                        Product
+                        <div class="w-full h-[0.5px] bg-[#000000]"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="block px-5 py-2 text-[#070707] text-sm leading-normal hover:font-semibold hover:text-black duration-300">
+                        About
+                        <div class="w-full h-[0.5px] bg-[#000000]"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="block px-5 py-2 text-[#070707] text-sm leading-normal hover:font-semibold hover:text-black duration-300">
+                        Contact
+                        <div class="w-full h-[0.5px] bg-[#000000]"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
       </div>
   </header>
+  
   
   <main id="site-main">
     <!-- 1 -->
@@ -185,7 +246,7 @@
       <!-- mobile -->
       <div class=" flex flex-row sm:flex-row md:flex-row xl:flex-row mt-[-70px] sm:mt-[-70px] justify-between md:items-start  gap-0 sm:gap-0 md:gap-[90px] lg:gap-[70px] xl:gap-[22px]">
         <!-- 1 -->
-        <div class="block md:hidden relative w-1/4 cursor-pointer" onclick="changeMainImage('ayamGulai', this)">
+        <div class="block sm:hidden relative w-1/4 cursor-pointer" onclick="changeMainImage('ayamGulai', this)">
           <div class="bg-[#F5F5F5] hover:bg-[#90CB92] card-content rounded-2xl w-[90px] h-[100px] sm:w-[140px] sm:h-[150px] md:w-[162px] md:h-[173px] xl:w-[162px] xl:h-[173px] p-4 pt-6 sm:pt-16 md:pt-18 xl:pt-18 mt-10 text-center">
           <img alt="card 1" src="ayamGulai.png"  class="object-cover w-[65px] h-[65px] sm:w-[120px] sm:h-[120px] md:w-[118px] md:h-[118px]  mx-auto mt-14 sm:mt-10 md:mt-[10px] lg:md:mt-10 xl:mt-10 rounded-full absolute -top-12 left-11 sm:left-[18px] md:left-10 lg:left-5 xl:left-5 md:-translate-x-0 transform -translate-x-1/2 sm:-translate-x-0 lg:-translate-x-0 xl:-translate-x-0" />
             <h2 class="text-[10px] sm:text-[14px] md:text-[20px] lg:text-[18px] mb-2 font-medium">Ayam Gulai</h2>
@@ -220,7 +281,7 @@
               <h2 data-aos="fade-right" class="font-semibold mx-auto items-center text-[16px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[42px] leading-[20px] sm:leading-[40px] md:leading-[40px] lg:leading-[51px] xl:leading-[51px]">
                   A Journey Through Tradition to Explore <br> the Wonders of Sundanese Cuisine
               </h2>
-              <p data-aos="fade-up" class="text-[#00000099] font-medium mx-auto items-center justify-center w-[85%]  sm:w-[90%] sm:h-[100%] md:w-[90%] md:h-[40%] lg:w-[85%] lg:h-[90%] xl:w-[85%] xl:h-[100%] 2xl:w-[70%] leading-[12px] text-[10px] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[20px] lg:text-[16px] lg:leading-[24px] xl:text-[20px] xl:leading-[32px]">
+              <p data-aos="fade-up" class="text-[#00000099] font-medium mx-auto items-center justify-center w-[85%]  sm:w-[90%] sm:h-[100%] md:w-[85%] md:h-[40%] lg:w-[85%] lg:h-[90%] xl:w-[85%] xl:h-[100%] 2xl:w-[70%] leading-[12px] text-[10px] sm:text-[14px] sm:leading-[20px] md:text-[15px] md:leading-[20px] lg:text-[16px] lg:leading-[24px] xl:text-[20px] xl:leading-[32px]">
                   Exploring Sundanese cuisine is an invitation to usher in the flavors, stories and communal experiences creating an
                   ever-evolving cultural landscape. Enjoying every bite means participating in a journey and honoring the past and
                   celebrating the present, ensuring that the magic of Sundanese cuisine will endure for to come.
@@ -503,10 +564,10 @@
   <!-- 3 -->
   <section id="contact" class="container mx-auto px-4 md:px-[3rem] lg:px-12 xl:px-0 xl:py-0 flex flex-col md:flex-row items-center gap-10">
     <div class="w-full px-[12px] sm:px-[25px] md:px-0 lg:px-0 xl:px-0  space-y-6 md:text-left xl:gap-[32px]">
-        <h2 data-aos="fade-right" class="font-semibold sm:w-[100%] md:w-[90%]  lg:w-[90%]  xl:w-[90%] 2xl:w-[80%] text-[25px] leading-[30px] md:text-[35px] lg:text-[41px] xl:text-[55px] md:leading-[50px] lg:leading-[50px] xl:leading-[66px]">
-          In a Culinary Adventure, Where Every <br> Bite Tells a Story!
+        <h2 data-aos="fade-right" class="font-semibold sm:w-[100%] md:w-[93%]  lg:w-[90%]  xl:w-[90%] 2xl:w-[100%] text-[25px] leading-[30px] md:text-[35px] lg:text-[41px] xl:text-[55px] md:leading-[50px] lg:leading-[50px] xl:leading-[66px]">
+          In a Culinary Adventure, Where Every Bite Tells a Story!
         </h2>
-      <p data-aos="fade-up" class="text-[#00000099] font-normal sm:w-[100%] md:w-[85%]  lg:w-[85%]  xl:w-[85%]   2xl:w-[71%]  text-[12px] sm:-[10px] md:text-[14px] lg:text-[18px] xl:text-[20px]">
+      <p data-aos="fade-up" class="text-[#00000099] font-normal sm:w-[100%] md:w-[100%]  lg:w-[85%]  xl:w-[85%]   2xl:w-[82%]  text-[12px] sm:-[10px] md:text-[14px] lg:text-[18px] xl:text-[20px]">
         As the creator of this Sundanese restaurant, I am Min, opened this place
         driven by my love for the richness of Sundanese culture and taste. Every
         dish I prepare tells a story, made with local ingredients and treasured
@@ -528,7 +589,7 @@
 </section>
 
   <!-- 4 -->
-  <section class="flex flex-col container mx-auto px-4 md:px-4 lg:px-12 py-12 gap-[20px]">
+  <section class="flex flex-col container mx-auto px-4 md:px-4 lg:px-12 xl:px-12 2xl:px-0 py-12 gap-[20px]">
     <h2 data-aos="fade-up" class="text-center text-[30px] md:text-[30px] xl:text-[50px] font-medium h-[60px] sm:h-[65px] md:h-[100%] lg:h-[100%] xl:h-[100%] ">
       <span class="text-black">Food Lover</span> <span class="text-[#730202B2]">Feedback</span>
     </h2>
@@ -768,35 +829,46 @@
         cardElement.querySelector(".card-content").classList.add("bg-active");
       }
 
-      // bagian navbar
-    //   document.querySelectorAll("nav ul li a").forEach(navItem => {
-    //     navItem.addEventListener("click", function(event) {
-    //         event.preventDefault(); 
-            
-    //         const category = this.getAttribute("href"); 
-    //         document.querySelectorAll("nav ul li a").forEach(link => {
-    //             link.classList.remove("active");
-    //         });
-            
-    //         this.classList.add("active");
-    //         document.querySelectorAll(".card-container > div").forEach(card => {
-    //             card.style.display = "none"; 
-    //         });
-            
-    //         if (category === "all") {
-    //             document.querySelectorAll(".card-container > div").forEach(card => {
-    //                 card.style.display = "flex"; 
-    //             });
-    //         } else {
-    //             document.querySelectorAll(`.${category}`).forEach(card => {
-    //                 card.style.display = "flex"; 
-    //             });
-    //         }
-    //     });
-    // });
+       // dropdown
+       const menuButton = document.getElementById("menuButton");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      const dropdownLinks = dropdownMenu.querySelectorAll("a");
 
-    // nav 1
-    document.querySelectorAll("nav ul li a").forEach(navItem => {
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          dropdownMenu.classList.remove("hidden");
+        }, 0); 
+      });
+
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("open");
+      });
+
+      dropdownLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          menuButton.classList.remove("open");
+        });
+      });
+    
+
+// Cek apakah menu item bisa diklik
+document.querySelectorAll("nav ul li a").forEach(navItem => {
+    navItem.addEventListener("click", function(event) {
+        event.preventDefault();
+        console.log("Navbar item clicked:", this.textContent);  
+        const targetSection = document.querySelector(this.getAttribute("href"));
+        targetSection.scrollIntoView({ behavior: "smooth" });
+
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.classList.remove("active");
+        });
+        this.classList.add("active");
+    });
+});
+
+
+    // Navbar 1 
+document.querySelectorAll("nav ul li a").forEach(navItem => {
     navItem.addEventListener("click", function(event) {
         event.preventDefault();
         
@@ -808,64 +880,71 @@
         });
         
         this.classList.add("active");
+        
+        if (this.getAttribute('href') === '#product') {
+            document.querySelector('a[href="#all"]').classList.add('active');
+        }
     });
 });
 
-  // nav 2
-  document.querySelectorAll('.section-navbar a').forEach(link => {
+// Navbar 2 
+document.querySelectorAll('.section-navbar a').forEach(link => {
     link.addEventListener('click', function(event) {
-      event.preventDefault();
+        event.preventDefault();
 
-      document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
-      this.classList.add('active');
+        document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
 
-      // konten kategori
-      const category = this.getAttribute('href');
-      document.querySelectorAll('.content').forEach(item => {
-        item.style.display = item.classList.contains(category) || category === "all" ? 'flex' : 'none';
-      });
+        const category = this.getAttribute('href');
+        document.querySelectorAll('.content').forEach(item => {
+            item.style.display = item.classList.contains(category) || category === "all" ? 'flex' : 'none';
+        });
     });
-  });
+});
 
-  // class active buat nav 1 (all)
-const productNavLink = document.querySelector('a[href="#product"]');
-const contactNavLink = document.querySelector('a[href="#contact"]');
-const allNavLink = document.querySelector('a[href="all"]');
-
-// Fungsi untuk mengaktifkan link 'All'
-function activateAllLink() {
+// Fungsi untuk mengaktifkan link 'All' di navbar kedua
+const allNavLink = document.querySelector('a[href="#all"]');
+allNavLink.addEventListener('click', function() {
     document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
-    allNavLink.classList.add('active');
+    this.classList.add('active');
+});
+
+// Fungsi untuk mengatur tampilan berdasarkan kategori
+function showCategory(category) {
+    const allCards = document.querySelectorAll('.card-container > div'); 
+    const categoryCards = document.querySelectorAll(`.card-container > div.${category}`); 
+
+    allCards.forEach(card => {
+        card.classList.add('hidden');
+    });
+
+    if (category === "all") {
+        allCards.forEach(card => {
+            card.classList.remove('hidden');
+        });
+    } else {
+        categoryCards.forEach(card => {
+            card.classList.remove('hidden');
+        });
+    }
+    AOS.refresh();
 }
 
-// #product
-productNavLink.addEventListener('click', activateAllLink);
+// Menambahkan event listener pada setiap link kategori
+document.querySelectorAll('.section-navbar a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
 
-// #contact
-contactNavLink.addEventListener('click', activateAllLink);
+        document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
 
-    // slide
-        // const swiper = new Swiper(".mySwiper", {
-      
-        //   spaceBetween: 20,
-        //   loop: true,
-        //   speed: 400, 
-        //   pagination: {
-        //     el: ".swiper-pagination",
-        //     type: "bullets",
-        //     clickable: true,
-        //   },
-        //   breakpoints:{
-        //       640:{
-        //         slidesPerView: 3,
-        //       },
-        //       1024:{
-        //         slidesPerView: 4,
-        //       }
-        //   }
-        // });
+        this.classList.add('active');
+        const category = this.getAttribute('href').substring(1); 
+        showCategory(category);
+    });
+});
 
-        const swiper = new Swiper(".mySwiper", {
+// slide
+const swiper = new Swiper(".mySwiper", {
         spaceBetween: 20,
         loop: true,
         speed: 800,
@@ -882,20 +961,6 @@ contactNavLink.addEventListener('click', activateAllLink);
           }
         }
       });
-
-      // btnView
-      function showAllCategories() {
-    const categoryCards = document.querySelectorAll('.category-card');
-    const btn = document.getElementById('showCategoriesBtn');
-      }
-
-    // Tampilkan semua card
-  //   categoryCards.forEach(card => {
-  //       card.classList.remove('hidden');
-  //   });
-  //   btn.classList.add('hidden');
-  //   AOS.refresh();
-  // }
     </script>
 
     <!-- aos -->
