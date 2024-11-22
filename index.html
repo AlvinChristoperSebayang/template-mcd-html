@@ -45,7 +45,7 @@
     <main>
       <section class="relative">
         <div class="relative pt-[120px] h-[80vh] lg:h-[949px]">
-          <div class="swiper absolute inset-0 w-full h-full z-0">
+          <div class="swiper  absolute inset-0 w-full h-full z-0">
             <!-- swiper -->
             <div class="swiper-wrapper">
               <!-- home 1 -->
@@ -415,12 +415,9 @@
           </div>
         </div>
         <div class="container mx-auto">
-          <div class="absolute lg:bottom-[60px] lg:flex items-center gap-4 hidden md:block">
-            <div class="flex gap-1 text-white text-xl relative">
-              0
-              <div id="" class="swiper-fraction absolute top-0 left-3 text-white"></div>
-            </div>
-            <div class="w-[821px] ml-3 h-1 bg-white relative">
+          <div class="absolute lg:bottom-[60px] lg:flex items-center gap-3 hidden md:block">
+            <span class="indexSwiper text-xl text-white">01</span>
+            <div class="w-[821px] h-1 bg-white relative">
               <div id="" class="absolute top-0 left-0 h-1 bg-white swiper-pagination"></div>
             </div>
             <span class="text-xl text-white">05</span>
@@ -827,9 +824,9 @@
               </div>
               <div class="mt-[30px] w-full">
                   <h3 data-aos="fade-up" data-aos-delay="300" class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica">Newsletter</h3>
-                  <form data-aos="fade-up" data-aos-delay="400" class="flex items-center mt-3 w-full">
+                  <form class="flex items-center mt-3 w-full">
                       <input type="email" placeholder="Your Email" class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent">
-                        <button data-aos="fade-up" data-aos-delay="600" type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
+                        <button  type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
                             → 
                         </button>
                   </form>
@@ -927,7 +924,7 @@
       init()
       window.addEventListener("scroll", function() {
         const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) { // Ubah angka 50 sesuai kebutuhan
+        if (window.scrollY > 50) { 
           navbar.classList.add("bg-scrolled");
         } else {
           navbar.classList.remove("bg-scrolled");
@@ -941,10 +938,13 @@
           el: '.swiper-pagination',
           type:'progressbar'
         },
-        pagination: {
-        el: ".swiper-fraction",
-        type: "fraction",
-      },
+        on: {
+          slideChange: function () {
+            currentIndex = this.realIndex;
+            let indexSwiper = document.querySelector('.indexSwiper');
+            indexSwiper.textContent = `0${currentIndex + 1}`
+          },
+        },
     
         navigation: {
           nextEl: '.button-custom-next',
