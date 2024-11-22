@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{html,js}"],
   theme: {
     extend: {
+      screens: {
+        '1360': '1360px',
+      },
       fontFamily: {
         'instrument': ['"Instrument Sans"'],
         'plus-jakarta': ['"Plus Jakarta Sans"'], 
