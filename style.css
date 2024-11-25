@@ -1,8 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-dark {
+  background-color: #61513F;
+}
 
-#site-header .navigation-wrapper{
+/* #site-header .navigation-wrapper{
+ 
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }
 
@@ -12,4 +16,4 @@
 
 #site-footer .footer-wrapper{
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
-}
+} */
