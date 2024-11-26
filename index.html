@@ -592,7 +592,10 @@
               class="content md:before:hidden sm:before:block before:absolute before:start-0 before:top-[110px] sm:before:bg-[url('./ornament/gift_section_ornament_left.svg')] before:w-[127px] before:bg-no-repeat before:h-[160px] md:after:hidden sm:after:block after:absolute after:end-0 after:top-0 sm:after:bg-[url('./ornament/gift_section_ornament_right.svg')] after:w-[70px] after:bg-no-repeat after:h-[160px]"
             >
               <div class="max-md:container">
-                <div data-aos="fade-zoom-in" class="digital-gift">
+                <div
+                  data-aos="fade-zoom-in"
+                  class="digital-gift whitespace-nowrap"
+                >
                   <div class="text-content">
                     <h3 class="sm:text-[24px] md:text-[40px] font-dancing">
                       Digital Wallet
@@ -601,22 +604,22 @@
                       Note : Tap to copy bank number
                     </p>
                   </div>
-                  <form
-                    class="flex justify-between sm:w-full sm:py-[8px] sm:px-[12px] md:w-[315px] pl-[12px] border border-[#9D7C6B] rounded-lg"
-                    action=""
+                  <button
+                    class="flex justify-between sm:w-full w-[315px] h-[40px] md:w-[315px] border border-[#9D7C6B] rounded-lg relative"
+                    onclick="copyToClipboard()"
                   >
                     <input
-                      class="w-full"
+                      class="w-full h-full absolute bg-transparent z-50 pl-[12px]"
                       type="text"
                       id="account-number"
                       value="1234567890"
                       readonly
-                      onclick="copyToClipboard()"
                       style="cursor: pointer"
-                      value="1234567890"
                       readonly
                     />
+
                     <svg
+                      class="absolute self-center right-[5%]"
                       width="14"
                       height="14"
                       viewBox="0 0 14 14"
@@ -632,7 +635,7 @@
                         fill="#9D7C6B"
                       />
                     </svg>
-                  </form>
+                  </button>
                   <figure>
                     <img src="./src/img/bank_mandiri.png" alt="Bank Mandiri" />
                   </figure>
