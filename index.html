@@ -5,13 +5,583 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Ephesis&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dancing+Script:wght@400..700&family=Ephesis&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        
+        .swiper-slide {
+          justify-content: center;
+          align-items: center;
+        }
+        .swiper-button-next, .swiper-button-prev {
+          position: relative;
+          margin-top: 12px;
+          border: 1px;
+          border-radius: 50px;
+          
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+          background-color: none;
+        }
+    </style>
+
   </head>
   <body>
-    <header id="site-header"></header>
+    <header class="header w-full fixed top-0 z-30 transition-all duration-500 ease-in-out" id="site-header">
+        <nav class="bg-white justify-center hidden md:flex items-center text-[16px] font-PlayfairDisplay text-[#4E4E50]"
+             id="navbar">
+             <ul class="flex gap-[32px] py-[20px]">
+              <li class="border-blue-500 hover:border-b font-normal "><a class="hover:text-black" href="#">Home</a></li>
+              <li class="border-blue-500 hover:border-b"><a class="hover:text-black" href="#Story">OutStory</a></li>
+              <li class="border-blue-500 hover:border-b"><a class="hover:text-black" href="#Event">Event</a></li>
+              <li class="border-blue-500 hover:border-b"><a class="hover:text-black" href="#Galery">Gallery</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container mx-auto relative flex justify-items-end">
+      <!-- Icon Menu -->
+      <div class="menu-icon fixed mt-[18px] md:hidden mr-[17px] w-[375px]">
+        <img 
+          src="Frame.svg" 
+          alt="Icon Menu" 
+          class="justify-between hover:bg-slate-400 hover:border rounded-xl cursor-pointer" 
+          onclick="toggleMenu()" 
+          id="menu-icon"
+        >
+      </div>
+    
+      <!-- Close Icon -->
+      <div id="close-icon" class="hidden fixed top-0 right-0 mt-2 mr-2 z-[300px]">
+        <img 
+          src="cancel.svg" 
+          alt="Icon Close" 
+          class="w-6 h-6 cursor-pointer" 
+          onclick="toggleMenu()"
+        >
+      </div>
+    
+      <!-- Menu di Mobile -->
+      <ul id="menu-items" class="hidden fixed top-[60px] right-0 bg-white shadow-lg rounded-lg py-2 px-[11px] mr-0 md:mr-8 z-[500px]">
+        <a href="#">
+          <img src="Home.svg" alt="Home" class="py-2 hover:bg-gray-100 cursor-pointer">
+        </a>
+        <a href="#Story">
+          <img src="History.svg" alt="OutStory" class="py-2 hover:bg-gray-100 cursor-pointer">
+        </a>
+        <a href="#Event">
+          <img src="Date.svg" alt="Event" class="py-2 hover:bg-gray-100 cursor-pointer">
+        </a>
+        <a href="#Galery">
+          <img src="Galery.svg" alt="Gallery" class="py-2 hover:bg-gray-100 cursor-pointer">
+        </a>
+      </ul>
+      
+    </div>
+    
+
+    
+    <!-- Audio Musik 
+      <audio class="fixed mt-[60px]" controls   id="audio">
+        <source src="Bruno.mp3" type="audio/mp3">
+      </audio> -->
+
+     
+      
+   <!-- Content -->
     <main id="site-main">
 
+       
+        <section class="container mx-auto ">
+
+           <!-- Audio kostume -->
+          <button id="audioButton" class="fixed  md:mt-[60px] flex text-transparent hover:text-black p-4 rounded-full z-[300] transition duration-300 hover:bg-slate-300 hover:outline-none">
+            <!-- Ikon Play -->
+            <img id="playIcon" src="play.svg" alt="Play Icon" class="w-6 h-6">
+            <!-- Ikon Pause -->
+            <img id="pauseIcon" src="pause.svg" alt="Pause Icon" class="w-6 h-6 hidden">
+            <p id="audioText">Musik Play</p>
+          </button>
+          
+          <audio id="audio">
+            <source src="Bruno.mp3" type="audio/mp3">
+          </audio>
+           <!-- Content-Home -->
+            
+          <div class="flex flex-col justify-center items-center text-center mt-[9px] md:pb-[48px]">
+              <h1 class="text-[36px] lg:text-[69px] xl:text-[96px] font-PlayfairDisplay text-[#070C17] my-[50px]" 
+                  data-aos="fade-up" data-aos-anchor-placement="bottom-center" data-aos-duration="2000" data-aos-delay="100">
+                  Wedding Invitation
+              </h1>
+              <div class="grid grid-cols-2 md:grid-cols-3 justify-items-center xl:gap-10 max:w-[1322px] ">
+                  
+                  <!-- Image 1 -->
+                  <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300" class="mt-[12px] md:mt-0 w-[157px] md:w-[230px] lg:w-[280px] xl:w-[400px] gap-[12px]">
+                      <img src="/Img2.png" alt="Wedding Invitation Image 1">
+                  </div>
+      
+                  <!-- Countdown -->
+                   
+                  <div class="col-span-2 md:col-span-1 order-first md:order-none border-[2px] border-[#4E4E50] md:w-full  xl:w-[450px] rounded-[12px] flex flex-col">
+                      <div class="mt-0 md:mt-[52px]">
+                          <div class="flex justify-center gap-[36px]">
+                              <h3 class="text-[36px] lg:text-[44px] xl:text-[64px] text-center leading-[60px]" 
+                                  data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">A</h3>
+                              <h3 class="text-[36px] lg:text-[44px] xl:text-[64px] text-center leading-[60px]" 
+                                  data-aos="fade-down" data-aos-duration="2000" data-aos-delay="500">&</h3>
+                              <h3 class="text-[36px] lg:text-[44px] xl:text-[64p addEventListene] text-center leading-[60px]" 
+                                  data-aos="fade-left" data-aos-duration="2000" data-aos-delay="600">D</h3>
+                          </div>
+                          <div class="flex flex-col justify-center items-center text-center w-full">
+                              <p class="font-bold md:text-[20px] lg:text-[32px] my-[12px]">31-12-2024</p>
+                              <p class="text-[12px] xl:text-[16px] leading-[24px] w-[273px] md:w-[200px] xl:w-[432px]">
+                                  With great joy, we invite you to celebrate the moment we say 'I do' and embark on our forever together.
+                              </p>
+                          </div>
+                      </div>
+                      <div>
+                          <p class="text-[18px] md:text-[26px] lg:text-[36px]  xl:mt-[320px] font-bold mt-[28px] mb-[12px]">Countdown</p>
+                          <div class="countdown-container">
+                              <div class="countdown flex gap-[8px] xl:gap-[36px] justify-center mb-[21px]">
+                                  <div>
+                                      <p class="text-[12px] mb-[2px]">Days</p>
+                                      <p class="text-[24px] xl:text-[48px] font-bold leading-[34px]" id="days">00</p>
+                                  </div>
+                                  <div>
+                                      <p class="text-[12px] mb-[2px]">Hours</p>
+                                      <p class="text-[24px] xl:text-[48px] font-bold leading-[34px]" id="hours">00</p>
+                                  </div>
+                                  <div>
+                                      <p class="text-[12px] mb-[2px]">Minutes</p>
+                                      <p class="text-[24px] xl:text-[48px] font-bold leading-[34px]" id="minutes">00</p>
+                                  </div>
+                                  <div>
+                                      <p class="text-[12px] mb-[2px]">Seconds</p>
+                                      <p class="text-[24px] xl:text-[48px] font-bold leading-[34px]" id="seconds">00</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div> 
+                  
+                  <!-- Image 2 -->
+                  <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="900" class="mt-[12px] md:mt-0 w-[157px] md:w-[230px] lg:w-[280px] xl:w-[400px] gap-[12px]">
+                      <img src="/Img1.png" alt="Wedding Invitation Image 2">
+                  </div>
+              </div>
+              <div class="flex justify-between w-[326px] md:w-[700px] lg:w-[900px] xl:w-[1300px] mt-[-65px] md:mt-[-125px] lg:mt-[-205px] xl:mt-[-235px] z-20">
+                  <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
+                      <img class="ml-[-4px] size-[73px] md:size-[120px] lg:size-[201px] xl:size-[251px]" src="/Bunga1Kiri.png" alt="Decoration Left">
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                      <img class="mr-[-10px] size-[73px] md:size-[120px] lg:size-[201px] xl:size-[251px]" src="/Bunga1Kanan.png" alt="Decoration Right">
+                  </div>
+              </div>
+          </div>
+        </section>
+      
+
+        <!-- Content-The Story -->
+         <section id="Story" class="bg-[#F6F2F3]">
+           <div class=" flex flex-col items-center relative">
+               <div class="container md:flex justify-center items-center md:w-[650px] lg:w-[800px] xl:w-[1167px] gap-[50px] lg:gap-[80px] xl:gap-[101px] py-[25px] lg:py-[90px] xl:py-[112px]">
+                   <div class="flex justify-center my-[25px]">
+                           <img class="w-[213px] md:w-[500px] lg:w-[536px] items-center" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="700" src="/ImgStory.png" alt="image Story">
+                   </div>
+                   <div class="flex flex-col justify-center xl:w-[481px] ">
+                         <div class="xl:w-[486px]"  data-aos="fade-up" data-aos-duration="600">
+                               <p class="text-[#4E4E50] text-[12px]  xl:text-[24px] text-center">The Story</p>
+                               <h2 class="text-[#4E4E50] text-[24px] lg:text-[30px]  xl:text-[64px] mb-[12px] text-center ">Andhika <span class="mx-[12px] lg:mx-[35px] xl:text-[56px]">&</span>Diana</h2>
+                         </div>
+                         <div class="flex justify-center   ">
+                             <p class=" xl:w-[469px] text-[14px] xl:text-[18px] w-[330px] md:w-[300px] text-justify leading-[24px] xl:leading-[34px]   ">Diana and Andhika first met at university, where they pursued different majors but shared the same passion for campus organizations. Their introduction began at a campus event, and it didn't take long for them to feel they complemented each other perfectly.From lunch breaks in the cafeteria to study sessions in the library, their bond grew stronger. They shared many common interests, from a love of traveling to a passion for classic films. When Andhika decided to continue his studies abroad, their long-distance relationship only strengthened their bond. They committed to supporting each other, even when separated by continents.
+                             After years of being together, filled with love and happiness, they decided to take the next step. Andhika and Diana warmly invite you to celebrate their joyful day as they vow to be together for life.
+                         </div>
+                   </div>
+               </div>
+               <img class="absolute w-[622px] flex justify-end items-end bottom-0 right-0" data-aos="zoom-in-up" data-aos-duration="900" data-aos-delay="600" src="/Bunga2.png" alt="">
+           </div>
+         </section>
+              
+        <!-- Content-Event -->
+        <section id="Event">
+            <div class=" mx-auto flex flex-col-reverse md:flex-row  justify-between   ">
+                  <div class="md:pt-[31px] text-center md:text-start md:ml-[60px]   ">
+                        <p class="text-[12px] md:text-[16px] text-[#070C17] lg:mb-[12px]">Wedding Events</p>
+                          <p class="text-[14px] md:text-[18px] lg:text-[25px] xl:text-[32px] font-bold">Key Moments of Our Love Story</p>
+                        <div class="flex w-[80px] lg:w-[200px] ">
+                              <img class="hidden md:block lg:w-[100px] xl:w-auto" src="/Daun_kiri.svg" alt="image daun" data-aos="zoom-in" data-aos-duration="1500" >
+                              <img class="hidden md:block lg:w-[70px] xl:w-auto" src="/Daun_Tengah.svg" alt="image daun" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="700">
+                              <img class="hidden md:block lg:w-[100px] xl:w-auto" src="/Daun_Kanan.svg" alt="image daun" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000">
+                        </div>
+                  </div>
+                  <div class="flex flex-col  items-center mt-[20px] md:mt-0 " data-aos="fade-up" data-aos-duration="1500">
+                        <img class=" w-[282px] md:w-[410px] lg:w-[510px]  xl:w-[795px] z-[-1] overflow-hidden" src="/Img3.png" alt="Image Wedding">                             
+                  </div>
+            </div>
+        <!-- Content-Event-Date -->
+            <div class=" flex flex-col md:flex-row lg:flex-col  justify-center items-center mt-[8px] mb-[10px] py-[8px] z-[1]">
+                        <div class="bg-white md:rounded-[20px] lg:rounded-[50px] md:mt-[-100px] lg:mt-[-120px]    xl:mt-[-170px]  xl:w-[1090px] flex justify-center items-center">
+                            <div class="flex flex-col w-[330px] md:w-[650px] lg:w-[800px] xl:w-[1081px]  md:flex-row  bg-[#F6F2F3] rounded-[12px] md:my-[20px] md:mx-[20px] xl:my-[40px] xl:mx-[40px] xl:py-[24px]"> 
+                                
+                              <!-- The Reception -->
+                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="  px-[8px]   ">
+                                        <h3 class="text-[20px] text-center mt-[8px] mb-[12px]">The Reception</h3>
+                                        <div class="flex gap-[8px]">
+                                              <img src="/Icon_Date.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">02 Oktober 2024</p>
+                                        </div>
+                                        <div class="flex gap-[8px] my-[8px]">
+                                              <img src="/Icon_Time.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">09:00 s/d Selesai</p>
+                                        </div>
+                                        <div class="flex gap-[8px] ">
+                                              <img src="/Icon_location.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab Sukabumi</p>
+                                        </div>
+                                        
+                                        <a class="block border border-[#4E4E50] rounded-[10px] text-center leading-[22px] my-[10px] py-[5px] w-full transition-colors duration-200 hover:bg-gray-600 hover:text-white " href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                                          View Map </a>
+          
+                                        
+                                </div>
+
+                                  <!-- The Ceremony -->
+                                  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" class="px-[8px] border-x-[2px] border-[#D9D9D9]">
+                                        <h3 class="text-[20px] text-center mt-[8px] mb-[12px]">The Ceremony</h3>
+                                        <div class="flex gap-[8px]">
+                                              <img src="/Icon_Date.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">02 Oktober 2024</p>
+                                        </div>
+                                        <div class="flex gap-[8px] my-[8px]">
+                                              <img src="/Icon_Time.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">09:00 s/d Selesai</p>
+                                        </div>
+                                        <div class="flex gap-[8px] ">
+                                              <img src="/Icon_location.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab Sukabumi</p>
+                                        </div>
+                                        <a class="block border border-[#4E4E50] rounded-[10px] text-center leading-[22px] my-[10px] py-[5px] w-full transition-colors duration-200 hover:bg-gray-600 hover:text-white " href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                                          View Map </a>
+                                  </div>
+
+                                  <!-- Wedding Party -->
+                                  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300" class="  px-[8px]  ">
+                                        <h3 class="text-[20px] text-center mt-[8px] mb-[12px]">Wedding Party</h3>
+                                        <div class="flex gap-[8px]">
+                                              <img src="/Icon_Date.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">02 Oktober 2024</p>
+                                        </div>
+                                        <div class="flex gap-[8px] my-[8px]">
+                                              <img src="/Icon_Time.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">09:00 s/d Selesai</p>
+                                        </div>
+                                        <div class="flex gap-[8px]">
+                                              <img src="/Icon_location.svg" alt="">
+                                              <p class="text-[14px] lg:text-[16px] xl:text-[20px]">Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab Sukabumi</p>
+                                        </div>
+                                        <a class="block border border-[#4E4E50] rounded-[10px] text-center leading-[22px] my-[10px] py-[5px] w-full transition-colors duration-200 hover:bg-gray-600 hover:text-white " href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                                        View Map </a>
+                                      
+
+                                  </div>
+                            </div> 
+                          </div>
+                            
+            </div>
+            <!-- Content-Event-Title-Ucapan -->
+            <div class="  md:mt-[-100px]  lg:mt-[-140px] xl:mt-[-180px] pb-[20px] flex flex-col items-center lg:items-end   md:flex-row-reverse ">
+                    <div class="content-end md:ml-[30px] md:mr-[100px] lg:ml-[63px] lg:mr-[169px]">
+                      <p class="text-[14px]  xl:text-[24px]   xl:mb-[77px] text-center md:text-start mb-[27px] md:mb-[-200px] lg:mb-[50px]" data-aos="fade-up" data-aos-duration="700" data-aos-delay="700">With heartfelt gratitude, we invite you to join us as we celebrate our special day and the love that unites us.</p>
+                    </div>
+                    <img class="z-[-1] w-[282px] md:w-[400px] lg:w-[550px] xl:w-auto flex items-center " data-aos="fade-left" data-aos-duration="700" data-aos-delay="700" src="Img4.png" alt="Image Wedding">
+            </div>
+         </section>
+
+
+         <!--Content-Galery -->
+         <section id="Galery">
+            <div class=" container mx-auto pt-[28px]  ">
+                        <div class="flex justify-center items-center xl:items-start flex-col md:flex-row gap-[20px] md:gap-[50px] lg:gap-[100px] xl:gap-[148px]">
+                            <div class="w-[313px] lg:w-[450px] xl:w-[532px] relative">
+                                  <p class="text-center text-[12px] md:text-[16px] md:text-start mb-[12px]" data-aos="fade-down" data-aos-duration="400" data-aos-delay="300">Our Galery</p>
+                                <p class="font-bold text-[#4E4E50] text-[18px] lg:text-[32px] mt-[8px]  leading-[22px] text-center md:text-start mb-[22px]" data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">Moments We Treasure</p>
+                                  <p class="text-[12px] md:text-[16px] text-justify leading-[26px] " >Welcome to our gallery, where we've captured the most cherished moments of our journey together. From our first date to the day we said "I do," each photo tells a story of love, joy, and unforgettable memories. We hope you enjoy browsing through these snapshots as much as we enjoyed living these moments. May these images bring a smile to your face and warmth to your heart, just as they do for us every time we look back. Thank you for being a part of our beautiful story.</p>
+                                  <img class="mt-[-250px]" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="1000" src="BungaB1.png" alt="image Bunga">
+                            </div>
+                            <!-- <div class="w-[313px] md:w-[350px] xl:w-auto" data-aos="flip-up" data-aos-duration="800" data-aos-delay="500">
+                              <img src="/ImgVid.png" alt="Video">
+                            </div> -->
+                            <video class="w-[313px] md:w-[350px] xl:w-[650px]" controls>
+                              <source src="VideoWedding.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                                
+            </div>
+            <!-- Content-Galery-Foto -->
+            <div class="container mx-auto overflow-hidden swiper-container max-w-[313px] md:max-w-[710px] lg:max-w-[900px] xl:max-w-[1300px] mt-[10px] ">
+                      <div class=" swiper-wrapper ">
+                          <div class=" swiper-slide">
+                            <a data-fslightbox="gallery" href="/Image1.png">
+                            <img src="/Image1.png" alt="Image 1"> 
+                            </a>
+                          </div>
+                          <div class=" swiper-slide">
+                            <a data-fslightbox="gallery" href="/Image2.png">
+                            <img src="/Image2.png" alt="Image 1"> 
+                            </a>
+                          </div>
+                          <div class=" swiper-slide">
+                            <a data-fslightbox="gallery" href="/Image3.png">
+                            <img src="/Image3.png" alt="Image 1"> 
+                            </a>
+                          </div>
+                          <div class=" swiper-slide">
+                            <a data-fslightbox="gallery" href="/Image4.png">
+                            <img src="/Image4.png" alt="Image 1"> 
+                            </a>
+                          </div>
+                          <div class=" swiper-slide">
+                            <a data-fslightbox="gallery" href="/Image1.png">
+                            <img src="/Image2.png" alt="Image 2"> 
+                            </a>
+                          </div>
+                          
+                          
+                        
+                      </div>
+                      
+                  
+                      <!-- Custom Navigation Buttons -->
+            </div>
+            <div class="flex justify-center gap-[20px] my-[12px] lg:my-[27px] mb-[13px] lg:mb-[41px]  ">
+                      <button class=" swiper-button-prev custom-prev w-[24px] hover:bg-slate-400 ">
+                          <img class="" src="IconPrev.svg" alt="Previous Icon">
+                      </button>
+                      <button class="swiper-button-next custom-next w-[24px] hover:bg-slate-400 ">
+                          <img src="IconNext.svg" alt="Next Icon">
+                      </button>
+            </div>  
+         </section>
     </main>
-    <footer id="site-footer"></footer>
+    
+
+    <footer id="site-footer">
+      <div class="bg-[#F1F0EE] pt-[64px]">
+          <div class="flex justify-center gap-[36px]">
+              <h3 class="lg:text-[64px] text-[24px] text-center pb-[44px] lg:pb-[28px]" data-aos="fade-right" data-aos-duration="500" data-aos-delay="600">Andhika</h3>
+              <h3 class="lg:text-[64px] text-[24px] text-center pb-[44px] lg:pb-[28px]">&</h3>
+              <h3 class="lg:text-[64px] text-[24px] text-center pb-[44px] lg:pb-[28px]" data-aos="fade-left" data-aos-duration="600" data-aos-delay="800">Diana</h3>
+          </div>
+          <div id="typing" class="flex justify-center pb-[80px]">
+              <p class="text-center text-[14px] w-[336px] leading-[24px] md:w-[659px] text-[#4E4E50]">
+                  May all the preparations and our wedding ceremony proceed smoothly and be blessed. We hope that everything we have planned goes well and is filled with joy.
+              </p>
+          </div>
+          <p class="text-center text-[12px] md:text-[16px] pb-[30px]">© 2024 mangcoding. All rights reserved.</p>
+      </div>
+      
+  </footer>
+  
+
+
     <script type="module" src="/main.js"></script>
+    <script src="/fslightbox.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   
+      <!-- Couldown/Waktu -->
+      <script>
+        // Set the target date
+        const targetDate = new Date("Dec 31, 2024 23:59:59").getTime();
+    
+        // Update the countdown every 1 second
+        const countdown = setInterval(() => {
+          const now = new Date().getTime();
+          const difference = targetDate - now;
+    
+          // Time calculations
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+          // Display the result in the respective divs
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+    
+          // If the countdown is over, display a message
+          if (difference < 0) {
+            clearInterval(countdown);
+            document.querySelector('.countdown-container').innerHTML = "<h1>EXPIRED</h1>";
+          }
+        }, 1000);
+        
+      </script>
+       
+       <!-- Swiper1 -->
+       <script>
+                const swiper = new Swiper('.swiper-container', {
+                  slidesPerView: 1, // Menampilkan 4 gambar dalam satu waktu
+                  spaceBetween: 8, // Jarak antar gambar
+                  direction: "horizontal",
+                  loop: true,
+
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+                  breakpoints: {
+                    0:{
+                      slidesPerView: 2,
+                    },
+                    768: {
+                      slidesPerView: 4, // Pada layar tablet atau lebih besar, tampilkan 4 gambar
+                    },
+                  
+                  },
+                });
+            
+                // Event listener untuk tombol Next
+                document.querySelector('.swiper-button-next').addEventListener('click', function(event) {
+                  event.preventDefault(); // Mencegah scroll halaman
+                  swiper.slideNext(); // Aksi untuk slide ke gambar berikutnya
+                });
+            
+                // Event listener untuk tombol Prev
+                document.querySelector('.swiper-button-prev').addEventListener('click', function(event) {
+                  event.preventDefault(); // Mencegah scroll halaman
+                  swiper.slidePrev(); // Aksi untuk slide ke gambar sebelumnya
+                });
+            
+                // Mencegah scroll halaman saat tombol ditekan (mengatasi masalah layar bergerak)
+              
+            
+                // Mencegah scroll halaman saat menggunakan sentuhan (untuk perangkat mobile)
+        
+       </script>
+
+      <!-- Animation AOS -->
+     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        // Cek apakah halaman di-refresh
+        const isPageRefreshed = performance.getEntriesByType("navigation")[0].type === "reload";
+    
+        if (isPageRefreshed) {
+          AOS.init({
+            once: true // Animasi hanya aktif sekali
+          });
+        } else {
+          document.querySelectorAll("[data-aos]").forEach(el => {
+            el.removeAttribute("data-aos"); // Hapus atribut animasi
+          });
+        }
+      </script>
+
+      <!-- Audio Musik -->
+      <script>
+        const audio = document.getElementById('audio');
+        const audioButton = document.getElementById('audioButton');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+    
+        // Toggle play/pause
+        audioButton.addEventListener('click', () => {
+          if (audio.paused) {
+            audio.play();
+            playIcon.classList.add('hidden');
+            pauseIcon.classList.remove('hidden');
+            audioText.textContent = 'Musik Pause';
+          } else {
+            audio.pause();
+            playIcon.classList.remove('hidden');
+            pauseIcon.classList.add('hidden');
+            audioText.textContent = 'Musik Play';
+          }
+        });
+      </script>
+  
+     <!-- Animation Header -->
+     <script>
+      const header = document.getElementById("site-header");
+      let lastScrollY = window.scrollY;
+      // Set initial state of header
+      header.style.top = '0'; // Initially at top
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > lastScrollY) {
+                // Scroll ke bawah: sembunyikan header
+                header.style.top = '-100px'; // Geser keluar layar
+            } else {
+                // Scroll ke atas: tampilkan header
+                header.style.top = '0'; // Kembalikan ke atas layar
+            }
+            lastScrollY = window.scrollY;
+        });
+     </script>
+     
+     <!-- Style Header -->
+     <style>
+      /* CSS untuk transisi yang lambat saat header muncul kembali */
+     
+      .header.hidden {
+          transform: translateY(-100%); /* Geser header ke atas agar tersembunyi */
+          opacity: 0; /* Sembunyikan dengan mengurangi opacity */
+      }
+      .header.visible {
+          transform: translateY(0); /* Kembalikan header ke posisi semula */
+          opacity: 1; /* Kembalikan opacity untuk menampilkan header */
+      }
+     </style>
+
+     <!-- Swiper2 -->
+      <style scoped>
+      /* Hapus ikon default Swiper */
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+          display: none;
+      }
+      
+      /* Style custom button */
+     
+      
+      /* Mengatur ukuran gambar jika diperlukan */
+      .custom-button img {
+          width: 10; /* Sesuaikan ukuran ikon */
+          height: 10;
+      }
+      </style>
+
+      <!-- Ketuk Audio Musik -->
+      <script>
+        function toggleMenu() {
+        const menu = document.getElementById('menu-items');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden'); // Tampilkan menu
+          menuIcon.classList.add('hidden'); // Sembunyikan icon menu
+          closeIcon.classList.remove('hidden'); // Tampilkan icon close
+        } else {
+          menu.classList.add('hidden'); // Sembunyikan menu
+          menuIcon.classList.remove('hidden'); // Tampilkan icon menu
+          closeIcon.classList.add('hidden'); // Sembunyikan icon close
+        }
+      }
+
+      </script>
+
+      
+
+
   </body>
 </html>
