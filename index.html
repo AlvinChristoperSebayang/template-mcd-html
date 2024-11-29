@@ -81,22 +81,6 @@
       }
       /* END */
 
-      /* Slide */
-      @keyframes b-slider {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-
-      .marquee-slider {
-        animation: b-slider 20s linear infinite;
-        white-space: nowrap;
-      }
-      /* END */
-
       /* Count */
       @keyframes countAnimation {
         0% { opacity: 0; }
@@ -143,8 +127,15 @@
       }
       /* Slider Testimonial N */
       
+      /* Slider 2 */
+      .custom-slider-wrapper {
+        transition-timing-function: linear;
+      }
+      .custom-slider {
+        overflow: hidden;
+        position: relative;
+      }
     </style>
-
   </head>
 
   <body class="overflow-x-hidden">
@@ -194,7 +185,7 @@
           </li>
         </ul>
       </nav>
-      
+      <!-- Desktop Navbar N -->
 
       <!-- Mobile Navbar -->
       <div class="sm:hidden">
@@ -250,115 +241,126 @@
         </ul>
 
       </div>
+      <!-- Mobile Navbar N -->
 
       <!-- Button Sign In -->
       <a href="" class="hidden sm:flex justify-center items-center sm:py-[10px] sm:px-[12px] md:py-[12px] md:px-[16px] lg:py-[14px] lg:px-[20px] xl:py-[16px] xl:px-[24px] rounded-[100px] bg-black">
         <span class="font-semibold text-white sm:text-xs lg:text-base hover:text-gray-800 duration-300">Sign Up</span>
       </a>
+      <!-- Button Sign In N -->
 
     </header>
 
     <main id="site-main" class="overflow-x-hidden overflow-y-hidden">
 
       <!-- Hero Section -->
-      <section id="home" class="flex flex-col justify-between w-full h-[85vh] lg:h-[80vh] py-2 px-5 sm:py-3 sm:px-10 md:py-4 md:px-14 lg:py-5 lg:px-20 xl:py-6 xl:px-28 bg-[#F4FFE6] overflow-hidden relative">
-        <h1 class="font-bold text-center leading-[1] text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[6rem] xl:text-[7.5rem]">
-          Boost Your Productivity. Simplify Your Day.
-        </h1>
-        <div class="flex flex-col w-full max-w-[45%] md:max-w-[45%] lg:max-w-[25%%] xl:max-w-[25%] gap-2 lg:gap-4 mt-auto" data-aos="fade-right" data-aos-duration="1000">
-          <p class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-justify lg:text-left text-[#6D6D6D]">
-            Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
-          </p>
-          <a href="" class="flex w-fit justify-center items-center rounded-full bg-black py-2 px-4 lg:py-4 lg:px-8">
-            <span class="font-bold text-white text-xs lg:text-sm xl:text-base hover:text-gray-800 duration-300">
-              Download Now
-            </span>
-          </a>
-        </div>
-        <figure id="animated-figure" class="absolute left-1/2 transform -translate-x-1/2">
-          <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto sm:w-[255px] md:w-[200px] lg:w-[385px] xl:w-[426px]" />
-        </figure>
-        <div class="flex flex-row w-fit ml-auto gap-4 md:gap-6 lg:gap-8 xl:gap-10 -mt-6 md:-mt-8">
-          <div class="flex flex-col gap-1 w-fit">
-            <h3 id="user-count" class="font-semibold leading-[1] text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem]">0</h3>
-            <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">Active Users</span>
-          </div>
-          <div class="flex flex-col gap-1 w-fit">
-            <h3 id="download-count" class="font-semibold leading-[1] text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem]">0</h3>
-            <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">Download</span>
-          </div>
-        </div>        
+      <section id="home" class="h-[85vh] justify-items-center overflow-hidden relative pt-4 px-5 sm:pt-6 sm:px-10 md:pt-8 md:px-14 lg:pt-10 lg:px-20 xl:pt-12 xl:px-28 bg-[#F4FFE6]">
+        <div class="flex flex-col w-full lg:max-w-[1440px] h-[85vh] lg:h-[80vh]">
+          <h1 class="font-bold text-center leading-[1] text-[2.3rem] sm:text-[3.9rem] md:text-[4.6rem] lg:text-[6rem] xl:text-[7.5rem] mb-5 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-14">
+            <span class="block whitespace-nowrap">Boost Your</span>
+            <span class="block">Productivity.</span>
+            <span class="block whitespace-nowrap">Simplify Your Day.</span>
+          </h1>
+          
+          <div class="mb-auto">
+            <div class="flex flex-col w-full max-w-[80%] md:max-w-[45%] lg:max-w-[50%%] xl:max-w-[25%] gap-2 lg:gap-4 mt-auto" data-aos="fade-right" data-aos-duration="1000">
+              <p class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-left lg:text-left text-[#6D6D6D]">
+                Prodify helps you stay organized, meet your goals, and track your progress—everything you need to master your day.
+              </p>
+              <a href="" class="flex w-fit justify-center items-center rounded-full bg-black py-2 px-4 lg:py-4 lg:px-8">
+                <span class="font-bold text-white text-xs lg:text-sm xl:text-base hover:text-gray-800 duration-300">
+                  Download Now
+                </span>
+              </a>
+            </div>
+            <div class="flex flex-row w-fit ml-auto gap-4 md:gap-6 lg:gap-8 xl:gap-10 -mt-[2.5rem] lg:-mt-[3.35rem] xl:-mt-8">
+              <div class="flex flex-col gap-1 w-fit">
+                <h3 id="user-count" class="font-semibold leading-[1] text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem]">0</h3>
+                <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">Active Users</span>
+              </div>
+              <div class="flex flex-col gap-1 w-fit">
+                <h3 id="download-count" class="font-semibold leading-[1] text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[2rem]">0</h3>
+                <span class="font-normal leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]">Download</span>
+              </div>
+            </div>  
+          </div> 
+  
+          <figure id="animated-figure" class="absolute w-[85%] lg:w-[28%] xl:max-w-[40%] left-1/2 transform -translate-x-1/2">
+            <img src="/Iphone15ProMax(Color2)(1).png" alt="Iphone" class="h-auto" />
+          </figure>  
+        </div>  
       </section>
+      <!-- Hero Section N -->
       
       <!-- 2 -->
       <section class="flex flex-col gap-4 xl:gap-6 py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
         <div class="flex flex-col lg:flex-row gap-4 lg:justify-between">
-          <h2 class="xl:w-[42.25%] font-semibold text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-[1.2]" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000" >
+          <h2 class="xl:w-[42.25%] font-semibold text-center lg:text-left text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] 2xl:text-[5rem] leading-[1.2]" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000" >
             Used by various roles in various companies
           </h2>
-          <p class="xl:w-[41.75%] font-normal self-end text-right leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+          <p class="xl:w-[41.75%] font-normal self-end text-center lg:text-right leading-[1.9] text-[0.75rem] lg:text-[0.875rem] text-[#6D6D6D]" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="1000">
             Empowering Professionals in Every Industry—From Managers to Creatives—Prodify Helps Teams Stay Organized, Improve Collaboration,
             and Reach Their Productivity Goals Faster.
           </p>
         </div>
       
-        <div class="bg-[#F6F6F6] py-6 md:py-8 lg:py-12 rounded-2xl overflow-x-hidden">
-          <div class="b-slider marquee-slider flex flex-row items-center gap-6 md:gap-8 lg:gap-12">
-            <div class="b-slider__slide">
+        <div class="swiper-costume bg-[#F6F6F6] py-6 md:py-8 lg:py-12 rounded-2xl overflow-x-hidden">
+          <div class="flex flex-row items-center gap-6 md:gap-8 lg:gap-12">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Student</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">CEO</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Trainer</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Designer</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Student</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">CEO</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Trainer</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888] whitespace-nowrap">Product Manager</span>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <div class="bg-[#888888] rounded-full min-w-3 h-3 w-3 sm:min-w-4 sm:h-3.5 sm:w-3.5 lg:min-w-4 lg:h-4 lg:w-4 xl:min-w-5 xl:h-5 xl:w-5"></div>
             </div>
-            <div class="b-slider__slide">
+            <div class="swiper-custom-slider-slide">
               <span class="font-bold text-sm md:text-xl lg:text-3xl xl:text-4xl leading-[1.2] text-[#888888]">Designer</span>
             </div>
           </div>
@@ -434,12 +436,13 @@
             </div>
           </div>
         </div>
-      </section>      
+      </section> 
+      <!-- Features Section N -->
 
       <!-- Testimonial Section -->
-      <section class="flex flex-col gap-5 md:gap-5 xl:gap-5 items-center py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
+      <section class="flex flex-col gap-4 md:gap-5 items-center py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
 
-        <span class="font-semibold text-center text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-normal md:w-[30.62rem] lg:w-[33.75rem] xl:w-[44.68rem] mb-[4.5rem]" 
+        <span class="font-semibold text-center text-[1.875rem] sm:text-[1.875rem] md:text-[2.25rem] lg:text-[2.25rem] xl:text-[3rem] leading-normal md:w-[30.62rem] lg:w-[33.75rem] xl:w-[44.68rem] mb-[2.5rem] lg:mb-[4.5rem]" 
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-duration="500">
@@ -815,6 +818,7 @@
         </div>        
 
       </section>
+      <!-- Testimonial Section N -->
 
       <!-- Download Link -->
       <section id="download" class="flex flex-col gap-8 md:gap-14 xl:gap-[4.5rem] py-8 px-5 sm:py-10 sm:px-10 md:px-14 lg:py-14 lg:px-20 xl:py-20 xl:px-28">
@@ -845,20 +849,21 @@
         </div>
 
       </section>
+      <!-- Download Link N -->
 
     </main>
 
-    <footer id="site-footer" class="flex flex-col gap-[40px] pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-28 relative overflow-hidden">
+    <footer id="site-footer" class="flex flex-col gap-10 pt-[40px] px-[20px] sm:pt-[60px] sm:px-[40px] md:px-[60px] lg:pt-[80px] lg:px-[80px] xl:pt-[100px] xl:px-28 relative overflow-hidden">
 
-      <div class="flex flex-col gap-[15px] lg:flex-row lg:justify-between">
+      <div class="flex flex-col gap-4 lg:flex-row lg:justify-between">
 
-        <span class="font-bold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal lg:w-[25.58%]" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">All in one productivity software</span>
+        <span class="hidden lg:block font-bold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-normal lg:w-[25.58%]" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">All in one productivity software</span>
 
-        <div class="flex flex-col gap-[15px] sm:flex-row lg:w-[66.42%] justify-between">
+        <div class="flex flex-col gap-[1.5rem] sm:flex-row lg:w-[70.50%] justify-between">
 
-          <div class="flex flex-row justify-between sm:w-[62.75%]">
+          <div class="flex flex-row justify-between sm:w-[60.75%] md:w-[55.75%] lg:w-[60.75%]">
 
-            <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+            <ul class="flex flex-col gap-3 sm:gap-3 lg:gap-4" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
               <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
                 <a href="">Menu</a>
               </li>
@@ -882,7 +887,7 @@
               </li>
             </ul>
 
-            <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]" data-aos="fade-left" data-aos-delay="100" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+            <ul class="flex flex-col gap-3 sm:gap-3 lg:gap-4" data-aos="fade-left" data-aos-delay="100" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
               <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
                 <a href="">Support</a>
               </li>
@@ -901,7 +906,7 @@
               </li>
             </ul>
 
-            <ul class="flex flex-col gap-[8px] sm:gap-[12px] lg:gap-[16px]" data-aos="fade-left" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+            <ul class="flex flex-col gap-3 sm:gap-3 lg:gap-4" data-aos="fade-left" data-aos-delay="200" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
               <li class="font-semibold text-[20px] sm:text-[22px] lg:text-[24px] leading-normal">
                 <a href="">Legal</a>
               </li>
@@ -914,87 +919,37 @@
             </ul>
           </div>
 
-          <div>
-            <ul class="flex flex-row gap-[12px] w-auto h-auto" data-aos="fade-left" data-aos-delay="400" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+          <div class="aos-element flex flex-col gap-6 sm:w-[11.6rem] md:w-[15.06rem] lg:w-[15.06rem] xl:w-[17.06rem] h-auto" data-aos="fade-left" data-aos-offset="200" id="aos-target" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+            <div class="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+              <p class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal hover:font-semibold hover:text-black duration-300 text-[#888888]">2118 Thornridge Cir. Syracuse, Connecticut 35624</p>
+              <span class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal hover:font-semibold hover:text-black duration-300 text-[#888888]">Hello@Prodify.com</span>
+              <span class="font-normal text-[12px] sm:text-[14px] lg:text-[16px] leading-normal hover:font-semibold hover:text-black duration-300 text-[#888888]">(208) 555-0112</span>
+            </div>
+
+            <ul class="flex flex-row gap-[12px] w-auto h-auto">
               <li>
                 <a href="">
-                  <svg
-                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
-                    viewBox="0 0 48 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      y="0.166504"
-                      width="48"
-                      height="48"
-                      rx="24"
-                      fill="#F6F6F6"
-                    />
-                    <path
-                      d="M24 14.1665C22.6868 14.1665 21.3864 14.4252 20.1732 14.9277C18.9599 15.4303 17.8575 16.1669 16.9289 17.0954C15.0536 18.9708 14 21.5143 14 24.1665C14 28.5865 16.87 32.3365 20.84 33.6665C21.34 33.7465 21.5 33.4365 21.5 33.1665V31.4765C18.73 32.0765 18.14 30.1365 18.14 30.1365C17.68 28.9765 17.03 28.6665 17.03 28.6665C16.12 28.0465 17.1 28.0665 17.1 28.0665C18.1 28.1365 18.63 29.0965 18.63 29.0965C19.5 30.6165 20.97 30.1665 21.54 29.9265C21.63 29.2765 21.89 28.8365 22.17 28.5865C19.95 28.3365 17.62 27.4765 17.62 23.6665C17.62 22.5565 18 21.6665 18.65 20.9565C18.55 20.7065 18.2 19.6665 18.75 18.3165C18.75 18.3165 19.59 18.0465 21.5 19.3365C22.29 19.1165 23.15 19.0065 24 19.0065C24.85 19.0065 25.71 19.1165 26.5 19.3365C28.41 18.0465 29.25 18.3165 29.25 18.3165C29.8 19.6665 29.45 20.7065 29.35 20.9565C30 21.6665 30.38 22.5565 30.38 23.6665C30.38 27.4865 28.04 28.3265 25.81 28.5765C26.17 28.8865 26.5 29.4965 26.5 30.4265V33.1665C26.5 33.4365 26.66 33.7565 27.17 33.6665C31.14 32.3265 34 28.5865 34 24.1665C34 22.8533 33.7413 21.5529 33.2388 20.3397C32.7362 19.1264 31.9997 18.024 31.0711 17.0954C30.1425 16.1669 29.0401 15.4303 27.8268 14.9277C26.6136 14.4252 25.3132 14.1665 24 14.1665Z"
-                      fill="black"
-                    />
+                  <svg class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
+                    <path d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z" fill="black" />
+                    <path d="M28 15.1665C30.76 15.1665 33 17.4065 33 20.1665V28.1665C33 30.9265 30.76 33.1665 28 33.1665H20C17.24 33.1665 15 30.9265 15 28.1665V20.1665C15 17.4065 17.24 15.1665 20 15.1665H24H28Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M24 20.1665C26.21 20.1665 28 21.9565 28 24.1665C28 26.3765 26.21 28.1665 24 28.1665C21.79 28.1665 20 26.3765 20 24.1665C20 21.9565 21.79 20.1665 24 20.1665Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
               </li>
-              <li class="">
+              <li>
                 <a href="">
-                  <svg
-                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
-                    viewBox="0 0 48 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      y="0.166504"
-                      width="48"
-                      height="48"
-                      rx="24"
-                      fill="#F6F6F6"
-                    />
-                    <path 
-                      d="M29 20.6665C29.8284 20.6665 30.5 19.9949 30.5 19.1665C30.5 18.3381 29.8284 17.6665 29 17.6665C28.1716 17.6665 27.5 18.3381 27.5 19.1665C27.5 19.9949 28.1716 20.6665 29 20.6665Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M28 15.1665C30.76 15.1665 33 17.4065 33 20.1665V28.1665C33 30.9265 30.76 33.1665 28 33.1665H20C17.24 33.1665 15 30.9265 15 28.1665V20.1665C15 17.4065 17.24 15.1665 20 15.1665H24H28Z"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M24 20.1665C26.21 20.1665 28 21.9565 28 24.1665C28 26.3765 26.21 28.1665 24 28.1665C21.79 28.1665 20 26.3765 20 24.1665C20 21.9565 21.79 20.1665 24 20.1665Z"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
+                  <svg class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 16.1665C24.855 16.1665 25.732 16.1885 26.582 16.2245L27.586 16.2725L28.547 16.3295L29.447 16.3905L30.269 16.4545C31.1612 16.5224 32.0008 16.9029 32.64 17.5291C33.2791 18.1553 33.6768 18.9869 33.763 19.8775L33.803 20.3025L33.878 21.2125C33.948 22.1555 34 23.1835 34 24.1665C34 25.1495 33.948 26.1775 33.878 27.1205L33.803 28.0305L33.763 28.4555C33.6768 29.3463 33.2789 30.178 32.6396 30.8042C32.0002 31.4304 31.1604 31.8108 30.268 31.8785L29.448 31.9415L28.548 32.0035L27.586 32.0605L26.582 32.1085C25.7218 32.1458 24.861 32.1651 24 32.1665C23.139 32.1651 22.2782 32.1458 21.418 32.1085L20.414 32.0605L19.453 32.0035L18.553 31.9415L17.731 31.8785C16.8388 31.8106 15.9992 31.4301 15.36 30.8039C14.7209 30.1777 14.3232 29.3461 14.237 28.4555L14.197 28.0305L14.122 27.1205C14.0458 26.1376 14.0051 25.1523 14 24.1665C14 23.1835 14.052 22.1555 14.122 21.2125L14.197 20.3025L14.237 19.8775C14.3232 18.9871 14.7207 18.1556 15.3597 17.5294C15.9986 16.9033 16.838 16.5226 17.73 16.4545L18.551 16.3905L19.451 16.3295L20.413 16.2725L21.417 16.2245C22.2775 16.1872 23.1387 16.1679 24 16.1665ZM22 21.7415V26.5915C22 27.0535 22.5 27.3415 22.9 27.1115L27.1 24.6865C27.1914 24.6339 27.2673 24.5581 27.3201 24.4668C27.3729 24.3755 27.4007 24.272 27.4007 24.1665C27.4007 24.0611 27.3729 23.9575 27.3201 23.8662C27.2673 23.7749 27.1914 23.6991 27.1 23.6465L22.9 21.2225C22.8088 21.1698 22.7053 21.1421 22.5999 21.1421C22.4945 21.1421 22.3911 21.1699 22.2998 21.2226C22.2086 21.2753 22.1329 21.3511 22.0802 21.4424C22.0276 21.5336 21.9999 21.6371 22 21.7425V21.7415Z" fill="black"/>
                   </svg>
                 </a>
               </li>
-              <li class="">
-                <a href="">
-                  <svg
-                    class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]"
-                    viewBox="0 0 48 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      y="0.166504"
-                      width="48"
-                      height="48"
-                      rx="24"
-                      fill="#F6F6F6"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24 16.1665C24.855 16.1665 25.732 16.1885 26.582 16.2245L27.586 16.2725L28.547 16.3295L29.447 16.3905L30.269 16.4545C31.1612 16.5224 32.0008 16.9029 32.64 17.5291C33.2791 18.1553 33.6768 18.9869 33.763 19.8775L33.803 20.3025L33.878 21.2125C33.948 22.1555 34 23.1835 34 24.1665C34 25.1495 33.948 26.1775 33.878 27.1205L33.803 28.0305L33.763 28.4555C33.6768 29.3463 33.2789 30.178 32.6396 30.8042C32.0002 31.4304 31.1604 31.8108 30.268 31.8785L29.448 31.9415L28.548 32.0035L27.586 32.0605L26.582 32.1085C25.7218 32.1458 24.861 32.1651 24 32.1665C23.139 32.1651 22.2782 32.1458 21.418 32.1085L20.414 32.0605L19.453 32.0035L18.553 31.9415L17.731 31.8785C16.8388 31.8106 15.9992 31.4301 15.36 30.8039C14.7209 30.1777 14.3232 29.3461 14.237 28.4555L14.197 28.0305L14.122 27.1205C14.0458 26.1376 14.0051 25.1523 14 24.1665C14 23.1835 14.052 22.1555 14.122 21.2125L14.197 20.3025L14.237 19.8775C14.3232 18.9871 14.7207 18.1556 15.3597 17.5294C15.9986 16.9033 16.838 16.5226 17.73 16.4545L18.551 16.3905L19.451 16.3295L20.413 16.2725L21.417 16.2245C22.2775 16.1872 23.1387 16.1679 24 16.1665ZM22 21.7415V26.5915C22 27.0535 22.5 27.3415 22.9 27.1115L27.1 24.6865C27.1914 24.6339 27.2673 24.5581 27.3201 24.4668C27.3729 24.3755 27.4007 24.272 27.4007 24.1665C27.4007 24.0611 27.3729 23.9575 27.3201 23.8662C27.2673 23.7749 27.1914 23.6991 27.1 23.6465L22.9 21.2225C22.8088 21.1698 22.7053 21.1421 22.5999 21.1421C22.4945 21.1421 22.3911 21.1699 22.2998 21.2226C22.2086 21.2753 22.1329 21.3511 22.0802 21.4424C22.0276 21.5336 21.9999 21.6371 22 21.7425V21.7415Z"
-                      fill="black"
-                    />
+              <li>
+                <a href="/">
+                  <svg class="w-[38px] h-[39px] md:w-[44px] md:h-[45px] xl:w-[48px] xl:h-[49px]" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.166504" width="48" height="48" rx="24" fill="#F6F6F6"/>
+                    <path d="M24 14.1665C22.6868 14.1665 21.3864 14.4252 20.1732 14.9277C18.9599 15.4303 17.8575 16.1669 16.9289 17.0954C15.0536 18.9708 14 21.5143 14 24.1665C14 28.5865 16.87 32.3365 20.84 33.6665C21.34 33.7465 21.5 33.4365 21.5 33.1665V31.4765C18.73 32.0765 18.14 30.1365 18.14 30.1365C17.68 28.9765 17.03 28.6665 17.03 28.6665C16.12 28.0465 17.1 28.0665 17.1 28.0665C18.1 28.1365 18.63 29.0965 18.63 29.0965C19.5 30.6165 20.97 30.1665 21.54 29.9265C21.63 29.2765 21.89 28.8365 22.17 28.5865C19.95 28.3365 17.62 27.4765 17.62 23.6665C17.62 22.5565 18 21.6665 18.65 20.9565C18.55 20.7065 18.2 19.6665 18.75 18.3165C18.75 18.3165 19.59 18.0465 21.5 19.3365C22.29 19.1165 23.15 19.0065 24 19.0065C24.85 19.0065 25.71 19.1165 26.5 19.3365C28.41 18.0465 29.25 18.3165 29.25 18.3165C29.8 19.6665 29.45 20.7065 29.35 20.9565C30 21.6665 30.38 22.5565 30.38 23.6665C30.38 27.4865 28.04 28.3265 25.81 28.5765C26.17 28.8865 26.5 29.4965 26.5 30.4265V33.1665C26.5 33.4365 26.66 33.7565 27.17 33.6665C31.14 32.3265 34 28.5865 34 24.1665C34 22.8533 33.7413 21.5529 33.2388 20.3397C32.7362 19.1264 31.9997 18.024 31.0711 17.0954C30.1425 16.1669 29.0401 15.4303 27.8268 14.9277C26.6136 14.4252 25.3132 14.1665 24 14.1665Z" fill="black" />
                   </svg>
                 </a>
               </li>
@@ -1002,54 +957,35 @@
           </div>
 
         </div>
+        
       </div>
 
-      <div
-        class="footer w-auto h-[50px] sm:h-[85px] md:h-[100px] lg:h-[145px] xl:h-[169px] overflow-x-hidden"
-      >
-        <div class="Anime absolute left-1/2 transform -translate-x-1/2">
-          <svg
-            class="animated-figure w-[340px] sm:w-[557px] md:w-[647px] lg:w-[1025px] xl:h-[339px] xl:w-[1200px]"
-            viewBox="0 0 1200 339"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="path-animate"
-              d="M1046.03 338.796C1041.41 338.796 1036.79 338.333 1032.16 337.408C1027.77 336.715 1023.73 335.559 1020.03 333.941V300.304C1022.8 300.997 1026.15 301.575 1030.08 302.038C1034.01 302.731 1037.83 303.078 1041.53 303.078C1052.39 303.078 1060.37 300.651 1065.45 295.796C1070.77 291.172 1075.51 284.006 1079.67 274.296L1092.15 245.861L1091.46 278.804L1010.32 74.9025H1052.28L1112.27 231.296H1098.05L1157.69 74.9025H1200L1117.12 282.965C1112.73 294.062 1107.18 303.772 1100.48 312.094C1094 320.648 1086.26 327.237 1077.24 331.86C1068.46 336.484 1058.06 338.796 1046.03 338.796Z"
-              fill="black"
-            />
-            <path
-              class="path-animate"
-              d="M911.02 262.506V110.273H876.343V74.9026H911.02V65.193C911.02 51.091 913.91 39.3008 919.69 29.8224C925.469 20.1127 933.445 12.7149 943.617 7.62898C954.02 2.54299 965.926 0 979.334 0C981.877 0 984.767 0.231178 988.004 0.693534C991.24 0.924726 993.899 1.2715 995.979 1.73386V35.7175C994.13 35.2551 992.049 35.0239 989.738 35.0239C987.426 34.7927 985.576 34.6772 984.189 34.6772C973.786 34.6772 965.464 37.1045 959.222 41.9593C952.98 46.583 949.859 54.3275 949.859 65.193V74.9026H992.858V110.273H949.859V262.506H911.02Z"
-              fill="black"
-            />
-            <path
-              class="path-animate"
-              d="M804.867 262.506V74.903H844.052V262.506H804.867ZM804.867 49.2419V4.16162H844.052V49.2419H804.867Z"
-              fill="black"
-            />
-            <path
-              class="path-animate"
-              d="M659.25 266.667C641.218 266.667 625.035 262.39 610.702 253.837C596.6 245.052 585.388 233.262 577.065 218.466C568.974 203.67 564.928 187.025 564.928 168.531C564.928 150.036 569.09 133.391 577.412 118.596C585.735 103.8 596.947 92.1256 611.049 83.5719C625.151 75.0182 641.102 70.7414 658.903 70.7414C673.93 70.7414 687.223 73.7467 698.782 79.7574C710.341 85.7681 719.473 94.0907 726.177 104.725L720.282 113.741V0H759.12V262.506H722.016V224.361L726.524 231.643C720.051 242.971 710.804 251.641 698.782 257.651C686.761 263.662 673.583 266.667 659.25 266.667ZM663.065 230.256C673.93 230.256 683.64 227.598 692.193 222.281C700.978 216.963 707.798 209.681 712.653 200.434C717.739 190.956 720.282 180.321 720.282 168.531C720.282 156.741 717.739 146.222 712.653 136.975C707.798 127.728 700.978 120.445 692.193 115.128C683.64 109.811 673.93 107.152 663.065 107.152C652.199 107.152 642.374 109.811 633.589 115.128C624.804 120.445 617.984 127.728 613.13 136.975C608.275 146.222 605.847 156.741 605.847 168.531C605.847 180.321 608.275 190.956 613.13 200.434C617.984 209.681 624.689 216.963 633.242 222.281C642.027 227.598 651.968 230.256 663.065 230.256Z"
-              fill="black"
-            />
-            <path
-              class="path-animate"
-              d="M436.512 266.667C418.48 266.667 401.95 262.39 386.924 253.836C372.128 245.283 360.338 233.608 351.553 218.812C342.768 204.017 338.376 187.256 338.376 168.53C338.376 149.574 342.768 132.813 351.553 118.249C360.338 103.453 372.128 91.8939 386.924 83.5714C401.719 75.0177 418.249 70.7408 436.512 70.7408C455.006 70.7408 471.536 75.0177 486.1 83.5714C500.896 91.8939 512.571 103.453 521.124 118.249C529.909 132.813 534.301 149.574 534.301 168.53C534.301 187.487 529.909 204.363 521.124 219.159C512.339 233.955 500.549 245.629 485.753 254.183C470.958 262.505 454.544 266.667 436.512 266.667ZM436.512 230.256C447.609 230.256 457.434 227.597 465.988 222.28C474.541 216.963 481.245 209.681 486.1 200.433C491.186 190.955 493.729 180.321 493.729 168.53C493.729 156.74 491.186 146.221 486.1 136.974C481.245 127.727 474.541 120.445 465.988 115.128C457.434 109.81 447.609 107.152 436.512 107.152C425.646 107.152 415.821 109.81 407.036 115.128C398.483 120.445 391.663 127.727 386.577 136.974C381.722 146.221 379.295 156.74 379.295 168.53C379.295 180.321 381.722 190.955 386.577 200.433C391.663 209.681 398.483 216.963 407.036 222.28C415.821 227.597 425.646 230.256 436.512 230.256Z"
-              fill="black"
-            />
-            <path
-              class="path-animate"
-              d="M220.367 262.506V74.9025H257.819V112.701L254.351 107.152C258.512 94.8997 265.216 86.1148 274.464 80.7976C283.711 75.2493 294.808 72.4751 307.754 72.4751H319.197V108.193H302.899C289.953 108.193 279.434 112.238 271.343 120.33C263.483 128.19 259.552 139.518 259.552 154.313V262.506H220.367Z"
-              fill="black"
-            />
-            <path
-              class="path-animate just"
-              d="M0 262.506V4.16162H93.9751C111.314 4.16162 126.572 7.39816 139.749 13.8712C153.157 20.1131 163.561 29.3604 170.958 41.613C178.356 53.6344 182.055 68.0832 182.055 84.9594C182.055 101.604 178.241 115.938 170.612 127.959C163.214 139.98 152.926 149.228 139.749 155.701C126.572 162.174 111.314 165.41 93.9751 165.41H40.919V262.506H0ZM40.919 128.999H95.0154C104.263 128.999 112.354 127.15 119.289 123.451C126.225 119.752 131.658 114.666 135.588 108.193C139.518 101.489 141.483 93.6287 141.483 84.6126C141.483 75.5966 139.518 67.852 135.588 61.3789C131.658 54.6747 126.225 49.5887 119.289 46.121C112.354 42.4221 104.263 40.5726 95.0154 40.5726H40.919V128.999Z"
-              fill="black"
-            />
-          </svg>
+      <div class="footer w-auto h-[50px] sm:h-[85px] md:h-[100px] lg:h-[145px] xl:h-[169px] 2xl:h-52 overflow-x-hidden">
+        <div class="w-full Anime absolute left-1/2 transform -translate-x-1/2">
+          <div class="animated-figure w-full flex justify-between items-center px-5 sm:px-10 md:px-14 lg:px-20 xl:px-28">
+            <svg class="path-animate mt-auto w-[4rem] sm:w-[6rem] md:w-[7.43rem] lg:w-[9.43rem] xl:w-[11.43rem] 2xl:w-[16.43rem]" viewBox="0 0 183 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0565338 259.039V0.694366H94.0316C111.37 0.694366 126.628 3.93091 139.805 10.404C153.214 16.6459 163.617 25.8931 171.015 38.1457C178.413 50.1671 182.112 64.6159 182.112 81.4921C182.112 98.1372 178.297 112.47 170.668 124.492C163.27 136.513 152.983 145.76 139.805 152.234C126.628 158.707 111.37 161.943 94.0316 161.943H40.9756V259.039H0.0565338ZM40.9756 125.532H95.0719C104.319 125.532 112.411 123.683 119.346 119.984C126.281 116.285 131.714 111.199 135.644 104.726C139.574 98.0216 141.539 90.1614 141.539 81.1454C141.539 72.1293 139.574 64.3847 135.644 57.9117C131.714 51.2074 126.281 46.1214 119.346 42.6537C112.411 38.9548 104.319 37.1054 95.0719 37.1054H40.9756V125.532Z" fill="black"/>
+            </svg>
+            <svg class="path-animate mt-auto w-[2rem] sm:w-[3rem] md:w-[4rem] lg:w-[5.25rem] xl:w-[6.25rem] 2xl:w-[9.25rem]" viewBox="0 0 100 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.36731 190.506V2.90312H37.8186V40.7012L34.3509 35.1529C38.5122 22.9003 45.2164 14.1154 54.4637 8.79822C63.7109 3.24988 74.8076 0.475708 87.7537 0.475708H99.1972V36.1932H82.8989C69.9528 36.1932 59.4341 40.2388 51.3427 48.3302C43.4826 56.1903 39.5525 67.5182 39.5525 82.3138V190.506H0.36731Z" fill="black"/>
+            </svg>
+            <svg class="path-animate mt-auto w-[4rem] sm:w-[6rem] md:w-[8rem] lg:w-[10.35rem] xl:w-[12.35rem] 2xl:w-[17.35rem]" viewBox="0 0 197 197" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M98.5119 196.667C80.4798 196.667 63.9504 192.391 48.9236 183.837C34.128 175.283 22.3378 163.608 13.5529 148.813C4.76805 134.017 0.37561 117.257 0.37561 98.531C0.37561 79.5742 4.76805 62.8136 13.5529 48.2492C22.3378 33.4536 34.128 21.8945 48.9236 13.572C63.7192 5.0183 80.2486 0.741455 98.5119 0.741455C117.006 0.741455 133.536 5.0183 148.1 13.572C162.896 21.8945 174.571 33.4536 183.124 48.2492C191.909 62.8136 196.301 79.5742 196.301 98.531C196.301 117.488 191.909 134.364 183.124 149.16C174.339 163.955 162.549 175.63 147.753 184.184C132.958 192.506 116.544 196.667 98.5119 196.667ZM98.5119 160.256C109.609 160.256 119.434 157.598 127.988 152.281C136.541 146.963 143.245 139.681 148.1 130.434C153.186 120.956 155.729 110.321 155.729 98.531C155.729 86.7408 153.186 76.2221 148.1 66.9748C143.245 57.7276 136.541 50.4454 127.988 45.1282C119.434 39.811 109.609 37.1525 98.5119 37.1525C87.6464 37.1525 77.8212 39.811 69.0363 45.1282C60.4826 50.4454 53.6628 57.7276 48.5768 66.9748C43.722 76.2221 41.2946 86.7408 41.2946 98.531C41.2946 110.321 43.722 120.956 48.5768 130.434C53.6628 139.681 60.4826 146.963 69.0363 152.281C77.8212 157.598 87.6464 160.256 98.5119 160.256Z" fill="black"/>
+            </svg>
+            <svg class="path-animate mt-auto w-[4rem] sm:w-[6rem] md:w-[8rem] lg:w-[10.3rem] xl:w-[12.3rem] 2xl:w-[17.3rem]" viewBox="0 0 196 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M95.2502 266.668C77.2181 266.668 61.0354 262.391 46.7022 253.837C32.6001 245.052 21.3879 233.262 13.0653 218.467C4.974 203.671 0.928345 187.026 0.928345 168.531C0.928345 150.037 5.08961 133.392 13.4121 118.596C21.7346 103.801 32.9469 92.1261 47.049 83.5724C61.151 75.0187 77.1025 70.7419 94.9034 70.7419C109.93 70.7419 123.223 73.7472 134.782 79.7579C146.341 85.7686 155.473 94.0911 162.177 104.725L156.282 113.742V0.000488281H195.12V262.507H158.016V224.362L162.524 231.644C156.051 242.972 146.804 251.641 134.782 257.652C122.761 263.662 109.583 266.668 95.2502 266.668ZM99.0647 230.257C109.93 230.257 119.64 227.598 128.193 222.281C136.978 216.964 143.798 209.682 148.653 200.434C153.739 190.956 156.282 180.322 156.282 168.531C156.282 156.741 153.739 146.222 148.653 136.975C143.798 127.728 136.978 120.446 128.193 115.129C119.64 109.811 109.93 107.153 99.0647 107.153C88.1992 107.153 78.374 109.811 69.5891 115.129C60.8042 120.446 53.9844 127.728 49.1296 136.975C44.2748 146.222 41.8473 156.741 41.8473 168.531C41.8473 180.322 44.2748 190.956 49.1296 200.434C53.9844 209.682 60.6886 216.964 69.2423 222.281C78.0272 227.598 87.968 230.257 99.0647 230.257Z" fill="black"/>
+            </svg>
+            <svg class="path-animate mt-auto w-[0.86rem] sm:w-[1.30rem] md:w-[1.73rem] lg:w-[2.22rem] xl:w-[2.6rem] 2xl:w-[3.6rem]" viewBox="0 0 41 259" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.867065 258.507V70.9036H40.0522V258.507H0.867065ZM0.867065 45.2425V0.162231H40.0522V45.2425H0.867065Z" fill="black"/>
+            </svg>
+            <svg class="path-animate mt-auto w-[2.5rem] sm:w-[3.7rem] md:w-[5rem] lg:w-[6.4rem] xl:w-[7.5rem] 2xl:w-[10.5rem]" viewBox="0 0 120 263" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M35.0205 262.507V110.274H0.343262V74.9031H35.0205V65.1935C35.0205 51.0915 37.9102 39.3013 43.6897 29.8228C49.4692 20.1132 57.445 12.7154 67.6169 7.62947C78.0201 2.54348 89.9259 0.000488281 103.334 0.000488281C105.877 0.000488281 108.767 0.231666 112.004 0.694022C115.24 0.925214 117.899 1.27199 119.979 1.73434V35.7179C118.13 35.2556 116.049 35.0244 113.738 35.0244C111.426 34.7932 109.576 34.6776 108.189 34.6776C97.7861 34.6776 89.4636 37.105 83.2217 41.9598C76.9798 46.5834 73.8589 54.328 73.8589 65.1935V74.9031H116.858V110.274H73.8589V262.507H35.0205Z" fill="black"/>
+            </svg>    
+            <svg class="path-animate -mb-[13%] w-[3.6rem] sm:w-[5.6rem] md:w-[7.3rem] lg:w-[10.5rem] xl:w-[11.89rem] 2xl:w-[16.89rem]" viewBox="0 0 190 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M36.0343 264.796C31.4107 264.796 26.787 264.334 22.1634 263.409C17.7709 262.716 13.7253 261.56 10.0264 259.941V226.305C12.8006 226.998 16.1527 227.576 20.0828 228.038C24.0129 228.732 27.8274 229.079 31.5263 229.079C42.3918 229.079 50.3675 226.651 55.4535 221.797C60.7707 217.173 65.5098 210.006 69.6711 200.297L82.1549 171.861L81.4613 204.805L0.316772 0.903076H42.2761L102.268 157.297H88.05L147.695 0.903076H190.001L107.122 208.966C102.73 220.063 97.1816 229.772 90.4774 238.095C84.0043 246.648 76.2598 253.237 67.2437 257.861C58.4588 262.484 48.0557 264.796 36.0343 264.796Z" fill="black"/>
+              </svg>
+                                   
+          </div>
         </div>
       </div>
 
@@ -1059,9 +995,24 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+      // Aos
+      function setAOSDelay() {
+        const target = document.getElementById('aos-target');
+        const isLaptop = window.matchMedia('(min-width: 640px)').matches; 
+
+        if (isLaptop) {
+          target.setAttribute('data-aos-delay', '300'); 
+        } else {
+          target.removeAttribute('data-aos-delay');
+        }
+      }
+
+      setAOSDelay();
+
+      window.addEventListener('resize', setAOSDelay);
+
       AOS.init();
-    </script>
-    <script>
+      // aos
 
       // dropdown
       const menuButton = document.getElementById("menuButton");
@@ -1083,7 +1034,6 @@
           menuButton.classList.remove("open");
         });
       });
-    
       // Dropdown N
 
       // Animated Figure
@@ -1092,18 +1042,27 @@
 
         function setTopPosition() {
           if (window.innerWidth >= 1280) {
-            figure.style.setProperty("--target-top", "15%");
+            const viewportHeight = window.innerHeight;
+            const topPosition = viewportHeight / 0;
+            figure.style.top = `${topPosition}px`;
+            figure.style.transform = "translate(-50%, -10%)";
           } else if (window.innerWidth >= 1024) {
-            figure.style.setProperty("--target-top", "25%")
-          } else if (window.innerWidth >= 768) {
-            figure.style.setProperty("--target-top", "20%");
-          } else if (window.innerWidth >= 640) {
             figure.style.setProperty("--target-top", "30%");
+          } else if (window.innerWidth >= 768) {
+            const viewportHeight = window.innerHeight;
+            const topPosition = viewportHeight / 3;
+            figure.style.top = `${topPosition}px`;
+            figure.style.transform = "translate(-50%, 5%)";
+          } else if (window.innerWidth >= 640) {
+            const viewportHeight = window.innerHeight;
+            const topPosition = viewportHeight / 3;
+            figure.style.top = `${topPosition}px`;
+            figure.style.transform = "translate(-50%, 0%)";
           } else if (window.innerWidth <= 640) {
             const viewportHeight = window.innerHeight;
             const topPosition = viewportHeight / 3;
             figure.style.top = `${topPosition}px`;
-            figure.style.transform = "translate(-50%, -50%)";
+            figure.style.transform = "translate(-50%, 5%)";
           }
         }
 
@@ -1154,21 +1113,21 @@
 
       // Path Animation
       document.addEventListener("DOMContentLoaded", function () {
-      const footer = document.querySelector(".Anime");
-      const paths = document.querySelectorAll(".path-animate");
+        const footer = document.querySelector(".Anime");
+        const paths = document.querySelectorAll(".path-animate");
 
         function checkVisibility() {
           const rect = footer.getBoundingClientRect();
 
-          // Cek apakah footer terlihat di viewport
           if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            // Saat elemen terlihat, tambahkan kelas animasi
             paths.forEach((path, index) => {
               setTimeout(() => {
                 path.classList.add("visible");
-              }, (paths.length - 1 - index) * 70);
+              }, index * 100); // Tambahkan animasi secara bertahap
             });
           } else {
-            // Menghapus kelas 'visible' ketika footer keluar dari viewport
+            // Saat elemen keluar dari viewport, hapus kelas animasi
             paths.forEach((path) => {
               path.classList.remove("visible");
             });
@@ -1178,37 +1137,35 @@
         window.addEventListener("scroll", checkVisibility);
         checkVisibility();
       });
-
       // Path Animation N
       
       // Slider Testimonial
       function initSwiper(selector, reverseDirection = false) {
-      new Swiper(selector, {
+      const swiper = new Swiper(selector, {
         loop: true,
         autoplay: {
-          delay: 0,
+          delay: 0, 
           disableOnInteraction: false,
-          reverseDirection: reverseDirection, 
+          reverseDirection: reverseDirection,
         },
-    
         speed: 3000,
         direction: 'horizontal',
         breakpoints: {
           320: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 16,
           },
           480: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 16,
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 16,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
           },
           850: {
             slidesPerView: 3,
@@ -1224,12 +1181,23 @@
           },
         },
       });
-  
 
+        const cards = document.querySelectorAll(`${selector} .swiper-slide`);
+
+        cards.forEach((card) => {
+          card.addEventListener('mouseenter', () => {
+            swiper.autoplay.stop(); 
+          });
+
+          card.addEventListener('mouseleave', () => {
+            swiper.autoplay.start(); 
+          });
+        });
+      
       }
 
-      initSwiper('.sample-slider');      
-      initSwiper('.sample-slider-right',true); 
+      initSwiper('.sample-slider');
+      initSwiper('.sample-slider-right', true);
       // Slide Tertimonial N
 
       // 
@@ -1247,6 +1215,7 @@
           this.classList.add("active");
         });
       });
+
       
     </script>
 
