@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header id="navbar" class="z-10 fixed w-full bg-white mx-auto transition duration-300">
+    <div class="container mx-auto">
+      <nav class="flex justify-between items-center text-white px-[20px] py-[21px] lg:px-0">
+        <div class="flex items-center gap-5">
+          <a href="#" class="text-3xl text-[20px] md:text-[26px] lg:text-[30px] font-extrabold text-black font-montserrat">Kayyon</a>
+          <a href="#" class="text-xl md:text-[18px] lg:text-[20px] px-2 text-black hidden md:inline lg:inline font-helvetica">About us</a>
+          <a href="#" class="text-xl md:text-[18px] lg:text-[20px] px-2 text-black hidden md:inline lg:inline font-helvetica">Contact</a>
+        </div>
+        <div class="flex items-center">
+          <div class="relative">
+            <a href="javascript:void(0);" onclick="toggleDropdown()">
+              <img src="/align-justify.svg" alt="Menu Icon" class="item-black w-6 h-6 mb-2 cursor-pointer">
+            </a>
+            
+            <!-- Dropdown Mobile -->
+            <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg hidden">
+              <a href="#" class="block px-4 py-2 text-sm text-black hover:bg-gray-200">About us</a>
+              <a href="#" class="block px-4 py-2 text-sm text-black hover:bg-gray-200">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="detailproduct" class="container mx-auto pt-[100px] lg:pt-[120px]">
+    <div class="lg:flex gap-[60px]">
+      <div class="w-full h-full overflow-hidden bg-black relative rounded-[16px]">
+        <img src="/asset/image2.png" alt="" class="w-full h-[350px] lg:w-[592px] lg:h-[563px] object-cover">
+        <div class="absolute bottom-[14px] flex items-center bg-white gap-[6px] p-2 rounded-lg left-[8%] lg:left-[14%]">
+          <button>
+            <img src="/asset/image2.png" alt="Chair 1" class="w-[70px] h-[64px] lg:w-[90px] lg:h-[84px] rounded-lg border border-gray-300 object-cover">
+          </button>
+          <button>
+            <img src="/asset/image2a.png" alt="Chair 2" class="w-[70px] h-[64px] lg:w-[90px] lg:h-[84px] rounded-lg border border-gray-300 object-cover">
+          </button>
+          <button>
+            <img src="/asset/image2b.png" alt="Chair 3" class="w-[70px] h-[64px] lg:w-[90px] lg:h-[84px] rounded-lg border border-gray-300 object-cover">
+          </button>
+          <button>
+            <img src="/asset/image2c.png" alt="Chair 4" class="w-[70px] h-[64px] lg:w-[90px] lg:h-[84px] rounded-lg border border-gray-300 object-cover">
+          </button>
+        </div>
+      </div> 
+
+      <div class="px-5 lg:px-0 pt-5 lg:pt-0">
+        <a href="" class="text-base text-[#6A7182] font-normal">Home/</a>
+        <a href="" class="text-base text-[#6A7182] font-normal">Product/</a>
+        <span class="text-base text-[#050811] font-normal">Bok Extendable Chair</span>
+
+        <div class="pt-5">
+          <h2 class="text-3xl lg:text-5xl font-normal text-[#050811]">Bok Extendable Chair</h2>
+          <p class="text-base lg:text-xl font-normal text-[#6A7182] pt-5">Elevate your space with the sleek and sophisticated Kayyon Minimalist Chair. Designed with clean lines and a modern aesthetic, this chair is the perfect blend of form and function.</p>
+        </div>
+
+        <div class="pt-5">
+          <p class="text-xl font-normal text-black">Material</p>
+          <div class="flex flex-wrap gap-2 py-5">
+            <button class="border-[1px] border-[#DADADA] text-sm lg:text-base text-black font-normal py-2 px-4 rounded-[100px] hover hover:bg-[#DADADA] duration-300">Oak</button>
+            <button class="border-[1px] border-[#DADADA] text-sm lg:text-base text-black font-normal py-2 px-4 rounded-[100px] hover hover:bg-[#DADADA] duration-300">Oak Black</button>
+            <button class="border-[1px] border-[#DADADA] text-sm lg:text-base text-black font-normal py-2 px-4 rounded-[100px] hover hover:bg-[#DADADA] duration-300">Oak Brown</button>
+            <button class="border-[1px] border-[#DADADA] text-sm lg:text-base text-black font-normal py-2 px-4 rounded-[100px] hover hover:bg-[#DADADA] duration-300">Teak</button>
+            <button class="border-[1px] border-[#DADADA] text-sm lg:text-base text-black font-normal py-2 px-4 rounded-[100px] hover hover:bg-[#DADADA] duration-300">Teak Brown</button>
+          </div>
+        </div>
+
+        <div class="border border-[#DADADA]"></div>
+ 
+        <div class="py-5">
+          <p class="text-xl font-normal text-[#050811]">Colour</p>
+          <div class="flex flex-wrap gap-2 pt-5">
+            <button class="flex text-sm lg:text-base items-center gap-3 border border-[[#DADADA] rounded-[100px] px-4 py-2 hover hover:bg-[#DADADA] duration-300">
+              <div class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-[#CFB68E]"></div>
+              Cognac Leather
+            </button>
+            <button class="flex text-sm lg:text-base items-center gap-3 border border-[[#DADADA] rounded-[100px] px-4 py-2 hover hover:bg-[#DADADA] duration-300">
+              <div class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-[#3A3A38]"></div>
+              Dark Brown
+            </button>
+            <button class="flex text-sm lg:text-base items-center gap-3 border border-[[#DADADA] rounded-[100px] px-4 py-2 hover hover:bg-[#DADADA] duration-300">
+              <div class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-[#D4D4D4]"></div>
+              No upholstery
+            </button>
+            <button class="flex text-sm lg:text-base items-center gap-3 border border-[[#DADADA] rounded-[100px] px-4 py-2 hover hover:bg-[#DADADA] duration-300">
+              <div class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-[#95846B]"></div>
+              Dark Cognac Leather
+            </button>
+          </div>
+        </div>
+
+        <div class="border border-[#DADADA]"></div>
+ 
+        <div class="pt-5">
+          <p class="text-xl font-normal text-[#050811]">Finishing</p>
+          <div class="pt-4">
+            <button class="border-[1px] border-[#DADADA] px-4 py-2 rounded-[100px] text-sm lg:text-base font-normal text-[#050811] hover hover:bg-[#DADADA] duration-300">Varnished</button>
+          </div>
+        </div>
+
+        <div class="flex gap-6 pt-6 pb-[40px] lg:pb-[60px]">
+          <button class="group flex text-sm lg:text-base text-black items-center gap-[6px] border border-[#DADADA] py-[10px] px-5 lg:py-3 lg:px-6 rounded-[100px] hover:bg-black hover:text-white duration-300">
+            Find Product
+            <img src="/arrow-right-long-solid.svg" alt="" class="size-4 group-hover:invert">
+          </button>
+          <button class="group flex text-sm lg:text-base text-black items-center gap-[6px] border border-[#DADADA] py-[10px] px-5 lg:py-3 lg:px-6 rounded-[100px] hover:bg-black hover:text-white duration-300">
+            Find Dealers
+            <img src="/map-pin.svg" alt="" class="size-4 group-hover:invert">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto pt-[100px]">
+    <h2 class="text-5xl font-normal text-[#050811] text-center">
+      Suitable For Every Room
+    </h2>
+
+    <div class="flex flex-col lg:flex-row gap-6 py-[40px]">
+      <div class="overflow-hidden bg-black rounded-[16px] order-2 lg:order-1 w-[300px] lg:w-[294px] lg:h-[444px] ml-9 lg:ml-0">
+        <img src="/asset/room makan.png" alt="" class="w-[300px] lg:w-[294px] h-[250px] lg:h-[444px] object-cover">
+      </div>
+      <div class="overflow-hidden bg-black rounded-[16px] order-1 lg:order-2">
+        <img src="/asset/room1.png" alt="" class="w-[100%] lg:h-[444px] object-cover">
+      </div>
+      <div class="overflow-hidden bg-black rounded-[16px] order-3 lg:order-3 w-[300px] lg:w-[294px] lg:h-[444px] ml-9 lg:ml-0">
+        <img src="/asset/image2.png" alt="" class="w-[300px] lg:w-[294px] h-[250px] lg:h-[444px] object-cover">
+      </div>
+    </div>
+
+    <p class="text-base lg:text-xl text-[#6A7182] font-normal lg:leading-8 px-5 lg:px-0">
+      Elevate your space with the sleek and sophisticated Kayyon Minimalist Chair. Designed with clean lines and a modern aesthetic, this chair is the perfect blend of form and function. Whether you're furnishing a contemporary office or a cozy reading nook, the Kayyon Minimalist Chair adds a touch of elegance to any room.X
+    </p>
+
+    <div>
+      <p>
+        
+      </p>
+    </div>
+  </section>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

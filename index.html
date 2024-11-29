@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -45,7 +46,7 @@
     <main>
       <section class="relative">
         <div class="relative pt-[120px] h-[80vh] lg:h-[949px]">
-          <div class="swiper absolute inset-0 w-full h-full z-0">
+          <div class="swiper  absolute inset-0 w-full h-full z-0">
             <!-- swiper -->
             <div class="swiper-wrapper">
               <!-- home 1 -->
@@ -116,17 +117,7 @@
                     </div>
                   </div>
             
-                  <div class=" absolute bottom-[30px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-0 font-helvetica z-20">
-                    
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Living Room</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Dining Room</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Workspace</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bedroom</button>
-                    <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bathroom</button>
-                    <a href="#all" class="">
-                      <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
-                    </a>
-                  </div>
+                  
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"></div>
                 <img src="/asset/home.png" alt="Living Room1" class="absolute inset-0 w-full h-full object-cover z-0">
@@ -414,13 +405,23 @@
             </div>  
           </div>
         </div>
+        
         <div class="container mx-auto">
-          <div class="absolute lg:bottom-[60px] lg:flex items-center gap-4 hidden md:block">
-            <div class="flex gap-1 text-white text-xl relative">
-              0
-              <div id="" class="swiper-fraction absolute top-0 left-3 text-white"></div>
-            </div>
-            <div class="w-[821px] ml-3 h-1 bg-white relative">
+          <div class=" absolute bottom-[30px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-0 font-helvetica z-20">
+                    
+            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Living Room</button>
+            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Dining Room</button>
+            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Workspace</button>
+            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bedroom</button>
+            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bathroom</button>
+            <a href="#all" class="">
+              <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
+            </a>
+          </div>
+
+          <div class="absolute lg:bottom-[60px] lg:flex items-center gap-3 hidden md:block">
+            <span class="indexSwiper text-xl text-white">01</span>
+            <div class="w-[821px] h-1 bg-white relative">
               <div id="" class="absolute top-0 left-0 h-1 bg-white swiper-pagination"></div>
             </div>
             <span class="text-xl text-white">05</span>
@@ -439,77 +440,77 @@
           <h2 class="text-black">Our New Furniture Line</h2>
         </div>
         <div class="product px-[20px] lg:px-0 pt-10 ">
-            <div class="lg:flex gap-[15px]">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image1.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover ">
-        
-                    <div data-aos="fade-right" aos-data-delay="250" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
-                        </div>
+          <a href="detailproduct" class="lg:flex gap-[15px]">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
+              <img src="/asset/image1.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover ">
+    
+                <div data-aos="fade-right" aos-data-delay="250" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                     </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
+                    </div>
+                </div>
 
-                    <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
-                        <h2 class="text-lg lg:text-2xl font-normal">Tables</h2>
-                        <p class="text-gray-500">Bok extendable table</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image2.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover">
-        
-                    <div data-aos="fade-right" aos-data-delay="400" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
-                        </div>
-                    </div>
-        
-                    <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
-                        <h2 class="text-lg lg:text-2xl font-normal">Chair</h2>
-                        <p class="text-xs lg:text-base text-gray-500">Bok chair</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image3.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover">
-        
-                    <div data-aos="fade-right" aos-data-delay="400" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
-                        </div>
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
-                        </div>
-                    </div>
-        
-                    <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
-                        <h2 class="text-lg lg:text-2xl font-normal">Cupboard</h2>
-                        <p class="text-xs lg:text-base text-gray-500">Ligna cupboard</p>
-                    </div>
+                <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                    <h2 class="text-lg lg:text-2xl font-normal">Tables</h2>
+                    <p class="text-gray-500">Bok extendable table</p>
                 </div>
             </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
+              <img src="/asset/image2.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover">
+    
+                <div data-aos="fade-right" aos-data-delay="400" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
+                    </div>
+                </div>
+    
+                <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                    <h2 class="text-lg lg:text-2xl font-normal">Chair</h2>
+                    <p class="text-xs lg:text-base text-gray-500">Bok chair</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-[335px] md:w-[360px] lg:w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
+              <img src="/asset/image3.png" alt="Table" data-aos="fade-right" data-aos-delay="100" class="w-full h-full object-cover">
+    
+                <div data-aos="fade-right" aos-data-delay="400" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
+                    </div>
+                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                        <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
+                    </div>
+                </div>
+    
+                <div data-aos="fade-right" data-aos-delay="100" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                    <h2 class="text-lg lg:text-2xl font-normal">Cupboard</h2>
+                    <p class="text-xs lg:text-base text-gray-500">Ligna cupboard</p>
+                </div>
+            </div>
+          </a>
             <div data-aos="fade-up" data-aos-delay="300" class="relatative bottom-0 w-full text-left pt-10">
                 <button class=" bg-transparent  text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica">
                     See more product →
@@ -827,9 +828,9 @@
               </div>
               <div class="mt-[30px] w-full">
                   <h3 data-aos="fade-up" data-aos-delay="300" class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica">Newsletter</h3>
-                  <form data-aos="fade-up" data-aos-delay="400" class="flex items-center mt-3 w-full">
+                  <form class="flex items-center mt-3 w-full">
                       <input type="email" placeholder="Your Email" class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent">
-                        <button data-aos="fade-up" data-aos-delay="600" type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
+                        <button  type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
                             → 
                         </button>
                   </form>
@@ -927,7 +928,7 @@
       init()
       window.addEventListener("scroll", function() {
         const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) { // Ubah angka 50 sesuai kebutuhan
+        if (window.scrollY > 50) { 
           navbar.classList.add("bg-scrolled");
         } else {
           navbar.classList.remove("bg-scrolled");
@@ -941,10 +942,13 @@
           el: '.swiper-pagination',
           type:'progressbar'
         },
-        pagination: {
-        el: ".swiper-fraction",
-        type: "fraction",
-      },
+        on: {
+          slideChange: function () {
+            currentIndex = this.realIndex;
+            let indexSwiper = document.querySelector('.indexSwiper');
+            indexSwiper.textContent = `0${currentIndex + 1}`
+          },
+        },
     
         navigation: {
           nextEl: '.button-custom-next',
@@ -983,3 +987,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
+
+
+
