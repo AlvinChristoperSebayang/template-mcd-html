@@ -13,3 +13,134 @@
 #site-footer .footer-wrapper{
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
+.swiper-custom-slider-slide{
+  @apply gap-10 flex items-center
+}
+@media (min-width: 1024px){
+  .one-line{
+    width: 400px !important;
+  }
+}
+
+li, span, h1, p, a {
+  @apply font-plus-jakarta;
+}
+.hidden {
+  display: none;
+}
+#home{
+  scroll-margin-top: 100px;
+}
+#features{
+  scroll-margin-top: 60px;
+}
+#download{
+  scroll-margin-top: 100px;
+}
+@media (max-width: 640px) {
+  #download{
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Dropdown Mobile */
+#menuButton .rotate-45 {
+  transform: rotate(45deg);
+}
+
+#menuButton .rotate--45 {
+  transform: rotate(-45deg);
+}
+
+#menuButton.open #line1 {
+  transform: rotate(-45deg) translateY(12px);
+}
+
+#menuButton.open #line2 {
+  opacity: 0;
+}
+
+#menuButton.open #line3 {
+  transform: rotate(45deg) translateY(-12px);
+}
+
+#dropdownMenu {
+  position: fixed;
+  top: 40px;
+  transition: 0.5s ease;
+  transform: translatex(100%);
+  visibility: hidden;
+}
+
+#menuButton.open ~ #dropdownMenu {
+  transform: translatex(0);
+  transition: 0.5 ease;
+  visibility: visible;
+}
+/* Dropdown Mobile End */
+
+/* Animated Figure */
+#animated-figure {
+  top: 100%;
+  transition: top 1000ms ease-out;
+}
+
+#animated-figure.animate-top {
+  top: var(--target-top, 30%);
+}
+/* END */
+
+/* Count */
+@keyframes countAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* END */
+
+/* Path Animation */
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.path-animate {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.path-animate.visible {
+  opacity: 1;
+  transform: translateY(0); 
+  animation: moveUp 1s forwards;
+}
+/* Path Animation N */
+
+/* Slider Tertimonial */
+.swiper-container {
+  width: 100%;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+/* Slider Testimonial N */
+
+/* Slider 2 */
+.custom-slider-wrapper {
+  transition-timing-function: linear;
+}
+.custom-slider {
+  overflow: hidden;
+  position: relative;
+}
