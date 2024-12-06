@@ -167,15 +167,15 @@ function setAOSDelay() {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 20,
       },
       480: {
-        slidesPerView: 2,
-        spaceBetween: 16,
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 16,
+        spaceBetween: 20,
       },
       768: {
         slidesPerView: 2,
@@ -223,28 +223,28 @@ function setAOSDelay() {
       disableOnInteraction: false,
       reverseDirection: reverseDirection,
     },
-    speed: 1000,
+    speed: 3000,
     direction: 'horizontal',
     breakpoints: {
       320: {
-        slidesPerView: 1,
-        spaceBetween: 16,
+        slidesPerView: 5,
+        spaceBetween: 0,
       },
       480: {
-        slidesPerView: 2,
-        spaceBetween: 16,
+        slidesPerView: 7,
+        spaceBetween: 0,
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 7,
+        spaceBetween: 0,
       },
       1280: {
-        slidesPerView: 8,
-
+        slidesPerView: 7,
+        spaceBetween: 0,
       },
       1800: {
-        slidesPerView: 12,
-        spaceBetween: 20,
+        slidesPerView: 7,
+        spaceBetween: 0,
       },
     },
   });

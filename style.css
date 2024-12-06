@@ -144,3 +144,31 @@ li, span, h1, p, a {
   overflow: hidden;
   position: relative;
 }
+
+
+
+.swiper-slide.costume-w {
+  flex: 0 0 auto !important; 
+  width: auto !important; 
+}
+
+/* .swiper-slide.custom-dot {
+  width: 30px !important; 
+  flex-shrink: 0; 
+  margin: 0 5px; 
+} */
+
+/* .swiper-slide.custom-dot div {
+  width: 16px !important;
+  background-color: #888888;
+  border-radius: 50%;
+} */
+
+
+/* @media (min-width: 768px) {
+  .swiper-slide.custom-dot div {
+    width: 20px;
+    height: 20px;
+  }
+} */
+
