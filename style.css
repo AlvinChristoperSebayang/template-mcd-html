@@ -13,3 +13,31 @@
 #site-footer .footer-wrapper{
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
+
+button {
+  padding: 12px 24px;
+  border-radius: 50%; 
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
