@@ -19,25 +19,22 @@ button {
   border-radius: 50%; 
 }
 
-h2 {
-  font-size: 64px;
-  font-weight: 400;
-  line-height: normal;
+section {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 @media (max-width: 1024px) {
-  h2 {
-    font-size: 40px;
-    font-weight: 400;
-    line-height: normal;
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  h2 {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: normal;
+  section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 

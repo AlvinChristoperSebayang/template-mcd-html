@@ -7,13 +7,18 @@ export default {
     extend: {
       fontFamily: {
         'helvetica-neue': ['Helvetica Neue', 'Arial', 'sans-serif'],
-        // 'inter': ['Inter', 'sans-serif'],
-        // 'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
       },
       colors: { primary: '#7240FF', },
+      fontSize: {
+        'responsive-h2': ['64px', {
+          sm: '32px',
+          md: '40px',
+          lg: '48px',
+        }],
+      },
       container: {
         center: true,
-        padding: '5rem',
+        margin: auto,
         screens: {
           sm: '640px',
           md: '768px',
