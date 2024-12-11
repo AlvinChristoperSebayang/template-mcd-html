@@ -95,3 +95,7 @@
 .swiper-pagination-current{
   color:white !important;
 }
+.active {
+  background-color: white;
+  color: black;
+}
