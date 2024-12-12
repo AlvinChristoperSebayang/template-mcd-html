@@ -18,27 +18,46 @@
     
 
 </head>
+<style>
+    .sidebar {
+        transition: transform 0.3s ease;
+    }
+    .sidebar-hidden {
+        transform: translateX(100%);
+    }
+    .sidebar-visible {
+        transform: translateX(0);
+    }
+</style>
+<!-- <style>
+    .active {
+        background-color: #101A36; /* Ganti dengan warna yang diinginkan */
+    }
+</style> -->
 <body>
-    <section class="mb-[80px] lg:mb-[180px]">
+    <!-- <section class="mb-[80px] lg:mb-[180px]">
         <div class="relative">
             <div class="absolute inset-0 bg-black bg-opacity-[50%]"></div>
-            <header>
-                <nav class="fixed z-50 flex items-center justify-between w-full text-[white] lg:px-8 md:px-6 px-6 lg:py-[24px] md:py-[16px] py-3">
+            <header class="fixed top-0 w-full z-[800]">
+                <nav class="container mx-auto flex items-center justify-between w-full text-[white] lg:px-0 md:px-0 px-6 lg:py-[24px] md:py-[16px] py-3">
                     <a href="#" class="font-bold lg:text-[34px] md:text-[24px] text-[16px] items-center font-montserrat">Kayyon</a>
-                    <div class="hidden lg:flex md:flex lg:space-x-[44px] md:space-x-[32px] font-opensans font-normal lg:text-[16px] md:text-[12px]">
+
+                    <div class ="hidden lg:flex md:flex lg:space-x-[44px] md:space-x-[32px] font-opensans font-normal lg:text-[16px] md:text-[12px]">
                         <a href="#product" class="group">Product
                             <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
                         </a>
                         <a href="#category" class="group">Category
                             <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
                         </a>
-                        <a href="#contact" class="group" >Contact
+                        <a href="#contact" class="group">Contact
                             <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
                         </a>
                         <a href="#aboutus" class="group">About Us
                             <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
                         </a>
-                        </div>
+                    </div>
+
+                    
                     <div class="hidden lg:flex items-center gap-3 md:flex lg:gap-[14px] place-content-right ">
                     <a href="#search"><img src="/asset/search.svg" alt="search" class="lg:w-8 lg:h-8 md:h-6 md:w-6 w-[14px] h-[14px] "/></a>
                     <a href="#chart"><img src="/asset/cart.svg" alt="cart" class="lg:w-8 lg:h-8 md:h-6 md:w-6 w-[14px] h-[14px]"/></a>
@@ -47,20 +66,118 @@
                     <div class="lg:hidden md:hidden flex items-center gap-3 lg:gap-[14px] place-content-right ">
                     <a href="#search"><img src="/asset/search.svg" alt="search" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
                     <a href="#chart"><img src="/asset/cart.svg" alt="cart" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
-                    <a href="#menu"><img src="/asset/burger.svg" alt="menu" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#menu" id="menu-btn"><img src="/asset/burger.svg" alt="menu" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    
                     </div>
-                </nav> 
+                </nav>
+
+                <div id="sidebar" class ="bg-primary lg:flex md:flex lg:space-x-[44px] md:space-x-[32px] font-opensans font-normal lg:text-[16px] md:text-[12px]">
+                    <a href="#product" class="group">Product
+                        <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                    </a>
+                    <a href="#category" class="group">Category
+                        <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                    </a>
+                    <a href="#contact" class="group">Contact
+                        <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                    </a>
+                    <a href="#aboutus" class="group">About Us
+                        <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                    </a>
+                </div>
             </header>
+            
             <img src="/asset/home.jpg" alt="" class="object-cover lg:object-center  lg:h-[1024px] h-[560px] w-full object-left">
-            <div class="absolute lg:top-[200px] md:top-[130px] top-[120px]">
-                <div class="flex flex-col items-center justify-center text-white lg:px-[270px] md:px-[140px] px-6 gap-[30px] lg:gap-[170px] md:gap-[60px]">
-                    <div class="flex-col flex lg:gap-[60px] md:gap-[40px] gap-7">
-                        <div class="items-center justify-center text-center" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">
+            <div class="absolute lg:top-[200px] md:top-[130px] top-[120px] justify-center w-full">
+                <div class="container mx-auto flex flex-col items-center justify-center text-white  gap-[30px] lg:gap-[170px] md:gap-[60px]">
+                    <div class=" flex-col flex lg:gap-[60px] md:gap-[40px] gap-7 w-[100%]">
+                        <div class="items-center justify-center text-center" data-aos-once="true" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">
                             <h1 class="lg:text-[88px] md:text-[48px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">Discover Timeless</h1>
                             <h2 class="lg:text-[88px] md:text-[48px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">Elegance</h2>
                             <h3 class="lg:text-[88px] md:text-[48px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">for Every Space </h3>
                         </div>
-                        <p class="px-4 lg:text-[16px] md:text-[12px] text-[10px] lg:leading-[25px] md:leading-5 leading-[15px] text-center font-opensans font-normal" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">Elevate the beauty of your home with furniture designed with a touch of style and comfort.
+                        <p class="lg:px-[367px] md:px-[120px] px-6 lg:text-[16px] md:text-[12px] text-[10px] lg:leading-[25px] md:leading-5 leading-[15px] text-center font-opensans font-normal" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">Elevate the beauty of your home with furniture designed with a touch of style and comfort.
+                            Explore a collection of furniture that combines craftsmanship with modern aesthetics.</p>
+                    </div>
+                    <div class="flex items-center justify-center gap-5">
+                        <div data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">
+                            <a href="#shopnow" class="text-[16px] font-bold font-opensans text-center lg:rounded-lg md:rounded-lg rounded h-[68px] lg:py-4 lg:px-[65px] px-[27px] py-3  text-primary bg-white hover:bg-second hover:text-white">Shop Now</a>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">
+                            <a href="#readmore" class="text-[16px] font-bold font-opensans text-center lg:rounded-lg md:rounded-lg rounded h-[68px] lg:py-4 lg:px-[65px] px-[27px] py-3 text-primary bg-white hover:bg-second hover:text-white">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section> -->
+    <section class="mb-[80px] lg:mb-[180px]">
+        <div class="relative">
+            <div class="absolute inset-0 bg-black bg-opacity-[50%]"></div>
+            <header class="fixed top-0 w-full z-[800]">
+                <nav class=" z-[800] navbar container mx-auto flex items-center justify-between w-full text-[white] lg:px-0 md:px-0 px-6 lg:py-[24px] md:py-[16px] py-3">
+                    <a href="#" class="font-bold lg:text-[34px] md:text-[24px] text-[18px] items-center font-montserrat">Kayyon</a>
+
+                    <div class ="hidden text-white p-4  lg:flex md:flex  lg:space-x-[44px] md:space-x-[32px] font-opensans font-normal lg:text-[16px] md:text-[12px]">
+                        <a href="#product" class="group">Product
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#category" class="group">Category
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#contact" class="group">Contact
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#aboutus" class="group">About Us
+                            <div class="bg-white h-[2px] w-0 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                    </div>
+                    <div id="sidebar" class="fixed top-0 right-0 flex flex-col w-full h-full gap-4 p-12 overflow-y-auto text-white bg-primary lg:hidden md:hidden sidebar sidebar-hidden">
+                        <h2 class="mb-2 text-2xl font-bold ">Menu</h2>
+                        <div class="border border-border1"></div>
+                        <ul>
+                            <li class="mb-4 text-[20px] font-bold p-5"><a href="#" class="hover:text-gray-400">Home</a></li>
+                            <li class="mb-4 text-[20px] font-bold p-5"><a href="#" class="hover:text-gray-400">Product</a></li>
+                            <li class="mb-4 text-[20px] font-bold p-5"><a href="#" class="hover:text-gray-400">Categories</a></li>
+                        </ul>
+                        <div class="border border-border1"></div>
+                        <ul>
+                            <li class="mb-4 text-[20px] font-bold p-5"><a href="#" class="hover:text-gray-400">About</a></li>
+                            <li class="mb-4 text-[20px] font-bold p-5"><a href="#" class="hover:text-gray-400">Services</a></li>
+                            <li class="mb-4 text-[20px] font-bold p-5"><a href="#" class="hover:text-gray-400">Contact</a></li>
+                        </ul>
+                    
+                        \
+                    </div>
+
+                    
+                    <div class="hidden lg:flex items-center gap-3 md:flex lg:gap-[14px] place-content-right ">
+                    <a href="#search"><img src="/asset/search.svg" alt="search" class="lg:w-8 lg:h-8 md:h-6 md:w-6 w-[14px] h-[14px] "/></a>
+                    <a href="#chart"><img src="/asset/cart.svg" alt="cart" class="lg:w-8 lg:h-8 md:h-6 md:w-6 w-[14px] h-[14px]"/></a>
+                    <a href="#user"><img src="/asset/user.svg" alt="user" class=" lg:w-8 lg:h-8 md:h-6 md:w-6 w-[14px] h-[14px]"/></a>
+                    </div>
+                    
+                    <div class="z-[9999] lg:hidden md:hidden flex items-center gap-3 lg:gap-[14px] place-content-right ">
+                    <a href="#search"><img src="/asset/search.svg" alt="search" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#chart"><img src="/asset/cart.svg" alt="cart" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    <a href="#menu" id="hamburger"><img src="/asset/burger.svg" alt="menu" class="lg:w-8 w-[14px] h-[14px] lg:h-8"/></a>
+                    
+                    </div>
+                </nav>
+
+            </header>
+            
+            <img src="/asset/home.jpg" alt="" class="object-cover lg:object-center  lg:h-[1024px] h-[560px] w-full object-left">
+            <div class="absolute lg:top-[200px] md:top-[130px] top-[120px] justify-center w-full">
+                <div class="container mx-auto flex flex-col items-center justify-center text-white  gap-[30px] lg:gap-[170px] md:gap-[60px]">
+                    <div class=" flex-col flex lg:gap-[60px] md:gap-[40px] gap-7 w-[100%]">
+                        <div class="items-center justify-center text-center" data-aos-once="true" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">
+                            <h1 class="lg:text-[88px] md:text-[48px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">Discover Timeless</h1>
+                            <h2 class="lg:text-[88px] md:text-[48px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">Elegance</h2>
+                            <h3 class="lg:text-[88px] md:text-[48px] text-[38px] lg:leading-[104px] leading-[51px] font-nunito text-center capitalize">for Every Space </h3>
+                        </div>
+                        <p class="lg:px-[367px] md:px-[120px] px-6 lg:text-[16px] md:text-[12px] text-[10px] lg:leading-[25px] md:leading-5 leading-[15px] text-center font-opensans font-normal" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">Elevate the beauty of your home with furniture designed with a touch of style and comfort.
                             Explore a collection of furniture that combines craftsmanship with modern aesthetics.</p>
                     </div>
                     <div class="flex items-center justify-center gap-5">
@@ -78,7 +195,7 @@
     </section>
 
     <section class="container px-6 mx-auto mb-20 lg:mb-[180px] lg:px-0 md:px-0 overflow-hidden" >
-        <div class="items-center justify-center mb-[26px] lg-[37px] text-center lg:px-56" data-aos="zoom-out" data-aos-duration="1500">
+        <div class="items-center justify-center mb-[26px] lg-[37px] text-center lg:px-56" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500">
             <p class="lg:text-[18px] md:text-[16px] text-[12px] font-semibold font-opensans text-second">Product</p>
             <h2 class="lg:text-[38px] md:text-[24px] text-[16px] font-bold font-opensans">Our Popular Collection</h2>
             <p class="lg:text-[18px] md:text-[14px] text-[10px] text-center font-normal font-opensans text-primary">
@@ -88,97 +205,85 @@
         </div>
         <div class="flex justify-center ">
             <div class="grid grid-cols-2 gap-6 mb-10 lg:gap-5 lg:grid-cols-3 md:grid-cols-3 w-[100%] ">
-                <div class="lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] md:border-[2px] md:border-[rgba(0, 0, 0, 0.18)] overflow-hidden lg:rounded-t-[20px] rounded-t-[8px]" data-aos="flip-left" data-aos-duration="1500">
-                    <a href="#SingleSofaAesthetic" class="flex flex-col gap-2 lg:gap-0 md:gap-0">
-                        <img src="/asset/card1.jpg" alt="sofa" class="relative w-full object-cover lg:h-[500px] md:h-[272px] h-[172px]">
-                        <div class="flex flex-col gap-2 lg:py-3 lg:px-2 md:py-2 md:px-1">
-                        <figcaption class="font-opensans font-bold lg:text-[16px] md:text-[14px] text-[10px] lg:text-forth md:text-forth text-border1 text-opacity-[80%]">Chair</figcaption>
+                <a href="#SingleSofaAesthetic" class="flex flex-col gap-2 lg:gap-0 md:gap-0 lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] md:border-[2px] md:border-[rgba(0, 0, 0, 0.18)] overflow-hidden lg:rounded-t-[20px] rounded-t-[8px]" data-aos-once="true" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="/asset/card1.jpg" alt="sofa" class="relative w-full object-cover lg:h-[500px] md:h-[272px] h-[172px]">
+                    <div class="flex flex-col gap-2 lg:py-3 lg:px-2 md:py-2 md:px-1">
+                    <p class="font-opensans font-bold lg:text-[16px] md:text-[14px] text-[10px] lg:text-forth md:text-forth text-border1 text-opacity-[80%]">Chair</p>
+                    <div class="flex flex-col lg:gap-[14px] md:gap-2 gap-1">
+                        <h2 class="font-opensans lg:text-[24px] md:text-[18px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
+                            Single Sofa Aesthetic
+                        </h2>
+                        <p class="font-opensans lg:text-[16px] md:text-[12px] text-[10px] font-normal text-black">
+                            Combination Of Wood And Wool
+                        </p>
+                    </div>
+                    <p class="font-opensans lg:text-[20px] md:text-[16px] text-[14px] font-bold">
+                        $28.15
+                    </p>
+                    </div>
+                </a>
+                <a href="#SingleSofaAesthetic" class="flex flex-col gap-2 lg:gap-0 md:gap-0 lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] md:border-[2px] md:border-[rgba(0, 0, 0, 0.18)] overflow-hidden lg:rounded-t-[20px] rounded-t-[8px]" data-aos-once="true" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="/asset/card2.jpg" alt="sofa" class="relative w-full object-cover lg:h-[500px] md:h-[272px] h-[172px]">
+                    <div class="flex flex-col gap-2 lg:py-3 lg:px-2 md:py-2 md:px-1">
+                        <p class="font-opensans font-bold lg:text-[16px] md:text-[14px] text-[10px] lg:text-forth md:text-forth text-border1 text-opacity-[80%]">Table</p>
                         <div class="flex flex-col lg:gap-[14px] md:gap-2 gap-1">
                             <h2 class="font-opensans lg:text-[24px] md:text-[18px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
-                                Single Sofa Aesthetic
+                                Djati Table
+                            </h2>
+                            <p class="font-opensans lg:text-[16px] md:text-[12px] text-[10px] font-normal text-black">
+                                Combination of wood Djati
+                            </p>
+                        </div>
+                        <p class="font-opensans lg:text-[20px] md:text-[16px] text-[14px] font-bold">
+                            $33.50
+                        </p>
+                    </div>
+                </a>
+                <a href="#SingleSofaAesthetic" class="flex flex-col gap-2 lg:gap-0 md:gap-0 lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] md:border-[2px] md:border-[rgba(0, 0, 0, 0.18)] overflow-hidden lg:rounded-t-[20px] rounded-t-[8px] lg:block md:block hidden" data-aos-once="true" data-aos="flip-left" data-aos-duration="1500">
+                    <img src="/asset/card3.jpg" alt="sofa" class="relative w-full object-cover lg:h-[500px] md:h-[272px] h-[172px]">
+                    <div class="flex flex-col gap-2 lg:py-3 lg:px-2 md:py-2 md:px-1">
+                        <p class="font-opensans font-bold lg:text-[16px] md:text-[14px] text-[10px] lg:text-forth md:text-forth text-border1 text-opacity-[80%]">Sofa</p>
+                        <div class="flex flex-col lg:gap-[14px] md:gap-2 gap-1">
+                            <h2 class="font-opensans lg:text-[24px] md:text-[18px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
+                                Brown Aesthetic Sofa
                             </h2>
                             <p class="font-opensans lg:text-[16px] md:text-[12px] text-[10px] font-normal text-black">
                                 Combination Of Wood And Wool
                             </p>
                         </div>
                         <p class="font-opensans lg:text-[20px] md:text-[16px] text-[14px] font-bold">
-                            $28.15
+                            $99.98
                         </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] md:border-[2px] md:border-[rgba(0, 0, 0, 0.18)] overflow-hidden lg:rounded-t-[20px] rounded-t-[8px]" data-aos="flip-left" data-aos-duration="1500">
-                    <div class="flex flex-col gap-3 ">
-                        <a href="#SingleSofaAesthetic" class="flex flex-col gap-2 lg:gap-0 md:gap-0">
-                            <img src="/asset/card2.jpg" alt="sofa" class="relative w-full object-cover lg:h-[500px] md:h-[272px] h-[172px]">
-                            <div class="flex flex-col gap-2 lg:py-3 lg:px-2 md:py-2 md:px-1">
-                                <figcaption class="font-opensans font-bold lg:text-[16px] md:text-[14px] text-[10px] lg:text-forth md:text-forth text-border1 text-opacity-[80%]">Table</figcaption>
-                                <div class="flex flex-col lg:gap-[14px] md:gap-2 gap-1">
-                                    <h2 class="font-opensans lg:text-[24px] md:text-[18px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
-                                        Djati Table
-                                    </h2>
-                                    <p class="font-opensans lg:text-[16px] md:text-[12px] text-[10px] font-normal text-black">
-                                        Combination of wood Djati
-                                    </p>
-                                </div>
-                                <p class="font-opensans lg:text-[20px] md:text-[16px] text-[14px] font-bold">
-                                    $33.50
-                                </p>
-                            </div>
-                        </a>
                     </div>
-                </div>
-                <div class="lg:border-[2px] lg:border-[rgba(0, 0, 0, 0.18)] md:border-[2px] md:border-[rgba(0, 0, 0, 0.18)] overflow-hidden lg:rounded-t-[20px] rounded-t-[8px] lg:block md:block hidden" data-aos="flip-left" data-aos-duration="1500">
-                    <div class="flex flex-col gap-3 ">
-                        <a href="#SingleSofaAesthetic" class="flex flex-col gap-2 lg:gap-0 md:gap-0">
-                            <img src="/asset/card3.jpg" alt="sofa" class="relative w-full object-cover lg:h-[500px] md:h-[272px] h-[172px]">
-                            <div class="flex flex-col gap-2 lg:py-3 lg:px-2 md:py-2 md:px-1">
-                                <figcaption class="font-opensans font-bold lg:text-[16px] md:text-[14px] text-[10px] lg:text-forth md:text-forth text-border1 text-opacity-[80%]">Sofa</figcaption>
-                                <div class="flex flex-col lg:gap-[14px] md:gap-2 gap-1">
-                                    <h2 class="font-opensans lg:text-[24px] md:text-[18px] text-[14px] font-bold text-font leading-[14px] lg:leading-[28px]">
-                                        Brown Aesthetic Sofa
-                                    </h2>
-                                    <p class="font-opensans lg:text-[16px] md:text-[12px] text-[10px] font-normal text-black">
-                                        Combination Of Wood And Wool
-                                    </p>
-                                </div>
-                                <p class="font-opensans lg:text-[20px] md:text-[16px] text-[14px] font-bold">
-                                    $99.98
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                
+                </a>
             </div>
         </div>
     </section>
 
     <section class="container mx-auto mb-[80px] lg:mb-[180px]" >
         <div class="mb-10 overflow-hidden text-center lg:mb-20">
-            <h2 class="font-opensans font-bold lg:text-[38px] md:text-[24px] text-[16px]" data-aos="zoom-out" data-aos-duration="1500">Shop by Categories</h2>
+            <h2 class="font-opensans font-bold lg:text-[38px] md:text-[24px] text-[16px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500">Shop by Categories</h2>
         </div>
 
         <div class="lg:flex md:flex lg:gap-5 gap-[10px] lg:space-y-0 md:space-y-0 space-y-[10px] lg:px-0 md:px-0 px-6 overflow-hidden">
-            <div class="lg:w-[50%] md:w-[50%] relative overflow-hidden" >
-                <img src="/asset/kategori1.jpg" alt="" class=" inset-0 lg:h-[801px] md:h-[410px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos="zoom-out" data-aos-duration="1500">
-                <div class="absolute inset-0 bg-black bg-opacity-20 lg:rounded-[20px] rounded-[10px] " data-aos="zoom-out" data-aos-duration="1500"></div>
-                <h3 class="absolute font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[38px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up" data-aos-duration="1500">Our Beds Collection : Your Sleep Space With Comfort and Style</h3>
+            <div class="lg:w-[50%] md:w-[50%] relative overflow-hidden lg:rounded-[20px] rounded-[10px]" >
+                <img src="/asset/kategori1.jpg" alt="" class=" inset-0 lg:h-[801px] md:h-[410px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="absolute inset-0 bg-black bg-opacity-20 lg:rounded-[20px] rounded-[10px] " data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500"></div>
+                <h3 class="absolute font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[38px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">Our Beds Collection : Your Sleep Space With Comfort and Style</h3>
             </div>
-            <div class="lg:w-[50%] md:w-[50%]  flex flex-col lg:gap-5 gap-[10px]">
-                <div class="relative overflow-hidden">
-                    <img src="/asset/kategori2.jpg" alt="" class="inset-0 lg:h-[381px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos="zoom-out" data-aos-duration="1500">
-                <h3 class="absolute lg:text-left md:text-left text-center w-full font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[38px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up" data-aos-duration="1500">See All Our Sofa Collection</h3>
+            <div class="lg:w-[50%] md:w-[50%]  flex flex-col lg:gap-5 gap-[10px] ">
+                <div class="relative overflow-hidden lg:rounded-[20px] rounded-[10px]">
+                    <img src="/asset/kategori2.jpg" alt="" class="inset-0 lg:h-[381px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500">
+                <h3 class="absolute lg:text-left md:text-left text-center w-full font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[38px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">See All Our Sofa Collection</h3>
                 </div>
                 <div class="lg:flex md:flex lg:gap-4 gap-[10px] lg:space-y-0 md:space-y-0  space-y-[10px]">
-                    <div class="lg:w-[50%] md:w-[50%]  relative overflow-hidden">
-                        <img src="/asset/kategori3.jpg" alt="" class="lg:h-[400px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos="zoom-out" data-aos-duration="1500" >
-                        <h3 class="absolute w-full text-center font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[29px] md:px-[16.5px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up" data-aos-duration="1500">Our Chair Collection</h3>
+                    <div class="lg:w-[50%] md:w-[50%]  relative overflow-hidden lg:rounded-[20px] rounded-[10px]">
+                        <img src="/asset/kategori3.jpg" alt="" class="lg:h-[400px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500" >
+                        <h3 class="absolute w-full text-center font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[29px] md:px-[16.5px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">Our Chair Collection</h3>
                     </div>
-                    <div class="lg:w-[50%] md:w-[50%]  relative overflow-hidden">
-                        <img src="/asset/kategori4.jpg" alt="" class="lg:h-[400px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos="zoom-out" data-aos-duration="1500">
-                        <h3 class="w-full text-center absolute font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[29px] md:px-[16.5px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos="fade-up" data-aos-duration="1500">See All Collection</h3>
+                    <div class="lg:w-[50%] md:w-[50%]  relative overflow-hidden lg:rounded-[20px] rounded-[10px]">
+                        <img src="/asset/kategori4.jpg" alt="" class="lg:h-[400px] h-[200px] object-cover w-full lg:rounded-[20px] rounded-[10px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500">
+                        <h3 class="w-full text-center absolute font-opensans bottom-0 lg:py-[26px] py-4 lg:px-[29px] md:px-[16.5px] px-[22px]  lg:text-[26px] text-[14px] font-bold text-white" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">See All Collection</h3>
                     </div>
                 </div>
             </div>
@@ -186,19 +291,19 @@
     </section>
 
     <section class="container mx-auto mb-[80px] lg:mb-[180px]">
-        <div class="relative overflow-hidden">
-            <img src="/asset/talented.jpg" alt="" class="lg:h-[572px] md:h-[280px] h-[220px] object-cover w-full lg:rounded-[20px] md:rounded-[10px]" data-aos="zoom-out" data-aos-duration="1500">
-            <div class="absolute inset-0 bg-black bg-opacity-[40%] lg:rounded-[20px] md:rounded-[10px]" data-aos="zoom-out" data-aos-duration="1500"></div>
+        <div class="relative overflow-hidden  lg:rounded-[20px] md:rounded-[10px]">
+            <img src="/asset/talented.jpg" alt="" class="lg:h-[572px] md:h-[280px] h-[220px] object-cover w-full lg:rounded-[20px] md:rounded-[10px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500">
+            <div class="absolute inset-0 bg-black bg-opacity-[40%] lg:rounded-[20px] md:rounded-[10px]" data-aos-once="true" data-aos="zoom-out" data-aos-duration="1500"></div>
             <div class="absolute top-0 lg:py-[60px] py-[14px] lg:px-[42px] md:px-[30px] md:py-6 px-6 w-[100%]">
                 <div class="flex flex-col text-center lg:gap-[30px] md:gap-[24px] gap-[16px]">
                     <div class="flex flex-col lg:gap-[26px] md:gap-[18px] gap-[16px] lg:w-[60%] md:w-[60%]">
-                        <h2 class="font-opensans lg:px-0 md:px-0 lg:text-left md:text-left px-14 text-white lg:text-[60px] md:text-[24px] text-[16px] font-bold lg:leading-[78px] md:leading-[38px] leading-[20.8px]" data-aos="fade-up" data-aos-duration="1500">Crafted by talented and
+                        <h2 class="font-opensans lg:px-0 md:px-0 lg:text-left md:text-left px-14 text-white lg:text-[60px] md:text-[24px] text-[16px] font-bold lg:leading-[78px] md:leading-[38px] leading-[20.8px]" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">Crafted by talented and
                             high quality material
                         </h2>
-                        <p class="max-w-[630px] font-opensans capitalize text-white lg:text-left md:text-left lg:text-[24px] md:text-[12px] text-[10px] lg:leading-[40.8px] md:leading-[22px] leading-[13.62px] font-normal" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget cursus cras</p>
+                        <p class="max-w-[630px] font-opensans capitalize text-white lg:text-left md:text-left lg:text-[24px] md:text-[12px] text-[10px] lg:leading-[40.8px] md:leading-[22px] leading-[13.62px] font-normal" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">Lorem ipsum dolor sit amet consectetur. Turpis pellentesque nulla aenean sit vel risus maecenas nunc. Velit tincidunt sagittis eget cursus cras</p>
                     </div>
                     <div class="space-y-4 lg:space-y-16 lg:flex md:flex lg:justify-between md:justify-between">
-                        <div class="flex justify-between text-white lg:px-0 md:gap-3 gap-9 " data-aos="fade-up" data-aos-duration="1500">
+                        <div class="flex justify-between text-white lg:px-0 md:gap-3 gap-9 " data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">
                             <div>
                                 <p class="lg:text-[44px] md:text-[20px] text-[12px] font-bold font-opensans">20+</p>
                                 <p class="lg:text-[22px] md:text-[12px] text-[10px] font-normal font-opensans">Years Experience</p>
@@ -212,7 +317,7 @@
                                 <p class="lg:text-[22px] md:text-[12px] text-[10px] font-normal font-opensans">Project Finished</p>
                             </div>
                         </div>
-                        <div class="lg:order-first md:order-first" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="lg:order-first md:order-first" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">
                             <a href="#" class="bg-white lg:rounded-[10px] md:rounded-[8px] rounded-[4px] lg:border-none border-border border-[2px] text-primary lg:flex-col-reverse lg:text-[18px] md:text-[14px] text-[10px] lg:font-semibold md:font-medium font-normal lg:py-[10px] md:py-[8px] py-[5px] px-[18px] lg:px-[28px] md:px-[24px] font-opensans" >Shop Now</a>
                         </div>
                     </div>
@@ -223,7 +328,7 @@
 
     <section class=" mb-[80px] lg:mb-[180px] bg-primary">
         <div class="container mx-auto lg:flex md:flex  lg:py-[34px] lg:px-[35.5px] md:py-[24px] md:px-[25.5px] px-[88px] py-[21px] lg:justify-between md:justify-between justify-center items-center lg:space-y-0 md:space-y-0 space-y-[30px]" >
-            <div class="items-center justify-between flex lg:gap-[45px] gap-3" data-aos="fade-right" data-aos-delay="100"
+            <div class="items-center justify-between flex lg:gap-[45px] gap-3" data-aos-once="true" data-aos="fade-right" data-aos-delay="100"
             data-aos-easing="ease-in-sine" >
                 <img src="/asset/delivery.svg" alt="" class="lg:w-[70px] lg:h-[70px] w-[38px] h-[38px]">
                 <div class="flex-col gap-2">
@@ -231,7 +336,7 @@
                     <p class="lg:text-[18px] text-[12px] text-white">Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
-            <div class=" items-center flex justify-between lg:gap-[45px] gap-3" data-aos="fade-right" data-aos-delay="300"
+            <div class=" items-center flex justify-between lg:gap-[45px] gap-3" data-aos-once="true" data-aos="fade-right" data-aos-delay="300"
             data-aos-easing="ease-in-sine" >
                 <div class="flex-col gap-2">
                     <p class="font-bold font-lato lg:text-[30px] text-[16px] text-white">Support 24/7</p>
@@ -239,7 +344,7 @@
                 </div>
                 <img src="/asset/clock.svg" alt="" class=" lg:order-first md:order-first lg:w-[70px] lg:h-[70px] w-[38px] h-[38px]">
             </div>
-            <div class=" items-center flex justify-between lg:gap-[45px] gap-3" data-aos="fade-right" data-aos-delay="500"
+            <div class=" items-center flex justify-between lg:gap-[45px] gap-3" data-aos-once="true" data-aos="fade-right" data-aos-delay="500"
             data-aos-easing="ease-in-sine" >
                 <img src="/asset/like-tag.svg" alt="" class="lg:w-[70px] lg:h-[70px] w-[38px] h-[38px]">
                 <div class="flex-col gap-2">
@@ -252,7 +357,7 @@
         </div>
     </section>
 
-    <section class="container p-6 lg:p-0 md:p-0 mx-auto lg:mb-[170px] md:mb-[120px] mb-20"  data-aos="fade-up"  data-aos-duration="1500">
+    <section class="container p-6 lg:p-0 md:p-0 mx-auto lg:mb-[170px] md:mb-[120px] mb-20" data-aos-once="true" data-aos="fade-up"  data-aos-duration="1500">
         <h2 class="text-center lg:text-[38px] md:text-[24px] text-[16px] font-semibold font-lato lg:mb-[60px] md:mb-[40px] mb-[33px]">See how our clients happy with our services</h2>
 
         <div class="container mx-auto swiper testi-slider">
@@ -351,45 +456,45 @@
         <div class="flex flex-col lg:gap-[160px] gap-[70px]  container mx-auto">
             <div class="lg:flex justify-between mx-auto lg:space-y-0 md:space-y-[36px] space-y-[28px]">
                 <div class="flex flex-col  lg:gap-[26px] md:gap-[22px] gap-2 lg:w-[37%] text-center lg:text-left">
-                    <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold font-montserrat text-white" data-aos="fade" data-aos-offset="0">Kayyon</h3>
-                    <p class="font-opensans font-normal lg:text-[16px] md:text-[14px] text-[12px] lg:leading-6 md:leading-[22px] leading-[20.4px] text-white" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur. Sit tempor nibh hac turpis lacus arcu. Imperdiet tristique nisiullamcorper lacus mattis consectetur odio suscipit tristique.</p>
+                    <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold font-montserrat text-white" data-aos-once="true" data-aos="fade" data-aos-offset="0">Kayyon</h3>
+                    <p class="font-opensans font-normal lg:text-[16px] md:text-[14px] text-[12px] lg:leading-6 md:leading-[22px] leading-[20.4px] text-white" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur. Sit tempor nibh hac turpis lacus arcu. Imperdiet tristique nisiullamcorper lacus mattis consectetur odio suscipit tristique.</p>
                 </div>
                 <div class="gap-5 font-opensans text-center lg:text-left lg:flex lg:space-y-0 space-y-[25px]">
                     <div class="flex flex-col lg:gap-[26px] md:gap-[22px] gap-2">
-                        <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold  text-white" data-aos="fade" data-aos-offset="0">About</h3>
+                        <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold  text-white" data-aos-once="true" data-aos="fade" data-aos-offset="0">About</h3>
                         <div class="flex flex-col lg:gap-3 md:gap-3 gap-2 lg:text-white text-white text-opacity-40 text-[14px] lg:text-[18px] md:text-[16px]" >
-                            <a href="#kayyonexport" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">Kayyon Export</a>
-                            <a href="#ouroffice"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="350">Our Office Factory</a>
-                            <a href="#aboutus"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="400">Our Sustainability Efforts</a>
-                            <a href="#"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="450">About Us</a>
-                            <a href="#"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="600">Contact</a>
+                            <a href="#kayyonexport" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">Kayyon Export</a>
+                            <a href="#ouroffice" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="350">Our Office Factory</a>
+                            <a href="#aboutus" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="400">Our Sustainability Efforts</a>
+                            <a href="#" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="450">About Us</a>
+                            <a href="#" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="600">Contact</a>
                         </div>
                     </div>
                     <div class="flex flex-col lg:gap-[26px] md:gap-[22px] gap-2">
-                        <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold  text-white" data-aos="fade" data-aos-offset="0">Support</h3>
+                        <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold  text-white" data-aos-once="true" data-aos="fade" data-aos-offset="0">Support</h3>
                         <div class="flex flex-col lg:gap-3 md:gap-3 gap-2 lg:text-white text-white text-opacity-40  text-[14px] lg:text-[18px] md:text-[16px]">
-                            <a href="#FAQs" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">FAQs</a>
-                            <a href="#howtoplace"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="350">How To Place And Order</a>
-                            <a href="#shippingpolicy"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="450">Shipping Policy</a>
-                            <a href="#privacypolicy"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="500">Privacy Policy</a>
-                            <a href="#careguides"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="600">Care Guides</a>
+                            <a href="#FAQs" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">FAQs</a>
+                            <a href="#howtoplace" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="350">How To Place And Order</a>
+                            <a href="#shippingpolicy" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="450">Shipping Policy</a>
+                            <a href="#privacypolicy" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="500">Privacy Policy</a>
+                            <a href="#careguides" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="600">Care Guides</a>
                         </div>
                     </div>
                     <div class="flex flex-col lg:gap-[26px] md:gap-[22px] gap-2">
-                        <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold  text-white" data-aos="fade" data-aos-offset="0">Shop</h3>
+                        <h3 class="lg:text-[24px] md:text-[24px] text-[22px] font-bold  text-white" data-aos-once="true" data-aos="fade" data-aos-offset="0">Shop</h3>
                         <div class="flex flex-col lg:gap-3 md:gap-3 gap-2 lg:text-white text-white text-opacity-40  text-[14px] lg:text-[18px] md:text-[16px]">
-                            <a href="#FAQs" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">Entryways</a>
-                            <a href="#howtoplace"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="350">Shop By Categories</a>
-                            <a href="#shippingpolicy"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="450">All Product</a>
-                            <a href="#privacypolicy"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="500">Privacy Policy</a>
-                            <a href="#careguides"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="600">Trending Product</a>
+                            <a href="#FAQs" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="200">Entryways</a>
+                            <a href="#howtoplace" data-aos-once="true"  data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="350">Shop By Categories</a>
+                            <a href="#shippingpolicy" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="450">All Product</a>
+                            <a href="#privacypolicy" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="500">Privacy Policy</a>
+                            <a href="#careguides" data-aos-once="true" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="600">Trending Product</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="items-center justify-between hidden gap-5 lg:flex md:hidden" data-aos="fade-up" data-aos-offset="0">
-                <p class=" text-white text-opacity-50 font-lato lg:text-white lg:text-[16px] md:text-[16px] text-[10px]" data-aos="fade-up" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
+            <div class="items-center justify-between hidden gap-5 lg:flex md:hidden" data-aos-once="true" data-aos="fade-up" data-aos-offset="0">
+                <p class=" text-white text-opacity-50 font-lato lg:text-white lg:text-[16px] md:text-[16px] text-[10px]" data-aos-once="true" data-aos="fade-up" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
                 <div class="flex items-center justify-center gap-5">
                     <a href="#facebook">
                         <img src="/asset/fb.svg" alt="fb">
@@ -403,7 +508,7 @@
                 </div>
             </div>
 
-            <div class="flex-col items-center justify-between hidden gap-5 lg:hidden md:flex" data-aos="fade-up" data-aos-offset="0">
+            <div class="flex-col items-center justify-between hidden gap-5 lg:hidden md:flex" data-aos-once="true" data-aos="fade-up" data-aos-offset="0">
                 <div class="flex items-center justify-center gap-5">
                     <a href="#facebook">
                         <img src="/asset/fb.svg" alt="fb">
@@ -415,10 +520,10 @@
                         <img src="/asset/x.svg" alt="x">
                     </a>
                 </div>
-                <p class=" text-white text-opacity-50 font-lato lg:text-white lg:text-[16px] md:text-[16px] text-[10px]" data-aos="fade-up" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
+                <p class=" text-white text-opacity-50 font-lato lg:text-white lg:text-[16px] md:text-[16px] text-[10px]" data-aos-once="true" data-aos="fade-up" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
             </div>
             <div class="lg:hidden md:hidden items-center justify-center text-center lg:space-y-0 space-y-[14px] text-white lg:justify-between">
-                <div class="flex items-center justify-center gap-[8px]" data-aos="fade-up" data-aos-offset="0">
+                <div class="flex items-center justify-center gap-[8px]" data-aos-once="true" data-aos="fade-up" data-aos-offset="0">
                     <a href="#facebook">
                         <img src="/asset/fbsm.svg" alt="fb">
                     </a>
@@ -429,7 +534,7 @@
                         <img src="/asset/xsm.svg" alt="x">
                     </a>
                 </div>
-                <p class="order-first text-white text-opacity-50 font-lato lg:text-white lg:text-[16px] text-[10px]" data-aos="fade-up" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
+                <p class="order-first text-white text-opacity-50 font-lato lg:text-white lg:text-[16px] text-[10px]" data-aos-once="true" data-aos="fade-up" data-aos-offset="0">© 2024 kayyon. All rights reserved.</p>
             </div>
         </div>
         
@@ -442,12 +547,30 @@
     <script>
         // Fungsi untuk menambahkan kelas 'bg-dark' ketika scroll ke bawah
         window.addEventListener("scroll", function () {
-        const header = document.querySelector("nav");
+        const header = document.querySelector("header");
           if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
             header.classList.add("bg-primary");
         } else {
             header.classList.remove("bg-primary");
         }
+        });
+    </script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-hidden');
+            sidebar.classList.toggle('sidebar-visible');
+        });
+    </script>
+    <script>
+        const hamburgerButton = document.getElementById('hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburgerButton.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            nav.classList.toggle('bg-transparent'); // Menghapus latar belakang transparan
         });
     </script>
     <style>
