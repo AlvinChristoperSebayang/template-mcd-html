@@ -2,10 +2,74 @@
 export default {
   content: [
     "./*.{html,js}",
-    "./src/**/*.{html,js}"],
+    "./src/**/*.{html,js}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#8246FB',
+        darkBlack: '#050810',
+        primaryGrey: '#8B919E',
+      },
+      fontFamily: {
+        primary: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      container: {
+        center: true, 
+        padding: '1rem',
+        screens: {
+          sm: {
+            maxWidth: '100%', 
+            padding: '16px', 
+          },
+          md: {
+            maxWidth: '100%',
+            padding: '32px', 
+          },
+          lg: {
+            maxWidth: '100%',
+            padding: '40px',
+          },
+          xl: {
+            maxWidth: '1220px',
+            padding: '0', 
+          },
+        },
+      },
+    },
   },
-  plugins: [],
-}
-
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.paddingSection': {
+          paddingTop: '40px', 
+          paddingBottom: '40px', 
+        },
+        '@screen sm': {
+          '.paddingSection': {
+            paddingTop: '40px',
+            paddingBottom: '40px',
+          },
+        },
+        '@screen md': {
+          '.paddingSection': {
+            paddingTop: '80px',
+            paddingBottom: '80px',
+          },
+        },
+        '@screen lg': {
+          '.paddingSection': {
+            paddingTop: '120px',
+            paddingBottom: '120px',
+          },
+        },
+        '@screen xl': {
+          '.paddingSection': {
+            paddingTop: '120px',
+            paddingBottom: '120px',
+          },
+        },
+      });
+    },
+  ],
+};
