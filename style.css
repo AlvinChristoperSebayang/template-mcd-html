@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  html{
-    @apply font-primary
+  html {
+    @apply font-primary;
   }
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6,p,button,a {
+  h6,
+  p,
+  button,
+  a {
     @apply font-primary;
   }
 }
@@ -20,18 +23,17 @@
   .button {
     @apply flex gap-1 items-center rounded-full py-[14px] px-[32px];
   }
-  .btn-primary{
-    @apply bg-primary text-white
+  .btn-primary {
+    @apply bg-primary text-white;
   }
 
-  .title-section{
-    @apply text-darkBlack lg:text-[64px] md:text-[48px] text-[32px] font-normal
+  .title-section {
+    @apply text-darkBlack lg:text-[64px] md:text-[48px] text-[32px] font-normal;
   }
-  .title-section span{
-    @apply text-primaryGrey font-normal lg:text-[16px]
+  .title-section span {
+    @apply text-primaryGrey font-normal lg:text-[64px];
   }
 }
 
-@layer utilities{
-  
+@layer utilities {
 }

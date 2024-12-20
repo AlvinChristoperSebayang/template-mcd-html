@@ -1,26 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/logo.png">
-    <title>Health Doc</title>
-</head>
 
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/logo.png" />
+    <title>Health Doc</title>
+  </head>
+
+  <body>
     <header id="site-header"></header>
     <main id="site-main">
-            Hello World
+      <section class="paddingSection">
+        <div class="container">
+          <div class="flex flex-col md:flex-row gap-14">
+            <div class="flex-col flex-1 block md:hidden">
+              <figure>
+                <img
+                  src="./assets/img/video_call_pict.png"
+                  alt="video call dokter"
+                />
+              </figure>
+            </div>
+            <div class="flex-col flex-1 gap-5 flex">
+              <span
+                class="py-1 px-2 rounded-full border border-secondaryGrey w-fit"
+              >
+                <span>•</span> About Us</span
+              >
+              <h2 class="font-normal title-section">
+                Culsuntation with a good Doctor
+              </h2>
+              <span class="text-base font-normal text-primaryGrey">
+                Experience the perfect blend of advanced AI technology and human
+                expertise. Our platform connects you with professional doctors
+                to provide personalized and efficient healthcare solutions,
+                ensuring your well-being is always a priority
+              </span>
+              <button
+                class="button btn-primary mt-5 w-fit"
+                aria-label="Learn More"
+              >
+                Learn More
+              </button>
+            </div>
+            <div class="flex-col flex-1 md:block hidden">
+              <figure>
+                <img
+                  src="./assets/img/video_call_pict.png"
+                  alt="video call dokter"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="paddingSection">
+        <div class="container">
+          <div class="flex flex-col md:flex-row gap-14">
+            <div class="flex-col flex-1">
+              <figure>
+                <img
+                  src="./assets/img/robot-phone-pict.png"
+                  alt="video call dokter"
+                />
+              </figure>
+            </div>
+            <div class="flex-col flex-1 flex gap-5">
+              <span
+                class="py-1 px-2 rounded-full border border-secondaryGrey w-fit"
+              >
+                <span>•</span>AI Xelie</span
+              >
+              <h2 class="font-normal title-section">
+                Check Your Health With Our <span>AI Xelie</span>
+              </h2>
+              <span class="text-base font-normal text-primaryGrey">
+                Unlock a new level of health monitoring with AI Xelie.
+                Experience accurate, real-time insights designed to help you
+                take control of your well-being effortlessly
+              </span>
+              <button
+                class="button btn-primary mt-5 w-fit"
+                aria-label="Learn More"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="paddingSection">
+        <div class="container">
+          <div
+            class="bg-[url('./assets/img/card-bg.png')] rounded-3xl p-4 flex bg-center"
+          >
+            <div
+              class="flex-col flex- gap-5 backdrop-blur-[20px] rounded-3xl backdrop-brightness-105 px-8 backdrop-sepia-0 shrink w-[534px] h-[518px] content-center"
+            >
+              <span
+                class="py-1 px-2 rounded-full border border-secondaryGrey font-normal w-fit"
+              >
+                <span>•</span>HealtDoc</span
+              >
+              <h2 class="font-normal title-section" style="font-size: 48px">
+                Trusted health Application
+              </h2>
+              <span class="text-base font-normal text-[#696F7D]">
+                Your reliable partner in healthcare, providing accurate,
+                real-time insights and expert guidance powered by advanced AI
+                technology
+              </span>
+              <button class="button btn-primary mt-5" aria-label="download app">
+                Download App
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="paddingSection">
+        <div class="container">
+          <div class="flex place-content-center flex-col">
+            <div class="lg:max-w-[35rem] text-center self-center">
+              <h2 class="font-normal title-section">Our News</h2>
+              <span class="text-base font-normal text-primaryGrey"
+                >Stay updated with the latest developments, innovations, and
+                insights in the healthcare industry</span
+              >
+            </div>
+            <ul class="flex-col md:flex-row flex mt-10 gap-6">
+              <li class="md:w-1/3">
+                <div>
+                  <figure class="rounded-2xl flex justify-center">
+                    <img
+                      src="./assets/img/yellow-image-card.png"
+                      alt="news image"
+                    />
+                  </figure>
+                </div>
+                <div class="mt-5 flex gap-4 flex-col">
+                  <div class="flex flex-row gap-5 items-center">
+                    <span
+                      class="py-1 px-2 rounded-full border border-secondaryGrey"
+                      >General</span
+                    >
+                    <p class="text-primaryGrey">Des 24, 2024</p>
+                  </div>
+                  <h3 class="text-2xl font-bold text-pretty">
+                    AI-Powered Health Monitoring Tools
+                  </h3>
+                  <p class="text-primaryGrey">
+                    Discover the future of health tracking with AI-driven
+                    solutions that provide real-time insights and personalized
+                    care
+                  </p>
+                </div>
+              </li>
+              <li class="md:w-1/3">
+                <div>
+                  <figure class="rounded-2xl flex justify-center">
+                    <img
+                      src="./assets/img/purple-image-card.jpeg"
+                      alt="news image"
+                    />
+                  </figure>
+                </div>
+                <div class="mt-5 flex gap-4 flex-col">
+                  <div class="flex flex-row gap-5 items-center">
+                    <span
+                      class="py-1 px-2 rounded-full border border-secondaryGrey"
+                      >General</span
+                    >
+                    <p class="text-primaryGrey">Des 24, 2024</p>
+                  </div>
+                  <h3 class="text-2xl font-bold text-pretty">
+                    Partnerships for Smarter Healthcare
+                  </h3>
+                  <p class="text-primaryGrey">
+                    We’ve partnered with leading institutions to bring AI
+                    technology to the forefront of patient care and health
+                    management
+                  </p>
+                </div>
+              </li>
+              <li class="md:w-1/3">
+                <div>
+                  <figure class="rounded-2xl flex justify-center">
+                    <img
+                      src="./assets/img/black-image-card.png"
+                      alt="news image"
+                    />
+                  </figure>
+                </div>
+                <div class="mt-5 flex gap-4 flex-col">
+                  <div class="flex flex-row gap-5 items-center">
+                    <span
+                      class="py-1 px-2 rounded-full border border-secondaryGrey"
+                      >General</span
+                    >
+                    <p class="text-primaryGrey">Des 24, 2024</p>
+                  </div>
+                  <h3 class="text-2xl font-bold text-pretty">
+                    The Launch of AI Health Scanner
+                  </h3>
+                  <p class="text-primaryGrey">
+                    Introducing our AI health scanner, a tool designed to offer
+                    precise health assessments and proactive insights
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="self-center mt-10">
+              <button class="button btn-primary" aria-label="View more">
+                View More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer id="site-footer"></footer>
     <script type="module" src="/main.js"></script>
-</body>
-
+  </body>
 </html>
