@@ -17,21 +17,21 @@
   <body>
     <header id="site-header"></header>
     <main id="site-main">
-      <section class="pt-[60px] pb-20">
+      <section class="py-6 md:pt-[60px] md:pb-20">
         <div class="container">
-          <div class="flex flex-row">
+          <div class="flex md:flex-row flex-col md:gap-0 gap-4">
             <div class="flex-1 flex flex-col gap-5">
               <span
                 class="py-1 px-2 rounded-full border border-secondaryGrey w-fit"
               >
                 <span>•</span>Contact Us</span
               >
-              <h1 class="text-8xl">Get in touch</h1>
+              <h1 class="text-5xl md:text-6xl lg:text-8xl">Get in touch</h1>
             </div>
 
-            <div class="flex-1 justify-end flex items-end">
-              <div class="w-[368px]">
-                <p>
+            <div class="flex-1 md:justify-end flex items-end">
+              <div class="md:w-60 lg:w-[368px]">
+                <p class="text-secondarygrey">
                   Explore insights and trends that drive innovation in the
                   healthcare industry
                 </p>
@@ -41,37 +41,37 @@
         </div>
       </section>
 
-      <section class="py-[60px]">
-        <div class="container flex gap-[60px]">
+      <section class="md:pb-[60px] lg:py-[60px]">
+        <div class="container flex-col lg:flex-row flex gap-[60px]">
           <div class="flex flex-1">
-            <ul class="flex flex-col w-[493px] gap-5">
+            <ul class="flex flex-col w-full lg:w-[493px] gap-5">
               <li
-                class="flex-row flex bg-[#FAFAFA] rounded-3xl px-6 py-[30.5px] w-full"
+                class="flex-row flex bg-[#FAFAFA] rounded-3xl p-3 md:px-6 md:py-[30.5px] w-full"
               >
                 <div class="flex-col flex gap-3 w-full">
                   <span class="text-secondarygrey">Email</span>
-                  <h2 class="text-3xl font-medium">hello@healthdoc.com</h2>
+                  <h2 class="text-2xl md:text-3xl font-medium">hello@healthdoc.com</h2>
                 </div>
                 <figure class="flex">
                   <img src="./public/health_logo.svg" alt="Health Logo" />
                 </figure>
               </li>
               <li
-                class="flex-row flex bg-[#FAFAFA] rounded-3xl px-6 py-[30.5px] w-full"
+                class="flex-row flex bg-[#FAFAFA] rounded-3xl p-3 md:px-6 md:py-[30.5px] w-full"
               >
                 <div class="flex-col flex gap-3 w-full">
                   <span class="text-secondarygrey">Meet Us</span>
-                  <h2 class="text-3xl font-medium">Location Office</h2>
+                  <h2 class="text-2xl md:text-3xl font-medium">Location Office</h2>
                 </div>
                 <figure class="flex">
                   <img src="./public/health_logo.svg" alt="Health Logo" />
                 </figure>
               </li>
               <li
-                class="flex-col flex bg-[#FAFAFA] rounded-3xl px-6 py-[30.5px] w-full gap-5"
+                class="flex-col flex bg-[#FAFAFA] rounded-3xl p-3 md:px-6 md:py-[30.5px] w-full gap-5"
               >
                 <div class="flex-col flex w-full">
-                  <h2 class="text-3xl font-medium">Contact</h2>
+                  <h2 class="text-2xl md:text-3xl font-medium">Contact</h2>
                 </div>
                 <ul class="flex flex-row text-secondarygrey justify-between">
                     <li>Facebook</li>
@@ -87,7 +87,7 @@
           <div class="flex flex-1 flex-col">
             <div class="flex flex-col gap-4">
               <h2 class="text-[40px]">Talk with us</h2>
-              <p class="w-[368px] text-secondarygrey">
+              <p class="md:w-[368px] text-secondarygrey">
                 Explore insights and trends that drive innovation in the
                 healthcare industry
               </p>
@@ -97,19 +97,19 @@
                 type="text"
                 placeholder="Your Name"
                 name="name"
-                class="border-b-2 border-primaryGrey text-[32px] text-primaryGrey placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
+                class="border-b-2 border-primaryGrey text-2xl md:text-[32px] text-primaryGrey text- placeholder:text-2xl md:placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
               />
               <input
                 type="email"
                 placeholder="Your Email"
                 name="email"
-                class="border-b-2 border-primaryGrey text-[32px] text-primaryGrey placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
+                class="border-b-2 border-primaryGrey text-2xl md:text-[32px] text-primaryGrey placeholder:text-2xl md:placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
               />
               <input
                 type="text"
                 placeholder="Tell us a bit for your problems"
                 name="feedback"
-                class="border-b-2 border-primaryGrey text-[32px] text-primaryGrey placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
+                class="border-b-2 border-primaryGrey text-2xl md:text-[32px] text-primaryGrey placeholder:text-2xl md:placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
               />
                 <div class="flex justify-end">
                     <button
