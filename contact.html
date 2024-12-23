@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/logo.png" />
+    <title>Health Doc</title>
+  </head>
+
+  <body>
+    <header id="site-header"></header>
+    <main id="site-main">
+      <section class="pt-[60px] pb-20">
+        <div class="container">
+          <div class="flex flex-row">
+            <div class="flex-1 flex flex-col gap-5">
+              <span
+                class="py-1 px-2 rounded-full border border-secondaryGrey w-fit"
+              >
+                <span>•</span>Contact Us</span
+              >
+              <h1 class="text-8xl">Get in touch</h1>
+            </div>
+
+            <div class="flex-1 justify-end flex items-end">
+              <div class="w-[368px]">
+                <p>
+                  Explore insights and trends that drive innovation in the
+                  healthcare industry
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[60px]">
+        <div class="container flex gap-[60px]">
+          <div class="flex flex-1">
+            <ul class="flex flex-col w-[493px] gap-5">
+              <li
+                class="flex-row flex bg-[#FAFAFA] rounded-3xl px-6 py-[30.5px] w-full"
+              >
+                <div class="flex-col flex gap-3 w-full">
+                  <span class="text-secondarygrey">Email</span>
+                  <h2 class="text-3xl font-medium">hello@healthdoc.com</h2>
+                </div>
+                <figure class="flex">
+                  <img src="./public/health_logo.svg" alt="Health Logo" />
+                </figure>
+              </li>
+              <li
+                class="flex-row flex bg-[#FAFAFA] rounded-3xl px-6 py-[30.5px] w-full"
+              >
+                <div class="flex-col flex gap-3 w-full">
+                  <span class="text-secondarygrey">Meet Us</span>
+                  <h2 class="text-3xl font-medium">Location Office</h2>
+                </div>
+                <figure class="flex">
+                  <img src="./public/health_logo.svg" alt="Health Logo" />
+                </figure>
+              </li>
+              <li
+                class="flex-col flex bg-[#FAFAFA] rounded-3xl px-6 py-[30.5px] w-full gap-5"
+              >
+                <div class="flex-col flex w-full">
+                  <h2 class="text-3xl font-medium">Contact</h2>
+                </div>
+                <ul class="flex flex-row text-secondarygrey justify-between">
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                    <li>Whatsapp</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="flex flex-1 flex-col">
+            <div class="flex flex-col gap-4">
+              <h2 class="text-[40px]">Talk with us</h2>
+              <p class="w-[368px] text-secondarygrey">
+                Explore insights and trends that drive innovation in the
+                healthcare industry
+              </p>
+            </div>
+            <form action="#" class="mt-10 flex flex-col gap-10">
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                class="border-b-2 border-primaryGrey text-[32px] text-primaryGrey placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                class="border-b-2 border-primaryGrey text-[32px] text-primaryGrey placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
+              />
+              <input
+                type="text"
+                placeholder="Tell us a bit for your problems"
+                name="feedback"
+                class="border-b-2 border-primaryGrey text-[32px] text-primaryGrey placeholder:text-[32px] placeholder:text-primaryGrey py-3 w-full"
+              />
+                <div class="flex justify-end">
+                    <button
+                    type="submit"
+                    class="bg-primary text-white py-[14px] px-5 w-fit rounded-full flex justify-end "
+                >
+                    <div class="flex justify-center">
+                        <div class="flex flex-row items-center align-middle gap-2">
+                            <svg
+                            width="15"
+                            height="12"
+                            viewBox="0 0 15 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <path
+                                d="M13.459 5.77144L0.958984 5.77144"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M8.41797 0.751099L13.4596 5.7711L8.41797 10.7919"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            </svg>
+                            Send it now!
+                        </div>
+                    </button>
+                </div>
+              
+              </div>
+                
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
