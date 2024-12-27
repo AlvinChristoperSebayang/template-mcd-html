@@ -1,17 +1,754 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header id="site-header"></header>
-    <main id="site-main">
 
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bantu Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Lingkaran teks */
+    #circle-text {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      animation: rotate-circle 8s linear infinite;
+      /* Animasi rotasi */
+    }
+
+    /* Setiap huruf dalam lingkaran */
+    .circle-letter {
+      position: absolute;
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+      text-transform: uppercase;
+      transform-origin: center center;
+      /* Pusat transformasi */
+    }
+
+    /* Animasi rotasi lingkaran */
+    @keyframes rotate-circle {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Ikon mouse */
+    .mouse-icon {
+      position: absolute;
+      /* Tetap di tengah lingkaran */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      z-index: 10;
+      /* Pastikan di atas teks */
+      width: 150px;
+      /* Sama dengan ukuran lingkaran teks */
+      height: 150px;
+    }
+  </style>
+  <style>
+    .gradient-text {
+      background-image: linear-gradient(to right, #9795FF, #FFFFFF, #BE9FFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-black ">
+  <!-- Navbar -->
+  <header class="container mx-auto flex justify-between items-center py-4 relative z-10 text-white">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <div class="h-8 w-8 rounded-full flex items-center justify-center">
+        <img src="/img/logo.svg" alt="Logo">
+      </div>
+      <h1 class="ml-2 text-lg font-semibold">Bantu</h1>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button id="menu-button" class="md:hidden flex flex-col items-center justify-center h-8 w-8 focus:outline-none">
+      <span class="block h-1 w-6 bg-white mb-1">.</span>
+      <span class="block h-1 w-6 bg-white mb-1"></span>
+      <span class="block h-1 w-6 bg-white"></span>
+    </button>
+
+    <!-- Links -->
+    <nav id="menu"
+      class="absolute md:relative top-full left-0 md:top-auto md:left-auto w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0 space-y-4 md:space-y-0 md:flex md:space-x-6 hidden">
+      <a href="#" class="hover:text-purple-400">About</a>
+      <a href="#" class="hover:text-purple-400">Services</a>
+      <a href="#" class="hover:text-purple-400">Portfolio</a>
+      <a href="#" class="hover:text-purple-400">Contact Us</a>
+      <a href="#" class="block md:hidden bg-purple-400 px-4 py-2 rounded-lg text-sm font-medium text-black text-center">
+        Get Started
+      </a>
+    </nav>
+
+    <!-- CTA Button -->
+    <a href="#"
+      class="hidden md:block bg-transparent border border-purple-400 px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-400 hover:text-black transition">
+      Get Started
+    </a>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden ">
+      <div class="flex">
+        <img src="/img/Rectangle1.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle2.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle3.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle4.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle5.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle6.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle7.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle8.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle9.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle10.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle11.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle12.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle13.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle14.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle15.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle16.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle17.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle18.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle19.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle20.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle21.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle22.png" alt="" class="inset-0 object-cover w-full h-full  " />
+        <img src="/img/Rectangle23.png" alt="" class="inset-0 object-cover w-full h-full  " />
+      </div>
+      <div class="container mx-auto absolute inset-0 z-10 text-center pt-[60px]">
+        <div class="flex space-x-4 justify-center">
+          <img src="/img/instagram.svg" alt="Instagram">
+          <img src="/img/wa.svg" alt="WhatsApp">
+          <img src="/img/linkedin.svg" alt="LinkedIn">
+          <img src="/img/twiter.svg" alt="Twitter">
+        </div>
+        <div class="mt-[40px] ">
+          <h1
+            class="lg:text-[105px] lg:leading-[110px] md:[60px] md:leading-[65px] text-[35px] leading-[35px] font-satoshi  mb-4 gradient-text">
+            Amazing website creation<br />with Bantu agency
+          </h1>
+          <p class="text-sm md:text-[16px] leading-[21.6px] font-light pt-[32px] text-white">
+            Help you to build a website company that is modern, user-friendly,
+            SEO-optimized, and cleanly designed.
+          </p>
+        </div>
+
+        <!-- Button -->
+        <div class="pt-[32px]">
+          <a href="#" class="px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="relative flex justify-center items-center mt-10">
+          <!-- Lingkaran teks -->
+          <div id="circle-text"></div>
+
+          <!-- Ikon mouse -->
+          <div class="mouse-icon absolute">
+            <img src="/img/mouse.svg" alt="Mouse Icon" class="w-8 h-8">
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="relative overflow-hidden text-white ">
+      <img src="/img/bg2.png" alt="" class="hidden lg:block absolute inset-0 object-cover w-full h-full " />
+      <div class="container mx-auto relative inset-0 z-10  pt-[60px] md:pt-[120px]">
+        <div class="relative">
+          <h2
+            class="lg:text-[68px] md:text-5xl text-3xl lg:leading-[75px] md:leading-[60px] leading-tight font-satoshi gradient-text">
+            Companies that can help you in
+            <br>developing
+            your company
+            for the future
+          </h2>
+          <div class="pt-6 lg:pt-0 lg:absolute lg:top-5 lg:right-4">
+            <a href="#"
+              class="inline-flex items-center px-[62px]  py-[14px] bg-white text-black font-medium rounded-full hover:bg-gray-200 transition">
+              Know More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 ml-[10px] ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </a>
+          </div>
+          <p class="pt-[32px] text-[16px] leading-[28px] font-satoshi">Work in the IT field includes Web Design, UI/UX
+            Design, Branding <br> and Shopify Development</p>
+        </div>
+        <div class="w-full flex flex-col lg:flex-row justify-between pt-10 md:pt-[60px] lg:pt-[120px] gap-6">
+          <!-- Teks -->
+          <div class="lg:w-2/3">
+            <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-[68px] leading-tight font-satoshi gradient-text">
+              Let’s work together <br> with our us
+            </h2>
+            <p class="pt-4 md:pt-6 text-sm sm:text-base lg:text-[16px] leading-6 md:leading-7 font-satoshi">
+              Help you to build website company that is modern, user-friendly, <br class="hidden md:block">
+              good CEO, and clean design.
+            </p>
+          </div>
+
+          <!-- Tombol -->
+          <div class="flex justify-start lg:justify-end lg:mt-auto">
+            <a href="#"
+              class="inline-flex items-center px-6 md:px-10 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition">
+              Know More
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 ml-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-[40px] flex flex-col lg:flex-row justify-between">
+          <div
+            class="flex items-center justify-between border-4 w-[690px] h-[351] bg-blue-500 border-blue-500 rounded-[24px] pl-[32px] pt-[40px]">
+            <div class="w-[252px] h-[271px] mb-[40px] ">
+              <img src="/img/icon1.svg" alt="Team" class="w-[60px] h-[60px] rounded-full" />
+              <p class="pt-[24px] text-[32px] leading-[43.2px] font-satoshi">Website Dev</p>
+              <p class="pt-[16px] text-[16px] leading-[28px] font-satoshi">help you to build website company that is
+                modern, user friendly, good CEO, and Clean design</p>
+              <div class="pt-[16px] w-[111px] h-[28px]">
+                <a href="" class=" text-[16px] leading-[28px] font-satoshi">Start with us</a>
+                <div class="border"></div>
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <img src="/img/card1.png" alt="">
+            </div>
+          </div>
+          <div class="pt-[20px] lg:pt-0">
+            <div
+              class="flex items-center justify-between border-4 w-[486px] h-[351] bg-cover bg-[#151515] border-[#151515] rounded-[24px] pl-[32px] pt-[40px]">
+              <div class="w-[252px] h-[271px] mb-[40px] ">
+                <img src="/img/icon2.svg" alt="Team" class="w-[60px] h-[60px] rounded-full" />
+                <p class="pt-[24px] text-[32px] leading-[43.2px] font-satoshi">UI/UX Design</p>
+                <p class="pt-[16px] text-[16px] leading-[28px] font-satoshi">help you to build website company that is
+                  modern, user friendly, good CEO, and Clean design</p>
+                <div class="pt-[16px] w-[111px] h-[28px]">
+                  <a href="" class=" text-[16px] leading-[28px] font-satoshi">Start with us</a>
+                  <div class="border"></div>
+                  <div></div>
+                </div>
+              </div>
+              <div>
+                <img src="/img/card2.png" class="rounded-br-3xl" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-[40px] flex flex-col lg:flex-row justify-between">
+          <div class="pt-5 lg:pt-0">
+            <div class="flex items-center justify-between w-[486px] h-[351px] bg-cover bg-[#151515] border-4 border-[#151515] rounded-2xl pl-8 pt-10">
+              <div class="flex flex-col justify-between w-[252px] h-[271px]">
+                <div>
+                  <img src="/img/icon3.svg" alt="Team" class="w-15 h-15 rounded-full" />
+                  <p class="pt-6 text-2xl font-satoshi leading-10">Branding</p>
+                  <p class="pt-4 text-base font-satoshi leading-7">
+                    Help you to build a company website that is modern, user-friendly, optimized for SEO, and has a clean design.
+                  </p>
+                </div>
+                <div>
+                  <a href="#" class="text-base font-satoshi leading-7 text-blue-500">Start with us</a>
+                  <div class="border-t border-gray-300 mt-1"></div>
+                </div>
+              </div>
+              <div class="">
+                <img src="/img/card3.png" alt="Card Image" class="w-full h-full object-cover rounded-lg" />
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="pt-[20px] lg:pt-0">
+            <div
+              class="flex items-center justify-between border-4 w-[690px] h-[351] bg-[#854CFF] border-[#854CFF] rounded-[24px] pl-[32px] pt-[40px]">
+              <div class="w-[252px] h-[271px] mb-[40px] ">
+                <img src="/img/icon4.svg" alt="Team" class="w-[60px] h-[60px] rounded-full" />
+                <p class="pt-[24px] text-[32px] leading-[43.2px] font-satoshi">Shopify</p>
+                <p class="pt-[16px] text-[16px] leading-[28px] font-satoshi">help you to build website company that is
+                  modern, user friendly, good CEO, and Clean design</p>
+                <div class="pt-[16px] w-[111px] h-[28px]">
+                  <a href="" class=" text-[16px] leading-[28px] font-satoshi">Start with us</a>
+                  <div class="border"></div>
+                  <div></div>
+                </div>
+              </div>
+              <div>
+                <img src="/img/card4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="py-[56px]">
+      <div class="relative overflow-hidden bg-blue-600">
+        <div id="slider" class="flex gap-8 animate-slider  py-4">
+          <img src="/img/logo1.png" alt="Logo 1" class="h-10">
+          <img src="/img/logo2.png" alt="Logo 2" class="h-10">
+          <img src="/img/google.png" alt="Logo 3" class="h-10">
+          <img src="/img/logo2.png" alt="Logo 4" class="h-10">
+          <img src="/img/google.png" alt="Logo 5" class="h-10">
+          <!-- Duplikasikan elemen untuk seamless effect -->
+          <img src="/img/logo1.png" alt="Logo 1" class="h-10">
+          <img src="/img/logo2.png" alt="Logo 2" class="h-10">
+          <img src="/img/google.png" alt="Logo 3" class="h-10">
+          <img src="/img/logo2.png" alt="Logo 4" class="h-10">
+          <img src="/img/google.png" alt="Logo 5" class="h-10">
+        </div>
+      </div>
+    </section>
+    <section class="relative overflow-hidden">
+      <div class="absolute top-[283px] w-[641px] h-[287px] bg-[#854CFF] blur-[200px] left-[-141px] z-[-1]"></div>
+      <div class="absolute top-[850px] w-[641px] h-[287px] bg-[#504CFF] blur-[200px] left-[973px] z-[-1]"></div>
+      <div class="absolute top-[1283px] w-[641px] h-[287px] bg-[#504CFF] blur-[200px] left-[-290px] z-[-1]"></div>
+      <div class="absolute top-[1504px] w-[641px] h-[287px] bg-[#854CFF] blur-[200px] left-[1055px] z-[-1]"></div>
+      <div class="absolute top-[2200px] w-[641px] h-[287px] bg-[#854CFF] blur-[200px] left-[-150px] z-[-1]"></div>
+      <div class="absolute top-[2250px] w-[641px] h-[287px] bg-[rgb(80,76,255)] blur-[200px] left-[900px] z-[-1]"></div>
+      <div class="container mx-auto z-10 pt-[70px] lg:pt-[140px]">
+        <h2
+          class="text-[36px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[367px] z-10">
+          Our Product
+        </h2>
+        <div class="items-center lg:flex lg:justify-between">
+          <p class="text-base text-white font-normal w-[300px] lg:w-[486px] z-10 pb-5 lg:pb-0">
+            help you to build website company that is modern, user friendly, good CEO, and Clean design
+          </p>
+          <button
+            class="text-sm lg:text-base font-normal text-black flex gap-[10px] border border-white bg-white px-[20px] py-[6px] lg:px-[24px] lg:py-[14px] rounded-[40px] items-center">
+            All Portopolio
+            <img src="img/arrow-up-right.svg" alt="arrow"
+              class="border-[1px] border-black rounded-full p-[1px] lg:p-[3px] w-5 h-5 lg:w-[28px] lg:h-[28px]">
+          </button>
+        </div>
+      </div>
+      <div class="container mx-auto flex flex-col lg:flex-row lg:gap-[23px] pt-10 pb-8 z-10 justify-between">
+        <!-- card 1 -->
+        <div class="">
+          <div
+            class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px] z-10">
+            <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px] z-10">
+              <p
+                class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center">
+                Development Project
+              </p>
+              <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
+                MStore
+              </p>
+              <p class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]">
+                Mangcoding is a biggest company in Indonesia, who provides the
+              </p>
+            </div>
+            <div class="lg:w-[328px] pt-[24px]">
+              <img src="/img/card11.png" alt="" class="w-[100%] object-cover">
+            </div>
+            <button
+              class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
+              <img src="/img/arrow-up-right.svg" alt="arrow">
+            </button>
+          </div>
+          <div class="py-5 lg:py-6">
+            <p class="text-[26px] lg:text-[32px] font-medium text-white z-10">
+              MStore
+            </p>
+            <p class="text-sm text-white font-normal pt-2 lg:pt-3 z-10">
+              Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify
+              and Wordpress
+            </p>
+          </div>
+          <div class="border border-[#635189]"></div>
+        </div>
+        <!-- card 2 -->
+        <div class=" pt-5 lg:pt-0">
+          <div
+            class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px] z-10">
+            <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px] z-10">
+              <p
+                class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center">
+                Development Project
+              </p>
+              <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
+                Beauty
+              </p>
+              <p class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]">
+                Mangcoding is a biggest company in Indonesia, who provides the
+              </p>
+            </div>
+            <div class="lg:w-[328px] pt-[24px]">
+              <img src="/img/card22.png" alt="" class="w-[100%] object-cover">
+            </div>
+            <button
+              class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
+              <img src="/img/arrow-up-right.svg" alt="arrow">
+            </button>
+          </div>
+          <div class="py-5 lg:py-6">
+            <p class="text-[26px] lg:text-[32px] font-medium text-white z-10">
+              Beauty
+            </p>
+            <p class="text-sm text-white font-normal pt-2 lg:pt-3 z-10">
+              Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify
+              and Wordpress
+            </p>
+          </div>
+          <div class="border border-[#635189]"></div>
+        </div>
+      </div>
+      <div class="container mx-auto flex flex-col lg:flex-row lg:gap-[23px] z-10">
+        <!-- card 3 -->
+        <div class="">
+          <div
+            class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px] z-10">
+            <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px] z-10">
+              <p
+                class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center">
+                Development Project
+              </p>
+              <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
+                Jual
+              </p>
+              <p class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]">
+                Mangcoding is a biggest company in Indonesia, who provides the
+              </p>
+            </div>
+            <div class="lg:w-[328px] pt-[24px]">
+              <img src="/img/card33.png" alt="" class="w-[100%] object-cover">
+            </div>
+            <button
+              class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
+              <img src="/img/arrow-up-right.svg" alt="arrow">
+            </button>
+          </div>
+          <div class="py-5 lg:py-6">
+            <p class="text-[26px] lg:text-[32px] font-medium text-white z-10">
+              Mangcoding
+            </p>
+            <p class="text-sm text-white font-normal pt-2 lg:pt-3 z-10">
+              Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify
+              and Wordpress
+            </p>
+          </div>
+          <div class="border border-[#635189]"></div>
+        </div>
+        <!-- card 4 -->
+        <div class=" pt-5 lg:pt-0">
+          <div
+            class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px] z-10">
+            <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px] z-10">
+              <p
+                class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center">
+                Development Project
+              </p>
+              <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
+                MangStore
+              </p>
+              <p class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]">
+                Mangcoding is a biggest company in Indonesia, who provides the
+              </p>
+            </div>
+            <div class="lg:w-[328px] pt-[24px]">
+              <img src="/img/card44.png" alt="" class="w-[100%] object-cover">
+            </div>
+            <button
+              class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
+              <img src="/img/arrow-up-right.svg" alt="arrow">
+            </button>
+          </div>
+          <div class="py-5 lg:py-6">
+            <p class="text-[26px] lg:text-[32px] font-medium text-white z-10">
+              MangStore
+            </p>
+            <p class="text-sm text-white font-normal pt-2 lg:pt-3 z-10">
+              Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify
+              and Wordpress
+            </p>
+          </div>
+          <div class="border border-[#635189]"></div>
+        </div>
+      </div>
+      <div class="container mx-auto pt-[50px] lg:pt-[116px] pb-7 lg:pb-10">
+        <h2
+          class="text-[32px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[710px] ">
+          What they say about us
+        </h2>
+        <p class="text-sm lg:text-base text-white font-normal lg:w-[486px] pt-5 lg:pt-[32px] ">
+          Work in the IT field includes Web Design, UI/UX Design, Branding and Shopify Development
+        </p>
+      </div>
+      <img src="/img/“.png" alt="" class="absolute w-[742px] h-[529px] top-[1226px] left-[764px]">
+      <div class="flex flex-col lg:flex-row gap-5 lg:gap-6 container mx-auto">
+        <!-- card 1 -->
+        <div class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+          <figure class="flex justify-between">
+            <div class="flex gap-3">
+              <img src="/img/profil1.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
+              <div>
+                <p class="text-white text-base font-normal">
+                  Nugraha
+                </p>
+                <p class="text-white text-[12px] font-normal pt-[4px]">
+                  Fonder of Mangcoding
+                </p>
+              </div>
+            </div>
+            <img src="/img/“.svg" alt="">
+          </figure>
+          <figcaption class="text-base text-white font-normal pt-6">
+            Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and
+            Wordpress
+          </figcaption>
+        </div>
+        <!-- card 2 -->
+        <div class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+          <figure class="flex justify-between">
+            <div class="flex gap-3">
+              <img src="/img/profil2.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
+              <div>
+                <p class="text-white text-base font-normal">
+                  Alex jounky
+                </p>
+                <p class="text-white text-[12px] font-normal pt-[4px]">
+                  Fonder of Robs
+                </p>
+              </div>
+            </div>
+            <img src="/img/“.svg" alt="">
+          </figure>
+          <figcaption class="text-base text-white font-normal pt-6">
+            Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and
+            Wordpress
+          </figcaption>
+        </div>
+        <!-- card 3 -->
+        <div class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+          <figure class="flex justify-between">
+            <div class="flex gap-3">
+              <img src="/img/profil3.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
+              <div>
+                <p class="text-white text-base font-normal">
+                  Chelsia alexy
+                </p>
+                <p class="text-white text-[12px] font-normal pt-[4px]">
+                  Fonder of Frank
+                </p>
+              </div>
+            </div>
+            <img src="/img/“.svg" alt="">
+          </figure>
+          <figcaption class="text-base text-white font-normal pt-6">
+            Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and
+            Wordpress
+          </figcaption>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-5 lg:gap-6 container mx-auto pb-[65px] lg:pb-[130px] pt-5">
+        <!-- card 4 -->
+        <div class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+          <figure class="flex justify-between">
+            <div class="flex gap-3">
+              <img src="/img/profil4.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
+              <div>
+                <p class="text-white text-base font-normal">
+                  Samsul Afroy
+                </p>
+                <p class="text-white text-[12px] font-normal pt-[4px]">
+                  Full Stack Development
+                </p>
+              </div>
+            </div>
+            <img src="/img/“.svg" alt="">
+          </figure>
+          <figcaption class="text-base text-white font-normal pt-6">
+            Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and
+            Wordpress
+          </figcaption>
+        </div>
+        <!-- card 5 -->
+        <div class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+          <figure class="flex justify-between">
+            <div class="flex gap-3">
+              <img src="/img/profil5.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
+              <div>
+                <p class="text-white text-base font-normal">
+                  Purwa Adi Twingkiwingki
+                </p>
+                <p class="text-white text-[12px] font-normal pt-[4px]">
+                  UI/UX Designer
+                </p>
+              </div>
+            </div>
+            <img src="/img/“.svg" alt="">
+          </figure>
+          <figcaption class="text-base text-white font-normal pt-6">
+            Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and
+            Wordpress
+          </figcaption>
+        </div>
+        <!-- card 6 -->
+        <div class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+          <figure class="flex justify-between">
+            <div class="flex gap-3">
+              <img src="/img/profil6.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
+              <div>
+                <p class="text-white text-base font-normal">
+                  Rizwan Gusnajmi
+                </p>
+                <p class="text-white text-[12px] font-normal pt-[4px]">
+                  Web Developer
+                </p>
+              </div>
+            </div>
+            <img src="/img/“.svg" alt="">
+          </figure>
+          <figcaption class="text-base text-white font-normal pt-6">
+            Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and
+            Wordpress
+          </figcaption>
+        </div>
+      </div>
+
+      <div class="border border-[#635189]"></div>
+      <div class="bg-[#1A1A1A66] backdrop-blur-[40%]">
+        <div class="container mx-auto items-center sm:flex sm:justify-between py-10">
+          <div class="lg:w-[588px]">
+            <h2
+              class="text-[32px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] w-[280px] lg:w-[710px]">
+              Let’s work with Us
+            </h2>
+            <p class="text-base text-white font-normal py-6">
+              Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify
+              and Wordpress
+            </p>
+          </div>
+          <button
+            class="text-base font-normal text-black flex gap-[10px] border border-white bg-white px-8 lg:px-[62px] py-2 lg:py-[14px] rounded-[40px] items-center">
+            Know More
+            <img src="img/arrow-up-right.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="border border-[#635189]"></div>
+    </section>
+
+  </main>
+  <footer class="relative bg-gradient-to-b from-[#1A1A2E] to-black text-white overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute top-0 left-[-150px] w-[641px] h-[287px] bg-[#854CFF] blur-[200px] z-[-1]"></div>
+    <div class="absolute top-0 right-[-150px] w-[641px] h-[287px] bg-[#504CFF] blur-[200px] z-[-1]"></div>
+
+    <div>
+      <div
+        class="container mx-auto flex flex-col lg:flex-row justify-between items-start py-10 md:py-16 lg:py-20 gap-10">
+        <!-- Left Section -->
+        <div class="w-full lg:w-[383px]">
+          <div class="flex gap-2 items-center">
+            <img src="/img/logo.svg" alt="Logo">
+            <h3 class="text-[23px] text-white font-bold">
+              Bantu
+            </h3>
+          </div>
+          <p
+            class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] pt-6">
+            Companies that can help you in developing your company for the future
+          </p>
+        </div>
+
+        <!-- Middle Sections -->
+        <div class="flex flex-col md:flex-row gap-10 md:gap-20 lg:gap-[151px]">
+          <div>
+            <h3 class="text-lg text-white font-medium">Services</h3>
+            <p class="text-base text-white font-normal pt-4">Web Development</p>
+            <p class="text-base text-white font-normal pt-4">UI/UX Designer</p>
+            <p class="text-base text-white font-normal pt-4">Branding</p>
+            <p class="text-base text-white font-normal pt-4">Shopify</p>
+          </div>
+          <div>
+            <h3 class="text-lg text-white font-medium">Business Features</h3>
+            <p class="text-base text-white font-normal pt-4">Data-Based Chatbot Training</p>
+            <p class="text-base text-white font-normal pt-4">Model Fine-Tuning</p>
+            <p class="text-base text-white font-normal pt-4">Sales & Customer Service Smart Agents</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6 pb-6">
+        <p class="text-sm text-white font-normal">
+          © 2023 Mangcoding. All rights reserved.
+        </p>
+        <div class="text-sm text-white font-normal flex flex-col md:flex-row gap-4 md:gap-6">
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Cookie Policy</p>
+        </div>
+        <div class="flex gap-4 items-center">
+          <button><img src="/img/instagram.svg" alt="Instagram"></button>
+          <button><img src="/img/wa.svg" alt="WhatsApp"></button>
+          <button><img src="/img/linkedin.svg" alt="LinkedIn"></button>
+          <button><img src="/img/twiter.svg" alt="Twitter"></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="/main.js"></script>
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+  <script>
+    // Mendapatkan elemen untuk teks melingkar
+    const circleText = document.getElementById("circle-text");
+
+    // Teks yang ingin ditampilkan
+    const text = "scroll down for work together ";
+    const radius = 70; // Radius lingkaran (lebih kecil dari ukuran lingkaran teks)
+    const angleStep = (360 / text.length) * (Math.PI / 180); // Sudut antar huruf (dalam radian)
+
+    // Membuat setiap huruf dalam posisi melingkar
+    text.split("").forEach((char, index) => {
+      const angle = index * angleStep;
+
+      // Posisi huruf
+      const x = radius * Math.cos(angle) + 75; // Tambahkan 75 agar berada di tengah (setengah dari width/height lingkaran teks)
+      const y = radius * Math.sin(angle) + 75;
+
+      // Elemen huruf
+      const letter = document.createElement("span");
+      letter.className = "circle-letter";
+      letter.style.left = `${x}px`;
+      letter.style.top = `${y}px`;
+      letter.style.transform = `rotate(${(angle * 180) / Math.PI}deg)`; // Rotasi agar huruf mengikuti lingkaran
+      letter.textContent = char;
+
+      // Tambahkan ke container
+      circleText.appendChild(letter);
+    });
+  </script>
+  <script>
+    const slider = document.getElementById('slider');
+    const clone = slider.innerHTML;
+    slider.innerHTML += clone;
+  </script>
+</body>
+
 </html>
