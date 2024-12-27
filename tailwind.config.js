@@ -10,30 +10,20 @@ export default {
         primary: '#8246FB',
         darkBlack: '#050810',
         primaryGrey: '#8B919E',
+        secondarygrey:'#747B8B',
+        tertiaryGrey:'#E3E5E8',
       },
       fontFamily: {
         primary: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       container: {
         center: true, 
-        padding: '1rem',
+        padding:'1rem',
         screens: {
-          sm: {
-            maxWidth: '100%', 
-            padding: '16px', 
-          },
-          md: {
-            maxWidth: '100%',
-            padding: '32px', 
-          },
-          lg: {
-            maxWidth: '100%',
-            padding: '40px',
-          },
-          xl: {
-            maxWidth: '1220px',
-            padding: '0', 
-          },
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1236px',
         },
       },
     },
