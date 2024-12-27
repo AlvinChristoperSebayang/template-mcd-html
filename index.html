@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    <meta
+      name="description"
+      content="Health Doc provides the latest insights and updates in the healthcare industry, helping you stay informed and empowered."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,161 +15,356 @@
     />
     <link rel="icon" type="image/x-icon" href="/logo.png" />
     <title>Health Doc</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header id="site-header"></header>
     <main id="site-main">
       <section
-        class="detail-blog container paddingSection flex flex-col gap-10"
+        title="aboutHeader"
+        class="paddingSection container items-end grid grid-cols-12"
       >
-        <div class="h-[510px] rounded-[37.68px] overflow-hidden">
-          <img src="/detail-blog/Image (4).png" alt="" class="w-full h-full" />
-        </div>
-        <div class="grid grid-cols-12 gap-y-10 lg:gap-y-0 md:gap-10">
-          <div class="col-span-12 lg:col-span-8 flex flex-col gap-6">
-            <h1
-              class="text-[32px] lg:text-5xl leading-[40px] lg:leading-[60px] text-darkBlack"
+        <div class="col-span-12 md:col-span-7 relative">
+          <span
+            class="text-[16px] border border-[#E3E5E8] border-1 rounded-full p-[5px] px-[10px] text-darkBlack"
+            >• About Us</span
+          >
+          <h1
+            class="text-[48px] leading-[60px] md:text-6xl lg:text-8xl lg:leading-[100px] py-4 text-nowrap"
+          >
+            Meet With Our <br />
+            team
+          </h1>
+          <div
+            class="absolute top-16 lg:top-20 left-[67%] sm:left-[42%] md:left-[67%] lg:left-[80%] xl:left-[67%] -translate-x-1/2 lg:p-[18px] p-[15px] bg-white rounded-[15px] shadow-xl -rotate-[14deg]"
+          >
+            <svg
+              class="animate-spin lg:w-[23px] w-[16px] lg:h-[23px] h-[16px]"
+              viewBox="0 0 31 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              How to use the HaloDoc Application
-            </h1>
-            <div class="flex items-center gap-4">
-              <span
-                class="text-base border border-[#E3E5E8] border-1 rounded-full p-[5px] px-[10px] text-darkBlack"
-                >Application</span
-              >
-              <span class="text-base text-primaryGrey">Des 24, 2024</span>
-            </div>
-            <p class="text-base text-[#3A3E45]">
-              We are proud to collaborate with some of the world's most renowned
-              institutions to revolutionize the healthcare industry. Together,
-              we are harnessing the power of cutting-edge AI technology to
-              enhance patient care, streamline health management processes, and
-              pave the way for a future where innovation drives better health
-              outcomes for all.
-            </p>
-            <img src="/detail-blog/Image (4).png" alt="" />
-            <p class="text-base text-[#3A3E45]">
-              We are proud to collaborate with some of the world's most renowned
-              institutions to revolutionize the healthcare industry. Together,
-              we are harnessing the power of cutting-edge AI technology to
-              enhance patient care, streamline health management processes, and
-              pave the way for a future where innovation drives better health
-              outcomes for all.We are proud to collaborate with some of the
-              world's most renowned institutions to revolutionize the healthcare
-              industry. Together, we are harnessing the power of cutting-edge AI
-              technology to enhance patient care, streamline health management
-              processes, and pave the way for a future where innovation drives
-              better health outcomes for all.We are proud to collaborate with
-              some of the world's most renowned institutions to revolutionize
-              the healthcare industry. Together, we are harnessing the power of
-              cutting-edge AI technology to enhance patient care, streamline
-              health management processes, and pave the way for a future where
-              innovation drives better health outcomes for all.
-            </p>
+              <path
+                d="M9.41687 5.06406C8.9621 3.18931 10.1132 1.30086 11.988 0.846094V0.846094C13.8627 0.391323 15.7512 1.54244 16.2059 3.41719L21.6955 26.0474C22.1503 27.9222 20.9992 29.8106 19.1244 30.2654V30.2654C17.2497 30.7202 15.3612 29.569 14.9064 27.6943L9.41687 5.06406Z"
+                fill="#050810"
+              />
+              <path
+                d="M4.85875 21.5696C3.07546 22.0022 1.27913 20.9073 0.846541 19.124V19.124C0.413954 17.3407 1.50892 15.5443 3.29222 15.1117L26.2536 9.54184C28.0369 9.10925 29.8333 10.2042 30.2658 11.9875V11.9875C30.6984 13.7708 29.6035 15.5671 27.8202 15.9997L4.85875 21.5696Z"
+                fill="#050810"
+              />
+              <path
+                d="M3.72083 12.6698C2.03343 11.6982 1.50309 9.51194 2.55777 7.8752V7.8752C3.54044 6.35021 5.5463 5.86363 7.11849 6.76887L27.3916 18.4418C29.079 19.4134 29.6093 21.5996 28.5546 23.2364V23.2364C27.572 24.7614 25.5661 25.248 23.9939 24.3427L3.72083 12.6698Z"
+                fill="#050810"
+              />
+              <path
+                d="M19.03 3.87938C20.0126 2.35439 22.0185 1.86782 23.5907 2.77306V2.77306C25.2781 3.74463 25.8084 5.93092 24.7538 7.56766L12.0824 27.2321C11.0997 28.7571 9.09388 29.2437 7.52169 28.3384V28.3384C5.83429 27.3669 5.30395 25.1806 6.35863 23.5438L19.03 3.87938Z"
+                fill="#050810"
+              />
+            </svg>
           </div>
-          <div class="col-span-12 lg:col-span-4">
-            <div class="flex flex-col gap-5">
-              <div class="flex justify-start gap-5">
-                <div>
-                  <div class="w-[125px] h-[125px] rounded-2xl">
-                    <img
-                      src="/blog/Image (1) 1.png"
-                      alt="blog-thumbnail"
-                      class="w-full h-full rounded-2xl"
-                    />
-                  </div>
-                </div>
-                <div class="flex flex-col gap-3">
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-base border border-[#E3E5E8] border-1 rounded-full p-[5px] px-[10px] text-darkBlack"
-                      >General</span
-                    >
-                    <span class="text-base text-primaryGrey">Des 24, 2024</span>
-                  </div>
-                  <h2 class="text-xl font-semibold">
-                    Partnerships for Smarter Healthcare
-                  </h2>
-                  <p class="line-clamp-2 text-base text-primaryGrey">
-                    We’ve partnered with leading institutions to bring AI...
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-start gap-5">
-                <div>
-                  <div class="w-[125px] h-[125px] rounded-2xl">
-                    <img
-                      src="/blog/Image (1) 1.png"
-                      alt="blog-thumbnail"
-                      class="w-full h-full rounded-2xl"
-                    />
-                  </div>
-                </div>
-                <div class="flex flex-col gap-3">
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-base border border-[#E3E5E8] border-1 rounded-full p-[5px] px-[10px] text-darkBlack"
-                      >General</span
-                    >
-                    <span class="text-base text-primaryGrey">Des 24, 2024</span>
-                  </div>
-                  <h2 class="text-xl font-semibold">
-                    Partnerships for Smarter Healthcare
-                  </h2>
-                  <p class="line-clamp-2 text-base text-primaryGrey">
-                    We’ve partnered with leading institutions to bring AI...
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-start gap-5">
-                <div>
-                  <div class="w-[125px] h-[125px] rounded-2xl">
-                    <img
-                      src="/blog/Image (1) 1.png"
-                      alt="blog-thumbnail"
-                      class="w-full h-full rounded-2xl"
-                    />
-                  </div>
-                </div>
-                <div class="flex flex-col gap-3">
-                  <div class="flex items-center gap-4">
-                    <span
-                      class="text-base border border-[#E3E5E8] border-1 rounded-full p-[5px] px-[10px] text-darkBlack"
-                      >General</span
-                    >
-                    <span class="text-base text-primaryGrey">Des 24, 2024</span>
-                  </div>
-                  <h2 class="text-xl font-semibold">
-                    Partnerships for Smarter Healthcare
-                  </h2>
-                  <p class="line-clamp-2 text-base text-primaryGrey">
-                    We’ve partnered with leading institutions to bring AI...
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="mt-5">
-              <a href="#" class="flex items-center gap-2">
-                <span>Learn more</span>
+        </div>
+        <div class="col-span-12 md:col-end-13 md:col-span-4">
+          <p class="text-base text-[#747B8B]">
+            Collaborate with technology that transforms your aspirations into
+            exceptional results, seamlessly and effectively
+          </p>
+        </div>
+      </section>
+      <section
+        class="container paddingSection grid grid-cols-12 gap-y-6 md:gap-y-0 md:gap-8 lg:gap-[60px]"
+      >
+        <div class="flex flex-col gap-[10px] col-span-12 md:col-span-6">
+          <div class="flex gap-[10px] items-center w-full">
+            <div class="relative w-1/2">
+              <img src="/about-assets/bg.png" alt="" class="" />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:p-[18px] p-[15px] bg-white rounded-[15px] shadow-xl"
+              >
                 <svg
-                  width="8"
-                  height="14"
-                  viewBox="0 0 8 14"
+                  class="animate-spin lg:w-[48px] w-[28px] lg:h-[48px] h-[28px]"
+                  viewBox="0 0 31 31"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M1.08398 1.16665L6.91732 6.99998L1.08398 12.8333"
-                    stroke="#050810"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    d="M9.41687 5.06406C8.9621 3.18931 10.1132 1.30086 11.988 0.846094V0.846094C13.8627 0.391323 15.7512 1.54244 16.2059 3.41719L21.6955 26.0474C22.1503 27.9222 20.9992 29.8106 19.1244 30.2654V30.2654C17.2497 30.7202 15.3612 29.569 14.9064 27.6943L9.41687 5.06406Z"
+                    fill="#050810"
+                  />
+                  <path
+                    d="M4.85875 21.5696C3.07546 22.0022 1.27913 20.9073 0.846541 19.124V19.124C0.413954 17.3407 1.50892 15.5443 3.29222 15.1117L26.2536 9.54184C28.0369 9.10925 29.8333 10.2042 30.2658 11.9875V11.9875C30.6984 13.7708 29.6035 15.5671 27.8202 15.9997L4.85875 21.5696Z"
+                    fill="#050810"
+                  />
+                  <path
+                    d="M3.72083 12.6698C2.03343 11.6982 1.50309 9.51194 2.55777 7.8752V7.8752C3.54044 6.35021 5.5463 5.86363 7.11849 6.76887L27.3916 18.4418C29.079 19.4134 29.6093 21.5996 28.5546 23.2364V23.2364C27.572 24.7614 25.5661 25.248 23.9939 24.3427L3.72083 12.6698Z"
+                    fill="#050810"
+                  />
+                  <path
+                    d="M19.03 3.87938C20.0126 2.35439 22.0185 1.86782 23.5907 2.77306V2.77306C25.2781 3.74463 25.8084 5.93092 24.7538 7.56766L12.0824 27.2321C11.0997 28.7571 9.09388 29.2437 7.52169 28.3384V28.3384C5.83429 27.3669 5.30395 25.1806 6.35863 23.5438L19.03 3.87938Z"
+                    fill="#050810"
                   />
                 </svg>
-              </a>
+              </div>
+            </div>
+            <div
+              class="w-1/2 flex flex-col justify-between items-start h-full py-2 pl-2 md:py-4 md:pl-4 bg-[#FAFAFA] rounded-xl grow"
+            >
+              <span
+                class="text-[37.98px] lg:text-[64px] font-semibold text-darkBlack"
+                >300+</span
+              >
+              <div>
+                <h3 class="text-[11.87px] lg:text-xl">Truster User</h3>
+                <p class="text-[8.31px] lg:text-sm text-primaryGrey">
+                  User Preview
+                </p>
+                <ul class="flex -gap-[10px] mt-[12px]">
+                  <li class="w-[35.61px] h-[35.61px]">
+                    <img src="/about-assets/Frame 1597886104.png" alt="" />
+                  </li>
+                  <li class="relative -ml-[10px] w-[35.61px] h-[35.61px]">
+                    <img src="/about-assets/Frame 1597886105.png" alt="" />
+                  </li>
+                  <li class="relative -ml-[10px] w-[35.61px] h-[35.61px]">
+                    <img src="/about-assets/Frame 1597886106.png" alt="" />
+                  </li>
+                  <li class="relative -ml-[10px] w-[35.61px] h-[35.61px]">
+                    <img src="/about-assets/Frame 1597886107.png" alt="" />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+          <div
+            class="grid grid-cols-7 bg-[#FAFAFA] rounded-xl overflow-hidden items-end"
+          >
+            <div
+              class="pl-[10px] py-[22.55px] md:py-[38px] md:pl-[17px] col-span-4"
+            >
+              <h3
+                class="text-[29px] md:text-5xl text-darkBlack leading-[35px] md:leading-[60px]"
+              >
+                Application <br />
+                health #1
+              </h3>
+              <p
+                class="text-[9.49px] md:text-base text-primaryGrey mt-3 text-nowrap md:text-wrap lg:text-nowrap"
+              >
+                Collaborate with technology that transforms <br />
+                your aspirations into exceptional results, <br />
+                seamlessly and effectively
+              </p>
+            </div>
+            <div
+              class="col-span-3 relative -bottom-6 lg:-bottom-10 -right-6 lg:-right-6"
+            >
+              <img src="/about-assets/Group 1597883326.png" alt="" />
+              <!-- <div
+                class="absolute bottom-[-20px] lg:bottom-1 left-[20%] transform -translate-x-1/2 -translate-y-1/2 p-[15px] bg-white rounded-[15px] shadow-xl -rotate-[-15.51deg]"
+              >
+                <svg
+                  class="lg:w-[34px] w-[20px] lg:h-[34px] h-[20px] md:w-[28px] md:h-[28px] rotate-[-15.51deg]"
+                  viewBox="0 0 30 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.3389 3.43854L12.0934 25.9395"
+                    stroke="#050810"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M3.43262 11.8673L25.9336 18.1128"
+                    stroke="#050810"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div
+                class="absolute bottom-[-20px] lg:bottom-1 -right-2 transform -translate-x-1/2 -translate-y-1/2 p-[15px] bg-white rounded-[15px] shadow-xl -rotate-[15.51deg]"
+              >
+                <svg
+                  class="lg:w-[34px] w-[20px] lg:h-[34px] h-[20px] md:w-[28px] md:h-[28px] rotate-[15.51deg]"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.99499 5.06405C8.54022 3.1893 9.69134 1.30086 11.5661 0.846086C13.4408 0.391315 15.3293 1.54244 15.7841 3.41719L21.2736 26.0474C21.7284 27.9222 20.5773 29.8106 18.7025 30.2654C16.8278 30.7202 14.9393 29.569 14.4846 27.6943L8.99499 5.06405Z"
+                    fill="#050810"
+                  />
+                  <path
+                    d="M4.43688 21.5696C2.65358 22.0022 0.857253 20.9073 0.424666 19.124C-0.00792119 17.3407 1.08705 15.5443 2.87035 15.1117L25.8318 9.54183C27.615 9.10925 29.4114 10.2042 29.844 11.9875C30.2766 13.7708 29.1816 15.5671 27.3983 15.9997L4.43688 21.5696Z"
+                    fill="#050810"
+                  />
+                  <path
+                    d="M3.29896 12.6698C1.61156 11.6982 1.08122 9.51193 2.1359 7.87519C3.11857 6.3502 5.12443 5.86362 6.69662 6.76887L26.9697 18.4418C28.6571 19.4134 29.1874 21.5996 28.1327 23.2364C27.1501 24.7614 25.1442 25.2479 23.572 24.3427L3.29896 12.6698Z"
+                    fill="#050810"
+                  />
+                  <path
+                    d="M18.6081 3.87937C19.5908 2.35438 21.5966 1.86781 23.1688 2.77305C24.8562 3.74463 25.3866 5.93091 24.3319 7.56765L11.6605 27.2321C10.6779 28.7571 8.672 29.2437 7.09981 28.3384C5.41241 27.3669 4.88207 25.1806 5.93675 23.5438L18.6081 3.87937Z"
+                    fill="#050810"
+                  />
+                </svg>
+              </div>
+              <div
+                class="absolute bottom-[20%] lg:bottom-[28%] -right-6 -translate-x-1/2 -translate-y-1/2 p-[10px] bg-white rounded-[15px] shadow-xl -rotate-[-15.51deg]"
+              >
+                <svg
+                  class="lg:w-[34px] w-[20px] lg:h-[34px] h-[20px] md:w-[28px] md:h-[28px] rotate-[-15.51deg]"
+                  viewBox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M18.7533 17.8234L18.8591 17.4356C19.2721 15.8956 19.5599 14.4991 19.6413 13.5861C19.6456 13.5704 19.7105 12.6605 19.6791 12.343C19.6199 11.8801 19.4025 11.4408 19.0694 11.1083C18.7973 10.8615 18.4879 10.6887 18.1407 10.5923C17.8642 10.5292 17.3759 10.5416 17.0226 10.5676L16.7272 10.5959C14.7637 10.8076 10.7459 12.1648 9.06159 13.2093L8.93891 13.2809L8.38528 13.6225C8.01913 13.8998 7.75775 14.2906 7.62934 14.7533C7.51431 15.1678 7.52577 15.6174 7.6858 16.0226C7.73142 16.1521 7.81478 16.3252 7.89072 16.473L8.18493 17.0221C9.21067 18.8639 11.7375 21.7493 13.1525 22.8657C13.1485 22.8802 14.0284 23.5721 14.4978 23.7192L14.561 23.7368C15.2878 23.9385 16.0818 23.7124 16.615 23.1388C16.7607 22.982 16.9512 22.6484 17.1079 22.3525L17.3974 21.7921C17.8049 20.8748 18.3065 19.4333 18.7533 17.8234ZM25.2175 21.4141C26.1256 21.6661 27.0682 21.1269 27.3227 20.21C27.5772 19.293 27.0472 18.3452 26.1391 18.0932L21.9931 17.3281C21.2807 17.1303 20.5416 17.5521 20.3416 18.2726C20.142 18.992 20.5577 19.7355 21.2702 19.9332L25.2175 21.4141Z"
+                    fill="#050810"
+                  />
+                </svg>
+              </div>
+              <div
+                class="absolute bottom-16 right-10 -translate-x-1/2 -translate-y-1/2 p-[15px] bg-white rounded-[15px] shadow-xl -rotate-[8.51deg]"
+              >
+                <svg
+                  class="lg:w-[34px] w-[20px] lg:h-[34px] h-[20px] md:w-[28px] md:h-[28px] rotate-[8.51deg]"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_40709_37106)">
+                    <path
+                      d="M27.149 20.6631C26.9036 21.5817 26.5794 22.4419 26.1755 23.2484C25.6251 24.348 25.1556 25.1222 24.7718 25.5704C24.1819 26.3002 23.4978 26.7307 22.7167 26.8654C22.154 26.949 21.4516 26.8897 20.6135 26.6822C19.7729 26.4767 19.0209 26.4248 18.3549 26.5237C17.6565 26.6275 16.9313 26.8988 16.1781 27.3412C15.4239 27.7852 14.8027 28.0505 14.3109 28.1407C13.5641 28.2843 12.7657 28.0647 11.9146 27.4805C11.3755 27.1351 10.6724 26.5101 9.80705 25.6053C8.87932 24.6397 8.06248 23.4814 7.35621 22.1275C6.59788 20.6645 6.11076 19.211 5.89605 17.7657C5.65009 16.1101 5.7957 14.629 6.3345 13.3259C6.75486 12.2811 7.39141 11.4116 8.2464 10.7157C9.10138 10.0199 10.0724 9.5857 11.1608 9.40547C11.7578 9.31678 12.5681 9.38514 13.5949 9.60354C14.6192 9.82356 15.2695 9.91569 15.5426 9.87512C15.7468 9.84478 16.4068 9.52605 17.5159 8.92129C18.566 8.35726 19.4777 8.05286 20.2544 8.00403C22.3578 7.86299 24.041 8.45035 25.2988 9.7722C23.6073 11.1747 22.9221 12.8888 23.241 14.9098C23.492 16.4836 24.2587 17.7104 25.5373 18.5849C26.1184 18.9927 26.7427 19.2818 27.415 19.4531C27.3369 19.8715 27.2486 20.2742 27.149 20.6631ZM19.5954 2.61326C19.779 3.84876 19.499 5.0694 18.7579 6.27081C17.8607 7.70145 16.6564 8.63003 15.2151 8.72585C15.175 8.58033 15.1413 8.42589 15.1169 8.26196C14.9407 7.07588 15.2685 5.72983 16.0312 4.55576C16.4109 3.96226 16.9282 3.43884 17.5825 2.9854C18.236 2.53738 18.8742 2.24851 19.4961 2.12288C19.5389 2.28533 19.5711 2.44938 19.5954 2.61324L19.5954 2.61326Z"
+                      fill="#050810"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_40709_37106">
+                      <rect
+                        width="27.246"
+                        height="27.246"
+                        fill="white"
+                        transform="translate(0.883789 4.88757) rotate(-8.45)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div
+                class="absolute bottom-[80px] left-4 -translate-x-1/2 -translate-y-1/2 p-[15px] bg-white rounded-[15px] shadow-xl -rotate-[-15.51deg]"
+              >
+                <svg
+                  class="lg:w-[34px] w-[20px] lg:h-[34px] h-[20px] md:w-[28px] md:h-[28px] rotate-[-15.51deg]"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M24.471 12.1164C24.4935 12.205 24.5549 12.2809 24.6534 12.3082C27.2787 13.0368 28.8285 15.7735 28.1007 18.3959L26.2995 24.8866C25.5717 27.509 22.8333 29.0557 20.2079 28.3271L7.8686 24.9028C5.23227 24.1712 3.69349 21.4376 4.42126 18.8151L6.22249 12.3245C6.95026 9.702 9.67773 8.15228 12.3141 8.8839C12.4016 8.90818 12.5012 8.88876 12.5583 8.81045L12.6603 8.69754C12.72 8.62863 12.7814 8.55784 12.8436 8.48598C13.2871 7.97419 13.7776 7.40799 14.0758 7.07796C14.852 6.23418 15.8568 5.92462 16.921 6.20816L22.0733 7.63799C23.1313 7.94339 23.8439 8.72956 24.0742 9.85263C24.151 10.2446 24.2596 10.8719 24.3643 11.4765C24.3859 11.6013 24.4073 11.7251 24.4283 11.8456L24.471 12.1164ZM22.509 16.091C22.3574 16.6373 22.6737 17.1958 23.2206 17.3476C23.7676 17.4994 24.3374 17.1868 24.489 16.6404C24.6406 16.0941 24.3165 15.5216 23.7695 15.3698C23.2225 15.218 22.6607 15.5446 22.509 16.091ZM14.9935 15.8295C15.6501 15.4586 16.3932 15.3706 17.1043 15.5679C17.8153 15.7652 18.4068 16.2236 18.7705 16.8659C19.1342 17.5081 19.2227 18.2506 19.0256 18.9608C18.6083 20.422 17.0964 21.2852 15.6305 20.8784C14.9195 20.6811 14.328 20.2227 13.9643 19.5804C13.6006 18.9382 13.5121 18.1957 13.7092 17.4855L13.7122 17.4745C13.8923 16.7831 14.3508 16.1924 14.9935 15.8295ZM18.5542 22.1017C17.5622 22.662 16.3568 22.8453 15.1753 22.5174C14.0267 22.1987 13.079 21.4532 12.483 20.4169C11.9009 19.3727 11.7496 18.1774 12.068 17.0301C12.3724 15.8907 13.1181 14.9443 14.155 14.3494C15.2029 13.7576 16.4102 13.6101 17.5588 13.9289C18.7074 14.2476 19.666 14.9961 20.2511 16.0294C20.8332 17.0736 20.9815 18.2798 20.6661 19.4162C20.3247 20.6042 19.5462 21.5415 18.5542 22.1017Z"
+                    fill="#050810"
+                  />
+                </svg>
+              </div>
+              <div
+                class="absolute bottom-[135px] right-0 -translate-x-1/2 -translate-y-1/2 p-[15px] bg-white rounded-[15px] shadow-xl -rotate-[8.74deg]"
+              >
+                <svg
+                  class="lg:w-[34px] w-[20px] lg:h-[34px] h-[20px] md:w-[28px] md:h-[28px] rotate-[8.74deg]"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.1709 15.6786L14.2317 16.076C14.4796 17.6511 14.7837 19.0441 15.0802 19.9115C15.0825 19.9275 15.3928 20.7854 15.5504 21.0628C15.7925 21.4618 16.1696 21.7749 16.609 21.9435C16.9579 22.0586 17.3108 22.0908 17.6672 22.0379C17.9455 21.9833 18.3867 21.7736 18.699 21.6064L18.9575 21.4606C20.6658 20.4698 23.7862 17.5979 24.9012 15.9594L24.9842 15.8441L25.3514 15.3072C25.5734 14.905 25.6536 14.4418 25.583 13.9668C25.5198 13.5413 25.3267 13.1351 25.016 12.8298C24.9217 12.7299 24.7752 12.6056 24.6458 12.5014L24.1539 12.1191C22.4686 10.8526 18.9878 9.24194 17.2414 8.79639C17.2392 8.78154 16.1541 8.50658 15.6654 8.56275L15.6005 8.57239C14.8544 8.68322 14.2206 9.21227 13.9663 9.95296C13.8969 10.1554 13.8582 10.5376 13.8352 10.8716L13.7982 11.5013C13.7983 12.5051 13.9254 14.0261 14.1709 15.6786ZM6.80481 15.0226C5.87259 15.1611 5.23014 16.0366 5.36998 16.9779C5.50982 17.9192 6.37902 18.5701 7.31125 18.4316L11.4106 17.4471C12.142 17.3385 12.6461 16.653 12.5362 15.9133C12.4265 15.1748 11.7447 14.6643 11.0134 14.7729L6.80481 15.0226Z"
+                    fill="#050810"
+                  />
+                </svg>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6">
+          <div class="flex flex-col justify-between h-full">
+            <h3
+              class="title-section leading-[40px] md:leading-[50px] lg:leading-[72px] mb-6 md:mb-0"
+            >
+              Revolutionizing Your Health with
+              <span class="lg:!text-[64px] md:!text-[48px] !text-[32px]"
+                >AI-Powered Care</span
+              >
+            </h3>
+            <ul class="flex justify-between items-center">
+              <li class="flex flex-col gap-2 md:gap-[10px]">
+                <h3 class="text-[32px] lg:text-5xl text-darkBlack font-medium">
+                  100
+                </h3>
+                <p class="text-xs lg:text-base text-primaryGrey">
+                  Our Partners
+                </p>
+              </li>
+              <li class="flex flex-col gap-[10px]">
+                <h3 class="text-[32px] lg:text-5xl text-darkBlack font-medium">
+                  50+
+                </h3>
+                <p class="text-xs lg:text-base text-primaryGrey">
+                  Doctor Specialist
+                </p>
+              </li>
+              <li class="flex flex-col gap-[10px]">
+                <h3 class="text-[32px] lg:text-5xl text-darkBlack font-medium">
+                  100k
+                </h3>
+                <p class="text-xs lg:text-base text-primaryGrey">
+                  Positive Review
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container paddingSection grid grid-cols-12 items-start gap-6 md:gap-0"
+      >
+        <div class="col-span-12 md:col-span-3 lg:col-span-2 mt-5">
+          <span
+            class="text-[16px] border border-[#E3E5E8] border-1 rounded-full p-[5px] px-[10px] text-nowrap"
+            >• Why HealthDoc</span
+          >
+        </div>
+        <div class="col-span-12 md:col-span-9 lg:col-span-10">
+          <h3
+            class="title-section leading-[40px] md:leading-[50px] lg:leading-[72px] lg:!text-[64px]"
+          >
+            Choose us for reliable, innovative healthcare solutions
+            <span class="lg:!text-[64px]"
+              >designed to meet your needs and make a difference</span
+            >
+          </h3>
+          <a
+            href="#"
+            class="mt-6 rounded-full bg-primary py-[14px] px-8 flex justify-center items-center gap-[10px] w-fit text-white"
+          >
+            <svg
+              width="16"
+              height="19"
+              viewBox="0 0 16 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.3689 14.2875C15.0916 14.928 14.7634 15.5176 14.3832 16.0596C13.8649 16.7986 13.4405 17.3101 13.1135 17.5942C12.6065 18.0604 12.0633 18.2992 11.4816 18.3128C11.0641 18.3128 10.5605 18.1939 9.97427 17.9529C9.38616 17.713 8.84568 17.5942 8.35149 17.5942C7.83319 17.5942 7.27733 17.713 6.68276 17.9529C6.08728 18.1939 5.60757 18.3196 5.24081 18.332C4.68302 18.3558 4.12704 18.1102 3.57207 17.5942C3.21787 17.2852 2.77483 16.7556 2.24408 16.0053C1.67464 15.2041 1.20647 14.275 0.839703 13.2158C0.446907 12.0717 0.25 10.9638 0.25 9.89123C0.25 8.6626 0.515485 7.60292 1.04725 6.71491C1.46517 6.00163 2.02115 5.43897 2.717 5.02592C3.41285 4.61286 4.16472 4.40238 4.97442 4.38891C5.41746 4.38891 5.99845 4.52595 6.72044 4.79529C7.4404 5.06552 7.90268 5.20257 8.10535 5.20257C8.25688 5.20257 8.77042 5.04233 9.641 4.72286C10.4643 4.42659 11.1591 4.30392 11.7283 4.35224C13.2708 4.47673 14.4296 5.08476 15.2002 6.1802C13.8208 7.01604 13.1384 8.18674 13.1519 9.68855C13.1644 10.8583 13.5888 11.8318 14.4228 12.6047C14.8008 12.9634 15.2229 13.2407 15.6925 13.4376C15.5907 13.733 15.4832 14.0159 15.3689 14.2875ZM11.8313 0.367015C11.8313 1.28389 11.4963 2.13998 10.8287 2.93236C10.0229 3.87435 9.04836 4.41867 7.99151 4.33278C7.97804 4.22278 7.97023 4.10701 7.97023 3.98536C7.97023 3.10516 8.35341 2.16317 9.03387 1.39297C9.37359 1.003 9.80566 0.678752 10.3296 0.420089C10.8524 0.165286 11.347 0.0243746 11.8121 0.000244141C11.8257 0.122816 11.8313 0.245396 11.8313 0.367003V0.367015Z"
+                fill="white"
+              />
+            </svg>
+            <span> Download App </span>
+          </a>
         </div>
       </section>
     </main>
