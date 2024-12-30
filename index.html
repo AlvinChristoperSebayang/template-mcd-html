@@ -1,17 +1,1094 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header id="site-header"></header>
-    <main id="site-main">
 
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>Vite App</title>
+</head>
+<style>
+  .faq-header:hover img {
+    transform: rotate(180deg);
+    /* Ikon berputar saat hover */
+    transition: transform 0.3s ease-in-out;
+    /* Transisi lebih smooth */
+  }
+
+  .faq-header {
+    cursor: pointer;
+  }
+
+  .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .thumbnail-swiper .swiper-slide {
+    cursor: pointer;
+  }
+
+  .thumbnail-swiper, .main-swiper {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .thumbnail-swiper {
+    margin-bottom: 20px; 
+  }
+
+  .thumbnail-swiper .swiper-slide {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .thumbnail-swiper .swiper-slide svg path {
+    transition: fill 0.3s ease; 
+    fill: #D0D0D0; 
+  }
+
+  .thumbnail-swiper .swiper-slide.swiper-slide-active svg path {
+    fill: black; 
+  }
+    
+  
+
+/* Tambahan untuk breakpoints */
+@media (max-width: 768px) {
+  .swiper-slide svg {
+    max-width: 80px; 
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide svg {
+    max-width: 50px; 
+    max-height: 50px;
+  }
+}
+
+</style>
+
+<body>
+  <header id="site-header"></header>
+  <main id="site-main">
+
+    <!-- section 1 -->
+    <section class="bg-[#FFFFFF] flex flex-col items-center container mx-auto py-16">
+      <div class="text-center flex flex-col mb-12 gap-[12px]">
+        <h2
+          class="text-[32px] md:text-[40px]  lg:text-[64px] xl:text-[64px] w-[327px] h-[80px] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[72px] xl:leading-[72px] text-[#050810] text-center">
+          Why Choose Gasrent Car</h2>
+        <p
+          class="text-[16px] md:text-[16px] xl:text-[20px] w-[327px] h-[52px] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[32px] xl:leading-[32px] text-center text-[#747B8B]">
+          Discover the Advantages That Set Gasrent Apart for Your Next Car Rental
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] md:gap-[15px] xl:gap-[24px] w-[88%] md:w-[95%] xl:w-[108%] ">
+        <!-- Card 1 -->
+        <div
+          class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-[327px] h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%]  rounded-[24px] p-[24px] text-start">
+          <div class="mb-[1rem]">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.0002 36.6668C29.2049 36.6668 36.6668 29.2049 36.6668 20.0002C36.6668 10.7954 29.2049 3.3335 20.0002 3.3335C10.7954 3.3335 3.3335 10.7954 3.3335 20.0002C3.3335 29.2049 10.7954 36.6668 20.0002 36.6668Z"
+                stroke="#7240FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M20 10V20L26.6667 23.3333" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3
+            class="text-[24px] sm:text-[20px] md:text-[16px] xl:text-[24px] w-[288px] h-[20%] md:w-[100%] lg:w-[97%] xl:w-[130%] font-normal text-[#050810] mb-[2px] sm:mb-[10px] md:mb-[15px] lg:mb-[30px] xl:mb-[10px]">
+            Available on All Day 24/7</h3>
+          <p
+            class="text-[#747B8B] text-[16px] sm:text-[14px] md:text-[11px] lg:text-[14px] xl:text-[16px] leading-[26px] sm:leading-[24px] md:leading-[20px] xl:leading-[26px] font-normal w-[280px] h-[40%] sm:w-[100%] md:w-[108%] md:h-[45%] lg:w-[108%] xl:w-[104%] ">
+            Exploring the Unmatched Features and Benefits of Choosing Gasrent for Your Next Car Rental
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-[327px] h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%]  rounded-[24px] p-[24px] text-start">
+          <div class="mb-[1rem]">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="#D0D0D0" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_265_752)">
+                <path
+                  d="M23.51 9.25511C23.9727 9.4863 24.4828 9.60666 25 9.60666C25.5172 9.60666 26.0273 9.4863 26.49 9.25511L32.5883 6.20511C32.8426 6.07804 33.1252 6.01812 33.4092 6.03106C33.6931 6.04399 33.9691 6.12934 34.2108 6.27899C34.4525 6.42865 34.6518 6.63763 34.79 6.88608C34.9281 7.13452 35.0004 7.41417 35 7.69844V28.9718C34.9998 29.2812 34.9135 29.5845 34.7508 29.8477C34.588 30.1108 34.3551 30.3235 34.0783 30.4618L26.49 34.2568C26.0273 34.488 25.5172 34.6083 25 34.6083C24.4828 34.6083 23.9727 34.488 23.51 34.2568L16.49 30.7468C16.0273 30.5156 15.5172 30.3952 15 30.3952C14.4828 30.3952 13.9727 30.5156 13.51 30.7468L7.41167 33.7968C7.15726 33.9239 6.87454 33.9838 6.59043 33.9708C6.30632 33.9578 6.03026 33.8723 5.78853 33.7225C5.5468 33.5726 5.34744 33.3634 5.20942 33.1147C5.07139 32.866 4.9993 32.5862 5.00001 32.3018V11.0301C5.00017 10.7207 5.08648 10.4174 5.24926 10.1542C5.41204 9.89107 5.64487 9.67843 5.92167 9.54011L13.51 5.74511C13.9727 5.51391 14.4828 5.39355 15 5.39355C15.5172 5.39355 16.0273 5.51391 16.49 5.74511L23.51 9.25511Z"
+                  stroke="#7240FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M25 9.60645V34.6064" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M15 5.39355V30.3936" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0_265_752">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <h3
+            class="text-[24px] sm:text-[20px] md:text-[20px] xl:text-[24px] w-[288px] h-[20%]  sm:w-[100%] md:w-[100%] lg:w-[97%] xl:w-[130%] font-normal text-[#050810] mb-[2px] sm:mb-[10px] md:mb-[15px]  lg:mb-[30px] xl:mb-[10px]">
+            Operating multiple cities</h3>
+          <p
+            class="text-[#747B8B] text-[16px] sm:text-[14px] md:text-[11px] lg:text-[14px] xl:text-[16px] leading-[26px] sm:leading-[24px] md:leading-[20px] xl:leading-[26px] font-normal w-[280px] h-[40%] sm:w-[100%] md:w-[108%] md:h-[45%] lg:w-[108%] xl:w-[104%] ">
+            Exploring the Unmatched Features and Benefits of Choosing Gasrent for Your Next Car Rental
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-[327px] h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%]  rounded-[24px] p-[24px] text-start">
+          <div class="mb-[1rem]">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="#D0D0D0" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_265_760)">
+                <path
+                  d="M16.5615 25.8334C16.4127 25.2566 16.112 24.7303 15.6908 24.3091C15.2696 23.8879 14.7433 23.5872 14.1665 23.4384L3.94149 20.8018C3.76704 20.7522 3.6135 20.6472 3.50417 20.5025C3.39484 20.3578 3.33569 20.1814 3.33569 20.0001C3.33569 19.8188 3.39484 19.6424 3.50417 19.4977C3.6135 19.353 3.76704 19.2479 3.94149 19.1984L14.1665 16.5601C14.7431 16.4114 15.2693 16.111 15.6905 15.6902C16.1117 15.2693 16.4124 14.7432 16.5615 14.1668L19.1982 3.94176C19.2472 3.76662 19.3521 3.61233 19.497 3.50241C19.6419 3.3925 19.8188 3.33301 20.0007 3.33301C20.1825 3.33301 20.3594 3.3925 20.5043 3.50241C20.6492 3.61233 20.7541 3.76662 20.8032 3.94176L23.4382 14.1668C23.5869 14.7435 23.8876 15.2699 24.3088 15.6911C24.73 16.1123 25.2564 16.413 25.8332 16.5618L36.0582 19.1968C36.234 19.2453 36.389 19.3501 36.4996 19.4952C36.6101 19.6403 36.6699 19.8177 36.6699 20.0001C36.6699 20.1825 36.6101 20.3598 36.4996 20.505C36.389 20.6501 36.234 20.7549 36.0582 20.8034L25.8332 23.4384C25.2564 23.5872 24.73 23.8879 24.3088 24.3091C23.8876 24.7303 23.5869 25.2566 23.4382 25.8334L20.8015 36.0584C20.7525 36.2336 20.6475 36.3879 20.5026 36.4978C20.3577 36.6077 20.1809 36.6672 19.999 36.6672C19.8171 36.6672 19.6402 36.6077 19.4954 36.4978C19.3505 36.3879 19.2455 36.2336 19.1965 36.0584L16.5615 25.8334Z"
+                  stroke="#7240FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M33.3333 5V11.6667" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M36.6667 8.3335H30" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M6.66675 28.3335V31.6668" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M8.33333 30H5" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0_265_760">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <h3
+            class="text-[24px] sm:text-[20px] md:text-[20px] xl:text-[24px] xl:leading-[32px] w-[100%] h-[37%] sm:w-[90%] sm:h-[30%]  md:w-[103%] lg:w-[97%] xl:w-[80%]  xl:h-[32%] font-normal text-[#050810] mb-[2px] sm:mb-[15px] md:mb-[5px] lg:mb-[10px] xl:mb-[15px]">
+            Professional and experienced driver</h3>
+          <p
+            class="text-[#747B8B] text-[16px] sm:text-[14px] md:text-[11px] lg:text-[14px] xl:text-[16px] leading-[26px] sm:leading-[24px] md:leading-[20px] xl:leading-[26px] font-normal w-[280px h-[40%] sm:w-[100%] md:w-[108%] md:h-[45%] lg:w-[108%] xl:w-[104%] xl:h-[35%] ">
+            Exploring the Unmatched Features and Benefits of Choosing Gasrent for Your Next Car Rental
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-[327px] h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%]  rounded-[24px] p-[24px] text-start">
+          <div class="mb-[1rem]">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="#D0D0D0" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_265_770)">
+                <path
+                  d="M20.0002 36.6668C29.2049 36.6668 36.6668 29.2049 36.6668 20.0002C36.6668 10.7954 29.2049 3.3335 20.0002 3.3335C10.7954 3.3335 3.3335 10.7954 3.3335 20.0002C3.3335 29.2049 10.7954 36.6668 20.0002 36.6668Z"
+                  stroke="#7240FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M26.6668 13.3335H16.6668C15.7828 13.3335 14.9349 13.6847 14.3098 14.3098C13.6847 14.9349 13.3335 15.7828 13.3335 16.6668C13.3335 17.5509 13.6847 18.3987 14.3098 19.0239C14.9349 19.649 15.7828 20.0002 16.6668 20.0002H23.3335C24.2176 20.0002 25.0654 20.3514 25.6905 20.9765C26.3156 21.6016 26.6668 22.4494 26.6668 23.3335C26.6668 24.2176 26.3156 25.0654 25.6905 25.6905C25.0654 26.3156 24.2176 26.6668 23.3335 26.6668H13.3335"
+                  stroke="#7240FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20 30V10" stroke="#7240FF" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0_265_770">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <h3
+            class="text-[24px] sm:text-[20px] md:text-[20px] xl:text-[24px] xl:leading-[32px] w-[288px] h-[20%] sm:w-[90%] md:w-[103%] lg:w-[97%] xl:w-[80%]  xl:h-[32%] font-normal text-[#050810] mb-[2px] sm:mb-[30px] md:mb-[15px] lg:mb-[30px] xl:mb-[15px]">
+            Easy to use and Payment</h3>
+          <p
+            class="text-[#747B8B] text-[16px] sm:text-[14px] md:text-[11px] lg:text-[14px] xl:text-[16px] leading-[26px] sm:leading-[24px] md:leading-[20px] xl:leading-[26px] font-normal w-[280px h-[40%] sm:w-[100%] md:w-[108%] md:h-[45%] lg:w-[108%] xl:w-[104%] xl:h-[35%] ">
+            Exploring the Unmatched Features and Benefits of Choosing Gasrent for Your Next Car Rental
+          </p>
+        </div>
+    </section>
+
+    <!-- secttion 2 -->
+    <!-- <section 
+     class="w-full h-auto py-[60px] sm:py-[35px] md:py-[6rem] lg:py-[8rem] pt-0 md:pt-[5px] xl:pt-0 bg-[url('box.svg')] bg-cover bg-no-repeat md:bg-[center_20%]  mx-auto">
+        <div class="relative mt-2">
+          <div 
+            class="absolute top-[0.5rem] md:top-[0.5rem] xl:top-[1.8rem] left-1/2 transform -translate-x-1/2 -translate-y-2 w-[90%] md:w-[550px] lg:w-[70%] xl:w-[746px] h-1 bg-[#BF60FA] rounded"></div>
+            <img src="shadow.svg" alt="Decorative line" class="object-cover mx-auto w-[800px] md:w-[85%] xl:w-[70%] 2xl:w-[48%] xl:pt-[1.5rem]"/>
+          </div>
+      <div class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+        <h2 id="imageTitle" class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+          Acura NSX Honda Civic Type R </h2>
+        <p id="imageDescription" class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+          Many Car in our Company clean and comfortable </p>
+      </div>
+
+      <div class="relative">
+        <img src="ellipse.svg" alt="line ellipse" class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+        
+        <div class="main-image mb-6 lg:mb-12">
+        <img id="mainImage" src="car1.png" alt="gambar utama" class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px]  sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] xl:right-[10px] -translate-y-1/2"/>
+        </div>
+
+        <div class="hidden md:block justify-between">
+        <button onclick="navigate('left')" class="nav-button left  absolute left-2 md:left-[3.5rem] xl:left-[2rem] top-1/2 md:top-[17%] xl:top-[13%] -translate-y-1/2 p-2 xl:p-[2.5rem]  rounded-full ">
+          <img src="btnLeft.svg" alt="btn kiri" class="md:w-[70%] xl:w-[100%]">
+        </button>
+
+        <button  onclick="navigate('right')" class="nav-button right absolute right-2 xl:right-[3.5rem] top-1/2 md:top-[23%]  xl:top-[13%] -translate-y-1/2 p-2 xl:p-[2.5rem]  rounded-full ">
+          <img src="btnRight.svg" alt="btn kanan" class="md:w-[70%] xl:w-[100%]">
+        </button>
+      </div>
+      </div>
+
+      <div class="thumbnail-list flex justify-center gap-[43px] md:gap-[24px] xl:gap-[40px] mt-[2rem] xl:mt-[5rem] overflow-x-auto xl:overflow-visible whitespace-nowrap px-4 -mx-4 items-center min-h-[48px] no-scrollbar">
+        <img src="hyundaiLogo.svg" alt="Hyundai" class="w-[25%] sm:w-[60px] md:w-[10%] xl:w-[20%]" onclick="changeImage('car1.png', 'Hyundai NSX Honda Civic Type R', 'Many Car in our Company clean and comfortable')">
+        <img src="knLogo.svg" alt="Kn" class="w-[25%] sm:w-[60px] md:w-[10%] xl:w-[20%]" onclick="changeImage('car1.png', 'Kia NSX Honda Civic Type R', 'Many Car in our Company clean and comfortable')">
+        <img src="audiLogo.svg" alt="Audi" class="w-[20%] sm:w-[60px] md:w-[10%] xl:w-[20%]" onclick="changeImage('car1.png', 'Audi NSX Honda Civic Type R', 'Many Car in our Company clean and comfortable')">
+        <img src="acuraLogo.svg" alt="Acura" class="w-[25%] sm:w-[60px] md:w-[15%] xl:w-[20%]" onclick="changeImage('car1.png', 'Acura NSX Honda Civic Type R', 'Many Car in our Company clean and comfortable')">
+        <img src="mitsubishiLogo.svg" alt="Mitsubishi" class="w-[15%] sm:w-[50px] md:w-[8%] xl:w-[14%]" onclick="changeImage('car1.png', 'Mitsubishi NSX Honda Civic Type R', 'Many Car in our Company clean and comfortable')" >
+        <img src="carLogo.svg" alt="Car Logo" class="w-[25%] sm:w-[60px] md:w-[15%] xl:w-[25%]" onclick="changeImage('car1.png', 'gatau NSX Honda Civic Type R', 'Many Car in our Company clean and comfortable')">
+        <img src="miniLogo.svg" alt="Mini Logo" class="w-[25%] sm:w-[60px] md:w-[10%] xl:w-[20%]" onclick="changeImage('car1.png', 'Mini Cooper Honda Civic Type R', 'Many Car in our Company clean and comfortable')">
+      </div>
+      
+  </section> -->
+
+    <!-- nyoba -->
+    <section
+      class="w-full h-auto py-[60px] sm:py-[35px] md:py-[6rem] lg:py-[8rem] pt-0 md:pt-[5px] xl:pt-0 bg-[url('box.svg')] bg-cover bg-no-repeat md:bg-[center_20%]  mx-auto">
+      <div class="relative mt-2">
+        <div
+          class="absolute top-[0.5rem] md:top-[0.5rem] xl:top-[1.8rem] left-1/2 transform -translate-x-1/2 -translate-y-2 w-[90%] md:w-[550px] lg:w-[70%] xl:w-[746px] h-1 bg-[#BF60FA] rounded">
+        </div>
+        <img src="shadow.svg" alt="Decorative line"
+          class="object-cover mx-auto w-[800px] md:w-[85%] xl:w-[70%] 2xl:w-[48%] xl:pt-[1.5rem]" />
+      </div>
+
+      <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+          <!-- hyundai -->
+          <div class="swiper-slide"> 
+            <div
+              class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Hyundai NSX Honda Civic Type R 1</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="car1.png" alt="hyundai"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div>
+          <!-- kia -->
+          <div class="swiper-slide ">
+            <div
+              class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Kia NSX Honda Civic Type R 2</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="car1.png" alt="kia"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div>
+          <!-- audi -->
+          <div class="swiper-slide ">
+            <div
+              class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Audi NSX Honda Civic Type R 3</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="car1.png" alt="audi"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div>
+          <!-- acura -->
+          <div class="swiper-slide ">
+            <div class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Acura NSX Honda Civic Type R 4</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="car1.png" alt="acura"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div>
+          <!-- mitsubishi -->
+          <div class="swiper-slide ">
+            <div
+              class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Mitsubishi NSX Honda Civic Type R 5</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="car1.png" alt="mitsubishi"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div> 
+          <!-- car -->
+          <div class="swiper-slide ">
+            <div
+              class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Car NSX Honda Civic Type R 6</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="car1.png" alt="car idk"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div>
+          <!-- miniCopper -->
+          <div class="swiper-slide ">
+            <div
+              class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]">
+              <h2
+                class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%]  xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center">
+                Mini Cooper NSX Honda Civic Type R 7</h2>
+              <p
+                class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]">
+                Many Car in our Company clean and comfortable </p>
+            </div>
+            <div class="relative">
+              <img src="ellipse.svg" alt="Ellipse Decoration"
+                class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover" />
+              <img src="gatau.png" alt="miniCopper"
+                class="absolute inset-0 mx-auto z-10 w-auto max-w-[285px] sm:max-w-[435px] xl:max-w-[670px] top-[8%] md:top-[10%] xl:top-[10%] -translate-y-1/2" />
+            </div>
+          </div>
+        </div>
+
+        <!-- btn -->
+        <div class="hidden md:block absolute top-0 w-full h-full z-40 ">
+          <button
+            class="nav-button-left absolute left-2 md:left-[3.5rem] xl:left-[2rem] top-1/2 md:top-[70%] xl:top-[70%] -translate-y-1/2 p-2 xl:p-[2.5rem] rounded-full">
+            <img src="btnLeft.svg" alt="Left Button" class="md:w-[70%] xl:w-[100%]" />
+          </button>
+          <button
+            class="nav-button-right absolute right-2 xl:right-[3.5rem] top-1/2 md:top-[70%] xl:top-[70%] -translate-y-1/2 p-2 xl:p-[2.5rem] rounded-full">
+            <img src="btnRight.svg" alt="Right Button" class="md:w-[70%] xl:w-[100%]" />
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper thumbnail-swiper mt-6">
+        <div class="swiper-wrapper flex justify-center gap-[2px] xl:gap-[40px] md:gap-0 mt-[2rem] xl:mt-[5rem]">
+         
+          <!-- hyundai -->
+      <div class="swiper-slide">
+            <svg width="102" height="69" viewBox="0 0 102 69" fill="none" xmlns="http://www.w3.org/2000svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 50.8897H3.9483V57.1523H11.0016V50.8897H14.9006V68.4658H11.0016V61.0655H3.89781V68.3955H0V50.8897ZM15.344 50.8897H19.1913L23.2371 57.6504L27.2336 50.8897H31.0321L25.1611 61.6348V68.4658H21.2638V61.1367L15.344 50.8897ZM31.5255 50.8897H35.4233V64.4814H41.6884C42.6751 64.4814 43.3164 63.0606 43.3164 61.5645V50.8897H47.213V64.9093C47.213 67.1145 45.487 68.3955 44.4998 68.3955H31.5255V50.8897ZM48.0517 50.8897H61.0277C62.557 50.8897 63.7903 52.2402 63.7903 54.983V68.4307L59.8931 68.4658V57.7919C59.8931 56.3 59.5472 55.41 58.2152 55.41H52.3447V68.5052H48.0517V50.8897ZM64.9749 50.8897H76.3207C78.5911 50.8897 80.3427 53.522 80.3427 55.5498V63.6275C80.3177 65.0499 78.9358 68.465 77.2098 68.465H64.9755L64.9749 50.8897ZM68.9458 64.5534H74.9341C75.7966 64.5534 76.4634 63.6283 76.4634 62.488V57.3649C76.4634 56.1191 75.7536 55.3748 74.8424 55.3748H68.9458V64.5534ZM85.1534 50.8152H97.314V68.4658H92.9717V63.9138H85.497V68.4658H81.107V57.0074C81.0078 53.1662 83.3769 50.8152 85.1534 50.8152ZM85.4477 57.0828V59.926H92.9473V55.441H86.6311C85.8922 55.4418 85.4477 56.084 85.4477 57.0828ZM98.1028 50.8546H102V69H98.1028V50.8546ZM51.2374 0C35.0646 0 21.9533 9.33854 21.9533 20.8547C21.9533 32.3717 35.0646 41.7111 51.2374 41.7111C67.409 41.7111 80.5208 32.3726 80.5208 20.8547C80.5203 9.33937 67.4084 0 51.2374 0ZM48.4591 4.64164C51.8015 2.93703 61.7317 4.64164 65.5889 7.3141C66.8234 9.02206 60.0846 14.5093 52.0609 16.8879C40.5892 20.2251 46.0413 7.46145 48.4591 4.64164ZM28.7582 29.3527C26.2365 26.7589 21.2987 19.336 29.4785 11.6192C33.7994 7.98389 36.2167 7.16507 39.1998 6.27593C40.6409 5.82884 41.6693 6.3496 40.3832 7.90854C37.6571 11.9901 31.9985 25.493 31.4848 28.4635C31.0722 30.4687 30.2498 30.9853 28.7582 29.3527ZM52.3163 37.9628C47.4818 38.7029 36.7314 36.4039 36.5248 34.4029C36.7314 29.5762 53.603 21.5622 56.6372 26.0146C57.9245 29.5017 55.4556 37.7393 52.3163 37.9628ZM76.9057 23.9341C75.6701 28.0164 71.5041 32.6196 62.7602 35.7366C61.4212 36.1787 60.9587 34.9931 61.8327 33.8796C63.2744 32.6187 70.2186 15.8489 71.0926 12.5075C71.6074 10.7995 72.5842 11.4701 73.2023 12.1366C75.9806 14.7328 78.0891 18.9634 76.9057 23.9341Z" fill="#FDFDFD"/>
+          </svg>
+        </div>
+         <!-- kia -->
+        <div class="swiper-slide">
+          <svg width="103" height="24" viewBox="0 0 103 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M59.6789 21.2456C59.6789 21.4393 59.74 21.5517 59.8523 21.5517C59.9472 21.5517 60.0258 21.5008 60.0972 21.4496L91.89 0.815537C92.4271 0.440056 93.0707 0.246948 93.7258 0.264636H100.713C101.784 0.264636 102.508 0.978489 102.508 2.04957V15.3908C102.508 17.0023 102.151 17.9408 100.723 18.7974L92.2469 23.8974C92.1623 23.9562 92.0623 23.9996 91.9613 23.9996C91.8605 23.9996 91.7574 23.9179 91.7574 23.6221V8.0574C91.7574 7.87367 91.7065 7.75138 91.5839 7.75138C91.4945 7.75138 91.4095 7.79716 91.3391 7.85349L68.1038 22.9493C67.5734 23.3062 66.9511 23.5002 66.3189 23.4899H50.9171C49.8358 23.4899 49.1219 22.7761 49.1219 21.6947V2.46825C49.1219 2.32548 49.0608 2.19295 48.9382 2.19295C48.849 2.19295 48.7644 2.23963 48.6933 2.29505L33.3635 11.4947C33.2105 11.5969 33.1698 11.6682 33.1698 11.7396C33.1698 11.8008 33.2006 11.8619 33.3024 11.9743L44.2569 22.9185C44.3997 23.0613 44.5018 23.1736 44.5018 23.2959C44.5018 23.398 44.3385 23.4797 44.1448 23.4797H34.2509C33.4756 23.4797 32.8738 23.3673 32.4557 22.9493L25.8156 16.3194C25.7647 16.2586 25.6915 16.2173 25.6117 16.2173C25.5397 16.2173 25.4696 16.2417 25.4078 16.2785L14.3105 22.9493C13.6373 23.3574 13.1783 23.4694 12.5153 23.4694H2.30542C1.21416 23.4797 0.5 22.7556 0.5 21.6845V8.59806C0.5 6.97638 0.856927 6.04807 2.29518 5.19144L10.8223 0.0712632C10.8886 0.0261781 10.9665 0.001373 11.0467 -0.00012207C11.1792 -0.00012207 11.2506 0.132407 11.2506 0.42819V17.9514C11.2506 18.1351 11.2913 18.2164 11.4241 18.2164C11.5144 18.2164 11.5976 18.1655 11.6792 18.1143L40.4834 0.784818C41.0343 0.407408 41.7075 0.223974 42.3807 0.254396H57.8843C58.9554 0.254396 59.6795 0.968249 59.6795 2.03933L59.6692 21.2456H59.6789Z" fill="#D0D0D0"/>
+          </svg>
+         </div>
+            <!-- audi -->
+        <div class="swiper-slide">
+              <svg width="129" height="44" viewBox="0 0 129 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.7039 2.58826C17.5673 2.758 12.7036 4.92083 9.16142 8.61052C5.61923 12.3002 3.68219 17.2212 3.76786 22.3128C3.85353 27.4044 5.95505 32.2587 9.6194 35.8294C13.2838 39.4 18.2175 41.401 23.357 41.401C28.4965 41.401 33.4302 39.4 37.0946 35.8294C40.7589 32.2587 42.8604 27.4044 42.9461 22.3128C43.0318 17.2212 41.0947 12.3002 37.5525 8.61052C34.0103 4.92083 29.1467 2.758 24.01 2.58826H22.7039ZM50.1325 2.58826C44.9958 2.758 40.1322 4.92083 36.59 8.61052C33.0478 12.3002 31.1108 17.2212 31.1964 22.3128C31.2821 27.4044 33.3836 32.2587 37.048 35.8294C40.7123 39.4 45.646 41.401 50.7856 41.401C55.9251 41.401 60.8588 39.4 64.5231 35.8294C68.1875 32.2587 70.289 27.4044 70.3747 22.3128C70.4603 17.2212 68.5233 12.3002 64.9811 8.61052C61.4389 4.92083 56.5753 2.758 51.4386 2.58826H50.1325ZM77.5611 2.58826C72.4244 2.758 67.5608 4.92083 64.0186 8.61052C60.4764 12.3002 58.5393 17.2212 58.625 22.3128C58.7107 27.4044 60.8122 32.2587 64.4766 35.8294C68.1409 39.4 73.0746 41.401 78.2141 41.401C83.3537 41.401 88.2874 39.4 91.9517 35.8294C95.6161 32.2587 97.7176 27.4044 97.8032 22.3128C97.8889 17.2212 95.9519 12.3002 92.4097 8.61052C88.8675 4.92083 84.0039 2.758 78.8672 2.58826H77.5611ZM104.99 2.58826C99.853 2.758 94.9893 4.92083 91.4472 8.61052C87.905 12.3002 85.9679 17.2212 86.0536 22.3128C86.1393 27.4044 88.2408 32.2587 91.9051 35.8294C95.5695 39.4 100.503 41.401 105.643 41.401C110.782 41.401 115.716 39.4 119.38 35.8294C123.045 32.2587 125.146 27.4044 125.232 22.3128C125.317 17.2212 123.38 12.3002 119.838 8.61052C116.296 4.92083 111.432 2.758 106.296 2.58826H104.99Z" stroke="#D0D0D0" stroke-width="2.88235"/>
+              </svg>  
+          </div>
+          <!-- acura -->
+        <div class="swiper-slide"> 
+         <svg width="76" height="70" viewBox="0 0 76 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1387 26.8379C10.1387 2.27438 28.34 0 38.3503 0C48.3611 0 66.5629 2.27438 66.5629 26.8379C66.5629 50.795 48.058 53.8276 38.3503 53.8276C28.7953 53.8276 10.1387 50.795 10.1387 26.8379ZM48.9682 25.9281L52.0018 48.6714C53.6703 47.7621 62.7705 43.3655 62.6197 26.8379C62.6197 7.42956 50.7885 2.27438 40.6255 2.27438L48.9682 25.9281ZM38.3503 21.3793H39.7158V2.27438H37.1375V21.3793H38.3503ZM38.3503 51.5536C43.963 51.5536 48.9682 50.0374 51.0911 48.9753L40.0193 24.867H36.6822L25.6095 48.9753C27.7334 50.0369 32.7385 51.5536 38.3503 51.5536ZM36.0756 2.27438C25.913 2.27438 14.0819 7.42956 14.0819 26.8379C13.9306 43.3655 23.0313 47.7621 24.6998 48.6714L27.8851 25.9281L36.0756 2.27438Z" fill="#E2E2E2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.71213 58.8538H9.69541L16.408 69.963H13.2383L8.16678 61.5752L5.51882 66.0116H9.84481L11.1126 68.0987H4.25105L3.1322 69.963H0L6.71213 58.8538ZM66.3041 58.8538H69.3249L76 69.963H72.8299L67.7953 61.5752L65.1108 66.0116H69.4368L70.705 68.0987H63.8805L62.7242 69.963H59.5915L66.3041 58.8538ZM37.0306 70H39.5291C42.4379 69.963 43.5938 68.36 43.5938 65.7504V58.8538H40.8713V66.235C40.8713 67.6142 39.9024 67.8005 39.0074 67.838H35.0912C34.1962 67.8005 33.2268 67.6142 33.2268 66.235V58.8538H30.4669V65.7504C30.4669 68.36 31.6602 69.963 34.5695 70H37.0306ZM18.981 64.4081V63.0289C19.0185 62.0973 19.2049 61.1277 20.5101 61.1651H28.9008V58.8538H20.4731C17.8627 58.8538 16.2586 60.0467 16.2216 62.9545V65.8993C16.2591 68.8071 17.8627 69.9625 20.4731 69.9625H28.9008V67.6882H20.5101C19.2049 67.6882 19.0185 66.756 18.981 65.8244V64.4081ZM48.1061 69.963H45.3837V58.8538H55.5643C59.1077 58.8538 60.0022 63.5509 57.5412 65.1909C58.6221 65.601 58.7724 66.9428 58.8464 67.3904L58.9204 69.963H56.2359L56.1619 67.6886C56.087 66.7195 55.4533 66.0481 54.4834 66.0481H49.2994L48.7777 63.7373H54.7813C55.7142 63.7373 56.2354 63.3271 56.2354 62.5069C56.2354 61.7241 55.7137 61.2396 54.7813 61.2396H48.1061V69.963Z" fill="#E2E2E2"/>
+          </svg>
+          </div>
+          <!-- mitsubushi -->
+          <div class="swiper-slide">
+            <svg width="70" height="75" viewBox="0 0 70 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M34.8281 39.8257H11.5422L0 59.3884H23.3531L34.8281 39.8257ZM46.6593 19.7571L35.0166 0L23.3403 19.7571L35.0166 39.5467L46.6593 19.7571ZM46.6473 59.3884H70L58.4578 39.8257H35.1719L46.6473 59.3884Z" fill="#E2E2E2"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M45.6116 74.717H47.3554V65.7244H45.6116V74.717ZM65.169 74.717H66.9132V65.7244H65.169V74.717ZM12.8359 74.717H14.5797V65.7244H12.8359V74.717ZM21.2452 65.7244H15.8518V67.2494H17.6496V74.717H19.4474V67.2494H21.2452V65.7244ZM61.6772 69.1427H57.7506V65.7244H56.0068V74.717H57.7506V70.6677H61.6772V74.717H63.4202V65.7244H61.6772V69.1427ZM7.20706 69.7473L5.57247 65.7244H3.55664V74.717H5.30004V69.1427L7.20706 73.6126L9.05926 69.0902V74.717H10.8022V65.7244H8.84123L7.20706 69.7473ZM36.0192 65.7252H34.2916V72.1409C34.2916 72.8393 33.4814 73.4049 32.7579 73.4049C32.0349 73.4049 31.2247 72.8393 31.2247 72.1409V65.7252H29.4651L29.4908 72.0624C29.4908 73.6847 31.0768 75 32.7575 75C34.4386 75 36.0246 73.6847 36.0246 72.0624L36.0192 65.7252ZM42.7432 69.8527C42.9882 69.6948 43.9143 69.1688 43.9143 68.0387C43.9143 66.4604 42.607 65.7509 41.7349 65.7248H37.6962V74.7174H41.2714C42.6884 74.7174 44.2133 74.06 44.2133 72.3246C44.2138 70.8257 43.4791 70.2468 42.7432 69.8527ZM41.354 73.1921H39.4408V67.2494H41.2722C41.7631 67.2494 42.1443 67.6438 42.1443 68.1173C42.1443 68.5907 41.9537 69.1427 41.3001 69.1427H40.5384V70.6681H41.3545C41.8453 70.6681 42.5256 71.1151 42.499 72.0351C42.4749 72.8237 41.8171 73.1921 41.354 73.1921ZM21.9433 71.7986C21.9296 71.8904 21.9433 71.9958 21.9495 72.1666C21.9495 73.7172 23.2515 74.8954 24.8578 74.8954C26.4642 74.8954 27.7661 73.8491 27.7661 72.2981C27.7661 71.4823 27.4351 70.8521 26.8599 70.339C26.3902 69.9205 25.0522 69.2927 24.531 68.9848C24.0405 68.6954 23.8092 68.4725 23.7976 68.0515C23.7976 67.4354 24.2195 67.0016 24.8578 67.0016C25.1643 67.0016 25.4583 67.1192 25.6751 67.3284C25.8918 67.5376 26.0136 67.8214 26.0136 68.1173C26.0252 68.2752 26.0293 68.4328 26.0293 68.5378H27.5738V68.1173C27.5738 66.6697 26.6286 65.522 24.8578 65.522C23.3582 65.522 22.1418 66.5134 22.1418 68.1173C22.1472 68.8273 22.4877 69.5108 23.3324 70.0499C24.2399 70.6288 25.3753 71.0618 25.7565 71.4302C25.9866 71.6523 26.129 71.9589 26.129 72.2977C26.129 72.9752 25.5597 73.4591 24.8574 73.4591C24.1551 73.4591 23.5908 72.8629 23.5044 72.2977C23.4861 72.1534 23.4408 71.9036 23.4545 71.7982H21.9433V71.7986ZM51.3892 68.9848C50.8983 68.6954 50.6674 68.4725 50.6549 68.0515C50.6549 67.4354 51.0777 67.0016 51.716 67.0016C52.0224 67.0018 52.3161 67.1195 52.5327 67.3287C52.7493 67.5379 52.8709 67.8215 52.8709 68.1173C52.883 68.2752 52.8871 68.4328 52.8871 68.5378H54.4316V68.1173C54.4316 66.6697 53.486 65.522 51.716 65.522C50.2156 65.522 48.9996 66.5134 48.9996 68.1173C49.0054 68.8273 49.3459 69.5108 50.1902 70.0499C51.098 70.6288 52.2335 71.0618 52.6147 71.4302C52.8444 71.6523 52.9868 71.9589 52.9868 72.2977C52.9868 72.9752 52.4174 73.4591 51.7156 73.4591C51.0133 73.4591 50.4485 72.8629 50.3617 72.2977C50.3439 72.1534 50.2986 71.9036 50.3123 71.7982H48.8002C48.7865 71.89 48.8002 71.9954 48.8069 72.1662C48.8069 73.7168 50.1088 74.895 51.7156 74.895C53.3215 74.895 54.6235 73.8487 54.6235 72.2977C54.6235 71.4819 54.2925 70.8517 53.7173 70.3386C53.248 69.9205 51.9099 69.2927 51.3892 68.9848Z" fill="#767676"/>
+              </svg>            
+            </div>
+          <!-- CarLogo -->
+          <div class="swiper-slide">
+            <svg width="59" height="60" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1677 3.88948C52.5444 8.82081 58.9498 18.6525 58.9498 29.9853C58.9498 41.3181 52.5444 51.1808 43.1677 56.0819V52.7122C46.7536 50.567 49.787 47.5654 51.9942 44.0128L43.1677 40.43V34.9778L52.8513 42.5434C54.8741 38.8063 56.0079 34.5485 56.0079 29.9845C56.0079 20.3668 50.8588 11.9138 43.1677 7.25763V3.88948ZM29.5308 0.550781C34.4342 0.550781 39.061 1.74583 43.1677 3.88948V7.25918C39.3981 4.99153 34.9853 3.64458 30.3275 3.49113L33.698 27.5967L43.1677 34.9786V40.4307L29.4688 34.8864L15.8621 40.461V35.0391L25.3931 27.596L28.7333 3.49036C24.0136 3.64381 19.6317 4.99153 15.8621 7.25763V3.88948C19.9386 1.74583 24.5964 0.550781 29.5308 0.550781ZM43.1677 56.0819C39.061 58.2255 34.4335 59.45 29.5308 59.45C24.5972 59.45 19.9394 58.2255 15.8629 56.1121V52.7122C19.8472 55.1309 24.5352 56.5097 29.5308 56.5097C34.4955 56.5097 39.154 55.1309 43.1677 52.7122V56.0819ZM15.8629 56.1121C6.4544 51.1808 0.0498047 41.3181 0.0498047 29.9853C0.0498047 18.6525 6.4544 8.82081 15.8629 3.88948V7.25918C8.14003 11.9146 2.9917 20.3373 2.9917 29.9853C2.9917 34.5485 4.15653 38.8683 6.17928 42.6046L15.8629 35.0391V40.461L7.06743 44.074C9.27386 47.5979 12.277 50.5677 15.8629 52.7122V56.1121Z" fill="#D0D0D0"/>
+            </svg>
+            </div>
+             <!-- MiniCopper -->
+          <div class="swiper-slide">
+            <svg width="99" height="43" viewBox="0 0 99 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49.4998 0.00720215C45.8904 0.00781565 42.3393 0.917956 39.1744 2.65362C36.0094 4.38928 33.3325 6.89452 31.3909 9.93808H0.5L3.57525 13.0142H29.7862C29.2887 14.172 28.894 15.3712 28.6066 16.5981H7.15803L10.1958 19.6367H28.1093C28.0505 20.2561 28.0186 20.8778 28.0138 21.5C28.0194 22.0745 28.0481 22.6486 28.0998 23.2209H13.7789L16.8166 26.2595H28.5669C28.8393 27.485 29.2185 28.6842 29.7002 29.8434H20.3994L23.4747 32.9195H31.3279C33.2584 35.9984 35.9379 38.5374 39.1159 40.299C42.2939 42.0605 45.8665 42.9872 49.4998 42.9924C53.1332 42.9873 56.7059 42.0606 59.884 40.299C63.062 38.5375 65.7416 35.9985 67.6721 32.9195H75.5253L78.6006 29.8434H69.2998C69.7814 28.6842 70.1607 27.485 70.4331 26.2595H82.1834L85.2211 23.2209H70.9002C70.9519 22.6486 70.9806 22.0745 70.9862 21.5C70.9815 20.8778 70.9497 20.2561 70.891 19.6367H88.8042L91.842 16.5981H70.3934C70.106 15.3712 69.7113 14.172 69.2138 13.0142H95.4248L98.5 9.93808H67.6091C65.6674 6.89447 62.9905 4.38919 59.8255 2.65353C56.6604 0.917863 53.1093 0.00775503 49.4998 0.00720215ZM49.4998 2.92052C51.939 2.92051 54.3543 3.40108 56.6078 4.33479C58.8613 5.26849 60.9089 6.63705 62.6336 8.36231C64.3584 10.0876 65.7265 12.1358 66.6599 14.3899C67.5934 16.6441 68.0738 19.0601 68.0738 21.5C68.0738 23.9399 67.5934 26.3559 66.6599 28.61C65.7265 30.8642 64.3584 32.9124 62.6336 34.6376C60.9089 36.3629 58.8613 37.7314 56.6078 38.6652C54.3543 39.5989 51.939 40.0794 49.4998 40.0794C44.5737 40.0794 39.8493 38.122 36.366 34.6376C32.8827 31.1533 30.9258 26.4276 30.9258 21.5C30.9258 16.5724 32.8827 11.8466 36.366 8.36231C39.8493 4.87799 44.5737 2.92052 49.4998 2.92052ZM34.7242 16.6845V26.3151H36.732V18.7343L38.8499 26.3151H40.9309L43.0559 18.7343V26.3151H45.0641V16.6845H41.8218L39.9014 23.2538L37.959 16.6845H34.7242ZM47.1597 16.6845V26.3151H49.3211V16.6845H47.1597ZM51.3947 16.6845V26.3151H53.4029V20.035L57.7187 26.3151H59.8875V16.6845H57.8793V23.1158L53.4981 16.6845H51.3947ZM62.1144 16.6845V26.3151H64.2758V16.6845H62.1144Z" fill="#D0D0D0"/>
+            </svg>
+            </div>
+           
+        </div>
+      </div>
+    </section>
+
+    <!-- section 3 -->
+    <section class="w-full h-auto mx-auto py-[60px] sm:py-[35px] md:py-[6rem] lg:py-[8rem] xl:py-[8rem]">
+      <ul>
+        <div class="container mx-auto text-center flex flex-col gap-[45px] sm:gap-[50px] md:gap-0 xl:gap-[20px]">
+          <div class=" flex flex-col md:flex-row gap-0 sm:gap-[20px] md:gap-[102px] xl:gap-[9%]">
+            <div
+              class="text-start flex flex-col mb-12 sm:mb-0 md:mb-[2rem] xl:mb-12 sm:gap[12px]  md:gap-[12px] lg:gap-[20px] xl:gap-[12px]">
+              <h2
+                class="text-[32px] md:text-[30px] lg:text-[64px] xl:text-[64px] w-[100%] h-[50%]  md:w-[100%] md:h-[50%] lg:w-[75%] lg:h-[70%] xl:w-[60%] xl:h-[80%] font-normal leading-[40px] md:leading-[72px] xl:leading-[72px] text-[#050810] text-start">
+                Line up luxury Gasrent Car</h2>
+              <p
+                class="text-[14px] md:text-[14px] lg:text-[16px] xl:text-[20px] w-[100%] h-[50%]  md:w-[100%] md:h-[48%] lg:w-[60%] xl:w-[60%] xl:h-[48%] font-normal leading-[26px] md:leading-[32px] xl:leading-[32px] text-start text-[#747B8B]">
+                Many Car in our Company clean and comfortable</p>
+            </div>
+            <div class="relative md:pt-[8%] xl:pt-[12%]">
+              <input type="text" placeholder="Search Car..."
+                class="px-[32px] py-[14px] md:px-[32px] md:py-[10px] xl:px-[32px] xl:py-[14px] w-[100%] md:w-[260px] xl:w-[309px] border rounded-full focus:outline-none focus:ring-2 focus:ring-[#E3E5E8]">
+              <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-[#989EA9]"></i>
+            </div>
+          </div>
+          <!-- ullia -->
+          <div class="flex flex-wrap section-navbar items-center justify-start gap-4 md:gap-[10px] xl:gap-[12px] mb-[40px]">
+            <ul
+              class="flex gap-[10px] sm:gap-[10px] md:gap-[10px] xl:gap-[5px] overflow-x-auto xl:overflow-visible whitespace-nowrap px-4 -mx-4 items-center min-h-[48px] no-scrollbar">
+              <li><a href="#all"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full bg-[#7C3AED] text-white font-normal text-sm sm:text-base hover:bg-[#7240FF] transition-all duration-200" onclick="showCard('all')">
+                  All Car</a></li>
+              <li><a href="#acura"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Acura</a></li>
+              <li><a href="#mercedes"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Mercedes</a></li>
+              <li><a href="#range"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Range Rover</a></li>
+              <li><a href="#tesla"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Tesla</a></li>
+              <li><a href="#bmw"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  BMW</a></li>
+              <li><a href="#kia"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Kia</a></li>
+              <li><a href="#mitsubishi"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Mitsubishi</a></li>
+              <li><a href="#audi"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Audi</a></li>
+              <li><a href="#hyundai"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Hyundai</a></li>
+              <li><a href="#miniCopper"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Mini Copper</a></li>
+              <li><a href="#ertiga"
+                  class=" px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200" >
+                  Ertiga</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-[2px] sm:gap-[24px] md:gap-[14px] xl:gap-[24px]">
+          <!-- Card 1 -->
+          <div class=" overflow-hidden mitsubishi">
+            <li><a href="#" class="block">
+                <img src="mitsubushi.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+              </a>
+              <div class="p-4">
+                <div class="mb-4">
+                  <h3
+                    class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                    Mitsubishi Pajero Sport</h3>
+                  <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                    <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                    Review (4.5k)
+                  </p>
+                  <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                      class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+                </div>
+                <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                  <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                    <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                      <a href="#">1 Unit Available</a>
+                    </li>
+                    <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                      <a href="#">1-4 Seat</a>
+                    </li>
+                    <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                      <a href="#">Manual</a>
+                    </li>
+                    <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                      <a href="#">Gasoline</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class=" overflow-hidden range">
+            <img src="rangeRover.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  Range Rover Familly Car</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class=" overflow-hidden ertiga">
+            <img src="ertiga.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  Suzuki ertiga family</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class=" overflow-hidden miniCopper">
+            <img src="miniCooper.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  Mini Cooper Special</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class=" overflow-hidden bmw">
+            <img src="bmw.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  BMW Sport Catergories</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class=" overflow-hidden mercedes">
+            <img src="marcedes2.jpg" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  Mercedes - Beside Trees</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class=" overflow-hidden hyundai">
+            <img src="hyundai.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[217px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  Hyundai Car - Latest model</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card 8-->
+          <div class=" overflow-hidden kia">
+            <img src="kia.png" alt="Mitsubishi" class="rounded-[15px] w-full h-48 object-cover">
+            <div class="p-4">
+              <div class="mb-4">
+                <h3
+                  class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1">
+                  Kia Family Car</h3>
+                <p class="text-sm xl:text-[14px] text-[#8B919E] mb-2">
+                  <img src="bintang.svg" alt="Star" class="w-4 h-4 inline-block">
+                  Review (4.5k)
+                </p>
+                <p class="text-[#050810] text-[16px] font-normal mb-2">$500 <span
+                    class="text-sm xl:text-[12px] text-[#8B919E]">/day</span></p>
+              </div>
+              <div class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px] text-sm text-[#8B919E]">
+                <ul class="flex flex-wrap gap-2 md:gap-[0.2rem] xl:gap-[6px]">
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1 Unit Available</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">1-4 Seat</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Manual</a>
+                  </li>
+                  <li class="px-2 py-1 text-sm md:text-[10px] xl:text-[12px] border rounded-full">
+                    <a href="#" class="hover:underline">Gasoline</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full mx-auto flex justify-center items-center mt-[2rem]">
+          <button
+            class="bg-[#7240FF] text-white rounded-[31px] text-[12px] md:text-[15px] xl:text-[16px] px-[24px] py-[12px] font-normal w-fit">
+            View All Car
+          </button>
+        </div>
+      </ul>
+    </section>
+
+    <!-- section 4 -->
+    <section
+      class="container w-full md:w-[102%] xl:w-full mx-auto md:flex items-start py-[50px] md:px-[50px] xl:px-0 lg:py-[100px] gap-[77px] md:gap-0 xl:gap-[110px]">
+      <div class="mb-8 px-4 md:mb-0 md:px-0">
+        <div class="text-[#050810] text-left  md:w-[96%] xl:w-[110%]">
+          <h1
+            class="text-[32px] md:text-[28px] xl:text-[64px] w-[90%] md:w-[90%] xl:w-[90%] font-normal leading-[40px] md:leading-[35px] lg:leading-[60px] xl:leading-[72px]">
+            Frequently Asked Question (FAQ)</h1>
+          <p
+            class="text-[20px] lg:text-[20px] sm:text-[20px] md:text-[16px] xl:text-[20px] text-[#6A7182] w-[90%] md:w-[96%] xl:w-[102%] mt-[10px] lg:mt-[24px] leading-[32px] md:leading-[23px] xl:leading-[32px]">
+            Experience a wealth of powerful features that are designed to be accessible and easy to use for everyone,
+            regardless of.</p>
+        </div>
+      </div>
+
+      <div class="categories w-full px-4 md:px-0 grid grid-cols-1 gap-[10px] lg:gap-[14px]">
+        <!-- 1  -->
+        <div class="faq-item border-b border-[#E3E5E8] pb-4">
+          <div
+            class="faq-header flex justify-between items-center w-full md:w-[110%] xl:w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] md:mt-[-8px] xl:mt-[-20px] md:mb-[-1px] xl:mb-[-14px] cursor-pointer">
+            <h3>What is GasRent Car?</h3>
+            <img src="btnScrool.svg" alt="Expand" class="w-[15%] h-[15%] transition-transform transform rotate-0" />
+          </div>
+          <p
+            class="faq-answer overflow-hidden max-h-0 transition-all duration-500 text-[20px] md:text-[12px] xl:text-[20px] text-[#8B919E] leading-[23px] md:leading-[1rem] xl:leading-[32px] mt-2 md:mt-[-0.5rem] xl:mt-[-0.5rem] ">
+            Experience a wealth of powerful features that are designed to be accessible and easy to use for everyone.
+          </p>
+        </div>
+        <!-- 2 -->
+        <div class="faq-item border-b border-[#E3E5E8] pb-4">
+          <div
+            class="faq-header flex justify-between items-center w-full md:w-[110%] xl:w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] md:mt-[-8px] xl:mt-[-20px] md:mb-[-1px] xl:mb-[-14px] cursor-pointer">
+            <h3>How do I place an order with GasRent Car?</h3>
+            <img src="btnScrool.svg" alt="Expand" class="w-[15%] h-[15%] transition-transform transform rotate-0" />
+          </div>
+          <p
+            class="faq-answer overflow-hidden max-h-0 transition-all duration-500 text-[20px] md:text-[12px] xl:text-[20px] text-[#8B919E] leading-[23px] md:leading-[1rem] xl:leading-[32px] mt-2 md:mt-[-0.5rem] xl:mt-[-0.5rem]  ">
+            Experience a wealth of powerful features that are designed to be accessible and easy to use for everyone.
+          </p>
+        </div>
+        <!-- 3 -->
+        <div class="faq-item border-b border-[#E3E5E8] pb-4">
+          <div
+            class="faq-header flex justify-between items-center w-full md:w-[110%] xl:w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] md:mt-[-8px] xl:mt-[-20px] md:mb-[-1px] xl:mb-[-14px] cursor-pointer">
+            <h3>What features does GasRent Car have?</h3>
+            <img src="btnScrool.svg" alt="Expand" class="w-[15%] h-[15%] transition-transform transform rotate-0" />
+          </div>
+          <p
+            class="faq-answer overflow-hidden max-h-0 transition-all duration-500 text-[20px] md:text-[12px] xl:text-[20px] text-[#8B919E] leading-[23px] md:leading-[1rem] xl:leading-[32px] mt-2 md:mt-[-0.5rem] xl:mt-[-0.5rem]  ">
+            Experience a wealth of powerful features that are designed to be accessible and easy to use for everyone.
+          </p>
+        </div>
+        <!-- 4 -->
+        <div class="faq-item border-b border-[#E3E5E8] pb-4">
+          <div
+            class="faq-header flex justify-between items-center w-full md:w-[110%] xl:w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] md:mt-[-8px] xl:mt-[-20px] md:mb-[-1px] xl:mb-[-14px] cursor-pointer">
+            <h3> Is this app for worldwide?</h3>
+            <img src="btnScrool.svg" alt="Expand" class="w-[15%] h-[15%] transition-transform transform rotate-0" />
+          </div>
+          <p
+            class="faq-answer overflow-hidden max-h-0 transition-all duration-500 text-[20px] md:text-[12px] xl:text-[20px] text-[#8B919E] leading-[23px] md:leading-[1rem] xl:leading-[32px] mt-2 md:mt-[-0.5rem] xl:mt-[-0.5rem]  ">
+            Experience a wealth of powerful features that are designed to be accessible and easy to use for everyone.
+          </p>
+        </div>
+        <!-- 5 -->
+        <div class="faq-item border-b border-[#E3E5E8] pb-4">
+          <div
+            class="faq-header flex justify-between items-center w-full md:w-[110%] xl:w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] md:mt-[-8px] xl:mt-[-20px] md:mb-[-1px] xl:mb-[-14px] cursor-pointer">
+            <h3>Why choose GasRent Car?</h3>
+            <img src="btnScrool.svg" alt="Expand" class="w-[15%] h-[15%] transition-transform transform rotate-0" />
+          </div>
+          <p
+            class="faq-answer overflow-hidden max-h-0 transition-all duration-500 text-[20px] md:text-[12px] xl:text-[20px] text-[#8B919E] leading-[23px] md:leading-[1rem] xl:leading-[32px] mt-2 md:mt-[-0.5rem] xl:mt-[-0.5rem]  ">
+            Experience a wealth of powerful features that are designed to be accessible and easy to use for everyone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="/main.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+
+    //FAQ
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    faqHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const wrapper = header.nextElementSibling; // Ambil elemen berikutnya (teks)
+        const img = header.querySelector('img');   // Ambil ikon gambar
+
+        // Tutup semua FAQ yang terbuka
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+          if (answer !== wrapper) {
+            answer.style.maxHeight = '0';
+            answer.classList.remove('open');
+          }
+        });
+
+        document.querySelectorAll('.faq-header img').forEach(icon => {
+          if (icon !== img) {
+            icon.classList.remove('rotate-180'); // Kembalikan ikon ke posisi semula
+          }
+        });
+
+        if (wrapper.classList.contains('open')) {
+          wrapper.style.maxHeight = '0';
+          wrapper.classList.remove('open');
+          img.classList.remove('rotate-180');
+        } else {
+          wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+          wrapper.classList.add('open');
+          img.classList.add('rotate-180');
+        }
+      });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+  // Thumbnail Swiper
+  const thumbnailSwiper = new Swiper('.thumbnail-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+    initialSlide: 3, // Set Acura (index 3) sebagai slide aktif awal
+    loopedSlides: 7, // Jumlah slide yang di-loop
+    breakpoints: {
+      640: {
+        slidesPerView: 5,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 7,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  // Main Swiper
+  const mainSwiper = new Swiper('.main-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    speed: 600,
+    loopedSlides: 7, // Jumlah slide yang di-loop
+    autoHeight: true,
+    initialSlide: 3, // Set Acura (index 3) sebagai slide aktif awal
+    navigation: {
+      nextEl: '.nav-button-right',
+      prevEl: '.nav-button-left',
+    },
+  });
+
+  // Sinkronisasi antara mainSwiper dan thumbnailSwiper
+  mainSwiper.controller.control = thumbnailSwiper;
+  thumbnailSwiper.controller.control = mainSwiper;
+
+  // CSS tambahan
+  document.styleSheets[0].insertRule(`
+    .thumbnail-swiper, .main-swiper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  `, document.styleSheets[0].cssRules.length);
+
+  // Warna thumbnail
+  const updateThumbnailColors = () => {
+    document.querySelectorAll('.thumbnail-swiper .swiper-slide svg path').forEach((path, index) => {
+      if (thumbnailSwiper.slides[index].classList.contains('swiper-slide-active')) {
+        path.style.fill = 'black';
+      } else {
+        path.style.fill = '#D0D0D0';
+      }
+    });
+  };
+
+  // Event ketika slide di mainSwiper berubah
+  mainSwiper.on('slideChangeTransitionEnd', () => {
+    const activeIndex = mainSwiper.realIndex;
+    thumbnailSwiper.slideToLoop(activeIndex); // Update thumbnail sesuai slide aktif
+    updateThumbnailColors();
+  });
+
+  // Event ketika thumbnail diklik
+  thumbnailSwiper.on('click', (swiper) => {
+    const clickedIndex = swiper.clickedIndex;
+    if (typeof clickedIndex !== 'undefined') {
+      mainSwiper.slideToLoop(clickedIndex); // Slide utama berubah sesuai thumbnail yang diklik
+      updateThumbnailColors();
+    }
+  });
+
+  updateThumbnailColors();
+});
+
+  
+    // nav2
+     document.querySelectorAll('.section-navbar a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+
+        const category = this.getAttribute('href');
+        document.querySelectorAll('.content').forEach(item => {
+          item.style.display = item.classList.contains(category) || category === "all" ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // mengaktifkan link 'All' 
+    const allNavLink = document.querySelector('a[href="#all"]');
+    allNavLink.addEventListener('click', function () {
+      document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
+    });
+
+    // tampilan berdasarkan kategori
+    function showCategory(category) {
+      const allCards = document.querySelectorAll('.card-container > div');
+      const categoryCards = document.querySelectorAll(`.card-container > div.${category}`);
+
+      allCards.forEach(card => {
+        card.classList.add('hidden');
+      });
+
+      if (category === "all") {
+        allCards.forEach(card => {
+          card.classList.remove('hidden');
+        });
+      } else {
+        categoryCards.forEach(card => {
+          card.classList.remove('hidden');
+        });
+      }
+      AOS.refresh();
+    }
+
+    // Menambahkan event listener pada setiap link kategori
+    document.querySelectorAll('.section-navbar a').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        document.querySelectorAll('.section-navbar a').forEach(link => link.classList.remove('active'));
+
+        this.classList.add('active');
+        const category = this.getAttribute('href').substring(1);
+        showCategory(category);
+      });
+    });
+
+  </script>
+</body>
+
 </html>
