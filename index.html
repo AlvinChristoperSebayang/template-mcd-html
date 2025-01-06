@@ -4,12 +4,86 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    
     <title>Vite App</title>
   </head>
   <body>
-    <header id="site-header"></header>
-    <main id="site-main">
+    <header id="site-header" class="bg-[#0761FD]">
+        <nav class="h-[72px] mx-[60px] flex flex-row items-center justify-between">
+          <div class="flex flex-row px-[7.44px] gap-x-[5.86px]">
+            <img src="./public/assets/Logo.svg" alt="">
+            <span class="text-[26.61px] font-bold text-white leading-[43px]">Minance</span>
+          </div>
+          <nav class="flex flex-row gap-x-[48px] text-[#E3E3E3] text-[14px] leading-[24px]">
+            <a href="">About</a>
+            <a href="">Download</a>
+            <a href="">Contact</a>
+          </nav>
+          <div class="flex flex-row gap-x-[32px]">
 
+            <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px]">
+              <span class="text-[#E3E3E3]">EN</span>
+              <img src="./public/assets/Icon.svg" alt="">
+              <img src="./public/assets/Flags.svg" alt="">
+            </div>
+            
+            <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
+              <a href="">
+                <span class="px-[24px] py-[12px]">Sign Up</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main id="site-main">
+      <section class="bg-[#0761FD]">
+        <div class="px-[60px] pt-[42px]">
+          <h1 class="leading-[88px] text-[64px] text-white text-center px-[112px] font-semibold">Save your finances and transfer to any bank in the world</h1>
+          <div class="flex flex-row pt-[60px]">
+            <div class="flex flex-col justify-end gap-y-[40px] mb-[60px] pr-[62px] bg-yellow-600">
+              <div class="flex flex-col gap-y-[24px]">
+                <p class="text-[#E3E3E3] leading-[26px]">Making it fun and easy for you to transfer, top up and receive money from anywhere in the world, with more currencies easy to do</p>
+                <div class="rounded-full bg-[#3CF14E] w-fit py-[12px] px-[24px]">
+                  <a href="">
+                    <span class="font-medium text-[#111111]">Create account now</span>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-row gap-x-[12px]">
+                <figure>
+                  <img src="./public/assets/People.svg" alt="">
+                </figure>
+                <div>
+                  <span class="text-white font-semibold">Transted User</span>
+                  <div class="flex flex-row">
+                    <img src="./public/assets/Star.svg" alt="">
+                    <span class="text-[12px] text-[#E3E3E3]">(4.9) User</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <figure class="w-[522px] h-[572px]">
+              <img src="./public/assets/Image.png" class="h-full" alt="">
+            </figure>
+            <div class="flex flex-col gap-y-[60px] bg-red-500 mb-[60px] w-[2272px] pl-[127px] justify-end">
+              <div>
+                <p class="text-[32px] text-white font-semibold">1K+</p>
+                <p class="text-[14px] text-[#E3E3E3]">User use</p>
+              </div>
+              <div>
+                <p class="text-[32px] text-white font-semibold">1K+</p>
+                <p class="text-[14px] text-[#E3E3E3]">User use</p>
+              </div>
+              <div>
+                <p class="text-[32px] text-white font-semibold">1K+</p>
+                <p class="text-[14px] text-[#E3E3E3]">User use</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer id="site-footer"></footer>
     <script type="module" src="/main.js"></script>
