@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  :root{
+    --site-max-width: 1200px;
+    --text-mobile : 12px;
+  }
+  @media(min-width: 768px){
+    :root{
+      --text-mobile : 16px;
+    }
+  }
+
+}
+@layer utilities {
+ .btn--primary{
+  @apply ;
+ }
+ p{
+  font-size: var(--text-mobile)
+ }
+}
 #site-header .navigation-wrapper{
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }

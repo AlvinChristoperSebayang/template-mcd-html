@@ -1,123 +1,141 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header id="site-header" class="bg-[#0761FD]">
-        <nav class="h-[72px] laptop:mx-[60px] mobile:mx-[24px] flex flex-row items-center justify-between">
-          <div class="flex flex-row px-[7.44px] gap-x-[5.86px]">
-            <img src="./public/assets/Logo.svg" alt="">
-            <span class="laptop:text-[26.61px] mobile:text-[21px] font-bold text-white laptop:leading-[43px] mobile:leading-[34px]">Minance</span>
-          </div>
 
-          <!-- desktop -->
-          <div class="hidden desktop:flex flex-row gap-x-[48px] text-[#E3E3E3] text-[14px] leading-[24px]">
-            <a href="">About</a>
-            <a href="">Download</a>
-            <a href="">Contact</a>
-          </div>
-          <div class="hidden desktop:flex  flex-row gap-x-[32px]">
-            <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px] items-center">
-              <span class="text-[#E3E3E3]">EN</span>
-              <img src="./public/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
-              <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <header id="site-header" class="bg-[#0761FD]">
+    <nav class="h-[72px] flex flex-row items-center justify-between container mx-auto">
+      <div class="flex flex-row px-[7.44px] gap-x-[5.86px]">
+        <img src="./public/assets/Logo.svg" alt="">
+        <span
+          class="laptop:text-[26.61px] mobile:text-[21px] font-bold text-white laptop:leading-[43px] mobile:leading-[34px]">Minance</span>
+      </div>
+
+      <!-- desktop -->
+      <div class="hidden desktop:flex flex-row gap-x-[48px] text-[#E3E3E3] text-[14px] leading-[24px]">
+        <a href="">About</a>
+        <a href="">Download</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="hidden desktop:flex  flex-row gap-x-[32px]">
+        <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px] items-center">
+          <span class="text-[#E3E3E3]">EN</span>
+          <img src="./public/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
+          <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
+        </div>
+
+        <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
+          <a href="" class="px-[24px] py-[12px]">
+            <span>Sign Up</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- laptop -->
+      <div
+        class="desktop:hidden mobile:hidden laptop:flex flex-row gap-x-[32px] text-[#E3E3E3] text-[14px] leading-[24px] items-center">
+        <div class="flex flex-row gap-x-[48px]">
+          <a href="">About</a>
+          <a href="">Download</a>
+          <a href="">Contact</a>
+        </div>
+        <figure>
+          <img src="./public/assets/Vector 1.svg" alt="">
+        </figure>
+        <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px]">
+          <span class="text-[#E3E3E3]">EN</span>
+          <img src="./public/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
+          <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
+        </div>
+        <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
+          <a href="" class="px-[24px] py-[12px]">
+            <span>Sign Up</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="desktop:hidden laptop:hidden">
+        <button>
+          <img src="./public/assets/Hamburger.svg" alt="">
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="site-main">
+    <section class="bg-[#0761FD]">
+      <div
+        class="desktop:pt-[42px]  laptop:pt-[32px] mobile:pt-[24px]  container mx-auto">
+        <h1
+          class="desktop:leading-[88px] desktop:text-[64px] laptop:leading-[64px] laptop:text-[48px] mobile:leading-[42px] mobile:text-[32px] text-white text-center desktop:px-[112px] font-semibold font-inter">
+          Save your finances and transfer to any bank in the world</h1>
+        <div
+          class="flex desktop:pt-[60px] laptop:pt-[32px] mobile:pt-[24px] laptop:flex-row mobile:flex-col justify-between mobile:items-center laptop:items-end">
+          <div
+            class="flex flex-col justify-end gap-y-[40px] laptop:mb-[60px] mobile:mb-[24px] w-[337px] min-w-[242px] mobile:items-center laptop:items-start">
+            <div
+              class="flex flex-col gap-y-[24px] mobile:items-center laptop:items-start justify-center text-[14px] leading-[24px]">
+              <p class="text-[#E3E3E3] leading-[26px] mobile:text-center laptop:text-left">Making it fun and easy for
+                you to transfer, top up and receive money from anywhere in the world, with more currencies easy to do
+              </p>
+              <div class="rounded-full bg-[#3CF14E] w-fit py-[12px] px-[24px]">
+                <a href="">
+                  <span class="font-medium text-[#111111]">Create account now</span>
+                </a>
+              </div>
             </div>
-
-            <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
-              <a href="" class="px-[24px] py-[12px]">
-                <span>Sign Up</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- laptop -->
-          <div class="desktop:hidden mobile:hidden laptop:flex flex-row gap-x-[32px] text-[#E3E3E3] text-[14px] leading-[24px] items-center">
-            <div class="flex flex-row gap-x-[48px]">
-              <a href="">About</a>
-              <a href="">Download</a>
-              <a href="">Contact</a>
-            </div>
-            <figure>
-              <img src="./public/assets/Vector 1.svg" alt="">
-            </figure>
-            <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px]">
-              <span class="text-[#E3E3E3]">EN</span>
-              <img src="./public/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
-              <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
-            </div>
-            <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
-              <a href="" class="px-[24px] py-[12px]">
-                <span >Sign Up</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Mobile -->
-          <div class="desktop:hidden laptop:hidden">
-            <button>
-              <img src="./public/assets/Hamburger.svg" alt="">
-            </button>
-          </div>
-
-        </nav>
-    </header>
-
-    <main id="site-main">
-      <section class="bg-[#0761FD]">
-        <div class="desktop:px-[60px] desktop:pt-[42px] laptop:px-[40px] laptop:pt-[32px] mobile:px-[24px] mobile:pt-[24px]">
-          <h1 class="desktop:leading-[88px] desktop:text-[64px] laptop:leading-[64px] laptop:text-[48px] mobile:leading-[42px] mobile:text-[32px] text-white text-center desktop:px-[112px] font-semibold">Save your finances and transfer to any bank in the world</h1>
-          <div class="flex desktop:pt-[60px] laptop:pt-[32px] mobile:pt-[24px] laptop:flex-row mobile:flex-col justify-between mobile:items-center laptop:items-end">
-            <div class="flex flex-col justify-end gap-y-[40px] laptop:mb-[60px] mobile:mb-[24px] w-[337px] min-w-[242px] mobile:items-center laptop:items-start">
-              <div class="flex flex-col gap-y-[24px] mobile:items-center laptop:items-start justify-center text-[14px] leading-[24px]">
-                <p class="text-[#E3E3E3] leading-[26px] mobile:text-center laptop:text-left">Making it fun and easy for you to transfer, top up and receive money from anywhere in the world, with more currencies easy to do</p>
-                <div class="rounded-full bg-[#3CF14E] w-fit py-[12px] px-[24px]">
-                  <a href="">
-                    <span class="font-medium text-[#111111]">Create account now</span>
-                  </a>
+            <div class="flex flex-row gap-x-[12px] items-center">
+              <figure>
+                <img src="./public/assets/People.svg" alt="">
+              </figure>
+              <div>
+                <span class="text-white font-semibold text-[16px]">Transted User</span>
+                <div class="flex flex-row">
+                  <img src="assets/Star.svg" alt="">
+                  <span class="text-[12px] text-[#E3E3E3]">(4.9) User</span>
                 </div>
               </div>
-              <div class="flex flex-row gap-x-[12px] items-center">
-                <figure>
-                  <img src="./public/assets/People.svg" alt="">
-                </figure>
-                <div>
-                  <span class="text-white font-semibold text-[16px]">Transted User</span>
-                  <div class="flex flex-row">
-                    <img src="./public/assets/Star.svg" alt="">
-                    <span class="text-[12px] text-[#E3E3E3]">(4.9) User</span>
-                  </div>
-                </div>
-              </div>
             </div>
-            <figure class="mobile:order-last">
-              <img src="./public/assets/Image.png" class="h-full bg-contain bg-center" alt="">
-            </figure>
-            <div class="laptop:order-last flex laptop:flex-col laptop:gap-y-[60px] laptop:mb-[60px] mobile:mb-[40px] laptop:w-[400px] laptop:justify-end mobile:flex-row mobile:gap-x-[26px]">
-              <div class="text-right">
-                <p class="text-[32px] text-white font-semibold">1K+</p>
-                <p class="text-[14px] text-[#E3E3E3]">User use</p>
-              </div>
-              <div class="text-right">
-                <p class="text-[32px] text-white font-semibold">20K+</p>
-                <p class="text-[14px] text-[#E3E3E3]">Satisfied User</p>
-              </div>
-              <div class="text-right">
-                <p class="text-[32px] text-white font-semibold">4.9+</p>
-                <p class="text-[14px] text-[#E3E3E3]">Rating User</p>
-              </div>
-              
+          </div>
+          <figure class="mobile:order-last">
+            <img src="/assets/Image.png" class="h-full bg-contain bg-center" alt="">
+          </figure>
+          <div
+            class="laptop:order-last flex laptop:flex-col laptop:gap-y-[60px] laptop:mb-[60px] mobile:mb-[40px] laptop:w-[400px] laptop:justify-end mobile:flex-row mobile:gap-x-[26px]">
+            <div class="text-right">
+              <p class="text-[32px] text-white font-semibold">1K+</p>
+              <p class="text-[14px] text-[#E3E3E3]">User use</p>
             </div>
+            <div class="text-right">
+              <p class="text-[32px] text-white font-semibold">20K+</p>
+              <p class="text-[14px] text-[#E3E3E3]">Satisfied User</p>
+            </div>
+            <div class="text-right">
+              <p class="text-[32px] text-white font-semibold">4.9+</p>
+              <p class="text-[14px] text-[#E3E3E3]">Rating User</p>
+            </div>
+
           </div>
         </div>
-      </section>
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
