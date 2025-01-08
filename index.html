@@ -15,7 +15,7 @@
     <header id="site-header" class="bg-[#0761FD]">
         <nav class="h-[72px] laptop:mx-[60px] mobile:mx-[24px] flex flex-row items-center justify-between">
           <div class="flex flex-row px-[7.44px] gap-x-[5.86px]">
-            <img src="./public/assets/Logo.svg" alt="">
+            <img src="/assets/Logo.svg" alt="">
             <span class="laptop:text-[26.61px] mobile:text-[21px] font-bold text-white laptop:leading-[43px] mobile:leading-[34px]">Minance</span>
           </div>
 
@@ -28,8 +28,8 @@
           <div class="hidden desktop:flex  flex-row gap-x-[32px]">
             <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px] items-center">
               <span class="text-[#E3E3E3]">EN</span>
-              <img src="./public/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
-              <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
+              <img src="/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
+              <img src="/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
             </div>
 
             <button class="btn-primary">
@@ -45,12 +45,12 @@
               <a href="">Contact</a>
             </div>
             <figure>
-              <img src="./public/assets/Vector 1.svg" alt="">
+              <img src="/assets/Vector 1.svg" alt="">
             </figure>
             <div class="flex flex-row rounded-full border-white border px-[10px] py-[8px] gap-x-[4px]">
               <span class="text-[#E3E3E3]">EN</span>
-              <img src="./public/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
-              <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
+              <img src="/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
+              <img src="/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
             </div>
             <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
               <a href="" class="px-[24px] py-[12px]">
@@ -60,9 +60,9 @@
           </div>
 
           <!-- Mobile -->
-          <div class="desktop:hidden laptop:hidden">
+          <div class="desktop:hidden laptop:hidden hamburger">
             <button>
-              <img src="./public/assets/Hamburger.svg" alt="">
+              <img src="/assets/Hamburger.svg" alt="">
             </button>
           </div>
 
@@ -85,19 +85,19 @@
               </div>
               <div class="flex flex-row gap-x-[12px] items-center">
                 <figure>
-                  <img src="./public/assets/People.svg" alt="">
+                  <img src="/assets/People.svg" alt="">
                 </figure>
                 <div>
                   <span class="text-white font-semibold text-[16px]">Transted User</span>
                   <div class="flex flex-row">
-                    <img src="./public/assets/Star.svg" alt="">
+                    <img src="/assets/Star.svg" alt="">
                     <span class="text-[12px] text-[#E3E3E3]">(4.9) User</span>
                   </div>
                 </div>
               </div>
             </div>
             <figure class="mobile:order-last">
-              <img src="./public/assets/Image.png" class="h-full bg-contain bg-center" alt="">
+              <img src="/assets/Image.png" class="h-full bg-contain bg-center" alt="">
             </figure>
             <div class="laptop:order-last flex laptop:flex-col laptop:gap-y-[60px] laptop:mb-[60px] mobile:mb-[40px] laptop:w-[400px] laptop:justify-end mobile:flex-row mobile:gap-x-[26px]">
               <div class="text-right">
@@ -117,14 +117,36 @@
           </div>
         </div>
       </section>
-      <section class="bg-yellow-500">
-        <div class="container mx-auto desktop:pt-[60px] laptop:pt-[40px] mobile:pt-[32px] bg-red-700 flex flex-col gap-y-[32px] px-[60px]">
-          <div class="flex flex-col gap-y-[24px]">
-            <h2 class="text-[48px] leading-[64px] font-semibold">Financial management for our future</h2>
-            <p>At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
-            <button href="" class="btn-primary">
-              <span>Our Company Story</span>
-            </button>
+      <section>
+        <div class="container mx-auto desktop:pt-[60px] laptop:pt-[40px] mobile:pt-[32px] flex flex-col gap-y-[32px] px-[60px] justify-between bg-slate-500">
+          <div class="flex flex-row">
+            <div class="flex flex-col gap-y-[24px]">
+              <h2 class="text-[48px] leading-[64px] font-semibold">Financial management for our future</h2>
+              <p>At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
+              <button href="" class="btn-primary">
+                <span>Our Company Story</span>
+              </button>
+            </div>
+            <div class="bg-[#F5F5F5] flex items-center px-[71px] py-[72px]">
+              <div class="flex flex-col gap-y-[27px]">
+                <h6 class="font-bold">Januari 2077</h6>
+                <div class="flex flex-row gap-x-[11.16px]">
+                  <button class="active-btn-primary">
+                    <span>Weekly</span>
+                  </button>
+                  <button class="non-active-btn-primary">
+                    <span>Weekly</span>
+                  </button>
+                  <button class="non-active-btn-primary">
+                    <span>Weekly</span>
+                  </button>
+                </div>
+                <div>
+                  <span class="text-[26px] leading-[36px] font-semibold">$ 998.000</span>
+                  <p class="text-[#8C8C8C]">You spent 10% more than last week</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="w-full h-[2px] bg-gray-700"></div>
           <div class="flex laptop:flex-row mobile:flex-col justify-between items-center gap-y-[24px]">

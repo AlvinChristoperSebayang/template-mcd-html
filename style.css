@@ -6,6 +6,14 @@
   .btn-primary{
     @apply bg-[#3CF14E] px-[24px] py-[12px] rounded-full w-fit font-semibold
   }
+
+  .non-active-btn-primary{
+    @apply py-[6.7px] px-[29.11px] rounded-full text-[#8C8C8C] border-[#BDBDBD] border
+  }
+
+  .active-btn-primary{
+    @apply py-[6.7px] px-[29.11px] bg-black rounded-full text-white font-semibold
+  }
 }
 
 #site-header .navigation-wrapper{

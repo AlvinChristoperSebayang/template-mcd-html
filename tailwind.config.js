@@ -12,6 +12,7 @@ export default {
       container: {
         'mobile': '375px',
         'laptop': '1024px',
+        'tablet': '768px',
         'desktop': '1440px'  
       }
     },
