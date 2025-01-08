@@ -5,6 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
     <title>Vite App</title>
   </head>
@@ -29,11 +32,9 @@
               <img src="./public/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
             </div>
 
-            <div class="bg-[#3CF14E] flex items-center justify-center rounded-full text-[#111111]">
-              <a href="" class="px-[24px] py-[12px]">
-                <span>Sign Up</span>
-              </a>
-            </div>
+            <button class="btn-primary">
+              <a href="">Sign up</a>
+            </button>
           </div>
 
           <!-- laptop -->
@@ -76,7 +77,7 @@
             <div class="flex flex-col justify-end gap-y-[40px] laptop:mb-[60px] mobile:mb-[24px] w-[337px] min-w-[242px] mobile:items-center laptop:items-start">
               <div class="flex flex-col gap-y-[24px] mobile:items-center laptop:items-start justify-center text-[14px] leading-[24px]">
                 <p class="text-[#E3E3E3] leading-[26px] mobile:text-center laptop:text-left">Making it fun and easy for you to transfer, top up and receive money from anywhere in the world, with more currencies easy to do</p>
-                <div class="rounded-full bg-[#3CF14E] w-fit py-[12px] px-[24px]">
+                <div class="btn-primary">
                   <a href="">
                     <span class="font-medium text-[#111111]">Create account now</span>
                   </a>
@@ -116,8 +117,33 @@
           </div>
         </div>
       </section>
+      <section class="bg-yellow-500">
+        <div class="container mx-auto desktop:pt-[60px] laptop:pt-[40px] mobile:pt-[32px] bg-red-700 flex flex-col gap-y-[32px] px-[60px]">
+          <div class="flex flex-col gap-y-[24px]">
+            <h2 class="text-[48px] leading-[64px] font-semibold">Financial management for our future</h2>
+            <p>At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
+            <button href="" class="btn-primary">
+              <span>Our Company Story</span>
+            </button>
+          </div>
+          <div class="w-full h-[2px] bg-gray-700"></div>
+          <div class="flex laptop:flex-row mobile:flex-col justify-between items-center gap-y-[24px]">
+            <div class="w-12 h-12 bg-green-400">
+              
+            </div>
+            <div class="w-12 h-12 bg-green-400">
+              
+            </div>
+            <div class="w-12 h-12 bg-green-400">
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer id="site-footer"></footer>
+    <footer id="site-footer">
+      <div>sdfsdf</div>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

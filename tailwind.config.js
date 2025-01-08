@@ -4,7 +4,17 @@ export default {
     "./*.{html,js}",
     "./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif']
+      },
+      center: true,
+      container: {
+        'mobile': '375px',
+        'laptop': '1024px',
+        'desktop': '1440px'  
+      }
+    },
     screens: {
       'mobile': '375px',
       'laptop': '1024px',
