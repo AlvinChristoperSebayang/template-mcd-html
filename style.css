@@ -2,17 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  :root{
+    --heading-1-dektop: 64px;
+    --heading-1-laptop: 48px;
+    --heading-1-mobile: 32px;
+
+  }
+
+  p {
+    @apply text-[14px] leading-[24px]
+  }
+  @media(min-height: 375px){
+    h1{
+      @apply text-[32px]
+    }
+    
+  }
+}
+
 @layer components{
   .btn-primary{
     @apply bg-[#3CF14E] px-[24px] py-[12px] rounded-full w-fit font-semibold
   }
 
   .non-active-btn-primary{
-    @apply py-[6.7px] px-[29.11px] rounded-full text-[#8C8C8C] border-[#BDBDBD] border
+    @apply laptop:py-[6.7px] laptop:px-[29.11px] mobile:py-[4.07px] mobile:px-[17.71px] rounded-full text-[#8C8C8C] border-[#BDBDBD] border
   }
 
   .active-btn-primary{
-    @apply py-[6.7px] px-[29.11px] bg-black rounded-full text-white font-semibold
+    @apply laptop:py-[6.7px] laptop:px-[29.11px] mobile:py-[4.07px] mobile:px-[17.71px] bg-black rounded-full text-white font-semibold
+  }
+
+  .active-bar{
+    @apply laptop:w-[38px] mobile:w-[23px] bg-[#2071FD] h-full rounded-md
+  }
+
+  .non-active-bar{
+    @apply laptop:w-[38px] mobile:w-[23px] bg-[#EBF2FF] h-full rounded-md 
   }
 }
 
