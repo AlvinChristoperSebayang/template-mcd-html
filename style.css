@@ -34,9 +34,9 @@
     @apply laptop:py-[6.7px] laptop:px-[29.11px] mobile:py-[4.07px] mobile:px-[17.71px] bg-black rounded-full text-white font-semibold
   }
 
-  .active-bar{
+  /* .active-bar{
     @apply laptop:w-[38px] mobile:w-[23px] bg-[#2071FD] h-full rounded-md
-  }
+  } */
 
   .non-active-bar{
     @apply laptop:w-[38px] mobile:w-[23px] bg-[#EBF2FF] h-full rounded-md 
