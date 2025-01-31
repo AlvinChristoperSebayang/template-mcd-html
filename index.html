@@ -14,12 +14,10 @@
   <body>
     <header id="site-header" class="bg-[#0761FD]">
         <nav class="h-[72px] laptop:mx-[60px] mobile:mx-[24px] flex flex-row items-center justify-between">
-          <button>
-            <a class="flex flex-row px-[7.44px] gap-x-[5.86px]" href="">
-              <img src="/assets/Logo.svg" alt="">
-              <span class="laptop:text-[26.61px] mobile:text-[21px] font-bold text-white laptop:leading-[43px] mobile:leading-[34px]">Minance</span>
-            </a>
-          </button>
+          <a class="flex flex-row px-[7.44px] gap-x-[5.86px]" href="">
+            <img src="/assets/Logo.svg" alt="">
+            <span class="laptop:text-[26.61px] mobile:text-[21px] font-bold text-white laptop:leading-[43px] mobile:leading-[34px]">Minance</span>
+          </a>
           <!-- desktop -->
           <ul class="hidden desktop:flex flex-row gap-x-[48px] text-[#E3E3E3] text-[14px] leading-[24px]">
             <li><a href="">About</a></li>
@@ -33,10 +31,7 @@
               <img src="/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
               <img src="/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
             </div>
-
-            <button class="btn-primary">
-              <a href="">Sign up</a>
-            </button>
+            <a href="" class="btn-primary">Sign up</a>
           </div>
 
           <!-- laptop -->
@@ -54,11 +49,7 @@
               <img src="/assets/Icon.svg" class="w-[24px] h-[24px]" alt="">
               <img src="/assets/Flags.svg" class="w-[24px] h-[24px]" alt="">
             </button>
-            <button class="btn-primary text-[#111111]">
-              <a href="">
-                <span >Sign Up</span>
-              </a>
-            </button>
+            <a href="" class="btn-primary text-[#111111]">Sign up</a>
           </div>
 
           <!-- Mobile -->
@@ -116,23 +107,21 @@
             <div class="flex flex-col justify-end gap-y-[40px] laptop:mb-[60px] mobile:mb-[24px] w-[337px] min-w-[242px] mobile:items-center laptop:items-start">
               <div class="flex flex-col gap-y-[24px] mobile:items-center laptop:items-start justify-center text-[14px] leading-[24px]">
                 <p class="text-[#E3E3E3] leading-[26px] mobile:text-center laptop:text-left">Making it fun and easy for you to transfer, top up and receive money from anywhere in the world, with more currencies easy to do</p>
-                <div class="btn-primary">
-                  <a href="">
-                    <span class="font-medium text-[#111111]">Create account now</span>
-                  </a>
-                </div>
+                <a href="" class="btn-primary">
+                  <p class="font-medium text-[#111111]">Create account now</p>
+                </a>
               </div>
               <div class="flex flex-row gap-x-[12px] items-center">
-                <figure>
-                  <img src="/assets/People.svg" alt="">
+                <figure class="flex flex-row">
+                  <img src="/assets/Frame 71.png" alt="">
+                  <figcaption>
+                    <p class="text-white font-semibold text-[16px]">Transted User</p>
+                    <div class="flex flex-row">
+                      <img src="/assets/Star.svg" alt="">
+                      <span class="text-[12px] text-[#E3E3E3]">(4.9) User</span>
+                    </div>
+                  </figcaption>
                 </figure>
-                <div>
-                  <span class="text-white font-semibold text-[16px]">Transted User</span>
-                  <div class="flex flex-row">
-                    <img src="/assets/Star.svg" alt="">
-                    <span class="text-[12px] text-[#E3E3E3]">(4.9) User</span>
-                  </div>
-                </div>
               </div>
             </div>
             <figure class="mobile:order-last">
@@ -162,14 +151,14 @@
             <div class="flex flex-col gap-y-[24px]">
               <h2 class="desktop:text-lg laptop:text-md mobile:text-xs font-semibold">Financial management for our future</h2>
               <p>At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
-              <button href="" class="btn-primary">
-                <span>Our Company Story</span>
-              </button>
+              <a href="" class="btn-primary">
+                Our Company Story
+              </a>
             </div>
             <div class="bg-[#F5F5F5] flex items-center desktop:px-[71px] desktop:py-[72px] laptop:px-[62px] laptop:py-[63px] mobile:py-[38.76px] mobile:px-[38.15px] rounded-3xl">        
-              <div class="flex flex-col laptop:gap-y-[27px] mobile:gap-y-[16px] bg-white rounded-3xl laptop:p-[15px] mobile:p-[8px]">
-                <h6 class="font-bold text-[10.86px]">Januari 2077</h6>
-                <div class="flex flex-row laptop:gap-x-[11.16px] mobile:gap-x-[7px] laptop:text-[14px] mobile:text-[9.5px] justify-between">
+              <div class="flex flex-col laptop:gap-y-[27px] mobile:gap-y-[16px] bg-white rounded-xl laptop:p-[15px] mobile:p-[8px]">
+                <span class="font-bold desktop:text-[17.86px] desktop:leading-[29px] laptop:text-[15.73px] laptop:leading-[25.6px] mobile:text-[10.86px] mobile:leading-[17px]">Januari 2077</span>
+                <div class="flex flex-row laptop:gap-x-[11.16px] mobile:gap-x-[6.78px] laptop:text-[14px] mobile:text-[9.5px] justify-between">
                   <button class="active-btn-primary">
                     <span>Weekly</span>
                   </button>
@@ -183,8 +172,8 @@
                 <div>
                   <span class="text-[26px] leading-[36px] font-semibold">$ 998.000</span>
                   <p class="text-[#8C8C8C]">You spent 10% more than last week</p>
-                  <div class="mt-[70px]">
-                    <div id="bar_chart" class="h-[160px] flex justify-around mobile:gap-x-[8px] items-end text-[#8C8C8C]">
+                  <div class="mt-[20px]">
+                    <div id="bar_chart" class="laptop:h-[150px] mobile:h-[108px] flex justify-around mobile:gap-x-[8px] items-end text-[#8C8C8C]">
                       <div class="bar items-center flex flex-col h-full" >
                         <div class="flying-card hidden flex-col laptop:gap-y-[12px] mobile:gap-y-[8px] absolute top-[120px] bg-white shadow-2xl w-fit rounded-3xl laptop:px-[15px] laptop:py-[18px] mobile:px-[11px] mobile:py-[13px]">
                           <figure>
@@ -230,13 +219,13 @@
             </div>
           </div>
           <div class="w-full h-[2px] bg-gray-700"></div>
-          <ul class="flex laptop:flex-row mobile:flex-col justify-between items-start gap-y-[24px] gap-x-[40px]">
+          <ul class="flex tablet:flex-row mobile:flex-col justify-between items-start gap-y-[24px] gap-x-[40px]">
             <li class="gap-y-[16px] flex flex-col">
               <figure>
-                <img src="/assets/Frame 66.svg" alt="">
+                <img src="/assets/Frame 66.svg" alt="" class="animate-spin">
               </figure>
               <span class="text-[24px] leading-[32px font-semibold]">Receive</span>
-              <p class="text-[14px] text-[#8C8C8C]">Minance Accepts all currencies and from all over the world, making you happy with its Features</p>
+              <p class="text-[14px] text-[#252525]">Minance Accepts all currencies and from all over the world, making you happy with its Features</p>
             </li>
             <li class="gap-y-[16px] flex flex-col">
               <figure>
@@ -255,17 +244,292 @@
           </ul>
         </div>
       </section>
+      <section>
+        <div class="desktop:py-[60px] laptop:py-[80px] mobile:py-[32px] flex flex-col gap-y-[40px] container mx-auto ">
+          <div class="flex flex-col gap-y-[24px]">
+            <h2 class="text-center text-[#111111] text-5xl font-semibold font-['Inter'] leading-[64px]">What you get if you use us</h2>
+            <p class="text-center text-[#8c8c8c] font-normal font-['Inter'] leading-normal">You can get many fiture from minance, download and use our applcation make you easy to manage your Finance</p>
+          </div>
+          <!-- TOP CARD -->
+          <div class="flex laptop:flex-row mobile:flex-col gap-x-[24px] gap-y-[24px] items-center justify-center">
+            <!-- CARD -->
+            <div class="top-card"> 
+              <div class="flex-col justify-start items-start gap-y-4 inline-flex">
+                <figure>
+                  <img src="/assets/Frame 67.svg" alt="">
+                </figure>
+                <p class="text-[#111111] font-semibold font-['Inter']">Automatic Payment</p>
+                <p class="text-[#8c8c8c] font-normal font-['Inter']">Stremline your financial processes and reduce manual effort. Spend less time on data entry</p>
+              </div>
+              <div class="justify-center items-center inline-flex w-full">
+                <div class="grow shrink self-stretch flex-col justify-start items-start gap-[10.55px] inline-flex">
+                  <div class="card-transaction">
+                    <div class="grow shrink basis-0 h-[46.01px] justify-start items-center gap-2.5 flex">
+                      <div class="laptop:p-2 mobile:p-1 bg-[#f4f4f4] rounded-[100.31px] justify-center items-center flex overflow-hidden">
+                        <figure>
+                          <img src="/assets/Icon (3).svg" alt="">
+                        </figure>
+                      </div>
+                      <div class="flex-col justify-start items-start gap-0.5 inline-flex">
+                        <p class="text-[#111111] font-semibold font-['Inter'] leading-normal text-[14px]">Netflix</p>
+                        <p class="text-[#aaaaaa] font-normal font-['Inter'] leading-tight text-[10px]">Apr 15, 11.00 AM</p>
+                      </div>
+                    </div>
+                    <div class="px-1.5 py-0.5 rounded-[30.09px] justify-start items-center flex">
+                      <p class="text-[#f73535] font-semibold font-['Inter'] ">-$60</p>
+                    </div>
+                  </div>
+                  <div class="card-transaction">
+                    <div class="grow shrink basis-0 h-[46.01px] justify-start items-center gap-2.5 flex">
+                      <div class="laptop:p-2 mobile:p-1 bg-[#f4f4f4] rounded-[100.31px] justify-center items-center flex overflow-hidden">
+                        <figure>
+                          <img src="/assets/Icon (3).svg" alt="">
+                        </figure>
+                      </div>
+                      <div class="flex-col justify-start items-start gap-0.5 inline-flex">
+                        <p class="text-[#111111] font-semibold font-['Inter'] leading-normal text-[14px]">Netflix</p>
+                        <p class="text-[#aaaaaa] font-normal font-['Inter'] leading-tight text-[10px]">Apr 15, 11.00 AM</p>
+                      </div>
+                    </div>
+                    <div class="px-1.5 py-0.5 rounded-[30.09px] justify-start items-center flex">
+                      <p class="text-[#f73535] font-semibold font-['Inter'] ">-$60</p>
+                    </div>
+                  </div>
+                  <div class="card-transaction">
+                    <div class="grow shrink basis-0 h-[46.01px] justify-start items-center gap-2.5 flex">
+                      <div class="laptop:p-2 mobile:p-1 bg-[#f4f4f4] rounded-[100.31px] justify-center items-center flex overflow-hidden">
+                        <figure>
+                          <img src="/assets/Icon (3).svg" alt="">
+                        </figure>
+                      </div>
+                      <div class="flex-col justify-start items-start gap-0.5 inline-flex">
+                        <p class="text-[#111111] font-semibold font-['Inter'] leading-normal text-[14px]">Netflix</p>
+                        <p class="text-[#aaaaaa] font-normal font-['Inter'] leading-tight text-[10px]">Apr 15, 11.00 AM</p>
+                      </div>
+                    </div>
+                    <div class="px-1.5 py-0.5 rounded-[30.09px] justify-start items-center flex">
+                      <p class="text-[#f73535] font-semibold font-['Inter'] ">-$60</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-card">
+              
+              <div class="flex-col justify-start items-start gap-y-4 inline-flex">
+                <figure>
+                  <img src="/assets/Frame 67.svg" alt="">
+                </figure>
+                <p class="text-[#111111] font-semibold font-['Inter']">Data Security</p>
+                <p class="text-[#8c8c8c] font-normal font-['Inter']">Protect 24/7 Days and Don't worry about cyber security in our Company</p>
+              </div>
+              <div class="flex flex-row items-center justify-center h-full">
+                <div class="w-[315px] h-[84.58px] p-2.5 rounded-2xl border border-[#e2e2e2] flex-col justify-start items-start gap-2.5 inline-flex">
+                  <div class="self-stretch h-[64.58px] px-[17px] py-3.5 bg-white rounded-xl shadow-[0px_3.633699655532837px_36.336997985839844px_0px_rgba(0,0,0,0.05)] flex-row justify-start items-start gap-2.5 flex overflow-hidden">
+                    <div class="self-stretch justify-start items-center gap-6 inline-flex">
+                      <div class="justify-start items-center gap-3 flex">
+                        <figure>
+                          <img src="/assets/Security_illustration.svg" alt="">
+                        </figure>
+                        <div>
+                          <p class="text-[#111111] font-semibold font-['Inter'] text-[14px]">Protection 24/7</p>
+                        </div>
+                      </div>
+                      <div class="h-full w-[1px] bg-[#E3E3E3]"></div>
+                      <figure class="">
+                        <img src="/assets/Component 17.svg" alt="">
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>         
+            <div class="top-card">
+              <div class="flex-col justify-start items-start gap-y-4 inline-flex">
+                <figure>
+                  <img src="/assets/Frame 67.svg" alt="">
+                </figure>
+                <p class="text-[#111111] font-semibold font-['Inter']">User Friendly</p>
+                <p class="text-[#8c8c8c] font-normal font-['Inter']">We make application for easy to use and user friendly, suitable for all group</p>
+              </div>
+              <figure class="bg-fixed self-center">
+                <img src="/assets/iphone_full.png" alt="">
+              </figure>
+            </div>         
+          </div>
+
+          <!-- BOTTOM CARD -->
+           <div class="flex laptop:flex-row mobile:flex-col gap-x-[24px] gap-y-[36px] items-center justify-center">
+              <!-- CARD -->
+               <div class="bottom-card">
+                <div class="flex-col justify-start items-start gap-y-4 inline-flex">
+                  <figure>
+                    <img src="/assets/Frame 67.svg" alt="">
+                  </figure>
+                  <p class="text-[#111111] font-semibold font-['Inter']">Automatic Payment</p>
+                  <p class="text-[#8c8c8c] font-normal font-['Inter']">Stremline your financial processes and reduce manual effort. Spend less time on data entry</p>
+                </div>
+                <figure class="w-full h-full">
+                  <img src="/assets/poto123.png " class="bg-contain" alt="">
+                </figure>
+               </div>
+               <div class="bottom-card">
+                <div class="flex-col justify-start items-start gap-y-4 inline-flex">
+                  <figure>
+                    <img src="/assets/Frame 67.svg" alt="">
+                  </figure>
+                  <p class="text-[#111111] font-semibold font-['Inter']">Automatic Payment</p>
+                  <p class="text-[#8c8c8c] font-normal font-['Inter']">Stremline your financial processes and reduce manual effort. Spend less time on data entry</p>
+                </div>
+                <figure class="w-full h-full">
+                  <img src="/assets/Imageeaeaea.png " class="bg-contain" alt="">
+                </figure>
+               </div>
+              </div>
+        </div>
+      </section>
+      <section>
+        <div class="desktop:py-[60px] laptop:py-[80px] mobile:py-[32px] flex flex-col gap-y-[40px] container mx-auto ">
+          <div class="laptop:w-[650px] tablet:w-auto flex-col mx-auto items-start gap-6 inline-flex">
+            <div class="self-stretch text-center text-[#111111] laptop:text-lg mobile:text-xs font-semibold font-['Inter'] leading-[64px]">200+ Finance with regular expenses using Minance</div>
+            <p class="self-stretch text-center text-[#8c8c8c] font-['Inter']">Minance has been used by many companies, any many compansies trusted to our Security for the security of their data</p>
+          </div>
+          <div class="desktop:grid desktop:grid-cols-4 laptop:flex laptop:flex-row gap-x-[20px] gap-y-[24px]">
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Bankin logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/google logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Slack logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Adobe_Corporate_logo logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Bankin logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Bankin logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Bankin logo.png" alt="">
+              </figure>
+  
+            </div>
+            <div class="bg-[#F7F7F7] flex flex-col items-center mx-auto desktop:px-[70px] desktop:py-[50px] laptop:px-[43px] laptop:py-[40px] mobile:px-[26px] mobile:py-[25px] rounded-xl">
+              <figure>
+                <img src="/assets/Bankin logo.png" alt="">
+              </figure>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="desktop:py-[100px] laptop:py-[40px] mobile:py-[32px] flex laptop:flex-row mobile:flex-col justify-between desktop:gap-0 laptop:gap-x-[40px] gap-y-[24px] container mx-auto ">
+          <div class="laptop:w-[650px] tablet:w-auto h-48 flex-col justify-start items-start gap-6 inline-flex">
+            <h2 class="self-stretch text-black laptop:text-lg mobile:text-xs font-semibold font-['Inter'] mobile:text-center laptop:text-left">View some review from Minance User</h2>
+            <p class="self-stretch text-[#8c8c8c] font-normal font-['Inter'] ">What many people say about this app and how do you feel when you use this app for your Money Management</p>
+          </div>
+          <div class="laptop:w-[538px] laptop:h-[502px] tablet:w-fit relative flex-col justify-start items-start gap-6 inline-flex overflow-hidden">
+            <div class="h-fit  px-4 py-6 rounded-2xl border border-[#d1d1d1] flex-col justify-start items-start gap-[35px] inline-flex">
+              <p class="self-stretch text-[#111111] font-['Inter']">"Minance App has changed the way we manage company finances. The intuitive interface and complete features make the financial management process more efficient and accurate. I highly recommend Minance App for companies looking to optimize their financial management."</p>
+              <div class="self-stretch justify-between items-center inline-flex">
+                <div class="justify-start items-center gap-1.5 flex">
+                  <div class="justify-start items-center flex">
+                    <figure>
+                      <img class="w-10 h-10 relative rounded-[66.67px]" src="/assets/Image (3).png" />
+                    </figure>
+                  </div>
+                  <div class="w-[110px] flex-col justify-start items-start gap-1.5 inline-flex">
+                    <h6 class="self-stretch text-[#111111] font-bold font-['Inter'] leading-relaxed">Nugraha</h6>
+                    <div class="justify-start items-center gap-1 inline-flex">
+                      <h6 class="text-[#8c8c8c] font-['Inter']">Manager</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-[#eaf2fe] rounded-[66.67px] justify-center items-center flex overflow-hidden">
+                  <figure>
+                    <img src="/assets/Play Button.svg" alt="">
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="h-[265px] px-4 py-6 rounded-2xl border border-[#d1d1d1] flex-col justify-start items-start gap-[35px] inline-flex  left-0 top-0">
+              <div class="absolute w-full h-full bg-gradient-to-t via-white via-80% from-white left-0"></div>
+              <p class="self-stretch text-[#111111] font-['Inter'] ">"Minance App has changed the way we manage company finances. The intuitive interface and complete features make the financial management process more efficient and accurate. I highly recommend Minance App for companies looking to optimize their financial management."</p>
+              <div class="self-stretch justify-between items-center inline-flex">
+                <div class="justify-start items-center gap-1.5 flex">
+                  <figure>
+                    <img src="/assets/Image (3).png" alt="eaeaea" />
+                  </figure>
+                  <div class="w-[110px] flex-col justify-start items-start gap-1.5 inline-flex">
+                    <h6 class="self-stretch text-[#111111] font-bold font-['Inter'] leading-relaxed">Nugraha</h6>
+                    <div class="justify-start items-center gap-1 inline-flex">
+                      <h6 class="text-[#8c8c8c] font-['Inter']">Manager</h6>
+                    </div>
+                  </div>
+                </div>
+                <figure>
+                  <img src="/assets/Play Button.svg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="desktop:py-[40px] laptop:py-[40px] mobile:py-[24px] flex laptop:flex-row mobile:flex-col justify-between desktop:gap-0 laptop:gap-x-[40px] gap-y-[24px] container mx-auto">
+          <div class="bg-[#111111] flex tablet:flex-row mobile:flex-col rounded-xl">
+            <div class="desktop:p-[80px] laptop:p-[40px] mobile:p-[24px]">
+              <div class="desktop:w-[428px] mobile:w-[279px] flex flex-col gap-y-[24px]">
+                <h2 class="desktop:text-lg laptop:text-md mobile:text-xs font-semibold">
+                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#9ABFFE] to-[#A9F9B1]">Get the Minance mobile app</span></h2>
+                <p class="text-[#E3E3E3]">The First Application that is widely use and trusted by many companies</p>
+                <a class="flex flex-row gap-x-[10px]" href="/">
+                  <p class="font-semibold text-white" href="">Download Now</p>
+                  <img src="/assets/Icon (4).svg" alt="" class="animasi-download">
+                </a>
+              </div>
+            </div>
+            <figure class="self-end mobile:px-[24px] tablet:px-0">
+              <img src="/assets/Content Right (1) 1.png" alt="potoeaeaeea">
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
     <footer id="site-footer">
       <section class="bg-[#024BCA]">
         <div class="container mx-auto desktop:pt-[60px] laptop:pt-[40px] mobile:pt-[24px] flex flex-col justify-between desktop:gap-y-[60px] laptop:gap-y-[43.8px] mobile:pb-[60px]">
-          <div class="flex flex-row justify-between">
-            <div class="flex flex-col gap-y-[40px] w-[426px]">
+          <div class="flex laptop:flex-row mobile:flex-col justify-between laptop:gap-x-[160px]">
+            <div class="flex flex-col gap-y-[40px] laptop:w-[426px] mobile:w-fit ">
               <button class="flex flex-row px-[7.44px] gap-x-[5.86px] items-center">
                 <img src="/assets/Logo.svg" alt="">
                 <span class="laptop:text-[26.61px] mobile:text-[21px] font-bold text-white laptop:leading-[43px] mobile:leading-[34px]">Minance</span>
               </button>
-              <p class="text-[#E3E3E3]">At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
+              <p class="text-[#E3E3E3] text-justify">At Minance, we help you achieve your financial goals with confidence. With 2 years of experience, we offer personalized financial planning and innovative banking services. Join us for a journey to financial stability and growth.</p>
               <ul class="flex gap-x-[16px]">
                 <li>
                   <a href="">
@@ -294,18 +558,18 @@
                 </li>
               </ul>
             </div>
-            <div class="flex flex-row w-[568px] justify-between">
+            <div class="flex tablet:flex-row mobile:flex-col tablet:w-[568px] mobile:w-fit justify-between laptop:gap-x-[160px] mobile:gap-x-[60px]">
               <li class="flex flex-col gap-y-[16px]">
                 <span class="text-white font-semibold my-[16px]">Company</span>
                 <ul class="text-[#E3E3E3] font-thin"><a href="">About Us</a></ul>
                 <ul class="text-[#E3E3E3] font-thin"><a href="">Blog</a></ul>
                 <ul class="text-[#E3E3E3] font-thin"><a href="">Contact</a></ul>
               </li>
-              <li class="flex flex-col gap-y-[16px]">
+              <li class="flex flex-col gap-y-[15px]">
                 <span class="text-white font-semibold my-[16px]">Company</span>
-                <ul class="text-[#E3E3E3] font-thin"><a href="">About Us</a></ul>
-                <ul class="text-[#E3E3E3] font-thin"><a href="">Blog</a></ul>
-                <ul class="text-[#E3E3E3] font-thin"><a href="">Contact</a></ul>
+                <ul class="text-[#E3E3E3] font-thin"><a href="">+22 80 1234 4321</a></ul>
+                <ul class="text-[#E3E3E3] font-semibold"><a href="">Support</a></ul>
+                <ul class="text-[#E3E3E3] font-thin"><a href="">+22 80 1234 2233</a></ul>
               </li>
             </div>
             
