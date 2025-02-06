@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-
 let isMobile = window.innerWidth < 768;
 
 const path = document.querySelector('#animatedSvg path');
@@ -72,6 +71,103 @@ preloadTL.to(path, {
     })
   }
 });
+let heroSection = gsap.timeline({paused:true});
+let titleHero = document.querySelector('.titleHero');
+
+if(titleHero){
+  let splitText = new SplitType(titleHero, {
+    types: 'lines',
+  });
+}
+
+let lines = document.querySelectorAll('.titleHero .line');
+lines.forEach(line => {
+  let wrapper = document.createElement('div');
+  wrapper.classList.add('line-wrapper');
+  line.parentNode.insertBefore(wrapper, line);
+  wrapper.appendChild(line);
+});
+
+lines.forEach((line, index) => {
+  heroSection.fromTo(line, {
+    yPercent: 300,
+    rotation: -15,
+    transformOrigin: '50% 50%',
+  }, {
+    yPercent: 0,
+    rotation: 0,
+    duration: 0.8,
+    ease: 'cubic-bezier(0.36, 0, 0.66, -0.56)',
+  },'<.2');
+});
+
+heroSection.to('.patternHero',{
+  scale:1,
+  opacity:1,
+  duration:0.5,
+  ease:'power3.inOut'
+},'<')
+heroSection.to('.ornamentLogoSpin',{
+  top:'20px',
+  opacity:1,
+  duration:1,
+  ease:'power3.inOut'
+},'<.3')
+heroSection.to('.ornamentPlusTitle',{
+  bottom:'-32px',
+  opacity:1,
+  duration:1,
+  ease:'power3.inOut'
+},'<')  
+heroSection.to('.phoneOrnament--wrapper',{
+  opacity:1,
+  duration:0.5,
+  marginTop:'50px',
+},'<.3')
+heroSection.to('.bar_phone--wrapper',{
+  bottom:'0px',
+  opacity:1,
+  duration:0.5,
+  ease:'power3.inOut'
+},'>')
+// heroSection.to('.contentPhone',{
+//   marginTop:'-350px',
+//   duration:3,
+//   ease:'power1.inOut'
+// },'<.3')
+window.onload = function () {
+  preloadTL.play();
+  preloadTL.eventCallback("onComplete", function() {
+    heroSection.play();
+  });
+
+};
+
+let hamburgerButton = document.querySelector('.hamburger-bars');
+let mobileNav = document.querySelector('.mobileNav');
+hamburgerButton.addEventListener('click', function () {
+  hamburgerButton.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+})
+const navbar = document.querySelector('header');
+let lastScrollY = window.scrollY;
+function handleScroll() {
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+  if (window.scrollY > lastScrollY) {
+    navbar.classList.add('scroll-down');
+  } else if (window.scrollY < lastScrollY) {
+    navbar.classList.remove('scroll-down');
+  }
+
+  lastScrollY = window.scrollY;
+}
+
+window.addEventListener('scroll', handleScroll);
 
 let footerTl = gsap.timeline({
   scrollTrigger: {
