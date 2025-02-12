@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-
 let isMobile = window.innerWidth < 768;
 
 const path = document.querySelector('#animatedSvg path');
@@ -72,12 +71,11 @@ preloadTL.to(path, {
     })
   }
 });
-
+export { preloadTL };
 let footerTl = gsap.timeline({
   scrollTrigger: {
     trigger: "footer",
-    start: "10% center",
-    end: "80% center",
+    start: "0% center",
     // markers: true
   }
 });
@@ -99,8 +97,7 @@ gsap.fromTo('.footer-navigation',{
 },{
   scrollTrigger: {
     trigger: "footer",
-    start: "35% center",
-    end: "100% center",
+    start: "0% center",
     // markers: true
   },
   opacity: 1,
@@ -109,3 +106,35 @@ gsap.fromTo('.footer-navigation',{
   stagger: .1,
   ease:'power2.out'
 })
+
+const navbar = document.querySelector('header');
+let lastScrollY = window.scrollY;
+function handleScroll() {
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+  if (window.scrollY > lastScrollY) {
+    navbar.classList.add('scroll-down');
+  } else if (window.scrollY < lastScrollY) {
+    navbar.classList.remove('scroll-down');
+  }
+
+  lastScrollY = window.scrollY;
+}
+
+window.addEventListener('scroll', handleScroll);
+
+
+// function toggleHeaderScrollClass() {
+//   const header = document.querySelector('header'); 
+//   if (window.scrollY > 0) {
+//     header.classList.add('scroll');
+//   } else {
+//     header.classList.remove('scroll');
+//   }
+// }
+// window.addEventListener('scroll', toggleHeaderScrollClass);
+// toggleHeaderScrollClass();

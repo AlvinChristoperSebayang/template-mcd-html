@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { preloadTL } from '../main.js';
 gsap.registerPlugin(ScrollTrigger);
 let isMobile = window.innerWidth < 768;
 
@@ -72,35 +72,10 @@ window.onload = function () {
   preloadTL.play();
   preloadTL.eventCallback("onComplete", function() {
     heroSection.play();
+    // console.log('done')
   });
 
 };
-
-let hamburgerButton = document.querySelector('.hamburger-bars');
-let mobileNav = document.querySelector('.mobileNav');
-hamburgerButton.addEventListener('click', function () {
-  hamburgerButton.classList.toggle('active');
-  mobileNav.classList.toggle('active');
-})
-const navbar = document.querySelector('header');
-let lastScrollY = window.scrollY;
-function handleScroll() {
-  if (window.scrollY > 0) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-
-  if (window.scrollY > lastScrollY) {
-    navbar.classList.add('scroll-down');
-  } else if (window.scrollY < lastScrollY) {
-    navbar.classList.remove('scroll-down');
-  }
-
-  lastScrollY = window.scrollY;
-}
-
-window.addEventListener('scroll', handleScroll);
 
 const swiper = new Swiper('.sliderApproach', {
   direction: 'horizontal',
@@ -147,7 +122,7 @@ doctorTl1.to('.image-logoOrnament', {
 let doctorTl2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".section-introducing",
-    start: "22% center",
+    start: `${isMobile ? '10%' : '22%'} center`,
     end: "40% center",
     // markers: true
   }
@@ -228,4 +203,12 @@ featuresTl.fromTo('.approachDesign .swiper-slide', {
   y: '0px',
   stagger: .2,
   ease: 'cubic-bezier(0.36, 0, 0.66, -0.56)',
+})
+
+let hamburgerButton = document.querySelector('.hamburger-bars');
+let mobileNav = document.querySelector('.mobileNav');
+hamburgerButton.addEventListener('click', function () {
+  hamburgerButton.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+  console.log('active')
 })
