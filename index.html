@@ -1,465 +1,1047 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/mangcoding.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kayyon</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <header id="navbar" class="z-10 fixed top-0 left-0 w-full bg-transparent mx-auto transition duration-300 ease-in-out">
+    <header
+      id="navbar"
+      class="z-10 fixed top-0 left-0 w-full bg-transparent mx-auto transition duration-300 ease-in-out"
+    >
       <div class="container mx-auto">
-        <nav class="flex justify-between items-center text-white px-[20px] py-[10px] lg:px-0 lg:py-[20px]">
+        <nav
+          class="flex justify-between items-center z-50 text-white pl-[20px] pr-[12px] py-[10px] lg:px-0 lg:py-[20px]"
+        >
           <div class="flex items-center gap-5">
-            <a href="#" class="text-3xl text-[20px] md:text-[26px] lg:text-[30px] font-extrabold text-white font-montserrat">Kayyon</a>
-            <a href="#" class="text-xl md:text-[18px] lg:text-[20px] px-2 text-white hidden md:inline lg:inline font-helvetica">About us</a>
-            <a href="#" class="text-xl md:text-[18px] lg:text-[20px] px-2 text-white hidden md:inline lg:inline font-helvetica">Contact</a>
+            <a
+              href="#"
+              class="text-3xl text-[20px] md:text-[26px] lg:text-[30px] font-extrabold text-white font-montserrat"
+              >Kayyon</a
+            >
+            <a
+              href="#"
+              class="text-xl md:text-[18px] lg:text-[20px] px-2 text-white hidden md:inline lg:inline font-helvetica"
+              >About us</a
+            >
+            <a
+              href="#"
+              class="text-xl md:text-[18px] lg:text-[20px] px-2 text-white hidden md:inline lg:inline font-helvetica"
+              >Contact</a
+            >
           </div>
-          <div class="flex items-center gap-5 px-3">
+          <div class="flex items-center">
             <div>
-              <a href="#"><img src="/search.svg" alt="Deskripsi Gambar SVG" class="w-6 h-6 mt-1 hidden"></a>
+              <a href="#"
+                ><img
+                  src="/search.svg"
+                  alt="Deskripsi Gambar SVG"
+                  class="w-6 h-6 mt-1 hidden"
+              /></a>
             </div>
             <div>
-              <a href="#" class="text-xl text-white hidden md:inline font-helvetica lg:hidden">Menu</a>
+              <a
+                href="#"
+                class="text-xl text-white hidden md:inline font-helvetica lg:hidden"
+                >Menu</a
+              >
             </div>
             <div class="relative">
-              <a href="javascript:void(0);" onclick="toggleDropdown()">
-                <img src="/menu.svg" alt="Menu Icon" class="w-6 h-6 mb-2 cursor-pointer">
-              </a>
-              
-              <!-- Dropdown Mobile -->
-              <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg hidden">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">About us</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Contact</a>
+              <button
+                id="btn-menu"
+                class="menu"
+                onclick="this.classList.toggle('opened');toggleDropdown();this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                aria-label="Main Menu"
+              >
+                <svg width="40" height="50" viewBox="16 -4.5 110 110">
+                  <path
+                    class="line line1"
+                    d="M 20,30.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                  />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path
+                    class="line line3 absolute"
+                    d="M 20,69.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                  />
+                </svg>
+              </button>
+              <div
+                id="dropdownMenu"
+                class="absolute hidden right-[-2px] mt-2 w-36 bg-white text-black  rounded-md  shadow-lg animate__animated animate__bounceIn before:absolute before:top-[-8px] before:right-[14px] before:w-0 before:h-0 before:border-l-[8px] before:border-l-transparent before:border-r-[8px] before:border-r-transparent before:border-b-[8px] before:border-b-white"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-t-md  hover:rounded-t-md transition-colors duration-300"
+                  >About us</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-b-md hover:rounded-b-md transition-colors duration-300"
+                  >Contact</a
+                >
               </div>
+              <style>
+                .line {
+                  stroke: white;
+                }
+              </style>
             </div>
+            <!-- Dropdown Mobile -->
           </div>
         </nav>
       </div>
     </header>
-     
+
     <main>
       <section class="relative">
         <div class="relative pt-[120px] h-[80vh] lg:h-[949px]">
-          <div class="swiper  absolute inset-0 w-full h-full z-0">
+          <div class="swiper absolute inset-0 w-full h-full z-0">
             <!-- swiper -->
             <div class="swiper-wrapper">
               <!-- home 1 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
-                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]">
-                    <h1 class="text-white text-slide1">Living Room Is Always </h1>
-                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  <div
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                  >
+                    <h1 class="text-white text-slide1">
+                      Living Room Is Always
+                    </h1>
+                    <h2 class="text-white text-slide2">
+                      Beautiful With Light Theme
+                    </h2>
                   </div>
-            
+
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[200px] left-[35%] lg:bottom-64 md:left-[35%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[200px] left-[35%] lg:bottom-64 md:left-[35%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-                   
+
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[100px] left-[55%] lg:bottom-60 md:left-[68%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[100px] left-[55%] lg:bottom-60 md:left-[68%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-                   
+
                   <!-- Card 3 -->
-                  <div class="absolute bottom-[210px] left-[60%] lg:bottom-[561px] md:left-[64%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[210px] left-[60%] lg:bottom-[561px] md:left-[64%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-gray-200"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-            
-                  
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"></div>
-                <img src="/asset/home.png" alt="Living Room1" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"
+                ></div>
+                <img
+                  src="/asset/home.png"
+                  alt="Living Room1"
+                  class="absolute inset-0 w-full h-full object-cover z-0"
+                />
               </div>
               <!-- home 2 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
-                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]">
-                    <h1 class="text-white text-slide1">Dining Room Is Always </h1>
-                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  <div
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                  >
+                    <h1 class="text-white text-slide1">
+                      Dining Room Is Always
+                    </h1>
+                    <h2 class="text-white text-slide2">
+                      Beautiful With Light Theme
+                    </h2>
                   </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[200px] left-[35%] lg:bottom-64 md:left-[35%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[200px] left-[35%] lg:bottom-64 md:left-[35%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
+
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[100px] left-[55%] lg:bottom-[340px] md:left-[60%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[100px] left-[55%] lg:bottom-[340px] md:left-[60%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
-                  <!-- Card 3 -->
-                  <div class="absolute bottom-[210px] left-[60%] lg:bottom-[475px] md:left-[53%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
-                    </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                  <!-- Card 3 -->
+                  <div
+                    class="absolute bottom-[210px] left-[60%] lg:bottom-[475px] md:left-[53%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
+                    </a>
+
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"></div>
-                <img src="/asset/dining room.jpg" alt="Living Room1" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"
+                ></div>
+                <img
+                  src="/asset/dining room.jpg"
+                  alt="Living Room1"
+                  class="absolute inset-0 w-full h-full object-cover z-0"
+                />
               </div>
               <!-- home 3 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
-                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]">
-                    <h1 class="text-white text-slide1">Workspace Is Always </h1>
-                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  <div
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                  >
+                    <h1 class="text-white text-slide1">Workspace Is Always</h1>
+                    <h2 class="text-white text-slide2">
+                      Beautiful With Light Theme
+                    </h2>
                   </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[200px] left-[35%] lg:bottom-64 md:left-[25%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[200px] left-[35%] lg:bottom-64 md:left-[25%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
+
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[100px] left-[55%] lg:bottom-[320px] md:left-[78%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[100px] left-[55%] lg:bottom-[320px] md:left-[78%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
-                  <!-- Card 3 -->
-                  <div class="absolute bottom-[210px] left-[60%] lg:bottom-[475px] md:left-[55%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
-                    </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                  <!-- Card 3 -->
+                  <div
+                    class="absolute bottom-[210px] left-[60%] lg:bottom-[475px] md:left-[55%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
+                    </a>
+
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-999999"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"></div>
-                <img src="/asset/workspace.jpg" alt="Living Room1" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"
+                ></div>
+                <img
+                  src="/asset/workspace.jpg"
+                  alt="Living Room1"
+                  class="absolute inset-0 w-full h-full object-cover z-0"
+                />
               </div>
               <!-- home 4 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
-                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]">
-                    <h1 class="text-white text-slide1">Bedroom Is Always </h1>
-                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  <div
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                  >
+                    <h1 class="text-white text-slide1">Bedroom Is Always</h1>
+                    <h2 class="text-white text-slide2">
+                      Beautiful With Light Theme
+                    </h2>
                   </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[200px] left-[35%] lg:bottom-96 md:left-[12%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[200px] left-[35%] lg:bottom-96 md:left-[12%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
+
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[100px] left-[55%] lg:bottom-[320px] md:left-[70%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[100px] left-[55%] lg:bottom-[320px] md:left-[70%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
-                  <!-- Card 3 -->
-                  <div class="absolute bottom-[210px] left-[60%] lg:bottom-[375px] md:left-[50%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
-                    </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                  <!-- Card 3 -->
+                  <div
+                    class="absolute bottom-[210px] left-[60%] lg:bottom-[375px] md:left-[50%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
+                    </a>
+
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"></div>
-                <img src="/asset/bedroom.jpg" alt="Living Room1" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"
+                ></div>
+                <img
+                  src="/asset/bedroom.jpg"
+                  alt="Living Room1"
+                  class="absolute inset-0 w-full h-full object-cover z-0"
+                />
               </div>
               <!-- home 5 -->
               <div class="swiper-slide">
                 <div class="container mx-auto relatif">
-                  <div class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]">
-                    <h1 class="text-white text-slide1">Bathroom Is Always </h1>
-                    <h2 class="text-white text-slide2">Beautiful With Light Theme</h2>
+                  <div
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                  >
+                    <h1 class="text-white text-slide1">Bathroom Is Always</h1>
+                    <h2 class="text-white text-slide2">
+                      Beautiful With Light Theme
+                    </h2>
                   </div>
                   <!-- Card 1 -->
-                  <div class="absolute bottom-[200px] left-[35%] lg:bottom-96 md:left-[20%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[200px] left-[35%] lg:bottom-96 md:left-[20%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
+
                   <!-- Card 2 -->
-                  <div class="absolute bottom-[100px] left-[55%] lg:bottom-[280px] md:left-[70%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+                  <div
+                    class="absolute bottom-[100px] left-[55%] lg:bottom-[280px] md:left-[70%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
                     </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
-              
-                  <!-- Card 3 -->
-                  <div class="absolute bottom-[210px] left-[60%] lg:bottom-[475px] md:left-[50%] group z-20 contentPopup">
-                    <a href="#" class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-                      <div class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
-                    </a>
-              
-                    <div class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                      <p class="text-[10px] lg:text-sm text-gray-200">Living Room</p>
-                      <h1 class="text-[12px] lg:text-base font-normal text-white">Florence Smoky Gray Corduroy Vertical</h1>
 
-                      <div class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2">
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-                        <div class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+                  <!-- Card 3 -->
+                  <div
+                    class="absolute bottom-[210px] left-[60%] lg:bottom-[475px] md:left-[50%] group z-20 contentPopup"
+                  >
+                    <a
+                      href="#"
+                      class="w-[24px] h-[24px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+                    >
+                      <div
+                        class="w-[14px] h-[14px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+                      ></div>
+                    </a>
+
+                    <div
+                      class="absolute border leading-[14px] lg:border-2 border-white -translate-x-1 bottom-[40px] lg:-translate-x-5 lg:bottom-[70px] transform w-[140px] h-[70px] p-[6px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                    >
+                      <p class="text-[10px] lg:text-sm text-gray-200">
+                        Living Room
+                      </p>
+                      <h1
+                        class="text-[12px] lg:text-base font-normal text-white"
+                      >
+                        Florence Smoky Gray Corduroy Vertical
+                      </h1>
+
+                      <div
+                        class="flex mt-[2px] lg:mt-[6px] space-x-1 lg:space-x-2"
+                      >
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+                        ></div>
+                        <div
+                          class="w-[12px] h-[12px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+                        ></div>
                       </div>
-              
-                      <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"></div>
+
+                      <div
+                        class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-6px] lg:bottom-[-10px] left-[10px] lg:left-8 w-2.5 h-2.5 lg:w-4 lg:h-4 rotate-45"
+                      ></div>
                     </div>
                   </div>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"></div>
-                <img src="/asset/bathroom.jpg" alt="Living Room1" class="absolute inset-0 w-full h-full object-cover z-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-b from-black/40 via-white/10 to-black/40 z-10"
+                ></div>
+                <img
+                  src="/asset/bathroom.jpg"
+                  alt="Living Room1"
+                  class="absolute inset-0 w-full h-full object-cover z-0"
+                />
               </div>
-            </div>  
+            </div>
           </div>
         </div>
-        
+
         <div class="container mx-auto">
-          <div class=" absolute bottom-[30px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-0 font-helvetica z-20">
-                    
-            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Living Room</button>
-            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Dining Room</button>
-            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Workspace</button>
-            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bedroom</button>
-            <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">Bathroom</button>
+          <div
+            class="absolute bottom-[30px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-0 font-helvetica z-20"
+          >
+            <button
+              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Living Room
+            </button>
+            <button
+              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Dining Room
+            </button>
+            <button
+              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Workspace
+            </button>
+            <button
+              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Bedroom
+            </button>
+            <button
+              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            >
+              Bathroom
+            </button>
             <a href="#all" class="">
-              <button class=" text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300">All Product →</button>
+              <button
+                class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                All Product →
+              </button>
             </a>
           </div>
 
-          <div class="absolute lg:bottom-[60px] lg:flex items-center gap-3 hidden md:block">
+          <div
+            class="absolute lg:bottom-[60px] lg:flex items-center gap-3 hidden md:block"
+          >
             <span class="indexSwiper text-xl text-white">01</span>
             <div class="w-[821px] h-1 bg-white relative">
-              <div id="" class="absolute top-0 left-0 h-1 bg-white swiper-pagination"></div>
+              <div
+                id=""
+                class="absolute top-0 left-0 h-1 bg-white swiper-pagination"
+              ></div>
             </div>
             <span class="text-xl text-white">05</span>
           </div>
         </div>
-        <div class="absolute bottom-[30px] lg:bottom-[60px] flex right-[6%] items-end justify-end gap-2 lg:gap-4">
-          <button class="button-custom-prev flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black" onclick="prevSlide()">&#8592;</button>
-          <button class="button-custom-next flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black" onclick="nextSlide()">&#8594;</button>
+        <div
+          class="absolute bottom-[30px] lg:bottom-[60px] flex right-[6%] items-end justify-end gap-2 lg:gap-4"
+        >
+          <button
+            class="button-custom-prev flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
+            onclick="prevSlide()"
+          >
+            &#8592;
+          </button>
+          <button
+            class="button-custom-next flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
+            onclick="nextSlide()"
+          >
+            &#8594;
+          </button>
         </div>
-
       </section>
 
       <section id="all" class="container w-full mx-auto">
-        <div class="text-[22px] md:text-[24px] lg:text-[48px] pt-[60px] md:pt-20 px-[20px] lg:px-0 lg:pt-[100px] font-helvetica">
-          <h1 class="text-black">Upgrade Your Home With</h1>
-          <h2 class="text-black">Our New Furniture Line</h2>
+        <div
+          class="text-[22px] md:text-[24px] lg:text-[48px] pt-[60px] md:pt-20 px-[20px] lg:px-0 lg:pt-[100px] font-helvetica"
+        >
+          <h1
+            class="text-black"
+            data-aos="fade-down"
+            data-aos-delay="150"
+            data-aos-once="true"
+          >
+            Upgrade Your Home With
+          </h1>
+          <h2
+            class="text-black"
+            data-aos="fade-down"
+            data-aos-delay="150"
+            data-aos-once="true"
+          >
+            Our New Furniture Line
+          </h2>
         </div>
-        <div class="product px-[20px] lg:px-0 pt-10 ">
+        <div class="product px-[20px] lg:px-0 pt-10">
           <ul class="sm:flex gap-[15px]">
             <li class="w-full">
               <a href="detailproduct" class="block">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image1.png" alt="Table" data-aos="fade-right" data-aos-delay="100" data-aos-once="true" class="w-full h-full object-cover">
-                  <div data-aos="fade-right" aos-data-delay="250" data-aos-once="true" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0"
+                >
+                  <img
+                    src="/asset/image1.png"
+                    alt="Table"
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    data-aos="fade-right"
+                    aos-data-delay="250"
+                    data-aos-once="true"
+                    class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full"
+                  >
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
                     </div>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="100" data-aos-once="true" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                    class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica"
+                  >
                     <h2 class="text-lg lg:text-2xl font-normal">Tables</h2>
                     <p class="text-gray-500">Bok extendable table</p>
                   </div>
@@ -468,23 +1050,50 @@
             </li>
             <li class="w-full">
               <a href="detailproduct" class="block">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image2.png" alt="Table" data-aos="fade-right" data-aos-delay="100" data-aos-once="true" class="w-full h-full object-cover">
-                  <div data-aos="fade-right" aos-data-delay="400" data-aos-once="true" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0"
+                >
+                  <img
+                    src="/asset/image2.png"
+                    alt="Table"
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    data-aos="fade-right"
+                    aos-data-delay="400"
+                    data-aos-once="true"
+                    class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full"
+                  >
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
                     </div>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="100" data-aos-once="true" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                    class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-50 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica"
+                  >
                     <h2 class="text-lg lg:text-2xl font-normal">Chair</h2>
                     <p class="text-xs lg:text-base text-gray-500">Bok chair</p>
                   </div>
@@ -493,383 +1102,944 @@
             </li>
             <li class="w-full">
               <a href="detailproduct" class="block">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0">
-                  <img src="/asset/image3.png" alt="Table" data-aos="fade-right" data-aos-delay="100" data-aos-once="true" class="w-full h-full object-cover">
-                  <div data-aos="fade-right" aos-data-delay="400" data-aos-once="true" class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full">
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden relative w-full h-[360px] md:h-[400px] lg:h-[436px] mb-4 lg:mb-0"
+                >
+                  <img
+                    src="/asset/image3.png"
+                    alt="Table"
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    data-aos="fade-right"
+                    aos-data-delay="400"
+                    data-aos-once="true"
+                    class="absolute top-[23px] left-4 flex items-center space-x-2 rounded-full"
+                  >
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#BFC5D3] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#B39A71] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#F49048] rounded-full"></span>
                     </div>
-                    <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                    <div
+                      class="w-5 h-5 bg-white rounded-full flex items-center justify-center"
+                    >
                       <span class="w-4 h-4 bg-[#ADC3A2] rounded-full"></span>
                     </div>
                   </div>
-                  <div data-aos="fade-right" data-aos-delay="100" data-aos-once="true" class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                    class="absolute bottom-[14px] left-[14px] right-[14px] bg-white bg-opacity-80 p-2 lg:p-4 rounded-xl lg:rounded-2xl font-helvetica"
+                  >
                     <h2 class="text-lg lg:text-2xl font-normal">Cupboard</h2>
-                    <p class="text-xs lg:text-base text-gray-500">Ligna cupboard</p>
+                    <p class="text-xs lg:text-base text-gray-500">
+                      Ligna cupboard
+                    </p>
                   </div>
                 </div>
               </a>
             </li>
           </ul>
-          
-            <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="relatative bottom-0 w-full text-left pt-10">
-                <button class=" bg-transparent  text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica">
-                    See more product →
-                </button>
-            </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-once="true"
+            class="relatative bottom-0 w-full text-left pt-10"
+          >
+            <button
+              class="bg-transparent text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica"
+            >
+              See more product →
+            </button>
+          </div>
         </div>
       </section>
-      
-      <section class="container w-full mx-auto md:flex items-start py-[50px] lg:py-[100px] gap-[77px] ">
-          <!-- Title Section -->
-          <div class="mb-8 px-4 md:mb-0 md:px-0">
-              <div class=" text-black text-left font-helvetica lg:w-[475px]">
-                  <h2 data-aos="fade-down" data-aos-delay="150" data-aos-once="true" class="text-[28px] md:text-5xl font-normal leading-9 lg:leading-[60px]">Exploring Our Diverse Categories</h2>
-                  <p data-aos="fade-down" data-aos-delay="150" data-aos-once="true" class="text-sm lg:text-xl text-[#6A7182] mt-[10px] lg:mt-[24px]">There are many categories that you can explore and view for your dream home.</p>
-              </div>
+
+      <section
+        class="container w-full mx-auto md:flex items-start py-[50px] lg:py-[100px] gap-[77px]"
+      >
+        <!-- Title Section -->
+        <div class="mb-8 px-4 md:mb-0 md:px-0">
+          <div class="text-black text-left font-helvetica lg:w-[475px]">
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="150"
+              data-aos-once="true"
+              class="text-[28px] md:text-5xl font-normal leading-9 lg:leading-[60px]"
+            >
+              Exploring Our Diverse Categories
+            </h2>
+            <p
+              data-aos="fade-down"
+              data-aos-delay="150"
+              data-aos-once="true"
+              class="text-sm lg:text-xl text-[#6A7182] mt-[10px] lg:mt-[24px]"
+            >
+              There are many categories that you can explore and view for your
+              dream home.
+            </p>
           </div>
-      
-          <!-- Categories Section -->
-          <ul class="categories w-full px-4 md:px-0 grid grid-cols-1 gap-[10px] lg:gap-[14px]"> 
-            <li class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"> 
-              <h2 data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Eaves & Ceiling</h2>
-              <p data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+        </div>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2">
-                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2">
-                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-              </li>
+        <!-- Categories Section -->
+        <ul
+          class="categories w-full px-4 md:px-0 grid grid-cols-1 gap-[10px] lg:gap-[14px]"
+        >
+          <li
+            class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"
+          >
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition"
+            >
+              Eaves & Ceiling
+            </h2>
+            <p
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-xs lg:text-sm text-[#6A7182] transition"
+            >
+              Interior Design, Furniture And Workspace
+            </p>
 
-            <div class="border-b border-gray-300"></div>
-         
-            <li class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Walls</h2>
-              <p data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
-            
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-              </li>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image10.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image5.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </li>
 
-            <div class="border-b border-gray-300"></div>
-          
-            <li class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Decoratives</h2>
-              <p data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+          <div class="border-b border-gray-300"></div>
+          <li
+            class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"
+          >
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition"
+            >
+              Walls
+            </h2>
+            <p
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-xs lg:text-sm text-[#6A7182] transition"
+            >
+              Interior Design, Furniture And Workspace
+            </p>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-            </li>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image10.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image5.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </li>
 
-            <div class="border-b border-gray-300"></div>
-   
-            <li class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Floors</h2>
-              <p data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+          <div class="border-b border-gray-300"></div>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-            </li>
+          <li
+            class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"
+          >
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition"
+            >
+              Decoratives
+            </h2>
+            <p
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-xs lg:text-sm text-[#6A7182] transition"
+            >
+              Interior Design, Furniture And Workspace
+            </p>
 
-            <div class="border-b border-gray-300"></div>
-  
-            <li class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]">
-              <h2 data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition">Accessories</h2>
-              <p data-aos="fade-down" data-aos-delay="400" data-aos-once="true" class="text-xs lg:text-sm text-[#6A7182] transition">Interior Design, Furniture And Workspace</p>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image10.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image5.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </li>
 
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image10.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute hidden group-hover:block w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transition-transform transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2 ">
-                  <img src="/asset/image5.png" alt="Walls Category" class="w-full h-full object-cover">
-                </div>
-            </li>   
-          </ul>
+          <div class="border-b border-gray-300"></div>
+
+          <li
+            class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"
+          >
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition"
+            >
+              Floors
+            </h2>
+            <p
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-xs lg:text-sm text-[#6A7182] transition"
+            >
+              Interior Design, Furniture And Workspace
+            </p>
+
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image10.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image5.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </li>
+
+          <div class="border-b border-gray-300"></div>
+
+          <li
+            class="category-item relative group text-left font-helvetica bg-transparent hover:bg-[#F8F4F1] transition duration-300 rounded-xl px-[6px] lg:px-[16px] pb-[6px]"
+          >
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-[24px] lg:text-[40px] font-normal text-[#050811] group-hover:text-black transition"
+            >
+              Accessories
+            </h2>
+            <p
+              data-aos="fade-down"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="text-xs lg:text-sm text-[#6A7182] transition"
+            >
+              Interior Design, Furniture And Workspace
+            </p>
+
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[1.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image10.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out w-28 h-36 md:w-[229px] md:h-[285px] rounded-lg overflow-hidden shadow-lg border-2 border-white transform group-hover:rotate-[-3.9deg] right-0 top-1/2 -translate-y-1/2"
+            >
+              <img
+                src="/asset/image5.png"
+                alt="Walls Category"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </li>
+        </ul>
       </section>
-      
-      <div class="relative w-full h-screen lg:h-[895px] flex flex-col py-[60px]">
-        <img src="/asset/image6.png" alt="Background Image" class="absolute inset-0 w-full h-full object-cover z-0">
+
+      <div
+        class="relative w-full h-screen lg:h-[895px] flex flex-col py-[60px]"
+      >
+        <img
+          src="/asset/image6.png"
+          alt="Background Image"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        />
 
         <div class="container relative mx-auto z-10">
           <div class="px-5 lg:px-0">
-            <h2 data-aos="fade-down" data-aos-delay="200" data-aos-once="true" class="text-[24px] lg:text-[64px] font-normal lg:w-[714px] font-helvetica">Standing Desk Touch - Table Workspace</h2>
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="200"
+              data-aos-once="true"
+              class="text-[24px] lg:text-[64px] font-normal lg:w-[714px] font-helvetica"
+            >
+              Standing Desk Touch - Table Workspace
+            </h2>
           </div>
           <div class="flex justify-between w-full px-5 lg:px-0">
-            <h2 data-aos="fade-down" data-aos-delay="200" data-aos-once="true" class="text-xs lg:text-xl font-helvetica">Interior Design, Furniture And Workspace</h2>
-            <a href="#" data-aos="fade-down" data-aos-delay="500" data-aos-once="true" class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white transition duration-500">See Product →</a>
+            <h2
+              data-aos="fade-down"
+              data-aos-delay="200"
+              data-aos-once="true"
+              class="text-xs flex items-center lg:text-xl font-helvetica"
+            >
+              Interior Design, Furniture And Workspace
+            </h2>
+            <a
+              href="#"
+              data-aos="fade-down"
+              data-aos-delay="500"
+              data-aos-once="true"
+              class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white"
+              style="transition:all 300ms ease-in-out !important"
+              >See Product →</a
+            >
           </div>
         </div>
         <!-- card 1 -->
-        <div data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" class="absolute bottom-[245px] lg:bottom-[270px] left-[10%] md:left-[55.5%] group z-20">
-          <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-            <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-once="true"
+          class="absolute bottom-[245px] lg:bottom-[270px] left-[10%] md:left-[55.5%] group z-20"
+        >
+          <a
+            href="#"
+            class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+          >
+            <div
+              class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+            ></div>
           </a>
-    
-          <div class="absolute border lg:border-2 border-white -translate-x-2 bottom-[50px] lg:-translate-x-5 lg:bottom-[70px] transform w-[180px] h-[90px] p-[8px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+
+          <div
+            class="absolute border lg:border-2 border-white -translate-x-2 bottom-[50px] lg:-translate-x-5 lg:bottom-[70px] transform w-[180px] h-[90px] p-[8px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+          >
             <p class="text-xs lg:text-sm text-black">Workspace</p>
-            <h2 class="text-sm lg:text-base font-normal text-black ">Florence Smoky Gray Corduroy Vertical</h2>
-    
+            <h2 class="text-sm lg:text-base font-normal text-black">
+              Florence Smoky Gray Corduroy Vertical
+            </h2>
+
             <div class="flex mt-[4px] lg:mt-[6px] space-x-1 lg:space-x-2">
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+              ></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+              ></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+              ></div>
             </div>
-    
-            <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-8px] lg:bottom-[-10px] left-[15px] lg:left-8 w-3 h-3 lg:w-4 lg:h-4 rotate-45"></div>
+            <div
+              class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-8px] lg:bottom-[-10px] left-[15px] lg:left-8 w-3 h-3 lg:w-4 lg:h-4 rotate-45"
+            ></div>
           </div>
         </div>
 
         <!-- card 2 -->
-        <div data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" class="absolute bottom-[180px] lg:bottom-[32px] left-[40%] md:left-[67.5%] group z-20">
-          <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-            <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-once="true"
+          class="absolute bottom-[180px] lg:bottom-[32px] left-[40%] md:left-[67.5%] group z-20"
+        >
+          <a
+            href="#"
+            class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+          >
+            <div
+              class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+            ></div>
           </a>
-    
-          <div class="absolute border lg:border-2 border-white -translate-x-2 bottom-[50px] lg:-translate-x-5 lg:bottom-[70px] transform w-[180px] h-[90px] p-[8px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+
+          <div
+            class="absolute border lg:border-2 border-white -translate-x-2 bottom-[50px] lg:-translate-x-5 lg:bottom-[70px] transform w-[180px] h-[90px] p-[8px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+          >
             <p class="text-xs lg:text-sm text-black">Workspace</p>
-            <h2 class="text-sm lg:text-base font-normal text-black ">Florence Smoky Gray Corduroy Vertical</h2>
-    
+            <h2 class="text-sm lg:text-base font-normal text-black">
+              Florence Smoky Gray Corduroy Vertical
+            </h2>
+
             <div class="flex mt-[4px] lg:mt-[6px] space-x-1 lg:space-x-2">
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+              ></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+              ></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+              ></div>
             </div>
-    
-            <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-8px] lg:bottom-[-10px] left-[15px] lg:left-8 w-3 h-3 lg:w-4 lg:h-4 rotate-45"></div>
+
+            <div
+              class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-8px] lg:bottom-[-10px] left-[15px] lg:left-8 w-3 h-3 lg:w-4 lg:h-4 rotate-45"
+            ></div>
           </div>
         </div>
 
         <!-- card 3 -->
-        <div data-aos="zoom-in" data-aos-delay="200" data-aos-once="true" class="absolute bottom-[220px] lg:bottom-[380px] left-[55%] md:left-[77%] group z-20">
-          <a href="#" class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out">
-            <div class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"></div>
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-once="true"
+          class="absolute bottom-[220px] lg:bottom-[380px] left-[55%] md:left-[77%] group z-20"
+        >
+          <a
+            href="#"
+            class="w-[32px] h-[32px] lg:w-[46px] lg:h-[46px] bg-[#FFFFFF33] rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300 ease-in-out"
+          >
+            <div
+              class="w-[18px] h-[18px] lg:w-[25px] lg:h-[25px] bg-white rounded-full"
+            ></div>
           </a>
-    
-          <div class="absolute border lg:border-2 border-white -translate-x-2 bottom-[50px] lg:-translate-x-5 lg:bottom-[70px] transform w-[170px] h-[90px] p-[8px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+
+          <div
+            class="absolute border lg:border-2 border-white -translate-x-2 bottom-[50px] lg:-translate-x-5 lg:bottom-[70px] transform w-[170px] h-[90px] p-[8px] lg:w-[292px] lg:h-[117px] lg:p-[12px] bg-white/30 backdrop-blur-md rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+          >
             <p class="text-xs lg:text-sm text-black">Workspace</p>
-            <h2 class="text-sm lg:text-base font-normal text-black ">Florence Smoky Gray Corduroy Vertical</h2>
-    
+            <h2 class="text-sm lg:text-base font-normal text-black">
+              Florence Smoky Gray Corduroy Vertical
+            </h2>
+
             <div class="flex mt-[4px] lg:mt-[6px] space-x-1 lg:space-x-2">
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"></div>
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"></div>
-              <div class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#BFC5D3] rounded-full"
+              ></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#F49048] rounded-full"
+              ></div>
+              <div
+                class="w-[14px] h-[14px] lg:w-5 lg:h-5 bg-[#ADC3A2] rounded-full"
+              ></div>
             </div>
-    
-            <div class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-8px] lg:bottom-[-10px] left-[15px] lg:left-8 w-3 h-3 lg:w-4 lg:h-4 rotate-45"></div>
+
+            <div
+              class="absolute border-b lg:border-b-2 border-r lg:border-r-2 border-white bottom-[-8px] lg:bottom-[-10px] left-[15px] lg:left-8 w-3 h-3 lg:w-4 lg:h-4 rotate-45"
+            ></div>
           </div>
         </div>
       </div>
 
-        
-        <div class="container mx-auto px-5 lg:px-0 text-center pt-[50px] pb-5 lg:w-[680px] lg:pt-[100px] lg:pb-[40px] font-helvetica">
-          <h2 data-aos="fade-up" data-aos-delay="200" data-aos-once="true" class="text-2xl lg:text-5xl font-normal mb-2">Transforming Vision Into Reality</h2>
-          <p data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="text-[#6A7182] text-xs lg:text-xl font-normal ">Our latest project offers a sleek, minimalist design that prioritizes both elegance and functionality, ensuring a seamless user.</p>
-        </div>
-      
-        <div class="relative max-w-full pl-5 lg:pl-[5.5%]">
-          <div id="scrollContainer" class="flex gap-[15px] lg:gap-[30px] overflow-x-scroll scrollbar-hide h-[450px] lg:h-[600px]">
-            <div data-aos="fade-right" data-aos-delay="200" data-aos-once="true" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
-              <div class="group flex flex-col items-left">
-                <figure
-                  class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden">
-                  <img class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full" src="/asset/image7.png" alt="">
-              </figure>
-              <figcaption
-                class="caption text-left mt-5 lg:mt-10 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica">
-                CSI Project
-              </figcaption>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="400" data-aos-once="true" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
-              <div class="group flex flex-col items-left">
-                <figure
-                  class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden">
-                  <img class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full" src="/asset/image8.png" alt="">
-              </figure>
-              <figcaption
-                class="caption text-left mt-[60px] lg:mt-20 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica">
-                CSI Project
-              </figcaption>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="600" data-aos-once="true" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
-              <div class="group flex flex-col items-left">
-                <figure
-                  class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden">
-                  <img class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full" src="/asset/image9.png" alt="">
-              </figure>
-              <figcaption
-                class="caption text-left mt-5 lg:mt-10 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica">
-                CSI Project
-              </figcaption>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="800" data-aos-once="true" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
-              <div class="group flex flex-col items-left">
-                <figure
-                  class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden">
-                  <img class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full" src="/asset/image7.png" alt="">
-              </figure>
-              <figcaption
-                class="caption text-left mt-[60px] lg:mt-20 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica">
-                CSI Project
-              </figcaption>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="850" data-aos-once="true" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
-              <div class="group flex flex-col items-left">
-                <figure
-                  class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden">
-                  <img class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full" src="/asset/image8.png" alt="">
-              </figure>
-              <figcaption
-                class="caption text-left mt-5 lg:mt-10 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica">
-                CSI Project
-              </figcaption>
-              </div>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="900" data-aos-once="true" class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]">
-              <div class="group flex flex-col items-left">
-                <figure
-                  class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden">
-                  <img class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full" src="/asset/image9.png" alt="">
-              </figure>
-              <figcaption
-                class="caption text-left mt-[60px] lg:mt-20 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica">
-                CSI Project
-              </figcaption>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div
+        class="container mx-auto px-5 lg:px-0 text-center pt-[50px] pb-5 lg:w-[680px] lg:pt-[100px] lg:pb-[40px] font-helvetica"
+      >
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-once="true"
+          class="text-2xl lg:text-5xl font-normal mb-2"
+        >
+          Transforming Vision Into Reality
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-once="true"
+          class="text-[#6A7182] text-xs lg:text-xl font-normal"
+        >
+          Our latest project offers a sleek, minimalist design that prioritizes
+          both elegance and functionality, ensuring a seamless user.
+        </p>
+      </div>
 
-        <div class="container mx-auto flex gap-3">
-          <div data-aos="fade-right" data-aos-delay="200" data-aos-once="true" class="pl-5 lg:pl-0">
-            <button id="scrollLeft" class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-            </button>
+      <div class="relative max-w-full pl-5 lg:pl-[5.5%]">
+        <div
+          id="scrollContainer"
+          class="flex gap-[15px] lg:gap-[30px] overflow-x-scroll scrollbar-hide h-[450px] lg:h-[600px]"
+        >
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-once="true"
+            class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]"
+          >
+            <div class="group flex flex-col items-left">
+              <figure
+                class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden"
+              >
+                <img
+                  class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full"
+                  src="/asset/image7.png"
+                  alt=""
+                />
+              </figure>
+              <figcaption
+                class="caption text-left mt-5 lg:mt-10 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica"
+              >
+                CSI Project
+              </figcaption>
+            </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-            <button id="scrollRight" class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </button>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-once="true"
+            class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]"
+          >
+            <div class="group flex flex-col items-left">
+              <figure
+                class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden"
+              >
+                <img
+                  class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full"
+                  src="/asset/image8.png"
+                  alt=""
+                />
+              </figure>
+              <figcaption
+                class="caption text-left mt-[60px] lg:mt-20 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica"
+              >
+                CSI Project
+              </figcaption>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="600"
+            data-aos-once="true"
+            class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]"
+          >
+            <div class="group flex flex-col items-left">
+              <figure
+                class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden"
+              >
+                <img
+                  class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full"
+                  src="/asset/image9.png"
+                  alt=""
+                />
+              </figure>
+              <figcaption
+                class="caption text-left mt-5 lg:mt-10 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica"
+              >
+                CSI Project
+              </figcaption>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-once="true"
+            class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]"
+          >
+            <div class="group flex flex-col items-left">
+              <figure
+                class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden"
+              >
+                <img
+                  class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full"
+                  src="/asset/image7.png"
+                  alt=""
+                />
+              </figure>
+              <figcaption
+                class="caption text-left mt-[60px] lg:mt-20 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica"
+              >
+                CSI Project
+              </figcaption>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="850"
+            data-aos-once="true"
+            class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]"
+          >
+            <div class="group flex flex-col items-left">
+              <figure
+                class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transition-transform duration-300 group overflow-hidden"
+              >
+                <img
+                  class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full"
+                  src="/asset/image8.png"
+                  alt=""
+                />
+              </figure>
+              <figcaption
+                class="caption text-left mt-5 lg:mt-10 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica"
+              >
+                CSI Project
+              </figcaption>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="900"
+            data-aos-once="true"
+            class="flex flex-col items-center min-w-[280px] lg:min-w-[397px]"
+          >
+            <div class="group flex flex-col items-left">
+              <figure
+                class="gambar relative w-[280px] h-[367px] lg:w-[397px] lg:h-[483px] bg-cover rounded-lg bg-center shadow-md transform translate-y-[40px] transition-transform duration-300 group overflow-hidden"
+              >
+                <img
+                  class="group-hover:scale-105 rounded-[10px] duration-500 w-full h-full"
+                  src="/asset/image9.png"
+                  alt=""
+                />
+              </figure>
+              <figcaption
+                class="caption text-left mt-[60px] lg:mt-20 font-normal text-base lg:text-2xl text-[#050811] opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-helvetica"
+              >
+                CSI Project
+              </figcaption>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="relatative w-full text-center pt-5 pb-[50px] lg:pt-10 lg:pb-[100px]">
-          <button class=" bg-transparent text-sm lg:text-base text-center text-black font-normal border-[1px] px-[15px] py-[4px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 font-helvetica">
-              Our more project →
+      <div class="container mx-auto flex gap-3">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-once="true"
+          class="pl-5 lg:pl-0"
+        >
+          <button
+            id="scrollLeft"
+            class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-left"
+            >
+              <path d="m12 19-7-7 7-7" />
+              <path d="M19 12H5" />
+            </svg>
           </button>
         </div>
-
-        <section class="container px-5 lg:px-0 lg:max-w-full text-center">
-          <div class="flex justify-center gap-2 lg:gap-5 pt-[50px] lg:pt-[100px]">
-              <div data-aos="fade-down" data-aos-delay="100" data-aos-once="true" onclick="showCaption(0)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
-                  <img src="/asset/gambar3.png" alt="User 1" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div data-aos="fade-down" data-aos-delay="300" data-aos-once="true" onclick="showCaption(1)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
-                  <img src="/asset/gambar2.png" alt="User 2" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div data-aos="fade-down" data-aos-delay="500" data-aos-once="true" onclick="showCaption(2)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
-                  <img src="/asset/gambar1.png" alt="User 3" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div data-aos="fade-down" data-aos-delay="700" data-aos-once="true" onclick="showCaption(3)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
-                  <img src="/asset/gambar4.png" alt="User 4" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-              <div data-aos="fade-down" data-aos-delay="900" data-aos-once="true" onclick="showCaption(4)" class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300">
-                  <img src="/asset/gambar5.png" alt="User 5" class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300">
-              </div>
-          </div>
-      
-          <div id="caption-container" class="mx-auto text-lg lg:text-[32px] font-normal text-[#070C17] my-[30px] lg:my-[60px] lg:w-[924px] font-helvetica"> 
-              <p data-aos="fade-down" data-aos-delay="350" data-aos-once="true" id="caption-text">Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.</p>
-          </div>
-      
-          <p data-aos="fade-up" data-aos-delay="250" data-aos-once="true" id="caption-name" class="text-sm lg:text-xl font-normal text-[#070C17] lg:mb-[6px] font-helvetica">Michael Cristopher</p>
-          <p data-aos="fade-up" data-aos-delay="250" data-aos-once="true" id="caption-position" class="text-[10px] lg:text-sm text-[#6A7182] mb-[100px] font-helvetica">Owner PT. Airbander</p>
-        </section>
-    </main>
-    
-    <footer class="bg-[#F8F4F1]">
-      <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-0">
-
-          <div class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left">
-              <h2 data-aos="fade-right" data-aos-delay="200" data-aos-once="true" class="text-[32px] font-extrabold text-#050811 font-montserrat">Kayyon</h2>
-              <p data-aos="fade-right" data-aos-delay="200" data-aos-once="true" class="text-[#6A7182] mt-6 text-base lg:text-xl font-normal font-helvetica">Our latest project offers a sleek, minimalist design that prioritizes both elegance and functionality, ensuring a seamless user</p>
-          </div>
-   
-            <div class="w-full lg:w-[360px] flex flex-col lg:gap-[30px] md:items-end">
-              <div class="flex gap-4 ml-0 md:ml-6 mt-2 md:mt-0 justify-center">
-                  <a href="#" data-aos="fade-up" data-aos-delay="800" data-aos-once="true" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/facebook.svg" alt="Facebook" class="w-3 h-3">
-                  </a>
-                  <a href="#" data-aos="fade-up" data-aos-delay="600" data-aos-once="true" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/twitter.svg" alt="Twitter" class="w-3 h-3">
-                  </a>
-                  <a href="#" data-aos="fade-up" data-aos-delay="400" data-aos-once="true" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/instagram.svg" alt="Instagram" class="w-3 h-3">
-                  </a>
-                  <a href="#" data-aos="fade-up" data-aos-delay="200" data-aos-once="true" class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out">
-                      <img src="/linkedin.svg" alt="LinkedIn" class="w-3 h-3">
-                  </a>
-              </div>
-              <div class="mt-[30px] w-full">
-                  <h3 data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica">Newsletter</h3>
-                  <form class="flex items-center mt-3 w-full">
-                      <input type="email" placeholder="Your Email" class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent">
-                        <button  type="submit" class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none">
-                            → 
-                        </button>
-                  </form>
-              </div>
-          </div>
+        <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+          <button
+            id="scrollRight"
+            class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div class="container mx-auto mt-10 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center">
-      
-          <div class="flex flex-col lg:flex-row items-center">
-              <p class="text-black text-xs lg:text-base font-normal font-helvetica">&copy; 2024 Kayyon. All rights reserved.</p>
-              <div class="flex space-x-3 ml-0 md:ml-6 mt-2 md:mt-0">
-                  <a href="#" class="text-gray-500 hover:text-gray-700">
-                      <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#" class="text-gray-500 hover:text-gray-700">
-                      <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="#" class="text-gray-500 hover:text-gray-700">
-                      <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="#" class="text-gray-500 hover:text-gray-700">
-                      <i class="fab fa-linkedin-in"></i>
-                  </a>
-              </div>
-          </div>
+      <div
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-once="true"
+        class="relatative w-full text-center pt-5 pb-[50px] lg:pt-10 lg:pb-[100px]"
+      >
+        <button
+          class="bg-transparent text-sm lg:text-base text-center text-black font-normal border-[1px] px-[15px] py-[4px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 font-helvetica"
+        >
+          Our more project →
+        </button>
+      </div>
 
-          <div class="flex space-x-4 text-xs lg:text-base text-black font-inter">
-              <a href="#" class="hover:text-gray-700 font-normal">Customer Services</a>
-              <span>|</span>
-              <a href="#" class="hover:text-gray-700 font-normal">Privacy Policy</a>
+      <section class="container px-5 lg:px-0 lg:max-w-full text-center">
+        <div class="flex justify-center gap-2 lg:gap-5 pt-[50px] lg:pt-[100px]">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-once="true"
+            onclick="showCaption(0)"
+            class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300"
+          >
+            <img
+              src="/asset/gambar3.png"
+              alt="User 1"
+              class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300"
+            />
           </div>
+          <div
+            data-aos="fade-down"
+            data-aos-delay="300"
+            data-aos-once="true"
+            onclick="showCaption(1)"
+            class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300"
+          >
+            <img
+              src="/asset/gambar2.png"
+              alt="User 2"
+              class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+          <div
+            data-aos="fade-down"
+            data-aos-delay="500"
+            data-aos-once="true"
+            onclick="showCaption(2)"
+            class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300"
+          >
+            <img
+              src="/asset/gambar1.png"
+              alt="User 3"
+              class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+          <div
+            data-aos="fade-down"
+            data-aos-delay="700"
+            data-aos-once="true"
+            onclick="showCaption(3)"
+            class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300"
+          >
+            <img
+              src="/asset/gambar4.png"
+              alt="User 4"
+              class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+          <div
+            data-aos="fade-down"
+            data-aos-delay="900"
+            data-aos-once="true"
+            onclick="showCaption(4)"
+            class="image-wrapper w-8 h-8 lg:w-12 lg:h-12 rounded-full overflow-hidden cursor-pointer hover:scale-[1.2] transform transition-transform duration-300"
+          >
+            <img
+              src="/asset/gambar5.png"
+              alt="User 5"
+              class="image w-full h-full object-cover opacity-30 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+        </div>
+
+        <div
+          id="caption-container"
+          class="mx-auto text-lg lg:text-[32px] font-normal text-[#070C17] my-[30px] lg:my-[60px] lg:w-[924px] font-helvetica"
+        >
+          <p
+            data-aos="fade-down"
+            data-aos-delay="350"
+            data-aos-once="true"
+            id="caption-text"
+          >
+            Working with Kayyon has been a fantastic experience. Their
+            innovative design and attention to detail consistently exceeded our
+            expectations, delivering both beauty and functionality. Highly
+            recommended for any project.
+          </p>
+        </div>
+
+        <p
+          data-aos="fade-up"
+          data-aos-delay="250"
+          data-aos-once="true"
+          id="caption-name"
+          class="text-sm lg:text-xl font-normal text-[#070C17] lg:mb-[6px] font-helvetica"
+        >
+          Michael Cristopher
+        </p>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="250"
+          data-aos-once="true"
+          id="caption-position"
+          class="text-[10px] lg:text-sm text-[#6A7182] mb-[100px] font-helvetica"
+        >
+          Owner PT. Airbander
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-[#F8F4F1]">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-0"
+      >
+        <div
+          class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left"
+        >
+          <h2
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-once="true"
+            class="text-[32px] font-extrabold text-#050811 font-montserrat"
+          >
+            Kayyon
+          </h2>
+          <p
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-once="true"
+            class="text-[#6A7182] mt-6 text-base lg:text-xl font-normal font-helvetica"
+          >
+            Our latest project offers a sleek, minimalist design that
+            prioritizes both elegance and functionality, ensuring a seamless
+            user
+          </p>
+        </div>
+
+        <div
+          class="w-full lg:w-[360px] flex flex-col lg:gap-[30px] md:items-end"
+        >
+          <div class="flex gap-4 ml-0 md:ml-6 mt-2 md:mt-0 justify-center">
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="800"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/facebook.svg" alt="Facebook" class="w-3 h-3" />
+            </a>
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/twitter.svg" alt="Twitter" class="w-3 h-3" />
+            </a>
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/instagram.svg" alt="Instagram" class="w-3 h-3" />
+            </a>
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/linkedin.svg" alt="LinkedIn" class="w-3 h-3" />
+            </a>
+          </div>
+          <div class="mt-[30px] w-full">
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-once="true"
+              class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica"
+            >
+              Newsletter
+            </h3>
+            <form class="flex items-center mt-3 w-full">
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent"
+              />
+              <button
+                type="submit"
+                class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none"
+              >
+                →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container mx-auto mt-10 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex flex-col lg:flex-row items-center">
+          <p class="text-black text-xs lg:text-base font-normal font-helvetica">
+            &copy; 2024 Kayyon. All rights reserved.
+          </p>
+          <div class="flex space-x-3 ml-0 md:ml-6 mt-2 md:mt-0">
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex space-x-4 text-xs lg:text-base text-black font-inter">
+          <a href="#" class="hover:text-gray-700 font-normal"
+            >Customer Services</a
+          >
+          <span>|</span>
+          <a href="#" class="hover:text-gray-700 font-normal">Privacy Policy</a>
+        </div>
       </div>
     </footer>
 
@@ -877,116 +2047,141 @@
 
     <script>
       // dropdown mobile
-      function toggleDropdown() {
+      function toggleDropdown(event) {
         const dropdown = document.getElementById("dropdownMenu");
+
         dropdown.classList.toggle("hidden");
-     
       }
-    
-      // Tutup dropdown jika klik di luar dropdown
-      window.onclick = function(event) {
+
+      // Tutup dropdown jika klik di luar menu
+      window.addEventListener("click", function (event) {
         const dropdown = document.getElementById("dropdownMenu");
-        if (!event.target.closest('[onclick="toggleDropdown()"]') && !dropdown.contains(event.target)) {
+        const menuButton = document.getElementById("btn-menu");
+
+        if (
+          !menuButton.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
           dropdown.classList.add("hidden");
+          menuButton.classList.remove("opened");
+          menuButton.setAttribute("aria-expanded", "false");
         }
-      }
+      });
 
       let currentIndex = 0;
       const totalSlides = 5;
 
-     
-      const scrollContainer = document.getElementById('scrollContainer');
-      const scrollAmount = 400; // Atur jumlah scroll (piksel)
+      const scrollContainer = document.getElementById("scrollContainer");
+      const scrollAmount = 400; 
 
-      document.getElementById('scrollLeft').addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      document.getElementById("scrollLeft").addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
       });
 
-      document.getElementById('scrollRight').addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      document.getElementById("scrollRight").addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
       });
-      
+
       const captions = [
-          { text: "The design and results from Kayyon truly matched our expectations. Elegant and functional!", name: "Johnson", position: "Creative Director at DesignHub" },
-          { text: "Kayyon's service was very professional. We are pleased with the results of this collaboration.", name: "David Lee", position: "CEO of InnovateCorp" },
-          { text: "Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.", name: "Michael Cristopher", position: "Owner PT. Airbander" },
-          { text: "The quality of Kayyon's product and design details is highly satisfying, perfect for our business needs.", name: "Adams", position: "Managing Director at Luxe Interiors" },
-          { text: "A very productive collaboration with outstanding results. We will definitely work together again.", name: "Alex Gomez", position: "Project Manager at UrbanSpaces" }
+        {
+          text: "The design and results from Kayyon truly matched our expectations. Elegant and functional!",
+          name: "Johnson",
+          position: "Creative Director at DesignHub",
+        },
+        {
+          text: "Kayyon's service was very professional. We are pleased with the results of this collaboration.",
+          name: "David Lee",
+          position: "CEO of InnovateCorp",
+        },
+        {
+          text: "Working with Kayyon has been a fantastic experience. Their innovative design and attention to detail consistently exceeded our expectations, delivering both beauty and functionality. Highly recommended for any project.",
+          name: "Michael Cristopher",
+          position: "Owner PT. Airbander",
+        },
+        {
+          text: "The quality of Kayyon's product and design details is highly satisfying, perfect for our business needs.",
+          name: "Adams",
+          position: "Managing Director at Luxe Interiors",
+        },
+        {
+          text: "A very productive collaboration with outstanding results. We will definitely work together again.",
+          name: "Alex Gomez",
+          position: "Project Manager at UrbanSpaces",
+        },
       ];
-  
+
       function showCaption(index) {
         // Update caption text and name
-        document.getElementById("caption-text").innerText = captions[index].text;
-        document.getElementById("caption-name").innerText = captions[index].name;
-        document.getElementById("caption-position").innerText = captions[index].position;
+        document.getElementById("caption-text").innerText =
+          captions[index].text;
+        document.getElementById("caption-name").innerText =
+          captions[index].name;
+        document.getElementById("caption-position").innerText =
+          captions[index].position;
 
         // Remove 'active' class from any previously active image
-        const images = document.querySelectorAll('.image-wrapper');
-        images.forEach(wrapper => wrapper.classList.remove('active'));
+        const images = document.querySelectorAll(".image-wrapper");
+        images.forEach((wrapper) => wrapper.classList.remove("active"));
 
         // Add 'active' class to the clicked image wrapper
-        images[index].classList.add('active');
+        images[index].classList.add("active");
       }
 
-      function init(){
-          showCaption(2);
-          console.log('show caption activated')
+      function init() {
+        showCaption(2);
+        console.log("show caption activated");
       }
-      init()
-      window.addEventListener("scroll", function() {
+      init();
+      window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) { 
+        if (window.scrollY > 50) {
           navbar.classList.add("bg-scrolled");
         } else {
           navbar.classList.remove("bg-scrolled");
         }
       });
-      const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal",
         loop: true,
-    
+
         pagination: {
-          el: '.swiper-pagination',
-          type:'progressbar'
+          el: ".swiper-pagination",
+          type: "progressbar",
         },
         on: {
           slideChange: function () {
             currentIndex = this.realIndex;
-            let indexSwiper = document.querySelector('.indexSwiper');
-            indexSwiper.textContent = `0${currentIndex + 1}`
+            let indexSwiper = document.querySelector(".indexSwiper");
+            indexSwiper.textContent = `0${currentIndex + 1}`;
           },
         },
-    
+
         navigation: {
-          nextEl: '.button-custom-next',
-          prevEl: '.button-custom-prev',
-        },    
+          nextEl: ".button-custom-next",
+          prevEl: ".button-custom-prev",
+        },
         scrollbar: {
-          el: '.swiper-scrollbar',
+          el: ".swiper-scrollbar",
         },
       });
-      let index = 0; 
+      let index = 0;
       function updateSlider() {
         // let pagination = document.querySelector('#slider-index');
         // pagination.textContent = `0${index + 1}`;
       }
 
       function selectSlide(index) {
-    
         updateSlider();
       }
-
       function prevSlide() {
-  
         updateSlider();
       }
 
       function nextSlide() {
-    
         updateSlider();
       }
 
-      updateSlider(); 
+      updateSlider();
     </script>
 
     <!-- AOS -->
@@ -994,6 +2189,3 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
-
-
-

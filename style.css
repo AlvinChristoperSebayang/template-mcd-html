@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
+#site-header .navigation-wrapper {
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }
 
@@ -10,13 +10,64 @@
   min-height: calc(100vh - 240px);
 }
 
-#site-footer .footer-wrapper{
+#site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+/* humberger */
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  transform: scale(-1);
+}
+.line {
+  fill: none;
+  stroke-width: 6;
+  transition: stroke-dasharray 700ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 200;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 200;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+#dropdownMenu {
+  z-index: 999;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+/* humberger */
+
 @font-face {
-  font-family: 'helvetica';
-  src: url ('/font/helvetica.ttf') format('truetype');
+  font-family: "helvetica";
+  src: url ("/font/helvetica.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,7 +85,7 @@
 }
 
 .image-wrapper.active {
-  transform: scale(1.2);
+  transform: scale(1.2)z;
 }
 
 #navbar.bg-scrolled {
@@ -49,53 +100,93 @@
 }
 
 .category-item:hover {
-  background-color: #F8F4F1;
+  background-color: #f8f4f1;
 }
 
-.swiper-slide{
-  @apply overflow-hidden
+.swiper-slide {
+  @apply overflow-hidden;
 }
-.swiper-slide .text-slide1{
-  @apply opacity-0 mt-8 duration-[800ms] delay-200
+.swiper-slide .text-slide1 {
+  @apply opacity-0 mt-8 duration-[800ms] delay-200;
 }
-.swiper-slide.swiper-slide-active .text-slide1{
-  @apply opacity-100 mt-0
+.swiper-slide.swiper-slide-active .text-slide1 {
+  @apply opacity-100 mt-0;
 }
-.swiper-slide .text-slide2{
-  @apply opacity-0 mt-8 duration-[800ms] delay-500
+.swiper-slide .text-slide2 {
+  @apply opacity-0 mt-8 duration-[800ms] delay-500;
 }
-.swiper-slide.swiper-slide-active .text-slide2{
-  @apply opacity-100 mt-0
+.swiper-slide.swiper-slide-active .text-slide2 {
+  @apply opacity-100 mt-0;
 }
-.swiper-slide .contentPopup{
+.swiper-slide .contentPopup {
   @apply scale-0 duration-1000 delay-300;
 }
-.swiper-slide.swiper-slide-active .contentPopup{
-  @apply scale-100
+.swiper-slide.swiper-slide-active .contentPopup {
+  @apply scale-100;
 }
-.swiper-slide img{
-  @apply scale-[1.2] duration-700 ease-linear
+.swiper-slide img {
+  @apply scale-[1.2] duration-700 ease-linear;
 }
-.swiper-slide.swiper-slide-active img{
-  @apply scale-100
-}
-
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
-  @apply bg-[#FF7813]
+.swiper-slide.swiper-slide-active img {
+  @apply scale-100;
 }
 
-.swiper-fraction{
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  @apply bg-[#FF7813];
+}
+
+.swiper-fraction {
   @apply text-transparent text-xl;
-
 }
-.swiper-fraction #text{
+.swiper-fraction #text {
   @apply text-xl;
   display: none;
 }
-.swiper-pagination-current{
-  color:white !important;
+.swiper-pagination-current {
+  color: white !important;
 }
 .active {
   background-color: white;
   color: black;
 }
+
+
+.toggle-icon .line-horizontal {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.toggle-button.active .line-horizontal {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.toggle-button.active .line {
+  transform: rotate(0deg);
+}
+
+
+/* .collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.collapsible-content.open {
+  max-height: 200px;
+} */
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+.collapsible-content.open {
+  max-height: 500px; /* Sesuaikan dengan tinggi maksimal konten */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
