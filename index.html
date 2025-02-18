@@ -1,17 +1,558 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header id="site-header"></header>
-    <main id="site-main">
+    <link href="src/input.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papxyz..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
+  </head>
+  <body class="font-lato">
+    <!-- Header start -->
+    <header
+      class="bg-white px-28 hidden md:block py-8 border-b border-b-[#E7E7E7]"
+    >
+      <nav class="flex justify-between sticky">
+        <h1 class="font-bold">Atracctive School</h1>
+        <ul class="flex gap-10 text-abu">
+          <li class="font-bold text-[#1A1A1A]">Home</li>
+          <li><a href="">About</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Program</a></li>
+          <li>
+            <button>
+              <span
+                class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white"
+                >Contact</span
+              >
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header end -->
+
+    <!-- Hero section start-->
+    <section class="px-4 md:px-28 bg-putih mt-10">
+      <div class="container mx-auto relative">
+        <div class="max-w-[761px] mx-auto">
+          <p class="text-center text-abu">Welcom to Scholl</p>
+          <h1
+            class="md:text-6xl text-center md:leading-[76px] my-5 font-semibold"
+          >
+            Explore a sea of wit that is Impossible to resist
+          </h1>
+          <p class="text-center text-abu mt-5">
+            Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+            Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
+            Bijarade ren defagt, mivis pott. Trar visat til
+          </p>
+          <div class="text-center my-7">
+            <a href=""
+              ><span class="px-5 py-2 border rounded-xl bg-[#1E1E1E] text-white"
+                >Our Blog</span
+              ></a
+            >
+          </div>
+        </div>
+
+        <div class="px-4">
+          <figure class="hidden xl:block absolute top-2 left-12 text-[#000000]">
+            <img src="img/Vector 581.png" alt="garis" width="87px" />
+          </figure>
+          <figure class="hidden xl:block absolute bottom-7 left-12">
+            <img
+              src="img/lamp.png"
+              alt="lamp"
+              width="87px"
+              class="text-[#1E1E1E]"
+            />
+          </figure>
+          <figure
+            class="hidden xl:block absolute top-2 right-12 text-[#000000]"
+          >
+            <img src="img/lamp.png" alt="lamp" width="87px" />
+          </figure>
+          <figure
+            class="hidden xl:block absolute bottom-7 right-12 text-[#000000]"
+          >
+            <img src="img/Vector 581.png" alt="garis" width="87px" />
+          </figure>
+        </div>
+      </div>
+
+      <figure class="">
+        <img src="img/hero.png" alt="hero" class="block w-full mx-auto" />
+      </figure>
+    </section>
+    <!-- Hero section start  -->
+
+    <!-- patner school start -->
+    <section class="container mx-auto py-10 px-2">
+      <h3 class="text-center text-abu">Partners School</h3>
+      <div class="flex flex-wrap justify-center items-center gap-4 my-5">
+        <figure>
+          <img src="img/microsoft.png" alt="" />
+        </figure>
+        <figure>
+          <img src="img/google.png" alt="" width="155.5px" />
+        </figure>
+        <figure>
+          <img src="img/zoom.png" alt="" />
+        </figure>
+      </div>
+    </section>
+    <!-- patner sochool end -->
+
+    <!-- section school start-->
+    <section class="px-8 sm:px-28 mt-10 py-10">
+      <div class="container mx-auto">
+        <div class="flex justify-between">
+          <div class="text-start flex items-center">
+            <div>
+              <p class="text-abu py-5 text-lg">Whay Thes School</p>
+              <h3
+                class="font-semibold text-[#202020] font-asap text-xl sm:text-[2.5rem] sm:leading-[50px]"
+              >
+                Design Schools, Trusted Programs, and 100% Guaranteed
+              </h3>
+              <p class="text-abu py-5 text-lg">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+                Terabel pov astrobel sar direlig.
+              </p>
+              <a href="" class="pt-16"
+                ><span
+                  class="text-xs py-1 px-3 sm:text-sm sm:px-5 sm:py-2 border rounded-xl bg-[#1E1E1E] text-white"
+                  >More detail</span
+                ></a
+              >
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap-4">
+            <figure>
+              <img src="img/foto.png" alt="" class="w-[16.688rem]" />
+            </figure>
+            <figure class="sm:-mt-10">
+              <img src="img/foto1.png" alt="" class="w-[16.688rem]" />
+            </figure>
+
+            <figure>
+              <img src="img/foto2.png" alt="" class="w-[16.688rem]" />
+            </figure>
+            <figure class="sm:-mt-10">
+              <img src="img/laptop.png " alt="" class="w-[16.688rem]" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section school end -->
+
+    <!-- section about start -->
+    <section class="mt-10 py-10 bg-[#F5F5F5] px-4 lg:px-28">
+      <div class="container mx-auto">
+        <div class="items-center flex flex-col lg:flex-row lg:justify-between">
+          <div class="space-y-4 space-x-4">
+            <h1 class="text-6xl font-semibold text-[#202020]">
+              About Atractive School
+            </h1>
+            <p class="text-[#9D9D9D]">
+              Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
+            </p>
+            <button>
+              <span class="py-2 px-5 border rounded-xl bg-[#1E1E1E] text-white">More detail</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
+            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2">
+              <figure class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200">
+                <img src="img/home.png" alt="" class="w-5 h-5" />
+              </figure>
+              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
+              <p class="text-sm text-abu p-2">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              </p>
+              <button class="p-2">More detail</button>
+            </div>
+
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2"
+            >
+              <figure
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200"
+              >
+                <img src="img/home.png" alt="" class="w-5 h-5" />
+              </figure>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
+              <p class="text-sm text-abu p-2">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              </p>
+              <button class="p-2">More detail</button>
+            </div>
+
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2"
+            >
+              <figure
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200"
+              >
+                <img src="img/home.png" alt="" class="w-5 h-5" />
+              </figure>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
+              <p class="text-sm text-abu p-2">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              </p>
+              <button class="p-2">More detail</button>
+            </div>
+
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2"
+            >
+              <figure
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200"
+              >
+                <img src="img/home.png" alt="" class="w-5 h-5" />
+              </figure>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
+              <p class="text-sm text-abu p-2">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              </p>
+              <button class="p-2">More detail</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section about end -->
+
+    <!-- section our vision start -->
+    <section class="mt-10 py-10 px-5 md:px-28">
+      <div class="container mx-auto">
+        <div class="flex gap-4 lg:gap-36">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 gap-y-2 lg:gap-4">
+            <figure>
+              <img src="img/foto3.png" alt="" class="w-[16.688rem]" />
+            </figure>
+            <figure class="lg:-mt-10">
+              <img src="img/foto4.webp" alt="" class="w-[16.688rem]" />
+            </figure>
+            <figure>
+              <img src="img/foto5.png" alt="" class="w-[16.688rem]" />
+            </figure>
+            <figure class="lg:-mt-10">
+              <img src="img/foto6.png" alt="" class="w-[16.688rem]" />
+            </figure>
+          </div>
+
+          <div class="flex text-start items-center">
+            <div class="space-y-4">
+              <p class="text-abu">School Vision</p>
+              <h1 class="font-semibold text-[#202020] text-2xl md:text-6xl">
+                Our Vision
+              </h1>
+              <p class="text-abu">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+                Terabel pov astrobel sar direlig.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section our vision end -->
+
+    <!-- section teacher start -->
+    <section class="my-10 px-4 md:px-28">
+      <div class="container mx-auto">
+        <div class="space-y-3">
+          <p class="text-abu">Teacher</p>
+          <h1
+            class="text-[#202020] text-2xl md:text-6xl w-1/2 font-semibold font-asap"
+          >
+            Teacher in Atractive School
+          </h1>
+        </div>
+
+        <div class="flex flex-wrap justify-between mt-3">
+          <p class="text-abu">
+            Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+            Terabel pov astrobel sar direlig.
+          </p>
+          <div class="flex gap-4 mt-4 md:mt-0">
+            <div
+              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
+            >
+              <img src="img/scrol1.png" alt="logo scrol1" />
+            </div>
+            <div
+              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
+            >
+              <img src="img/scrol2.png" alt="logo scrol2" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-5 grid grid-cols-1 md:grid-cols-3 text-center gap-4 overflow-x-auto"
+        >
+          <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4">
+            <figure>
+              <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+              <figcaption class="px-10 py-4">
+                <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
+                <p class="text-abu mt-4">
+                  Teacher of 3D Illustration | Motion Animation
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4">
+            <figure>
+              <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+              <figcaption class="px-10 py-4">
+                <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
+                <p class="text-abu mt-4">
+                  Teacher of 3D Illustration | Motion Animation
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4">
+            <figure>
+              <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+              <figcaption class="px-10 py-4">
+                <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
+                <p class="text-abu mt-4">
+                  Teacher of 3D Illustration | Motion Animation
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="text-center mt-8 text-white">
+          <button>
+            <span class="py-2 px-5 border rounded-xl bg-[#1E1E1E] text-center"
+              >View more</span
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- section teacher end -->
+
+    <!-- section bloge start -->
+    <section class="mt-10 py-10 px-4 lg:px-28 mx-auto bg-[#F5F5F5]">
+      <div class="container mx-auto">
+        <div class="mx-auto text-center">
+          <h1 class="font-bold text-2xl md:text-6xl">Our Blog</h1>
+          <p class="text-abu mt-5">
+            Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+            Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
+            Bijarade ren defagt,
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-10 mt-5">
+          <figure class="relative">
+            <img
+              src="img/bground.jpg"
+              alt=""
+              class="lg:max-w-[40.938rem] lg:max-h-[26.25rem]"
+            />
+            <figcaption class="absolute bottom-5 left-5 text-white gap-4 px-2">
+              <h3 class="font-bold">Belajar Kembali pada tanggal 2 Mei 2023</h3>
+              <p>September 16, 2023</p>
+              <p>
+                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
+              </p>
+            </figcaption>
+          </figure>
+
+          <div class="flex flex-col items-center space-y-6">
+            <div class="space-y-4">
+              <h3 class="font-semibold w-[15.125rem] text-[20px]">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              </h3>
+              <p class="text-abu text-xs">
+                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              </p>
+              <hr />
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold w-[15.125rem] text-[20px]">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              </h3>
+              <p class="text-abu text-xs">
+                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              </p>
+              <hr />
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="font-semibold w-[15.125rem] text-[20px]">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              </h3>
+              <p class="text-abu text-xs">
+                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              </p>
+              <hr />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-5">
+          <div>
+            <figure class="space-y-6">
+              <img src="img/blog1.png" alt="" class="w-full" />
+              <div class="space-y-6">
+                <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                <div class="space-y-4 text-abu">
+                  <p>September 14, 2023</p>
+                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                </div>
+              </div>
+            </figure>
+          </div>
+
+          <div>
+            <figure class="space-y-6">
+              <img src="img/blog1.png" alt="" class="w-full" />
+              <div class="space-y-6">
+                <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                <div class="space-y-4 text-abu">
+                  <p>September 14, 2023</p>
+                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div>
+            <figure class="space-y-6">
+              <img src="img/blog1.png" alt="" class="w-full" />
+              <div class="space-y-6">
+                <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                <div class="space-y-4 text-abu">
+                  <p>September 14, 2023</p>
+                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                </div>
+              </div>
+            </figure>
+          </div>
+
+          <div>
+            <figure class="space-y-6">
+              <img src="img/blog1.png" alt="" class="w-full" />
+              <div class="space-y-6">
+                <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                <div class="space-y-4 text-abu">
+                  <p>September 14, 2023</p>
+                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section bloge end -->
+
+    <!-- section our galery start -->
+    <section class="mt-10">
+      <div class="text-center mx-auto">
+        <h1 class="font-bold text-4xl">Our Galery</h1>
+        <p class="text-abu text-xs leading-[28px] font-normal">
+          Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+          Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv. Bijarade
+          ren defagt,
+        </p>
+      </div>
+      <div class="mt-y mx-auto ">
+        <div class="flex gap-6 overflow-x-auto">
+          <img src="img/galery/galeri1.png" alt="" />
+          <img src="img/galery/galeri3.png" alt="" />
+          <img src="img/galery/galeri4.png" alt="" />
+          <img src="img/galery/galeri1.png" alt="" />
+          <img src="img/galery/galeri3.png" alt="" />
+          <img src="img/galery/galeri4.png" alt="" />
+          <img src="img/galery/galeri1.png" alt="" />
+          <img src="img/galery/galeri3.png" alt="" />
+          <img src="img/galery/galeri4.png" alt="" />
+          <img src="img/galery/galeri1.png" alt="" />
+          <img src="img/galery/galeri3.png" alt="" />
+          <img src="img/galery/galeri4.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- section our galery end -->
+
+    <!-- footer  -->
+     <footer class="w-full bg-[#1A1A1A] mt-10 px-4 md:px-28 py-20">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row md:justify-between text-white">
+          <div class="w-[292px] space-y-8">
+            <h3 class="font-bold">Atracctive School</h3>
+            <p>Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa. Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig. Epire kanesk. Monosa medelgam tisk.</p>
+            <div class="flex gap-4">
+              <i class="fa-brands fa-instagram text-white"></i>
+              <i class="fa-brands fa-youtube text-white"></i>
+              <i class="fa-brands fa-whatsapp text-white"></i>
+              <i class="fa-brands fa-linkedin-in text-white"></i>
+              <i class="fa-brands fa-twitter text-white"></i>
+            </div>
+          </div>
+
+          <div class="text-white font-normal space-y-4 md:space-y-8 mt-10 md:mt-0">
+            <h3 class="font-bold">Home</h3>
+            <p>Beranda</p>
+            <p>Program Keahlian</p>
+            <p>Galery</p>
+            <p>Our News</p>
+          </div>
+
+          <div class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0">
+            <h3>Contact</h3>
+            <div class="space-y-8">
+              <div class="flex gap-4">
+                <img src="img/telp.png" alt=""> 
+                <p>(406) 555-0120</p>
+              </div>
+              <div class="flex gap-4">
+                <img src="img/dashicons_email (1).png" alt="">
+                <p>atractiveschools1212@gmail.com</p>
+              </div>
+              <div class="flex gap-4">
+                <img src="img/location.png" alt="">
+                <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0">
+            <h3>Maps location</h3>
+            <figure>
+              <img src="img/maps.png" alt="">
+            </figure>
+          </div>
+          <!-- <div class="flex flex-wrap justify-between gap-8 bg-blue-400">
+          </div> -->
+        </div>
+
+      </div>
+     </footer>
   </body>
 </html>
