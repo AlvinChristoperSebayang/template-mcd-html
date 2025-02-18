@@ -28,14 +28,14 @@
       id="/"
       class="z-10 fixed w-full bg-white mx-auto transition duration-300"
     >
-      <div class="container mx-auto">
+      <div class="w-full max-w-[1440px] mx-auto">
         <nav
           class="flex justify-between items-center text-white px-[20px] py-[21px] lg:px-0"
         >
-          <div class="flex items-center gap-5">
+          <div class="flex items-center gap-10">
             <a
               href="/"
-              class="text-3xl text-[20px] md:text-[26px] lg:text-[30px] font-extrabold text-black font-montserrat"
+              class="text-3xl text-[20px] pr-20 md:text-[26px] lg:text-[30px] font-extrabold text-black font-montserrat"
               >Kayyon</a
             >
             <a
@@ -57,7 +57,7 @@
                 onclick="this.classList.toggle('opened');toggleDropdown();this.setAttribute('aria-expanded', this.classList.contains('opened'))"
                 aria-label="Main Menu"
               >
-                <svg width="40" height="50" viewBox="16 -4.5 110 110">
+                <svg class="block md:hidden" width="40" height="50" viewBox="16 -4.5 110 110">
                   <path
                     class="line line1"
                     d="M 20,30.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -97,7 +97,7 @@
     <main>
       <section
         id="detailproduct"
-        class="container mx-auto pt-[100px] lg:pt-[120px]"
+        class="w-full max-w-[1440px] mx-auto pt-[100px] lg:pt-[120px]"
       >
         <div class="lg:flex gap-[60px] font-helvetica">
           <div
@@ -272,7 +272,7 @@
         </div>
       </section>
 
-      <section class="container mx-auto pt-[50px] lg:pt-[100px]">
+      <section class="w-full max-w-[1440px] mx-auto pt-[50px] lg:pt-[100px]">
         <h2
           data-aos="fade-down"
           data-aos-delay="300"
@@ -327,9 +327,7 @@
         >
           Elevate your space with the sleek and sophisticated Kayyon Minimalist
           Chair. Designed with clean lines and a modern aesthetic, this chair is
-          the perfect blend of form and function. Whether you're furnishing a
-          contemporary office or a cozy reading nook, the Kayyon Minimalist
-          Chair adds a touch of elegance to any room.X
+          the perfect blend of form and function.
         </p>
         <div class="pb-[60px] px-5 lg:px-0 font-helvetica">
           <div
@@ -356,23 +354,18 @@
               ></span>
             </span>
           </button>
-          <div
-            class="collapsible-content"
-            style="
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-            "
-          >
-            <p
-              class="text-sm lg:text-base py-[10px] lg:py-4 px-4 text-[#6A7182]"
-            >
-              Comprehensive details about the product's length, width, height,
-              and weight, designed to help you fully understand the size
-              specifications. This information is crucial to ensure that the
-              product fits your available space, meets your usage needs, or is
-              compatible with other items you own.
-            </p>
+          <div class="collapsible-content">
+            <div>
+              <p
+                class="text-sm lg:text-base py-[10px] lg:py-4 px-4 text-[#6A7182]"
+              >
+                Comprehensive details about the product's length, width, height,
+                and weight, designed to help you fully understand the size
+                specifications. This information is crucial to ensure that the
+                product fits your available space, meets your usage needs, or is
+                compatible with other items you own.
+              </p>
+            </div>
           </div>
 
           <div
@@ -399,22 +392,17 @@
               ></span>
             </span>
           </button>
-          <div
-            style="
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-            "
-            class="collapsible-content"
-          >
-            <p
-              class="text-sm lg:text-base py-[10px] lg:py-4 px-4 text-[#6A7182]"
-            >
-              Detailed information about the product's technical specifications,
-              including materials, features, performance, and key components.
-              This data helps you understand the quality and functionality of
-              the product in-depth before making a purchase.
-            </p>
+          <div class="collapsible-content">
+            <div >
+              <p
+                class="text-sm lg:text-base py-[10px] lg:py-4 px-4 text-[#6A7182]"
+              >
+                Detailed information about the product's technical
+                specifications, including materials, features, performance, and
+                key components. This data helps you understand the quality and
+                functionality of the product in-depth before making a purchase.
+              </p>
+            </div>
           </div>
           <div
             data-aos="fade-down"
@@ -436,19 +424,13 @@
               <span
                 class="line-horizontal w-0.5 h-4 bg-black transition-transform duration-300"
               ></span>
-              <span 
+              <span
                 class="line absolute w-4 h-0.5 bg-black transition-all duration-300"
               ></span>
             </span>
           </button>
-          <div
-            class="collapsible-content"
-            style="
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-            "
-          >
+          <div class="collapsible-content">
+            <div>
             <p
               class="text-sm lg:text-base py-[10px] lg:py-4 px-4 text-[#6A7182]"
             >
@@ -456,6 +438,7 @@
               including cleaning steps, proper usage, and tips to extend the
               product's lifespan.
             </p>
+            </div>
           </div>
           <div
             data-aos="fade-down"
@@ -482,14 +465,8 @@
               ></span>
             </span>
           </button>
-          <div
-            class="collapsible-content"
-            style="
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-            "
-          >
+          <div class="collapsible-content">
+            <div>
             <p
               class="text-sm lg:text-base py-[10px] lg:py-4 px-4 text-[#6A7182]"
             >
@@ -497,11 +474,12 @@
               to the product to ensure you have all the necessary information
               and resources.
             </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="container mx-auto pb-[60px]">
+      <section class="w-full max-w-[1440px] mx-auto pb-[60px]">
         <h2
           data-aos="fade-down"
           data-aos-delay="300"
@@ -744,9 +722,9 @@
               data-aos="fade-down"
               data-aos-delay="300"
               data-aos-once="true"
-              class="bg-transparent text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica"
+              class="bg-transparent text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica group"
             >
-              See more product →
+              See more product <span class="inline-block transition-transform duration-300 group-hover:translate-x-2">→</span>
             </button>
           </div>
         </div>
@@ -754,7 +732,7 @@
     </main>
     <footer class="bg-[#F8F4F1]">
       <div
-        class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-0"
+        class="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-0"
       >
         <div
           class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left"
@@ -845,7 +823,7 @@
         </div>
       </div>
       <div
-        class="container mx-auto mt-10 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
+        class="w-full max-w-[1440px] mx-auto mt-10 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
       >
         <div class="flex flex-col lg:flex-row items-center">
           <p class="text-black text-xs lg:text-base font-normal font-helvetica">
@@ -913,39 +891,33 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         const toggleButtons = document.querySelectorAll(".toggle-button");
+
         toggleButtons.forEach((button) => {
           button.addEventListener("click", (event) => {
-            event.stopPropagation(); 
+            event.stopPropagation();
             const content = button.nextElementSibling;
+
             document
               .querySelectorAll(".collapsible-content")
               .forEach((item) => {
                 if (item !== content) {
-                  item.style.maxHeight = null;
                   item.classList.remove("open");
                   item.previousElementSibling.classList.remove("active");
                 }
               });
 
-            // Toggle class hanya untuk tombol yang diklik saja
-            if (content.classList.contains("open")) {
-              content.style.maxHeight = null; 
-            } else {
-              content.style.maxHeight = content.scrollHeight + "px"; 
-            }
             content.classList.toggle("open");
             button.classList.toggle("active");
           });
         });
 
-        // Tutup collapsible pas klik yang lain
+        // Tutup collapsible jika klik di luar
         document.addEventListener("click", (event) => {
           document.querySelectorAll(".collapsible-content").forEach((item) => {
             if (
               !item.contains(event.target) &&
               !item.previousElementSibling.contains(event.target)
             ) {
-              item.style.maxHeight = null;
               item.classList.remove("open");
               item.previousElementSibling.classList.remove("active");
             }

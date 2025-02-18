@@ -32,14 +32,14 @@
       id="navbar"
       class="z-10 fixed top-0 left-0 w-full bg-transparent mx-auto transition duration-300 ease-in-out"
     >
-      <div class="container mx-auto">
+      <div class="w-full max-w-[1440px] mx-auto">
         <nav
-          class="flex justify-between items-center z-50 text-white pl-[20px] pr-[12px] py-[10px] lg:px-0 lg:py-[20px]"
+          class="flex justify-between items-center z-50 text-white pl-[20px] pr-[12px] py-[10px] lg:py-[20px]"
         >
-          <div class="flex items-center gap-5">
+          <div class="flex items-center gap-10">
             <a
               href="#"
-              class="text-3xl text-[20px] md:text-[26px] lg:text-[30px] font-extrabold text-white font-montserrat"
+              class="text-3xl text-[20px] pr-20 md:text-[26px] lg:text-[30px] font-extrabold text-white font-montserrat"
               >Kayyon</a
             >
             <a
@@ -76,7 +76,12 @@
                 onclick="this.classList.toggle('opened');toggleDropdown();this.setAttribute('aria-expanded', this.classList.contains('opened'))"
                 aria-label="Main Menu"
               >
-                <svg width="40" height="50" viewBox="16 -4.5 110 110">
+                <svg
+                  class="block md:hidden"
+                  width="40"
+                  height="50"
+                  viewBox="16 -4.5 110 110"
+                >
                   <path
                     class="line line1"
                     d="M 20,30.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -90,11 +95,11 @@
               </button>
               <div
                 id="dropdownMenu"
-                class="absolute hidden right-[-2px] mt-2 w-36 bg-white text-black  rounded-md  shadow-lg animate__animated animate__bounceIn before:absolute before:top-[-8px] before:right-[14px] before:w-0 before:h-0 before:border-l-[8px] before:border-l-transparent before:border-r-[8px] before:border-r-transparent before:border-b-[8px] before:border-b-white"
+                class="absolute hidden right-[-2px] mt-2 w-36 bg-white text-black rounded-md shadow-lg animate__animated animate__bounceIn before:absolute before:top-[-8px] before:right-[14px] before:w-0 before:h-0 before:border-l-[8px] before:border-l-transparent before:border-r-[8px] before:border-r-transparent before:border-b-[8px] before:border-b-white"
               >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-t-md  hover:rounded-t-md transition-colors duration-300"
+                  class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-t-md hover:rounded-t-md transition-colors duration-300"
                   >About us</a
                 >
                 <a
@@ -116,16 +121,16 @@
     </header>
 
     <main>
-      <section class="relative">
-        <div class="relative pt-[120px] h-[80vh] lg:h-[949px]">
+      <section class="h-screen">
+        <div class="pt-[120px] lg:h-[949px]">
           <div class="swiper absolute inset-0 w-full h-full z-0">
             <!-- swiper -->
             <div class="swiper-wrapper">
               <!-- home 1 -->
               <div class="swiper-slide">
-                <div class="container mx-auto relatif">
+                <div class="w-full max-w-[1440px] mx-auto relatif">
                   <div
-                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 z-30 top-[60px] lg:top-[120px]"
                   >
                     <h1 class="text-white text-slide1">
                       Living Room Is Always
@@ -281,9 +286,9 @@
               </div>
               <!-- home 2 -->
               <div class="swiper-slide">
-                <div class="container mx-auto relatif">
+                <div class="w-full max-w-[1440px] mx-auto relatif">
                   <div
-                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 z-30 top-[60px] lg:top-[120px]"
                   >
                     <h1 class="text-white text-slide1">
                       Dining Room Is Always
@@ -437,9 +442,9 @@
               </div>
               <!-- home 3 -->
               <div class="swiper-slide">
-                <div class="container mx-auto relatif">
+                <div class="w-full max-w-[1440px] mx-auto relatif">
                   <div
-                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 z-30 top-[60px] lg:top-[120px]"
                   >
                     <h1 class="text-white text-slide1">Workspace Is Always</h1>
                     <h2 class="text-white text-slide2">
@@ -592,9 +597,9 @@
               </div>
               <!-- home 4 -->
               <div class="swiper-slide">
-                <div class="container mx-auto relatif">
+                <div class="w-full max-w-[1440px] mx-auto relatif">
                   <div
-                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 z-30 top-[60px] lg:top-[120px]"
                   >
                     <h1 class="text-white text-slide1">Bedroom Is Always</h1>
                     <h2 class="text-white text-slide2">
@@ -747,9 +752,9 @@
               </div>
               <!-- home 5 -->
               <div class="swiper-slide">
-                <div class="container mx-auto relatif">
+                <div class="w-full max-w-[1440px] mx-auto relatif">
                   <div
-                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 lg:px-0 z-30 top-[60px] lg:top-[120px]"
+                    class="absolute text-[22px] lg:text-[64px] font-helvetica px-5 z-30 top-[60px] lg:top-[120px]"
                   >
                     <h1 class="text-white text-slide1">Bathroom Is Always</h1>
                     <h2 class="text-white text-slide2">
@@ -904,49 +909,63 @@
           </div>
         </div>
 
-        <div class="container mx-auto">
+        <div class="w-full max-w-[1440px] mx-auto">
           <div
-            class="absolute bottom-[30px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-5 lg:px-0 font-helvetica z-20"
+            class="absolute bottom-[30px] lg:bottom-[112px] flex flex-col md:flex-row flex-wrap gap-[10px] lg:gap-[22px] px-[22px] font-helvetica z-20"
           >
             <button
-              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              id="living-room"
+              class="btn-custom text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              onclick="setActiveButton('living-room', 0)"
             >
               Living Room
             </button>
             <button
-              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              id="dining-room"
+              class="btn-custom text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              onclick="setActiveButton('dining-room', 1)"
             >
               Dining Room
             </button>
             <button
-              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              id="workspace"
+              class="btn-custom text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              onclick="setActiveButton('workspace', 2)"
             >
               Workspace
             </button>
             <button
-              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              id="bedroom"
+              class="btn-custom text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              onclick="setActiveButton('bedroom', 3)"
             >
               Bedroom
             </button>
             <button
-              class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              id="bathroom"
+              class="btn-custom text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+              onclick="setActiveButton('bathroom', 4)"
             >
               Bathroom
             </button>
             <a href="#all" class="">
               <button
-                class="text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+                class="btn-custom text-white text-xs lg:text-base font-normal border border-[#DADADA] py-[6px] px-[15px] lg:py-[12px] lg:px-[24px] rounded-full hover:bg-white hover:text-black transition-colors duration-300 group"
               >
-                All Product →
+                All Product
+                <span
+                  class="inline-block transition-transform duration-300 group-hover:translate-x-1"
+                  >→</span
+                >
               </button>
             </a>
           </div>
 
           <div
-            class="absolute lg:bottom-[60px] lg:flex items-center gap-3 hidden md:block"
+            class="absolute lg:bottom-[60px] lg:flex items-center px-[22px] gap-3 hidden md:block"
           >
             <span class="indexSwiper text-xl text-white">01</span>
-            <div class="w-[821px] h-1 bg-white relative">
+            <div class="w-[831px] h-1 bg-white relative">
               <div
                 id=""
                 class="absolute top-0 left-0 h-1 bg-white swiper-pagination"
@@ -959,13 +978,13 @@
           class="absolute bottom-[30px] lg:bottom-[60px] flex right-[6%] items-end justify-end gap-2 lg:gap-4"
         >
           <button
-            class="button-custom-prev flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
+            class="button-custom-prev flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] font-bold rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
             onclick="prevSlide()"
           >
             &#8592;
           </button>
           <button
-            class="button-custom-next flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
+            class="button-custom-next flex justify-center items-center w-10 h-10 lg:w-16 lg:h-16 border-2 border-white text-white text-[30px] font-bold rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
             onclick="nextSlide()"
           >
             &#8594;
@@ -973,9 +992,9 @@
         </div>
       </section>
 
-      <section id="all" class="container w-full mx-auto">
+      <section id="all" class="w-full max-w-[1440px] mx-auto">
         <div
-          class="text-[22px] md:text-[24px] lg:text-[48px] pt-[60px] md:pt-20 px-[20px] lg:px-0 lg:pt-[100px] font-helvetica"
+          class="text-[22px] md:text-[24px] lg:text-[48px] pt-[60px] md:pt-20 px-[20px] lg:pt-[100px] font-helvetica"
         >
           <h1
             class="text-black"
@@ -994,7 +1013,7 @@
             Our New Furniture Line
           </h2>
         </div>
-        <div class="product px-[20px] lg:px-0 pt-10">
+        <div class="product px-[20px] pt-10">
           <ul class="sm:flex gap-[15px]">
             <li class="w-full">
               <a href="detailproduct" class="block">
@@ -1163,19 +1182,23 @@
             class="relatative bottom-0 w-full text-left pt-10"
           >
             <button
-              class="bg-transparent text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica"
+              class="bg-transparent text-center text-black font-normal border-[1px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 md:px-10 md:py-3 px-[15px] py-[4px] text-[14px] md:text-[16px] font-helvetica group"
             >
-              See more product →
+              See more product
+              <span
+                class="inline-block transition-transform duration-300 group-hover:translate-x-1"
+                >→</span
+              >
             </button>
           </div>
         </div>
       </section>
 
       <section
-        class="container w-full mx-auto md:flex items-start py-[50px] lg:py-[100px] gap-[77px]"
+        class="w-full max-w-[1440px] mx-auto md:flex items-start py-[50px] lg:py-[100px] gap-[77px]"
       >
         <!-- Title Section -->
-        <div class="mb-8 px-4 md:mb-0 md:px-0">
+        <div class="mb-8 px-4 md:mb-0">
           <div class="text-black text-left font-helvetica lg:w-[475px]">
             <h2
               data-aos="fade-down"
@@ -1419,8 +1442,8 @@
           class="absolute inset-0 w-full h-full object-cover z-0"
         />
 
-        <div class="container relative mx-auto z-10">
-          <div class="px-5 lg:px-0">
+        <div class="w-full max-w-[1440px] relative mx-auto z-10">
+          <div class="px-5">
             <h2
               data-aos="fade-down"
               data-aos-delay="200"
@@ -1430,7 +1453,7 @@
               Standing Desk Touch - Table Workspace
             </h2>
           </div>
-          <div class="flex justify-between w-full px-5 lg:px-0">
+          <div class="flex justify-between w-full px-6">
             <h2
               data-aos="fade-down"
               data-aos-delay="200"
@@ -1444,9 +1467,13 @@
               data-aos="fade-down"
               data-aos-delay="500"
               data-aos-once="true"
-              class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white"
-              style="transition:all 300ms ease-in-out !important"
-              >See Product →</a
+              class="text-xs lg:text-base inline-block bg-transparent text-black px-[11px] py-[3px] lg:px-6 lg:py-2 rounded-full border-[1px] border-black shadow-md hover:bg-black hover:text-white group"
+              style="transition: all 300ms ease-in-out !important"
+              >See Product
+              <span
+                class="inline-block transition-transform duration-300 group-hover:translate-x-1"
+                >→</span
+              ></a
             >
           </div>
         </div>
@@ -1598,7 +1625,7 @@
         </p>
       </div>
 
-      <div class="relative max-w-full pl-5 lg:pl-[5.5%]">
+      <div class="relative max-w-full pl-6 lg:pl-14">
         <div
           id="scrollContainer"
           class="flex gap-[15px] lg:gap-[30px] overflow-x-scroll scrollbar-hide h-[450px] lg:h-[600px]"
@@ -1744,13 +1771,8 @@
         </div>
       </div>
 
-      <div class="container mx-auto flex gap-3">
-        <div
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-once="true"
-          class="pl-5 lg:pl-0"
-        >
+      <div class="w-full max-w-[1440px] px-5 lg:px-10 mx-auto flex gap-3">
+        <div data-aos="fade-right" data-aos-delay="200" data-aos-once="true">
           <button
             id="scrollLeft"
             class="border-2 rounded-full bg-transparent p-2 lg:p-3 transform transition-transform duration-200 hover:scale-110"
@@ -1803,9 +1825,13 @@
         class="relatative w-full text-center pt-5 pb-[50px] lg:pt-10 lg:pb-[100px]"
       >
         <button
-          class="bg-transparent text-sm lg:text-base text-center text-black font-normal border-[1px] px-[15px] py-[4px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 font-helvetica"
+          class="bg-transparent text-sm lg:text-base text-center text-black font-normal border-[1px] px-[15px] py-[4px] lg:px-[30px] lg:py-[10px] border-black rounded-full hover:bg-black hover:text-white transition-all duration-500 font-helvetica group"
         >
-          Our more project →
+          Our more project
+          <span
+            class="inline-block transition-transform duration-300 group-hover:translate-x-1"
+            >→</span
+          >
         </button>
       </div>
 
@@ -1918,7 +1944,7 @@
 
     <footer class="bg-[#F8F4F1]">
       <div
-        class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-0"
+        class="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-6"
       >
         <div
           class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left"
@@ -2011,7 +2037,7 @@
       </div>
 
       <div
-        class="container mx-auto mt-10 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
+        class="w-full max-w-[1440px] mx-auto mt-10 px-5 lg:px-6 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
       >
         <div class="flex flex-col lg:flex-row items-center">
           <p class="text-black text-xs lg:text-base font-normal font-helvetica">
@@ -2046,12 +2072,19 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+      //element selalu di atas ketika pertama kali dan refresh start
+      document.addEventListener("DOMContentLoaded", function () {
+        window.scrollTo(0, 0);
+      });
+      //element selalu di atas ketika pertama kali dan refresh end
+
       // dropdown mobile
       function toggleDropdown(event) {
         const dropdown = document.getElementById("dropdownMenu");
 
         dropdown.classList.toggle("hidden");
       }
+            // dropdown mobile end
 
       // Tutup dropdown jika klik di luar menu
       window.addEventListener("click", function (event) {
@@ -2072,7 +2105,7 @@
       const totalSlides = 5;
 
       const scrollContainer = document.getElementById("scrollContainer");
-      const scrollAmount = 400; 
+      const scrollAmount = 400;
 
       document.getElementById("scrollLeft").addEventListener("click", () => {
         scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -2119,11 +2152,11 @@
         document.getElementById("caption-position").innerText =
           captions[index].position;
 
-        // Remove 'active' class from any previously active image
+        // Remove 'active' class
         const images = document.querySelectorAll(".image-wrapper");
         images.forEach((wrapper) => wrapper.classList.remove("active"));
 
-        // Add 'active' class to the clicked image wrapper
+        // Add 'active' class
         images[index].classList.add("active");
       }
 
@@ -2165,23 +2198,72 @@
         },
       });
       let index = 0;
-      function updateSlider() {
-        // let pagination = document.querySelector('#slider-index');
-        // pagination.textContent = `0${index + 1}`;
+
+      //slider hero start
+      const slideCount = 5; // Jumlah total slide
+
+      function setActiveButton(buttonId, slideIndex) {
+        // Hapus kelas 'button-active' dari semua button
+        const buttons = document.querySelectorAll(".btn-custom");
+        buttons.forEach((button) => {
+          button.classList.remove("button-active");
+        });
+
+        // Tambahkan kelas 'button-active' ke button yang aktif
+        const activeButton = document.getElementById(buttonId);
+        if (activeButton) {
+          activeButton.classList.add("button-active");
+        }
+
+        // Perbarui indeks saat ini
+        currentIndex = slideIndex;
+
+        // Panggil fungsi untuk mengubah slide
+        goToSlide(slideIndex);
       }
 
-      function selectSlide(index) {
-        updateSlider();
+      function goToSlide(slideIndex) {
+        console.log("Navigating to slide:", slideIndex);
+        swiper.slideTo(slideIndex);
       }
+
+      // Fungsi untuk tombol Prev Slide
       function prevSlide() {
-        updateSlider();
+        if (currentIndex > 0) {
+          currentIndex--; //
+        } else {
+          currentIndex = slideCount - 1;
+        }
+        updateActiveButton();
       }
 
+      // Fungsi untuk tombol Next Slide
       function nextSlide() {
-        updateSlider();
+        if (currentIndex < slideCount - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateActiveButton();
       }
 
-      updateSlider();
+      // Fungsi untuk memperbarui tombol aktif berdasarkan indeks slide saat ini
+      function updateActiveButton() {
+        const buttonIds = [
+          "living-room",
+          "dining-room",
+          "workspace",
+          "bedroom",
+          "bathroom",
+        ];
+        setActiveButton(buttonIds[currentIndex], currentIndex);
+      }
+
+      // Set default button 'Living Room' 
+      window.onload = function () {
+        setActiveButton("living-room", 0);
+      };
+      //slider hero start
     </script>
 
     <!-- AOS -->
