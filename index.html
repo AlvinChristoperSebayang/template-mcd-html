@@ -1,17 +1,1617 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
+    ></script>
   </head>
   <body>
-    <header id="site-header"></header>
-    <main id="site-main">
+    <div id="app">
+      <header class="">
+        <div
+          class="w-full sm:max-md:backdrop-blur-md sm:max-md:h-11 fixed z-50 md:bg-white"
+        >
+          <div class="container">
+            <div
+              class="md:flex-row justify-between items-center w-full py-[25px] sm:max-md:hidden md:flex"
+            >
+              <img src="./src/svg/logo.svg" alt="Logo Codinger" />
+              <ul class="flex md:flex-row sm:max-md:flex-col gap-10">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portofolio</a></li>
+              </ul>
+              <button class="btn border-[#002F88] rounded-lg">
+                <a href=""> Contact Us </a>
+              </button>
+            </div>
+            <div class="sm:max-md:block md:hidden fixed w-full px-6 py-1">
+              <figure>
+                <img
+                  class="w-[76px] h-[30px]"
+                  src="./public/mobile_logo.png"
+                  alt="Mobile Logo"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </header>
 
-    </main>
-    <footer id="site-footer"></footer>
-    <script type="module" src="/main.js"></script>
+      <section
+        class="section-hero md:pt-48 md:pb-10 sm:max-md:pt-[147px] sm:max-md:pb-[97px] bg-none sm:max-md:bg-hero-mobile"
+      >
+        <div class="container">
+          <div
+            class="flex md:flex-row sm:max-md:flex-col md:gap-[100px] xl:gap-[200px]"
+          >
+            <div class="hero-text__wrapper bottom-0 relative">
+              <div
+                class="sm:max-md:backdrop-blur-md sm:max-md:p-3 sm:max-md:rounded-xl"
+              >
+                <span
+                  class="font-Inter md:hidden text-xs font-semibold text-white"
+                  >Home</span
+                >
+                <h1 class="text-balance">
+                  Innovative Web Solutions for Modern Brands
+                </h1>
+                <p class="mt-[24px] font-Inter sm:max-md:hidden">
+                  Empowering brands with innovative web development, creative
+                  UI/UX design, and cutting-edge digital solutions tailored to
+                  your success.
+                </p>
+
+                <p
+                  class="sm:max-md:text-white md:hidden text-xs font-Inter font-extralight"
+                >
+                  At Codinger Agency, we create cutting-edge web designs and
+                  development solutions that empower modern brands to stand out.
+                  Our tailored approach ensures your website is not only
+                  visually stunning but also optimized for performance and user
+                  experience
+                </p>
+              </div>
+
+              <div
+                class="flex md:flex-row sm:max-md:flex-col gap-[10px] items-center mt-[36px] sm:max-md:flex-col"
+              >
+                <button
+                  class="rounded-full bg-[#002F88] sm:max-md:border-white sm:max-md:rounded-xl"
+                >
+                  <a href="#" class="text-white font-Inter sm:max-md:text-xs"
+                    >Get Started</a
+                  >
+                </button>
+                <button
+                  class="sm:max-md:rounded-xl sm:max-md:border-white bg-transparent"
+                >
+                  <a href="#" class="sm:max-md:text-white sm:max-md:text-xs"
+                    >See Our Work</a
+                  >
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-image__wrapper h-fit w-auto sm:max-md:hidden">
+              <figure>
+                <img src="./src/img/hero-pict.png" alt="Hero Pict" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-ui-ux sm:max-md:bg-[#0E1E5D]">
+        <div class="container">
+          <div
+            class="flex flex-col text-center md:mx-[136px] gap-[12px] xl:w-[1000px] sm:max-md:bg-[rgba(255,255,255,0.1)] sm:max-md:p-3 sm:max-md:rounded-xl sm:max-md:gap-4"
+          >
+            <p class="sub-heading">Creative Solutions, Powerful Results</p>
+            <h2 class="heading-section">
+              Turning ideas into amazing digital experiences with web and UI/UX
+              design
+            </h2>
+            <p class="section-desc">
+              Delivering innovative web development and UI/UX design solutions
+              to transform your ideas into impactful digital experiences that
+              drive growth and elevate your business to the next level.
+            </p>
+          </div>
+          <div
+            class="flex md:flex-row sm:max-md:flex-col xl:gap-[161px] md:gap-[42px] flex-1 mt-[24px] justify-between"
+          >
+            <ul>
+              <li class="border-b-2 py-[24px]">
+                <div class="flex md:flex-row sm:max-md:flex-col">
+                  <figure>
+                    <img src="./src/svg/code_icon.svg" alt="Icon Code" />
+                  </figure>
+                  <div
+                    class="text-wrap ml-[24px] md:max-w-[190px] xl:max-w-[400px]"
+                  >
+                    <h3 class="text-4xl font-medium">Product Design</h3>
+                    <p>
+                      We design intuitive and engaging product experiences,
+                      ensuring users fall in love with your product at first
+                      sight.
+                    </p>
+                  </div>
+
+                  <a
+                    class="ml-[54px] self-center font-normal text-[#0E1E5D]"
+                    href="#"
+                    >Get Started <span>-></span></a
+                  >
+                </div>
+              </li>
+              <li class="border-b-2 py-[24px]">
+                <div class="flex md:flex-row sm:max-md:flex-col">
+                  <figure>
+                    <img
+                      class="icon-code"
+                      src="./src/svg/code_icon.svg"
+                      alt="Icon Code"
+                    />
+                  </figure>
+                  <figure>
+                    <img
+                      class="icon-brush"
+                      src="./src/svg/brush.svg"
+                      alt="Icon Brush"
+                    />
+                  </figure>
+                  <div
+                    class="text-wrap ml-[24px] md:max-w-[190px] xl:max-w-[400px]"
+                  >
+                    <h3 class="text-4xl font-medium">Web Design</h3>
+                    <p>
+                      We design intuitive and engaging product experiences,
+                      ensuring users fall in love with your product at first
+                      sight.
+                    </p>
+                  </div>
+
+                  <a
+                    class="ml-[54px] self-center font-normal text-[#0E1E5D]"
+                    href="#"
+                    >Get Started <span>-></span></a
+                  >
+                </div>
+              </li>
+              <li class="border-b-2 py-[24px]">
+                <div class="flex md:flex-row sm:max-md:flex-col">
+                  <figure>
+                    <img
+                      class="icon-code"
+                      src="./src/svg/code_icon.svg"
+                      alt="Icon Code"
+                    />
+                  </figure>
+
+                  <figure>
+                    <img
+                      class="icon-presentation"
+                      src="./src/svg/presention-chart.svg"
+                      alt="Icon Presentation"
+                    />
+                  </figure>
+                  <div
+                    class="text-wrap ml-[24px] md:max-w-[190px] xl:max-w-[400px]"
+                  >
+                    <h3 class="text-4xl font-medium">Brand Identity</h3>
+                    <p>
+                      We help build a strong and consistent brand identity that
+                      reflects who you are and attracts the right customers
+                    </p>
+                  </div>
+
+                  <a
+                    class="ml-[54px] self-center font-normal text-[#0E1E5D]"
+                    href="#"
+                    >Get Started <span>-></span></a
+                  >
+                </div>
+              </li>
+            </ul>
+            <div class="image-wrapper w-[40%] overflow-hidden flex-none">
+              <figure>
+                <img src="./src/img/ui-ux.png" alt="UI UX image" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-rightChoice py-[40px] relative">
+        <div class="container">
+          <div class="xl:max-w-[616px] md:max-w-[516px]">
+            <p class="sub-head">Your Vision, Our Expertise</p>
+            <h2 class="mt-[16px]">
+              Why We’re the Right Choice for Your Digital Needs
+            </h2>
+            <p class="section-desc mt-[10px] sm:max-md:hidden">
+              At Codinger Agency, we blend experience, creativity, and
+              efficiency to deliver tailored solutions that help your business
+              grow and succeed.
+            </p>
+          </div>
+          <div
+            class="sm:max-md:hidden absolute md:w-[29%] xl:w-[453px] xl:h-[452px] xl:right-[10%] xl:top-[7%] md:right-[6%] lg:right-[6%] md:top-[11%]"
+          >
+            <figure>
+              <img src="./src/img/corner-ornament.png" alt="corner-ornament" />
+            </figure>
+          </div>
+
+          <div
+            class="sm:max-md:flex sm:max-md:flex-col md:grid grid-cols-3 max-w-[970px] mt-24 gap-3 w-fit"
+          >
+            <div class="grid-items">
+              <svg
+                width="48"
+                height="49"
+                viewBox="0 0 48 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44 24.2446C44 35.2846 35.04 44.2446 24 44.2446C12.96 44.2446 4 35.2846 4 24.2446C4 13.2046 12.96 4.24463 24 4.24463C35.04 4.24463 44 13.2046 44 24.2446Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M31.42 30.6046L25.22 26.9046C24.14 26.2646 23.26 24.7246 23.26 23.4646V15.2646"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h3>Fast & Efficient</h3>
+              <p>
+                We value your time, delivering high-quality work on time, every
+                time
+              </p>
+            </div>
+            <div class="grid-items">
+              <svg
+                width="48"
+                height="49"
+                viewBox="0 0 48 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.84 40.8046L13.38 43.5446C13.84 44.0046 14.86 44.2246 15.56 44.2246H19.9C21.28 44.2246 22.76 43.2047 23.1 41.8247L25.84 33.4846C26.42 31.8846 25.38 30.5046 23.66 30.5046H19.08C18.4 30.5046 17.82 29.9245 17.94 29.1245L18.52 25.4646C18.74 24.4446 18.06 23.2845 17.04 22.9445C16.12 22.6045 14.98 23.0646 14.52 23.7446L9.84 30.7246"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M4 40.8047V29.6047C4 28.0047 4.68 27.4246 6.28 27.4246H7.42C9.02 27.4246 9.7 28.0047 9.7 29.6047V40.8047C9.7 42.4047 9.02 42.9846 7.42 42.9846H6.28C4.68 42.9846 4 42.4247 4 40.8047Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M38.16 7.68457L34.62 4.94458C34.16 4.48458 33.14 4.26465 32.44 4.26465H28.1C26.72 4.26465 25.24 5.28455 24.9 6.66455L22.16 15.0046C21.58 16.6046 22.62 17.9846 24.34 17.9846H28.92C29.6 17.9846 30.18 18.5647 30.06 19.3647L29.48 23.0247C29.26 24.0447 29.94 25.2047 30.96 25.5447C31.88 25.8847 33.02 25.4246 33.48 24.7446L38.16 17.7646"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M44 7.68457V18.8845C44 20.4845 43.32 21.0647 41.72 21.0647H40.58C38.98 21.0647 38.3 20.4845 38.3 18.8845V7.68457C38.3 6.08457 38.98 5.50464 40.58 5.50464H41.72C43.32 5.50464 44 6.06457 44 7.68457Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Tailored Approach</h3>
+              <p>
+                We understand your unique needs and create custom solutions that
+                fit your business perfectly
+              </p>
+            </div>
+            <div class="grid-items">
+              <svg
+                width="48"
+                height="49"
+                viewBox="0 0 48 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.52 22.2845V32.2245C8.52 35.8645 8.52 35.8645 11.96 38.1845L21.42 43.6445C22.84 44.4645 25.16 44.4645 26.58 43.6445L36.04 38.1845C39.48 35.8645 39.48 35.8645 39.48 32.2245V22.2845C39.48 18.6445 39.48 18.6445 36.04 16.3245L26.58 10.8645C25.16 10.0445 22.84 10.0445 21.42 10.8645L11.96 16.3245C8.52 18.6445 8.52 18.6445 8.52 22.2845Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M35 15.5046V10.2446C35 6.24463 33 4.24463 29 4.24463H19C15 4.24463 13 6.24463 13 10.2446V15.3646"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.26 22.2246L26.4 24.0046C26.58 24.2846 26.98 24.5646 27.28 24.6446L29.32 25.1646C30.58 25.4846 30.92 26.5646 30.1 27.5646L28.76 29.1846C28.56 29.4446 28.4 29.9046 28.42 30.2246L28.54 32.3246C28.62 33.6246 27.7 34.2846 26.5 33.8046L24.54 33.0245C24.24 32.9045 23.74 32.9045 23.44 33.0245L21.48 33.8046C20.28 34.2846 19.36 33.6046 19.44 32.3246L19.56 30.2246C19.58 29.9046 19.42 29.4246 19.22 29.1846L17.88 27.5646C17.06 26.5646 17.4 25.4846 18.66 25.1646L20.7 24.6446C21.02 24.5646 21.42 24.2646 21.58 24.0046L22.72 22.2246C23.44 21.1446 24.56 21.1446 25.26 22.2246Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Cutting-Edge Technology</h3>
+              <p>
+                We use the latest tools and technologies to ensure your project
+                is built with the highest standards.
+              </p>
+            </div>
+
+            <div class="grid-items">
+              <svg
+                width="48"
+                height="49"
+                viewBox="0 0 48 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M36 14.5646C35.88 14.5446 35.74 14.5446 35.62 14.5646C32.86 14.4646 30.66 12.2046 30.66 9.40463C30.66 6.54463 32.96 4.24463 35.82 4.24463C38.68 4.24463 40.98 6.56463 40.98 9.40463C40.96 12.2046 38.76 14.4646 36 14.5646Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M33.94 29.1247C36.68 29.5847 39.7 29.1047 41.82 27.6847C44.64 25.8047 44.64 22.7247 41.82 20.8447C39.68 19.4247 36.62 18.9447 33.88 19.4247"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.94 14.5646C12.06 14.5446 12.2 14.5446 12.32 14.5646C15.08 14.4646 17.28 12.2046 17.28 9.40463C17.28 6.54463 14.98 4.24463 12.12 4.24463C9.26003 4.24463 6.96002 6.56463 6.96002 9.40463C6.98002 12.2046 9.18003 14.4646 11.94 14.5646Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14 29.1247C11.26 29.5847 8.24 29.1047 6.12 27.6847C3.3 25.8047 3.3 22.7247 6.12 20.8447C8.26 19.4247 11.32 18.9447 14.06 19.4247"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M24 29.5046C23.88 29.4846 23.74 29.4846 23.62 29.5046C20.86 29.4046 18.66 27.1446 18.66 24.3446C18.66 21.4846 20.96 19.1846 23.82 19.1846C26.68 19.1846 28.98 21.5046 28.98 24.3446C28.96 27.1446 26.76 29.4246 24 29.5046Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.18 35.8046C15.36 37.6846 15.36 40.7646 18.18 42.6446C21.38 44.7846 26.62 44.7846 29.82 42.6446C32.64 40.7646 32.64 37.6846 29.82 35.8046C26.64 33.6846 21.38 33.6846 18.18 35.8046Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Experienced Team</h3>
+              <p>
+                With years of experience in web development and design, we
+                deliver results that speak for themselves
+              </p>
+            </div>
+            <div class="grid-items">
+              <svg
+                width="48"
+                height="49"
+                viewBox="0 0 48 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.32 21.9846C18.12 21.9646 17.88 21.9646 17.66 21.9846C12.9 21.8246 9.12 17.9246 9.12 13.1246C9.12 8.22463 13.08 4.24463 18 4.24463C22.9 4.24463 26.88 8.22463 26.88 13.1246C26.86 17.9246 23.08 21.8246 18.32 21.9846Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M32.82 8.24463C36.7 8.24463 39.82 11.3846 39.82 15.2446C39.82 19.0246 36.82 22.1046 33.08 22.2446C32.92 22.2246 32.74 22.2246 32.56 22.2446"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.32 29.3646C3.48 32.6046 3.48 37.8846 8.32 41.1046C13.82 44.7846 22.84 44.7846 28.34 41.1046C33.18 37.8646 33.18 32.5846 28.34 29.3646C22.86 25.7046 13.84 25.7046 8.32 29.3646Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M36.68 40.2446C38.12 39.9446 39.48 39.3646 40.6 38.5046C43.72 36.1646 43.72 32.3046 40.6 29.9646C39.5 29.1246 38.16 28.5646 36.74 28.2446"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Collaborative Process</h3>
+              <p>
+                We work closely with you throughout the project to ensure your
+                goals are met and your expectations are exceeded.
+              </p>
+            </div>
+            <div class="grid-items">
+              <svg
+                width="48"
+                height="49"
+                viewBox="0 0 48 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6 36.3247V34.0047C12 31.2247 8.22 25.8047 8.22 20.0447C8.22 10.1447 17.32 2.38474 27.6 4.62474C32.12 5.62474 36.08 8.62474 38.14 12.7647C42.32 21.1647 37.92 30.0847 31.46 33.9847V36.3047C31.46 36.8847 31.68 38.2247 29.54 38.2247H18.52C16.32 38.2447 16.6 37.3847 16.6 36.3247Z"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17 44.2445C21.58 42.9445 26.42 42.9445 31 44.2445"
+                  stroke="#34C759"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3>Creative Solutions</h3>
+              <p>
+                We think outside the box, offering fresh and innovative ideas to
+                bring your vision to life
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section-testimonial splide"
+        role="group"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="text-center max-w-[427px] mx-auto">
+          <h2>Testimonials</h2>
+          <p class="mt-6">
+            With years of experience in web development and design, we deliver
+            results that speak for themselves
+          </p>
+        </div>
+        <div
+          class="testimonial-wrap w-screen flex md:flex-row sm:max-md:flex-col mt-[24px] splide__track"
+        >
+          <ul class="splide__list flex md:flex-row sm:max-md:flex-col gap-4">
+            <li class="splide__slide">
+              <div
+                class="testimonial-items flex flex-col place-items-center gap-3"
+              >
+                <figure>
+                  <img
+                    class="w-16 h-16"
+                    src="./src/img/user.png"
+                    alt="profile-pict"
+                  />
+                </figure>
+                <div class="ratings flex md:flex-row sm:max-md:flex-col gap-2">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                </div>
+                <h3>Angga Maulana Yusup</h3>
+                <p>
+                  We think outside the box, offering fresh and innovative ideas
+                  to bring your vision to life
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="testimonial-items flex flex-col place-items-center gap-3"
+              >
+                <figure>
+                  <img
+                    class="w-16 h-16"
+                    src="./src/img/user.png"
+                    alt="profile-pict"
+                  />
+                </figure>
+                <div class="ratings flex md:flex-row sm:max-md:flex-col gap-2">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                </div>
+                <h3>Angga Maulana Yusup</h3>
+                <p>
+                  We think outside the box, offering fresh and innovative ideas
+                  to bring your vision to life
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="testimonial-items flex flex-col place-items-center gap-3"
+              >
+                <figure>
+                  <img
+                    class="w-16 h-16"
+                    src="./src/img/user.png"
+                    alt="profile-pict"
+                  />
+                </figure>
+                <div class="ratings flex md:flex-row sm:max-md:flex-col gap-2">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                </div>
+                <h3>Angga Maulana Yusup</h3>
+                <p>
+                  We think outside the box, offering fresh and innovative ideas
+                  to bring your vision to life
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="testimonial-items flex flex-col place-items-center gap-3"
+              >
+                <figure>
+                  <img
+                    class="w-16 h-16"
+                    src="./src/img/user.png"
+                    alt="profile-pict"
+                  />
+                </figure>
+                <div class="ratings flex md:flex-row sm:max-md:flex-col gap-2">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                </div>
+                <h3>Angga Maulana Yusup</h3>
+                <p>
+                  We think outside the box, offering fresh and innovative ideas
+                  to bring your vision to life
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="testimonial-items flex flex-col place-items-center gap-3"
+              >
+                <figure>
+                  <img
+                    class="w-16 h-16"
+                    src="./src/img/user.png"
+                    alt="profile-pict"
+                  />
+                </figure>
+                <div class="ratings flex md:flex-row sm:max-md:flex-col gap-2">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                </div>
+                <h3>Angga Maulana Yusup</h3>
+                <p>
+                  We think outside the box, offering fresh and innovative ideas
+                  to bring your vision to life
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div
+                class="testimonial-items flex flex-col place-items-center gap-3"
+              >
+                <figure>
+                  <img
+                    class="w-16 h-16"
+                    src="./src/img/user.png"
+                    alt="profile-pict"
+                  />
+                </figure>
+                <div class="ratings flex md:flex-row sm:max-md:flex-col gap-2">
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                  <svg
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.85417 16.5001L5.20834 10.6459L0.666672 6.70842L6.66667 6.18758L9.00001 0.666748L11.3333 6.18758L17.3333 6.70842L12.7917 10.6459L14.1458 16.5001L9.00001 13.3959L3.85417 16.5001Z"
+                      fill="#FFCD29"
+                    />
+                  </svg>
+                </div>
+                <h3>Angga Maulana Yusup</h3>
+                <p>
+                  We think outside the box, offering fresh and innovative ideas
+                  to bring your vision to life
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-portofolio my-10">
+        <div class="container">
+          <div class="text-center max-w-[427px] mx-auto">
+            <h2>Portofolio</h2>
+            <p class="mt-6">
+              With years of experience in web development and design, we deliver
+              results that speak for themselves
+            </p>
+          </div>
+          <div>
+            <ul class="grid grid-cols-3 gap-5 mt-6">
+              <li class="splide__slide">
+                <div class="portofolio-items">
+                  <figure>
+                    <img
+                      class=""
+                      src="./src/img/portofolio1.png"
+                      alt="portofolio-1"
+                    />
+                  </figure>
+                  <h3>Mezo</h3>
+                  <p>
+                    At Kayyon Furniture, we are committed to transforming your
+                    house into a home with our carefully curated collection of
+                    furniture. From timeless classics to contemporary designs,
+                    every piece is crafted to reflect your unique taste and
+                    enhance your living experience.
+                  </p>
+                  <a href="#">See Our Work <span>-></span></a>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="portofolio-items">
+                  <figure>
+                    <img
+                      class=""
+                      src="./src/img/portofolio2.png"
+                      alt="portofolio-1"
+                    />
+                  </figure>
+                  <h3>kayyon</h3>
+                  <p>
+                    At Kayyon Furniture, we are committed to transforming your
+                    house into a home with our carefully curated collection of
+                    furniture. From timeless classics to contemporary designs,
+                    every piece is crafted to reflect your unique taste and
+                    enhance your living experience.
+                  </p>
+                  <a href="#">See Our Work <span>-></span></a>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="portofolio-items">
+                  <figure>
+                    <img
+                      class=""
+                      src="./src/img/portofolio3.png"
+                      alt="portofolio-1"
+                    />
+                  </figure>
+                  <h3>Hassanah Land</h3>
+                  <p>
+                    At Kayyon Furniture, we are committed to transforming your
+                    house into a home with our carefully curated collection of
+                    furniture. From timeless classics to contemporary designs,
+                    every piece is crafted to reflect your unique taste and
+                    enhance your living experience.
+                  </p>
+                  <a href="#">See Our Work <span>-></span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-aboutUs my-10">
+        <div class="container flex flex-col items-center">
+          <div class="text-center max-w-[427px] mx-auto">
+            <h2>About Us</h2>
+            <p class="mt-6">
+              With years of experience in web development and design, we deliver
+              results that speak for themselves
+            </p>
+          </div>
+          <div>
+            <ul class="grid grid-cols-3 gap-5 mt-6">
+              <li class="splide__slide">
+                <div class="employee-items">
+                  <figure>
+                    <img
+                      class=""
+                      src="./src/img/employee-1.png"
+                      alt="employee-1"
+                    />
+                  </figure>
+                  <h3>Alice Johnson</h3>
+                  <span class="job-label">Project Manager</span>
+                  <p class="text-center">
+                    Alice ensures every project runs smoothly and meets client
+                    expectations.
+                  </p>
+                  <div class="social-media">
+                    <ul class="flex md:flex-row sm:max-md:flex-col gap-3">
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1430)">
+                            <path
+                              d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z"
+                              fill="black"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1430">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.2719 1.58643H18.0831L11.9414 8.606L19.1666 18.1581H13.5093L9.07834 12.3648L4.00827 18.1581H1.19534L7.76451 10.6498L0.833313 1.58643H6.63424L10.6395 6.8817L15.2719 1.58643ZM14.2852 16.4754H15.843L5.78781 3.1807H4.1162L14.2852 16.4754Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </li>
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1432)">
+                            <path
+                              d="M10 1.80078C12.6719 1.80078 12.9883 1.8125 14.0391 1.85937C15.0156 1.90234 15.543 2.06641 15.8945 2.20313C16.3594 2.38281 16.6953 2.60156 17.043 2.94922C17.3945 3.30078 17.6094 3.63281 17.7891 4.09766C17.9258 4.44922 18.0898 4.98047 18.1328 5.95312C18.1797 7.00781 18.1914 7.32422 18.1914 9.99219C18.1914 12.6641 18.1797 12.9805 18.1328 14.0313C18.0898 15.0078 17.9258 15.5352 17.7891 15.8867C17.6094 16.3516 17.3906 16.6875 17.043 17.0352C16.6914 17.3867 16.3594 17.6016 15.8945 17.7813C15.543 17.918 15.0117 18.082 14.0391 18.125C12.9844 18.1719 12.668 18.1836 10 18.1836C7.32813 18.1836 7.01172 18.1719 5.96094 18.125C4.98438 18.082 4.45703 17.918 4.10547 17.7813C3.64063 17.6016 3.30469 17.3828 2.95703 17.0352C2.60547 16.6836 2.39063 16.3516 2.21094 15.8867C2.07422 15.5352 1.91016 15.0039 1.86719 14.0313C1.82031 12.9766 1.80859 12.6602 1.80859 9.99219C1.80859 7.32031 1.82031 7.00391 1.86719 5.95312C1.91016 4.97656 2.07422 4.44922 2.21094 4.09766C2.39063 3.63281 2.60938 3.29688 2.95703 2.94922C3.30859 2.59766 3.64063 2.38281 4.10547 2.20313C4.45703 2.06641 4.98828 1.90234 5.96094 1.85937C7.01172 1.8125 7.32813 1.80078 10 1.80078ZM10 0C7.28516 0 6.94531 0.0117187 5.87891 0.0585938C4.81641 0.105469 4.08594 0.277344 3.45313 0.523438C2.79297 0.78125 2.23438 1.12109 1.67969 1.67969C1.12109 2.23438 0.78125 2.79297 0.523438 3.44922C0.277344 4.08594 0.105469 4.8125 0.0585938 5.875C0.0117188 6.94531 0 7.28516 0 10C0 12.7148 0.0117188 13.0547 0.0585938 14.1211C0.105469 15.1836 0.277344 15.9141 0.523438 16.5469C0.78125 17.207 1.12109 17.7656 1.67969 18.3203C2.23438 18.875 2.79297 19.2188 3.44922 19.4727C4.08594 19.7188 4.8125 19.8906 5.875 19.9375C6.94141 19.9844 7.28125 19.9961 9.99609 19.9961C12.7109 19.9961 13.0508 19.9844 14.1172 19.9375C15.1797 19.8906 15.9102 19.7188 16.543 19.4727C17.1992 19.2188 17.7578 18.875 18.3125 18.3203C18.8672 17.7656 19.2109 17.207 19.4648 16.5508C19.7109 15.9141 19.8828 15.1875 19.9297 14.125C19.9766 13.0586 19.9883 12.7188 19.9883 10.0039C19.9883 7.28906 19.9766 6.94922 19.9297 5.88281C19.8828 4.82031 19.7109 4.08984 19.4648 3.45703C19.2188 2.79297 18.8789 2.23438 18.3203 1.67969C17.7656 1.125 17.207 0.78125 16.5508 0.527344C15.9141 0.28125 15.1875 0.109375 14.125 0.0625C13.0547 0.0117188 12.7148 0 10 0Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M10 4.86328C7.16406 4.86328 4.86328 7.16406 4.86328 10C4.86328 12.8359 7.16406 15.1367 10 15.1367C12.8359 15.1367 15.1367 12.8359 15.1367 10C15.1367 7.16406 12.8359 4.86328 10 4.86328ZM10 13.332C8.16016 13.332 6.66797 11.8398 6.66797 10C6.66797 8.16016 8.16016 6.66797 10 6.66797C11.8398 6.66797 13.332 8.16016 13.332 10C13.332 11.8398 11.8398 13.332 10 13.332Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M16.5391 4.66016C16.5391 5.32422 16 5.85938 15.3398 5.85938C14.6758 5.85938 14.1406 5.32031 14.1406 4.66016C14.1406 3.99609 14.6797 3.46094 15.3398 3.46094C16 3.46094 16.5391 4 16.5391 4.66016Z"
+                              fill="black"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1432">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="employee-items">
+                  <figure>
+                    <img
+                      class=""
+                      src="./src/img/employee-2.png"
+                      alt="employee-1"
+                    />
+                  </figure>
+                  <h3>Bob Smith</h3>
+                  <span class="job-label">Lead Developer</span>
+                  <p>
+                    Bob crafts innovative solutions that drive our projects
+                    forward.
+                  </p>
+                  <div class="social-media">
+                    <ul class="flex md:flex-row sm:max-md:flex-col gap-3">
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1430)">
+                            <path
+                              d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z"
+                              fill="black"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1430">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.2719 1.58643H18.0831L11.9414 8.606L19.1666 18.1581H13.5093L9.07834 12.3648L4.00827 18.1581H1.19534L7.76451 10.6498L0.833313 1.58643H6.63424L10.6395 6.8817L15.2719 1.58643ZM14.2852 16.4754H15.843L5.78781 3.1807H4.1162L14.2852 16.4754Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </li>
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1432)">
+                            <path
+                              d="M10 1.80078C12.6719 1.80078 12.9883 1.8125 14.0391 1.85937C15.0156 1.90234 15.543 2.06641 15.8945 2.20313C16.3594 2.38281 16.6953 2.60156 17.043 2.94922C17.3945 3.30078 17.6094 3.63281 17.7891 4.09766C17.9258 4.44922 18.0898 4.98047 18.1328 5.95312C18.1797 7.00781 18.1914 7.32422 18.1914 9.99219C18.1914 12.6641 18.1797 12.9805 18.1328 14.0313C18.0898 15.0078 17.9258 15.5352 17.7891 15.8867C17.6094 16.3516 17.3906 16.6875 17.043 17.0352C16.6914 17.3867 16.3594 17.6016 15.8945 17.7813C15.543 17.918 15.0117 18.082 14.0391 18.125C12.9844 18.1719 12.668 18.1836 10 18.1836C7.32813 18.1836 7.01172 18.1719 5.96094 18.125C4.98438 18.082 4.45703 17.918 4.10547 17.7813C3.64063 17.6016 3.30469 17.3828 2.95703 17.0352C2.60547 16.6836 2.39063 16.3516 2.21094 15.8867C2.07422 15.5352 1.91016 15.0039 1.86719 14.0313C1.82031 12.9766 1.80859 12.6602 1.80859 9.99219C1.80859 7.32031 1.82031 7.00391 1.86719 5.95312C1.91016 4.97656 2.07422 4.44922 2.21094 4.09766C2.39063 3.63281 2.60938 3.29688 2.95703 2.94922C3.30859 2.59766 3.64063 2.38281 4.10547 2.20313C4.45703 2.06641 4.98828 1.90234 5.96094 1.85937C7.01172 1.8125 7.32813 1.80078 10 1.80078ZM10 0C7.28516 0 6.94531 0.0117187 5.87891 0.0585938C4.81641 0.105469 4.08594 0.277344 3.45313 0.523438C2.79297 0.78125 2.23438 1.12109 1.67969 1.67969C1.12109 2.23438 0.78125 2.79297 0.523438 3.44922C0.277344 4.08594 0.105469 4.8125 0.0585938 5.875C0.0117188 6.94531 0 7.28516 0 10C0 12.7148 0.0117188 13.0547 0.0585938 14.1211C0.105469 15.1836 0.277344 15.9141 0.523438 16.5469C0.78125 17.207 1.12109 17.7656 1.67969 18.3203C2.23438 18.875 2.79297 19.2188 3.44922 19.4727C4.08594 19.7188 4.8125 19.8906 5.875 19.9375C6.94141 19.9844 7.28125 19.9961 9.99609 19.9961C12.7109 19.9961 13.0508 19.9844 14.1172 19.9375C15.1797 19.8906 15.9102 19.7188 16.543 19.4727C17.1992 19.2188 17.7578 18.875 18.3125 18.3203C18.8672 17.7656 19.2109 17.207 19.4648 16.5508C19.7109 15.9141 19.8828 15.1875 19.9297 14.125C19.9766 13.0586 19.9883 12.7188 19.9883 10.0039C19.9883 7.28906 19.9766 6.94922 19.9297 5.88281C19.8828 4.82031 19.7109 4.08984 19.4648 3.45703C19.2188 2.79297 18.8789 2.23438 18.3203 1.67969C17.7656 1.125 17.207 0.78125 16.5508 0.527344C15.9141 0.28125 15.1875 0.109375 14.125 0.0625C13.0547 0.0117188 12.7148 0 10 0Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M10 4.86328C7.16406 4.86328 4.86328 7.16406 4.86328 10C4.86328 12.8359 7.16406 15.1367 10 15.1367C12.8359 15.1367 15.1367 12.8359 15.1367 10C15.1367 7.16406 12.8359 4.86328 10 4.86328ZM10 13.332C8.16016 13.332 6.66797 11.8398 6.66797 10C6.66797 8.16016 8.16016 6.66797 10 6.66797C11.8398 6.66797 13.332 8.16016 13.332 10C13.332 11.8398 11.8398 13.332 10 13.332Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M16.5391 4.66016C16.5391 5.32422 16 5.85938 15.3398 5.85938C14.6758 5.85938 14.1406 5.32031 14.1406 4.66016C14.1406 3.99609 14.6797 3.46094 15.3398 3.46094C16 3.46094 16.5391 4 16.5391 4.66016Z"
+                              fill="black"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1432">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="employee-items">
+                  <figure>
+                    <img
+                      class=""
+                      src="./src/img/employee-3.png"
+                      alt="employee-1"
+                    />
+                  </figure>
+                  <h3>Cathy Lee</h3>
+                  <span class="job-label">UX Designer</span>
+                  <p>
+                    Cathy designs user experiences that delight and engage our
+                    clients' audiences.
+                  </p>
+                  <div class="social-media">
+                    <ul class="flex md:flex-row sm:max-md:flex-col gap-3">
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1430)">
+                            <path
+                              d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z"
+                              fill="black"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1430">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.2719 1.58643H18.0831L11.9414 8.606L19.1666 18.1581H13.5093L9.07834 12.3648L4.00827 18.1581H1.19534L7.76451 10.6498L0.833313 1.58643H6.63424L10.6395 6.8817L15.2719 1.58643ZM14.2852 16.4754H15.843L5.78781 3.1807H4.1162L14.2852 16.4754Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </li>
+                      <li>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1432)">
+                            <path
+                              d="M10 1.80078C12.6719 1.80078 12.9883 1.8125 14.0391 1.85937C15.0156 1.90234 15.543 2.06641 15.8945 2.20313C16.3594 2.38281 16.6953 2.60156 17.043 2.94922C17.3945 3.30078 17.6094 3.63281 17.7891 4.09766C17.9258 4.44922 18.0898 4.98047 18.1328 5.95312C18.1797 7.00781 18.1914 7.32422 18.1914 9.99219C18.1914 12.6641 18.1797 12.9805 18.1328 14.0313C18.0898 15.0078 17.9258 15.5352 17.7891 15.8867C17.6094 16.3516 17.3906 16.6875 17.043 17.0352C16.6914 17.3867 16.3594 17.6016 15.8945 17.7813C15.543 17.918 15.0117 18.082 14.0391 18.125C12.9844 18.1719 12.668 18.1836 10 18.1836C7.32813 18.1836 7.01172 18.1719 5.96094 18.125C4.98438 18.082 4.45703 17.918 4.10547 17.7813C3.64063 17.6016 3.30469 17.3828 2.95703 17.0352C2.60547 16.6836 2.39063 16.3516 2.21094 15.8867C2.07422 15.5352 1.91016 15.0039 1.86719 14.0313C1.82031 12.9766 1.80859 12.6602 1.80859 9.99219C1.80859 7.32031 1.82031 7.00391 1.86719 5.95312C1.91016 4.97656 2.07422 4.44922 2.21094 4.09766C2.39063 3.63281 2.60938 3.29688 2.95703 2.94922C3.30859 2.59766 3.64063 2.38281 4.10547 2.20313C4.45703 2.06641 4.98828 1.90234 5.96094 1.85937C7.01172 1.8125 7.32813 1.80078 10 1.80078ZM10 0C7.28516 0 6.94531 0.0117187 5.87891 0.0585938C4.81641 0.105469 4.08594 0.277344 3.45313 0.523438C2.79297 0.78125 2.23438 1.12109 1.67969 1.67969C1.12109 2.23438 0.78125 2.79297 0.523438 3.44922C0.277344 4.08594 0.105469 4.8125 0.0585938 5.875C0.0117188 6.94531 0 7.28516 0 10C0 12.7148 0.0117188 13.0547 0.0585938 14.1211C0.105469 15.1836 0.277344 15.9141 0.523438 16.5469C0.78125 17.207 1.12109 17.7656 1.67969 18.3203C2.23438 18.875 2.79297 19.2188 3.44922 19.4727C4.08594 19.7188 4.8125 19.8906 5.875 19.9375C6.94141 19.9844 7.28125 19.9961 9.99609 19.9961C12.7109 19.9961 13.0508 19.9844 14.1172 19.9375C15.1797 19.8906 15.9102 19.7188 16.543 19.4727C17.1992 19.2188 17.7578 18.875 18.3125 18.3203C18.8672 17.7656 19.2109 17.207 19.4648 16.5508C19.7109 15.9141 19.8828 15.1875 19.9297 14.125C19.9766 13.0586 19.9883 12.7188 19.9883 10.0039C19.9883 7.28906 19.9766 6.94922 19.9297 5.88281C19.8828 4.82031 19.7109 4.08984 19.4648 3.45703C19.2188 2.79297 18.8789 2.23438 18.3203 1.67969C17.7656 1.125 17.207 0.78125 16.5508 0.527344C15.9141 0.28125 15.1875 0.109375 14.125 0.0625C13.0547 0.0117188 12.7148 0 10 0Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M10 4.86328C7.16406 4.86328 4.86328 7.16406 4.86328 10C4.86328 12.8359 7.16406 15.1367 10 15.1367C12.8359 15.1367 15.1367 12.8359 15.1367 10C15.1367 7.16406 12.8359 4.86328 10 4.86328ZM10 13.332C8.16016 13.332 6.66797 11.8398 6.66797 10C6.66797 8.16016 8.16016 6.66797 10 6.66797C11.8398 6.66797 13.332 8.16016 13.332 10C13.332 11.8398 11.8398 13.332 10 13.332Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M16.5391 4.66016C16.5391 5.32422 16 5.85938 15.3398 5.85938C14.6758 5.85938 14.1406 5.32031 14.1406 4.66016C14.1406 3.99609 14.6797 3.46094 15.3398 3.46094C16 3.46094 16.5391 4 16.5391 4.66016Z"
+                              fill="black"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1432">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="button-see-more mt-12">
+            <button class="border-[#7F7F7F] bg-none text-[#7F7F7F] p-3">
+              See more
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="">
+          <div
+            class="md:border border-white md:px-10 py-14 flex md:flex-row sm:max-md:flex-col justify-between"
+          >
+            <div class="newsletter-desktop">
+              <div class="sm:max-md:border-t sm:max-md:pt- border-white">
+                <form action="#">
+                  <div class="flex md:flex-row sm:max-md:flex-col gap-4">
+                    <input
+                      class="input-email placeholder:text-[#E5E8FF]"
+                      type="text"
+                      placeholder="Your Email Here"
+                    />
+                    <button class="button-email">Join</button>
+                  </div>
+
+                  <p class="mt-3 text-xs font-inter">
+                    By subscribing, you consent to our Privacy Policy and agree
+                    to receive updates.
+                  </p>
+                </form>
+                <div class="mt-8 flex flex-col gap-3">
+                  <svg
+                    width="148"
+                    height="42"
+                    viewBox="0 0 148 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5612 0.272705L14.2727 2.77271L26.3689 15.2727L14.2727 27.7727L16.5612 30.2727L23.9169 22.7727L31.2727 15.2727L16.5612 0.272705Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.7115 11.7272L17 14.2272L4.90384 26.7272L17 39.2272L14.7115 41.7272L7.35577 34.2272L0 26.7272L14.7115 11.7272Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M55.4667 25.072H59.0807C58.3527 28.998 55.6487 31.598 51.6447 31.598C47.1207 31.598 43.6627 28.504 43.6627 22.576C43.6627 16.726 46.7567 13.164 51.6967 13.164C56.0127 13.164 58.7427 15.92 59.0807 19.404H55.4667C54.9727 17.454 53.4387 16.284 51.7227 16.284C48.7327 16.284 47.3287 18.598 47.3287 22.368C47.3287 26.19 48.7327 28.452 51.5407 28.452C53.6727 28.452 54.9727 27.23 55.4667 25.072ZM66.186 28.504C68.24 28.504 69.28 27.204 69.28 24.604C69.28 22.004 68.24 20.73 66.186 20.73C64.132 20.73 63.092 22.004 63.092 24.604C63.092 27.204 64.132 28.504 66.186 28.504ZM66.186 31.338C62.052 31.338 59.608 28.582 59.608 24.604C59.608 20.548 62.13 17.87 66.186 17.87C70.19 17.87 72.686 20.522 72.686 24.604C72.686 28.66 70.164 31.338 66.186 31.338ZM79.9676 28.582C81.5796 28.582 82.8276 27.074 82.8276 24.916C82.8276 22.134 81.8656 20.756 79.9936 20.756C78.0176 20.756 77.0816 22.082 77.0816 24.708C77.0816 26.996 78.2776 28.582 79.9676 28.582ZM86.0256 31H82.7756L82.7496 29.44C81.9436 30.74 80.7476 31.338 79.1876 31.338C75.9636 31.338 73.6496 28.79 73.6496 24.474C73.6496 20.6 75.5996 17.87 78.9016 17.87C80.4876 17.87 81.7356 18.52 82.6976 19.872V13.528H86.0256V31ZM90.977 31H87.597V18.208H90.977V31ZM90.977 16.674H87.597V13.528H90.977V16.674ZM104.117 31H100.711V23.252C100.711 21.276 100.139 20.73 98.527 20.73C96.759 20.73 95.901 21.718 95.901 23.668V31H92.521V18.208H95.745V20.08C96.525 18.65 97.825 17.87 99.879 17.87C102.323 17.87 104.117 19.352 104.117 22.134V31ZM111.733 28.452C113.371 28.452 114.619 27.074 114.619 24.916C114.619 22.134 113.657 20.808 111.733 20.808C109.835 20.808 108.847 22.082 108.847 24.708C108.847 26.996 110.069 28.452 111.733 28.452ZM114.515 31.39V29.284C114.047 30.428 112.669 31.104 111.005 31.104C106.793 31.104 105.337 27.88 105.337 24.526C105.337 20.548 107.833 17.87 110.927 17.87C112.539 17.87 113.709 18.494 114.515 19.794V18.208H117.895V31.13C117.895 34.978 115.087 37.058 111.525 37.058C107.963 37.058 105.337 35.004 105.337 31.702H108.483C108.483 33.236 109.601 34.146 111.291 34.146C113.085 34.146 114.515 33.08 114.515 31.39ZM122.582 23.356H127.808C127.756 21.458 126.508 20.548 125.182 20.548C123.83 20.548 122.712 21.588 122.582 23.356ZM131.292 25.488H122.478C122.582 27.412 123.674 28.66 125.338 28.66C126.43 28.66 127.392 28.114 127.626 27.23H131.11C130.33 29.856 128.224 31.338 125.494 31.338C121.23 31.338 119.098 28.998 119.098 24.37C119.098 20.418 121.36 17.87 125.286 17.87C129.212 17.87 131.292 20.418 131.292 25.488ZM135.84 31H132.46V18.208H135.632V19.742C136.75 18.026 138.05 17.87 139.428 17.87H139.87V21.328C139.558 21.276 139.246 21.25 138.934 21.25C136.854 21.25 135.84 22.29 135.84 24.344V31Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <p class="mt text-base font-inter">
+                    Subscribe to our newsletter for the latest updates on
+                    features and product releases.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="newsletter-mobile">
+              <div
+                class="sm:max-md:border-t sm:max-md:pt-8 sm:max-md:pb-12 border-white"
+              >
+                <div class="mt-8 flex flex-col gap-3">
+                  <svg
+                    width="148"
+                    height="42"
+                    viewBox="0 0 148 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5612 0.272705L14.2727 2.77271L26.3689 15.2727L14.2727 27.7727L16.5612 30.2727L23.9169 22.7727L31.2727 15.2727L16.5612 0.272705Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.7115 11.7272L17 14.2272L4.90384 26.7272L17 39.2272L14.7115 41.7272L7.35577 34.2272L0 26.7272L14.7115 11.7272Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M55.4667 25.072H59.0807C58.3527 28.998 55.6487 31.598 51.6447 31.598C47.1207 31.598 43.6627 28.504 43.6627 22.576C43.6627 16.726 46.7567 13.164 51.6967 13.164C56.0127 13.164 58.7427 15.92 59.0807 19.404H55.4667C54.9727 17.454 53.4387 16.284 51.7227 16.284C48.7327 16.284 47.3287 18.598 47.3287 22.368C47.3287 26.19 48.7327 28.452 51.5407 28.452C53.6727 28.452 54.9727 27.23 55.4667 25.072ZM66.186 28.504C68.24 28.504 69.28 27.204 69.28 24.604C69.28 22.004 68.24 20.73 66.186 20.73C64.132 20.73 63.092 22.004 63.092 24.604C63.092 27.204 64.132 28.504 66.186 28.504ZM66.186 31.338C62.052 31.338 59.608 28.582 59.608 24.604C59.608 20.548 62.13 17.87 66.186 17.87C70.19 17.87 72.686 20.522 72.686 24.604C72.686 28.66 70.164 31.338 66.186 31.338ZM79.9676 28.582C81.5796 28.582 82.8276 27.074 82.8276 24.916C82.8276 22.134 81.8656 20.756 79.9936 20.756C78.0176 20.756 77.0816 22.082 77.0816 24.708C77.0816 26.996 78.2776 28.582 79.9676 28.582ZM86.0256 31H82.7756L82.7496 29.44C81.9436 30.74 80.7476 31.338 79.1876 31.338C75.9636 31.338 73.6496 28.79 73.6496 24.474C73.6496 20.6 75.5996 17.87 78.9016 17.87C80.4876 17.87 81.7356 18.52 82.6976 19.872V13.528H86.0256V31ZM90.977 31H87.597V18.208H90.977V31ZM90.977 16.674H87.597V13.528H90.977V16.674ZM104.117 31H100.711V23.252C100.711 21.276 100.139 20.73 98.527 20.73C96.759 20.73 95.901 21.718 95.901 23.668V31H92.521V18.208H95.745V20.08C96.525 18.65 97.825 17.87 99.879 17.87C102.323 17.87 104.117 19.352 104.117 22.134V31ZM111.733 28.452C113.371 28.452 114.619 27.074 114.619 24.916C114.619 22.134 113.657 20.808 111.733 20.808C109.835 20.808 108.847 22.082 108.847 24.708C108.847 26.996 110.069 28.452 111.733 28.452ZM114.515 31.39V29.284C114.047 30.428 112.669 31.104 111.005 31.104C106.793 31.104 105.337 27.88 105.337 24.526C105.337 20.548 107.833 17.87 110.927 17.87C112.539 17.87 113.709 18.494 114.515 19.794V18.208H117.895V31.13C117.895 34.978 115.087 37.058 111.525 37.058C107.963 37.058 105.337 35.004 105.337 31.702H108.483C108.483 33.236 109.601 34.146 111.291 34.146C113.085 34.146 114.515 33.08 114.515 31.39ZM122.582 23.356H127.808C127.756 21.458 126.508 20.548 125.182 20.548C123.83 20.548 122.712 21.588 122.582 23.356ZM131.292 25.488H122.478C122.582 27.412 123.674 28.66 125.338 28.66C126.43 28.66 127.392 28.114 127.626 27.23H131.11C130.33 29.856 128.224 31.338 125.494 31.338C121.23 31.338 119.098 28.998 119.098 24.37C119.098 20.418 121.36 17.87 125.286 17.87C129.212 17.87 131.292 20.418 131.292 25.488ZM135.84 31H132.46V18.208H135.632V19.742C136.75 18.026 138.05 17.87 139.428 17.87H139.87V21.328C139.558 21.276 139.246 21.25 138.934 21.25C136.854 21.25 135.84 22.29 135.84 24.344V31Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <p
+                    class="mt-[74px] text-base font-inter sm:max-md:text-xs sm:max-md:font-normal"
+                  >
+                    Subscribe to our newsletter for the latest updates on
+                    features and product releases.
+                  </p>
+                </div>
+                <form class="mt-5" action="#">
+                  <div class="flex md:flex-row sm:max-md:flex-col gap-4">
+                    <input
+                      class="input-email placeholder:text-[#E5E8FF]"
+                      type="text"
+                      placeholder="Your Email Here"
+                    />
+                    <button class="button-email w-full">Join</button>
+                  </div>
+
+                  <p class="mt-3 text-xs font-inter">
+                    By subscribing, you consent to our Privacy Policy
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <div
+              class="footer-menu-list flex sm:max-md:flex-col flex-row sm:max-md:gap-10 sm:max-md:border-t sm:max-md:pt-12 md:gap-10"
+            >
+              <div class="footer-menu-wrap">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Blog Posts</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+              <div class="footer-menu-wrap">
+                <h3>Connect With Us</h3>
+                <ul>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Eventts</a></li>
+                  <li><a href="#">Partnerships</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                </ul>
+              </div>
+              <div class="footer-menu-wrap">
+                <h3>Stay Connected</h3>
+                <ul>
+                  <li>
+                    <a href="#" class="flex flex-row gap-3"
+                      ><span
+                        ><svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M20.6667 10.3038C20.6667 4.74719 16.1896 0.242676 10.6667 0.242676C5.14384 0.242676 0.666687 4.74719 0.666687 10.3038C0.666687 15.3255 4.32353 19.4879 9.10419 20.2427V13.2121H6.56513V10.3038H9.10419V8.0872C9.10419 5.56564 10.5972 4.1728 12.8813 4.1728C13.9755 4.1728 15.1198 4.36931 15.1198 4.36931V6.84529H13.8589C12.6167 6.84529 12.2292 7.6209 12.2292 8.41658V10.3038H15.0026L14.5593 13.2121H12.2292V20.2427C17.0099 19.4879 20.6667 15.3257 20.6667 10.3038Z"
+                            fill="white"
+                          />
+                        </svg> </span
+                      >Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="flex flex-row gap-3"
+                      ><span
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1432)">
+                            <path
+                              d="M10 1.80078C12.6719 1.80078 12.9883 1.8125 14.0391 1.85937C15.0156 1.90234 15.543 2.06641 15.8945 2.20313C16.3594 2.38281 16.6953 2.60156 17.043 2.94922C17.3945 3.30078 17.6094 3.63281 17.7891 4.09766C17.9258 4.44922 18.0898 4.98047 18.1328 5.95312C18.1797 7.00781 18.1914 7.32422 18.1914 9.99219C18.1914 12.6641 18.1797 12.9805 18.1328 14.0313C18.0898 15.0078 17.9258 15.5352 17.7891 15.8867C17.6094 16.3516 17.3906 16.6875 17.043 17.0352C16.6914 17.3867 16.3594 17.6016 15.8945 17.7813C15.543 17.918 15.0117 18.082 14.0391 18.125C12.9844 18.1719 12.668 18.1836 10 18.1836C7.32813 18.1836 7.01172 18.1719 5.96094 18.125C4.98438 18.082 4.45703 17.918 4.10547 17.7813C3.64063 17.6016 3.30469 17.3828 2.95703 17.0352C2.60547 16.6836 2.39063 16.3516 2.21094 15.8867C2.07422 15.5352 1.91016 15.0039 1.86719 14.0313C1.82031 12.9766 1.80859 12.6602 1.80859 9.99219C1.80859 7.32031 1.82031 7.00391 1.86719 5.95312C1.91016 4.97656 2.07422 4.44922 2.21094 4.09766C2.39063 3.63281 2.60938 3.29688 2.95703 2.94922C3.30859 2.59766 3.64063 2.38281 4.10547 2.20313C4.45703 2.06641 4.98828 1.90234 5.96094 1.85937C7.01172 1.8125 7.32813 1.80078 10 1.80078ZM10 0C7.28516 0 6.94531 0.0117187 5.87891 0.0585938C4.81641 0.105469 4.08594 0.277344 3.45313 0.523438C2.79297 0.78125 2.23438 1.12109 1.67969 1.67969C1.12109 2.23438 0.78125 2.79297 0.523438 3.44922C0.277344 4.08594 0.105469 4.8125 0.0585938 5.875C0.0117188 6.94531 0 7.28516 0 10C0 12.7148 0.0117188 13.0547 0.0585938 14.1211C0.105469 15.1836 0.277344 15.9141 0.523438 16.5469C0.78125 17.207 1.12109 17.7656 1.67969 18.3203C2.23438 18.875 2.79297 19.2188 3.44922 19.4727C4.08594 19.7188 4.8125 19.8906 5.875 19.9375C6.94141 19.9844 7.28125 19.9961 9.99609 19.9961C12.7109 19.9961 13.0508 19.9844 14.1172 19.9375C15.1797 19.8906 15.9102 19.7188 16.543 19.4727C17.1992 19.2188 17.7578 18.875 18.3125 18.3203C18.8672 17.7656 19.2109 17.207 19.4648 16.5508C19.7109 15.9141 19.8828 15.1875 19.9297 14.125C19.9766 13.0586 19.9883 12.7188 19.9883 10.0039C19.9883 7.28906 19.9766 6.94922 19.9297 5.88281C19.8828 4.82031 19.7109 4.08984 19.4648 3.45703C19.2188 2.79297 18.8789 2.23438 18.3203 1.67969C17.7656 1.125 17.207 0.78125 16.5508 0.527344C15.9141 0.28125 15.1875 0.109375 14.125 0.0625C13.0547 0.0117188 12.7148 0 10 0Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M10 4.86328C7.16406 4.86328 4.86328 7.16406 4.86328 10C4.86328 12.8359 7.16406 15.1367 10 15.1367C12.8359 15.1367 15.1367 12.8359 15.1367 10C15.1367 7.16406 12.8359 4.86328 10 4.86328ZM10 13.332C8.16016 13.332 6.66797 11.8398 6.66797 10C6.66797 8.16016 8.16016 6.66797 10 6.66797C11.8398 6.66797 13.332 8.16016 13.332 10C13.332 11.8398 11.8398 13.332 10 13.332Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M16.5391 4.66016C16.5391 5.32422 16 5.85938 15.3398 5.85938C14.6758 5.85938 14.1406 5.32031 14.1406 4.66016C14.1406 3.99609 14.6797 3.46094 15.3398 3.46094C16 3.46094 16.5391 4 16.5391 4.66016Z"
+                              fill="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1432">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg> </span
+                      >Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="flex flex-row gap-3"
+                      ><span
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.2719 1.58643H18.0831L11.9414 8.606L19.1666 18.1581H13.5093L9.07834 12.3648L4.00827 18.1581H1.19534L7.76451 10.6498L0.833313 1.58643H6.63424L10.6395 6.8817L15.2719 1.58643ZM14.2852 16.4754H15.843L5.78781 3.1807H4.1162L14.2852 16.4754Z"
+                            fill="white"
+                          />
+                        </svg> </span
+                      >X</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="flex flex-row gap-3"
+                      ><span
+                        ><svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_1012_1430)">
+                            <path
+                              d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z"
+                              fill="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1012_1430">
+                              <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg> </span
+                      >LinkedIn</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="flex flex-row gap-3"
+                      ><span
+                        ><svg
+                          width="21"
+                          height="15"
+                          viewBox="0 0 21 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M20.2597 2.20301C20.1458 1.78041 19.9232 1.39501 19.614 1.08518C19.3049 0.775338 18.92 0.551868 18.4977 0.437007C16.9317 0.00700739 10.6667 7.5965e-06 10.6667 7.5965e-06C10.6667 7.5965e-06 4.40268 -0.00699261 2.83568 0.404007C2.41361 0.524154 2.0295 0.750785 1.72025 1.06214C1.41099 1.3735 1.18697 1.75913 1.06968 2.18201C0.656681 3.74801 0.652681 6.99601 0.652681 6.99601C0.652681 6.99601 0.648681 10.26 1.05868 11.81C1.28868 12.667 1.96368 13.344 2.82168 13.575C4.40368 14.005 10.6517 14.012 10.6517 14.012C10.6517 14.012 16.9167 14.019 18.4827 13.609C18.9052 13.4943 19.2904 13.2714 19.6003 12.9622C19.9102 12.653 20.1341 12.2682 20.2497 11.846C20.6637 10.281 20.6667 7.03401 20.6667 7.03401C20.6667 7.03401 20.6867 3.76901 20.2597 2.20301ZM8.66268 10.005L8.66768 4.00501L13.8747 7.01001L8.66268 10.005Z"
+                            fill="white"
+                          />
+                        </svg> </span
+                      >Youtube</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex md:flex-row sm:max-md:flex-col justify-between mt-9 sm:max-md:hidden"
+          >
+            <p>© 2024 Your Company. All rights reserved.</p>
+            <ul class="flex md:flex-row sm:max-md:flex-col gap-3">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: unset;
+  color: #002f88;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 748px) and (max-width: 1439px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 70px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a00;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+header li > a {
+  @apply font-bold text-base font-Inter;
+}
+
+.section-ui-ux li {
+  @apply sm:max-md:bg-white sm:max-md:rounded-xl;
+}
+
+.section-ui-ux li * {
+  @apply sm:max-md:text-center sm:max-md:self-center;
+}
+
+.section-ui-ux li h3 {
+  @apply sm:max-md:text-xl;
+}
+
+.section-ui-ux li p {
+  @apply sm:max-md:text-base sm:max-md:leading-[150%];
+}
+
+.section-ui-ux li div {
+  @apply sm:max-md:ml-0;
+}
+
+.section-ui-ux li a {
+  @apply sm:max-md:hidden;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-[12px] font-Inter;
+}
+
+.section-hero h1 {
+  @apply text-6xl font-bold font-Inter sm:max-md:text-white sm:max-md:text-2xl sm:max-md:leading-[150%];
+}
+
+.sub-heading {
+  @apply md:text-2xl font-Inter font-semibold sm:max-md:text-white sm:max-md:text-xs;
+}
+
+.heading-section {
+  @apply md:text-4xl sm:max-md:text-3xl sm:max-md:font-semibold sm:max-md:text-white sm:max-md:text-center md:font-bold font-Inter sm:max-md:leading-[150%] md:leading-[120%];
+}
+
+.section-desc {
+  @apply md:text-base font-Inter sm:max-md:text-white sm:max-md:text-sm sm:max-md:font-thin;
+}
+
+.grid-items {
+  @apply md:bg-gradient-to-t md:from-[#A0A5B0] md:from-0% md:to-[37%] md:to-white xl:w-[315px] rounded-3xl md:px-6 py-3 flex flex-col sm:max-md:gap-4 md:gap-4 md:border md:border-[#7F7F7F] md:w-[19rem];
+}
+
+.grid-items svg {
+  @apply scale-75;
+}
+
+.grid-items p {
+  @apply text-base font-Inter sm:max-md:font-normal sm:max-md:leading-[150%];
+}
+
+.grid-items h3 {
+  @apply text-2xl sm:max-md:text-xl font-bold font-Inter;
+}
+
+h2 {
+  @apply text-5xl font-semibold font-sans;
+}
+
+h3 {
+  @apply text-2xl font-semibold font-sans;
+}
+
+.testimonial-items {
+  @apply bg-gradient-to-t from-[#A0A5B0] from-0% to-[37%] to-white w-[315px] rounded-3xl px-6 py-3 flex-col gap-4 border border-[#7F7F7F];
+}
+
+.splide__arrow {
+  @apply hidden;
+}
+
+.portofolio-items {
+  @apply relative px-11 py-9 bg-gradient-to-l from-[#A0A5B0] from-0% to-[37%] to-white rounded-3xl flex-col flex gap-6 border border-[#7F7F7F] place-items-center md:h-auto xl:h-[726px];
+}
+
+.portofolio-items img {
+  @apply md:h-[118px] xl:h-[272px] rounded-3xl;
+}
+
+.portofolio-items h3 {
+  @apply font-Inter font-semibold text-2xl;
+}
+
+.portofolio-items a {
+  @apply mt-auto ml-auto text-[#002F88] font-medium text-base;
+}
+
+.employee-items {
+  @apply relative px-11 py-9 bg-gradient-to-t from-[#A0A5B0] from-0% to-[37%] to-white rounded-3xl flex-col flex border border-[#7F7F7F] place-items-center md:h-auto xl:h-[346px];
+}
+
+.employee-items img {
+  @apply h-32 w-32 rounded-full;
+}
+
+.employee-items h3 {
+  @apply font-Inter font-semibold text-xl text-black;
+}
+
+.employee-items p {
+  @apply font-Inter text-base text-black mt-4;
+}
+
+.employee-items .job-label {
+  @apply font-Inter text-base text-black mt-[6px];
+}
+
+.employee-items .social-media {
+  @apply mt-4;
+}
+
+footer {
+  @apply bg-[#0E1E5D] text-white md:p-16;
+}
+
+.input-email {
+  @apply xl:w-[365px] md:w-[197px] sm:max-md:w-full h-[48px] bg-[#0E1E5D] border border-white px-4 py-2;
+}
+
+button.button-email {
+  @apply md:w-[119px] h-[48px] bg-[#0E1E5D] border border-white px-4 py-2 sm:max-md:rounded-none;
+}
+
+footer a {
+  @apply text-white max-w-full;
+}
+
+.footer-menu-wrap h3 {
+  @apply text-base font-semibold font-Inter mb-6;
+}
+
+.footer-menu-wrap ul {
+  @apply flex flex-col gap-4;
+}
+
+.footer-menu-wrap a {
+  @apply text-sm font-Inter;
+}
+
+.section-ui-ux ul {
+  @apply gap-8 flex flex-col;
+}
+
+ul li:nth-of-type(2) .icon-code,
+ul li:nth-of-type(3) .icon-code {
+  @apply sm:max-md:hidden;
+}
+.icon-presentation,
+.icon-brush {
+  @apply md:hidden;
+}
+
+.section-ui-ux li h3 {
+  @apply sm:max-md:mt-8 sm:max-md:font-semibold sm:max-md:text-xl;
+}
+
+.section-ui-ux li p {
+  @apply sm:max-md:mt-6 sm:max-md:font-medium sm:max-md:text-base  sm:max-md:leading-[150%] text-balance;
+}
+
+.section-ui-ux .image-wrapper {
+  @apply sm:max-md:hidden;
+}
+
+.section-ui-ux {
+  @apply pt-20 pb-20;
+}
+
+.sub-head {
+  @apply sm:max-md:text-xs sm:max-md:font-semibold sm:max-md:text-black;
+}
+
+.section-rightChoice h2 {
+  @apply sm:max-md:text-4xl sm:max-md:font-semibold sm:max-md:text-black sm:max-md:leading-[150%];
+}
+
+.section-testimonial,
+.section-portofolio,
+.section-aboutUs {
+  @apply sm:max-md:hidden;
+}
+
+.section-aboutUs {
+  @apply pt-16 pb-24;
+}
+
+.section-testimonial {
+  @apply py-16;
+}
+
+.newsletter-desktop {
+  @apply sm:max-md:hidden;
+}
+
+.newsletter-mobile {
+  @apply md:hidden;
+}
+
+.section-ui-ux .text-wrap {
+  @apply flex flex-col gap-3;
+}
