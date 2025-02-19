@@ -9,37 +9,57 @@
   </head>
   <body class="font-lato">
     <!-- Header start -->
-    <header
-      class="bg-white px-28 hidden md:block py-8 border-b border-b-[#E7E7E7]"
-    >
-      <nav class="flex justify-between sticky">
+    <header class="bg-white px-5 md:px-28 h-[618.75%] py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg">
+      <nav class="flex justify-between items-center bg-white">
         <h1 class="font-bold">Atracctive School</h1>
-        <ul class="flex gap-10 text-abu">
+        <!-- Menu Desktop (tetap sama) -->
+        <ul class="hidden md:flex gap-10 text-abu">
           <li class="font-bold text-[#1A1A1A]">Home</li>
-          <li><a href="">About</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Program</a></li>
+          <li class="hover:text-slate-700"><a href="">About</a></li>
+          <li class="hover:text-slate-700"><a href="">Blog</a></li>
+          <li class="hover:text-slate-700"><a href="">Program</a></li>
           <li>
             <button>
-              <span
-                class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white"
-                >Contact</span
-              >
+              <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
+              hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                Contact
+              </span>
             </button>
           </li>
         </ul>
+        <!-- Tombol Hamburger untuk Mobile -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </nav>
+      <!-- Menu Mobile dengan animasi -->
+      <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+        <ul class="flex flex-col gap-4 text-abu mt-4 py-4">
+          <li class="font-bold text-[#1A1A1A]">Home</li>
+          <li class="hover:text-slate-700"><a href="">About</a></li>
+          <li class="hover:text-slate-700"><a href="">Blog</a></li>
+          <li class="hover:text-slate-700"><a href="">Program</a></li>
+          <li>
+            <button>
+              <span class="hover:text-slate-700">Contact</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </header>
     <!-- Header end -->
 
     <!-- Hero section start-->
-    <section class="px-4 md:px-28 bg-putih mt-10">
+    <section class="bg-putih mt-10">
       <div class="container mx-auto relative">
-        <div class="max-w-[761px] mx-auto">
+        <div class="max-w-[761px] mx-auto py-10">
           <p class="text-center text-abu">Welcom to Scholl</p>
-          <h1
-            class="md:text-6xl text-center md:leading-[76px] my-5 font-semibold"
-          >
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:leading-[76px] my-5 font-semibold">
             Explore a sea of wit that is Impossible to resist
           </h1>
           <p class="text-center text-abu mt-5">
@@ -48,43 +68,39 @@
             Bijarade ren defagt, mivis pott. Trar visat til
           </p>
           <div class="text-center my-7">
-            <a href=""
-              ><span class="px-5 py-2 border rounded-xl bg-[#1E1E1E] text-white"
-                >Our Blog</span
-              ></a
-            >
+            <button>
+              <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
+              hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                Our Blog
+              </span>
+            </button>
           </div>
         </div>
 
-        <div class="px-4">
-          <figure class="hidden xl:block absolute top-2 left-12 text-[#000000]">
-            <img src="img/Vector 581.png" alt="garis" width="87px" />
+        <div class="px-10">
+          <figure class="hidden xl:block absolute top-2 left-40 text-[#000000]">
+            <img src="img/Vector 581.png" alt="garis" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
           </figure>
-          <figure class="hidden xl:block absolute bottom-7 left-12">
-            <img
-              src="img/lamp.png"
-              alt="lamp"
-              width="87px"
-              class="text-[#1E1E1E]"
-            />
+
+          <figure class="hidden xl:block absolute bottom-7 left-40">
+            <img src="img/lamp.png" alt="lamp" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
           </figure>
+
           <figure
-            class="hidden xl:block absolute top-2 right-12 text-[#000000]"
-          >
-            <img src="img/lamp.png" alt="lamp" width="87px" />
+            class="hidden xl:block absolute top-2 right-40 text-[#000000]">
+            <img src="img/lamp.png" alt="lamp" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
           </figure>
-          <figure
-            class="hidden xl:block absolute bottom-7 right-12 text-[#000000]"
-          >
-            <img src="img/Vector 581.png" alt="garis" width="87px" />
+
+          <figure class="hidden xl:block absolute bottom-7 right-40 text-[#000000]">
+            <img src="img/Vector 581.png" alt="garis" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
           </figure>
         </div>
       </div>
 
-      <figure class="">
-        <img src="img/hero.png" alt="hero" class="block w-full mx-auto" />
-      </figure>
     </section>
+    <figure class="mx-auto">
+      <img src="img/hero.png" alt="hero" class="block min-w-screen mx-auto" />
+    </figure>
     <!-- Hero section start  -->
 
     <!-- patner school start -->
@@ -105,42 +121,39 @@
     <!-- patner sochool end -->
 
     <!-- section school start-->
-    <section class="px-8 sm:px-28 mt-10 py-10">
+    <section class="px-5 sm:px-28 mt-10 py-10">
       <div class="container mx-auto">
-        <div class="flex justify-between">
-          <div class="text-start flex items-center">
-            <div>
+        <div class="flex gap-4 lg:gap-8 justify-between"> 
+          <div class="text-start flex items-center justify-between">
+            <div class="max-w-[461px]">
               <p class="text-abu py-5 text-lg">Whay Thes School</p>
-              <h3
-                class="font-semibold text-[#202020] font-asap text-xl sm:text-[2.5rem] sm:leading-[50px]"
-              >
+              <h3 class="font-semibold text-[#202020] font-asap text-xl sm:text-[2.5rem] sm:leading-[50px]">
                 Design Schools, Trusted Programs, and 100% Guaranteed
               </h3>
               <p class="text-abu py-5 text-lg">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
                 Terabel pov astrobel sar direlig.
               </p>
-              <a href="" class="pt-16"
-                ><span
-                  class="text-xs py-1 px-3 sm:text-sm sm:px-5 sm:py-2 border rounded-xl bg-[#1E1E1E] text-white"
-                  >More detail</span
-                ></a
-              >
+              <button class="mt-6">
+                <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
+                hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                  More Detail
+                </span>
+              </button>
             </div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 content-center">
             <figure>
               <img src="img/foto.png" alt="" class="w-[16.688rem]" />
             </figure>
-            <figure class="sm:-mt-10">
+            <figure class="lg:-mt-10">
               <img src="img/foto1.png" alt="" class="w-[16.688rem]" />
             </figure>
-
             <figure>
               <img src="img/foto2.png" alt="" class="w-[16.688rem]" />
             </figure>
-            <figure class="sm:-mt-10">
-              <img src="img/laptop.png " alt="" class="w-[16.688rem]" />
+            <figure class="lg:-mt-10">
+              <img src="img/laptop.png" alt="" class="w-[16.688rem]" />
             </figure>
           </div>
         </div>
@@ -151,24 +164,25 @@
     <!-- section about start -->
     <section class="mt-10 py-10 bg-[#F5F5F5] px-4 lg:px-28">
       <div class="container mx-auto">
-        <div class="items-center flex flex-col lg:flex-row lg:justify-between">
-          <div class="space-y-4 space-x-4">
-            <h1 class="text-6xl font-semibold text-[#202020]">
-              About Atractive School
-            </h1>
-            <p class="text-[#9D9D9D]">
-              Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
-              Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
-            </p>
-            <button>
-              <span class="py-2 px-5 border rounded-xl bg-[#1E1E1E] text-white">More detail</span>
-            </button>
+        <div class="items-center flex flex-col lg:flex-row lg:justify-between"> 
+          <div  class="max-w-[461px] py-10">
+            <div class="space-y-10">
+              <h1 class="text-[40px] font-semibold text-[#202020]">About Atractive School</h1>
+              <p class="text-[#9D9D9D]">Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+                Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.</p>
+                <button>
+                  <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
+                  hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                    More Detail
+                  </span>
+                </button>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5">
-            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2">
-              <figure class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200">
-                <img src="img/home.png" alt="" class="w-5 h-5" />
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-5">
+            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
+              <figure class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]">
+                <img src="img/home.png" alt="" />
               </figure>
               <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
               <p class="text-sm text-abu p-2">
@@ -177,54 +191,34 @@
               <button class="p-2">More detail</button>
             </div>
 
-            <div
-              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2"
-            >
+            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
               <figure
-                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200"
-              >
-                <img src="img/home.png" alt="" class="w-5 h-5" />
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]">
+                <img src="img/Subtract.png" alt=""/>
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">
-                School Facility
-              </h3>
+              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
               <p class="text-sm text-abu p-2">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
               </p>
               <button class="p-2">More detail</button>
             </div>
 
-            <div
-              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2"
-            >
+            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
               <figure
-                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200"
-              >
-                <img src="img/home.png" alt="" class="w-5 h-5" />
+                class="flex items-center justify-center  w-12 h-12 rounded-full bg-[#F4F4F4]">
+                <img src="img/book.png" alt="" class="flex items-center justify-center" />
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">
-                School Facility
-              </h3>
-              <p class="text-sm text-abu p-2">
-                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
-              </p>
+              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
+              <p class="text-sm text-abu p-2">Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.</p>
               <button class="p-2">More detail</button>
             </div>
 
-            <div
-              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-2"
-            >
-              <figure
-                class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200"
-              >
-                <img src="img/home.png" alt="" class="w-5 h-5" />
+            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
+              <figure class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]">
+                <img src="img/medali.png" alt="" />
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">
-                School Facility
-              </h3>
-              <p class="text-sm text-abu p-2">
-                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
-              </p>
+              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
+              <p class="text-sm text-abu p-2">Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.</p>
               <button class="p-2">More detail</button>
             </div>
           </div>
@@ -251,13 +245,12 @@
               <img src="img/foto6.png" alt="" class="w-[16.688rem]" />
             </figure>
           </div>
-
           <div class="flex text-start items-center">
-            <div class="space-y-4">
+            <div class="space-y-4 max-w-[461px]">
               <p class="text-abu">School Vision</p>
-              <h1 class="font-semibold text-[#202020] text-2xl md:text-6xl">
+              <h1 class="font-semibold text-[#202020] text-2xl md:text-[40px] font-asap">
                 Our Vision
-              </h1>
+              </h1> 
               <p class="text-abu">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
                 Terabel pov astrobel sar direlig.
@@ -270,13 +263,11 @@
     <!-- section our vision end -->
 
     <!-- section teacher start -->
-    <section class="my-10 px-4 md:px-28">
+    <section class="my-10 px-5 md:px-28">
       <div class="container mx-auto">
         <div class="space-y-3">
           <p class="text-abu">Teacher</p>
-          <h1
-            class="text-[#202020] text-2xl md:text-6xl w-1/2 font-semibold font-asap"
-          >
+          <h1 class="text-[#202020] text-2xl md:text-6xl w-1/2 font-semibold font-asap">
             Teacher in Atractive School
           </h1>
         </div>
@@ -287,14 +278,11 @@
             Terabel pov astrobel sar direlig.
           </p>
           <div class="flex gap-4 mt-4 md:mt-0">
-            <div
-              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
-            >
+            <div class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center">
               <img src="img/scrol1.png" alt="logo scrol1" />
             </div>
             <div
-              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
-            >
+              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center">
               <img src="img/scrol2.png" alt="logo scrol2" />
             </div>
           </div>
@@ -341,9 +329,10 @@
         </div>
         <div class="text-center mt-8 text-white">
           <button>
-            <span class="py-2 px-5 border rounded-xl bg-[#1E1E1E] text-center"
-              >View more</span
-            >
+            <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
+            hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+              Our Blog
+            </span>
           </button>
         </div>
       </div>
@@ -351,7 +340,7 @@
     <!-- section teacher end -->
 
     <!-- section bloge start -->
-    <section class="mt-10 py-10 px-4 lg:px-28 mx-auto bg-[#F5F5F5]">
+    <section class="mt-10 py-10 px-5 lg:px-28 mx-auto bg-[#F5F5F5]">
       <div class="container mx-auto">
         <div class="mx-auto text-center">
           <h1 class="font-bold text-2xl md:text-6xl">Our Blog</h1>
@@ -367,7 +356,7 @@
             <img
               src="img/bground.jpg"
               alt=""
-              class="lg:max-w-[40.938rem] lg:max-h-[26.25rem]"
+              class="lg:max-w-[40.938rem] lg:max-h-[26.25rem] bg-gradient-to-b from-[#CDCDCD] via-slate-600"
             />
             <figcaption class="absolute bottom-5 left-5 text-white gap-4 px-2">
               <h3 class="font-bold">Belajar Kembali pada tanggal 2 Mei 2023</h3>
@@ -422,8 +411,8 @@
               <div class="space-y-6">
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
-                  <p>September 14, 2023</p>
-                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-sm">September 14, 2023</p>
+                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
                 </div>
               </div>
             </figure>
@@ -435,8 +424,8 @@
               <div class="space-y-6">
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
-                  <p>September 14, 2023</p>
-                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="sm:">September 14, 2023</p>
+                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
                 </div>
               </div>
             </figure>
@@ -447,8 +436,8 @@
               <div class="space-y-6">
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
-                  <p>September 14, 2023</p>
-                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-sm">September 14, 2023</p>
+                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
                 </div>
               </div>
             </figure>
@@ -460,8 +449,8 @@
               <div class="space-y-6">
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
-                  <p>September 14, 2023</p>
-                  <p>Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-sm">September 14, 2023</p>
+                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
                 </div>
               </div>
             </figure>
@@ -472,8 +461,8 @@
     <!-- section bloge end -->
 
     <!-- section our galery start -->
-    <section class="mt-10">
-      <div class="text-center mx-auto">
+    <section class="mt-16 px-5">
+      <div class="text-center mx-auto lg:w-[561px] gap-5">
         <h1 class="font-bold text-4xl">Our Galery</h1>
         <p class="text-abu text-xs leading-[28px] font-normal">
           Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
@@ -481,7 +470,7 @@
           ren defagt,
         </p>
       </div>
-      <div class="mt-y mx-auto ">
+      <div class="mt-5 mx-auto">
         <div class="flex gap-6 overflow-x-auto">
           <img src="img/galery/galeri1.png" alt="" />
           <img src="img/galery/galeri3.png" alt="" />
@@ -554,5 +543,7 @@
 
       </div>
      </footer>
+
+     <script src="src/script.js"></script>
   </body>
 </html>
