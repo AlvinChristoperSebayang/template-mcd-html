@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/input.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papxyz..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papxyz..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
   </head>
   <body class="font-lato">
     <!-- Header start -->
     <header class="bg-white px-5 md:px-28 h-[618.75%] py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg">
-      <nav class="flex justify-between items-center bg-white">
-        <h1 class="font-bold">Atracctive School</h1>
-        <!-- Menu Desktop (tetap sama) -->
-        <ul class="hidden md:flex gap-10 text-abu">
-          <li class="font-bold text-[#1A1A1A]">Home</li>
-          <li class="hover:text-slate-700"><a href="">About</a></li>
-          <li class="hover:text-slate-700"><a href="">Blog</a></li>
-          <li class="hover:text-slate-700"><a href="">Program</a></li>
-          <li>
-            <button>
-              <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
-              hover:text-black hover:font-bold duration-500 transition-colors ease-out">
-                Contact
-              </span>
+      <div class="container mx-auto">
+        <nav class="flex justify-between items-center bg-white">
+          <h1 class="font-bold">Atracctive School</h1>
+          <!-- Menu Desktop (tetap sama) -->
+          <ul class="hidden md:flex gap-10 text-abu">
+            <li class="font-bold text-[#1A1A1A]">Home</li>
+            <li class="hover:text-slate-700"><a href="#about">About</a></li>
+            <li class="hover:text-slate-700"><a href="#bloge">Blog</a></li>
+            <li class="hover:text-slate-700"><a href="">Program</a></li>
+            <li>
+              <button>
+                <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
+                hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                  Contact
+                </span>
+              </button>
+            </li>
+          </ul>
+          <!-- Tombol Hamburger untuk Mobile -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="p-2">
+              <svg id="menu-icon" class="w-8 h-8 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+                <line x1="4" y1="6" x2="20" y2="6" stroke-linecap="round"></line>
+                <line x1="4" y1="12" x2="20" y2="12" stroke-linecap="round"></line>
+                <line x1="4" y1="18" x2="20" y2="18" stroke-linecap="round"></line>
+              </svg>
             </button>
-          </li>
-        </ul>
-        <!-- Tombol Hamburger untuk Mobile -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="focus:outline-none">
-            <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </nav>
+          </div>
+        </nav>
+      </div>
       <!-- Menu Mobile dengan animasi -->
       <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0">
         <ul class="flex flex-col gap-4 text-abu mt-4 py-4">
@@ -143,17 +152,17 @@
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 content-center">
-            <figure>
-              <img src="img/foto.png" alt="" class="w-[16.688rem]" />
+            <figure class="animate__animated animate__zoomIn">
+              <img src="img/foto.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
             </figure>
-            <figure class="lg:-mt-10">
-              <img src="img/foto1.png" alt="" class="w-[16.688rem]" />
+            <figure class="lg:-mt-10 animate__animated animate__zoomIn">
+              <img src="img/foto1.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
             </figure>
-            <figure>
-              <img src="img/foto2.png" alt="" class="w-[16.688rem]" />
+            <figure class="animate__animated animate__zoomIn">
+              <img src="img/foto2.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
             </figure>
-            <figure class="lg:-mt-10">
-              <img src="img/laptop.png" alt="" class="w-[16.688rem]" />
+            <figure class="lg:-mt-10 animate__animated animate__zoomIn">
+              <img src="img/laptop.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
             </figure>
           </div>
         </div>
@@ -162,7 +171,7 @@
     <!-- section school end -->
 
     <!-- section about start -->
-    <section class="mt-10 py-10 bg-[#F5F5F5] px-4 lg:px-28">
+    <section id="about" class="mt-10 py-10 bg-[#F5F5F5] px-4 lg:px-28">
       <div class="container mx-auto">
         <div class="items-center flex flex-col lg:flex-row lg:justify-between"> 
           <div  class="max-w-[461px] py-10">
@@ -327,6 +336,7 @@
             </figure>
           </div>
         </div>
+        
         <div class="text-center mt-8 text-white">
           <button>
             <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
@@ -340,10 +350,10 @@
     <!-- section teacher end -->
 
     <!-- section bloge start -->
-    <section class="mt-10 py-10 px-5 lg:px-28 mx-auto bg-[#F5F5F5]">
+    <section id="bloge" class="mt-10 py-10 px-5 lg:px-28 mx-auto bg-[#F5F5F5]">
       <div class="container mx-auto">
         <div class="mx-auto text-center">
-          <h1 class="font-bold text-2xl md:text-6xl">Our Blog</h1>
+          <h1 class="font-bold text-2xl text-[40px]">Our Blog</h1>
           <p class="text-abu mt-5">
             Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
             Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
@@ -490,7 +500,7 @@
     <!-- section our galery end -->
 
     <!-- footer  -->
-     <footer class="w-full bg-[#1A1A1A] mt-10 px-4 md:px-28 py-20">
+     <footer id="footer" class="w-full bg-[#1A1A1A] mt-10 px-4 md:px-28 py-10">
       <div class="container mx-auto">
         <div class="flex flex-col md:flex-row md:justify-between text-white">
           <div class="w-[292px] space-y-8">
@@ -540,10 +550,12 @@
           <!-- <div class="flex flex-wrap justify-between gap-8 bg-blue-400">
           </div> -->
         </div>
-
+      </div>
+      <div class="sm:text-end mt-10 text-white">
+        <p class="text-sm">&copy; Mangcoding. All rights reserved. </p>
       </div>
      </footer>
-
+    
      <script src="src/script.js"></script>
   </body>
 </html>

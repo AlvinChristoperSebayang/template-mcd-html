@@ -3,18 +3,32 @@ const mobileMenu = document.getElementById("mobile-menu");
 const menuIcon = document.getElementById("menu-icon");
 let isOpen = false;
 
+// 
+
+
+
+
+
 mobileMenuButton.addEventListener("click", () => {
   isOpen = !isOpen;
+
+  // Toggle menu
+  mobileMenu.classList.toggle("max-h-screen");
+  mobileMenu.classList.toggle("opacity-100");
+  mobileMenu.classList.toggle("max-h-0");
+  mobileMenu.classList.toggle("opacity-0");
+
+  // Ganti ikon hamburger <-> silang
   if (isOpen) {
-    // Membuka menu dengan transisi
-    mobileMenu.classList.remove("max-h-0", "opacity-0");
-    mobileMenu.classList.add("max-h-screen", "opacity-100");
-    // Memutar ikon hamburger (misal 90 derajat)
-    menuIcon.classList.add("rotate-90");
+    menuIcon.innerHTML = `
+      <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round"></line>
+      <line x1="6" y1="18" x2="18" y2="6" stroke-linecap="round"></line>
+    `;
   } else {
-    // Menutup menu dengan transisi
-    mobileMenu.classList.remove("max-h-screen", "opacity-100");
-    mobileMenu.classList.add("max-h-0", "opacity-0");
-    menuIcon.classList.remove("rotate-90");
+    menuIcon.innerHTML = `
+      <line x1="4" y1="6" x2="20" y2="6" stroke-linecap="round"></line>
+      <line x1="4" y1="12" x2="20" y2="12" stroke-linecap="round"></line>
+      <line x1="4" y1="18" x2="20" y2="18" stroke-linecap="round"></line>
+    `;
   }
 });
