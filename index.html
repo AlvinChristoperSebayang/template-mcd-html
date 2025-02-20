@@ -2114,7 +2114,7 @@
         scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
       });
 
-      //testimoni swipper start
+      //data testimoni swipper start
       const captions = [
         {
           text: "The design and results from Kayyon truly matched our expectations. Elegant and functional!",
@@ -2142,7 +2142,10 @@
           position: "Project Manager at UrbanSpaces",
         },
       ];
+      //data testimoni swipper end
 
+
+      //testimoni swipper start
       let captionIndex = 2;
       let interval;
 
@@ -2165,7 +2168,7 @@
         // Update current index
         captionIndex = index;
 
-        // Reset interval if clicked
+        // Reset interval ketika ngeklick
         if (clicked) {
           clearInterval(interval);
           startAutoSlide();
@@ -2186,7 +2189,7 @@
       }
 
       init();
-      //testimoni swipper start
+      //testimoni swipper end
       
 
       window.addEventListener("scroll", function () {
@@ -2224,7 +2227,7 @@
       let index = 0;
 
       //slider hero start
-      const slideCount = 5; // Jumlah total slide
+      const slideCount = 5;
 
       function setActiveButton(buttonId, slideIndex) {
         // Hapus kelas 'button-active' dari semua button
@@ -2287,7 +2290,6 @@
       window.onload = function () {
         setActiveButton("living-room", 0);
       };
-      //slider hero start
     </script>
 
     <!-- AOS -->

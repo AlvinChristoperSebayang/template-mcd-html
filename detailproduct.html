@@ -886,7 +886,7 @@
         }
       });
 
-      // Fungsi untuk mengubah gambar utama
+      // mengubah gambar utama
       function changeImage(imageSrc) {
         const mainImage = document.getElementById("mainImage");
         if (mainImage.src.includes(imageSrc)) return;
@@ -922,7 +922,7 @@
           });
         });
 
-        // Tutup collapsible jika klik di luar
+        // Tutup collapsible pas klik di luar
         document.addEventListener("click", (event) => {
           document.querySelectorAll(".collapsible-content").forEach((item) => {
             if (
