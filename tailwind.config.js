@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Sesuaikan dengan struktur proyekmu
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     screens: {
       sm: "375px",
@@ -27,5 +31,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
