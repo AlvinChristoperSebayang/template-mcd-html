@@ -4,6 +4,32 @@ const menuIcon = document.getElementById("menu-icon");
 let isOpen = false;
 
 // 
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("teacher-slider");
+  const prevButton = document.getElementById("prev-slide");
+  const nextButton = document.getElementById("next-slide");
+
+  if (!container || !prevButton || !nextButton) return;
+
+  container.style.scrollBehavior = "smooth"; // Animasi scroll
+
+  // Menghitung lebar satu item slider
+  const itemWidth = container.children[0].offsetWidth + 16; // 16px = gap antar item
+
+  nextButton.addEventListener("click", function () {
+    container.scrollLeft += itemWidth; // Geser ke kanan
+  });
+
+  prevButton.addEventListener("click", function () {
+    container.scrollLeft -= itemWidth; // Geser ke kiri
+  });
+});
+
+
+
+
+
+
 
 
 

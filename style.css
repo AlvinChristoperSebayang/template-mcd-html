@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<style>
+  #teacher-slider::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, Edge */
+  }
+  #teacher-slider {
+    -ms-overflow-style: none;  /* Untuk Internet Explorer */
+    scrollbar-width: none;  /* Untuk Firefox */
+  }
+</style>
