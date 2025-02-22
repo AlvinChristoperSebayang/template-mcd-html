@@ -1,25 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Agency Companies</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-black">
-    
     <header>
       <nav id="header" class="w-full fixed top-0 bg-transparent z-[4]">
         <div class="container mx-auto">
-          <ul class="flex items-center justify-between h-[60px] md:h-[68px] lg::h-[79px]">
+          <ul
+            class="flex items-center justify-between h-[60px] md:h-[68px] lg::h-[79px]"
+          >
             <li class="flex items-center gap-[6px]">
               <figure>
-                <img src="/logo.svg" alt="logo" class="sm:w-[28px] sm:h-[32px] md:w-[31px] md:h-[35px]">
+                <img
+                  src="/logo.svg"
+                  alt="logo"
+                  class="sm:w-[28px] sm:h-[32px] md:w-[31px] md:h-[35px]"
+                />
               </figure>
-              <a href="" class="sm:text-sm md:text-base text-white font-bold">Bantu</a>
+              <a href="" class="sm:text-sm md:text-base text-white font-bold"
+                >Bantu</a
+              >
             </li>
-            <li class="sm:hidden md:flex gap-6">
+            <li class="sm:hidden md:flex ml-[80px] gap-6">
               <a href="" class="text-base text-white font-medium">About</a>
               <a href="" class="text-base text-white font-medium">Service</a>
               <a href="" class="text-base text-white font-medium">Portfolio</a>
@@ -28,93 +39,199 @@
 
             <div class="relative md:hidden">
               <a href="javascript:void(0);" onclick="toggleDropdown()">
-                <img src="/menu.svg" alt="Menu Icon" class="w-6 h-6 mb-2 cursor-pointer">
+                <img
+                  src="/menu.svg"
+                  alt="Menu Icon"
+                  class="w-6 h-6 mb-2 cursor-pointer"
+                />
               </a>
-              
+
               <!-- Dropdown Mobile -->
-              <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg hidden">
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">About</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Service</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Portfolio</a>
-                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Contact Us</a>
+              <div
+                id="dropdownMenu"
+                class="absolute right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg hidden"
+              >
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
+                  >About</a
+                >
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
+                  >Service</a
+                >
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
+                  >Portfolio</a
+                >
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200"
+                  >Contact Us</a
+                >
               </div>
             </div>
 
             <li class="sm:hidden md:block">
-              <button class="flex items-center border-[1.5px] gap-[10px] border-[#504CFF] rounded-[40px] md:px-4 md:py-[10px] lg:px-6 lg:py-[14px]">
-                <p class="text-base text-white font-medium">
-                  Get Started 
-                </p>
+              <!-- <button class="flex items-center border-[1.5px] gap-[10px] border-[#504CFF] rounded-[40px] md:px-4 md:py-[10px] lg:px-6 lg:py-[14px]"> -->
+              <button class="button-transparent">
+                <p class="text-base text-white font-medium">Get Started</p>
                 <figure>
-                  <img src="/Vector.svg" alt="arrow" class="border border-white p-[3px] rounded-full">
+                  <img
+                    src="/Vector.svg"
+                    alt="arrow"
+                    class="border border-white p-[3px] rounded-full"
+                  />
                 </figure>
               </button>
             </li>
           </ul>
         </div>
-      </nav>  
+      </nav>
     </header>
-    
+
     <main id="site-main">
-      <section class="flex relative overflow-hidden bg-gradient-to-b from-black via-transparent to-black">
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px] sm:hidden md:block border-r border-[#504DFF]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px] border-r border-[#504DFF]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[868px] md:h-[780px]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block border-r border-[#504DFF]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block border-r border-[#504DFF]"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
-        <div class="bg-gradient-to-r from-[#FFFFFF00] to-white/10 w-[64px] h-[780px] sm:hidden md:block"></div>
+      <section
+        class="flex relative overflow-hidden w-full justify-center bg-gradient-to-b from-black via-transparent to-black"
+      >
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block border-r border-[#504DFF]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] border-r border-[#504DFF]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block border-r border-[#504DFF]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block border-r border-[#504DFF]"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
+        <div
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block"
+        ></div>
 
-        <div class="absolute w-[550px] h-[287px] bg-[#504CFF] blur-[100px] bottom-[-20%] md:bottom-[-10%] left-[-197px] md:left-[5%]"></div>
-        <div class="absolute w-[427px] h-[190px] md:w-[450px] md:h-[287px] bg-[#854CFF] blur-[100px] right-[-40%] md:right-[5%] top-[100px] md:top-[20%]"></div>
+        <div
+          class="absolute w-[550px] h-[287px] bg-[#504CFF] blur-[100px] bottom-[-20%] md:bottom-[-10%] left-[-197px] md:left-[5%]"
+        ></div>
+        <div
+          class="absolute w-[427px] h-[190px] md:w-[450px] md:h-[287px] bg-[#854CFF] blur-[100px] right-[-40%] md:right-[5%] top-[100px] md:top-[20%]"
+        ></div>
 
-        <div class="container mx-auto w-full max-w-[1440px] absolute top-[168px] md:top-[139px] flex items-center justify-center">
+        <div
+          class="container mx-auto absolute top-[168px] md:top-[139px] flex items-center justify-center"
+        >
           <div class="text-center">
-            <figure class="flex gap-4 items-center justify-center pb-[30px] lg:pb-10">
-              <button><img src="/instagram (1).svg" class="w-[30px] h-[30px] md:w-6 md:h-6" alt="instagram"></button>
-              <button><img src="/wa.svg" class="w-[30px] h-[30px] md:w-6 md:h-6" alt="wa"></button>
-              <button><img src="/linkedin.svg" class="w-[30px] h-[30px] md:w-6 md:h-6" alt="linkedin"></button>
-              <button><img src="/twiter.svg" class="w-[30px] h-[30px] md:w-6 md:h-6" alt="twiter"></button>
+            <figure
+              class="flex gap-4 items-center justify-center pb-[30px] lg:pb-10"
+            >
+              <button>
+                <img
+                  src="/instagram2.svg"
+                  class="w-[30px] h-[30px] md:w-6 md:h-6"
+                  alt="instagram"
+                />
+              </button>
+              <button>
+                <img
+                  src="/wa.svg"
+                  class="w-[30px] h-[30px] md:w-6 md:h-6"
+                  alt="wa"
+                />
+              </button>
+              <button>
+                <img
+                  src="/linkedin.svg"
+                  class="w-[30px] h-[30px] md:w-6 md:h-6"
+                  alt="linkedin"
+                />
+              </button>
+              <button>
+                <img
+                  src="/twiter.svg"
+                  class="w-[30px] h-[30px] md:w-6 md:h-6"
+                  alt="twiter"
+                />
+              </button>
             </figure>
 
             <div>
-              <h1 class="text-[42px] md:text-[70px] lg:text-[105px] font-normal leading-[56px] lg:leading-[110px] text-transparent pb-[30px] md:pb-[32px] bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#BE9FFF]">
+              <h1
+                class="text-[42px] md:text-[70px] lg:text-[105px] font-normal leading-[56px] lg:leading-[110px] text-transparent pb-[30px] md:pb-[32px] bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#BE9FFF]"
+              >
                 Amazing website creation with Bantu agency
               </h1>
-              <p class="text-[14px] lg:text-[16px] leading-[21.6px] font-light text-white">
-                Help you to build a website company that is modern, user-friendly,
-                SEO-optimized, and cleanly designed.
+              <p
+                class="text-[14px] lg:text-[16px] leading-[21.6px] font-light text-white"
+              >
+                Help you to build a website company that is modern,
+                user-friendly, SEO-optimized, and cleanly designed.
               </p>
               <div class="flex items-center justify-center mt-[40px] md:mt-8">
-                <button class="flex gap-[10px] text-[17px] md:text-base text-black border border-white bg-white px-6 py-[14px] rounded-[40px]">
+                <button class="button-white">
                   Get Started
                   <figure class="rounded-full border border-black">
-                    <img src="/arrow-up-right.svg" alt="arrow">
+                    <img src="/arrow-up-right.svg" alt="arrow" />
                   </figure>
                 </button>
               </div>
             </div>
-            <div class="flex justify-center items-center pt-[50px] md:pt-[40px]">
+            <div
+              class="flex justify-center items-center pt-[50px] md:pt-[40px]"
+            >
               <div class="circle">
                 <div class="logo"></div>
                 <div class="text">
-                  <p class="text-white text-[13px] lg:text-base">scroll down for work together</p>
+                  <p class="text-white text-[13px] lg:text-base">
+                    scroll down for work together
+                  </p>
                 </div>
               </div>
             </div>
@@ -123,207 +240,368 @@
       </section>
 
       <section class="pt-[75px] md:pt-[120px] relative overflow-hidden">
-        <div class="absolute top-[550px] lg:top-[367px] w-[621px] lg:w-[641px] h-[278px] lg:h-[287px] bg-[#504CFF] blur-[200px] left-[-422px] lg:left-[-387px] z-[-1]"></div>
-        <div class="absolute bottom-0 lg:bottom-[250px] w-[508px] lg:w-[641px] h-[227px] lg:h-[250px] bg-[#504CFF] blur-[200px] left-[-172px] lg:left-[-300px] z-[-1]"></div>
-        <div class="absolute top-[1820px] lg:top-[911px] w-[806px] lg:w-[641px] h-[361px] lg:h-[287px] bg-[#854CFF99] blur-[200px] right-[-650px] lg:right-[-200px] z-[1] lg:z-[-1]"></div>
+        <img
+          class="absolute -z-50 top-40 left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1281px] object-contain"
+          src="/vector-line.svg"
+          alt=""
+        />
+
+        <div
+          class="absolute top-[550px] lg:top-[367px] w-[621px] lg:w-[641px] h-[278px] lg:h-[287px] bg-[#504CFF] blur-[200px] left-[-422px] lg:left-[-387px] z-[-1]"
+        ></div>
+        <div
+          class="absolute bottom-0 lg:bottom-[250px] w-[508px] lg:w-[641px] h-[227px] lg:h-[250px] bg-[#504CFF] blur-[200px] left-[-172px] lg:left-[-300px] z-[-1]"
+        ></div>
+        <div
+          class="absolute top-[1820px] lg:top-[911px] w-[806px] lg:w-[641px] h-[361px] lg:h-[287px] bg-[#854CFF99] blur-[200px] right-[-650px] lg:right-[-200px] z-[1] lg:z-[-1]"
+        ></div>
         <div class="container mx-auto relative">
-          <h2 class="text-[32px] md:text-[48px] lg:text-[67px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]">
-            Companies that can help you in developing your company for the future
+          <h2
+            class="text-[32px] md:text-[48px] lg:text-[67px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
+          >
+            Companies that can help you in developing your company for the
+            future
           </h2>
-          <p class="text-base text-white font-normal md:w-[486px] pt-[30px] md:pt-8">
-            Work in the IT field includes Web Design, UI/UX Design, Branding and Shopify Development
+          <p
+            class="text-base text-white font-normal md:w-[486px] pt-[30px] md:pt-8"
+          >
+            Work in the IT field includes Web Design, UI/UX Design, Branding and
+            Shopify Development
           </p>
           <div class="relative lg:static w-full lg:w-auto mt-6 lg:mt-0">
-            <button class="w-full lg:w-auto text-base font-normal text-black flex items-center justify-center gap-[10px] border border-white bg-white px-8 lg:px-[62px] py-[17px] md:py-[14px] lg:py-[14px] rounded-[40px] lg:absolute lg:top-6 lg:right-[8%]">
+            <!-- <button class="w-full lg:w-auto text-base font-normal text-black flex items-center justify-center gap-[10px] border border-white bg-white px-8 lg:px-[62px] py-[17px] md:py-[14px] lg:py-[14px] rounded-[40px] lg:absolute lg:top-6 lg:right-[8%]"> -->
+            <button class="button-fly">
               Know More
-              <img src="/arrow-up-right.svg" alt="arrow">
+              <img src="/arrow-up-right.svg" alt="arrow" />
             </button>
           </div>
         </div>
-        
-        <div class="container mx-auto w-full lg:flex lg:items-end lg:justify-between pt-[75px] pb-[39px] lg:pt-[140px] lg:pb-[40px]">
+
+        <div
+          class="container mx-auto w-full lg:flex lg:items-end lg:justify-between pt-[75px] pb-[39px] lg:pt-[140px] lg:pb-[40px]"
+        >
           <div class="lg:w-[691px]">
-            <h2 class="text-[32px] md:text-[48px] lg:text-[68px] font-normal leading-[47px] lg:leading-[75px] text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]">
+            <h2
+              class="text-[32px] md:text-[48px] lg:text-[68px] font-normal leading-[47px] lg:leading-[75px] text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
+            >
               Let’s work together with our us
             </h2>
             <p class="text-base text-white font-normal lg:w-[486px] pt-[25px]">
-              help you to build website company that is modern, user friendly, good CEO, and Clean design
+              help you to build website company that is modern, user friendly,
+              good CEO, and Clean design
             </p>
           </div>
           <div class="hidden md:block">
-            <button class="flex gap-[10px] text-black border border-white bg-white px-6 py-[14px] rounded-[40px]">
+            <button class="button-white">
               Get Started
               <figure class="rounded-full border border-black">
-                <img src="/arrow-up-right.svg" alt="arrow">
+                <img src="/arrow-up-right.svg" alt="arrow" />
               </figure>
             </button>
           </div>
         </div>
- 
-        <ul class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-between">
+
+        <ul
+          class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-between"
+        >
           <li>
-            <div class="md:flex md:justify-between md:w-[344px] lg:w-[690px] lg:h-[351px] bg-[#504CFF] rounded-3xl">
-              <div class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10">
+            <div
+              class="md:flex md:justify-between md:w-[344px] lg:w-[690px] lg:h-[351px] bg-[#504CFF] rounded-3xl"
+            >
+              <div
+                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
+              >
                 <figure>
-                  <img src="/card1.svg" alt="card" class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]">
+                  <img
+                    src="/card1.svg"
+                    alt="card"
+                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
+                  />
                 </figure>
-                <h3 class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-[30px] md:pt-[16px] lg:pt-6 lg:w-[252px]">
+                <h3
+                  class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-[30px] md:pt-[16px] lg:pt-6 lg:w-[252px]"
+                >
                   Website Dev
                 </h3>
-                <p class="text-[17px] md:text-sm text-white font-normal pt-[20px] md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]">
-                  help you to build website company that is modern, user friendly, good CEO, and Clean design
+                <p
+                  class="text-[17px] md:text-sm text-white font-normal pt-[20px] md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
+                >
+                  help you to build website company that is modern, user
+                  friendly, good CEO, and Clean design
                 </p>
-                <a href="" class="text-[17px] md:text-sm text-white font-normal flex gap-2 items-center underline pt-[20px] md:pt-[14px] lg:pt-4">
+                <a
+                  href=""
+                  class="text-[17px] md:text-sm text-white font-normal flex gap-2 items-center underline pt-[20px] md:pt-[14px] lg:pt-4"
+                >
                   Start with us
                   <figure>
-                    <img src="/Vector.svg" alt="arrow">
+                    <img src="/Vector.svg" alt="arrow" />
                   </figure>
                 </a>
               </div>
               <figure class="pl-[30px] md:pl-0 md:pt-20 lg:pt-10">
-                <img src="asset/laptop1.png" alt="">
+                <img src="asset/laptop1.png" alt="" />
               </figure>
             </div>
           </li>
-        
+
           <li class="pt-[30px] md:pt-0">
-            <div class="md:flex md:justify-between md:w-[344px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[32px]">
-              <div class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10">
+            <div
+              class="md:flex md:justify-between md:w-[344px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[32px]"
+            >
+              <div
+                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
+              >
                 <figure>
-                  <img src="/card2.svg" alt="" class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]">
+                  <img
+                    src="/card2.svg"
+                    alt=""
+                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
+                  />
                 </figure>
-                <h3 class="text-[30px] md:text-[24px] lg:text-[32px] text-white font-medium pt-6 md:pt-[16px] lg:pt-6">
+                <h3
+                  class="text-[30px] md:text-[24px] lg:text-[32px] text-white font-medium pt-6 md:pt-[16px] lg:pt-6"
+                >
                   UI/UX Design
                 </h3>
-                <p class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]">
-                  help you to build website company that is modern, user friendly, good CEO, and Clean design
+                <p
+                  class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
+                >
+                  help you to build website company that is modern, user
+                  friendly, good CEO, and Clean design
                 </p>
-                <a href="" class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4">
+                <a
+                  href=""
+                  class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4"
+                >
                   Start with us
                   <figure>
-                    <img src="/Vector.svg" alt="">
+                    <img src="/Vector.svg" alt="" />
                   </figure>
                 </a>
               </div>
               <figure class="pt-[49px] hidden md:block">
-                <img src="asset/mobile1.png" alt="" class="rounded-br-3xl">
+                <img src="asset/mobile1.png" alt="" class="rounded-br-3xl" />
               </figure>
               <figure class="px-[62px] md:hidden">
-                <img src="asset/mobile2.png" alt="" class="rounded-br-3xl">
+                <img src="asset/mobile2.png" alt="" class="rounded-br-3xl" />
               </figure>
             </div>
           </li>
         </ul>
-        
-        <ul class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-between pt-[30px] md:pt-6 pb-[27px] lg:pb-[55px]">
+
+        <ul
+          class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-between pt-[30px] md:pt-6 pb-[27px] lg:pb-[55px]"
+        >
           <li class="md:order-first order-last pt-[30px] md:pt-0">
-            <div class="md:flex md:justify-between rounded-[32px] md:w-[344px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] overflow-hidden">
-              <div class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10">
+            <div
+              class="md:flex md:justify-between rounded-[32px] md:w-[344px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] overflow-hidden"
+            >
+              <div
+                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
+              >
                 <figure>
-                  <img src="/card3.svg" alt="" class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]">
+                  <img
+                    src="/card3.svg"
+                    alt=""
+                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
+                  />
                 </figure>
-                <h3 class="text-[30px] md:text-[24px] lg:text-[32px] text-white font-medium pt-6 md:pt-[16px] lg:pt-6">
+                <h3
+                  class="text-[30px] md:text-[24px] lg:text-[32px] text-white font-medium pt-6 md:pt-[16px] lg:pt-6"
+                >
                   Branding
                 </h3>
-                <p class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]">
-                  help you to build website company that is modern, user friendly, good CEO, and Clean design
+                <p
+                  class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
+                >
+                  help you to build website company that is modern, user
+                  friendly, good CEO, and Clean design
                 </p>
-                <a href="" class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4">
+                <a
+                  href=""
+                  class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4"
+                >
                   Start with us
                   <figure>
-                    <img src="/Vector.svg" alt="">
+                    <img src="/Vector.svg" alt="" />
                   </figure>
                 </a>
               </div>
-              <figure class="md:bottom-0 lg:bottom-0 lg:pt-[22px] md:absolute md:right-0 hidden md:block">
-                <img src="asset/kartu3.png" alt="" class="md:w-[220px] md:h-[220px] lg:w-auto lg:h-auto">
+              <figure
+                class="md:bottom-0 lg:bottom-0 lg:pt-[22px] md:absolute md:right-0 hidden md:block"
+              >
+                <img
+                  src="asset/kartu3.png"
+                  alt=""
+                  class="md:w-[220px] md:h-[220px] lg:w-auto lg:h-auto"
+                />
               </figure>
               <figure class="md:hidden">
-                <img src="asset/kartu3a.png" alt="" class="">
+                <img src="asset/kartu3a.png" alt="" class="" />
               </figure>
             </div>
           </li>
 
           <li class="lg:order-last order-first">
-            <div class="md:flex md:justify-between md:w-[344px] lg:w-[690px] lg:h-[351px] bg-[#854CFF] backdrop-blur-[30px] rounded-3xl overflow-hidden">
-              <div class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10">
+            <div
+              class="md:flex md:justify-between md:w-[344px] lg:w-[690px] lg:h-[351px] bg-[#854CFF] backdrop-blur-[30px] rounded-3xl overflow-hidden"
+            >
+              <div
+                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
+              >
                 <figure>
-                  <img src="/card4.svg" alt="card" class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]">
+                  <img
+                    src="/card4.svg"
+                    alt="card"
+                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
+                  />
                 </figure>
-                <h3 class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-6 md:pt-[16px] lg:pt-6 lg:w-[252px]">
+                <h3
+                  class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-6 md:pt-[16px] lg:pt-6 lg:w-[252px]"
+                >
                   Shopify
                 </h3>
-                <p class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]">
-                  help you to build website company that is modern, user friendly, good CEO, and Clean design
+                <p
+                  class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
+                >
+                  help you to build website company that is modern, user
+                  friendly, good CEO, and Clean design
                 </p>
-                <a href="" class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4">
+                <a
+                  href=""
+                  class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4"
+                >
                   Start with us
                   <figure>
-                    <img src="/Vector.svg" alt="">
+                    <img src="/Vector.svg" alt="" />
                   </figure>
                 </a>
               </div>
               <figure class="px-[20px] md:px-0 md:pt-[80px] lg:pt-0">
-                <img src="asset/Shopify logo (1).png" alt="">
+                <img src="asset/Shopify logo (1).png" alt="" />
               </figure>
             </div>
           </li>
         </ul>
 
-        <ul class=" relative py-[10px] lg:py-[28px] overflow-hidden z-[3]">
-          <li class="bg-[#1A1A1A] flex items-center justify-center h-[76px] lg:h-[140px] -rotate-2 w-full z-[-1] absolute"></li>
-          <li class="bg-[#504CFF] flex items-center justify-center h-[76px] lg:h-[140px] rotate-2 w-full z-[1]">
+        <ul class="relative py-[10px] lg:py-[28px] overflow-hidden z-[3]">
+          <li
+            class="bg-[#1A1A1A] flex items-center justify-center h-[76px] lg:h-[140px] -rotate-2 w-full z-[-1] absolute"
+          ></li>
+          <li
+            class="bg-[#504CFF] flex items-center justify-center h-[76px] lg:h-[140px] rotate-2 w-full z-[1]"
+          >
             <div id="slider" class="flex gap-8 animate-slider lg:py-4">
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10">
-              <img src="/mangcoding.svg" alt="Logo 2" class="h-[38px] lg:h-10">
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10">
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10">
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10">
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10">
-              <img src="/mangcoding.svg" alt="Logo 4" class="h-[38px] lg:h-10">
-              <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10">
+              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+              <img
+                src="/mangcoding.svg"
+                alt="Logo 2"
+                class="h-[38px] lg:h-10"
+              />
+              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+              <img
+                src="/mangcoding.svg"
+                alt="Logo 4"
+                class="h-[38px] lg:h-10"
+              />
+              <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
               <!-- Duplikasikan elemen untuk seamless effect -->
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10">
-              <img src="/mangcoding.svg" alt="Logo 2" class="h-[38px] lg:h-10">
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10">
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10">
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10">
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10">
-              <img src="/mangcoding.svg" alt="Logo 4" class="h-[38px] lg:h-10">
-              <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10">
+              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+              <img
+                src="/mangcoding.svg"
+                alt="Logo 2"
+                class="h-[38px] lg:h-10"
+              />
+              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+              <img
+                src="/mangcoding.svg"
+                alt="Logo 4"
+                class="h-[38px] lg:h-10"
+              />
+              <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
             </div>
-          </div>
           </li>
         </ul>
       </section>
-     
+
+      <section class="relative">
+        <img
+          class="absolute -z-50 top-[-256px] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1281px] object-contain"
+          src="/vector-line2.svg"
+          alt=""
+        />
+      </section>
+
+      <section class="relative">
+        <img
+          class="absolute -z-50 top-[820px] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1281px] object-contain"
+          src="/vector-line3.svg"
+          alt=""
+        />
+      </section>
+
       <section class="relative overflow-hidden">
-        <div class="absolute top-[283px] w-[641px] h-[287px] bg-[#854CFF99] blur-[200px] left-[-141px] z-[-1]"></div>
-        <div class="absolute top-[850px] w-[641px] h-[287px] bg-[#504CFF99] blur-[200px] right-[-200px] z-[-1]"></div>
-        <div class="absolute top-[1600px] lg:top-[1283px] w-[508px] h-[227px] lg:w-[641px] lg:h-[287px] bg-[#504CFF99] blur-[200px] left-[-182px] lg:left-[-290px] z-[-1]"></div>
-        <div class="absolute top-[1800px] lg:top-[1504px] w-[806px] h-[361px] lg:w-[641px] lg:h-[287px] bg-[#854CFF99] blur-[200px] right-[-600px] lg:right-[-300px] z-[-1]"></div>
-        <div class="absolute bottom-0 w-[641px] h-[287px] bg-[#854CFF99] blur-[200px] left-[-100px] z-[-1]"></div>
+        <div
+          class="absolute top-[283px] w-[641px] h-[287px] bg-[#854CFF99] blur-[200px] left-[-141px] z-[-1]"
+        ></div>
+        <div
+          class="absolute top-[850px] w-[641px] h-[287px] bg-[#504CFF99] blur-[200px] right-[-200px] z-[-1]"
+        ></div>
+        <div
+          class="absolute top-[1600px] lg:top-[1283px] w-[508px] h-[227px] lg:w-[641px] lg:h-[287px] bg-[#504CFF99] blur-[200px] left-[-182px] lg:left-[-290px] z-[-1]"
+        ></div>
+        <div
+          class="absolute top-[1800px] lg:top-[1504px] w-[806px] h-[361px] lg:w-[641px] lg:h-[287px] bg-[#854CFF99] blur-[200px] right-[-600px] lg:right-[-300px] z-[-1]"
+        ></div>
+        <div
+          class="absolute bottom-0 w-[641px] h-[287px] bg-[#854CFF99] blur-[200px] left-[-100px] z-[-1]"
+        ></div>
         <div class="container mx-auto pt-[70px] lg:pt-[140px]">
-          <h2 class="text-[40px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[367px] pb-[25px] lg:pb-0">
+          <h2
+            class="text-[40px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[367px] pb-[25px] lg:pb-0"
+          >
             Our Product
           </h2>
-            <div class="items-center lg:flex lg:justify-between">
-              <p class="text-[20px] lg:text-base text-white font-normal lg:w-[486px] pb-5 lg:pb-0">
-                help you to build website company that is modern, user friendly, good CEO, and Clean design
-              </p>
-              <button class="text-sm lg:text-base font-normal text-black flex gap-[10px] border border-white bg-white px-[20px] py-[6px] lg:px-[24px] lg:py-[14px] rounded-[40px] items-center">
-                All Portopolio
-                <img src="/arrow-up-right.svg" alt="arrow" class="border-[1px] border-black rounded-full p-[1px] lg:p-[3px] w-5 h-5 lg:w-[28px] lg:h-[28px]">
-              </button>
-            </div>
+
+          <div class="items-center lg:flex lg:justify-between">
+            <p
+              class="text-[20px] lg:text-base text-white font-normal lg:w-[486px] pb-5 lg:pb-0"
+            >
+              help you to build website company that is modern, user friendly,
+              good CEO, and Clean design
+            </p>
+            <button class="button-white">
+              All Portopolio
+              <img
+                src="/arrow-up-right.svg"
+                alt="arrow"
+                class="border-[1px] border-black rounded-full p-[1px] lg:p-[3px] w-5 h-5 lg:w-[28px] lg:h-[28px]"
+              />
+            </button>
+          </div>
         </div>
 
-        <ul class="container mx-auto md:flex flex-col md:flex-row md:gap-[23px] justify-between pt-10 pb-[32px]">
+        <ul
+          class="container mx-auto md:flex flex-col md:flex-row md:gap-[23px] justify-between pt-10 pb-[32px]"
+        >
           <!-- card 1 -->
           <li class="flex-1">
-            <div class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]">
-              <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] flex-grow ">
-                <p class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px]">
+            <div
+              class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]"
+            >
+              <div
+                class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] flex-grow"
+              >
+                <p
+                  class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px]"
+                >
                   Development Project
                 </p>
                 <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
@@ -333,33 +611,42 @@
                   Mangcoding is a biggest company in Indonesia, who provides the
                 </p>
               </div>
-        
+
               <div class="pt-[24px]">
-                <img src="asset/card1.png" alt="" class="object-cover">
+                <img src="asset/card1.png" alt="" class="object-cover" />
               </div>
-        
-              <button class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
-                <img src="/arrow-up-right.svg" alt="arrow">
+
+              <button
+                class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]"
+              >
+                <img src="/arrow-up-right.svg" alt="arrow" />
               </button>
             </div>
-        
+
             <div class="py-5 lg:py-6">
-              <p class="text-[26px] lg:text-[32px] font-medium text-white ">
+              <p class="text-[26px] lg:text-[32px] font-medium text-white">
                 Mstore
               </p>
-              <p class="text-sm text-white font-normal pt-2 lg:pt-3 ">
-                Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+              <p class="text-sm text-white font-normal pt-2 lg:pt-3">
+                Mangcoding is a biggest company in Indonesia, who provides the
+                services in Development Website, Shopify and Wordpress
               </p>
             </div>
-        
+
             <div class="border border-[#635189]"></div>
           </li>
-        
+
           <!-- card 2 -->
-          <li class=" flex-1 pt-5 md:pt-0">
-            <div class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]">
-              <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] flex-grow">
-                <p class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px]">
+          <li class="flex-1 pt-5 md:pt-0">
+            <div
+              class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]"
+            >
+              <div
+                class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] flex-grow"
+              >
+                <p
+                  class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px]"
+                >
                   Development Project
                 </p>
                 <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
@@ -369,119 +656,263 @@
                   Mangcoding is a biggest company in Indonesia, who provides the
                 </p>
               </div>
-        
+
               <div class="pt-[24px]">
-                <img src="asset/card2.png" alt="" class="object-cover">
+                <img src="asset/card2.png" alt="" class="object-cover" />
               </div>
-        
-              <button class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
-                <img src="/arrow-up-right.svg" alt="arrow">
+
+              <button
+                class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]"
+              >
+                <img src="/arrow-up-right.svg" alt="arrow" />
               </button>
             </div>
-        
+
             <div class="py-5 lg:py-6">
               <p class="text-[26px] lg:text-[32px] font-medium text-white">
                 Beauty
               </p>
               <p class="text-sm text-white font-normal pt-2 lg:pt-3">
-                Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                Mangcoding is a biggest company in Indonesia, who provides the
+                services in Development Website, Shopify and Wordpress
               </p>
             </div>
-        
+
             <div class="border border-[#635189]"></div>
           </li>
         </ul>
-        
-        <ul class="container mx-auto md:flex flex-col md:flex-row md:gap-[23px] justify-between">
+        <ul
+          class="container mx-auto md:flex flex-col md:flex-row md:gap-[23px] justify-between"
+        >
           <!-- card 3 -->
-            <li class="">
-              <div class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]">
-                <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px]">
-                  <p class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center">
-                    Development Project
-                  </p>
-                  <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
-                    Jual
-                  </p>
-                  <p class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]">
-                    Mangcoding is a biggest company in Indonesia, who provides the
-                  </p>
-                </div>
-    
-                <div class=" pt-[24px]">
-                  <img src="asset/card3.png" alt="" class=" object-cover">
-                </div>
-    
-                <button class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
-                  <img src="/arrow-up-right.svg" alt="arrow">
-                </button>
+          <li class="">
+            <div
+              class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]"
+            >
+              <div
+                class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px]"
+              >
+                <p
+                  class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center"
+                >
+                  Development Project
+                </p>
+                <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
+                  Jual
+                </p>
+                <p
+                  class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                </p>
               </div>
+
+              <div class="pt-[24px]">
+                <img src="asset/card3.png" alt="" class="object-cover" />
+              </div>
+
+              <button
+                class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]"
+              >
+                <img src="/arrow-up-right.svg" alt="arrow" />
+              </button>
+            </div>
 
             <div class="py-5 lg:py-6">
               <p class="text-[26px] lg:text-[32px] font-medium text-white">
                 Mangcoding
               </p>
               <p class="text-sm text-white font-normal pt-2 lg:pt-3">
-                Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                Mangcoding is a biggest company in Indonesia, who provides the
+                services in Development Website, Shopify and Wordpress
               </p>
             </div>
 
-            <div class="border border-[#635189]"></div>
+            <!-- <div class="border border-[#635189]"></div> -->
           </li>
 
           <!-- card 4 -->
-          <li class=" pt-5 md:pt-0">
-            <div class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]">
-              <div class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px]">
-                <p class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center">
+          <li class="pt-5 md:pt-0">
+            <div
+              class="relative flex justify-between bg-gradient-to-r from-[#E6DBFF] via-[#F6F6F6] to-[#D8D7FF] rounded-[24px]"
+            >
+              <div
+                class="ml-[15px] lg:ml-[24px] my-[15px] lg:my-[34px] lg:w-[244px]"
+              >
+                <p
+                  class="text-xs font-normal text-black border-[1px] border-[#504CFF] rounded-[32px] px-2 lg:px-[10px] py-[3px] w-[135px] items-center"
+                >
                   Development Project
                 </p>
                 <p class="text-[20px] lg:text-[32px] font-medium lg:pt-[6px]">
                   MangStore
                 </p>
-                <p class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]">
+                <p
+                  class="text-xs lg:text-sm font-normal w-[170px] lg:w-[244px]"
+                >
                   Mangcoding is a biggest company in Indonesia, who provides the
                 </p>
               </div>
-  
-              <div class=" pt-[24px]">
-                <img src="asset/card4.png" alt="" class=" object-cover">
+
+              <div class="pt-[24px]">
+                <img src="asset/card4.png" alt="" class="object-cover" />
               </div>
-  
-              <button class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]">
-                <img src="/arrow-up-right.svg" alt="arrow">
+
+              <button
+                class="absolute border border-white bg-slate-200 p-[2px] lg:p-[8px] top-[16px] right-[2%] rounded-full w-6 h-6 lg:w-[42px] lg:h-[42px]"
+              >
+                <img src="/arrow-up-right.svg" alt="arrow" />
               </button>
             </div>
 
-           <div class="py-5 lg:py-6">
-             <p class="text-[26px] lg:text-[32px] font-medium text-white">
-               MangStore
-             </p>
-             <p class="text-sm text-white font-normal pt-2 lg:pt-3">
-               Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
-             </p>
-           </div>
+            <div class="py-5 lg:py-6">
+              <p class="text-[26px] lg:text-[32px] font-medium text-white">
+                MangStore
+              </p>
+              <p class="text-sm text-white font-normal pt-2 lg:pt-3">
+                Mangcoding is a biggest company in Indonesia, who provides the
+                services in Development Website, Shopify and Wordpress
+              </p>
+            </div>
 
-           <div class="border border-[#635189]"></div>
+            <!-- <div class="border border-[#635189]"></div> -->
           </li>
         </ul>
-
-        <div class="container mx-auto pt-[75px] lg:pt-[116px] pb-[29px] lg:pb-10">
-          <h2 class="text-[34px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[710px] ">
+        <div
+          class="container mx-auto pt-[75px] lg:pt-[116px] pb-[29px] lg:pb-10"
+        >
+          <h2
+            class="text-[34px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[710px]"
+          >
             What they say about us
           </h2>
-          <p class="text-[18px] lg:text-base text-white font-normal lg:w-[486px] pt-[25px] lg:pt-[32px]">
-            Work in the IT field includes Web Design, UI/UX Design, Branding and Shopify Development
+          <p
+            class="text-[18px] lg:text-base text-white font-normal lg:w-[486px] pt-[25px] lg:pt-[32px]"
+          >
+            Work in the IT field includes Web Design, UI/UX Design, Branding and
+            Shopify Development
           </p>
         </div>
-
-        <img src="asset/“.png" alt="" class="absolute w-[343px] h-[244px] md:w-[450px] md:h-[320px] lg:w-[742px] lg:h-[529px] top-[1800px] md:top-[1100px] lg:top-[1226px] right-0 hidden md:block">
-        <img src="asset/“ (2).png" alt="" class="absolute top-[1750px] right-0 md:hidden">
-
+        <img
+          src="asset/“.png"
+          alt=""
+          class="absolute w-[343px] h-[244px] md:w-[450px] md:h-[320px] lg:w-[742px] lg:h-[529px] top-[1800px] md:top-[1100px] lg:top-[1226px] right-0 hidden md:block"
+        />
+        <img
+          src="asset/“ (2).png"
+          alt=""
+          class="absolute top-[1750px] right-0 md:hidden"
+        />
         <!-- dekstop -->
-        <ul class="hidden container mx-auto md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-5 lg:gap-6 pb-[65px] lg:pb-[130px] pt-5">
-          <!-- card 1 -->
-          <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
+        <ul
+          class="hidden container mx-auto md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-5 lg:gap-6 pb-[65px] lg:pb-[130px] pt-5"
+        >
+          <!-- Card 1 -->
+          <li class="review-card">
+            <figure>
+              <div class="profile">
+                <img src="/asset/profil1.jpg" alt="Profile of Nugraha" />
+                <div class="info">
+                  <p>Nugraha</p>
+                  <p>Founder of Mangcoding</p>
+                </div>
+              </div>
+              <img src="/“.svg" alt="" />
+            </figure>
+            <figcaption>
+              Mangcoding is the biggest company in Indonesia, which provides
+              services in website development, Shopify, and WordPress.
+            </figcaption>
+          </li>
+
+          <!-- Card 2 -->
+          <li class="review-card">
+            <figure>
+              <div class="profile">
+                <img src="/asset/profil2.jpg" alt="Profile of Alex Jounky" />
+                <div class="info">
+                  <p>Alex Jounky</p>
+                  <p>Founder of Robs</p>
+                </div>
+              </div>
+              <img src="/“.svg" alt="" />
+            </figure>
+            <figcaption>
+              Robs provides excellent services in web development, Shopify, and
+              WordPress, helping businesses grow digitally.
+            </figcaption>
+          </li>
+          <!-- Card 3 -->
+          <li class="review-card">
+            <figure>
+              <div class="profile">
+                <img src="/asset/profil3.jpg" alt="Profile of Chelsia Alexy" />
+                <div class="info">
+                  <p>Chelsia Alexy</p>
+                  <p>Founder of Frank</p>
+                </div>
+              </div>
+              <img src="/“.svg" alt="" />
+            </figure>
+            <figcaption>
+              Frank is a leading brand in UI/UX design, focusing on modern,
+              user-friendly interfaces.
+            </figcaption>
+          </li>
+          <!-- Card 1 -->
+          <li class="review-card">
+            <figure>
+              <div class="profile">
+                <img src="/asset/profil4.jpg" alt="Profile of Nugraha" />
+                <div class="info">
+                  <p>Nugraha</p>
+                  <p>Founder of Mangcoding</p>
+                </div>
+              </div>
+              <img src="/“.svg" alt="" />
+            </figure>
+            <figcaption>
+              Mangcoding is the biggest company in Indonesia, which provides
+              services in website development, Shopify, and WordPress.
+            </figcaption>
+          </li>
+
+          <!-- Card 2 -->
+          <li class="review-card">
+            <figure>
+              <div class="profile">
+                <img src="/asset/profil5.jpg" alt="Profile of Alex Jounky" />
+                <div class="info">
+                  <p>Alex Jounky</p>
+                  <p>Founder of Robs</p>
+                </div>
+              </div>
+              <img src="/“.svg" alt="" />
+            </figure>
+            <figcaption>
+              Robs provides excellent services in web development, Shopify, and
+              WordPress, helping businesses grow digitally.
+            </figcaption>
+          </li>
+
+          <!-- Card 3 -->
+          <li class="review-card">
+            <figure>
+              <div class="profile">
+                <img src="/asset/profil6.jpg" alt="Profile of Chelsia Alexy" />
+                <div class="info">
+                  <p>Chelsia Alexy</p>
+                  <p>Founder of Frank</p>
+                </div>
+              </div>
+              <img src="/“.svg" alt="" />
+            </figure>
+            <figcaption>
+              Frank is a leading brand in UI/UX design, focusing on modern,
+              user-friendly interfaces.
+            </figcaption>
+          </li>
+          <!-- <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
             <figure class="flex justify-between">
               <div class="flex gap-3">
                 <img src="/asset/profil1.jpg" alt="" class="w-[48px] h-[48px] rounded-full object-cover">
@@ -501,7 +932,7 @@
             </figcaption>
           </li>
 
-          <!-- card 2 -->
+          
           <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
             <figure class="flex justify-between">
               <div class="flex gap-3">
@@ -522,7 +953,7 @@
             </figcaption>
           </li>
 
-          <!-- card 3 -->
+      
           <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
             <figure class="flex justify-between">
               <div class="flex gap-3">
@@ -543,7 +974,7 @@
             </figcaption>
           </li>
 
-          <!-- card 4 -->
+     
           <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
             <figure class="flex justify-between">
               <div class="flex gap-3">
@@ -564,7 +995,7 @@
             </figcaption>
           </li>
 
-          <!-- card 5 -->
+    
           <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
             <figure class="flex justify-between">
               <div class="flex gap-3">
@@ -585,7 +1016,7 @@
             </figcaption>
           </li>
 
-          <!-- card 6 -->
+        
           <li class="bg-[#15151566] backdrop-blur-[30px] border border-white p-5 lg:px-6 lg:py-8 rounded-3xl">
             <figure class="flex justify-between">
               <div class="flex gap-3">
@@ -604,106 +1035,182 @@
             <figcaption class="text-base text-white font-normal pt-6">
               Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
             </figcaption>
-          </li>
+          </li> -->
         </ul>
 
         <!-- mobile -->
         <div class="container mx-auto md:hidden pb-[207px]">
           <div class="swiper pb-[28px]">
             <div class="swiper-wrapper">
-              <div class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl">
+              <div
+                class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl"
+              >
                 <figure class="flex items-center justify-between">
                   <div class="flex gap-3">
-                    <img src="/asset/profil1.jpg" alt="" class="w-[51px] h-[51px] rounded-full object-cover">
+                    <img
+                      src="/asset/profil1.jpg"
+                      alt=""
+                      class="w-[51px] h-[51px] rounded-full object-cover"
+                    />
                     <div>
                       <p class="text-white text-[17px] font-medium">Nugraha</p>
-                      <p class="text-white text-[12px] font-normal pt-[4px]">Founder of Mangcoding</p>
+                      <p class="text-white text-[12px] font-normal pt-[4px]">
+                        Founder of Mangcoding
+                      </p>
                     </div>
                   </div>
-                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]">
+                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]" />
                 </figure>
-                <figcaption class="text-[17px] text-white font-normal pt-[25px]">
-                  Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                <figcaption
+                  class="text-[17px] text-white font-normal pt-[25px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                  services in Development Website, Shopify and Wordpress
                 </figcaption>
               </div>
-  
-              <div class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl">
+
+              <div
+                class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl"
+              >
                 <figure class="flex items-center justify-between">
                   <div class="flex gap-3">
-                    <img src="/asset/profil2.jpg" alt="" class="w-[51px] h-[51px] rounded-full object-cover">
+                    <img
+                      src="/asset/profil2.jpg"
+                      alt=""
+                      class="w-[51px] h-[51px] rounded-full object-cover"
+                    />
                     <div>
-                      <p class="text-white text-[17px] font-medium">Alex Jounky</p>
-                      <p class="text-white text-[12px] font-normal pt-[4px]">Fonder of Robs</p>
+                      <p class="text-white text-[17px] font-medium">
+                        Alex Jounky
+                      </p>
+                      <p class="text-white text-[12px] font-normal pt-[4px]">
+                        Fonder of Robs
+                      </p>
                     </div>
                   </div>
-                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]">
+                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]" />
                 </figure>
-                <figcaption class="text-[17px] text-white font-normal pt-[25px]">
-                  Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                <figcaption
+                  class="text-[17px] text-white font-normal pt-[25px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                  services in Development Website, Shopify and Wordpress
                 </figcaption>
               </div>
-  
-              <div class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl">
+
+              <div
+                class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl"
+              >
                 <figure class="flex items-center justify-between">
                   <div class="flex gap-3">
-                    <img src="/asset/profil3.jpg" alt="" class="w-[51px] h-[51px] rounded-full object-cover">
+                    <img
+                      src="/asset/profil3.jpg"
+                      alt=""
+                      class="w-[51px] h-[51px] rounded-full object-cover"
+                    />
                     <div>
-                      <p class="text-white text-[17px] font-medium">Chelsia Alexy</p>
-                      <p class="text-white text-[12px] font-normal pt-[4px]">Fonder of Frank</p>
+                      <p class="text-white text-[17px] font-medium">
+                        Chelsia Alexy
+                      </p>
+                      <p class="text-white text-[12px] font-normal pt-[4px]">
+                        Fonder of Frank
+                      </p>
                     </div>
                   </div>
-                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]">
+                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]" />
                 </figure>
-                <figcaption class="text-[17px] text-white font-normal pt-[25px]">
-                  Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                <figcaption
+                  class="text-[17px] text-white font-normal pt-[25px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                  services in Development Website, Shopify and Wordpress
                 </figcaption>
               </div>
-    
-              <div class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl">
+
+              <div
+                class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl"
+              >
                 <figure class="flex items-center justify-between">
                   <div class="flex gap-3">
-                    <img src="/asset/profil4.jpg" alt="" class="w-[51px] h-[51px] rounded-full object-cover">
+                    <img
+                      src="/asset/profil4.jpg"
+                      alt=""
+                      class="w-[51px] h-[51px] rounded-full object-cover"
+                    />
                     <div>
-                      <p class="text-white text-[17px] font-medium">Samsul Afroy</p>
-                      <p class="text-white text-[12px] font-normal pt-[4px]">Full Stack Development</p>
+                      <p class="text-white text-[17px] font-medium">
+                        Samsul Afroy
+                      </p>
+                      <p class="text-white text-[12px] font-normal pt-[4px]">
+                        Full Stack Development
+                      </p>
                     </div>
                   </div>
-                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]">
+                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]" />
                 </figure>
-                <figcaption class="text-[17px] text-white font-normal pt-[25px]">
-                  Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                <figcaption
+                  class="text-[17px] text-white font-normal pt-[25px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                  services in Development Website, Shopify and Wordpress
                 </figcaption>
               </div>
-    
-              <div class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl">
+
+              <div
+                class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl"
+              >
                 <figure class="flex items-center justify-between">
                   <div class="flex gap-3">
-                    <img src="/asset/profil6.jpg" alt="" class="w-[51px] h-[51px] rounded-full object-cover">
+                    <img
+                      src="/asset/profil6.jpg"
+                      alt=""
+                      class="w-[51px] h-[51px] rounded-full object-cover"
+                    />
                     <div>
-                      <p class="text-white text-[17px] font-medium">Purwa Adi Twingkiwingki</p>
-                      <p class="text-white text-[12px] font-normal pt-[4px]">UI/UX Designer</p>
+                      <p class="text-white text-[17px] font-medium">
+                        Purwa Adi Twingkiwingki
+                      </p>
+                      <p class="text-white text-[12px] font-normal pt-[4px]">
+                        UI/UX Designer
+                      </p>
                     </div>
                   </div>
-                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]">
+                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]" />
                 </figure>
-                <figcaption class="text-[17px] text-white font-normal pt-[25px]">
-                  Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                <figcaption
+                  class="text-[17px] text-white font-normal pt-[25px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                  services in Development Website, Shopify and Wordpress
                 </figcaption>
               </div>
-    
-              <div class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl">
+
+              <div
+                class="swiper-slide bg-[#15151566] backdrop-blur-[30px] border border-white pt-[30px] px-[25px] pb-[40px] rounded-3xl"
+              >
                 <figure class="flex items-center justify-between">
                   <div class="flex gap-3">
-                    <img src="/asset/profil6.jpg" alt="" class="w-[51px] h-[51px] rounded-full object-cover">
+                    <img
+                      src="/asset/profil6.jpg"
+                      alt=""
+                      class="w-[51px] h-[51px] rounded-full object-cover"
+                    />
                     <div>
-                      <p class="text-white text-[17px] font-medium">Rizwan Gusnajmi</p>
-                      <p class="text-white text-[12px] font-normal pt-[4px]">Web Developer</p>
+                      <p class="text-white text-[17px] font-medium">
+                        Rizwan Gusnajmi
+                      </p>
+                      <p class="text-white text-[12px] font-normal pt-[4px]">
+                        Web Developer
+                      </p>
                     </div>
                   </div>
-                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]">
+                  <img src="/“.svg" alt="" class="w-[46px] h-[33px]" />
                 </figure>
-                <figcaption class="text-[17px] text-white font-normal pt-[25px]">
-                  Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+                <figcaption
+                  class="text-[17px] text-white font-normal pt-[25px]"
+                >
+                  Mangcoding is a biggest company in Indonesia, who provides the
+                  services in Development Website, Shopify and Wordpress
                 </figcaption>
               </div>
             </div>
@@ -714,125 +1221,214 @@
 
         <div class="border border-[#635189]"></div>
         <div class="bg-[#1A1A1A66] backdrop-blur-[40%]">
-          <div class="container mx-auto flex flex-col md:flex-row md:justify-between items-start md:items-center pt-[50px] pb-[33px] lg:py-10">
+          <div
+            class="container mx-auto flex flex-col md:flex-row md:justify-between items-start md:items-center pt-[50px] pb-[33px] lg:py-10"
+          >
             <div class="lg:w-[588px]">
-              <h2 class="text-[40px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[710px]">
+              <h2
+                class="text-[40px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[710px]"
+              >
                 Let’s work with Us
               </h2>
-              <p class="text-[17px] lg:text-base text-white font-normal py-[30px] lg:py-6">
-                Mangcoding is a biggest company in Indonesia, who provides the services in Development Website, Shopify and Wordpress
+              <p
+                class="text-[17px] lg:text-base text-white font-normal py-[30px] lg:py-6"
+              >
+                Mangcoding is a biggest company in Indonesia, who provides the
+                services in Development Website, Shopify and Wordpress
               </p>
             </div>
-            <button class="text-base font-normal justify-center text-black flex gap-[10px] border border-white bg-white w-full lg:w-auto lg:px-[62px] py-[17px] lg:py-[14px] rounded-[40px] items-center">
+            <button class="button-of-fly">
               Know More
-              <img src="/arrow-up-right.svg" alt="arrow">
+              <img src="/arrow-up-right.svg" alt="arrow" />
             </button>
           </div>
         </div>
         <div class="border border-[#635189]"></div>
-      </section>     
+      </section>
     </main>
 
-    <footer class="relative bg-gradient-to-b from-[#1A1A2E] to-black text-white overflow-hidden">
-      <!-- Background Elements -->  
-      <div class="absolute top-0 left-[-150px] w-[641px] h-[287px] bg-[#854CFF] blur-[200px] z-[-1]"></div>
-      <div class="absolute top-0 right-[-150px] w-[641px] h-[287px] bg-[#504CFF] blur-[200px] z-[-1]"></div>
+    <footer
+      class="relative bg-gradient-to-b from-[#1A1A2E] to-black text-white overflow-hidden"
+    >
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 left-[-150px] w-[641px] h-[287px] bg-[#854CFF] blur-[200px] z-[-1]"
+      ></div>
+      <div
+        class="absolute top-0 right-[-150px] w-[641px] h-[287px] bg-[#504CFF] blur-[200px] z-[-1]"
+      ></div>
       <div>
-        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start py-10 md:py-16 lg:py-20 gap-10">
+        <div
+          class="container mx-auto flex flex-col lg:flex-row justify-between items-start py-10 md:py-16 lg:py-20 gap-10"
+        >
           <!-- Left Section -->
           <div class="w-full lg:w-[383px]">
-            <div class="flex gap-2 items-center justify-center lg:justify-start">
-              <img src="/logo.svg" alt="Logo" class="w-[55px] h-[62px] lg:w-[44px] lg:h-[50px]">
+            <div
+              class="flex gap-2 items-center justify-center lg:justify-start"
+            >
+              <img
+                src="/logo.svg"
+                alt="Logo"
+                class="w-[55px] h-[62px] lg:w-[44px] lg:h-[50px]"
+              />
               <h3 class="text-[28px] lg:text-[23px] text-white font-bold">
                 Bantu
               </h3>
             </div>
-            <p class="text-[17px] lg:text-base text-center lg:text-start font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] pt-6">
-              Companies that can help you in developing your company for the future
+            <p
+              class="text-[17px] lg:text-base text-center lg:text-start font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] pt-6"
+            >
+              Companies that can help you in developing your company for the
+              future
             </p>
           </div>
           <!-- Middle Sections -->
-          <div class="flex flex-col md:flex-row gap-[42px] md:gap-20 lg:gap-[151px]">
+          <div
+            class="flex flex-col md:flex-row gap-[42px] md:gap-20 lg:gap-[151px]"
+          >
             <div>
-              <h3 class="text-[22px] lg:text-lg text-white font-medium">Services</h3>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[30px] lg:pt-4">Web Development</p>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4">UI/UX Designer</p>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4">Branding</p>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4">Shopify</p>
+              <h3 class="text-[22px] lg:text-lg text-white font-medium">
+                Services
+              </h3>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[30px] lg:pt-4"
+              >
+                Web Development
+              </p>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4"
+              >
+                UI/UX Designer
+              </p>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4"
+              >
+                Branding
+              </p>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4"
+              >
+                Shopify
+              </p>
             </div>
             <div>
-              <h3 class="text-[22px] lg:text-lg text-white font-medium">Business Features</h3>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[30px] lg:pt-4">Data-Based Chatbot Training</p>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4">Model Fine-Tuning</p>
-              <p class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4">Sales & Customer Service Smart Agents</p>
+              <h3 class="text-[22px] lg:text-lg text-white font-medium">
+                Business Features
+              </h3>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[30px] lg:pt-4"
+              >
+                Data-Based Chatbot Training
+              </p>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4"
+              >
+                Model Fine-Tuning
+              </p>
+              <p
+                class="text-[18px] lg:text-base text-white font-normal pt-[20px] lg:pt-4"
+              >
+                Sales & Customer Service Smart Agents
+              </p>
             </div>
           </div>
         </div>
         <!-- Footer Bottom -->
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-[15px] lg:gap-6 pb-6">
+        <div
+          class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-[15px] lg:gap-6 pb-6"
+        >
           <!-- Bagian logo: Ubah ke urutan pertama di mobile -->
           <div class="flex gap-4 items-center order-3 md:order-3">
-            <button><img src="/instagram (1).svg" alt="Instagram" class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"></button>
-            <button><img src="/wa.svg" alt="WhatsApp" class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"></button>
-            <button><img src="/linkedin.svg" alt="LinkedIn" class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"></button>
-            <button><img src="/twiter.svg" alt="Twitter" class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"></button>
+            <button>
+              <img
+                src="/instagram2.svg"
+                alt="Instagram"
+                class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"
+              />
+            </button>
+            <button>
+              <img
+                src="/wa.svg"
+                alt="WhatsApp"
+                class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"
+              />
+            </button>
+            <button>
+              <img
+                src="/linkedin.svg"
+                alt="LinkedIn"
+                class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"
+              />
+            </button>
+            <button>
+              <img
+                src="/twiter.svg"
+                alt="Twitter"
+                class="w-[24px] h-[24px] md:w-[22px] md:h-[22px] lg:w-[24px] lg:h-[24px]"
+              />
+            </button>
           </div>
-        
+
           <!-- Teks copyright: Ubah ke urutan ketiga di mobile -->
-          <p class="text-sm md:text-xs lg:text-sm text-white font-normal order-2 md:order-none">
+          <p
+            class="text-sm md:text-xs lg:text-sm text-white font-normal order-2 md:order-none"
+          >
             © 2023 Mangcoding. All rights reserved.
           </p>
-        
+
           <!-- Bagian kebijakan: Tetap di urutan kedua -->
-          <div class="text-sm md:text-xs lg:text-sm text-white font-normal flex gap-4 md:gap-6 order-1 md:order-none">
+          <div
+            class="text-sm md:text-xs lg:text-sm text-white font-normal flex gap-4 md:gap-6 order-1 md:order-none"
+          >
             <p>Privacy Policy</p>
             <p>Terms of Service</p>
             <p>Cookie Policy</p>
           </div>
         </div>
-        
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
     <script>
-      const header = document.getElementById('header');
+      const header = document.getElementById("header");
 
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
-          header.classList.remove('bg-transparent');
-          header.classList.add('bg-colored');
+          header.classList.remove("bg-transparent");
+          header.classList.add("bg-colored");
         } else {
-          header.classList.remove('bg-colored');
-          header.classList.add('bg-transparent');
+          header.classList.remove("bg-colored");
+          header.classList.add("bg-transparent");
         }
       });
 
-      const slider = document.getElementById('slider');
+      const slider = document.getElementById("slider");
       const clone = slider.innerHTML;
       slider.innerHTML += clone;
 
-      const text = document.querySelector('.text p');
+      const text = document.querySelector(".text p");
       text.innerHTML = text.innerText
-      .split("")
-      .map((char, i) => `<span style="transform:rotate(${i * 12}deg)">${char}</span>`
-      ).join("");
+        .split("")
+        .map(
+          (char, i) =>
+            `<span style="transform:rotate(${i * 12}deg)">${char}</span>`
+        )
+        .join("");
 
       function toggleDropdown() {
         const dropdown = document.getElementById("dropdownMenu");
         dropdown.classList.toggle("hidden");
-     
       }
 
-      const swiper = new Swiper('.swiper', {
+      const swiper = new Swiper(".swiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
-          bulletClass: 'swiper-pagination-bullet',
-          bulletActiveClass: 'swiper-pagination-bullet-active',
+          bulletClass: "swiper-pagination-bullet",
+          bulletActiveClass: "swiper-pagination-bullet-active",
         },
       });
     </script>

@@ -1,0 +1,157 @@
+// mixin syle start
+@mixin button-style($bg-color, $border, $text-color, $position: static) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: $border;
+  color: $text-color;
+  background-color: $bg-color;
+  border-radius: 40px;
+  // width: 100%;
+      padding: 14px 16px;
+
+  @media (min-width: 1024px) {
+    width: auto;
+    position: $position;
+    top: 24px;
+    right: 8%;
+  }
+
+  @media (min-width: 768px) {
+    padding: 14px 16px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 14px 24px;
+  }
+}
+
+@mixin hover-img-arrow($rotate, $duration) {
+  img {
+    transition: transform $duration ease-in-out;
+  }
+
+  &:hover img {
+    transform: rotate($rotate);
+  }
+}
+// mixin syle end
+
+// button style & effect start
+.button-white {
+  @include button-style(white, none, black);
+  @include hover-img-arrow(45deg, 300ms);
+}
+
+.button-transparent {
+  @include button-style(transparent, 1.5px solid #504cff, white);
+  @include hover-img-arrow(45deg, 300ms);
+}
+
+.button-of-fly {
+  @include button-style(white, none, black);
+  @include hover-img-arrow(45deg, 300ms);
+
+  @media (min-width: 1024px) {
+    padding: 14px 62px;
+  }
+}
+
+.button-fly {
+  @include button-style(white, 1.5px solid white, black, absolute);
+  @include hover-img-arrow(45deg, 300ms);
+
+  @media (min-width: 1024px) {
+    padding: 14px 62px;
+  }
+}
+// button style & effect start
+
+
+// card testimonial start
+$bg-card: rgba(21, 21, 21, 0.4);
+$border-color: white;
+
+// Mixin untuk card
+@mixin card-style {
+  background: $bg-card;
+  backdrop-filter: blur(30px);
+  border: 1px solid $border-color;
+  padding: 20px;
+  border-radius: 24px;
+}
+
+// Mixin untuk profile info
+@mixin profile-info {
+  display: flex;
+  gap: 12px;
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .info {
+    p {
+      color: white;
+      font-size: 16px;
+      font-weight: normal;
+
+      &:nth-child(2) {
+        font-size: 12px;
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+
+// Style untuk card
+.review-card {
+  @include card-style;
+
+  figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile {
+    @include profile-info;
+  }
+
+  figcaption {
+    color: white;
+    font-size: 16px;
+    padding-top: 24px;
+  }
+}
+// card testimonial start
+
+// $bg-card: rgba(21, 21, 21, 0.4);
+// $border-color: white;
+
+// // Mixin untuk card
+// @mixin card-style {
+//   background: $bg-card;
+//   backdrop-filter: blur(30px);
+//   padding: 20px;
+//   border-radius: 24px;
+//   position: relative; 
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 20%; 
+//     height: 90%; 
+//     border-top: 2px solid $border-color;
+//     border-left: 2px solid $border-color;
+//     border-top-left-radius: 24px;
+//   }
+// }
+ 
