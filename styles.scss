@@ -9,7 +9,7 @@
   background-color: $bg-color;
   border-radius: 40px;
   // width: 100%;
-      padding: 14px 16px;
+  padding: 14px 16px;
 
   @media (min-width: 1024px) {
     width: auto;
@@ -62,12 +62,23 @@
   @include button-style(white, 1.5px solid white, black, absolute);
   @include hover-img-arrow(45deg, 300ms);
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     padding: 14px 62px;
+  }
+
+  @media (max-width: 1320px) {
+    top: 230px;
+  }
+
+  @media (max-width: 1023px) {
+    top: 30px;
+  }
+
+  @media (max-width: 640px) {
+    top: 90px;
   }
 }
 // button style & effect start
-
 
 // card testimonial start
 $bg-card: rgba(21, 21, 21, 0.4);
@@ -108,7 +119,6 @@ $border-color: white;
   }
 }
 
-
 // Style untuk card
 .review-card {
   @include card-style;
@@ -140,18 +150,19 @@ $border-color: white;
 //   backdrop-filter: blur(30px);
 //   padding: 20px;
 //   border-radius: 24px;
-//   position: relative; 
+//   position: relative;
 
 //   &::before {
 //     content: "";
 //     position: absolute;
 //     top: 0;
 //     left: 0;
-//     width: 20%; 
-//     height: 90%; 
+//     width: 20%;
+//     height: 90%;
 //     border-top: 2px solid $border-color;
 //     border-left: 2px solid $border-color;
 //     border-top-left-radius: 24px;
 //   }
 // }
- 
+
+

@@ -11,3 +11,5 @@ document.querySelector('#site-footer').innerHTML = `
     <div>Footer Area</div>
   </div>
 `
+
+

@@ -146,15 +146,31 @@
 .button-fly:hover img {
   transform: rotate(45deg);
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .button-fly {
     padding: 14px 62px;
+  }
+}
+@media (max-width: 1320px) {
+  .button-fly {
+    top: 230px;
+  }
+}
+@media (max-width: 1023px) {
+  .button-fly {
+    top: 30px;
+  }
+}
+@media (max-width: 640px) {
+  .button-fly {
+    top: 90px;
   }
 }
 
 .review-card {
   background: rgba(21, 21, 21, 0.4);
-  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   border: 1px solid white;
   padding: 20px;
   border-radius: 24px;
@@ -172,7 +188,8 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .review-card .profile .info p {
   color: white;
@@ -187,6 +204,4 @@
   color: white;
   font-size: 16px;
   padding-top: 24px;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

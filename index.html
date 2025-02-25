@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-black">
+    <!-- Header Navigation -->
     <header>
       <nav id="header" class="w-full fixed top-0 bg-transparent z-[4]">
         <div class="container mx-auto">
@@ -83,8 +84,11 @@
         </div>
       </nav>
     </header>
+    <!-- Header Navigation -->
 
+    <!-- Main Content Start -->
     <main id="site-main">
+      <!-- Hero Section Start -->
       <section
         class="flex relative overflow-hidden w-full justify-center bg-gradient-to-b from-black via-transparent to-black"
       >
@@ -107,7 +111,7 @@
           class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
         ></div>
         <div
-          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] border-r border-[#504DFF]"
+          class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px] sm:hidden md:block border-r border-[#504DFF]"
         ></div>
         <div
           class="bg-gradient-to-r h-[110vh] from-[#FFFFFF00] to-white/10 w-[64px]"
@@ -238,14 +242,18 @@
           </div>
         </div>
       </section>
+      <!-- Hero Section End -->
 
-      <section class="pt-[75px] md:pt-[120px] relative overflow-hidden">
+      <section class="relative">
         <img
-          class="absolute -z-50 top-40 left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1281px] object-contain"
+          class="absolute bottom-custom -z-50 lg:top-44 left-1/2 transform sm:w-[98vw] -translate-x-1/2 md:w-[98vw] lg:w-[98vw] max-w-[1281px] object-contain"
           src="/vector-line.svg"
           alt=""
         />
+      </section>
 
+      <!-- section invitation to collaborate start -->
+      <section class="pt-[75px] md:pt-[120px]  relative overflow-hidden">
         <div
           class="absolute top-[550px] lg:top-[367px] w-[621px] lg:w-[641px] h-[278px] lg:h-[287px] bg-[#504CFF] blur-[200px] left-[-422px] lg:left-[-387px] z-[-1]"
         ></div>
@@ -259,8 +267,8 @@
           <h2
             class="text-[32px] md:text-[48px] lg:text-[67px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
           >
-            Companies that can help you in developing your company for the
-            future
+            Companies that can help you in
+            <span class="span-br">developing your company for the future</span>
           </h2>
           <p
             class="text-base text-white font-normal md:w-[486px] pt-[30px] md:pt-8"
@@ -268,7 +276,9 @@
             Work in the IT field includes Web Design, UI/UX Design, Branding and
             Shopify Development
           </p>
-          <div class="relative lg:static w-full lg:w-auto mt-6 lg:mt-0">
+          <div
+            class="relative lg:static flex sm:top-[-153px] md:-top-52 justify-end w-full lg:w-auto mt-6 lg:mt-0"
+          >
             <!-- <button class="w-full lg:w-auto text-base font-normal text-black flex items-center justify-center gap-[10px] border border-white bg-white px-8 lg:px-[62px] py-[17px] md:py-[14px] lg:py-[14px] rounded-[40px] lg:absolute lg:top-6 lg:right-[8%]"> -->
             <button class="button-fly">
               Know More
@@ -278,11 +288,11 @@
         </div>
 
         <div
-          class="container mx-auto w-full lg:flex lg:items-end lg:justify-between pt-[75px] pb-[39px] lg:pt-[140px] lg:pb-[40px]"
+          class="container mx-auto w-full lg:flex lg:items-end lg:justify-between pt-0 pb-[39px] lg:pt-[60px] lg:pb-[40px]"
         >
           <div class="lg:w-[691px]">
             <h2
-              class="text-[32px] md:text-[48px] lg:text-[68px] font-normal leading-[47px] lg:leading-[75px] text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
+              class="text-[32px] md:text-[48px] md:py-4 lg:text-[68px] font-normal leading-[47px] lg:leading-[75px] text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
             >
               Let’s work together with our us
             </h2>
@@ -291,7 +301,7 @@
               good CEO, and Clean design
             </p>
           </div>
-          <div class="hidden md:block">
+          <div class="hidden md:block pt-[20px]">
             <button class="button-white">
               Get Started
               <figure class="rounded-full border border-black">
@@ -301,16 +311,17 @@
           </div>
         </div>
 
+        <div class="flex flex-col gap-6 pb-16">
+        <!--card work start -->
         <ul
-          class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-between"
+          class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-center"
         >
+          <!-- card 1 website dev start -->
           <li>
             <div
-              class="md:flex md:justify-between md:w-[344px] lg:w-[690px] lg:h-[351px] bg-[#504CFF] rounded-3xl"
+              class="md:flex md:h-[300px] md:justify-between md:w-full md:max-w-[690px] lg:w-[690px] lg:h-[351px] bg-[#504CFF] rounded-3xl"
             >
-              <div
-                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
-              >
+              <div class="flex pt-10 pl-8 flex-col w-[252px]">
                 <figure>
                   <img
                     src="/card1.svg"
@@ -339,15 +350,17 @@
                   </figure>
                 </a>
               </div>
-              <figure class="pl-[30px] md:pl-0 md:pt-20 lg:pt-10">
-                <img src="asset/laptop1.png" alt="" />
+              <figure class="pl-[30px] md:pl-0 md:pt-[76px] lg:pt-[38px]">
+                <img src="asset/laptop1.png" alt="" class="" />
               </figure>
             </div>
           </li>
+          <!-- card 1 website dev end -->
 
+          <!-- card 2 UI/UX Design start -->
           <li class="pt-[30px] md:pt-0">
             <div
-              class="md:flex md:justify-between md:w-[344px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[32px]"
+              class="relative md:flex md:justify-between md:h-[300px] md:w-[360px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[24px]"
             >
               <div
                 class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
@@ -380,7 +393,7 @@
                   </figure>
                 </a>
               </div>
-              <figure class="pt-[49px] hidden md:block">
+              <figure class="mt-[45px]">
                 <img src="asset/mobile1.png" alt="" class="rounded-br-3xl" />
               </figure>
               <figure class="px-[62px] md:hidden">
@@ -388,21 +401,23 @@
               </figure>
             </div>
           </li>
+          <!-- card 2 UI/UX Design start -->
         </ul>
 
         <ul
-          class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-between pt-[30px] md:pt-6 pb-[27px] lg:pb-[55px]"
+          class="container jus mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-center"
         >
-          <li class="md:order-first order-last pt-[30px] md:pt-0">
+          <!-- card 2 UI/UX Design start -->
+          <li class="pt-[30px] md:pt-0">
             <div
-              class="md:flex md:justify-between rounded-[32px] md:w-[344px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] overflow-hidden"
+              class="relative md:flex md:justify-between md:h-[300px] md:w-[360px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[24px]"
             >
               <div
                 class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
               >
                 <figure>
                   <img
-                    src="/card3.svg"
+                    src="/card2.svg"
                     alt=""
                     class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
                   />
@@ -440,16 +455,18 @@
               <figure class="md:hidden">
                 <img src="asset/kartu3a.png" alt="" class="" />
               </figure>
+
             </div>
           </li>
+          <!-- card 2 UI/UX Design start -->
 
-          <li class="lg:order-last order-first">
+          <!-- card 1 website dev start -->
+          <li>
             <div
-              class="md:flex md:justify-between md:w-[344px] lg:w-[690px] lg:h-[351px] bg-[#854CFF] backdrop-blur-[30px] rounded-3xl overflow-hidden"
+              class="md:flex md:justify-between md:h-[300px] md:w-[460px] lg:w-[690px] lg:h-[351px] bg-[#854CFF] backdrop-blur-[30px] rounded-3xl overflow-hidden"
             >
-              <div
-                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
-              >
+              
+              <div class="flex pt-10 pl-8 flex-col w-[252px]">
                 <figure>
                   <img
                     src="/card4.svg"
@@ -458,32 +475,35 @@
                   />
                 </figure>
                 <h3
-                  class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-6 md:pt-[16px] lg:pt-6 lg:w-[252px]"
+                  class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-[30px] md:pt-[16px] lg:pt-6 lg:w-[252px]"
                 >
                   Shopify
                 </h3>
                 <p
-                  class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
+                  class="text-[17px] md:text-sm text-white font-normal pt-[20px] md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
                 >
                   help you to build website company that is modern, user
                   friendly, good CEO, and Clean design
                 </p>
                 <a
                   href=""
-                  class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4"
+                  class="text-[17px] md:text-sm text-white font-normal flex gap-2 items-center underline pt-[20px] md:pt-[14px] lg:pt-4"
                 >
                   Start with us
                   <figure>
-                    <img src="/Vector.svg" alt="" />
+                    <img src="/Vector.svg" alt="arrow" />
                   </figure>
                 </a>
               </div>
-              <figure class="px-[20px] md:px-0 md:pt-[80px] lg:pt-0">
-                <img src="asset/Shopify logo (1).png" alt="" />
+              <figure class="pl-[358px] md:pl-0 md:pt-[76px] lg:pt-5">
+                <img src="asset/Shopify logo (1).png" alt="" class="" />
               </figure>
             </div>
           </li>
+          <!-- card 1 website dev end -->
         </ul>
+        <!--card work end -->
+        </div>
 
         <ul class="relative py-[10px] lg:py-[28px] overflow-hidden z-[3]">
           <li
@@ -492,44 +512,32 @@
           <li
             class="bg-[#504CFF] flex items-center justify-center h-[76px] lg:h-[140px] rotate-2 w-full z-[1]"
           >
-            <div id="slider" class="flex gap-8 animate-slider lg:py-4">
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-              <img
-                src="/mangcoding.svg"
-                alt="Logo 2"
-                class="h-[38px] lg:h-10"
-              />
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-              <img
-                src="/mangcoding.svg"
-                alt="Logo 4"
-                class="h-[38px] lg:h-10"
-              />
-              <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
-              <!-- Duplikasikan elemen untuk seamless effect -->
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-              <img
-                src="/mangcoding.svg"
-                alt="Logo 2"
-                class="h-[38px] lg:h-10"
-              />
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-              <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-              <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-              <img
-                src="/mangcoding.svg"
-                alt="Logo 4"
-                class="h-[38px] lg:h-10"
-              />
-              <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
-            </div>
+            <div id="slider-container">
+  <div id="slider">
+    <!-- Logo Asli -->
+    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+    <img src="/mangcoding.svg" alt="Logo 2" class="h-[38px] lg:h-10" />
+    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+    <img src="/mangcoding.svg" alt="Logo 4" class="h-[38px] lg:h-10" />
+    <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
+
+    <!-- Duplikasi otomatis untuk seamless scrolling -->
+    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+    <img src="/mangcoding.svg" alt="Logo 2" class="h-[38px] lg:h-10" />
+    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+    <img src="/mangcoding.svg" alt="Logo 4" class="h-[38px] lg:h-10" />
+    <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
+  </div>
+</div>
+
           </li>
         </ul>
       </section>
+      <!-- section invitation to collaborate end -->
 
       <section class="relative">
         <img
@@ -547,6 +555,7 @@
         />
       </section>
 
+      <!-- section testimonial start -->
       <section class="relative overflow-hidden">
         <div
           class="absolute top-[283px] w-[641px] h-[287px] bg-[#854CFF99] blur-[200px] left-[-141px] z-[-1]"
@@ -778,8 +787,9 @@
             <!-- <div class="border border-[#635189]"></div> -->
           </li>
         </ul>
+
         <div
-          class="container mx-auto pt-[75px] lg:pt-[116px] pb-[29px] lg:pb-10"
+          class="container mx-auto pt-[75px] lg:pt-[90px] pb-[29px] lg:pb-10"
         >
           <h2
             class="text-[34px] md:text-[48px] lg:text-[68px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF] lg:w-[710px]"
@@ -1245,8 +1255,11 @@
         </div>
         <div class="border border-[#635189]"></div>
       </section>
+      <!-- End Testimonial -->
     </main>
+    <!-- Main Content End -->
 
+    <!-- Footer Start -->
     <footer
       class="relative bg-gradient-to-b from-[#1A1A2E] to-black text-white overflow-hidden"
     >
@@ -1387,9 +1400,12 @@
         </div>
       </div>
     </footer>
+    <!-- Footer End -->
 
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="lenis.js"></script>
     <script>
       const header = document.getElementById("header");
 

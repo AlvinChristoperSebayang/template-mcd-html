@@ -34,17 +34,29 @@ body {
 }
 
 /* slider */
-@keyframes slider {
-  0% {
+#slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #504CFF; 
+}
+
+#slider {
+  display: flex;
+  gap: 2rem; /* Jarak antar logo */
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
-.animate-slider {
-  animation: slider 15s linear infinite;
-}
+
 
 /* circle */
 :root {
@@ -126,3 +138,54 @@ body {
   background-color: #151515; 
   transition: background-color 0.3s ease;
 }
+
+@media (max-width: 1339px) {
+  .span-br {
+    display: inline-flex; /* Menghindari spasi panjang */
+    max-width: 1300px !important;
+  }
+}
+
+@media (max-width: 1320px) {
+  .span-br {
+    display: inline-flex;
+    max-width: 800px !important;
+  }
+  .bottom-custom{
+    top:360px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .span-br {
+    display: inline-flex;
+    max-width: 800px !important;
+  }
+  .bottom-custom{
+    top:260px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-custom{
+    top:110px !important;
+  }
+    .span-br {
+    display: inline-flex;
+    max-width: 600px !important;
+  }
+}
+
+
+@media (max-width: 640px) {
+ .bottom-custom{
+  top: 190px !important;
+ }
+
+  .span-br{
+      display: inline-flex;
+    max-width: 400px !important;
+  }
+  }
+
+
