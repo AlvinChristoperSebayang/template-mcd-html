@@ -4,18 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/input.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papxyz..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-papxyz..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
+    <!-- animasi aos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
   <body class="font-lato">
     <!-- Header start -->
-    <header class="bg-white px-5 md:px-28 h-[618.75%] py-2 md:py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg">
+    <header
+      class="bg-white px-5 md:px-28 h-[618.75%] py-2 md:py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg"
+    >
       <div class="container mx-auto">
         <nav class="flex justify-between items-center bg-white">
           <h1 class="font-bold">Atracctive School</h1>
@@ -27,8 +47,9 @@
             <li class="hover:text-slate-700"><a href="">Program</a></li>
             <li>
               <button>
-                <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
-                hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                <span
+                  class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+                >
                   Contact
                 </span>
               </button>
@@ -37,17 +58,46 @@
           <!-- Tombol Hamburger untuk Mobile -->
           <div class="md:hidden">
             <button id="mobile-menu-button" class="p-2">
-              <svg id="menu-icon" class="w-8 h-8 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
-                <line x1="4" y1="6" x2="20" y2="6" stroke-linecap="round"></line>
-                <line x1="4" y1="12" x2="20" y2="12" stroke-linecap="round"></line>
-                <line x1="4" y1="18" x2="20" y2="18" stroke-linecap="round"></line>
+              <svg
+                id="menu-icon"
+                class="w-8 h-8 transition-transform duration-300"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+              >
+                <line
+                  x1="4"
+                  y1="6"
+                  x2="20"
+                  y2="6"
+                  stroke-linecap="round"
+                ></line>
+                <line
+                  x1="4"
+                  y1="12"
+                  x2="20"
+                  y2="12"
+                  stroke-linecap="round"
+                ></line>
+                <line
+                  x1="4"
+                  y1="18"
+                  x2="20"
+                  y2="18"
+                  stroke-linecap="round"
+                ></line>
               </svg>
             </button>
           </div>
         </nav>
       </div>
       <!-- Menu Mobile dengan animasi -->
-      <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+      <div
+        id="mobile-menu"
+        class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0"
+      >
         <ul class="flex flex-col gap-4 text-abu mt-4 py-4">
           <li class="font-bold text-[#1A1A1A]">Home</li>
           <li class="hover:text-slate-700"><a href="">About</a></li>
@@ -68,7 +118,9 @@
       <div class="container mx-auto relative">
         <div class="max-w-[761px] mx-auto py-10 px-5">
           <p class="text-center text-abu">Welcom to Scholl</p>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:leading-[76px] my-5 font-semibold">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:leading-[76px] my-5 font-semibold"
+          >
             Explore a sea of wit that is Impossible to resist
           </h1>
           <p class="text-center text-abu mt-5">
@@ -78,8 +130,9 @@
           </p>
           <div class="text-center my-7">
             <button>
-              <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
-              hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+              <span
+                class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+              >
                 Our Blog
               </span>
             </button>
@@ -88,26 +141,55 @@
 
         <div class="px-10">
           <figure class="hidden xl:block absolute top-2 left-40 text-[#000000]">
-            <img src="img/Vector 581.png" alt="garis" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
+            <img
+              src="img/Vector 581.png"
+              alt="garis"
+              width="87px"
+              class="text-[#1E1E1E] hover:opacity-40"
+            />
           </figure>
 
           <figure class="hidden xl:block absolute bottom-7 left-40">
-            <img src="img/lamp.png" alt="lamp" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
+            <img
+              src="img/lamp.png"
+              alt="lamp"
+              width="87px"
+              class="text-[#1E1E1E] hover:opacity-40"
+            />
           </figure>
 
           <figure
-            class="hidden xl:block absolute top-2 right-40 text-[#000000]">
-            <img src="img/lamp.png" alt="lamp" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
+            class="hidden xl:block absolute top-2 right-40 text-[#000000]"
+          >
+            <img
+              src="img/lamp.png"
+              alt="lamp"
+              width="87px"
+              class="text-[#1E1E1E] hover:opacity-40"
+            />
           </figure>
 
-          <figure class="hidden xl:block absolute bottom-7 right-40 text-[#000000]">
-            <img src="img/Vector 581.png" alt="garis" width="87px" class="text-[#1E1E1E] hover:opacity-40"/>
+          <figure
+            class="hidden xl:block absolute bottom-7 right-40 text-[#000000]"
+          >
+            <img
+              src="img/Vector 581.png"
+              alt="garis"
+              width="87px"
+              class="text-[#1E1E1E] hover:opacity-40"
+            />
           </figure>
         </div>
       </div>
       <figure class="">
-        <img src="img/hero.png" alt="hero" class="block min-w-screen mx-auto" width="1540px" height="
-        456px"/>
+        <img
+          src="img/hero.png"
+          alt="hero"
+          class="block min-w-screen mx-auto"
+          width="1540px"
+          height="
+        456px"
+        />
       </figure>
     </section>
     <!-- Hero section end  -->
@@ -132,11 +214,13 @@
     <!-- section school start-->
     <section class="px-5 sm:px-28 mt-10 py-10">
       <div class="container mx-auto">
-        <div class="flex gap-4 lg:gap-8 justify-between"> 
+        <div class="flex gap-4 lg:gap-8 justify-between">
           <div class="text-start flex items-center justify-between">
             <div class="max-w-[461px]">
               <p class="text-abu py-5 text-lg">Whay Thes School</p>
-              <h3 class="font-semibold text-[#202020] font-asap text-xl sm:text-[2.5rem] sm:leading-[50px]">
+              <h3
+                class="font-semibold text-[#202020] font-asap text-xl sm:text-[2.5rem] sm:leading-[50px]"
+              >
                 Design Schools, Trusted Programs, and 100% Guaranteed
               </h3>
               <p class="text-abu py-5 text-lg">
@@ -144,25 +228,54 @@
                 Terabel pov astrobel sar direlig.
               </p>
               <button class="mt-6">
-                <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
-                hover:text-black hover:font-bold duration-500 transition-colors ease-out">
+                <span
+                  class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+                >
                   More Detail
                 </span>
               </button>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 content-center">
-            <figure class="animate__animated animate__zoomIn">
-              <img src="img/foto.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 content-center"
+          >
+            <figure
+              class="animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
+            >
+              <img
+                src="img/foto.png"
+                alt=""
+                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+              />
             </figure>
-            <figure class="lg:-mt-10 animate__animated animate__zoomIn">
-              <img src="img/foto1.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
+
+            <figure
+              class="lg:-translate-y-10 animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
+            >
+              <img
+                src="img/foto1.png"
+                alt=""
+                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+              />
             </figure>
-            <figure class="animate__animated animate__zoomIn">
-              <img src="img/foto2.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
+
+            <figure
+              class="animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
+            >
+              <img
+                src="img/foto3.png"
+                alt=""
+                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+              />
             </figure>
-            <figure class="lg:-mt-10 animate__animated animate__zoomIn">
-              <img src="img/laptop.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
+            <figure
+              class="lg:-translate-y-10 animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
+            >
+              <img
+                src="img/foto5.png"
+                alt=""
+                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+              />
             </figure>
           </div>
         </div>
@@ -171,64 +284,117 @@
     <!-- section school end -->
 
     <!-- section about start -->
-    <section id="about" class="mt-10 py-10 bg-[#F5F5F5] px-4 sm:px-28">
+    <section id="about" class="mt-10 py-10 bg-[#F5F5F5] px-4 md:px-28">
       <div class="container mx-auto">
-        <div class="items-center flex flex-col lg:flex-row lg:justify-between"> 
-          <div  class="py-10">
+        <div class="items-center flex flex-col lg:flex-row lg:justify-between gap-4">
+          <div class="py-10 w-[461px]">
             <div class="space-y-10">
-              <h1 class="text-[40px] font-semibold text-[#202020]">About Atractive School</h1>
-              <p class="text-[#9D9D9D]">Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
-                Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.</p>
-                <button>
-                  <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
-                  hover:text-black hover:font-bold duration-500 transition-colors ease-out">
-                    More Detail
-                  </span>
-                </button>
+              <h1 class="text-[40px] font-semibold text-[#202020]">
+                About Atractive School
+              </h1>
+              <p class="text-[#9D9D9D]">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+                Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
+              </p>
+              <button>
+                <span
+                  class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+                >
+                  More Detail
+                </span>
+              </button>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-5">
-            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
-              <figure class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-5"
+          >
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3"
+            >
+              <figure
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]"
+              >
                 <img src="img/home.png" alt="" />
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
               <p class="text-sm text-abu p-2">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
               </p>
-              <button class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300">More detail</button>
+              <button
+                class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300"
+              >
+                More detail
+              </button>
             </div>
 
-            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3"
+            >
               <figure
-                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]">
-                <img src="img/Subtract.png" alt=""/>
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]"
+              >
+                <img src="img/Subtract.png" alt="" />
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
               <p class="text-sm text-abu p-2">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
               </p>
-              <button class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300">More detail</button>
+              <button
+                class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300"
+              >
+                More detail
+              </button>
             </div>
 
-            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3"
+            >
               <figure
-                class="flex items-center justify-center  w-12 h-12 rounded-full bg-[#F4F4F4]">
-                <img src="img/book.png" alt="" class="flex items-center justify-center" />
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]"
+              >
+                <img
+                  src="img/book.png"
+                  alt=""
+                  class="flex items-center justify-center"
+                />
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
-              <p class="text-sm text-abu p-2">Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.</p>
-              <button class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300">More detail</button>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
+              <p class="text-sm text-abu p-2">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              </p>
+              <button
+                class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300"
+              >
+                More detail
+              </button>
             </div>
 
-            <div class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3">
-              <figure class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]">
+            <div
+              class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3"
+            >
+              <figure
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#F4F4F4]"
+              >
                 <img src="img/medali.png" alt="" />
               </figure>
-              <h3 class="font-bold text-sm text-[#202020] p-2">School Facility</h3>
-              <p class="text-sm text-abu p-2">Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.</p>
-              <button class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300">More detail</button>
+              <h3 class="font-bold text-sm text-[#202020] p-2">
+                School Facility
+              </h3>
+              <p class="text-sm text-abu p-2">
+                Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
+              </p>
+              <button
+                class="p-2 font-bold text-[#1E1E1E] hover:text-abu transition duration-300"
+              >
+                More detail
+              </button>
             </div>
           </div>
         </div>
@@ -239,27 +405,72 @@
     <!-- section our vision start -->
     <section class="mt-10 py-10 px-5 md:px-28">
       <div class="container mx-auto">
-        <div class="flex justify-between gap-4 lg:gap-36">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 gap-y-2 lg:gap-4">
-            <figure class="animate__animated animate__zoomIn">
-              <img src="img/foto3.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
-            </figure>
-            <figure class="lg:-mt-10 animate__animated animate__zoomIn">
-              <img src="img/foto4.webp" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
-            </figure>
-            <figure class="animate__animated animate__zoomIn">
-              <img src="img/foto5.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
-            </figure>
-            <figure class="lg:-mt-10 animate__animated animate__zoomIn">
-              <img src="img/foto6.png" alt="" class="w-[16.688rem] transition hover:scale-105 duration-300" />
-            </figure>
+        <div class="flex justify-between gap-4">
+          <div class="grid relative grid-cols-1 md:grid-cols-2 gap-2 gap-y-2 lg:gap-4">
+            <div class="flex gap-4 flex-col mt-8">
+              <figure
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="overflow-hidden h-auto transition rounded-xl group"
+              >
+                <img
+                  src="img/foto3.png"
+                  alt=""
+                  class="w-[16.688rem] object-cover transition duration-300 group-hover:scale-[1.2]"
+                />
+              </figure>
+
+              <figure
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="overflow-hidden h-auto transition rounded-xl group"
+              >
+                <img
+                  src="img/foto5.png"
+                  alt=""
+                  class="w-[16.688rem] object-cover transition duration-300 group-hover:scale-[1.2]"
+                />
+              </figure>
+            </div>
+
+            <div class="flex gap-4 flex-col mb-8">
+              <figure
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="overflow-hidden h-auto transition rounded-xl group"
+              >
+                <img
+                  src="img/foto4.webp"
+                  alt=""
+                  class="w-[16.688rem] object-cover transition duration-300 group-hover:scale-[1.2]"
+                />
+              </figure>
+
+              <figure
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="lg:-translate-y-10 overflow-hidden h-auto transition rounded-xl group"
+              >
+                <img
+                  src="img/foto3.png"
+                  alt=""
+                  class="w-[16.688rem] object-cover transition duration-300 group-hover:scale-[1.2]"
+                />
+              </figure>
+            </div>
           </div>
           <div class="flex items-center">
             <div class="space-y-4 max-w-[461px]">
               <p class="text-abu">School Vision</p>
-              <h1 class="font-semibold text-[#202020] text-2xl md:text-[40px] font-asap">
+              <h1
+                class="font-semibold text-[#202020] text-2xl md:text-[40px] font-asap"
+              >
                 Our Vision
-              </h1> 
+              </h1>
               <p class="text-abu">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
                 Terabel pov astrobel sar direlig.
@@ -272,15 +483,17 @@
     <!-- section our vision end -->
 
     <!-- section teacher start -->
-    <section class="my-10 px-5 md:px-28">
+    <section class="my-20 px-5 md:px-28">
       <div class="container mx-auto">
         <div class="space-y-3">
           <p class="text-abu">Teacher</p>
-          <h1 class="text-[#202020] text-2xl md:text-[40px] w-1/2 font-semibold font-asap">
+          <h1
+            class="text-[#202020] text-2xl md:text-[40px] w-1/2 font-semibold font-asap"
+          >
             Teacher in Attractive School
           </h1>
         </div>
-    
+
         <div class="flex flex-wrap justify-between mt-3">
           <p class="text-abu">
             Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
@@ -288,23 +501,38 @@
           </p>
           <div class="flex gap-4 mt-4 md:mt-0">
             <!-- Tombol slide kiri -->
-            <button id="prev-slide" class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center">
+            <button
+              id="prev-slide"
+              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
+            >
               <img src="img/slider.png" alt="logo scroll kiri" />
             </button>
-    
+
             <!-- Tombol slide kanan -->
-            <button id="next-slide" class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center">
+            <button
+              id="next-slide"
+              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
+            >
               <img src="img/slider1.png" alt="logo scroll kanan" />
             </button>
           </div>
         </div>
-    
+
         <!-- Container untuk slider -->
         <div class="mt-5">
-          <div id="teacher-slider" class="flex gap-5 overflow-x-auto scroll-smooth scrollbar-hidden snap-x snap-mandatory">
-            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center">
+          <div
+            id="teacher-slider"
+            class="flex gap-5 overflow-x-auto scroll-smooth scrollbar-hidden snap-x snap-mandatory"
+          >
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+            >
               <figure>
-                <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+                <img
+                  src="img/teacher.png"
+                  alt=""
+                  class="w-[12.375rem] mx-auto"
+                />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
                   <p class="text-abu mt-4 text">
@@ -313,9 +541,15 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center">
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+            >
               <figure>
-                <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+                <img
+                  src="img/teacher.png"
+                  alt=""
+                  class="w-[12.375rem] mx-auto"
+                />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
                   <p class="text-abu mt-4">
@@ -324,9 +558,15 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center">
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+            >
               <figure>
-                <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+                <img
+                  src="img/teacher.png"
+                  alt=""
+                  class="w-[12.375rem] mx-auto"
+                />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
                   <p class="text-abu mt-4">
@@ -335,9 +575,15 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center">
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+            >
               <figure>
-                <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+                <img
+                  src="img/teacher.png"
+                  alt=""
+                  class="w-[12.375rem] mx-auto"
+                />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Robert Fox</h3>
                   <p class="text-abu mt-4">
@@ -346,9 +592,15 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center">
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+            >
               <figure>
-                <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+                <img
+                  src="img/teacher.png"
+                  alt=""
+                  class="w-[12.375rem] mx-auto"
+                />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Robert Fox</h3>
                   <p class="text-abu mt-4">
@@ -357,9 +609,15 @@
                 </figcaption>
               </figure>
             </div>
-            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center">
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+            >
               <figure>
-                <img src="img/teacher.png" alt="" class="w-[12.375rem] mx-auto" />
+                <img
+                  src="img/teacher.png"
+                  alt=""
+                  class="w-[12.375rem] mx-auto"
+                />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Kristin Watson</h3>
                   <p class="text-abu mt-4">
@@ -370,22 +628,23 @@
             </div>
           </div>
         </div>
-    
+
         <div class="text-center mt-8 text-white">
           <button>
-            <span class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-abu hover:border-abu
-              hover:text-black hover:font-bold duration-500 transition-colors ease-out">
-              Our Blog
+            <span
+              class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+            >
+              View More
             </span>
           </button>
         </div>
       </div>
     </section>
-    
+
     <!-- section teacher end -->
 
     <!-- section bloge start -->
-    <section id="bloge" class="mt-10 py-10 px-5 sm:px-28 mx-auto bg-[#F5F5F5]">
+    <section id="bloge" class="mt-10 py-20 px-5 md:px-28 mx-auto bg-[#F5F5F5]">
       <div class="container mx-auto">
         <div class="mx-auto text-center">
           <h1 class="font-bold text-2xl text-[40px]">Our Blog</h1>
@@ -402,9 +661,10 @@
               src="img/bground.jpg"
               alt=""
               class="bg-gradient-to-b from-[#CDCDCD] via-slate-600 h-full"
-            
             />
-            <div class="absolute bottom-5 left-5 text-white space-y-[12px] px-2">
+            <div
+              class="absolute bottom-5 left-5 text-white space-y-[12px] px-2"
+            >
               <h3 class="font-bold">Belajar Kembali pada tanggal 2 Mei 2023</h3>
               <p>September 16, 2023</p>
               <p>
@@ -416,7 +676,9 @@
 
           <!-- ///  -->
           <div class="flex flex-col items-center justify-center gap-[24px]">
-            <div class="space-y-[12px] flex flex-col border-b border-b-[#E8E8E8] gap-4 py-5">
+            <div
+              class="space-y-[12px] flex flex-col border-b border-b-[#E8E8E8] gap-4 py-5"
+            >
               <h3 class="font-semibold w-[15.125rem] text-[20px]">
                 Lorem Ipsum Lorem Ipsum Lorem Ipsum
               </h3>
@@ -426,7 +688,9 @@
               </p>
             </div>
 
-            <div class="space-y-[12px] flex flex-col border-b border-b-[#E8E8E8] gap-4 py-5">
+            <div
+              class="space-y-[12px] flex flex-col border-b border-b-[#E8E8E8] gap-4 py-5"
+            >
               <h3 class="font-semibold w-[15.125rem] text-[20px]">
                 Lorem Ipsum Lorem Ipsum Lorem Ipsum
               </h3>
@@ -444,7 +708,6 @@
                 Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
                 Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
               </p>
-              
             </div>
           </div>
         </div>
@@ -457,7 +720,9 @@
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
                   <p class="text-sm">September 14, 2023</p>
-                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-base">
+                    Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
+                  </p>
                 </div>
               </div>
             </figure>
@@ -470,7 +735,9 @@
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
                   <p class="sm:">September 14, 2023</p>
-                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-base">
+                    Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
+                  </p>
                 </div>
               </div>
             </figure>
@@ -482,7 +749,9 @@
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
                   <p class="text-sm">September 14, 2023</p>
-                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-base">
+                    Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
+                  </p>
                 </div>
               </div>
             </figure>
@@ -495,11 +764,22 @@
                 <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                 <div class="space-y-4 text-abu">
                   <p class="text-sm">September 14, 2023</p>
-                  <p class="text-base">Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...</p>
+                  <p class="text-base">
+                    Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
+                  </p>
                 </div>
               </div>
             </figure>
           </div>
+        </div>
+        <div class="text-center mt-8 text-white">
+          <button>
+            <span
+              class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+            >
+              View More
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -535,12 +815,18 @@
     <!-- section our galery end -->
 
     <!-- footer  -->
-     <footer id="footer" class="w-full bg-[#1A1A1A] mt-10 px-5 sm:px-28 py-10">
+    <footer id="footer" class="w-full bg-[#1A1A1A] mt-10 px-5 md:px-28 py-10">
       <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row md:justify-between text-white gap-8 text-sm">
+        <div
+          class="flex flex-col md:flex-row md:justify-between text-white gap-8 text-sm"
+        >
           <div class="w-[292px] space-y-8">
             <h3 class="font-bold">Atracctive School</h3>
-            <p class="leading-[28px]">Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa. Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig. Epire kanesk. Monosa medelgam tisk.</p>
+            <p class="leading-[28px]">
+              Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+              Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
+              Epire kanesk. Monosa medelgam tisk.
+            </p>
             <div class="flex gap-4">
               <i class="fa-brands fa-instagram text-white"></i>
               <i class="fa-brands fa-youtube text-white"></i>
@@ -550,7 +836,9 @@
             </div>
           </div>
 
-          <div class="text-white font-normal space-y-4 md:space-y-8 mt-10 md:mt-0 leading-[19px]">
+          <div
+            class="text-white font-normal space-y-4 md:space-y-8 mt-10 md:mt-0 leading-[19px]"
+          >
             <h3 class="font-bold">Home</h3>
             <p>Beranda</p>
             <p>Program Keahlian</p>
@@ -558,28 +846,32 @@
             <p>Our News</p>
           </div>
 
-          <div class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0">
+          <div
+            class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0"
+          >
             <h3>Contact</h3>
             <div class="space-y-8">
               <div class="flex gap-4">
-                <img src="img/telp.png" alt=""> 
+                <img src="img/telp.png" alt="" />
                 <p>(406) 555-0120</p>
               </div>
               <div class="flex gap-4">
-                <img src="img/dashicons_email (1).png" alt="">
+                <img src="img/dashicons_email (1).png" alt="" />
                 <p>atractiveschools1212@gmail.com</p>
               </div>
               <div class="flex gap-4">
-                <img src="img/location.png" alt="">
-                <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                <img src="img/location.png" alt="" />
+                <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
               </div>
             </div>
           </div>
 
-          <div class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0">
+          <div
+            class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0"
+          >
             <h3>Maps location</h3>
             <figure>
-              <img src="img/maps.png" alt="">
+              <img src="img/maps.png" alt="" />
             </figure>
           </div>
           <!-- <div class="flex flex-wrap justify-between gap-8 bg-blue-400">
@@ -587,10 +879,13 @@
         </div>
       </div>
       <div class="sm:text-end mt-10 text-white">
-        <p class="text-sm">&copy; Mangcoding. All rights reserved. </p>
+        <p class="text-sm">&copy; Mangcoding. All rights reserved.</p>
       </div>
-     </footer>
-    
-     <script src="src/script.js"></script>
+    </footer>
+
+    <script src="src/script.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
