@@ -10,10 +10,10 @@
   border-radius: 40px;
   // width: 100%;
   padding: 14px 16px;
+    position: $position;
 
   @media (min-width: 1024px) {
     width: auto;
-    position: $position;
     top: 24px;
     right: 8%;
   }
@@ -66,17 +66,27 @@
     padding: 14px 62px;
   }
 
-  @media (max-width: 1320px) {
+  @media (max-width:1320px){
+    top: 130px;
+    right: 50px;
+  }
+
+  @media (max-width:1110px){
     top: 230px;
+    right: 50px;
   }
 
-  @media (max-width: 1023px) {
-    top: 30px;
-  }
+  // @media (max-width: 1320px) {
+  //   top: 230px;
+  // }
 
-  @media (max-width: 640px) {
-    top: 90px;
-  }
+  // @media (max-width: 1023px) {
+  //   top: 30px;
+  // }
+
+  // @media (max-width: 640px) {
+  //   top: 90px;
+  // }
 }
 // button style & effect start
 
@@ -164,5 +174,7 @@ $border-color: white;
 //     border-top-left-radius: 24px;
 //   }
 // }
+
+
 
 

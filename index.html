@@ -244,7 +244,7 @@
       </section>
       <!-- Hero Section End -->
 
-      <section class="relative">
+      <section class="relative hidden md:flex">
         <img
           class="absolute bottom-custom -z-50 lg:top-44 left-1/2 transform sm:w-[98vw] -translate-x-1/2 md:w-[98vw] lg:w-[98vw] max-w-[1281px] object-contain"
           src="/vector-line.svg"
@@ -253,7 +253,7 @@
       </section>
 
       <!-- section invitation to collaborate start -->
-      <section class="pt-[75px] md:pt-[120px]  relative overflow-hidden">
+      <section class="pt-[75px] md:pt-[120px] relative overflow-hidden">
         <div
           class="absolute top-[550px] lg:top-[367px] w-[621px] lg:w-[641px] h-[278px] lg:h-[287px] bg-[#504CFF] blur-[200px] left-[-422px] lg:left-[-387px] z-[-1]"
         ></div>
@@ -264,11 +264,21 @@
           class="absolute top-[1820px] lg:top-[911px] w-[806px] lg:w-[641px] h-[361px] lg:h-[287px] bg-[#854CFF99] blur-[200px] right-[-650px] lg:right-[-200px] z-[1] lg:z-[-1]"
         ></div>
         <div class="container mx-auto relative">
+          <div class="flex flex-row">
+            <h2
+              class="text-[32px] md:text-[48px] lg:text-[67px] w-full xl:max-w-full font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
+            >
+              Companies that can help you in
+            </h2>
+            <button class="button-fly">
+              Know More
+              <img src="/arrow-up-right.svg" alt="arrow" />
+            </button>
+          </div>
           <h2
-            class="text-[32px] md:text-[48px] lg:text-[67px] font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
+            class="text-[32px] md:text-[48px] lg:text-[67px] width-h2 font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#9795FF] via-white to-[#9795FF]"
           >
-            Companies that can help you in
-            <span class="span-br">developing your company for the future</span>
+            developing your company for the future
           </h2>
           <p
             class="text-base text-white font-normal md:w-[486px] pt-[30px] md:pt-8"
@@ -276,14 +286,8 @@
             Work in the IT field includes Web Design, UI/UX Design, Branding and
             Shopify Development
           </p>
-          <div
-            class="relative lg:static flex sm:top-[-153px] md:-top-52 justify-end w-full lg:w-auto mt-6 lg:mt-0"
-          >
+          <div class="relative flex justify-end w-full lg:w-auto">
             <!-- <button class="w-full lg:w-auto text-base font-normal text-black flex items-center justify-center gap-[10px] border border-white bg-white px-8 lg:px-[62px] py-[17px] md:py-[14px] lg:py-[14px] rounded-[40px] lg:absolute lg:top-6 lg:right-[8%]"> -->
-            <button class="button-fly">
-              Know More
-              <img src="/arrow-up-right.svg" alt="arrow" />
-            </button>
           </div>
         </div>
 
@@ -311,198 +315,117 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-6 pb-16">
-        <!--card work start -->
-        <ul
-          class="container mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-center"
-        >
-          <!-- card 1 website dev start -->
-          <li>
+        <!-- card invitation -->
+        <div class="flex flex-col gap-6 w-full max-w-[1440px] pb-16 mx-auto justify-center">
+          <div class="flex flex-row gap-6 mx-auto">
+            <!-- card website dev start -->
             <div
-              class="md:flex md:h-[300px] md:justify-between md:w-full md:max-w-[690px] lg:w-[690px] lg:h-[351px] bg-[#504CFF] rounded-3xl"
+              class="w-full pb-10 max-w-[690px] h-full max-h-[346px] bg-[#504CFF] rounded-[23px] flex flex-row gap-8"
             >
-              <div class="flex pt-10 pl-8 flex-col w-[252px]">
-                <figure>
-                  <img
-                    src="/card1.svg"
-                    alt="card"
-                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
-                  />
-                </figure>
-                <h3
-                  class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-[30px] md:pt-[16px] lg:pt-6 lg:w-[252px]"
-                >
-                  Website Dev
-                </h3>
-                <p
-                  class="text-[17px] md:text-sm text-white font-normal pt-[20px] md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
-                >
-                  help you to build website company that is modern, user
-                  friendly, good CEO, and Clean design
-                </p>
-                <a
-                  href=""
-                  class="text-[17px] md:text-sm text-white font-normal flex gap-2 items-center underline pt-[20px] md:pt-[14px] lg:pt-4"
-                >
-                  Start with us
-                  <figure>
-                    <img src="/Vector.svg" alt="arrow" />
-                  </figure>
-                </a>
+              <div class="flex flex-col gap-[23px] pt-10 pl-[31px] text-white">
+                <div>
+                  <img src="/card2.svg" alt="" />
+                </div>
+                <div class="flex flex-col gap-4">
+                  <h2 class="font-medium text-[31px]">Website Dev</h2>
+                  <p class="font-normal text-[16px] leading-7">
+                    help you to build website company that is modern, user
+                    friendly, good CEO, and Clean design
+                  </p>
+                  <div class="flex flex-row gap-1">
+                    <p>Start with us</p>
+                    <img src="/arrow-up-right.svg" alt="" class="text-white" />
+                  </div>
+                </div>
               </div>
-              <figure class="pl-[30px] md:pl-0 md:pt-[76px] lg:pt-[38px]">
-                <img src="asset/laptop1.png" alt="" class="" />
-              </figure>
+              <img
+                src="/asset/laptop1.png"
+                alt=""
+                class="relative w-full max-w-[455px] h-auto max-h-[333px] top-[39px] self-end"
+              />
             </div>
-          </li>
-          <!-- card 1 website dev end -->
+            <!-- card website dev end -->
 
-          <!-- card 2 UI/UX Design start -->
-          <li class="pt-[30px] md:pt-0">
+            <!-- card UI/UX start -->
             <div
-              class="relative md:flex md:justify-between md:h-[300px] md:w-[360px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[24px]"
+              class="w-full pb-12 max-w-[486px] h-full max-h-[346px] bg-[rgba(21,21,21,0.1)] rounded-[23px] flex flex-row"
             >
-              <div
-                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
-              >
-                <figure>
-                  <img
-                    src="/card2.svg"
-                    alt=""
-                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
-                  />
-                </figure>
-                <h3
-                  class="text-[30px] md:text-[24px] lg:text-[32px] text-white font-medium pt-6 md:pt-[16px] lg:pt-6"
-                >
-                  UI/UX Design
-                </h3>
-                <p
-                  class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
-                >
-                  help you to build website company that is modern, user
-                  friendly, good CEO, and Clean design
-                </p>
-                <a
-                  href=""
-                  class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4"
-                >
-                  Start with us
-                  <figure>
-                    <img src="/Vector.svg" alt="" />
-                  </figure>
-                </a>
+              <div class="flex flex-col gap-[24px] pt-10 pl-[31px] text-white">
+                <div>
+                  <img src="/card2.svg" alt="" />
+                </div>
+                <div class="flex flex-col w-full max-w-[952px] gap-4">
+                  <h2 class="font-medium text-[31px]">UI/UX Design</h2>
+                  <p class="font-normal text-[16px] leading-7">
+                    help you to build website company that is modern, user
+                    friendly, good CEO, and Clean design
+                  </p>
+                  <div class="flex flex-row gap-1">
+                    <p>Start with us</p>
+                    <img src="/arrow-up-right.svg" alt="" class="text-white" />
+                  </div>
+                </div>
               </div>
-              <figure class="mt-[45px]">
-                <img src="asset/mobile1.png" alt="" class="rounded-br-3xl" />
-              </figure>
-              <figure class="px-[62px] md:hidden">
-                <img src="asset/mobile2.png" alt="" class="rounded-br-3xl" />
-              </figure>
+              <img
+                src="/asset/mobile1.png"
+                alt=""
+                class="relative w-full max-w-[455px] h-auto max-h-[333px] rounded-br-[24px] top-[49px] self-end"
+              />
             </div>
-          </li>
-          <!-- card 2 UI/UX Design start -->
-        </ul>
-
-        <ul
-          class="container jus mx-auto flex flex-col md:flex-row md:gap-4 lg:gap-6 md:justify-center"
-        >
-          <!-- card 2 UI/UX Design start -->
-          <li class="pt-[30px] md:pt-0">
+            <!-- card UI/UX start -->
+          </div>
+          <div class="flex flex-row gap-6 mx-auto">
             <div
-              class="relative md:flex md:justify-between md:h-[300px] md:w-[360px] lg:w-[486px] lg:h-[351px] bg-[#151515] backdrop-blur-[30px] rounded-[24px]"
+              class="w-full pb-12 max-w-[486px] h-full max-h-[346px] bg-[rgba(21,21,21,0.1)] rounded-[23px] flex flex-row"
             >
-              <div
-                class="px-[30px] md:px-0 pt-[50px] pb-[27px] md:pl-[20px] md:py-[20px] lg:pl-[32px] lg:py-10"
-              >
-                <figure>
-                  <img
-                    src="/card2.svg"
-                    alt=""
-                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
-                  />
-                </figure>
-                <h3
-                  class="text-[30px] md:text-[24px] lg:text-[32px] text-white font-medium pt-6 md:pt-[16px] lg:pt-6"
-                >
-                  Branding
-                </h3>
-                <p
-                  class="text-[17px] md:text-sm lg:text-base text-white font-normal pt-4 md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
-                >
-                  help you to build website company that is modern, user
-                  friendly, good CEO, and Clean design
-                </p>
-                <a
-                  href=""
-                  class="text-[17px] md:text-sm lg:text-base text-white font-normal flex gap-2 items-center underline pt-4 md:pt-[14px] lg:pt-4"
-                >
-                  Start with us
-                  <figure>
-                    <img src="/Vector.svg" alt="" />
-                  </figure>
-                </a>
+              <div class="flex flex-col gap-[24px] pt-10 pl-[31px] text-white">
+                <div>
+                  <img src="/card2.svg" alt="" />
+                </div>
+                <div class="flex flex-col w-full max-w-[952px] gap-4">
+                  <h2 class="font-medium text-[31px]">UI/UX Design</h2>
+                  <p class="font-normal text-[16px] leading-7">
+                    help you to build website company that is modern, user
+                    friendly, good CEO, and Clean design
+                  </p>
+                  <div class="flex flex-row gap-1">
+                    <p>Start with us</p>
+                    <img src="/arrow-up-right.svg" alt="" class="text-white" />
+                  </div>
+                </div>
               </div>
-              <figure
-                class="md:bottom-0 lg:bottom-0 lg:pt-[22px] md:absolute md:right-0 hidden md:block"
-              >
-                <img
-                  src="asset/kartu3.png"
-                  alt=""
-                  class="md:w-[220px] md:h-[220px] lg:w-auto lg:h-auto"
-                />
-              </figure>
-              <figure class="md:hidden">
-                <img src="asset/kartu3a.png" alt="" class="" />
-              </figure>
-
+              <img
+                src="/asset/mobile1.png"
+                alt=""
+                class="relative w-full max-w-[455px] h-auto max-h-[333px] rounded-br-[24px] top-[49px] self-end"
+              />
             </div>
-          </li>
-          <!-- card 2 UI/UX Design start -->
-
-          <!-- card 1 website dev start -->
-          <li>
             <div
-              class="md:flex md:justify-between md:h-[300px] md:w-[460px] lg:w-[690px] lg:h-[351px] bg-[#854CFF] backdrop-blur-[30px] rounded-3xl overflow-hidden"
+              class="w-full pb-10 max-w-[690px] h-full max-h-[346px] bg-[#504CFF] rounded-[23px] flex flex-row gap-8"
             >
-              
-              <div class="flex pt-10 pl-8 flex-col w-[252px]">
-                <figure>
-                  <img
-                    src="/card4.svg"
-                    alt="card"
-                    class="w-[75px] h-[75px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px]"
-                  />
-                </figure>
-                <h3
-                  class="text-[30px] md:text-[24px] lg:text-[32px] font-medium text-white pt-[30px] md:pt-[16px] lg:pt-6 lg:w-[252px]"
-                >
-                  Shopify
-                </h3>
-                <p
-                  class="text-[17px] md:text-sm text-white font-normal pt-[20px] md:pt-[14px] lg:pt-4 md:w-[204px] lg:w-[252px]"
-                >
-                  help you to build website company that is modern, user
-                  friendly, good CEO, and Clean design
-                </p>
-                <a
-                  href=""
-                  class="text-[17px] md:text-sm text-white font-normal flex gap-2 items-center underline pt-[20px] md:pt-[14px] lg:pt-4"
-                >
-                  Start with us
-                  <figure>
-                    <img src="/Vector.svg" alt="arrow" />
-                  </figure>
-                </a>
+              <div class="flex flex-col gap-[23px] pt-10 pl-[31px] text-white">
+                <div>
+                  <img src="/card2.svg" alt="" />
+                </div>
+                <div class="flex flex-col gap-4">
+                  <h2 class="font-medium text-[31px]">Website Dev</h2>
+                  <p class="font-normal text-[16px] leading-7">
+                    help you to build website company that is modern, user
+                    friendly, good CEO, and Clean design
+                  </p>
+                  <div class="flex flex-row gap-1">
+                    <p>Start with us</p>
+                    <img src="/arrow-up-right.svg" alt="" class="text-white" />
+                  </div>
+                </div>
               </div>
-              <figure class="pl-[358px] md:pl-0 md:pt-[76px] lg:pt-5">
-                <img src="asset/Shopify logo (1).png" alt="" class="" />
-              </figure>
+              <img
+                src="/asset/laptop1.png"
+                alt=""
+                class="relative w-full max-w-[455px] h-auto max-h-[333px] top-[39px] self-end"
+              />
             </div>
-          </li>
-          <!-- card 1 website dev end -->
-        </ul>
-        <!--card work end -->
+          </div>
         </div>
 
         <ul class="relative py-[10px] lg:py-[28px] overflow-hidden z-[3]">
@@ -513,27 +436,42 @@
             class="bg-[#504CFF] flex items-center justify-center h-[76px] lg:h-[140px] rotate-2 w-full z-[1]"
           >
             <div id="slider-container">
-  <div id="slider">
-    <!-- Logo Asli -->
-    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-    <img src="/mangcoding.svg" alt="Logo 2" class="h-[38px] lg:h-10" />
-    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-    <img src="/mangcoding.svg" alt="Logo 4" class="h-[38px] lg:h-10" />
-    <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
+              <div id="slider">
+                <!-- Logo Asli -->
+                <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+                <img
+                  src="/mangcoding.svg"
+                  alt="Logo 2"
+                  class="h-[38px] lg:h-10"
+                />
+                <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+                <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+                <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+                <img
+                  src="/mangcoding.svg"
+                  alt="Logo 4"
+                  class="h-[38px] lg:h-10"
+                />
+                <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
 
-    <!-- Duplikasi otomatis untuk seamless scrolling -->
-    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-    <img src="/mangcoding.svg" alt="Logo 2" class="h-[38px] lg:h-10" />
-    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-    <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
-    <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
-    <img src="/mangcoding.svg" alt="Logo 4" class="h-[38px] lg:h-10" />
-    <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
-  </div>
-</div>
-
+                <!-- Duplikasi otomatis untuk seamless scrolling -->
+                <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+                <img
+                  src="/mangcoding.svg"
+                  alt="Logo 2"
+                  class="h-[38px] lg:h-10"
+                />
+                <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+                <img src="/mstore.svg" alt="Logo 1" class="h-[38px] lg:h-10" />
+                <img src="/google.svg" alt="Logo 3" class="h-[38px] lg:h-10" />
+                <img
+                  src="/mangcoding.svg"
+                  alt="Logo 4"
+                  class="h-[38px] lg:h-10"
+                />
+                <img src="/google.svg" alt="Logo 5" class="h-[38px] lg:h-10" />
+              </div>
+            </div>
           </li>
         </ul>
       </section>

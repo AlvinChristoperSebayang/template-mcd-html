@@ -8,11 +8,11 @@
   background-color: white;
   border-radius: 40px;
   padding: 14px 16px;
+  position: static;
 }
 @media (min-width: 1024px) {
   .button-white {
     width: auto;
-    position: static;
     top: 24px;
     right: 8%;
   }
@@ -44,11 +44,11 @@
   background-color: transparent;
   border-radius: 40px;
   padding: 14px 16px;
+  position: static;
 }
 @media (min-width: 1024px) {
   .button-transparent {
     width: auto;
-    position: static;
     top: 24px;
     right: 8%;
   }
@@ -80,11 +80,11 @@
   background-color: white;
   border-radius: 40px;
   padding: 14px 16px;
+  position: static;
 }
 @media (min-width: 1024px) {
   .button-of-fly {
     width: auto;
-    position: static;
     top: 24px;
     right: 8%;
   }
@@ -121,11 +121,11 @@
   background-color: white;
   border-radius: 40px;
   padding: 14px 16px;
+  position: absolute;
 }
 @media (min-width: 1024px) {
   .button-fly {
     width: auto;
-    position: absolute;
     top: 24px;
     right: 8%;
   }
@@ -153,17 +153,14 @@
 }
 @media (max-width: 1320px) {
   .button-fly {
+    top: 130px;
+    right: 50px;
+  }
+}
+@media (max-width: 1110px) {
+  .button-fly {
     top: 230px;
-  }
-}
-@media (max-width: 1023px) {
-  .button-fly {
-    top: 30px;
-  }
-}
-@media (max-width: 640px) {
-  .button-fly {
-    top: 90px;
+    right: 50px;
   }
 }
 

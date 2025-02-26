@@ -151,20 +151,28 @@ body {
     display: inline-flex;
     max-width: 800px !important;
   }
-  .bottom-custom{
-    top:360px !important;
+  .width-h2{
+    max-width: 75%;
+  }
+    .bottom-custom{
+    top:280px !important;
   }
 }
 
-@media (max-width: 1024px) {
-  .span-br {
-    display: inline-flex;
-    max-width: 800px !important;
-  }
+@media (max-width: 1024px){
   .bottom-custom{
-    top:260px !important;
+    top: 100px;
   }
 }
+
+  @media (max-width:1110px){
+    .width-h2{
+    max-width: 100%;
+  }
+    .bottom-custom{
+    top:360px !important;
+  }
+  }
 
 @media (max-width: 768px) {
   .bottom-custom{
@@ -187,5 +195,7 @@ body {
     max-width: 400px !important;
   }
   }
+
+
 
 
