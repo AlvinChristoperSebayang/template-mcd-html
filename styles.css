@@ -151,6 +151,21 @@
     padding: 14px 62px;
   }
 }
+@media (min-width: 1441px) {
+  .button-fly {
+    right: 0;
+  }
+}
+@media (min-width: 1391px) and (max-width: 1440px) {
+  .button-fly {
+    right: 50px;
+  }
+}
+@media (min-width: 1321px) and (max-width: 1390px) {
+  .button-fly {
+    right: 30px;
+  }
+}
 @media (max-width: 1320px) {
   .button-fly {
     top: 130px;
@@ -163,9 +178,40 @@
     right: 50px;
   }
 }
+@media (max-width: 768px) {
+  .button-fly {
+    bottom: unset;
+    top: 180px;
+    right: unset;
+  }
+}
+@media (max-width: 685px) {
+  .button-fly {
+    top: 200px;
+  }
+}
+@media (max-width: 586px) {
+  .button-fly {
+    top: 260px;
+    right: unset;
+  }
+}
+@media (max-width: 472px) {
+  .button-fly {
+    width: 100%;
+    display: flex;
+    max-width: 410px;
+    top: 260px;
+  }
+}
+@media (max-width: 384px) {
+  .button-fly {
+    top: 300px;
+  }
+}
 
 .review-card {
-  background: rgba(21, 21, 21, 0.4);
+  background: rgba(21, 21, 21, 0.2);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   border: 1px solid white;
@@ -201,4 +247,22 @@
   color: white;
   font-size: 16px;
   padding-top: 24px;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+button .arrow-icon {
+  transition: transform 0.3s ease-in-out;
+}
+button .arrow-icon-copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translateX(-150%) translateY(150%);
+}
+button:hover .arrow-icon {
+  transform: translateX(150%) translateY(-150%);
+}
+button:hover .arrow-icon-copy {
+  transform: translateX(0) translateY(0);
 }/*# sourceMappingURL=styles.css.map */

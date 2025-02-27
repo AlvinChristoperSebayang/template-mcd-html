@@ -8,9 +8,8 @@
   color: $text-color;
   background-color: $bg-color;
   border-radius: 40px;
-  // width: 100%;
   padding: 14px 16px;
-    position: $position;
+  position: $position;
 
   @media (min-width: 1024px) {
     width: auto;
@@ -66,32 +65,58 @@
     padding: 14px 62px;
   }
 
-  @media (max-width:1320px){
+  @media (min-width: 1441px) {
+    right: 0;
+  }
+
+  @media (min-width: 1391px) and (max-width: 1440px) {
+    right: 50px;
+  }
+
+  @media (min-width: 1321px) and (max-width: 1390px) {
+    right: 30px;
+  }
+
+  @media (max-width: 1320px) {
     top: 130px;
     right: 50px;
   }
 
-  @media (max-width:1110px){
+  @media (max-width: 1110px) {
     top: 230px;
     right: 50px;
   }
 
-  // @media (max-width: 1320px) {
-  //   top: 230px;
-  // }
+  @media (max-width: 768px) {
+    bottom: unset;
+    top: 180px;
+    right: unset;
+  }
 
-  // @media (max-width: 1023px) {
-  //   top: 30px;
-  // }
+  @media (max-width: 685px) {
+    top: 200px;
+  }
 
-  // @media (max-width: 640px) {
-  //   top: 90px;
-  // }
+  @media (max-width: 586px) {
+    top: 260px;
+    right: unset;
+  }
+
+  @media (max-width: 472px) {
+    width: 100%;
+    display: flex;
+    max-width: 410px;
+    top: 260px;
+  }
+
+  @media (max-width: 384px) {
+    top: 300px;
+  }
 }
 // button style & effect start
 
 // card testimonial start
-$bg-card: rgba(21, 21, 21, 0.4);
+$bg-card: rgba(21, 21, 21, 0.2);
 $border-color: white;
 
 // Mixin untuk card
@@ -151,30 +176,29 @@ $border-color: white;
 }
 // card testimonial start
 
-// $bg-card: rgba(21, 21, 21, 0.4);
-// $border-color: white;
+// Our product hover start
+button {
+  position: relative;
+  overflow: hidden;
 
-// // Mixin untuk card
-// @mixin card-style {
-//   background: $bg-card;
-//   backdrop-filter: blur(30px);
-//   padding: 20px;
-//   border-radius: 24px;
-//   position: relative;
+  .arrow-icon {
+    transition: transform 0.3s ease-in-out;
+  }
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 20%;
-//     height: 90%;
-//     border-top: 2px solid $border-color;
-//     border-left: 2px solid $border-color;
-//     border-top-left-radius: 24px;
-//   }
-// }
+  .arrow-icon-copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translateX(-150%) translateY(150%);
+  }
 
+  &:hover {
+    .arrow-icon {
+      transform: translateX(150%) translateY(-150%);
+    }
 
+    .arrow-icon-copy {
+      transform: translateX(0) translateY(0);
+    }
+  }
+}
 
-
+// Our product hover end
