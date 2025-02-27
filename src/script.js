@@ -26,15 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
 mobileMenuButton.addEventListener("click", () => {
   isOpen = !isOpen;
 

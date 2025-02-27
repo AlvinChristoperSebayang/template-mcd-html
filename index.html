@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Atracctive School</title>
+    <link rel="icon" href="img/logo4.png" sizes="64x64" type="image/png">
+
     <link href="src/input.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -31,12 +35,16 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
   </head>
   <body class="font-lato">
     <!-- Header start -->
     <header
-      class="bg-white px-5 md:px-28 h-[618.75%] py-2 md:py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg"
+      class="bg-white h-[618.75%] py-2 md:py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg"
     >
       <div class="container mx-auto">
         <nav class="flex justify-between items-center bg-white">
@@ -98,7 +106,7 @@
       <!-- Menu Mobile dengan animasi -->
       <div
         id="mobile-menu"
-        class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0"
+        class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0 px-4"
       >
         <ul class="flex flex-col gap-4 text-abu mt-4 py-4">
           <li class="font-bold text-[#1A1A1A]">Home</li>
@@ -118,7 +126,7 @@
     <!-- Hero section start-->
     <section class="bg-putih mt-10">
       <div class="container mx-auto relative">
-        <div class="max-w-[761px] mx-auto py-10 px-5">
+        <div class="max-w-[761px] mx-auto py-10">
           <p class="text-center text-abu">Welcom to Scholl</p>
           <h1
             class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:leading-[76px] my-5 font-semibold"
@@ -183,21 +191,20 @@
           </figure>
         </div>
       </div>
-      <figure class="">
+      <figure class="w-full">
         <img
           src="img/hero.png"
           alt="hero"
-          class="block min-w-screen mx-auto"
-          width="1540px"
-          height="
-        456px"
+          class="block min-w-screen mx-auto h-[200px] object-cover md:h-auto"
+          
+        
         />
       </figure>
     </section>
     <!-- Hero section end  -->
 
     <!-- patner school start -->
-    <section class="container mx-auto py-10 px-2">
+    <section class="container mx-auto py-10">
       <h3 class="text-center text-abu">Partners School</h3>
       <div class="flex flex-wrap justify-center items-center gap-4 my-5">
         <figure>
@@ -214,14 +221,14 @@
     <!-- patner sochool end -->
 
     <!-- section school start-->
-    <section class="px-5 sm:px-28 mt-10 py-10">
+    <section class="py-5 md:py-10">
       <div class="container mx-auto">
-        <div class="flex gap-4 lg:gap-8 justify-between">
+        <div class="md:flex gap-4 lg:gap-8 justify-between">
           <div class="text-start flex items-center justify-between">
             <div class="max-w-[461px]">
               <p class="text-abu py-5 text-lg">Whay Thes School</p>
               <h3
-                class="font-semibold text-[#202020] font-asap text-xl sm:text-[2.5rem] sm:leading-[50px]"
+                class="font-semibold text-[#202020] font-asap text-xl text-[20px] lg:text-[2.5rem] lg:leading-[50px]"
               >
                 Design Schools, Trusted Programs, and 100% Guaranteed
               </h3>
@@ -231,15 +238,16 @@
               </p>
               <button class="mt-6">
                 <span
-                  class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+                  class="p-3 border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-slate-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
                 >
                   More Detail
                 </span>
               </button>
             </div>
           </div>
+          <!-- image -->
           <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4 content-center"
+            class="grid grid-cols-2 gap-2 lg:gap-4 content-center mt-10"
           >
             <figure
               class="animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
@@ -286,11 +294,11 @@
     <!-- section school end -->
 
     <!-- section about start -->
-    <section id="about" class="mt-10 py-10 bg-[#F5F5F5] px-4 md:px-28">
+    <section id="about" class="mt-10 py-10 bg-[#F5F5F5]">
       <div class="container mx-auto">
-        <div class="items-center flex flex-col lg:flex-row lg:justify-between gap-4 md:gap-36">
-          <div class="py-10 sm:w-1/2">
-            <div class="space-y-10">
+        <div class="items-center flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-36">
+          <div class="lg:w-1/2">
+            <div class="space-y-5 lg:space-y-10">
               <h1 class="text-[40px] font-semibold text-[#202020]">
                 About Atractive School
               </h1>
@@ -309,7 +317,7 @@
           </div>
 
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-5"
+            class="grid grid-cols-2 gap-5 mt-5"
           >
             <div
               class="w-full lg:max-w-[16.688rem] bg-putih shadow-lg border-[#EBEBEB] rounded-[24px] p-3"
@@ -405,11 +413,11 @@
     <!-- section about end -->
 
     <!-- section our vision start -->
-    <section class="mt-10 py-10 px-5 md:px-28">
+    <section class="mt-10 py-10">
       <div class="container mx-auto">
-        <div class="flex justify-between gap-4">
-          <div class="grid relative grid-cols-1 md:grid-cols-2 gap-2 gap-y-2 lg:gap-4">
-            <div class="flex gap-4 flex-col mt-8">
+        <div class="flex flex-col-reverse md:flex-row justify-between gap-4">
+          <div class="grid relative grid-cols-2 md:grid-cols-2 gap-2 gap-y-2 lg:gap-4">
+            <div class="flex gap-4 flex-col lg:mt-8">
               <figure
                 data-aos="zoom-in-up"
                 data-aos-duration="1000"
@@ -437,7 +445,7 @@
               </figure>
             </div>
 
-            <div class="flex gap-4 flex-col mb-8">
+            <div class="flex gap-4 flex-col lg:mb-8">
               <figure
                 data-aos="zoom-in-up"
                 data-aos-duration="1000"
@@ -485,7 +493,7 @@
     <!-- section our vision end -->
 
     <!-- section teacher start -->
-    <section class="my-20 px-5 md:px-28">
+    <section class="my-20 px-5">
       <div class="container mx-auto">
         <div class="space-y-3">
           <p class="text-abu">Teacher</p>
@@ -505,7 +513,7 @@
             <!-- Tombol slide kiri -->
             <button
               id="prev-slide"
-              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
+              class="w-10 h-10 ring-1 ring-[#EBEBEB] rounded-full flex justify-center items-center hover:bg-slate-200 focus:ring-2 hover:ring-slate-300"
             >
               <img src="img/slider.png" alt="logo scroll kiri" />
             </button>
@@ -513,22 +521,17 @@
             <!-- Tombol slide kanan -->
             <button
               id="next-slide"
-              class="w-10 h-10 border border-[#EBEBEB] rounded-full flex justify-center items-center"
+              class="w-10 h-10 ring-1 ring-[#EBEBEB] rounded-full flex justify-center items-center hover:bg-slate-200 focus:ring-2 hover:ring-slate-300"
             >
-              <img src="img/slider1.png" alt="logo scroll kanan" />
+              <img src="img/slider1.png" alt="logo scroll kanan"/>
             </button>
           </div>
         </div>
 
         <!-- Container untuk slider -->
         <div class="mt-5">
-          <div
-            id="teacher-slider"
-            class="flex gap-5 overflow-x-auto scroll-smooth scrollbar-hidden snap-x snap-mandatory"
-          >
-            <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
-            >
+          <div id="teacher-slider" class="flex gap-5 overflow-x-auto scroll-smooth scrollbar-hidden snap-x snap-mandatory">
+            <div class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[355px] snap-start text-center">
               <figure>
                 <img
                   src="img/teacher.png"
@@ -537,14 +540,14 @@
                 />
                 <figcaption class="px-10 py-4">
                   <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
-                  <p class="text-abu mt-4 text">
+                  <p class="text-abu mt-4">
                     Teacher of 3D Illustration | Motion Animation
                   </p>
                 </figcaption>
               </figure>
             </div>
             <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[355px] snap-start text-center"
             >
               <figure>
                 <img
@@ -561,24 +564,7 @@
               </figure>
             </div>
             <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
-            >
-              <figure>
-                <img
-                  src="img/teacher.png"
-                  alt=""
-                  class="w-[12.375rem] mx-auto"
-                />
-                <figcaption class="px-10 py-4">
-                  <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
-                  <p class="text-abu mt-4">
-                    Teacher of 3D Illustration | Motion Animation
-                  </p>
-                </figcaption>
-              </figure>
-            </div>
-            <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[355px] snap-start text-center"
             >
               <figure>
                 <img
@@ -595,7 +581,7 @@
               </figure>
             </div>
             <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[355px] snap-start text-center"
             >
               <figure>
                 <img
@@ -612,7 +598,7 @@
               </figure>
             </div>
             <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[415px] snap-start text-center"
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 min-w-[355px] snap-start text-center"
             >
               <figure>
                 <img
@@ -642,13 +628,12 @@
         </div>
       </div>
     </section>
-
     <!-- section teacher end -->
 
     <!-- section bloge start -->
-    <section id="bloge" class="mt-10 py-20 px-5 md:px-28 mx-auto bg-[#F5F5F5]">
+    <section id="bloge" class="mt-10 py-20 mx-auto bg-[#F5F5F5]">
       <div class="container mx-auto"> 
-        <div class="mx-auto text-center w-1/2">
+        <div class="mx-auto text-center lg:w-1/2">
           <h1 class="font-bold text-2xl text-[40px]">Our Blog</h1>
           <p class="text-abu mt-5">
             Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
@@ -658,26 +643,26 @@
         </div>
 
         <div class="flex flex-col lg:flex-row gap-10 mt-5">
-          <figure class="relative bg-red-300 w-2/3">
+          <figure class="relative overflow-hidden">
             <img
               src="img/bground.jpg"
               alt=""
-              class="bg-gradient-to-b from-[#CDCDCD] via-slate-600 w-full h-full"
+              class="bg-gradient-to-t from-gray-400 via-slate-600 w-full h-full"
             />
             <div
-              class="absolute bottom-5 left-5 text-white space-y-[12px] px-2"
+              class="absolute bottom-5 left-5 text-white   max-w-full overflow-hidden break-words"
             >
-              <h3 class="font-bold">Belajar Kembali pada tanggal 2 Mei 2023</h3>
-              <p class="">September 16, 2023</p>
-              <p>
-                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
-                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
+              <h3 class="font-bold truncate">Belajar Kembali pada tanggal 2 Mei 2023</h3>
+              <p class="truncate">September 16, 2023</p>
+              <p class="text-sm leading-tight">
+                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa. Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
               </p>
             </div>
           </figure>
+          
 
           <!-- ///  -->
-          <div class="flex flex-col items-center justify-center gap-4">
+          <div class="flex flex-col items-center justify-center gap-2 w-full">
             <div
               class="space-y-[12px] flex flex-col border-b border-b-[#E8E8E8] gap-3"
             >
@@ -789,47 +774,41 @@
 
     <!-- section our galery start -->
     <section class="mt-16 px-5">
-      <div class="text-center mx-auto lg:w-[561px] gap-5 sm:px-28">
-        <h1 class="font-bold text-4xl">Our Galery</h1>
-        <p class="text-abu text-xs leading-[28px] font-normal">
+      <div class="text-center mx-auto w-72 lg:w-[561px] gap-5">
+        <h1 class="font-bold text-4xl mb-3">Our Galery</h1>
+        <p class="text-abu text-xs  leading-4 lg:leading-[28px] font-normal">
           Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
           Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv. Bijarade
           ren defagt,
         </p>
       </div>
-      <div class="mt-5 mx-auto px-0">
-        <div class="flex gap-6 overflow-x-auto">
-          <img src="img/galery/galeri1.png" alt="" />
-          <img src="img/galery/galeri3.png" alt="" />
-          <img src="img/galery/galeri4.png" alt="" />
-          <img src="img/galery/galeri1.png" alt="" />
-          <img src="img/galery/galeri3.png" alt="" />
-          <img src="img/galery/galeri4.png" alt="" />
-          <img src="img/galery/galeri1.png" alt="" />
-          <img src="img/galery/galeri3.png" alt="" />
-          <img src="img/galery/galeri4.png" alt="" />
-          <img src="img/galery/galeri1.png" alt="" />
-          <img src="img/galery/galeri3.png" alt="" />
-          <img src="img/galery/galeri4.png" alt="" />
+      <div class="swiper-container mt-5 mx-auto px-0 overflow-hidden">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="object-cover" src="img/galery/galeri1.png" alt=""></div>
+            <div class="swiper-slide"><img class="object-cover" src="img/galery/galeri3.png" alt=""></div>
+            <div class="swiper-slide"><img class="object-cover" src="img/galery/galeri4.png" alt=""></div>
+            <div class="swiper-slide"><img class="object-cover" src="img/galery/galeri1.png" alt=""></div>
+            <div class="swiper-slide"><img class="object-cover" src="img/galery/galeri3.png" alt=""></div>
+            <div class="swiper-slide"><img class="object-cover" src="img/galery/galeri4.png" alt=""></div>
         </div>
-      </div>
+    </div>
     </section>
     <!-- section our galery end -->
 
     <!-- footer  -->
-    <footer id="footer" class="w-full bg-[#1A1A1A] mt-10 px-5 md:px-28 py-10">
-      <div class="container mx-auto">
-        <div
-          class="flex flex-col md:flex-row md:justify-between text-white gap-8 text-sm"
-        >
-          <div class="w-[292px] space-y-8">
-            <h3 class="font-bold">Atracctive School</h3>
-            <p class="leading-[28px]">
+    <footer id="footer" class="w-full bg-[#1A1A1A] mt-10 py-5 md:py-10">
+      <div class="container mx-auto px-5">
+        <div class="flex flex-col md:flex-row md:justify-between text-white text-sm gap-10 md:gap-8">
+          
+          <!-- Section 1 -->
+          <div class="max-w-sm md:max-w-[292px] text-center space-y-4 md:space-y-5 mx-auto md:text-left">
+            <h3 class="font-bold text-lg">Atracctive School</h3>
+            <p class="leading-[28px] text-[16px]">
               Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
               Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
               Epire kanesk. Monosa medelgam tisk.
             </p>
-            <div class="flex gap-4">
+            <div class="flex justify-center md:justify-start gap-4">
               <i class="fa-brands fa-instagram text-white"></i>
               <i class="fa-brands fa-youtube text-white"></i>
               <i class="fa-brands fa-whatsapp text-white"></i>
@@ -837,56 +816,69 @@
               <i class="fa-brands fa-twitter text-white"></i>
             </div>
           </div>
-
-          <div
-            class="text-white font-normal space-y-4 md:space-y-8 mt-10 md:mt-0 leading-[19px]"
-          >
-            <h3 class="font-bold">Home</h3>
-            <p>Beranda</p>
-            <p>Program Keahlian</p>
-            <p>Galery</p>
-            <p>Our News</p>
+    
+          <!-- Section 2 -->
+          <div class="text-center md:text-left space-y-3 md:space-y-5">
+            <h3 class="font-bold text-lg">Home</h3>
+            <p class="text-[16px]">Beranda</p>
+            <p class="text-[16px]">Program Keahlian</p>
+            <p class="text-[16px]">Galery</p>
+            <p class="text-[16px]">Our News</p>
           </div>
+    
+          <!-- Section 3 -->
+          <div class="text-center md:text-left space-y-3 md:space-y-5 px-1">
 
-          <div
-            class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0"
-          >
-            <h3>Contact</h3>
-            <div class="space-y-8">
-              <div class="flex gap-4">
-                <img src="img/telp.png" alt="" />
-                <p>(406) 555-0120</p>
+            <h3 class="font-bold text-lg">Contact</h3>
+            <div class="space-y-3">
+              <div class="flex items-center justify-center md:justify-start gap-4">
+                <img src="img/telp.png" alt="" class="w-5 h-5" />
+                <p class="text-[16px]">(406) 555-0120</p>
               </div>
-              <div class="flex gap-4">
-                <img src="img/dashicons_email (1).png" alt="" />
-                <p>atractiveschools1212@gmail.com</p>
+              <div class="flex items-center justify-center md:justify-start gap-4">
+                <img src="img/dashicons_email (1).png" alt="" class="w-5 h-5" />
+                <p class="text-[16px]">atractiveschools1212@gmail.com</p>
               </div>
-              <div class="flex gap-4">
-                <img src="img/location.png" alt="" />
-                <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+              <div class="flex items-center justify-center md:justify-start gap-1 sm:gap-4">
+                <img src="img/location.png" alt="" class="w-5 h-5" />
+                <p class="text-[16px]">2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
               </div>
             </div>
           </div>
-
-          <div
-            class="space-y-4 md:space-y-8 text-white font-normal mt-10 md:mt-0"
-          >
-            <h3>Maps location</h3>
+    
+          <!-- Section 4 -->
+          <div class="text-center md:text-left space-y-3 md:space-y-5">
+            <h3 class="font-bold text-lg">Maps location</h3>
             <figure>
-              <img src="img/maps.png" alt="" />
+              <img src="img/maps.png" alt="" class="mx-auto md:mx-0" />
             </figure>
           </div>
-          <!-- <div class="flex flex-wrap justify-between gap-8 bg-blue-400">
-          </div> -->
+    
         </div>
-      </div>
-      <div class="sm:text-end mt-10 text-white">
-        <p class="text-sm">&copy; Mangcoding. All rights reserved.</p>
+    
+        <!-- Copyright -->
+        <div class="text-center md:text-end mt-5 text-white">
+          <p class="text-sm">&copy; Mangcoding. All rights reserved.</p>
+        </div>
+    
       </div>
     </footer>
+    
 
     <script src="src/script.js"></script>
     <script>
+      var swiper = new Swiper('.swiper-container', {
+            slidesPerView: '4',
+            spaceBetween: 8, // Menghilangkan jarak antar slide agar mepet
+            loop: true,
+            grabCursor: false, // Menampilkan efek tangan saat di-swipe
+            freeMode: true, // Membuat gerakan lebih natural saat di-swipe
+            autoplay: {
+                delay: 1000, // Langsung bergerak tanpa jeda
+                disableOnInteraction: false,
+            },
+            speed: 3000, // Kecepatan transisi smooth
+        });
       AOS.init();
     </script>
   </body>
