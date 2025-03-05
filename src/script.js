@@ -2,11 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const menuIcon = document.getElementById("menu-icon");
+  const menuLinks = document.querySelectorAll("#mobile-menu a"); // Ambil semua link dalam menu
   let isOpen = false;
 
-  // Pastikan elemen menu memakai transform dan transisi yang smooth
   mobileMenu.classList.add("transform", "transition-all", "duration-500", "ease-in-out");
-  // Kondisi awal: menu tersembunyi dengan geser ke kiri dan opacity 0
   mobileMenu.classList.add("-translate-x-full", "opacity-0");
 
   function closeMenu() {
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <line x1="4" y1="12" x2="20" y2="12" stroke-linecap="round"></line>
       <line x1="4" y1="18" x2="20" y2="18" stroke-linecap="round"></line>
     `;
-    // Aktifkan kembali scroll pada halaman ketika menu tertutup
     document.body.style.overflow = "auto";
   }
 
@@ -31,18 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
         <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round"></line>
         <line x1="6" y1="18" x2="18" y2="6" stroke-linecap="round"></line>
       `;
-      // Nonaktifkan scroll pada body ketika menu terbuka
       document.body.style.overflow = "hidden";
     } else {
       closeMenu();
     }
   });
+
+  // Menutup menu saat link diklik
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
 });
-
-
-
-
-
 
 
 // slider start 
@@ -111,6 +110,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-
-
-console.log

@@ -42,6 +42,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js" defer></script>
   </head>
   <body class="font-lato">
     <!-- Header start -->
@@ -56,7 +58,9 @@
             <li class="font-bold text-[#1A1A1A]">Home</li>
             <li class="hover:text-slate-700"><a href="#about">About</a></li>
             <li class="hover:text-slate-700"><a href="#bloge">Blog</a></li>
-            <li class="hover:text-slate-700"><a href="">Program</a></li>
+            <li class="hover:text-slate-700">
+              <a href="programs">Program</a>
+            </li>
             <li>
               <button>
                 <span
@@ -110,19 +114,54 @@
         id="mobile-menu"
         class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0 px-4 absolute bg-white w-full h-screen shadow-lg"
       >
-        <ul class="flex flex-col sm:items-center gap-4 text-abu mt-4 py-4">
-          <li class="font-bold text-[#1A1A1A] w-full"><a href="" class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1">Home</a></li>
-          <li class="font-bold text-[#1A1A1A] w-full"><a href="" class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1">About</a></li>
-          <li class="font-bold text-[#1A1A1A] w-full"><a href="" class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1">Blog</a></li>
-          <li class="font-bold text-[#1A1A1A] w-full"><a href="" class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1">Home</a></li>
-          <li class="font-bold text-[#1A1A1A] w-full"><a href="" class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1">Contact</a></li>
+        <ul class="flex flex-col sm:items-center gap-4 text-gray-500 mt-4 py-4">
+          <li class="font-bold text-[#1A1A1A] w-full">
+            <a
+              href="#hero"
+              class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1"
+            >
+              Home
+            </a>
+          </li>
+          <li class="font-bold text-[#1A1A1A] w-full">
+            <a
+              href="#about"
+              class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1"
+            >
+              About
+            </a>
+          </li>
+          <li class="font-bold text-[#1A1A1A] w-full">
+            <a
+              href="#bloge"
+              class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="font-bold text-[#1A1A1A] w-full">
+            <a
+              href="#programs"
+              class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1"
+            >
+              Programs
+            </a>
+          </li>
+          <li class="font-bold text-[#1A1A1A] w-full">
+            <a
+              href="#footer"
+              class="hover:bg-gray-300 rounded-xl hover:text-slate-700 w-full py-2 sm:text-center block p-1"
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </div>
     </header>
     <!-- Header end -->
 
     <!-- Hero section start-->
-    <section class="bg-putih mt-10">
+    <section id="hero" class="bg-putih mt-10">
       <div class="container mx-auto relative">
         <div data-aos="zoom-in-up" class="max-w-[761px] mx-auto py-10">
           <p class="text-center text-abu">Welcom to Scholl</p>
@@ -229,7 +268,7 @@
     <!-- patner sochool end -->
 
     <!-- section school start-->
-    <section class="py-5 md:py-10">
+    <section id="programs" class="py-5 md:py-10">
       <div class="container mx-auto">
         <div class="md:flex gap-4 lg:gap-8 justify-between">
           <div class="text-start flex items-center justify-between">
@@ -502,7 +541,7 @@
         <div class="space-y-3">
           <p class="text-abu">Teacher</p>
           <h1
-            class="text-[#202020] text-2xl md:text-[40px] md:w-1/2 font-semibold font-asap"
+            class="text-[#202020] text-2xl md:text-[40px] md:w-1/2 font-semibold font-asap lg:leading-[50px]"
           >
             Teacher in Attractive School
           </h1>
@@ -657,7 +696,7 @@
               <img
                 src="img/bground.jpg"
                 alt="Blog"
-                class=" via-slate-600 w-full h-full"
+                class="via-slate-600 w-full h-full"
               />
               <div
                 class="absolute bottom-7 text-white w-[500px] overflow-hidden break-words px-4"
@@ -676,18 +715,11 @@
           </a>
 
           <!-- ///  -->
-          <div class="flex flex-col items-center justify-center gap-4 ">
-            <div class=" flex flex-col border-b-[#E8E8E8] gap-3">
-              <a href="" class="font-semibold w-[15.125rem] text-lg"> Lorem Ipsum Lorem Ipsum Lorem Ipsum</a>
-              <p class="text-abu">
-                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
-                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
-              </p>
-              <div class="border border-gray-200"></div>
-            </div>
-
-            <div class=" flex flex-col gap-3 ">
-              <a href="" class="font-semibold w-[15.125rem] text-lg"> Lorem Ipsum Lorem Ipsum Lorem Ipsum</a>
+          <div class="flex flex-col items-center justify-center gap-4">
+            <div class="flex flex-col border-b-[#E8E8E8] gap-3">
+              <a href="" class="font-semibold w-[15.125rem] text-lg">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum</a
+              >
               <p class="text-abu">
                 Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
                 Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
@@ -696,7 +728,20 @@
             </div>
 
             <div class="flex flex-col gap-3">
-              <a href="" class="font-semibold w-[15.125rem] text-lg"> Lorem Ipsum Lorem Ipsum Lorem Ipsum</a>
+              <a href="" class="font-semibold w-[15.125rem] text-lg">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum</a
+              >
+              <p class="text-abu">
+                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              </p>
+              <div class="border border-gray-200"></div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <a href="" class="font-semibold w-[15.125rem] text-lg">
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum</a
+              >
               <p class="text-abu">
                 Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
                 Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
@@ -852,7 +897,7 @@
         >
           <!-- Section 1 -->
           <div
-            class="max-w-full md:max-w-[292px] text-left space-y-4 md:space-y-5"
+            class="w-full  md:max-w-[292px] text-left space-y-4 md:space-y-5"
           >
             <h3 class="font-bold text-base sm:text-lg">Atracctive School</h3>
             <p class="leading-[28px] text-base">
@@ -860,23 +905,35 @@
               Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
               Epire kanesk. Monosa medelgam tisk.
             </p>
-            <div class="flex justify-start gap-4">
-              <i class="fa-brands fa-instagram text-white"></i>
-              <i class="fa-brands fa-youtube text-white"></i>
-              <i class="fa-brands fa-whatsapp text-white"></i>
-              <i class="fa-brands fa-linkedin-in text-white"></i>
-              <i class="fa-brands fa-twitter text-white"></i>
-            </div>
+            <ul class="flex justify-start gap-4">
+              <li>
+                <a href=""><i class="fa-brands fa-instagram text-white"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-youtube text-white"></i></a>
+              </li>
+              <li>
+                <a href=""> <i class="fa-brands fa-whatsapp text-white"></i></a>
+              </li>
+              <li>
+                <a href=""
+                  ><i class="fa-brands fa-linkedin-in text-white"></i
+                ></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter text-white"></i></a>
+              </li>
+            </ul>
           </div>
 
           <div class="flex justify-between gap-8">
             <!-- Section 2 -->
             <div class="text-left space-y-3 md:space-y-5 text-xs md:text-base">
-              <h3 class="font-bold text-lg">Home</h3>
-              <p class="text-base">Beranda</p>
-              <p class="text-base">Program Keahlian</p>
-              <p class="text-base">Galery</p>
-              <p class="text-base">Our News</p>
+              <h3 class="font-bold text-lg"><a href="">Home</a></h3>
+              <p class="text-base"><a href="">Beranda</a></p>
+              <p class="text-base"><a href="">Program Keahlian</a></p>
+              <p class="text-base"><a href="">Galery</a></p>
+              <p class="text-base"><a href="">Our News</a></p>
             </div>
 
             <!-- Section 3 -->
@@ -885,7 +942,7 @@
               <div class="space-y-3">
                 <div class="flex items-start justify-start gap-4">
                   <img src="img/telp.png" alt="" class="w-5 h-5" />
-                  <p class="text-[16px]">(406) 555-0120</p>
+                  <p class="text-[16px]"><a href="">(406) 555-0120</a></p>
                 </div>
                 <div class="flex items-start justify-start gap-4">
                   <img
@@ -894,13 +951,13 @@
                     class="w-5 h-5"
                   />
                   <p class="text-[16px] break-all whitespace-normal">
-                    atractiveschools1212@gmail.com
+                    <a href="">atractiveschools1212@gmail.com</a>
                   </p>
                 </div>
                 <div class="flex items-start justify-start gap-4 sm:gap-4">
                   <img src="img/location.png" alt="" class="w-5 h-5" />
                   <p class="text-[16px]">
-                    2972 Westheimer Rd. Santa Ana, Illinois 85486
+                    <a href="">2972 Westheimer Rd. Santa Ana, Illinois 85486</a>
                   </p>
                 </div>
               </div>
@@ -910,9 +967,10 @@
           <!-- Section 4 -->
           <div class="text-left space-y-3 md:space-y-5">
             <h3 class="font-bold text-lg">Maps location</h3>
-            <figure class="">
-              <img src="img/maps.png" alt="" class="" />
-            </figure>
+            <a href="">
+              <figure class="">
+                <img src="img/maps.png" alt="" class="" /></figure
+            ></a>
           </div>
         </div>
 
