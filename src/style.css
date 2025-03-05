@@ -34,8 +34,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -98,7 +96,7 @@ button:focus-visible {
 }
 
 header li > a {
-  @apply font-bold text-base font-Inter;
+  @apply text-base font-Inter;
 }
 
 .section-ui-ux li {
@@ -130,7 +128,7 @@ header li > a {
 }
 
 .section-hero h1 {
-  @apply text-6xl font-bold font-Inter sm:max-md:text-white sm:max-md:text-2xl sm:max-md:leading-[150%];
+  @apply text-6xl font-bold md:font-Inter sm:max-md:font-sans sm:max-md:text-white sm:max-md:text-2xl sm:max-md:leading-[150%];
 }
 
 .sub-heading {
@@ -146,7 +144,7 @@ header li > a {
 }
 
 .grid-items {
-  @apply md:bg-gradient-to-t md:from-[#A0A5B0] md:from-0% md:to-[37%] md:to-white xl:w-[315px] rounded-3xl md:px-6 py-3 flex flex-col sm:max-md:gap-4 md:gap-4 md:border md:border-[#7F7F7F] md:w-[19rem];
+  @apply md:bg-gradient-custom rounded-3xl md:px-6 py-3 flex flex-col sm:max-md:gap-4 md:gap-4 md:border md:border-[#7F7F7F] md:w-[19rem];
 }
 
 .grid-items svg {
@@ -162,15 +160,23 @@ header li > a {
 }
 
 h2 {
-  @apply text-5xl font-semibold font-sans;
+  @apply text-5xl sm:max-md:text-3xl font-semibold font-sans;
 }
 
 h3 {
   @apply text-2xl font-semibold font-sans;
 }
 
+p {
+  @apply sm:max-md:text-xs;
+}
+
+span {
+  @apply sm:max-md:text-xs;
+}
+
 .testimonial-items {
-  @apply bg-gradient-to-t from-[#A0A5B0] from-0% to-[37%] to-white w-[315px] rounded-3xl px-6 py-3 flex-col gap-4 border border-[#7F7F7F];
+  @apply bg-gradient-custom w-[315px] rounded-3xl px-6 py-3 flex-col gap-4 border border-[#7F7F7F];
 }
 
 .splide__arrow {
@@ -178,7 +184,7 @@ h3 {
 }
 
 .portofolio-items {
-  @apply relative px-11 py-9 bg-gradient-to-l from-[#A0A5B0] from-0% to-[37%] to-white rounded-3xl flex-col flex gap-6 border border-[#7F7F7F] place-items-center md:h-auto xl:h-[726px];
+  @apply relative px-11 py-9 bg-gradient-custom-left rounded-3xl flex-col flex gap-6 border border-[#7F7F7F] place-items-center md:h-auto xl:h-[726px];
 }
 
 .portofolio-items img {
@@ -194,7 +200,7 @@ h3 {
 }
 
 .employee-items {
-  @apply relative px-11 py-9 bg-gradient-to-t from-[#A0A5B0] from-0% to-[37%] to-white rounded-3xl flex-col flex border border-[#7F7F7F] place-items-center md:h-auto xl:h-[346px];
+  @apply relative px-11 py-9 bg-gradient-custom rounded-3xl flex-col flex border border-[#7F7F7F] place-items-center md:h-auto xl:h-[346px];
 }
 
 .employee-items img {
@@ -205,16 +211,24 @@ h3 {
   @apply font-Inter font-semibold text-xl text-black;
 }
 
+.employee-items .job-label {
+  @apply font-Inter text-base text-black;
+}
+
 .employee-items p {
   @apply font-Inter text-base text-black mt-4;
 }
 
 .employee-items .job-label {
-  @apply font-Inter text-base text-black mt-[6px];
+  @apply font-Inter text-base md:text-black mt-[6px];
 }
 
 .employee-items .social-media {
   @apply mt-4;
+}
+
+.social-media ul {
+  @apply flex flex-row gap-3;
 }
 
 footer {
@@ -306,4 +320,42 @@ ul li:nth-of-type(3) .icon-code {
 
 .section-ui-ux .text-wrap {
   @apply flex flex-col gap-3;
+}
+
+.section-vision-mission .text-content {
+  @apply max-w-[690px];
+}
+
+.section-vision-mission * {
+  @apply text-black;
+}
+
+.section-our-team .employee-items {
+  @apply md:h-[346px] md:bg-gradient-custom text-center;
+}
+
+.section-contact-now p,
+.section-contact-now h2,
+.section-contact-now h3 {
+  @apply text-black;
+}
+
+.section-image-with-text {
+  @apply bg-[#0E1E5D];
+}
+
+.section-image-with-text {
+  @apply bg-[#0E1E5D];
+}
+
+.section-image-with-text .text-wrapping * {
+  @apply text-white border-white;
+}
+
+.mobile {
+  @apply md:hidden;
+}
+
+.desktop {
+  @apply md:block sm:max-md:hidden;
 }

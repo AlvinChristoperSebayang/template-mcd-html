@@ -6,16 +6,18 @@ import { setupCounter } from "./counter.js";
 import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
-const splide = new Splide(".splide", {
-  type: "loop",
-  autoWidth: true,
-  buttons: false,
-  autoScroll: {
-    speed: 1,
-  },
-});
+if (document.body.dataset.page === "home") {
+  const splide = new Splide(".splide", {
+    type: "loop",
+    autoWidth: true,
+    buttons: false,
+    autoScroll: {
+      speed: 1,
+    },
+  });
+  splide.mount(window.splide.Extensions);
+}
 
-splide.mount(window.splide.Extensions);
 // document.querySelector('#app').innerHTML = `
 //   <div>
 //     <a href="https://vite.dev" target="_blank">
