@@ -49,7 +49,7 @@ function navigateTo(targetId) {
       duration: 1.5,
       offset: -50, // Bisa diatur sesuai header height
     });
-  }, );
+  }, 300);
 }
 
 // Fungsi toggle modal
