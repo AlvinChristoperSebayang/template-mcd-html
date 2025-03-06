@@ -1,6 +1,5 @@
 import Lenis from "@studio-freight/lenis";
-
-// Inisialisasi Lenis
+// Lenis scrolling start
 const lenis = new Lenis({
   duration: 1,
   lerp: 0.1,
@@ -8,29 +7,30 @@ const lenis = new Lenis({
   smoothTouch: false,
 });
 
-// Animasi per-frame
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+// Lenis scrolling end
 
-// Fungsi toggle dropdown
+// toggle dropdown mobile start
 function toggleDropdown() {
   const dropdown = document.getElementById("dropdownMenu");
   const hamburger = document.getElementById("menuToggle");
 
   dropdown.classList.toggle("-translate-x-full");
-  hamburger.classList.toggle("active"); // Tambahkan/Remove class active
+  hamburger.classList.toggle("active"); 
 
   if (!dropdown.classList.contains("-translate-x-full")) {
-    lenis.stop(); // Matikan scrolling Lenis
+    lenis.stop(); 
   } else {
-    lenis.start(); // Aktifkan kembali scrolling Lenis
+    lenis.start(); 
   }
 }
+// toggle dropdown mobile end
 
-// Fungsi untuk navigasi dengan Lenis
+// navigasi click dengan Lenis start
 function navigateTo(targetId) {
   const dropdown = document.getElementById("dropdownMenu");
   const hamburger = document.getElementById("menuToggle");
@@ -38,21 +38,20 @@ function navigateTo(targetId) {
 
   if (!targetElement) return;
 
-  // Tutup dropdown dengan animasi
   dropdown.classList.add("-translate-x-full");
-  hamburger.classList.remove("active"); // Reset animasi hamburger
+  hamburger.classList.remove("active"); 
   lenis.start();
 
-  // Tunggu animasi selesai baru scroll (0.3s sesuai transition)
   setTimeout(() => {
     lenis.scrollTo(targetElement, {
       duration: 1.5,
-      offset: -50, // Bisa diatur sesuai header height
+      offset: -50, 
     });
-  }, 300);
+  },);
 }
+// navigasi click dengan Lenis end
 
-// Fungsi toggle modal
+// toggle modal stop scrolling
 function toggleModal() {
   const modal = document.getElementById("modalOverlay");
 

@@ -71,17 +71,17 @@
 }
 
 // Apply ke semua button
-.button-white {
+.btn-secondary {
   @include button-style(white, none, black);
   @include button-hover-effect(2px);
 }
 
-.button-transparent {
+.btn-primary {
   @include button-style(transparent, 1.5px solid #504cff, white);
   @include button-effect-hover-secondary;
 }
 
-.button-of-fly {
+.btn-secondary3 {
   @include button-style(white, none, black);
   @include button-hover-effect(2px);
 
@@ -96,7 +96,7 @@
   }
 }
 
-.button-fly {
+.btn-secondary2 {
   @include button-style(white, none white, black, absolute);
   @include button-hover-effect(2px);
 

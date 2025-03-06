@@ -1,4 +1,4 @@
-.button-white {
+.btn-secondary {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,33 +12,33 @@
   transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1024px) {
-  .button-white {
+  .btn-secondary {
     width: auto;
     top: 24px;
     right: 8%;
   }
 }
 @media (min-width: 768px) {
-  .button-white {
+  .btn-secondary {
     padding: 14px 16px;
   }
 }
 @media (min-width: 1024px) {
-  .button-white {
+  .btn-secondary {
     padding: 14px 24px;
   }
 }
-.button-white:hover {
+.btn-secondary:hover {
   letter-spacing: 2px;
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 7px 29px 0px;
 }
-.button-white:hover figure {
+.btn-secondary:hover figure {
   transform: rotate(45deg) translateX(6px);
   transition: transform 300ms ease-in-out;
 }
-.button-white:active {
+.btn-secondary:active {
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 0px 0px 0px;
@@ -46,7 +46,7 @@
   transition: 80ms;
 }
 
-.button-transparent {
+.btn-primary {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,32 +60,32 @@
   transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1024px) {
-  .button-transparent {
+  .btn-primary {
     width: auto;
     top: 24px;
     right: 8%;
   }
 }
 @media (min-width: 768px) {
-  .button-transparent {
+  .btn-primary {
     padding: 14px 16px;
   }
 }
 @media (min-width: 1024px) {
-  .button-transparent {
+  .btn-primary {
     padding: 14px 24px;
   }
 }
-.button-transparent:hover {
+.btn-primary:hover {
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 7px 29px 0px;
 }
-.button-transparent:hover figure {
+.btn-primary:hover figure {
   transform: rotate(45deg);
   transition: transform 300ms ease-in-out;
 }
-.button-transparent:active {
+.btn-primary:active {
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 0px 0px 0px;
@@ -93,7 +93,7 @@
   transition: 80ms;
 }
 
-.button-of-fly {
+.btn-secondary3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,33 +107,33 @@
   transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1024px) {
-  .button-of-fly {
+  .btn-secondary3 {
     width: auto;
     top: 24px;
     right: 8%;
   }
 }
 @media (min-width: 768px) {
-  .button-of-fly {
+  .btn-secondary3 {
     padding: 14px 16px;
   }
 }
 @media (min-width: 1024px) {
-  .button-of-fly {
+  .btn-secondary3 {
     padding: 14px 24px;
   }
 }
-.button-of-fly:hover {
+.btn-secondary3:hover {
   letter-spacing: 2px;
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 7px 29px 0px;
 }
-.button-of-fly:hover figure {
+.btn-secondary3:hover figure {
   transform: rotate(45deg) translateX(6px);
   transition: transform 300ms ease-in-out;
 }
-.button-of-fly:active {
+.btn-secondary3:active {
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 0px 0px 0px;
@@ -141,19 +141,19 @@
   transition: 80ms;
 }
 @media (min-width: 1024px) {
-  .button-of-fly {
+  .btn-secondary3 {
     padding: 14px 62px;
   }
 }
 @media (max-width: 472px) {
-  .button-of-fly {
+  .btn-secondary3 {
     width: 100%;
     display: flex;
     max-width: 410px;
   }
 }
 
-.button-fly {
+.btn-secondary2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,33 +167,33 @@
   transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1024px) {
-  .button-fly {
+  .btn-secondary2 {
     width: auto;
     top: 24px;
     right: 8%;
   }
 }
 @media (min-width: 768px) {
-  .button-fly {
+  .btn-secondary2 {
     padding: 14px 16px;
   }
 }
 @media (min-width: 1024px) {
-  .button-fly {
+  .btn-secondary2 {
     padding: 14px 24px;
   }
 }
-.button-fly:hover {
+.btn-secondary2:hover {
   letter-spacing: 2px;
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 7px 29px 0px;
 }
-.button-fly:hover figure {
+.btn-secondary2:hover figure {
   transform: rotate(45deg) translateX(6px);
   transition: transform 300ms ease-in-out;
 }
-.button-fly:active {
+.btn-secondary2:active {
   background-color: hsl(261, 80%, 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93, 24, 220) 0px 0px 0px 0px;
@@ -201,57 +201,57 @@
   transition: 80ms;
 }
 @media (min-width: 1025px) {
-  .button-fly {
+  .btn-secondary2 {
     padding: 14px 62px;
   }
 }
 @media (min-width: 1441px) {
-  .button-fly {
+  .btn-secondary2 {
     right: 0;
   }
 }
 @media (min-width: 1391px) and (max-width: 1440px) {
-  .button-fly {
+  .btn-secondary2 {
     right: 50px;
   }
 }
 @media (min-width: 1321px) and (max-width: 1390px) {
-  .button-fly {
+  .btn-secondary2 {
     right: 30px;
   }
 }
 @media (max-width: 1320px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 130px;
     right: 50px;
   }
 }
 @media (max-width: 1110px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 230px;
     right: 50px;
   }
 }
 @media (max-width: 767px) {
-  .button-fly {
+  .btn-secondary2 {
     bottom: unset;
     top: 180px;
     right: unset;
   }
 }
 @media (max-width: 685px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 200px;
   }
 }
 @media (max-width: 611px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 260px;
     right: unset;
   }
 }
 @media (max-width: 472px) {
-  .button-fly {
+  .btn-secondary2 {
     width: 100%;
     display: flex;
     max-width: 410px;
@@ -259,22 +259,22 @@
   }
 }
 @media (max-width: 384px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 300px;
   }
 }
 @media (max-width: 383px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 360px;
   }
 }
 @media (max-width: 265px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 380px;
   }
 }
 @media (max-width: 254px) {
-  .button-fly {
+  .btn-secondary2 {
     top: 440px;
   }
 }
