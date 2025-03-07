@@ -43,31 +43,31 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="script.js" defer></script>
+    <!-- gsap scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
   </head>
-  <body class="font-lato">
+  <body class="smooth-content font-lato">
     <!-- Header start -->
     <header
-      class="bg-white h-[618.75%] py-2 md:py-7 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg"
+      class="bg-white h-[618.75%] py-3 md:py-4 border-b border-b-[#E7E7E7] sticky top-0 z-50 shadow-lg"
     >
       <div class="container mx-auto">
-        <nav class="flex justify-between items-center bg-white">
-          <h1 class="font-bold">Atracctive School</h1>
+        <nav class="flex justify-between items-center">
+          <h2 class="font-bold">Atracctive School</h2>
           <!-- Menu Desktop (tetap sama) -->
-          <ul class="hidden md:flex gap-10 text-abu">
+          <ul class="hidden md:flex gap-10 text-abu items-center">
             <li class="font-bold text-[#1A1A1A]">Home</li>
             <li class="hover:text-slate-700"><a href="#about">About</a></li>
             <li class="hover:text-slate-700"><a href="#bloge">Blog</a></li>
             <li class="hover:text-slate-700">
-              <a href="programs">Program</a>
+              <a href="#programs">Program</a>
             </li>
             <li>
-              <button>
-                <span
-                  class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black duration-500 transition-colors ease-out"
-                >
-                  Contact
-                </span>
+              <button
+                class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black duration-500 transition-colors ease-out"
+              >
+                Contact
               </button>
             </li>
           </ul>
@@ -163,25 +163,26 @@
     <!-- Hero section start-->
     <section id="hero" class="bg-putih mt-10">
       <div class="container mx-auto relative">
-        <div data-aos="zoom-in-up" class="max-w-[761px] mx-auto py-10">
-          <p class="text-center text-abu">Welcom to Scholl</p>
+        <div class="max-w-[761px] mx-auto py-10">
+          <p data-aos="fade-down" class="text-center text-abu">
+            Welcom to Scholl
+          </p>
           <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center md:leading-[76px] my-5 font-semibold"
+            data-aos="fade-up"
+            class="text-3xl sm:text-[40px] md:text-6xl text-center md:leading-[100%] my-5 font-semibold"
           >
             Explore a sea of wit that is Impossible to resist
           </h1>
-          <p class="text-center text-abu mt-5">
+          <p data-aos="fade-up" class="text-center text-abu mt-5">
             Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
             Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
             Bijarade ren defagt, mivis pott. Trar visat til
           </p>
-          <div class="text-center my-7">
-            <button>
-              <span
-                class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
-              >
-                Our Blog
-              </span>
+          <div data-aos="fade-up" class="text-center my-7">
+            <button
+              class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+            >
+              Our Blog
             </button>
           </div>
         </div>
@@ -242,9 +243,10 @@
       </div>
       <figure class="w-full">
         <img
+          id="hero-img"
           src="img/hero.png"
           alt="hero"
-          class="block min-w-screen mx-auto h-[250px] object-cover sm:h-[300px] md:h-auto"
+          class="block min-w-screen mx-auto h-[280px] object-cover sm:h-[300px] md:h-auto"
         />
       </figure>
     </section>
@@ -252,15 +254,17 @@
 
     <!-- patner school start -->
     <section class="container mx-auto py-10">
-      <h3 class="text-center text-abu">Partners School</h3>
+      <h3 data-aos="fade-up" class="text-center text-abu">Partners School</h3>
       <div class="flex flex-wrap justify-center items-center gap-4 my-5">
-        <figure>
+        <figure data-aos="fade-up">
           <img src="img/microsoft.png" alt="" />
         </figure>
-        <figure>
+
+        <figure data-aos="fade-up">
           <img src="img/google.png" alt="" width="155.5px" />
         </figure>
-        <figure>
+
+        <figure data-aos="fade-up">
           <img src="img/zoom.png" alt="" />
         </figure>
       </div>
@@ -273,63 +277,62 @@
         <div class="md:flex gap-4 lg:gap-8 justify-between">
           <div class="text-start flex items-center justify-between">
             <div class="max-w-[461px]">
-              <p class="text-abu py-5 text-lg">Whay Thes School</p>
-              <h3
-                class="font-semibold text-[#202020] font-asap text-xl lg:text-[2.5rem] lg:leading-[50px]"
-              >
-                Design Schools, Trusted Programs, and 100% Guaranteed
-              </h3>
-              <p class="text-abu py-5 text-lg">
+              <p data-aos="fade-right" class="text-abu py-5 text-lg">
+                Whay Thes School
+              </p>
+              <h2
+                class="typing font-semibold text-[#202020] font-asap text-3xl lg:text-[2.5rem] lg:leading-[50px]"
+              ></h2>
+              <p data-aos="fade-right" class="text-abu py-5 text-lg">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
                 Terabel pov astrobel sar direlig.
               </p>
-              <button class="mt-6">
-                <span
-                  class="p-3 border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:ring-2 hover:ring-gray-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
-                >
-                  More Detail
-                </span>
+              <button
+                data-aos="fade-right"
+                class="mt-6 p-3 border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:ring-2 hover:ring-gray-300 hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+              >
+                More Detail
               </button>
             </div>
           </div>
           <!-- image -->
           <div class="grid grid-cols-2 gap-2 lg:gap-4 content-center mt-10">
-            <figure
-              class="animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
-            >
+            <figure class="overflow-hidden h-auto transition rounded-xl group">
               <img
+                data-aos="fade-down"
                 src="img/foto.png"
                 alt=""
-                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+                class="w-[16.688rem] object-cover transition duration-100 group-hover:scale-[1.2]"
               />
             </figure>
 
             <figure
-              class="lg:-translate-y-10 animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
+              class="lg:-translate-y-10 overflow-hidden h-auto transition rounded-xl group"
             >
               <img
+                data-aos="fade-up-left"
                 src="img/foto1.png"
                 alt=""
-                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+                class="w-[16.688rem] object-cover transition duration-100 group-hover:scale-[1.2]"
               />
             </figure>
 
-            <figure
-              class="animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
-            >
+            <figure class="overflow-hidden h-auto transition rounded-xl group">
               <img
+                data-aos="fade-up"
                 src="img/foto2.png"
                 alt=""
-                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+                class="w-[16.688rem] object-cover transition duration-100 group-hover:scale-[1.2]"
               />
             </figure>
             <figure
-              class="lg:-translate-y-10 animate__animated animate__zoomIn overflow-hidden h-auto transition rounded-xl group"
+              class="lg:-translate-y-10 overflow-hidden h-auto transition rounded-xl group"
             >
               <img
+                data-aos="fade-down-left"
                 src="img/laptop.png"
                 alt=""
-                class="w-[16.688rem] bject-cover transition duration-300 group-hover:scale-[1.2]"
+                class="w-[16.688rem] bject-cover transition duration-100 group-hover:scale-[1.2]"
               />
             </figure>
           </div>
@@ -346,19 +349,21 @@
         >
           <div class="lg:w-1/2">
             <div class="space-y-5 lg:space-y-10">
-              <h1 class="text-[40px] font-semibold text-[#202020]">
+              <h2
+                data-aos="fade-right"
+                class="text-3xl sm:text-[40px] font-semibold text-[#202020]"
+              >
                 About Atractive School
-              </h1>
-              <p class="text-[#9D9D9D]">
+              </h2>
+              <p data-aos="fade-right" class="text-[#9D9D9D]">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
                 Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
               </p>
-              <button>
-                <span
-                  class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
-                >
-                  More Detail
-                </span>
+              <button
+                data-aos="fade-right"
+                class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+              >
+                More Detail
               </button>
             </div>
           </div>
@@ -518,13 +523,14 @@
           </div>
           <div class="flex items-center">
             <div class="space-y-4 max-w-[461px]">
-              <p class="text-abu">School Vision</p>
-              <h1
-                class="font-semibold text-[#202020] text-2xl md:text-[40px] font-asap"
+              <p data-aos="fade-up" class="text-abu">School Vision</p>
+              <h2
+                data-aos="fade-up"
+                class="font-semibold text-[#202020] text-3xl md:text-[40px] font-asap"
               >
                 Our Vision
-              </h1>
-              <p class="text-abu">
+              </h2>
+              <p data-aos="fade-up" class="text-abu">
                 Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
                 Terabel pov astrobel sar direlig.
               </p>
@@ -539,23 +545,25 @@
     <section class="my-20 px-5">
       <div class="container mx-auto">
         <div class="space-y-3">
-          <p class="text-abu">Teacher</p>
-          <h1
-            class="text-[#202020] text-2xl md:text-[40px] md:w-1/2 font-semibold font-asap lg:leading-[50px]"
+          <p data-aos="fade-right" class="text-abu">Teacher</p>
+          <h2
+            data-aos="fade-right"
+            class="text-[#202020] text-3xl md:text-[40px] w-full lg:w-1/3 font-semibold font-asap lg:leading-[50px]"
           >
             Teacher in Attractive School
-          </h1>
+          </h2>
         </div>
 
         <div class="flex flex-wrap justify-between mt-3">
-          <p class="text-abu">
+          <p data-aos="fade-right" class="text-abu w-full lg:w-1/3 mb-5">
             Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
             Terabel pov astrobel sar direlig.
           </p>
-          <div class="flex gap-4 mt-4 md:mt-0">
+          <div class="flex gap-4 md:mt-0">
             <!-- Tombol slide kiri -->
             <button
               id="prev-slide"
+              data-aos="zoom-in-up"
               class="w-10 h-10 ring-1 ring-[#EBEBEB] rounded-full flex justify-center items-center hover:bg-slate-200 focus:ring-2 hover:ring-slate-300"
             >
               <img src="img/slider.png" alt="logo scroll kiri" />
@@ -564,6 +572,7 @@
             <!-- Tombol slide kanan -->
             <button
               id="next-slide"
+              data-aos="zoom-in-up"
               class="w-10 h-10 ring-1 ring-[#EBEBEB] rounded-full flex justify-center items-center hover:bg-slate-200 focus:ring-2 hover:ring-slate-300"
             >
               <img src="img/slider1.png" alt="logo scroll kanan" />
@@ -580,7 +589,24 @@
             <div
               class="bg-putih border border-[#EBEBEB] rounded-xl py-4 flex-none w-full sm:w-1/2 lg:w-1/3 snap-start text-center"
             >
-              <figure class="">
+              <figure data-aos="zoom-in-up" class="">
+                <img
+                  src="img/teacher.png"
+                  alt="Teacher"
+                  class="w-[12.375rem] mx-auto"
+                />
+                <div class="px-10 py-4">
+                  <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
+                  <p lass="text-abu mt-4">
+                    Teacher of 3D Illustration | Motion Animation
+                  </p>
+                </div>
+              </figure>
+            </div>
+            <div
+              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 flex-none w-full sm:w-1/2 lg:w-1/3 snap-start text-center"
+            >
+              <figure data-aos="zoom-in-up">
                 <img
                   src="img/teacher.png"
                   alt="Teacher"
@@ -597,24 +623,24 @@
             <div
               class="bg-putih border border-[#EBEBEB] rounded-xl py-4 flex-none w-full sm:w-1/2 lg:w-1/3 snap-start text-center"
             >
-              <figure>
+              <figure data-aos="zoom-in-up">
                 <img
                   src="img/teacher.png"
                   alt="Teacher"
                   class="w-[12.375rem] mx-auto"
                 />
-                <figcaption class="px-10 py-4">
-                  <h3 class="text-[#202020] font-bold">Jane Cooper</h3>
+                <div class="px-10 py-4">
+                  <h3 class="text-[#202020] font-bold">Robert Fox</h3>
                   <p class="text-abu mt-4">
-                    Teacher of 3D Illustration | Motion Animation
+                    Teacher of Web Development | UI/UX
                   </p>
-                </figcaption>
+                </div>
               </figure>
             </div>
             <div
               class="bg-putih border border-[#EBEBEB] rounded-xl py-4 flex-none w-full sm:w-1/2 lg:w-1/3 snap-start text-center"
             >
-              <figure>
+              <figure data-aos="zoom-in-up">
                 <img
                   src="img/teacher.png"
                   alt="Teacher"
@@ -631,24 +657,7 @@
             <div
               class="bg-putih border border-[#EBEBEB] rounded-xl py-4 flex-none w-full sm:w-1/2 lg:w-1/3 snap-start text-center"
             >
-              <figure>
-                <img
-                  src="img/teacher.png"
-                  alt="Teacher"
-                  class="w-[12.375rem] mx-auto"
-                />
-                <figcaption class="px-10 py-4">
-                  <h3 class="text-[#202020] font-bold">Robert Fox</h3>
-                  <p class="text-abu mt-4">
-                    Teacher of Web Development | UI/UX
-                  </p>
-                </figcaption>
-              </figure>
-            </div>
-            <div
-              class="bg-putih border border-[#EBEBEB] rounded-xl py-4 flex-none w-full sm:w-1/2 lg:w-1/3 snap-start text-center"
-            >
-              <figure>
+              <figure data-aos="zoom-in-up">
                 <img
                   src="img/teacher.png"
                   alt="Teacher"
@@ -665,13 +674,11 @@
           </div>
         </div>
 
-        <div class="text-center mt-8 text-white">
-          <button>
-            <span
-              class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
-            >
-              View More
-            </span>
+        <div data-aos="fade-up" class="text-center mt-8 text-white">
+          <button
+            class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:border-abu hover:text-black hover:font-bold duration-500 transition-colors ease-out"
+          >
+            View More
           </button>
         </div>
       </div>
@@ -682,8 +689,10 @@
     <section id="bloge" class="mt-10 py-20 mx-auto bg-[#F5F5F5]">
       <div class="container mx-auto">
         <div class="mx-auto text-center lg:w-1/2">
-          <h1 class="font-bold text-2xl text-[40px]">Our Blog</h1>
-          <p class="text-abu mt-5">
+          <h2 data-aos="fade-up" class="font-bold text-3xl sm:text-[40px]">
+            Our Blog
+          </h2>
+          <p data-aos="fade-up" class="text-abu mt-5">
             Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
             Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv.
             Bijarade ren defagt,
@@ -692,7 +701,7 @@
 
         <div class="flex flex-col lg:flex-row gap-10 mt-5">
           <a href="">
-            <figure class="overflow-hidden relative h-full">
+            <figure data-aos="fade-up" class="overflow-hidden relative h-full">
               <img
                 src="img/bground.jpg"
                 alt="Blog"
@@ -717,110 +726,127 @@
           <!-- ///  -->
           <div class="flex flex-col items-center justify-center gap-4">
             <div class="flex flex-col border-b-[#E8E8E8] gap-3">
-              <a href="" class="font-semibold w-[15.125rem] text-lg">
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum</a
-              >
-              <p class="text-abu">
-                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
-                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              <h3 data-aos="fade-up" class="w-[15.125rem]">
+                <a href="" class="font-semibold text-lg">
+                  Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                </a>
+              </h3>
+              <p data-aos="fade-up" class="text-abu line-clamp-2">
+                <a href=""
+                  >Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                  Stereodiktisk vasyns att preteng. Mons byning fihör. Pore
+                  toli</a
+                >
               </p>
-              <div class="border border-gray-200"></div>
+              <div data-aos="fade-up" class="border border-gray-200"></div>
             </div>
 
             <div class="flex flex-col gap-3">
-              <a href="" class="font-semibold w-[15.125rem] text-lg">
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum</a
-              >
-              <p class="text-abu">
-                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
-                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              <h3 data-aos="fade-up" class="w-[15.125rem]">
+                <a href="" class="font-semibold text-lg">
+                  Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                </a>
+              </h3>
+              <p data-aos="fade-up" class="text-abu line-clamp-2">
+                <a href=""
+                  >Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                  Stereodiktisk vasyns att preteng. Mons byning fihör. Pore
+                  toli</a
+                >
               </p>
-              <div class="border border-gray-200"></div>
+              <div data-aos="fade-up" class="border border-gray-200"></div>
             </div>
 
             <div class="flex flex-col gap-3">
-              <a href="" class="font-semibold w-[15.125rem] text-lg">
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum</a
-              >
-              <p class="text-abu">
-                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
-                Stereodiktisk vasyns att preteng. Mons byning fihör. Pore toli
+              <h3 data-aos="fade-up" class="w-[15.125rem]">
+                <a href="" class="font-semibold text-lg">
+                  Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                </a>
+              </h3>
+              <p data-aos="fade-up" class="text-abu line-clamp-2">
+                <a href=""
+                  >Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                  Stereodiktisk vasyns att preteng. Mons byning fihör. Pore
+                  toli</a
+                >
               </p>
             </div>
           </div>
         </div>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-5">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
             <a href="">
               <figure class="space-y-6">
                 <img src="img/blog1.png" alt="" class="w-full" />
                 <div class="space-y-6">
-                  <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                  <h3 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h3>
                 </div>
               </figure>
+              <div class="space-y-4 text-abu mt-2">
+                <p class="text-sm">September 14, 2023</p>
+                <p class="text-base line-clamp-2">
+                  Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksanan
+                </p>
+              </div>
             </a>
-            <div class="space-y-4 text-abu mt-2">
-              <p class="text-sm">September 14, 2023</p>
-              <p class="text-base">
-                Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
-              </p>
-            </div>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <a href="">
               <figure class="space-y-6">
                 <img src="img/blog1.png" alt="" class="w-full" />
                 <div class="space-y-6">
-                  <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                  <h3 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h3>
                 </div>
               </figure>
+              <div class="space-y-4 text-abu mt-2">
+                <p class="text-sm">September 14, 2023</p>
+                <p class="text-base line-clamp-2">
+                  Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksanan
+                </p>
+              </div>
             </a>
-            <div class="space-y-4 text-abu mt-2">
-              <p class="text-sm">September 14, 2023</p>
-              <p class="text-base">
-                Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
-              </p>
-            </div>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="300">
             <a href="">
               <figure class="space-y-6">
                 <img src="img/blog1.png" alt="" class="w-full" />
                 <div class="space-y-6">
-                  <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                  <h3 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h3>
                 </div>
               </figure>
+              <div class="space-y-4 text-abu mt-2">
+                <p class="text-sm">September 14, 2023</p>
+                <p class="text-base line-clamp-2">
+                  Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksanan
+                </p>
+              </div>
             </a>
-            <div class="space-y-4 text-abu mt-2">
-              <p class="text-sm">September 14, 2023</p>
-              <p class="text-base">
-                Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
-              </p>
-            </div>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="400">
             <a href="">
               <figure class="space-y-6">
                 <img src="img/blog1.png" alt="" class="w-full" />
                 <div class="space-y-6">
-                  <h1 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                  <h3 class="font-bold">Lorem Ipsum Lorem Ipsum Lorem Ipsum</h3>
                 </div>
               </figure>
+              <div class="space-y-4 text-abu mt-2">
+                <p class="text-sm">September 14, 2023</p>
+                <p class="text-base line-clamp-2">
+                  Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksanan
+                </p>
+              </div>
             </a>
-            <div class="space-y-4 text-abu mt-2">
-              <p class="text-sm">September 14, 2023</p>
-              <p class="text-base">
-                Jumat, 27 Agustus 2021. Bea Cukai Sangatta melaksana...
-              </p>
-            </div>
           </div>
         </div>
+
         <div class="text-center mt-14 text-white">
           <button
+            data-aos="fade-up"
             class="py-[14px] px-6 border border-[#1E1E1E] rounded-[12px] bg-[#1E1E1E] text-white hover:bg-white hover:text-black hover:font-bold duration-500 transition-colors ease-out"
           >
             View More
@@ -831,10 +857,13 @@
     <!-- section bloge end -->
 
     <!-- section our galery start -->
-    <section class="mt-16 px-5">
+    <section id="galery" class="mt-16 px-5">
       <div class="text-center mx-auto w-full lg:w-[561px] gap-5">
-        <h1 class="font-bold text-4xl mb-3">Our Galery</h1>
-        <p class="text-abu text-xs leading-4 lg:leading-[28px] font-normal">
+        <h2 data-aos="fade-up" class="font-bold text-4xl mb-3">Our Galery</h2>
+        <p
+          data-aos="fade-up"
+          class="text-abu leading-4 lg:leading-[28px] font-normal text-base"
+        >
           Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig.
           Terabel pov por danseoke. Pol peben: heteroska. Röfösade uv. Bijarade
           ren defagt,
@@ -890,14 +919,23 @@
     <!-- section our galery end -->
 
     <!-- footer  -->
-    <footer id="footer" class="w-full bg-[#1A1A1A] mt-10 py-5 md:py-10">
+    <footer
+      id="footer"
+      class="w-full bg-[#1A1A1A] mt-10 py-5 md:py-10"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+    >
       <div class="container mx-auto px-5 lg:px-20">
         <div
           class="flex flex-col md:flex-row md:justify-between text-white text-sm gap-8"
         >
           <!-- Section 1 -->
           <div
-            class="w-full  md:max-w-[292px] text-left space-y-4 md:space-y-5"
+            class="w-full md:max-w-[292px] text-left space-y-4 md:space-y-5"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos="fade-up"
+            data-aos-duration="1100"
           >
             <h3 class="font-bold text-base sm:text-lg">Atracctive School</h3>
             <p class="leading-[28px] text-base">
@@ -906,21 +944,21 @@
               Epire kanesk. Monosa medelgam tisk.
             </p>
             <ul class="flex justify-start gap-4">
-              <li>
+              <li >
                 <a href=""><i class="fa-brands fa-instagram text-white"></i></a>
               </li>
-              <li>
+              <li >
                 <a href=""><i class="fa-brands fa-youtube text-white"></i></a>
               </li>
-              <li>
+              <li >
                 <a href=""> <i class="fa-brands fa-whatsapp text-white"></i></a>
               </li>
-              <li>
+              <li >
                 <a href=""
                   ><i class="fa-brands fa-linkedin-in text-white"></i
                 ></a>
               </li>
-              <li>
+              <li >
                 <a href=""><i class="fa-brands fa-twitter text-white"></i></a>
               </li>
             </ul>
@@ -928,16 +966,24 @@
 
           <div class="flex justify-between gap-8">
             <!-- Section 2 -->
-            <div class="text-left space-y-3 md:space-y-5 text-xs md:text-base">
-              <h3 class="font-bold text-lg"><a href="">Home</a></h3>
-              <p class="text-base"><a href="">Beranda</a></p>
-              <p class="text-base"><a href="">Program Keahlian</a></p>
-              <p class="text-base"><a href="">Galery</a></p>
-              <p class="text-base"><a href="">Our News</a></p>
+            <div
+              class="text-left space-y-3 md:space-y-5 text-xs md:text-base"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              <h3 class="font-bold text-lg">Home</h3>
+              <p class="text-base"><a href="#hero">Beranda</a></p>
+              <p class="text-base"><a href="#programs">Program Keahlian</a></p>
+              <p class="text-base"><a href="#galery">Gallery</a></p>
+              <p class="text-base"><a href="#bloge">Our News</a></p>
             </div>
 
             <!-- Section 3 -->
-            <div class="text-left space-y-3 md:space-y-5 pe-4">
+            <div
+              class="text-left space-y-3 md:space-y-5 pe-4"
+              data-aos="fade-up"
+              data-aos-duration="1300"
+            >
               <h3 class="font-bold text-lg">Contact</h3>
               <div class="space-y-3">
                 <div class="flex items-start justify-start gap-4">
@@ -965,7 +1011,11 @@
           </div>
 
           <!-- Section 4 -->
-          <div class="text-left space-y-3 md:space-y-5">
+          <div
+            class="text-left space-y-3 md:space-y-5"
+            data-aos="fade-up"
+            data-aos-duration="1400"
+          >
             <h3 class="font-bold text-lg">Maps location</h3>
             <a href="">
               <figure class="">
@@ -981,6 +1031,7 @@
       </div>
     </footer>
 
+    <script src="script.js" defer></script>
     <script src="src/script.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
@@ -1003,9 +1054,11 @@
       });
 
       AOS.init({
-        duration: 1500, // durasi animasi, misalnya 1500ms
-        easing: "ease-out-cubic", // easing untuk animasi
-        once: false, // animasi dijalankan satu kali saat muncul
+        duration: 2000, // 🔹 Durasi lebih panjang agar lebih smooth
+        easing: "ease-out-cubic", // 🔹 Transisi lebih alami
+        once: true, // 🔹 Animasi hanya berjalan sekali saat pertama kali muncul
+        delay: 200, // 🔹 Jeda sebelum animasi dimulai agar tidak terlalu mendadak
+        anchorPlacement: "top-bottom", // 🔹 Memastikan elemen muncul dengan natural
       });
     </script>
   </body>

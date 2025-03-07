@@ -110,3 +110,82 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+
+// typing
+function typeText(element, text, speed = 10, delay = 50) {
+  let index = 0;
+
+  // Tambahkan cursor berkedip
+  element.innerHTML = `<span class="animate-ping">|</span>`;
+
+  function type() {
+      if (index < text.length) {
+          element.innerHTML = text.substring(0, index + 1) + `<span class="animate-ping">|</span>`;
+          index++;
+          setTimeout(type, speed);
+      } else {
+          element.innerHTML = text; // Hapus cursor setelah selesai mengetik
+      }
+  }
+
+  setTimeout(type, delay); // Jeda sebelum mulai mengetik
+}
+
+// Contoh penggunaan:
+const targetElement = document.querySelector(".typing");
+typeText(targetElement, "Design Schools, Trusted Programs, and 100% Guaranteed", 35, 3000);
+
+
+// scroll gsap
+gsap.registerPlugin(ScrollSmoother);
+
+ScrollSmoother.create({
+  wrapper: document.body,
+  content: "body",
+  smooth: 6, // Tambahkan nilai untuk membuat scroll lebih lambat dan smooth
+  smoothTouch: 2, // Supaya lebih smooth di touchscreen
+  effects: true,
+});
+
+// -----
+// Pastikan GSAP dan ScrollTrigger sudah terdaftar
+gsap.registerPlugin(ScrollTrigger);
+
+// Animasi Footer saat Muncul
+gsap.from("#footer", {
+  opacity: 0,
+  y: 80,
+  duration: 2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#footer",
+    start: "top 85%",
+    toggleActions: "play none none none"
+  }
+});
+
+// Animasi Hover untuk Ikon Media Sosial
+gsap.utils.toArray(".social-icon").forEach(icon => {
+  gsap.fromTo(icon, 
+    { y: 0, scale: 1 }, 
+    { 
+      y: -5, 
+      scale: 1.2, 
+      duration: 0.3, 
+      ease: "power1.out", 
+      repeat: 1, 
+      yoyo: true, 
+      paused: true 
+    }
+  ).eventCallback("onStart", () => icon.playAnimation = true);
+
+  icon.addEventListener("mouseenter", () => {
+    if (!icon.playAnimation) gsap.to(icon, { y: -5, scale: 1.2, duration: 0.3 });
+  });
+
+  icon.addEventListener("mouseleave", () => {
+    icon.playAnimation = false;
+    gsap.to(icon, { y: 0, scale: 1, duration: 0.3 });
+  });
+});

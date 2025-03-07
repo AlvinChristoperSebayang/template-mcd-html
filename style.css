@@ -6,6 +6,10 @@
   scrollbar-width: none; /* Untuk Firefox */
 }
 
-/* figure:hover img {
-  transform: perspective(500px) translateZ(50px);
-} */
+.group:hover img {
+  transform: scale(1.2) !important;  
+}
+.zoom-in {
+  transform: scale(1.2);
+  transition: transform 1s ease-in-out;
+}
