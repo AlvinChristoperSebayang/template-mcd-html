@@ -72,14 +72,16 @@ button {
   font-family: inherit;
   background-color: #1a1a1a00;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+
+header button:hover,
+header button:hover a {
+  background-color: black;
+  color: white;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+header button a:hover {
+  @apply text-white duration-200;
 }
 
 @media (prefers-color-scheme: light) {
@@ -360,6 +362,10 @@ ul li:nth-of-type(3) .icon-code {
   @apply text-white border-white;
 }
 
+.section-image-with-text .text-wrapping a {
+  @apply text-white border-white hover:text-[#646cff];
+}
+
 .mobile {
   @apply md:hidden;
 }
@@ -377,11 +383,11 @@ ul li:nth-of-type(3) .icon-code {
 }
 
 .portofolio .title-wrap li {
-  @apply text-xs font-semibold px-2 py-1 bg-[#EEEEEE];
+  @apply text-xs font-semibold px-2 py-1 bg-[#EEEEEE] hover:bg-[#bebebe];
 }
 
 .portofolio .mobile-categories li {
-  @apply text-xs font-semibold px-2 py-1 bg-[#EEEEEE];
+  @apply text-xs font-semibold px-2 py-1 bg-[#EEEEEE] hover:bg-[#bebebe];
 }
 
 .portofolio .title-wrap ul {
@@ -398,4 +404,42 @@ ul li:nth-of-type(3) .icon-code {
 
 .portofolio .section-title p {
   @apply w-full pb-6 md:pb-20;
+}
+
+header li a {
+  @apply hover:text-black duration-100;
+}
+
+header button {
+  @apply group-hover:bg-black duration-200;
+}
+
+header button a {
+  @apply group-hover:text-white duration-200;
+}
+
+button:hover,
+button:hover a {
+  @apply bg-black duration-200 text-white;
+}
+
+.btn-text a:hover {
+  @apply text-black duration-200;
+}
+
+.section-contact-now .btn-text {
+  @apply hover:text-black duration-100;
+}
+
+.section-ui-ux li:hover,
+.section-ui-ux li a:hover {
+  @apply hover:block;
+}
+
+.splide__slide a {
+  @apply hover:text-black;
+}
+
+.social-media svg {
+  @apply hover:fill-[#535bf2] fill-black;
 }
