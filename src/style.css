@@ -228,7 +228,7 @@ span {
 }
 
 .social-media ul {
-  @apply flex flex-row gap-3;
+  @apply flex md:flex-row flex-col gap-3;
 }
 
 footer {
@@ -340,12 +340,20 @@ ul li:nth-of-type(3) .icon-code {
   @apply text-black;
 }
 
-.section-image-with-text {
+.about-us .section-image-with-text {
   @apply bg-[#0E1E5D];
 }
 
-.section-image-with-text {
-  @apply bg-[#0E1E5D];
+.service .section-image-with-text h2 {
+  @apply md:text-3xl text-2xl font-semibold;
+}
+
+.service .section-image-with-text {
+  @apply py-10 sm:max-md:text-black sm:max-md:text-xs;
+}
+
+.service .title-wrap {
+  @apply flex md:flex-row flex-col gap-6 md:items-center sm:max-md:text-black mt-9 mb-6;
 }
 
 .section-image-with-text .text-wrapping * {
@@ -358,4 +366,36 @@ ul li:nth-of-type(3) .icon-code {
 
 .desktop {
   @apply md:block sm:max-md:hidden;
+}
+
+.portofolio .text-wrapper {
+  @apply flex flex-col md:flex-row justify-between md:gap-20 gap-2 mt-6 text-black;
+}
+
+.portofolio .title-wrap h2 {
+  @apply text-base md:text-2xl font-semibold;
+}
+
+.portofolio .title-wrap li {
+  @apply text-xs font-semibold px-2 py-1 bg-[#EEEEEE];
+}
+
+.portofolio .mobile-categories li {
+  @apply text-xs font-semibold px-2 py-1 bg-[#EEEEEE];
+}
+
+.portofolio .title-wrap ul {
+  @apply sm:max-md:hidden flex flex-row gap-2 mt-4;
+}
+
+.portofolio .mobile-categories {
+  @apply flex md:hidden flex-row gap-2 mt-4;
+}
+
+.portofolio .section-portofilio-item p {
+  @apply md:text-base font-semibold md:w-1/2;
+}
+
+.portofolio .section-title p {
+  @apply w-full pb-6 md:pb-20;
 }

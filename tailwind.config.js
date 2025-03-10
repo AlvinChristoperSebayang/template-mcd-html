@@ -30,9 +30,14 @@ export default {
       backgroundImage: {
         "hero-mobile": "url('./public/header-bg-mobile.png')",
         "hero-mobile2": "url('./public/mobile-bg2.png')",
+        "hero-mobile3": "url('./public/mobile-bg3.png')",
+        "hero-mobileContact": "url('./public/mobile-bg-contact.png')",
+        "hero-mobilePortofolio": "url('./public/mobile-bg-portofolio.png')",
         "gradient-custom": "linear-gradient(to top, #A0A5B0 0%, #FFFFFF 37%)",
         "gradient-custom-left":
           "linear-gradient(to left, #A0A5B0 0%, #FFFFFF 37%)",
+        backgroundImgWorking: "url('./src/img/working-picture.png')",
+        "bg-macbook": "url('./src/img/macbook.png')",
       },
     },
   },
