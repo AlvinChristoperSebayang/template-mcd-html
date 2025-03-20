@@ -2,22 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
-  @apply h-0   ;
+#site-header .navigation-wrapper {
+  @apply h-0;
 }
 
 #site-main {
   min-height: calc(100vh - 240px);
 }
 
-#site-footer .footer-wrapper{
+#site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
-.menu-icon{
-  @apply flex items-end justify-end;
 
+.menu-icon {
+  @apply flex items-end justify-end;
 }
-p {
+p,
+a {
   @apply font-PlayfairDisplay;
 }
 h1 {
@@ -29,7 +30,8 @@ h2 {
 h3 {
   @apply font-Ephesis;
 }
-.custom-prev, .custom-next {
+.custom-prev,
+.custom-next {
   border: 1px solid #000; /* Border hitam 1px */
   background-color: transparent; /* Tanpa background */
   width: 40px; /* Ukuran lingkaran */
@@ -40,9 +42,8 @@ h3 {
   justify-content: center;
   font-size: 16px; /* Ukuran ikon */
   cursor: pointer;
-  
- }
- @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
   .custom-prev,
   .custom-next {
     width: 24px; /* Ukuran lingkaran lebih kecil pada layar mobile */
@@ -72,7 +73,3 @@ h3 {
     grid-template-columns: repeat(2, 1fr); /* 2 gambar per baris */
   }
 }
-
-
-
-
