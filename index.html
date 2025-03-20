@@ -784,7 +784,7 @@
           </p>
         </div>
         <p class="text-center text-[12px] md:text-[16px] pb-[30px]">
-          © 2024 mangcoding. All rights reserved.
+          © <span id="year">2024</span> mangcoding. All rights reserved.
         </p>
       </div>
     </footer>
@@ -793,6 +793,11 @@
     <script src="/fslightbox.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- get date footer -->
+     <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+     </script>
 
     <!-- Couldown/Waktu -->
     <script>
