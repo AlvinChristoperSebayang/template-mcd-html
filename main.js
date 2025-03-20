@@ -41,16 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-import { gsap } from "gsap-trial";
+// import { gsap } from "gsap-trial";
 
-/* The following plugins are Club GSAP perks */
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-import { MorphSVGPlugin } from "gsap-trial/MorphSVGPlugin";
+// /* The following plugins are Club GSAP perks */
+// import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+// import { MorphSVGPlugin } from "gsap-trial/MorphSVGPlugin";
 
 
-gsap.registerPlugin(ScrollSmoother,MorphSVGPlugin);
+// gsap.registerPlugin(ScrollSmoother,MorphSVGPlugin);
 
-animate(element, { x: 100 }, { type: "spring" })
+// animate(element, { x: 100 }, { type: "spring" })
 
 // document.querySelector('#site-header').innerHTML = `
 //   <div class="navigation-wrapper">
