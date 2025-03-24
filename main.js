@@ -1,56 +1,37 @@
 import './style.css'
-import TypeIt from "typeit";
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Pilih elemen footer
-  const footer = document.querySelector("footer");
+  const textElement = document.querySelector("#typing p");
+  const text = textElement.innerText;
+  textElement.innerText = ""; // Kosongkan teks awal
 
-  // Fungsi untuk menjalankan animasi teks
-  const startTypingAnimation = () => {
-    // Cek apakah animasi sudah pernah dijalankan
-    if (localStorage.getItem("typingAnimationPlayed")) {
-      return; // Jika sudah pernah, hentikan fungsi agar tidak menjalankan animasi lagi
+  function typeText() {
+    let index = 0;
+    function typing() {
+      if (index < text.length) {
+        textElement.innerHTML += text[index];
+        index++;
+        setTimeout(typing, 40); // Kecepatan mengetik
+      }
     }
+    typing();
+  }
 
-    // Jalankan animasi
-    new TypeIt("#typing", {
-      strings: [""],
-      speed: 20,
-      cursor: false,
-      startDelay: 900,
-    }).go();
+  function isFooterVisible() {
+    const footer = document.getElementById("site-footer");
+    const rect = footer.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  }
 
-    new TypeIt("#typing1", {
-      speed: 100,
-      cursor: false,
-    }).go();
+  function onScroll() {
+    if (isFooterVisible()) {
+      typeText();
+      window.removeEventListener("scroll", onScroll);
+    }
+  }
 
-    // Tandai bahwa animasi sudah dijalankan
-    localStorage.setItem("typingAnimationPlayed", "true");
-  };
-
-  // Panggil fungsi saat halaman dimuat
-  startTypingAnimation();
-
-
-  // Intersection Observer untuk memantau footer
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Jalankan animasi jika footer terlihat
-          startTypingAnimation();
-
-          // Hentikan observer setelah animasi dijalankan
-          observer.unobserve(footer);
-        }
-      });
-    },
-    { threshold: 0.1 } // Animasi akan dimulai ketika 10% footer terlihat
-  );
-
-  // Mulai mengamati footer
-  observer.observe(footer);
+  window.addEventListener("scroll", onScroll);
 });
 
 
