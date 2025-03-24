@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index < text.length) {
         textElement.innerHTML += text[index];
         index++;
-        setTimeout(typing, 40); // Kecepatan mengetik
+        setTimeout(typing, 22); // Kecepatan mengetik
       }
     }
     typing();
