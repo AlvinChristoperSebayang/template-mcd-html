@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function isFooterVisible() {
     const footer = document.getElementById("site-footer");
     const rect = footer.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    return rect.top >= 50 && rect.bottom <= window.innerHeight;
   }
 
   function onScroll() {
