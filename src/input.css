@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --font-gloock: "Gloock", serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-alexandria: "Alexandria", sans-serif;
+  --font-afacad: "Afacad", sans-serif;
+  --color-gray: #949494;
+  --color-secondary: #d1d1d1;
+  --color-primary: #888888;
+  --color-dark: #111111;
+}
+
+/* @theme {
+  --font-gloock: "Gloock", serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-alexandria: "Alexandria", sans-serif;
+  --font-afacad: "Afacad", sans-serif;
+  --color-gray: #949494;
+  --color-secondary: #d1d1d1;
+  --color-primary: #888888;
+  --color-dark: #111111;
+} */
+
+@layer components {
+  .btn-primary {
+    @apply text-dark font-jakarta flex items-center gap-4 text-sm font-semibold transition-all active:text-gray-300;
+  }
+  .iconbtn {
+    @apply transition-transform duration-500 ease-in-out;
+  }
+  .iconbtn-rotate {
+    @apply rotate-45;
+  }
+
+  .title {
+    @apply font-gloock text-dark text-2xl font-normal md:text-5xl;
+  }
+  .search-box-show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .search-box-hide {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
+    scrollbar-width: none; /* Untuk Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+  }
+}
+
+#newSlideContainer {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 24px;
+}
+
+#newSlideContainer > div {
+  scroll-snap-align: start;
+}
+
+/* Transisi halus untuk rotasi gambar */
+nav ul li img {
+  transition: transform 0.3s ease;
+}
+
+/* Kelas yang mengatur rotasi ke atas (180 derajat) */
+.rotate-up {
+  transform: rotate(-180deg);
+}
+
+.move-back {
+  transform: translateX(-200px) rotate(-0deg);
+}
