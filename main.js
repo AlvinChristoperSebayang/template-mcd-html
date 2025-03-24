@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fungsi untuk menjalankan animasi teks
   const startTypingAnimation = () => {
+    // Cek apakah animasi sudah pernah dijalankan
+    if (localStorage.getItem("typingAnimationPlayed")) {
+      return; // Jika sudah pernah, hentikan fungsi agar tidak menjalankan animasi lagi
+    }
+
+    // Jalankan animasi
     new TypeIt("#typing", {
       strings: [""],
       speed: 20,
@@ -18,7 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
       speed: 100,
       cursor: false,
     }).go();
+
+    // Tandai bahwa animasi sudah dijalankan
+    localStorage.setItem("typingAnimationPlayed", "true");
   };
+
+  // Panggil fungsi saat halaman dimuat
+  startTypingAnimation();
+
 
   // Intersection Observer untuk memantau footer
   const observer = new IntersectionObserver(

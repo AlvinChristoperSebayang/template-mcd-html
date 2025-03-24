@@ -18,6 +18,10 @@ export default {
       TimesNewRoman: ["TimesNewRoman", "serif"],
     },
     extend: {
+      screens: {
+        xl: "1280px", // Mengubah xl menjadi 1320px
+        "2xl": "1360px", // Mengubah xl menjadi 1320px
+      },
       colors: {
         primary: "#4E4E50",
       },

@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icon_wedding.jpg" class="!rounded-full" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/icon_wedding.jpg"
+      class="!rounded-full"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weddding Invitation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,7 +86,7 @@
     <div class="container mx-auto relative flex justify-items-end z-[9999999]">
       <!-- Icon Menu -->
       <div
-        class="menu-icon fixed top-[22px] flex justify-center m-auto md:hidden right-[20px] sm:right-[40px] w-full "
+        class="menu-icon fixed top-[22px] flex justify-center m-auto md:hidden right-[20px] sm:right-[40px] w-full"
       >
         <img
           src="Frame.svg"
@@ -106,24 +111,39 @@
       </div>
 
       <!-- Menu di Mobile -->
-     <ul
-  id="menu-items"
-  class="fixed top-[60px] right-[11px] bg-white shadow-lg rounded-lg py-2 px-[11px] 
-         mr-0 md:mr-8 z-[500] transition-transform duration-300 translate-x-[200%]"
->
-  <a href="#">
-    <img src="Home.svg" alt="Home" class="py-2 hover:bg-gray-100 cursor-pointer" />
-  </a>
-  <a href="#Story">
-    <img src="History.svg" alt="OutStory" class="py-2 hover:bg-gray-100 cursor-pointer" />
-  </a>
-  <a href="#Event">
-    <img src="Date.svg" alt="Event" class="py-2 hover:bg-gray-100 cursor-pointer" />
-  </a>
-  <a href="#Galery">
-    <img src="Galery.svg" alt="Gallery" class="py-2 hover:bg-gray-100 cursor-pointer" />
-  </a>
-</ul>
+      <ul
+        id="menu-items"
+        class="fixed top-[60px] right-[11px] bg-white shadow-lg rounded-lg py-2 px-[11px] mr-0 md:mr-8 z-[500] transition-transform duration-300 translate-x-[200%] opacity-0"
+      >
+        <a href="#">
+          <img
+            src="Home.svg"
+            alt="Home"
+            class="py-2 hover:bg-gray-100 cursor-pointer"
+          />
+        </a>
+        <a href="#Story">
+          <img
+            src="History.svg"
+            alt="OutStory"
+            class="py-2 hover:bg-gray-100 cursor-pointer"
+          />
+        </a>
+        <a href="#Event">
+          <img
+            src="Date.svg"
+            alt="Event"
+            class="py-2 hover:bg-gray-100 cursor-pointer"
+          />
+        </a>
+        <a href="#Galery">
+          <img
+            src="Galery.svg"
+            alt="Gallery"
+            class="py-2 hover:bg-gray-100 cursor-pointer"
+          />
+        </a>
+      </ul>
     </div>
 
     <!-- Audio Musik 
@@ -133,7 +153,7 @@
 
     <!-- Content -->
     <main id="site-main">
-      <section class="container mx-auto h-screen">
+      <section class="container mx-auto h-[862px] md:h-[600px] lg:h-[800px] xl:h-[1024px]  ">
         <!-- Audio kostume -->
         <button
           id="audioButton"
@@ -157,7 +177,7 @@
         <!-- Content-Home -->
 
         <div
-          class="flex flex-col justify-center items-center text-center mt-[9px] md:pb-[48px]"
+          class="flex flex-col justify-center items-center text-center mt-[9px]"
         >
           <h1
             class="text-[36px] lg:text-[69px] xl:text-[96px] font-PlayfairDisplay my-[50px] text-primary"
@@ -169,22 +189,22 @@
             Wedding Invitation
           </h1>
           <div
-            class="grid grid-cols-2 md:grid-cols-3 justify-items-center gap-3 md:gap-[17px] xl:gap-[100px] max-w-[1322px] overflow-hidden"
+            class="grid grid-cols-2 md:grid-cols-3 justify-items-center gap-3 md:gap-[17px] 2xl:gap-[100px] max-w-[1322px] overflow-hidden"
           >
             <!-- Image 1 -->
             <div
               data-aos="zoom-in"
               data-aos-duration="2000"
               data-aos-delay="300"
-              class="mt-[12px] md:mt-0 w-[157px] md:w-[230px] lg:w-[280px] xl:w-[400px] gap-[12px]"
+              class="mt-[12px] md:mt-0 w-[157px] md:w-[230px] lg:w-[280px] xl:w-[330px] 2xl:w-auto gap-[12px]"
             >
-              <img src="/Img2.png" alt="Wedding Invitation Image 1" />
+              <img src="/Img2.png" alt="Wedding Invitation Image 1" class="2xl:h-[726px]" />
             </div>
 
             <!-- Countdown -->
 
             <div
-              class="col-span-2 md:col-span-1 order-first md:order-none border-[2px] border-[#4E4E50] md:w-full xl:w-[488px] rounded-[12px] flex flex-col "
+              class="col-span-2 md:col-span-1 order-first md:order-none border-[2px] border-[#4E4E50] md:w-full xl:w-[450px] 2xl:w-[488px] rounded-[12px] flex flex-col"
             >
               <div class="mt-0 md:mt-[52px] w-[423x]">
                 <div class="flex justify-center gap-[36px] text-primary">
@@ -219,10 +239,28 @@
                   <p
                     class="font-bold md:text-[20px] lg:text-[32px] my-[12px] text-primary"
                   >
-                    25-05-2025
+                    <span
+                      data-aos="fade-down"
+                      data-aos-duration="3000"
+                      data-aos-delay="300"
+                      >25-</span
+                    ><span
+                      data-aos="fade-down"
+                      data-aos-duration="3000"
+                      data-aos-delay="600"
+                      >05-</span
+                    ><span
+                      data-aos="fade-down"
+                      data-aos-duration="3000"
+                      data-aos-delay="500"
+                      >2025</span
+                    >
                   </p>
                   <p
-                    class="text-[12px] xl:text-[16px] leading-[24px] w-[273px] md:w-[200px] xl:w-[432px] text-[#4E4E50]"
+                    class="text-[12px] xl:text-[16px] leading-[24px] w-[273px] md:w-[200px] xl:w-[400px] 2xl:w-[432px] text-[#4E4E50]"
+                    data-aos="zoom-in"
+                    data-aos-duration="2000"
+                    data-aos-delay="600"
                   >
                     With great joy, we invite you to celebrate the moment we say
                     'I do' and embark on our forever together.
@@ -231,7 +269,7 @@
               </div>
               <div>
                 <p
-                  class="text-[18px] md:text-[26px] lg:text-[36px] text-[#4E4E50] xl:mt-[320px] font-bold mt-[28px] mb-[12px]"
+                  class="text-[18px] md:text-[26px] lg:text-[36px] text-[#4E4E50] xl:mt-[160px] 2xl:mt-[320px] font-bold mt-[28px] mb-[12px]"
                 >
                   Countdown
                 </p>
@@ -242,7 +280,7 @@
                     <div class="flex flex-col gap-3">
                       <p class="text-[12px] mb-[2px]">Days</p>
                       <p
-                        class="text-[24px] xl:text-[48px] font-bold leading-[34px]"
+                        class="text-[24px] xl:text-[48px] font-bold md:font-normal leading-[34px]"
                         id="days"
                       >
                         00
@@ -251,7 +289,7 @@
                     <div class="flex flex-col gap-3">
                       <p class="text-[12px] mb-[2px]">Hours</p>
                       <p
-                        class="text-[24px] xl:text-[48px] font-bold leading-[34px]"
+                        class="text-[24px] xl:text-[48px] font-bold md:font-normal leading-[34px]"
                         id="hours"
                       >
                         00
@@ -260,7 +298,7 @@
                     <div class="flex flex-col gap-3">
                       <p class="text-[12px] mb-[2px]">Minutes</p>
                       <p
-                        class="text-[24px] xl:text-[48px] font-bold leading-[34px]"
+                        class="text-[24px] xl:text-[48px] font-bold md:font-normal leading-[34px]"
                         id="minutes"
                       >
                         00
@@ -269,7 +307,7 @@
                     <div class="flex flex-col gap-3">
                       <p class="text-[12px] mb-[2px]">Seconds</p>
                       <p
-                        class="text-[24px] xl:text-[48px] font-bold leading-[34px]"
+                        class="text-[24px] xl:text-[48px] font-bold md:font-normal leading-[34px]"
                         id="seconds"
                       >
                         00
@@ -285,14 +323,13 @@
               data-aos="zoom-in"
               data-aos-duration="2000"
               data-aos-delay="900"
-              class="mt-[12px] md:mt-0 w-[157px] md:w-[230px] lg:w-[280px] xl:w-[400px] gap-[12px]"
+              class="mt-[12px] md:mt-0 w-[157px] md:w-[230px] lg:w-[280px] xl:w-[330px] 2xl:w-auto gap-[12px]"
             >
-              <img src="/Img1.png" alt="Wedding Invitation Image 2" />
+              <img src="/Img1.png" alt="Wedding Invitation Image 2" class="2xl:h-[726px]" />
             </div>
           </div>
           <div
-         class="flex justify-between w-[326px] md:w-[700px] lg:w-[900px] xl:w-[1356px] mt-[-65px] md:mt-[-125px] lg:mt-[-205px] xl:mt-[-180px] z-20"
-
+            class="flex justify-between w-[326px] md:w-[700px] lg:w-[800px] xl:w-full xl:max-w-[1226px] 2xl:max-w-[1356px] mt-[-65px] md:mt-[-125px] lg:mt-[-205px] xl:mt-[-180px] z-20"
           >
             <div
               data-aos="fade-up"
@@ -321,14 +358,16 @@
       </section>
 
       <!-- Content-The Story -->
-      <section id="Story" class="bg-[#F6F2F3] mt-0 xl:mt-60">
-        <div class="flex flex-col items-center relative">
+      <section id="Story" class="bg-[#F6F2F3] mt-0 ">
+        <div
+          class="flex flex-col items-center relative h-[877px] lg:h-[1024px]"
+        >
           <div
-            class="container md:flex justify-center items-center md:w-[650px] lg:w-[800px] xl:w-[1167px] gap-[50px] lg:gap-[80px] xl:gap-[101px] py-[25px] lg:py-[90px] xl:py-[112px]"
+            class="container relative md:flex justify-center items-center md:w-[650px] lg:w-[800px] xl:w-[1167px] gap-[50px] lg:gap-[80px] xl:gap-[101px] top-[25px] lg:top-[90px] xl:top-[112px]"
           >
             <div class="flex justify-center my-[25px]">
               <img
-                class="w-[213px] md:w-[500px] lg:w-[536px] items-center"
+                class="w-[213px] md:w-[500px] lg:w-[536px] items-center z-10"
                 data-aos="zoom-in-right"
                 data-aos-duration="500"
                 data-aos-delay="700"
@@ -357,7 +396,7 @@
               </div>
               <div class="flex justify-center">
                 <p
-                  class="xl:w-[469px] text-[14px] xl:text-[18px] w-[330px] md:w-[300px] text-justify leading-[24px] xl:leading-[34px] text-[#4E4E50] font-normal"
+                  class="xl:w-[469px] text-[14px] xl:text-[18px] w-[330px] md:w-[300px] text-start sm:text-justify leading-[24px] xl:leading-[34px] text-[#4E4E50] font-normal"
                 >
                   Diana and Andhika first met at university, where they pursued
                   different majors but shared the same passion for campus
@@ -380,7 +419,7 @@
             </div>
           </div>
           <img
-            class="absolute w-[622px] flex justify-end items-end bottom-0 right-0"
+            class="absolute w-[167px] md:w-[300px] lg:w-[400px] xl:w-[622px] flex justify-end items-end bottom-[10px] md:bottom-80 lg:bottom-72 xl:bottom-14 left-[150px] sm:left-[400px] md:left-[500px] lg:left-[620px] 2xl:left-[760px]"
             data-aos="zoom-in-up"
             data-aos-duration="900"
             data-aos-delay="600"
@@ -392,26 +431,30 @@
 
       <!-- Content-Event -->
       <section id="Event">
-        <div class="mx-auto flex flex-col-reverse md:flex-row justify-between">
-          <div class="md:pt-[31px] text-center md:text-start md:ml-[60px]">
-            <p class="text-[12px] md:text-[16px] lg:mb-[12px] text-primary">
-              Wedding Events
-            </p>
-            <p
-              class="text-[14px] md:text-[18px] lg:text-[25px] xl:text-[32px] font-bold text-primary"
+        <div class="mx-auto max-w-[1440px] flex flex-col-reverse md:flex-row justify-between">
+          <div class="pt-[14px] lg:pt-[31px] text-center md:text-start md:ml-[60px]">
+            <div class="flex gap-0 xl:gap-[12px] flex-col ">
+              <p class="text-[12px] md:text-[16px]  text-primary">
+                Wedding Events
+              </p>
+              <p
+                class="text-[14px] md:text-[18px] lg:text-[25px] xl:text-[32px] font-bold text-primary"
+              >
+                Key Moments of Our Love Story
+              </p>
+            </div>
+            <div
+              class="flex w-[80px] lg:w-[200px] relative pt-4 md:left-[-25px] 2xl:left-[-55px]"
             >
-              Key Moments of Our Love Story
-            </p>
-            <div class="flex w-[80px] lg:w-[200px] relative left-[-55px]">
               <img
-                class="hidden md:block lg:w-[100px] xl:w-auto relative top-[-30px]"
+                class="hidden md:block lg:w-[100px] 2xl:w-auto relative top-[-30px]"
                 src="/Daun_kiri.svg"
                 alt="image daun"
                 data-aos="zoom-in"
                 data-aos-duration="1500"
               />
               <img
-                class="hidden md:block lg:w-[70px] xl:w-auto"
+                class="hidden md:block lg:w-[70px] 2xl:w-auto"
                 src="/Daun_Tengah.svg"
                 alt="image daun"
                 data-aos="zoom-in"
@@ -419,7 +462,7 @@
                 data-aos-delay="700"
               />
               <img
-                class="hidden md:block lg:w-[100px] xl:w-auto"
+                class="hidden md:block lg:w-[100px] 2xl:w-auto relative top-[-20px]"
                 src="/Daun_Kanan.svg"
                 alt="image daun"
                 data-aos="zoom-in"
@@ -434,7 +477,7 @@
             data-aos-duration="1500"
           >
             <img
-              class="w-[282px] md:w-[410px] lg:w-[510px] xl:w-[795px] z-[-1] overflow-hidden"
+              class="w-[282px] md:w-[410px] lg:w-[510px] xl:w-[795px] z-[-1] rounded-[12px] md:rounded-none overflow-hidden"
               src="/wedding-bg.png"
               alt="Image Wedding"
             />
@@ -442,13 +485,13 @@
         </div>
         <!-- Content-Event-Date -->
         <div
-          class="flex flex-col md:flex-row lg:flex-col justify-center items-center mt-[8px] mb-[10px] py-[8px] z-[1]"
+          class="flex flex-col md:flex-row lg:flex-col justify-center items-center mb-[16px] z-[1]"
         >
           <div
-            class="bg-white md:rounded-[20px] lg:rounded-[30px] md:mt-[-80px] lg:mt-[-100px] z-40 xl:mt-[-170px] xl:w-[1090px] flex justify-center items-center text-primary font-normal"
+            class="bg-white md:rounded-[20px] lg:rounded-[30px] md:mt-[-80px] lg:mt-[-100px] z-40 xl:mt-[-170px] xl:w-[1090px] 2xl:mt-[-136px] flex justify-center items-center text-primary font-normal"
           >
             <div
-              class="flex flex-col w-[330px] md:w-[650px] lg:w-[800px] xl:w-[1081px] md:flex-row bg-[#F6F2F3] rounded-[12px] md:my-[20px] md:mx-[20px] xl:my-[20px] xl:mx-[20px] xl:p-[24px] !gap-6"
+              class="flex flex-col w-[330px] md:w-[650px] lg:w-[800px] xl:w-[1081px] md:flex-row bg-[#F6F2F3] rounded-[12px] md:my-[20px] md:mx-[20px] xl:my-[20px] xl:mx-[20px] md:p-[20px] xl:p-[24px] !gap-6"
             >
               <!-- The Reception -->
 
@@ -456,33 +499,37 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="400"
-                class="px-[8px] flex flex-col gap-3 text-primary"
+                class="p-4 sm:p-6 flex flex-col gap-2 md:gap-3 text-primary"
               >
-                <h3
-                  class="flex text-[36px] leading-[36px] text-center mt-[8px] mb-[12px]"
-                >
-                  The Reception
-                </h3>
-                <div class="flex gap-[8px]">
-                  <img src="/Icon_Date.svg" alt="" />
-                  <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
-                    02 Oktober 2024
-                  </p>
-                </div>
-                <div class="flex gap-[8px] my-[8px]">
-                  <img src="/Icon_Time.svg" alt="" />
-                  <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
-                    09:00 s/d Selesai
-                  </p>
-                </div>
-                <div class="flex gap-[8px] items-start">
-                  <img src="/Icon_location.svg" alt="" />
-                  <p
-                    class="text-[14px] lg:text-[16px] xl:text-[20px] leading-[190%]"
+                <div class="flex flex-col gap-3 md:gap-6">
+                  <h3
+                    class="flex text-[36px] leading-[36px] text-center mt-[8px] mb-[12px]"
                   >
-                    Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab
-                    Sukabumi
-                  </p>
+                    The Reception
+                  </h3>
+                  <div class="flex flex-col gap-2 md:gap-3">
+                    <div class="flex gap-[8px]">
+                      <img src="/Icon_Date.svg" alt="" />
+                      <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
+                        02 Oktober 2024
+                      </p>
+                    </div>
+                    <div class="flex gap-[8px] my-[8px]">
+                      <img src="/Icon_Time.svg" alt="" />
+                      <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
+                        09:00 s/d Selesai
+                      </p>
+                    </div>
+                    <div class="flex gap-[8px] items-start">
+                      <img src="/Icon_location.svg" alt="" />
+                      <p
+                        class="text-[14px] lg:text-[16px] xl:text-[20px] leading-[190%]"
+                      >
+                        Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab
+                        Sukabumi
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <a
@@ -499,34 +546,37 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="900"
-             class="px-[33px] flex flex-col gap-3 border-y-[1px] md:border-y-0 md:border-x-[1px] border-[#4E4E50] backdrop-blur-sm py-[33px] md:py-0"
-
+                class="px-4 md:px-[40px] flex flex-col gap-3 border-y-[1px] md:border-y-0 md:border-x-[1px] border-[#4E4E50] backdrop-blur-sm py-10 md:py-6"
               >
-                <h3
-                  class="flex text-[36px] leading-[36px] text-center mt-[8px] mb-[12px]"
-                >
-                  The Ceremony
-                </h3>
-                <div class="flex gap-[8px]">
-                  <img src="/Icon_Date.svg" alt="" />
-                  <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
-                    02 Oktober 2024
-                  </p>
-                </div>
-                <div class="flex gap-[8px] my-[8px]">
-                  <img src="/Icon_Time.svg" alt="" />
-                  <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
-                    09:00 s/d Selesai
-                  </p>
-                </div>
-                <div class="flex gap-[8px] items-start">
-                  <img src="/Icon_location.svg" alt="" />
-                  <p
-                    class="text-[14px] lg:text-[16px] xl:text-[20px] leading-[190%]"
+                <div class="flex flex-col gap-3 md:gap-6">
+                  <h3
+                    class="flex text-[36px] leading-[36px] text-center mt-[8px] mb-[12px]"
                   >
-                    Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab
-                    Sukabumi
-                  </p>
+                    The Ceremony
+                  </h3>
+                  <div class="flex flex-col gap-2 md:gap-3">
+                    <div class="flex gap-[8px]">
+                      <img src="/Icon_Date.svg" alt="" />
+                      <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
+                        02 Oktober 2024
+                      </p>
+                    </div>
+                    <div class="flex gap-[8px] my-[8px]">
+                      <img src="/Icon_Time.svg" alt="" />
+                      <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
+                        09:00 s/d Selesai
+                      </p>
+                    </div>
+                    <div class="flex gap-[8px] items-start">
+                      <img src="/Icon_location.svg" alt="" />
+                      <p
+                        class="text-[14px] lg:text-[16px] xl:text-[20px] leading-[190%]"
+                      >
+                        Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab
+                        Sukabumi
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <a
                   class="block border border-[#4E4E50] rounded-[10px] text-center leading-[22px] my-[10px] py-[5px] w-full transition-colors duration-200 hover:bg-gray-600 hover:text-white"
@@ -543,55 +593,59 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1300"
-                class="px-[8px] flex flex-col gap-3"
+                class="p-4 sm:p-6 flex flex-col gap-3"
               >
-                <h3
-                  class="flex text-[36px] leading-[36px] text-center mt-[8px] mb-[12px]"
-                >
-                  Wedding Party
-                </h3>
-                <div class="flex gap-[8px]">
-                  <img src="/Icon_Date.svg" alt="" />
-                  <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
-                    02 Oktober 2024
-                  </p>
-                </div>
-                <div class="flex gap-[8px] my-[8px]">
-                  <img src="/Icon_Time.svg" alt="" />
-                  <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
-                    09:00 s/d Selesai
-                  </p>
-                </div>
-                <div class="flex gap-[8px] items-start">
-                  <img src="/Icon_location.svg" alt="" />
-                  <p
-                    class="text-[14px] lg:text-[16px] xl:text-[20px] leading-[190%]"
+                <div class="flex flex-col gap-3 md:gap-6">
+                  <h3
+                    class="flex text-[36px] leading-[36px] text-center mt-[8px] mb-[12px]"
                   >
-                    Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab
-                    Sukabumi
-                  </p>
+                    Wedding Party
+                  </h3>
+                  <div class="flex flex-col gap-2 md:gap-3">
+                    <div class="flex gap-[8px]">
+                      <img src="/Icon_Date.svg" alt="" />
+                      <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
+                        02 Oktober 2024
+                      </p>
+                    </div>
+                    <div class="flex gap-[8px] my-[8px]">
+                      <img src="/Icon_Time.svg" alt="" />
+                      <p class="text-[14px] lg:text-[16px] xl:text-[20px]">
+                        09:00 s/d Selesai
+                      </p>
+                    </div>
+                    <div class="flex gap-[8px] items-start">
+                      <img src="/Icon_location.svg" alt="" />
+                      <p
+                        class="text-[14px] lg:text-[16px] xl:text-[20px] leading-[190%]"
+                      >
+                        Kp Peundeuy RT 002/009 Desa Warnajati Kec Cibadak kab
+                        Sukabumi
+                      </p>
+                    </div>
+                    <a
+                      class="block border border-[#4E4E50] rounded-[10px] text-center leading-[22px] my-[10px] py-[5px] w-full transition-colors duration-200 hover:bg-gray-600 hover:text-white"
+                      href="https://maps.google.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Map
+                    </a>
+                  </div>
                 </div>
-                <a
-                  class="block border border-[#4E4E50] rounded-[10px] text-center leading-[22px] my-[10px] py-[5px] w-full transition-colors duration-200 hover:bg-gray-600 hover:text-white"
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Map
-                </a>
               </div>
             </div>
           </div>
         </div>
         <!-- Content-Event-Title-Ucapan -->
         <div
-          class="md:mt-[-100px] lg:mt-[-140px] xl:mt-[-180px] pb-[20px] flex flex-col items-center lg:items-end md:flex-row-reverse"
+          class="md:mt-[-100px] lg:mt-[-140px] xl:mt-[-140px] pb-[20px] flex flex-col items-center lg:items-end md:flex-row-reverse"
         >
           <div
             class="content-end md:ml-[30px] md:mr-[100px] lg:ml-[63px] lg:mr-[169px]"
           >
             <p
-              class="text-[14px] xl:text-[24px] xl:mb-[77px] text-center md:text-start mb-[27px] md:mb-[-200px] lg:mb-[50px] text-primary w-[340px] md:w-[409px]"
+              class="text-[14px] xl:text-[24px] xl:mb-[77px] text-center md:text-start mb-[8px] md:mb-[-200px] lg:mb-[50px] text-primary w-[340px] md:w-[409px]"
               data-aos="fade-up"
               data-aos-duration="700"
               data-aos-delay="700"
@@ -601,7 +655,7 @@
             </p>
           </div>
           <img
-            class="z-[-1] w-[282px] md:w-[400px] lg:w-[550px] xl:w-auto flex items-center"
+            class="z-[-1] w-[282px] md:w-[400px] lg:w-[550px] xl:w-auto flex rounded-[12px] md:rounded-none items-center"
             data-aos="zoom-in"
             data-aos-duration="700"
             data-aos-delay="700"
@@ -614,42 +668,49 @@
       <section id="Galery">
         <div class="container mx-auto pt-[28px]">
           <div
-            class="flex relative justify-center items-center xl:items-start flex-col md:flex-row gap-[20px] md:gap-[50px] lg:gap-[100px] xl:gap-[148px]"
+            class="flex relative justify-center items-center xl:items-start flex-col md:flex-row gap-[2px] md:gap-[50px] lg:gap-[100px] xl:gap-[148px]"
           >
-            <div class="w-[313px] lg:w-[450px] xl:w-full xl:pl-4 xl:max-w-[532px] relative flex flex-col gap-3">
-              <p
-                class="text-center text-[12px] md:text-[16px] md:text-start mb-[12px]"
-                data-aos="fade-down"
-                data-aos-duration="400"
-                data-aos-delay="300"
-              >
-                Our Galerygroup-hover:scale-125 transition-all duration-300 ease-in-out
-              </p>
-              <p
-                class="font-bold text-[#4E4E50] text-[18px] lg:text-[32px] mt-[8px] leading-[22px] text-center md:text-start mb-[22px]"
-                data-aos="fade-up"
-                data-aos-duration="400"
-                data-aos-delay="500"
-              >
-                Moments We Treasure
-              </p>
-              <p
-                class="text-[12px] md:text-[16px] text-justify leading-[26px]"
-                data-aos="fade-up"
-                data-aos-duration="400"
-                data-aos-delay="500"
-              >
-                Welcome to our gallery, where we've captured the most cherished
-                moments of our journey together. From our first date to the day
-                we said "I do," each photo tells a story of love, joy, and
-                unforgettable memories. We hope you enjoy browsing through these
-                snapshots as much as we enjoyed living these moments. May these
-                images bring a smile to your face and warmth to your heart, just
-                as they do for us every time we look back. Thank you for being a
-                part of our beautiful story.
-              </p>
+            <div
+              class="w-[313px] lg:w-[450px] xl:w-full xl:pl-4 xl:max-w-[532px] relative flex flex-col gap-2 sm:gap-3 text-[#4E4E50]"
+            >
+              <div class="flex flex-col gap-2 p-[10px]">
+                <p
+                  class="text-center text-[12px] md:text-[16px] md:text-start"
+                  data-aos="fade-down"
+                  data-aos-duration="400"
+                  data-aos-delay="300"
+                >
+                  Our Galery
+                </p>
+                <p
+                  class="font-bold text-[#4E4E50] text-[18px] lg:text-[32px] leading-[22px] text-center md:text-start"
+                  data-aos="fade-up"
+                  data-aos-duration="400"
+                  data-aos-delay="500"
+                >
+                  Moments We Treasure
+                </p>
+              </div>
+              <div class="p-[10px]">
+                <p
+                  class="text-[12px] md:text-[16px] text-center sm:text-justify leading-[22px] md:leading-[26px]"
+                  data-aos="fade-up"
+                  data-aos-duration="400"
+                  data-aos-delay="500"
+                >
+                  Welcome to our gallery, where we've captured the most
+                  cherished moments of our journey together. From our first date
+                  to the day we said "I do," each photo tells a story of love,
+                  joy, and unforgettable memories. We hope you enjoy browsing
+                  through these snapshots as much as we enjoyed living these
+                  moments.<br />
+                  May these images bring a smile to your face and warmth to your
+                  heart, just as they do for us every time we look back. Thank
+                  you for being a part of our beautiful story.
+                </p>
+              </div>
               <img
-                class="mt-[-250px]"
+                class="absolute md:h-[420px] top-[30px] md:top-[100px] xl:top-auto w-[310px] h-[265px] md:w-[522px] xl:h-[555px] xl:w-[622px]"
                 data-aos="zoom-in"
                 data-aos-duration="700"
                 data-aos-delay="1000"
@@ -669,14 +730,14 @@
               <!-- Ikon Pause -->
               <i
                 id="pauseIconVideo"
-                class="fa-solid fa-pause absolute inset-0 m-auto justify-center items-center text-[50px] cursor-pointer hidden  z-10 pointer-events-none text-white"
+                class="fa-solid fa-pause absolute inset-0 m-auto justify-center items-center text-[50px] cursor-pointer hidden z-10 pointer-events-none text-white"
               >
               </i>
 
               <!-- Video -->
               <video
                 id="videoPlayer"
-                class="w-[313px] md:w-[350px] xl:w-[650px] rounded-[24px] h-[284px] sm:h-[557px] !object-cover"
+                class="w-[313px] md:w-[350px] xl:w-[650px] rounded-[24px] h-[284px] md:h-[557px] !object-cover"
                 poster="/banner_video.png"
               >
                 <source src="VideoWedding.mp4" type="video/mp4" />
@@ -744,7 +805,7 @@
 
     <footer id="site-footer">
       <div
-        class="bg-[#F1F0EE] pt-[34px] text-primary m-auto flex flex-col items-center"
+        class="bg-[#F1F0EE] pt-[14px] md:pt-[24px] text-primary m-auto flex flex-col items-center"
       >
         <img
           src="./Up_Top.svg"
@@ -796,9 +857,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- get date footer -->
-     <script>
+    <script>
       document.getElementById("year").innerHTML = new Date().getFullYear();
-     </script>
+    </script>
 
     <!-- Couldown/Waktu -->
     <script>
@@ -986,71 +1047,70 @@
     </style>
 
     <!-- Ketuk Audio Musik -->
-  <script>
-  function toggleMenu() {
-    const menu = document.getElementById("menu-items");
-    const menuIcon = document.getElementById("menu-icon");
-    const closeIcon = document.getElementById("close-icon");
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu-items");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
 
-    if (menu.classList.contains("translate-x-[200%]")) {
-      menu.classList.remove("translate-x-[200%]"); // Geser ke posisi semula
-      menu.classList.add("translate-x-0");
-      menuIcon.classList.add("hidden");
-      closeIcon.classList.remove("hidden");
-    } else {
-      menu.classList.remove("translate-x-0");
-      menu.classList.add("translate-x-[200%]"); // Geser keluar layar
-      menuIcon.classList.remove("hidden");
-      closeIcon.classList.add("hidden");
-    }
-  }
-</script>
+        if (menu.classList.contains("translate-x-[200%]")) {
+          menu.classList.remove("translate-x-[200%]", "opacity-0");
+          menu.classList.add("translate-x-0", "opacity-100");
+          menuIcon.classList.add("hidden");
+          closeIcon.classList.remove("hidden");
+        } else {
+          menu.classList.remove("translate-x-0", "opacity-100");
+          menu.classList.add("translate-x-[200%]", "opacity-0");
+          menuIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        }
+      }
+    </script>
 
     <!-- pause play video -->
     <script>
       const video = document.getElementById("videoPlayer");
-const playIconVideo = document.getElementById("playIconVideo");
-const pauseIconVideo = document.getElementById("pauseIconVideo");
+      const playIconVideo = document.getElementById("playIconVideo");
+      const pauseIconVideo = document.getElementById("pauseIconVideo");
 
-// Fungsi untuk play dan pause video
-function togglePlayPause() {
-  if (video.paused) {
-    video.play();
-    playIconVideo.classList.add("hidden");
-  } else {
-    video.pause();
-    playIconVideo.classList.remove("hidden");
-    pauseIconVideo.classList.add("hidden"); // Sembunyikan ikon pause saat video dijeda
-  }
-}
+      // Fungsi untuk play dan pause video
+      function togglePlayPause() {
+        if (video.paused) {
+          video.play();
+          playIconVideo.classList.add("hidden");
+        } else {
+          video.pause();
+          playIconVideo.classList.remove("hidden");
+          pauseIconVideo.classList.add("hidden"); // Sembunyikan ikon pause saat video dijeda
+        }
+      }
 
-// Klik ikon play untuk memulai video
-playIconVideo.addEventListener("click", togglePlayPause);
+      // Klik ikon play untuk memulai video
+      playIconVideo.addEventListener("click", togglePlayPause);
 
-// Klik ikon pause untuk menghentikan video
-pauseIconVideo.addEventListener("click", togglePlayPause);
+      // Klik ikon pause untuk menghentikan video
+      pauseIconVideo.addEventListener("click", togglePlayPause);
 
-// Klik di video untuk pause/play dan atur ikon
-video.addEventListener("click", togglePlayPause);
+      // Klik di video untuk pause/play dan atur ikon
+      video.addEventListener("click", togglePlayPause);
 
-// Tampilkan ikon pause hanya saat hover di video
-video.addEventListener("mouseover", () => {
-  if (!video.paused) {
-    pauseIconVideo.classList.remove("hidden");
-    pauseIconVideo.classList.add("flex");
-  }
-});
+      // Tampilkan ikon pause hanya saat hover di video
+      video.addEventListener("mouseover", () => {
+        if (!video.paused) {
+          pauseIconVideo.classList.remove("hidden");
+          pauseIconVideo.classList.add("flex");
+        }
+      });
 
-video.addEventListener("mouseout", () => {
-  pauseIconVideo.classList.add("hidden");
-});
+      video.addEventListener("mouseout", () => {
+        pauseIconVideo.classList.add("hidden");
+      });
 
-// Sembunyikan ikon play ketika video selesai
-video.addEventListener("ended", () => {
-  playIconVideo.classList.remove("hidden"); // Tampilkan ikon play lagi
-  pauseIconVideo.classList.add("hidden"); // Sembunyikan ikon pause
-});
-
+      // Sembunyikan ikon play ketika video selesai
+      video.addEventListener("ended", () => {
+        playIconVideo.classList.remove("hidden"); // Tampilkan ikon play lagi
+        pauseIconVideo.classList.add("hidden"); // Sembunyikan ikon pause
+      });
     </script>
   </body>
 </html>
