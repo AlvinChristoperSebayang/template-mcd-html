@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     typing();
   }
 
-  function isFooterVisible() {
-    const footer = document.getElementById("site-footer");
-    const rect = footer.getBoundingClientRect();
-    return rect.top >= 50 && rect.bottom <= window.innerHeight;
-  }
+function isFooterVisible() {
+  const footer = document.getElementById("site-footer");
+  const rect = footer.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom > 0;
+}
 
   function onScroll() {
     if (isFooterVisible()) {
