@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "fslightbox": "^3.4.2",
+    "fslightbox": "^3.5.1",
     "gsap-trial": "^3.12.5",
     "lightbox2": "^2.11.5",
     "motion": "^11.11.14",
