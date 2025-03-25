@@ -908,27 +908,19 @@
       </div>
     </footer>
 
-    <script src="/fslightbox.js"></script>
+    <script src="fslightbox.js"></script>
     <script type="module" src="/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
- <script>
-  // Pastikan fslightbox sudah di-load dan diinisialisasi
-  setTimeout(() => {
-    if (window.fsLightboxInstances) {
-      fsLightboxInstances["gallery"].props.slideshowTime = 10000;
-    }
-  }, 100);
-</script>
-
 
     <!-- get date footer -->
     <script>
       document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
 
-    <script></script>
+<script>
+  console.log("FSLightbox path:", document.querySelector("script[src*='fslightbox']")?.src);
+</script>
 
     <!-- Couldown/Waktu -->
     <script>
