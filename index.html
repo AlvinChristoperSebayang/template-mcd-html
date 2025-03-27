@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bumi agency</title>
-    <link
-      rel="shortcut icon"
-      href="./img/Vector (9).svg"
-      type="image/svg+img" />
+    <link rel="shortcut icon" href="./img/Vector (9).svg" type="image/svg+img" />
     <!-- <link href="src/output.css" rel="stylesheet" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="src/style.css" /> -->
@@ -15,7 +12,7 @@
 
     <!-- swipper -->
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -25,89 +22,121 @@
 
     <!-- swipper -->
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+
+    <style>
+      .swiper-wrapper {
+          display: flex;
+          transition-timing-function: linear !important;
+      }
+  </style>
+
 
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
 
-  <body class="">
+  <body">
     <div
       class="relative top-0 mx-auto h-dvh w-full overflow-hidden bg-[url('../img/hero1.png')] bg-[length:100%_100%] bg-center bg-no-repeat md:h-[180vh] lg:h-[220vh]">
       <div class="container mx-auto max-w-[1440px]">
-        <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300 ">
+        <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
           <div class="container mx-auto max-w-[1440px] ps-3 pe-3 sm:pe-5 lg:pe-10">
             <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
-              <figure>
-                <img id="logo-img" src="../img/Vector (1).svg" alt="Logo" class="w-[42px] lg:w-[48px]" />
-              </figure>
+              <div id="logo-container">
+                <img id="logo-img" src="../img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
+              </div>
 
-              <div class="flex w-full items-center justify-between">
-                <h2 id="site-title" class="font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
+              <div id="menu-container" class="flex w-full items-center justify-between">
+                <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
 
                 <!-- Desktop Menu -->
                 <nav id="desktop-menu" class="hidden items-center lg:flex">
                   <ul class="flex items-center gap-4 text-sm text-white">
-                    <li><img src="../img/Vector 35.svg" alt="" /></li>
+                    <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
                     <li class="font-bold">
-                      <a href="" class="nav-link">Home</a>
+                      <a href="#" class="nav-link hover:text-secondary transition-all">Home</a>
                     </li>
-                    <li><img src="../img/Vector 35.svg" alt="" /></li>
-                    <li><a href="" class="nav-link">About</a></li>
-                    <li><img src="../img/Vector 31.svg" alt="" /></li>
-                    <li>
-                      <a href="#properties" class="nav-link">Properties</a>
+                    <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
+                    <li><a href="#" class="nav-link hover:text-secondary transition-all">About</a></li>
+                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <!-- Dropdown untuk Properties -->
+                    <li class="relative flex gap-4 items-center">
+                      <a href="#properties" class="nav-link hover:text-secondary transition-all">Properties</a>
+                      <img src="../img/Down.svg" alt="Toggle Dropdown" 
+                           class="nav-icon dropdown-toggle cursor-pointer group-hover:text-secondary" 
+                           data-dropdown="properties" />
+                      <ul id="dropdown-properties" class="absolute left-0 top-full mt-2 w-28 bg-white text-primary shadow-md hidden dropdown-menu rounded-lg">
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 1</a></li>
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 2</a></li>
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 3</a></li>
+                       
+                      </ul>
                     </li>
-                    <li><img src="../img/Down.svg" alt="" /></li>
-                    <li><img src="../img/Vector 31.svg" alt="" /></li>
-                    <li><a href="" class="nav-link">Services</a></li>
-                    <li><img src="../img/Down.svg" alt="" /></li>
-                    <li><img src="../img/Vector 31.svg" alt="" /></li>
-                    <li><a href="" class="nav-link">Resources</a></li>
-                    <li><img src="../img/Down.svg" alt="" /></li>
-                    <li><img src="../img/Vector 31.svg" alt="" /></li>
-                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
-                    <li><img src="../img/Vector 31.svg" alt="" /></li>
+                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <!-- Dropdown untuk Services -->
+                    <li class="relative flex gap-4 items-center">
+                      <a href="#" class="nav-link hover:text-secondary transition-all">Services</a>
+                      <img src="../img/Down.svg" alt="Toggle Dropdown" 
+                           class="nav-icon dropdown-toggle cursor-pointer" 
+                           data-dropdown="services" />
+                      <ul id="dropdown-services" class="absolute left-0 top-full mt-2 w-28 bg-white text-primary shadow-md hidden dropdown-menu rounded-lg">
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 1</a></li>
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 2</a></li>
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 3</a></li>
+                       
+                      </ul>
+                    </li>
+                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <!-- Dropdown untuk Resources -->
+                    <li class="relative flex gap-4 items-center">
+                      <a href="#" class="nav-link hover:text-secondary transition-all">Resources</a>
+                      <img src="../img/Down.svg" alt="Toggle Dropdown" 
+                           class="nav-icon dropdown-toggle cursor-pointer" 
+                           data-dropdown="resources" />
+                      <ul id="dropdown-resources" class="absolute left-0 top-full mt-2 w-28 bg-white text-primary shadow-md hidden dropdown-menu rounded-lg">
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 1</a></li>
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 2</a></li>
+                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 3</a></li>
+                       
+                      </ul>
+                    </li>
+                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <li><a href="#contact" class="nav-link hover:text-secondary transition-all">Contact Us</a></li>
+                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                   </ul>
-                </nav>
+                </nav>                
+              </div>
+              <!-- Mobile Menu Button & Dropdown -->
+              <div class="relative lg:hidden">
+                <button id="mobile-menu-button" class="fixed top-4 right-4 z-60 w-8 h-8 focus:outline-none">
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                </button>
+                <!-- Mobile Dropdown Menu -->
 
-                <!-- Mobile Menu Button & Dropdown -->
-                <div class="relative lg:hidden">
-                  <button
-                    id="mobile-menu-button"
-                    class="flex transform items-center gap-2 text-white transition-all duration-1000 ease-in-out hover:scale-105 active:scale-95">
-                    <img src="../img/Vector 35.svg" alt="" class="mobile-icon" />
-                    <p id="menu-text" class="transition-all duration-1000">Menu</p>
-                    <!-- Pastikan ikon diberi display inline-block agar bisa di-transform -->
-                    <img
-                      id="down-icon"
-                      class="mobile-icon inline-block transition-transform duration-1000 ease-in-out"
-                      src="../img/Down.svg"
-                      alt="" />
-                    <img src="../img/Vector 35.svg" alt="" class="mobile-icon" />
-                  </button>
-                  <!-- Mobile Dropdown Menu -->
-                  <div
-                    id="mobile-menu"
-                    class="absolute right-0 mt-6 w-48 origin-top scale-y-0 transform rounded opacity-0 shadow-2xl transition-all duration-1000 ease-in-out">
-                    <ul class="flex flex-col gap-2 p-4 text-sm text-white">
-                      <li><a href="">Home</a></li>
-                      <li><a href="">About</a></li>
-                      <li><a href="">Properties</a></li>
-                      <li><a href="">Services</a></li>
-                      <li><a href="">Resources</a></li>
-                      <li><a href="">Contact Us</a></li>
-                    </ul>
-                  </div>
+                <div
+                  id="mobile-menu"
+                  class="fixed inset-0 bg-blue-300 text-black transform translate-x-full opacity-0 transition-transform duration-300 ease-in-out z-50">
+                  <ul class="sm:h-full flex flex-col justify-center sm:items-center space-y-6 mt-16 ps-5">
+                    <li><a href="#" class="text-2xl hover:text-white">Home</a></li>
+                    <li><a href="#" class="text-2xl hover:text-white">About</a></li>
+                    <li><a href="#" class="text-2xl hover:text-white">Properties</a></li>
+                    <li><a href="#" class="text-2xl hover:text-white">Services</a></li>
+                    <li><a href="#" class="text-2xl hover:text-white">Resources</a></li>
+                    <li><a href="#" class="text-2xl hover:text-white">Contact</a></li>
+                  </ul>
                 </div>
               </div>
+
             </div>
           </div>
         </header>
 
         <!-- herro -->
-        <section id="intro" class="relative top-36 sm:top-[200px] container mx-auto max-w-[1440px] px-2">
-          <div class="ml-[55px] flex flex-col text-white sm:ml-[70px] md:ml-[73px] lg:ml-[120px]">
+        <section id="intro" class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-2">
+          <div class="flex flex-col text-white sm:ml-[70px] md:ml-[73px] lg:ml-[120px]">
             <div class="md:w-[419px] lg:w-[825px]">
               <h1
                 id="title"
@@ -117,52 +146,96 @@
             </div>
 
             <div data-aos="fade-up" class="relative mt-56 hidden w-full grow justify-between lg:flex">
-              <!-- Kategori (Akan Disembunyikan Saat Search Diklik) -->
+              <!-- Filter Container -->
               <div id="categoryContainer" class="flex w-full justify-between">
+                <!-- Category Filter -->
                 <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
                   <p class="font-jakarta text-sm font-light">Category</p>
-                  <div class="flex justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold">Rent/Buy</p>
-                    <img src="../img/Down.svg" alt="" class="w-3.5 flex-shrink-1" />
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold" id="selected-category">Rent/Buy</p>
+                    <img src="../img/Down.svg" alt="Toggle Category" 
+                         class="w-3.5 cursor-pointer dropdown-toggle" 
+                         data-dropdown="category" />
                   </div>
+                  <!-- Dropdown Menu for Category -->
+                  <ul id="dropdown-category" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
+                  </ul>
                 </div>
-
-                <div class="flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+              
+                <!-- Type Filter -->
+                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
                   <p class="font-jakarta text-sm font-light">Type</p>
-                  <div class="flex justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold">Residential</p>
-                    <img src="../img/Down.svg" alt="" class="w-3.5" />
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold" id="selected-type">Residential</p>
+                    <img src="../img/Down.svg" alt="Toggle Type" 
+                         class="w-3.5 cursor-pointer dropdown-toggle" 
+                         data-dropdown="type" />
                   </div>
+                  <!-- Dropdown Menu for Type -->
+                  <ul id="dropdown-type" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
+                  </ul>
+                  </ul>
                 </div>
-
-                <div class="flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+              
+                <!-- City Filter -->
+                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
                   <p class="font-jakarta text-sm font-light">City</p>
-                  <div class="flex justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold">Alabama</p>
-                    <img src="../img/Down.svg" alt="" class="w-3.5" />
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold" id="selected-city">Alabama</p>
+                    <img src="../img/Down.svg" alt="Toggle City" 
+                         class="w-3.5 cursor-pointer dropdown-toggle" 
+                         data-dropdown="city" />
                   </div>
+                  <!-- Dropdown Menu for City -->
+                  <ul id="dropdown-city" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
+                  </ul>
+                  </ul>
                 </div>
-
-                <div class="flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+              
+                <!-- Price Filter -->
+                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
                   <p class="font-jakarta text-sm font-light">Price</p>
-                  <div class="flex justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold">$600k - $1000k</p>
-                    <img src="../img/Down.svg" alt="" class="w-3.5" />
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold" id="selected-price">$600k - $1000k</p>
+                    <img src="../img/Down.svg" alt="Toggle Price" 
+                         class="w-3.5 cursor-pointer dropdown-toggle" 
+                         data-dropdown="price" />
                   </div>
+                  <!-- Dropdown Menu for Price -->
+                  <ul id="dropdown-price" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
+                  </ul>
+                  </ul>
                 </div>
               </div>
-
+              
+              
+              
+          
+              <!-- Search Input and Button (optional) -->
               <input type="text" id="searchInput" class="hidden w-full rounded-md border p-4 focus:outline-none" placeholder="Cari sesuatu..." />
               <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 hover:scale-95">
-                <img
-                  src="../img/search.svg"
-                  alt="Search"
-                  class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
+                <img src="../img/search.svg" alt="Search" class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
               </button>
             </div>
+            
           </div>
-          <div class="absolute top-32 sm:top-64 flex w-full gap-[48px] pe-4 pl-20 lg:hidden">
-            <input type="text" placeholder="Search Please" class="font-jakarta w-full border-b border-white text-lg font-normal text-white focus:outline-none" />
+          <div class="absolute top-44 md:top-64 flex w-full gap-5 md:gap-[48px] pe-4 sm:ps-20 lg:hidden">
+            <input
+              type="text"
+              placeholder="Search Please"
+              class="font-jakarta w-full border-b border-white text-lg font-normal text-white focus:outline-none" />
             <img src="../img/search.svg" alt="" class="h-12 flex-shrink-0 rounded-full bg-white p-4" />
           </div>
         </section>
@@ -171,7 +244,7 @@
 
     <!-- section properties -->
     <section id="properties" class="container mx-auto max-w-[1440px] px-2 py-24">
-      <div class="flex flex-col pe-2 pl-[55px] sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+      <div class="flex flex-col md:pe-2 sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col justify-between xl:gap-24">
           <div class="flex w-full flex-col justify-between gap-10 md:gap-y-16 xl:flex-row">
             <div class="flex items-end md:w-[552px] xl:w-1/2">
@@ -180,50 +253,58 @@
               </h2>
             </div>
 
-            <div class="mb-10 flex items-end px-1 md:w-[591px] lg:mb-0 xl:w-1/2">
-              <ul class="flex w-full flex-wrap items-center sm:justify-between text-secondary gap-2">
+            <div  class="mb-10 flex items-end px-1 md:w-[591px] lg:mb-0 xl:w-1/2">
+              <ul class="flex w-full flex-wrap items-center md:justify-between gap-2">
                 <li data-aos="fade-up" data-aos-delay="0" class="">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100" class="text-dark text-lg font-semibold lg:text-2xl texts-dark"><button>All</button></li>
+                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl cursor-pointer hover:text-dark" data-category="All" data-aos="fade-up" data-aos-delay="100">All</button>
+                <li data-aos="fade-up" data-aos-delay="100" class="flex-shrink-0">
+                  <img src="../img/vector.svg" alt="" />
+                </li>
+                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl hover:text-dark cursor-pointer" data-category="Residential" data-aos="fade-up" data-aos-delay="300">Residential</button>
                 <li data-aos="fade-up" data-aos-delay="200" class="flex-shrink-0">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <li data-aos="fade-up" data-aos-delay="300" class="text-lg lg:text-2xl"><button class="hover:text-dark">Residential</button></li>
+                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl hover:text-dark cursor-pointer" data-category="Commercial" data-aos="fade-up" data-aos-delay="500">Commercial</button>
+                <li data-aos="fade-up" data-aos-delay="300" class="flex-shrink-0">
+                  <img src="../img/vector.svg" alt="" />
+                </li>
+                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl hover:text-dark cursor-pointer" data-category="Vacational" data-aos="fade-up" data-aos-delay="700">Vacational</button>
                 <li data-aos="fade-up" data-aos-delay="400" class="flex-shrink-0">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <li data-aos="fade-up" data-aos-delay="500" class="text-lg lg:text-2xl"><button class="hover:text-dark">Commercial</button></li>
-                <li data-aos="fade-up" data-aos-delay="600" class="flex-shrink-0">
-                  <img src="../img/vector.svg" alt="" />
-                </li>
-                <li data-aos="fade-up" data-aos-delay="700" class="text-lg lg:text-2xl"><button class="hover:text-dark">Vacational</button></li>
-                <li data-aos="fade-up" data-aos-delay="800" class="flex-shrink-0">
-                  <img src="../img/vector.svg" alt="" />
-                </li>
+                
               </ul>
             </div>
           </div>
 
           <!-- Grid card -->
-          <div class="grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-4 -translate-y-5 lg:-translate-y-0">
-            <div data-aos="fade-up" data-aos-duration="1000" class="group flex flex-col gap-4">
-              <figure class="relative overflow-hidden lg:rounded-xl">
+          <div id="gallery"  class="grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-4 -translate-y-5 lg:-translate-y-10">
+            <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
+              <figure class="relative overflow-hidden lg:rounded-xl group">
+                <!-- Gambar -->
                 <img
-                  src="../img/Rectangle 2 (8).png"
-                  alt=""
+                  src="img/Rectangle 2 (8).png"
+                  alt="Explore"
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:brightness-125 lg:rounded-xl" />
+              
                 <!-- Overlay Gradient -->
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
-                <!-- Overlay Text -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white">Explore</span>
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-70"></div>
+              
+                <!-- Overlay Text dengan Latar Belakang -->
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm drop-shadow-lg">
+                    Explore
+                  </span>
                 </div>
               </figure>
-              <div data-aos="fade-up" data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
+              
+              <div data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
                 <div class="font-light">
-                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"> <a href="">Villa House</a></h3>
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
                   <p>Cibuntu, Sukabumi</p>
                   <p>House</p>
                 </div>
@@ -235,7 +316,7 @@
             </div>
 
             <!-- card 1 -->
-            <div data-aos="fade-up" data-aos-duration="1000" class="group flex flex-col gap-4">
+            <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
                   src="../img/Rectangle 2 (9).png"
@@ -245,11 +326,14 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white">Explore</span>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
+                    Explore
+                  </span>
                 </div>
               </figure>
-              <div data-aos="fade-up" data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
+              <div class="font-jakarta text-primary flex items-center justify-between">
                 <div class="font-light">
                   <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
                   <p>Cibuntu, Sukabumi</p>
@@ -263,7 +347,7 @@
             </div>
 
             <!--card 2  -->
-            <div data-aos="fade-up" data-aos-duration="1000" class="group flex flex-col gap-4">
+            <div data-category="Commercial" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
                   src="../img/Rectangle 2 (10).png"
@@ -273,11 +357,14 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white">Explore</span>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
+                    Explore
+                  </span>
                 </div>
               </figure>
-              <div data-aos="fade-up" data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
+              <div class="font-jakarta text-primary flex items-center justify-between">
                 <div class="font-light">
                   <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
                   <p>Cibuntu, Sukabumi</p>
@@ -291,7 +378,7 @@
             </div>
 
             <!-- card 3 -->
-            <div data-aos="fade-up" data-aos-duration="1000" class="group flex flex-col gap-4">
+            <div data-category="Commercial" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
                   src="../img/Rectangle 2 (11).png"
@@ -301,8 +388,11 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white">Explore</span>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
+                    Explore
+                  </span>
                 </div>
               </figure>
               <div data-aos="fade-up" data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
@@ -319,21 +409,24 @@
             </div>
 
             <!-- card 4 -->
-            <div data-aos="fade-up" data-aos-duration="1000" class="group flex flex-col gap-4">
+            <div data-category="Residential" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
-                  src="../img/Rectangle 2 (9).png"
+                  src="../img/Rectangle 2 (13).png"
                   alt=""
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:brightness-125 lg:rounded-xl" />
                 <!-- Overlay Gradient -->
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white">Explore</span>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
+                    Explore
+                  </span>
                 </div>
               </figure>
-              <div class="font-jakarta text-primary flex items-center justify-between">
+              <div data-aos="fade-up" data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
                 <div class="font-light">
                   <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
                   <p>Cibuntu, Sukabumi</p>
@@ -347,21 +440,24 @@
             </div>
 
             <!-- card 5 -->
-            <div data-aos="fade-up" data-aos-duration="1000" class="group flex flex-col gap-4">
+            <div data-category="Residential" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
-                  src="../img/Rectangle 2 (13).png"
+                  src="img/Rectangle 2 (15).png"
                   alt=""
-                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:brightness-125 lg:rounded-xl cursor-pointer" />
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:rotate-3 group-hover:brightness-125 lg:rounded-xl" />
                 <!-- Overlay Gradient -->
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white">Explore</span>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
+                    Explore
+                  </span>
                 </div>
               </figure>
-              <div class="font-jakarta text-primary flex items-center justify-between">
+              <div data-aos="fade-up" data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
                 <div class="font-light">
                   <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
                   <p>Cibuntu, Sukabumi</p>
@@ -387,7 +483,7 @@
 
     <!-- section parnert client -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
-      <div class="flex flex-col-reverse justify-between gap-10 pl-[55px] sm:pl-[70px] md:pl-[73px] lg:flex-row lg:pl-[120px]">
+      <div class="flex flex-col-reverse justify-between gap-10 sm:pl-[70px] md:pl-[73px] lg:flex-row lg:pl-[120px]">
         <div class="font-gloock flex w-full flex-col justify-between gap-y-8 lg:w-1/2">
           <h1 data-aos="fade-right" class="text-dark text-4xl leading-[120%] font-normal tracking-[2%] md:text-5xl">
             Your Partner in Every Step of the Journey
@@ -413,57 +509,98 @@
 
     <!-- section partner -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
-      <div class="w-full pl-[55px] sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
-        <div class="flex max-w-[1282px] flex-col gap-10 md:gap-24">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="flex max-w-[1282px] flex-col gap-8 md:gap-24">
           <h2 data-aos="fade-right" class="title w-full md:w-[525px]">We can’t go this far without great partner</h2>
 
-          <div class="relative mt-10">
-            <!-- Swiper Container -->
+          <!-- card list -->
+          <div class="relative mt-10 overflow-hidden">
             <div class="swiper">
-              <div class="swiper-wrapper">
-                <!-- Card 1 -->
-                <div class="swiper-slide flex h-[157px] items-center justify-center border px-[58px] py-[57px]">
-                  <div class="flex items-center justify-center gap-4">
-                    <figure class="flex-shrink-0">
-                      <img src="../img/parter.svg" alt="" class="w-full h-11" />
-                    </figure>
-                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                  </div>
-                </div>
+                <div class="swiper-wrapper flex">
+                    <!-- Card 1 -->
+                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                        <div class="flex items-center justify-center gap-4">
+                            <figure class="flex-shrink-0">
+                                <img src="../img/parter.svg" alt="" class="w-full h-11" />
+                            </figure>
+                            <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                        <div class="flex items-center justify-center gap-4">
+                            <figure class="flex-shrink-0">
+                                <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                            </figure>
+                            <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                        <div class="flex items-center justify-center gap-4">
+                            <figure class="flex-shrink-0">
+                                <img src="img/Group.svg" alt="" class="w-full h-11" />
+                            </figure>
+                            <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                        <div class="flex items-center justify-center gap-4">
+                            <figure class="flex-shrink-0">
+                                <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                            </figure>
+                            <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                        </div>
+                    </div>
 
-                <!-- Card 2 -->
-                <div class="swiper-slide flex h-[157px] items-center justify-center border px-[58px] py-[57px]">
-                  <div class="flex items-center justify-center gap-4">
-                    <figure class="flex-shrink-0">
-                      <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
-                    </figure>
-                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                    <!-- Card 1 -->
+                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                      <div class="flex items-center justify-center gap-4">
+                          <figure class="flex-shrink-0">
+                              <img src="../img/parter.svg" alt="" class="w-full h-11" />
+                          </figure>
+                          <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                      </div>
                   </div>
-                </div>
+                  
+                  <!-- Card 2 -->
+                  <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                      <div class="flex items-center justify-center gap-4">
+                          <figure class="flex-shrink-0">
+                              <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                          </figure>
+                          <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                      </div>
+                  </div>
+                  
+                  <!-- Card 3 -->
+                  <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                      <div class="flex items-center justify-center gap-4">
+                          <figure class="flex-shrink-0">
+                              <img src="img/Group.svg" alt="" class="w-full h-11" />
+                          </figure>
+                          <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
+                      </div>
+                  </div>
+                  
+                  <!-- Card 4 -->
+                  <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                      <div class="flex items-center justify-center gap-4">
+                          <figure class="flex-shrink-0">
+                              <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                          </figure>
+                          <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                      </div>
+                  </div>
 
-                <!-- Card 3 -->
-                <div class="swiper-slide h-[157px] flex items-center justify-center border px-[58px] py-[57px]">
-                  <div class="flex items-center justify-center gap-4">
-                    <figure class="flex-shrink-0">
-                      <img src="img/Group.svg" alt="" class="w-full h-11" />
-                    </figure>
-                    <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
-                  </div>
-                </div>
 
-                <!-- Card 4 -->
-                <div class="swiper-slide flex h-[157px] items-center justify-center border px-[58px] py-[57px]">
-                  <div class="flex items-center justify-center gap-4">
-                    <figure class="flex-shrink-0">
-                      <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
-                    </figure>
-                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-
+        </div>
           <!-- button -->
           <buttonc class="btn-primary">
             <span class="font-jakarta text-sm font-semibold">Become our partner</span>
@@ -475,82 +612,80 @@
 
     <!-- section our vision -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
-      <div class="w-full pl-[55px] sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col gap-14 md:gap-24">
           <h2 data-aos="fade-right" class="title w-full md:w-[601px]">Your Vision, Our Expertise.</h2>
 
           <!-- list card -->
-          <div id="vision" class="scrollbar-hide flex w-full overflow-x-auto md:gap-0">
-            <!-- Card 1 -->
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="0"
-              class="flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
-              <h3 class="font-gloock w-[260px] text-[32px]">Property Management</h3>
-              <p class="font-jakarta text-primary text-sm">
-                Comprehensive care for your investments, ensuring seamless operations and peace of mind.
-              </p>
-              <button class="view-button group flex items-center justify-between gap-2 p-2">
-                <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-              </button>
-            </div>
 
-            <!-- Card 2 -->
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="150"
-              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-              <h3 class="font-gloock w-[260px] text-[32px]">Real Estate Consultation</h3>
-              <p class="font-jakarta text-primary text-sm">Expert guidance to help you navigate the complexities of buying, selling, or investing.</p>
-              <button class="view-button group flex items-center justify-between gap-2 p-2">
-                <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-              </button>
-            </div>
+          <div class="custom-swiper-container">
+            <div class="custom-swiper-wrapper scrollbar-hide flex flex-col md:flex-row w-full overflow-x-auto md:gap-0">
+              <!-- Konten asli -->
+              <!-- Card 1 -->
+              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0"
+                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
+                <h3 class="font-gloock w-[260px] text-[32px]">Property Management</h3>
+                <p class="font-jakarta text-primary text-sm">
+                  Comprehensive care for your investments, ensuring seamless operations and peace of mind.
+                </p>
+                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                  <span class="view-text transition-colors duration-300">View Details</span>
+                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                </button>
+              </div>
+        
+              <!-- Card 2 -->
+              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150"
+                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                <h3 class="font-gloock w-[260px] text-[32px]">Real Estate Consultation</h3>
+                <p class="font-jakarta text-primary text-sm">
+                  Expert guidance to help you navigate the complexities of buying, selling, or investing.
+                </p>
+                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                  <span class="view-text transition-colors duration-300">View Details</span>
+                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                </button>
+              </div>
+        
+              <!-- Card 3 -->
+              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300"
+                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+                <p class="font-jakarta text-primary text-sm">
+                  Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
+                </p>
+                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                  <span class="view-text transition-colors duration-300">View Details</span>
+                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                </button>
+              </div>
+        
+              <!-- Card 4 -->
+              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="450"
+                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+                <p class="font-jakarta text-primary text-sm">
+                  Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
+                </p>
+                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                  <span class="view-text transition-colors duration-300">View Details</span>
+                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                </button>
+              </div>
+        
+              <!-- Card 5 -->
+              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600"
+                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+                <p class="font-jakarta text-primary text-sm">
+                  Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
+                </p>
+                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                  <span class="view-text transition-colors duration-300">View Details</span>
+                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                </button>
+              </div>
 
-            <!-- Card 3 -->
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="300"
-              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
-              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
-              <button class="view-button group flex items-center justify-between gap-2 p-2">
-                <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-              </button>
-            </div>
-
-            <!-- Card 4 -->
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="450"
-              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
-              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
-              <button class="view-button group flex items-center justify-between gap-2 p-2">
-                <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-              </button>
-            </div>
-
-            <!-- Card 5 -->
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="600"
-              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
-              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
-              <button class="view-button group flex items-center justify-between gap-2 p-2">
-                <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-              </button>
             </div>
           </div>
 
@@ -565,97 +700,101 @@
 
     <!-- Section insaige -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
-      <div class="w-full pl-[55px] sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col gap-10 lg:gap-14">
           <div data-aos="fade-right" class="lg:[1280px] flex w-full flex-col items-end justify-between lg:flex-row">
             <h1 class="title lg:w-[710px]">Insights and Trends: Stay Updated with the Latest in Real Estate</h1>
             <div data-aos="fade-up" class="flex gap-2">
+              
               <!-- tombol slide -->
-              <button id="prevButton" class="border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100">
+              <button id="prevButton" class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 active:scale-95">
                 <img src="../img/Icons (2).svg" alt="" class="" />
               </button>
-              <button id="nextButton" class="border-dark rounded-full border p-2 sm:p-4">
+              <button id="nextButton" class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 active:scale-95">
                 <img src="../img/Icons (3).svg" alt="" />
               </button>
             </div>
           </div>
 
-          <div id="slideContainer" class="scrollbar-hide relative w-full overflow-x-auto">
-            <div class="flex w-max gap-4">
-              <!-- Card 1 -->
-              <div class="flex w-[572px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on harpan</h3>
-                  <p class="font-jakarta text-gray-400">We are a trusted property agency connecting you with the best opportunities in the market.</p>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
+          <div class="relative w-full overflow-hidden">
+            <div class="swiper-manual">
+                <div class="swiper-wrapper">
+                    <!-- Card 1 -->
+                    <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
+                        <figure class="flex flex-col gap-4">
+                            <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
+                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                            <p class="font-jakarta text-gray-400">We are a trusted property agency connecting you with the best opportunities in the market.</p>
+                        </figure>
+                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                    </div>
+    
+                    <!-- Card 2 -->
+                    <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                        <figure class="flex flex-col gap-4">
+                            <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
+                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                        </figure>
+                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                    </div>
+    
+                    <!-- Card 3 -->
+                    <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                        <figure class="flex flex-col gap-4">
+                            <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
+                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                        </figure>
+                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                    </div>
+    
+                    <!-- Card 4 -->
+                    <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
+                        <figure class="flex flex-col gap-4">
+                            <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
+                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                        </figure>
+                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                    </div>
 
-              <!-- Card 2 -->
-              <div class="flex w-[217px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="flex w-[217px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="flex w-[218px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
-              <div class="flex w-[572px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                  <p class="font-jakarta text-gray-400">We are a trusted property agency connecting you with the best opportunities in the market.</p>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="flex w-[217px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="flex w-[217px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="flex w-[218px] shrink-0 snap-start flex-col justify-between gap-5">
-                <figure class="flex flex-col gap-4">
-                  <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
-                  <h3 class="font-jakarta fonsemi">This is an article title, don’t expect too much on this</h3>
-                </figure>
-                <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-              </div>
+                    <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
+                      <figure class="flex flex-col gap-4">
+                          <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
+                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                          <p class="font-jakarta text-gray-400">We are a trusted property agency connecting you with the best opportunities in the market.</p>
+                      </figure>
+                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                  </div>
+  
+                  <!-- Card 2 -->
+                  <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                      <figure class="flex flex-col gap-4">
+                          <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
+                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                      </figure>
+                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                  </div>
+  
+                  <!-- Card 3 -->
+                  <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                      <figure class="flex flex-col gap-4">
+                          <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
+                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                      </figure>
+                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                  </div>
+  
+                  <!-- Card 4 -->
+                  <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
+                      <figure class="flex flex-col gap-4">
+                          <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
+                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                      </figure>
+                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                  </div>
+                </div>
             </div>
-          </div>
-
+           
+        </div>
           <button class="btn-primary">
             <span>Learn More</span>
             <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
@@ -666,7 +805,7 @@
 
     <!-- section setories -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 md:py-24 lg:pe-10">
-      <div class="w-full pl-[55px] sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col justify-between gap-10 md:gap-24">
           <div class="flex flex-col items-start justify-between md:flex-row md:items-center">
             <h1 data-aos="fade-right" class="title md:w-[552px]">Stories of Trust, Growth, and Shared Success</h1>
@@ -794,13 +933,13 @@
     <section id="contact" class="container mx-auto max-w-[1440px] py-10 md:py-24 lg:pe-10">
       <div class="w-full px-1 sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="relative">
-          <h2 data-aos="zoom-in" class="font-gloock text-center text-5xl leading-[120%] text-gray-100 lg:text-9xl">
+          <h2 data-aos="zoom-in" class="font-gloock text-center text-5xl leading-[120%] text-Tertiary lg:text-9xl">
             Ready to Find Your Perfect Property?
           </h2>
           <div
             id="contact-btn"
             data-aos="zoom-in"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
             class="bg-dark absolute top-1/2 right-1/2 flex w-[190px] translate-x-24 -translate-y-7 items-center justify-center rounded-full border p-3 sm:translate-x-20 md:p-4 lg:p-6">
             <button class="flex items-center justify-center gap-2 text-sm text-white transition-transform duration-500 active:scale-90">
               Contact Us Now
@@ -812,10 +951,8 @@
     </section>
 
     <!-- Popup -->
-    <div
-      id="popup"
-      class="pointer-events-none fixed inset-0 flex items-center justify-center opacity-0 backdrop-blur-md transition-opacity duration-300">
-      <div class="relative w-96 scale-90 transform rounded-lg bg-white p-6 opacity-0 shadow-xl transition-all duration-500">
+    <div id="popup" class="popup-container">
+      <div class="popup-content">
         <!-- Header -->
         <div class="flex items-center justify-between border-b pb-2">
           <h2 class="text-lg font-bold text-gray-800">Contact Us</h2>
@@ -840,32 +977,33 @@
       </div>
     </div>
 
+
     <!-- footer -->
     <footer class="mx-auto max-w-[1440px] md:pb-2">
       <div class="flex flex-col gap-10 md:gap-24">
-        <figure class="w-full">
+        <figure data-aos="fade-up" class="w-full">
           <img src="img/imageFooter.png" alt="" />
         </figure>
         <div class="flex w-full flex-col-reverse justify-between gap-10 px-4 md:gap-24 lg:flex-row">
           <div class="flex w-full flex-col items-center justify-between gap-10 md:gap-24 lg:flex-row lg:items-start">
-            <div class="flex h-full flex-col justify-between gap-10 md:gap-24">
+            <div data-aos="fade-up" class="flex h-full flex-col justify-between gap-10 md:gap-24">
               <div class="flex justify-center gap-24 lg:justify-start">
                 <img src="img/Vector (5).svg" alt="" class="block w-[63px]" />
               </div>
-              <div class="font-jakarta text-secondary flex flex-col justify-between gap-4 text-center text-sm md:gap-6 lg:text-start">
-                <div data-aos="fade-up">
-                  <p class="hover:text-dark text-gray-200">(406) 555-0120</p>
+              <div class="font-jakarta text-muted flex flex-col justify-between gap-4 text-center text-sm md:gap-6 lg:text-start">
+                <div>
+                  <p class="hover:text-dark">(406) 555-0120</p>
                 </div>
-                <div data-aos="fade-up">
-                  <p class="hover:text-dark text-gray-200">Hello@Bumi.Com</p>
+                <div>
+                  <p class="hover:text-dark">Hello@Bumi.Com</p>
                 </div>
-                <div data-aos="fade-up" class="leading-[190%]">
-                  <p class="hover:text-dark text-gray-200">4517 Washington Ave. Manchester, Kentucky 39495</p>
+                <div class="leading-[190%]">
+                  <p class="hover:text-dark">4517 Washington Ave. Manchester, Kentucky 39495</p>
                 </div>
               </div>
             </div>
-            <div class="flex h-full flex-grow flex-col items-center">
-              <ul class="mt-auto flex gap-2 text-gray-200 md:items-center lg:items-end">
+            <div data-aos="zoom-in" class="flex h-full flex-grow flex-col items-center">
+              <ul class="mt-auto flex gap-2 text-muted md:items-center lg:items-end">
                 <li><img src="img/Vector 31.svg" alt="" /></li>
                 <li class="hover:text-dark"><a href="">Medium</a></li>
                 <li><img src="img/Vector 31.svg" alt="" /></li>
@@ -877,23 +1015,28 @@
             </div>
           </div>
 
-          <div class="font-gloock flex h-[40] flex-col gap-6 text-center text-2xl leading-[120%] md:text-[64px] lg:text-right">
-            <p data-aos="fade-up" data-aos-delay="0"><a href="">HOME</a></p>
-            <p data-aos="fade-up" data-aos-delay="150" class="hover:text-dark text-gray-100">
-              <a href="">ABOUT</a>
-            </p>
-            <p data-aos="fade-up" data-aos-delay="300" class="hover:text-dark text-gray-100">
-              <a href="">PROPERTIES</a>
-            </p>
-            <p data-aos="fade-up" data-aos-delay="450" class="hover:text-dark text-gray-100">
-              <a href="">SERVICES</a>
-            </p>
-            <p data-aos="fade-up" data-aos-delay="600" class="hover:text-dark text-gray-100">
-              <a href="">RESOURCES</a>
-            </p>
-            <p data-aos="fade-up" data-aos-delay="750" class="hover:text-dark text-gray-100">
-              <a href="">CONTACT</a>
-            </p>
+          <div class="">
+            <ul class="font-gloock flex h-[40] flex-col gap-6 items-center text-2xl leading-[120%] md:text-[64px] lg:text-right">
+              <li data-aos="fade-up" data-aos-delay="0" class="hover:text-dark w-fit">
+                <a href="">HOME</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="150">
+                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">ABOUT</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="300">
+                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">PROPERTIES</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="450">
+                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">SERVICES</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="600">
+                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">RESOURCES</a>
+              </li>
+              <li data-aos="zoom in"
+              data-aos-anchor-placement="bottom-bottom" data-aos-delay="750">
+                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">CONTACT</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -905,76 +1048,71 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- aos -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Inisialisasi AOS
-      AOS.init({
-        duration: 800, // Durasi animasi (ms)
-        easing: "ease-in-out", // Jenis animasi
-        once: true, // Animasi hanya sekali
-        mirror: false, // Tidak mengulang saat di-scroll ke atas lagi
-      });
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Inisialisasi AOS
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+  });
 
-      const textElement = document.getElementById("title");
-      if (!textElement) return;
+  const textElement = document.getElementById("title");
+  if (!textElement) return;
 
-      // Simpan teks asli dan lakukan pra-pemrosesan untuk menyisipkan newline setelah "Find Your"
-      const fullText = textElement.innerHTML.trim();
-      // Sisipkan newline tepat setelah "Find Your " (pastikan spasi di akhir agar cocok dengan teks asli)
-      const modifiedText = fullText.replace("Find Your ", "Find Your\n");
+  // Simpan teks asli dan sisipkan newline sebelum kata "today" dan "Perfect Home" (case-insensitive)
+  const fullText = textElement.innerHTML.trim();
+  const modifiedText = fullText
+    .replace(/today/gi, "\ntoday")
+    .replace(/Perfect Home/gi, "\nPerfect Home");
 
-      textElement.innerHTML = ""; // Kosongkan konten elemen
+  // Kosongkan konten elemen
+  textElement.innerHTML = "";
 
-      // Buat span baru untuk efek mengetik
-      const textSpan = document.createElement("span");
-      textSpan.className = "text-content";
-      textElement.appendChild(textSpan);
+  // Buat span baru untuk efek mengetik
+  const textSpan = document.createElement("span");
+  textSpan.className = "text-content";
+  textElement.appendChild(textSpan);
 
-      let index = 0;
+  let index = 0;
+  let lastTimestamp = 0;
+  const delay = 80; // Delay per karakter dalam ms
 
-      function typeEffect() {
-        if (index < modifiedText.length) {
-          // Jika karakter adalah newline, ubah ke <br> agar efek mengetik pindah baris
-          if (modifiedText[index] === "\n") {
-            textSpan.innerHTML += "<br>";
-          } else {
-            textSpan.innerHTML += modifiedText[index];
-          }
-          index++;
-          setTimeout(typeEffect, 50); // Kecepatan mengetik (50ms per huruf)
-        } else {
-          addShimmerEffect();
-          AOS.refresh(); // Refresh AOS setelah teks selesai diketik
-        }
+  function typeEffect(timestamp) {
+    if (!lastTimestamp) lastTimestamp = timestamp;
+    const progress = timestamp - lastTimestamp;
+    if (progress >= delay && index < modifiedText.length) {
+      if (modifiedText[index] === "\n") {
+        textSpan.innerHTML += "<br>";
+      } else {
+        textSpan.innerHTML += modifiedText[index];
       }
-
-      function addShimmerEffect() {
-        textSpan.classList.add("shimmer-effect");
-        setTimeout(() => {
-          textSpan.classList.remove("shimmer-effect");
-        }, 1500);
+      index++;
+      lastTimestamp = timestamp;
+    }
+    if (index < modifiedText.length) {
+      requestAnimationFrame(typeEffect);
+    } else {
+      addShimmerEffect();
+      if (typeof AOS !== "undefined" && AOS.refresh) {
+        AOS.refresh();
       }
-
-      setTimeout(typeEffect, 500);
-
-      // Tambahkan animasi CSS untuk efek shimmer
-      const style = document.createElement("style");
-      style.innerHTML = `
-  .shimmer-effect {
-    background: linear-gradient(120deg, #888888 30%, #a3d8ff 50%, #6fc3ff 70%);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 1.5s ease-out;
+    }
   }
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-`;
-      document.head.appendChild(style);
-    });
 
-    // header
-  </script>
+  function addShimmerEffect() {
+    textSpan.classList.add("shimmer-effect");
+    setTimeout(() => {
+      textSpan.classList.remove("shimmer-effect");
+    }, 1500);
+  }
+
+  // Mulai efek mengetik setelah delay 500ms
+  setTimeout(() => {
+    requestAnimationFrame(typeEffect);
+  }, 500);
+});
+
+ </script>
 </html>
