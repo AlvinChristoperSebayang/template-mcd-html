@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
+:root {
+  font-size: 16px;
+}
+
+#site-header .navigation-wrapper {
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }
 
@@ -10,12 +14,15 @@
   min-height: calc(100vh - 240px);
 }
 
-#site-footer .footer-wrapper{
+#site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
 
-h1, h2, p, span {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+h1,
+h2,
+p,
+span {
+  font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: normal;
 }
 
@@ -40,7 +47,7 @@ h2 {
 
 button {
   padding: 12px 24px;
-  border-radius: 100px; 
+  border-radius: 100px;
 }
 
 section {
@@ -60,4 +67,217 @@ section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+footer p,
+footer li {
+  @apply text-[#989EA9] text-base font-helvetica-neue;
+}
+
+footer h4 {
+  @apply text-white text-xl font-helvetica-neue;
+}
+
+footer ul {
+  @apply flex flex-col gap-3 mt-6;
+}
+
+header li::marker {
+  color: white;
+}
+
+header li {
+  @apply text-[#BABDC5] hover:text-white duration-150 cursor-pointer;
+}
+
+.profile-pict {
+  @apply w-16 h-16 rounded-full;
+}
+
+.country-flag {
+  @apply w-6 h-6;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.testimonials-author {
+  @apply mt-16 flex flex-col gap-3 place-self-center;
+}
+
+.imageSlider .swiper-slide {
+  transition: transform 0.5s ease-in-out;
+}
+
+.imageSlider .swiper-slide-active {
+  transform: scale(1); /* Perbesar slide aktif */
+}
+
+.imageSlider .swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.7); /* Kecilkan slide samping */
+  opacity: 0.7; /* Kurangi opacity untuk efek */
+}
+
+.headBackgroundSize {
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.FooterBackgroundSize {
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 9999px;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.faq-header:hover img {
+  transform: rotate(180deg);
+  /* Ikon berputar saat hover */
+  transition: transform 0.3s ease-in-out;
+  /* Transisi lebih smooth */
+}
+
+.faq-header {
+  cursor: pointer;
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.thumbnail-swiper .swiper-slide {
+  cursor: pointer;
+}
+
+.thumbnail-swiper,
+.main-swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail-swiper {
+  margin-bottom: 20px;
+}
+
+.thumbnail-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail-swiper .swiper-slide svg path {
+  transition: fill 0.3s ease;
+  fill: #d0d0d0;
+}
+
+.thumbnail-swiper .swiper-slide.swiper-slide-active svg path {
+  fill: black;
+}
+
+/* Tambahan untuk breakpoints */
+@media (max-width: 768px) {
+  .swiper-slide svg {
+    max-width: 80px;
+    max-height: 40px;
+  }
+
+  footer h4 {
+    font-size: 20px;
+  }
+
+  footer li,
+  footer p {
+    font-size: 16px;
+  }
+
+  .testimonials-content p {
+    font-size: 24px;
+  }
+
+  .testimonials-author p {
+    font-size: 20px;
+  }
+
+  .testimonials-author p:nth-last-child(1) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide svg {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -769px;
+  width: 100%;
+  height: 100%;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.5s ease-in-out;
+}
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-hamburger-icon.change {
+  opacity: 1;
+  position: fixed;
+  right: 0px;
+  margin-right: 32px;
+}
+
+.country {
+  @apply flex flex-row gap-2 justify-center;
+}
+
+footer li a {
+  @apply hover:text-white duration-150;
 }
