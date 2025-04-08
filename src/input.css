@@ -85,8 +85,9 @@ nav ul li img {
   transform: rotate(-180deg);
 }
 
+/* animasi section your vision */
 .move-back {
-  transform: translateX(-200px) rotate(-0deg);
+  transform: translateX(20px) rotate(-0deg);
 }
 
 #logo-img {
@@ -338,5 +339,7 @@ nav ul li img {
   z-index: 9999; /* Pastikan nilainya lebih tinggi dari gambar */
 }
 
+
+/* search button */
 
 

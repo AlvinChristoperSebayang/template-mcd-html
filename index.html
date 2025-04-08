@@ -221,13 +221,13 @@
               </div>
               
               
-              
-          
               <!-- Search Input and Button (optional) -->
               <input type="text" id="searchInput" class="hidden w-full rounded-md border p-4 focus:outline-none" placeholder="Cari sesuatu..." />
-              <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 hover:scale-95">
-                <img src="../img/search.svg" alt="Search" class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
-              </button>
+               <div class="transition-all flex">
+                 <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 transition-all hover:scale-95">
+                   <img src="../img/search.svg" alt="Search" class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
+                 </button>
+               </div>
             </div>
             
           </div>
@@ -280,7 +280,7 @@
           </div>
 
           <!-- Grid card -->
-          <div id="gallery"  class="grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-4 -translate-y-5 lg:-translate-y-10">
+          <div id="gallery"  class="grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-8 -translate-y-5 xl:-translate-y-10">
             <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl group">
                 <!-- Gambar -->
@@ -618,30 +618,30 @@
 
           <!-- list card -->
 
-          <div class="custom-swiper-container">
-            <div class="custom-swiper-wrapper scrollbar-hide flex flex-col md:flex-row w-full overflow-x-auto md:gap-0">
+          <div>
+            <div class="scrollbar-hide flex flex-col md:flex-row w-full overflow-x-auto md:gap-0">
               <!-- Konten asli -->
               <!-- Card 1 -->
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0"
-                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
+                   class=" flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
                 <h3 class="font-gloock w-[260px] text-[32px]">Property Management</h3>
                 <p class="font-jakarta text-primary text-sm">
                   Comprehensive care for your investments, ensuring seamless operations and peace of mind.
                 </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                   <span class="view-text transition-colors duration-300">View Details</span>
-                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2 " src="../img/Vector (4).svg" alt="" />
                 </button>
               </div>
         
               <!-- Card 2 -->
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150"
-                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
                 <h3 class="font-gloock w-[260px] text-[32px]">Real Estate Consultation</h3>
                 <p class="font-jakarta text-primary text-sm">
                   Expert guidance to help you navigate the complexities of buying, selling, or investing.
                 </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                   <span class="view-text transition-colors duration-300">View Details</span>
                   <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
                 </button>
@@ -649,12 +649,12 @@
         
               <!-- Card 3 -->
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300"
-                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
                 <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
                 <p class="font-jakarta text-primary text-sm">
                   Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
                 </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                   <span class="view-text transition-colors duration-300">View Details</span>
                   <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
                 </button>
@@ -662,12 +662,12 @@
         
               <!-- Card 4 -->
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="450"
-                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
                 <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
                 <p class="font-jakarta text-primary text-sm">
                   Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
                 </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                   <span class="view-text transition-colors duration-300">View Details</span>
                   <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
                 </button>
@@ -675,12 +675,12 @@
         
               <!-- Card 5 -->
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600"
-                   class="custom-swiper-slide flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
                 <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
                 <p class="font-jakarta text-primary text-sm">
                   Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
                 </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2">
+                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                   <span class="view-text transition-colors duration-300">View Details</span>
                   <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
                 </button>
@@ -707,10 +707,10 @@
             <div data-aos="fade-up" class="flex gap-2">
               
               <!-- tombol slide -->
-              <button id="prevButton" class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 active:scale-95">
+              <button id="prevButton" class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all active:scale-95">
                 <img src="../img/Icons (2).svg" alt="" class="" />
               </button>
-              <button id="nextButton" class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 active:scale-95">
+              <button id="nextButton" class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transitional-all active:scale-95">
                 <img src="../img/Icons (3).svg" alt="" />
               </button>
             </div>

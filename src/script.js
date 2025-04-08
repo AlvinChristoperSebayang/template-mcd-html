@@ -215,8 +215,6 @@ closeBtn.addEventListener("click", () => {
 
 
 
-
-
 // insight*
 document.addEventListener("DOMContentLoaded", function () {
   // Swiper otomatis
