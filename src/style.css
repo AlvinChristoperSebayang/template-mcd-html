@@ -19,7 +19,7 @@
 
 @media (min-width: 748px) and (max-width: 1439px) {
   :root {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
@@ -202,7 +202,7 @@ span {
 }
 
 .employee-items {
-  @apply relative px-11 py-9 bg-gradient-custom rounded-3xl flex-col flex border border-[#7F7F7F] place-items-center md:h-auto xl:h-[346px];
+  @apply relative px-11 h-full py-9 bg-gradient-custom rounded-3xl flex-col flex border border-[#7F7F7F] place-items-center;
 }
 
 .employee-items img {
@@ -333,7 +333,7 @@ ul li:nth-of-type(3) .icon-code {
 }
 
 .section-our-team .employee-items {
-  @apply md:h-[346px] md:bg-gradient-custom text-center;
+  @apply md:min-h-[346px] md:bg-gradient-custom text-center;
 }
 
 .section-contact-now p,
@@ -437,9 +437,56 @@ button:hover a {
 }
 
 .splide__slide a {
-  @apply hover:text-black;
+  @apply hover:text-black h-full;
 }
 
 .social-media svg {
   @apply hover:fill-[#535bf2] fill-black;
+}
+
+.box {
+  clip-path: circle(50%);
+}
+
+.rotate-180 {
+  scale: -1;
+  translate: 0px 10px;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 10px;
+  background: #002f88;
+}
+
+.hidden-up {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.visible-down {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.preload-logo {
+  opacity: 0;
+  position: absolute;
+}
+
+.line-wrapper {
+  display: block;
+  overflow: hidden;
+}
+
+.line {
+  display: inline-block; /* atau bisa juga block, tergantung konteks */
+  white-space: nowrap;
+}
+
+.section-image-with-text .container {
+  @apply overflow-hidden;
+}
+
+.section-portofilio-item li {
+  @apply overflow-hidden;
 }

@@ -19,7 +19,8 @@
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@tailwindcss/cli": "^4.0.9",
     "@tailwindcss/vite": "^4.0.6",
-    "aos": "^2.3.4",
-    "flowbite": "^3.1.2"
+    "aos": "^3.0.0-beta.6",
+    "flowbite": "^3.1.2",
+    "gsap": "^3.12.7"
   }
 }

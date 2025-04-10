@@ -25,9 +25,45 @@
     />
   </head>
   <body>
-    <div class="service">
-      <header class="">
+    <div
+      id="preloader"
+      class="fixed inset-0 flex items-center justify-center bg-white z-[9999]"
+    >
+      <div
+        class="text-[50px] font-bold flex flex-col items-center animate-pulse w-[70%] md:w-[440px]"
+      >
+        <svg
+          width="148"
+          height="42"
+          viewBox="0 0 148 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="preload-logo scale-100 md:scale-[3] py-auto px-auto"
+        >
+          <path
+            d="M16.5612 0.272705L14.2727 2.77271L26.3689 15.2727L14.2727 27.7727L16.5612 30.2727L23.9169 22.7727L31.2727 15.2727L16.5612 0.272705Z"
+            fill="#002F88"
+          />
+          <path
+            d="M14.7115 11.7272L17 14.2272L4.90384 26.7272L17 39.2272L14.7115 41.7272L7.35577 34.2272L0 26.7272L14.7115 11.7272Z"
+            fill="#002F88"
+          />
+          <path
+            d="M55.4667 25.072H59.0807C58.3527 28.998 55.6487 31.598 51.6447 31.598C47.1207 31.598 43.6627 28.504 43.6627 22.576C43.6627 16.726 46.7567 13.164 51.6967 13.164C56.0127 13.164 58.7427 15.92 59.0807 19.404H55.4667C54.9727 17.454 53.4387 16.284 51.7227 16.284C48.7327 16.284 47.3287 18.598 47.3287 22.368C47.3287 26.19 48.7327 28.452 51.5407 28.452C53.6727 28.452 54.9727 27.23 55.4667 25.072ZM66.186 28.504C68.24 28.504 69.28 27.204 69.28 24.604C69.28 22.004 68.24 20.73 66.186 20.73C64.132 20.73 63.092 22.004 63.092 24.604C63.092 27.204 64.132 28.504 66.186 28.504ZM66.186 31.338C62.052 31.338 59.608 28.582 59.608 24.604C59.608 20.548 62.13 17.87 66.186 17.87C70.19 17.87 72.686 20.522 72.686 24.604C72.686 28.66 70.164 31.338 66.186 31.338ZM79.9676 28.582C81.5796 28.582 82.8276 27.074 82.8276 24.916C82.8276 22.134 81.8656 20.756 79.9936 20.756C78.0176 20.756 77.0816 22.082 77.0816 24.708C77.0816 26.996 78.2776 28.582 79.9676 28.582ZM86.0256 31H82.7756L82.7496 29.44C81.9436 30.74 80.7476 31.338 79.1876 31.338C75.9636 31.338 73.6496 28.79 73.6496 24.474C73.6496 20.6 75.5996 17.87 78.9016 17.87C80.4876 17.87 81.7356 18.52 82.6976 19.872V13.528H86.0256V31ZM90.977 31H87.597V18.208H90.977V31ZM90.977 16.674H87.597V13.528H90.977V16.674ZM104.117 31H100.711V23.252C100.711 21.276 100.139 20.73 98.527 20.73C96.759 20.73 95.901 21.718 95.901 23.668V31H92.521V18.208H95.745V20.08C96.525 18.65 97.825 17.87 99.879 17.87C102.323 17.87 104.117 19.352 104.117 22.134V31ZM111.733 28.452C113.371 28.452 114.619 27.074 114.619 24.916C114.619 22.134 113.657 20.808 111.733 20.808C109.835 20.808 108.847 22.082 108.847 24.708C108.847 26.996 110.069 28.452 111.733 28.452ZM114.515 31.39V29.284C114.047 30.428 112.669 31.104 111.005 31.104C106.793 31.104 105.337 27.88 105.337 24.526C105.337 20.548 107.833 17.87 110.927 17.87C112.539 17.87 113.709 18.494 114.515 19.794V18.208H117.895V31.13C117.895 34.978 115.087 37.058 111.525 37.058C107.963 37.058 105.337 35.004 105.337 31.702H108.483C108.483 33.236 109.601 34.146 111.291 34.146C113.085 34.146 114.515 33.08 114.515 31.39ZM122.582 23.356H127.808C127.756 21.458 126.508 20.548 125.182 20.548C123.83 20.548 122.712 21.588 122.582 23.356ZM131.292 25.488H122.478C122.582 27.412 123.674 28.66 125.338 28.66C126.43 28.66 127.392 28.114 127.626 27.23H131.11C130.33 29.856 128.224 31.338 125.494 31.338C121.23 31.338 119.098 28.998 119.098 24.37C119.098 20.418 121.36 17.87 125.286 17.87C129.212 17.87 131.292 20.418 131.292 25.488ZM135.84 31H132.46V18.208H135.632V19.742C136.75 18.026 138.05 17.87 139.428 17.87H139.87V21.328C139.558 21.276 139.246 21.25 138.934 21.25C136.854 21.25 135.84 22.29 135.84 24.344V31Z"
+            fill="#002F88"
+          />
+        </svg>
+
+        <div class="loadingWrap flex flex-col text-center w-full">
+          <span id="loadingText" class="percentage">0%</span>
+          <div id="loadingBar" class="loading-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div id="main-content" class="service opacity-0 fade-in duration-200">
+      <header data-aos="fade-up" class="">
         <nav
+          id="navbar"
           class="w-full sm:max-md:backdrop-blur-md sm:max-md:h-11 fixed top-0 z-[999] md:bg-white sm:max-md:bg-[rgba(255,255,255,0.2)]"
         >
           <div class="container">
@@ -120,9 +156,9 @@
             </li>
             <li>
               <a
-                href="#"
+                href="./portofolio.html"
                 class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-[#002F88] md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Pricing</a
+                >Portofolio</a
               >
             </li>
             <li>
@@ -140,7 +176,7 @@
       >
         <div class="container">
           <div
-            class="flex md:md:flex-row flex-col sm:max-md:flex-col md:gap-[100px] xl:gap-[200px] md:hidden"
+            class="mobileHero-textContent flex md:md:flex-row flex-col sm:max-md:flex-col md:gap-[100px] xl:gap-[200px] md:hidden"
           >
             <div class="hero-text__wrapper bottom-0 relative mt-16">
               <div
@@ -152,14 +188,14 @@
                     >Services</span
                   >
                   <h1
-                    class="title-mobile mobile font-sans leading-[150%] sm:max-md:text-2xl font-semibold text-white"
+                    class="title-mobile title-hero mobile font-sans leading-[150%] sm:max-md:text-2xl font-semibold text-white"
                   >
                     Where Vision Meets Perfection in Digital Solutions
                   </h1>
                 </div>
 
                 <p
-                  class="sm:max-md:text-white md:hidden text-xs font-Inter font-extralight mt-10"
+                  class="mobileHome-description sm:max-md:text-white md:hidden text-xs font-Inter font-extralight mt-10"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
@@ -170,17 +206,19 @@
             </div>
           </div>
 
-          <div class="text-wrap pt-32 sm:max-md:hidden">
-            <h1 class="font-bold text-6xl">
+          <div class="text-wrap pt-32 sm:max-md:hidden overflow-hidden">
+            <h1 class="font-bold title-hero text-6xl">
               Where
               <span
-                class="relative after:z-20 before:-z-10 before:top-4 bottom-2 before:absolute before:w-full before:h-10 before:bg-[#D0F962]"
+                class="relative after:z-20 before:-z-10 before:top-[35px] bottom-[16px] before:absolute before:w-full before:h-[41px] before:bg-[#D0F962]"
                 >Vision Meets</span
               >
-              Perfections<br />
-              <span class="font-semibold">in Digital Solution</span>
+              Perfections
             </h1>
-            <p>
+            <span class="text-5xl font-semibold block mt-[20px]"
+              >in Digital Solution</span
+            >
+            <p class="w-1/2 relative">
               At Codinger Agency, we craft web designs and development solutions
               that help modern brands stand out. Our approach ensures your
               website is visually stunning and optimized for performance and
@@ -190,7 +228,7 @@
           <div class="image-wrap sm:max-md:hidden">
             <figure>
               <img
-                class="w-[552px] h-[495px] ml-auto"
+                class="relative bottom-[40px] w-[552px] h-[495px] ml-auto"
                 src="./src/img/service-graphic-pict.png"
                 alt="Service Graphic"
               />
@@ -200,10 +238,10 @@
       </section>
       <section class="section-image-with-text">
         <div class="container">
-          <figure>
+          <figure data-aos="fade-right">
             <img src="./src/img/snack.png" alt="Snack" />
           </figure>
-          <div>
+          <div data-aos="fade-right">
             <div class="title-wrap">
               <svg
                 class="md:hidden"
@@ -266,10 +304,10 @@
       </section>
       <section class="section-image-with-text">
         <div class="container">
-          <figure>
+          <figure data-aos="fade-left">
             <img src="./src/img/laptop-and-cup.png" alt="Laptop And Cup" />
           </figure>
-          <div>
+          <div data-aos="fade-left">
             <div class="title-wrap">
               <svg
                 class="md:hidden"
@@ -332,10 +370,10 @@
       <section class="section-image-with-text">
         <div class="container">
           <div>
-            <figure>
+            <figure data-aos="fade-right">
               <img src="./src/img/candy-brand.png" alt="Candy Brand" />
             </figure>
-            <div>
+            <div data-aos="fade-right">
               <div class="title-wrap">
                 <svg
                   class="md:hidden"
@@ -417,10 +455,10 @@
       <section class="section-image-with-text">
         <div class="container">
           <div>
-            <figure>
+            <figure data-aos="fade-left">
               <img src="./src/img/working-desk.png" alt="Working Desk" />
             </figure>
-            <div>
+            <div data-aos="fade-left">
               <div class="title-wrap">
                 <svg
                   class="md:hidden"
@@ -466,28 +504,32 @@
           </div>
         </div>
       </section>
-      <section class="section-get-in">
+      <section class="section-get-in relative">
         <div class="bg-backgroundImgWorking bg-cover bg-center relative">
-          <div class="absolute inset-0 bg-black opacity-50 z-20"></div>
-          <div class="relative container py-28 z-50">
-            <h2 class="md:text-5xl text-white">Get in Touch with Us</h2>
-            <p class="md:text-base mt-6 text-white">
-              We're here to answer your questions and help you connect with us
-              easily.
-            </p>
-            <div class="mt-8">
-              <button class="bg-white md:text-base text-black">
-                Let’s Talk
-              </button>
-              <button class="border-white md:text-base text-white">
-                Contact
-              </button>
+          <div class="content-wrap overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-50 z-20"></div>
+            <div class="overflow-hidden">
+              <div class="text-wrap relative container py-28 z-50">
+                <h2 class="md:text-5xl text-white">Get in Touch with Us</h2>
+                <p class="md:text-base mt-6 text-white">
+                  We're here to answer your questions and help you connect with
+                  us easily.
+                </p>
+                <div class="mt-8">
+                  <button class="bg-white md:text-base text-black">
+                    Let’s Talk
+                  </button>
+                  <button class="border-white md:text-base text-white">
+                    Contact
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <footer>
-        <div class="sm:max-md:container">
+        <div class="footer-content sm:max-md:container">
           <div
             class="md:border border-white md:px-10 py-14 flex md:md:flex-row flex-col sm:max-md:flex-col justify-between"
           >
@@ -750,5 +792,8 @@
     </div>
   </body>
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/service.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
 </html>
