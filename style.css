@@ -194,3 +194,19 @@ header.scrolled {
 .aboutHeader p {
   visibility: hidden; /* Sembunyikan sebelum GSAP mengontrol */
 }
+
+.contact img {
+  width: 36px;
+  height: 36px;
+  max-width: unset;
+  place-self: center;
+}
+
+.line {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+section {
+  overflow: hidden;
+}
