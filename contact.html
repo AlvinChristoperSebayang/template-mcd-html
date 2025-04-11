@@ -27,10 +27,10 @@
   <body>
     <div
       id="preloader"
-      class="fixed inset-0 flex items-center justify-center bg-white z-[9999]"
+      class="fixed opacity-0 inset-0 flex items-center justify-center bg-white z-[9999]"
     >
       <div
-        class="text-[50px] font-bold flex flex-col items-center animate-pulse w-[70%] md:w-[440px]"
+        class="text-[50px] font-bold flex flex-col items-center w-[70%] md:w-[440px]"
       >
         <svg
           width="148"
@@ -55,14 +55,15 @@
         </svg>
 
         <div class="loadingWrap flex flex-col text-center w-full">
-          <span id="loadingText" class="percentage">0%</span>
+          <span id="loadingText" class="percentage max-md:text-2xl">0%</span>
           <div id="loadingBar" class="loading-bar"></div>
         </div>
       </div>
     </div>
-    <div id="main-content" class="contact fade-in duration-200">
+    <div id="main-content" class="contact opacity-0 fade-in duration-200">
       <header data-aos="fade-up" class="">
         <nav
+          id="navbar"
           class="w-full z-[999] sm:max-md:backdrop-blur-md sm:max-md:h-11 fixed top-0 md:bg-white sm:max-md:bg-[rgba(255,255,255,0.2)]"
         >
           <div class="container">
@@ -162,7 +163,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="./contact.html"
                 class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-[#002F88] md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Contact</a
               >
@@ -171,18 +172,20 @@
         </div>
       </header>
       <section
-        class="section-hero font-sans md:pt-48 md:pb-32 sm:max-md:pt-[195px] bg-no-repeat bg-cover bg-left sm:max-md:pb-[195px] bg-none sm:max-md:bg-hero-mobileContact"
+        class="section-hero relative font-sans md:pt-48 md:pb-32 sm:max-md:pt-[195px] bg-no-repeat bg-cover bg-left sm:max-md:pb-[195px] bg-none sm:max-md:bg-hero-mobileContact"
       >
         <div class="container">
           <div class="flex md:flex-row sm:max-md:flex-col">
-            <div class="hero-text__wrapper bottom-0 relative mt-16">
+            <div
+              class="hero-text__wrapper flex-none md:w-3/4 bottom-0 relative mt-16"
+            >
               <div
                 class="desktop sm:max-md:backdrop-blur-md sm:max-md:p-3 sm:max-md:rounded-xl"
               >
                 <h1 class="title-desktop text-[64px] desktop">
                   Where Vision Meets Perfection in Digital Solution
                 </h1>
-                <p class="mt-[24px] font-Inter sm:max-md:hidden">
+                <p class="mt-[24px] md:w-3/4 font-Inter sm:max-md:hidden">
                   At Codinger Agency, we craft web designs and development
                   solutions that help modern brands stand out. Our approach
                   ensures your website is visually stunning and optimized for
@@ -212,7 +215,9 @@
               </div>
             </div>
 
-            <div class="hero-image__wrapper h-fit w-auto sm:max-md:hidden">
+            <div
+              class="hero-image__wrapper flex-1 absolute h-fit w-[570px] right-0 sm:max-md:hidden"
+            >
               <figure>
                 <img
                   src="./src/img/hero-contactUs.png"
@@ -224,7 +229,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="contact-list">
         <div class="container">
           <ul class="flex flex-col py-16 md:flex-row gap-8 md:py-32">
             <li>
@@ -329,43 +334,47 @@
         </div>
       </section>
 
-      <section class="section-get-in">
-        <div class="md:container md:py-28">
+      <section class="section-get-in overflow-hidden">
+        <div class="banner md:container md:py-28">
           <div
             class="bg-bg-macbook bg-cover bg-center relative md:border md:rounded-2xl"
           >
-            <div
-              class="absolute inset-0 bg-black opacity-50 z-20 md:border md:rounded-2xl"
-            ></div>
-            <div class="desktop relative container py-6 z-50 md:p-16">
-              <h2 class="md:text-5xl text-white">
-                Explore Our Featured Projects
-              </h2>
-              <p class="md:text-base mt-6 text-white">
-                Discover innovative solutions and successful collaborations with
-                our esteemed clients.
-              </p>
-              <div class="mt-8">
-                <button class="bg-white md:text-base text-black">
-                  Let’s Talk
-                </button>
-                <button class="border-white md:text-base text-white">
-                  Contact
-                </button>
+            <div class="content-wrap overflow-hidden">
+              <div
+                class="absolute inset-0 bg-black opacity-50 z-20 md:border md:rounded-2xl"
+              ></div>
+              <div class="desktop relative container py-6 z-50 md:p-16">
+                <h2 class="md:text-5xl text-white">
+                  Explore Our Featured Projects
+                </h2>
+                <p class="md:text-base mt-6 text-white">
+                  Discover innovative solutions and successful collaborations
+                  with our esteemed clients.
+                </p>
+                <div class="mt-8">
+                  <button class="bg-white md:text-base text-black">
+                    Let’s Talk
+                  </button>
+                  <button class="border-white md:text-base text-white">
+                    Contact
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="mobile relative container py-6 md:py-28 z-50">
-              <h2 class="text-3xl text-white">Get in Touch with Us</h2>
-              <p class="text-xs mt-6 text-white">
-                We're here to answer your questions and help you connect with us
-                easily.
-              </p>
-              <div class="mt-8">
-                <button class="bg-white text-xs md:text-base text-black">
-                  Let’s Talk
-                </button>
-                <button class="border-white text-xs text-white">Contact</button>
+              <div class="mobile relative container py-6 md:py-28 z-50">
+                <h2 class="text-3xl text-white">Get in Touch with Us</h2>
+                <p class="text-xs mt-6 text-white">
+                  We're here to answer your questions and help you connect with
+                  us easily.
+                </p>
+                <div class="mt-8">
+                  <button class="bg-white text-xs md:text-base text-black">
+                    Let’s Talk
+                  </button>
+                  <button class="border-white text-xs text-white">
+                    Contact
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -375,7 +384,7 @@
       <footer>
         <div class="sm:max-md:container">
           <div
-            class="md:border border-white md:px-10 py-14 flex md:flex-row sm:max-md:flex-col justify-between"
+            class="footer-content md:border border-white md:px-10 py-14 flex md:flex-row sm:max-md:flex-col justify-between"
           >
             <div class="newsletter-desktop">
               <div class="sm:max-md:border-t sm:max-md:pt- border-white">
@@ -637,5 +646,8 @@
   </script>
 
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/contact.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
 </html>

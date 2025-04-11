@@ -26,7 +26,7 @@ heroSection.fromTo(
   },
   {
     opacity: 1,
-    duration: 0.8,
+    duration: 0.5,
     ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
   }
 );
@@ -55,7 +55,7 @@ lines.forEach((line, index) => {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     },
     "<.2"
@@ -82,7 +82,7 @@ paragraphHero.forEach((line, index) => {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     },
     "<.2"
@@ -97,14 +97,14 @@ if (window.innerWidth > 768) {
     .fromTo(
       mainButton,
       { xPercent: 100 },
-      { xPercent: 0, duration: 0.8, ease: "cubic-bezier(0.36, 0, 0.66, -0.56)" }
+      { xPercent: 0, duration: 0.5, ease: "cubic-bezier(0.36, 0, 0.66, -0.56)" }
     )
     .fromTo(
       wordButton,
       { xPercent: -100 },
       {
         xPercent: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       },
       "<"
@@ -114,14 +114,14 @@ if (window.innerWidth > 768) {
     .fromTo(
       mainButton,
       { yPercent: -100 },
-      { yPercent: 0, duration: 0.8, ease: "cubic-bezier(0.36, 0, 0.66, -0.56)" }
+      { yPercent: 0, duration: 0.5, ease: "cubic-bezier(0.36, 0, 0.66, -0.56)" }
     )
     .fromTo(
       wordButton,
       { yPercent: -100 },
       {
         yPercent: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       },
       "<"
@@ -164,14 +164,14 @@ gsap.set(
 const sectionUiUx = gsap.timeline({
   scrollTrigger: {
     trigger: uiSubHead,
-    start: "top bottom",
+    start: "center bottom",
   },
 });
 
 const rightChoiceTL = gsap.timeline({
   scrollTrigger: {
     trigger: sectionRightSubHead,
-    start: "top bottom",
+    start: "center bottom",
   },
 });
 
@@ -223,11 +223,11 @@ gsap.fromTo(
   },
   {
     yPercent: 0,
-    duration: 0.8,
+    duration: 0.5,
     ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     scrollTrigger: {
       trigger: sectionRightChoiceHeadWrap,
-      start: "top 90%",
+      start: "center 90%",
     },
   }
 );
@@ -278,11 +278,11 @@ function transitionTitle(head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -294,12 +294,12 @@ function transitionTitle(head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.3,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -331,12 +331,12 @@ function transitionItems(item, trigger) {
       },
       {
         yPercent: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
         delay: index * 0.2,
         scrollTrigger: {
           trigger: trigger,
-          start: "top 90%",
+          start: "center 90%",
         },
       }
     );
@@ -351,11 +351,11 @@ gsap.fromTo(
   },
   {
     yPercent: 0,
-    duration: 0.8,
+    duration: 0.5,
     ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     scrollTrigger: {
       trigger: seeMoreButton,
-      start: "top 90%",
+      start: "center 90%",
     },
   }
 );

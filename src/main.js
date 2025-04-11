@@ -41,6 +41,18 @@ const loadingWrap = document.querySelector(".loadingWrap");
 let progress = { value: 0 };
 
 preloadTL
+  .fromTo(
+    preloader,
+    {
+      opacity: 0,
+    },
+
+    {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power2.out",
+    }
+  )
   .to(progress, {
     value: 100,
     duration: 3,
@@ -142,7 +154,7 @@ if (isSpecialPage) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: "footer",
@@ -160,7 +172,7 @@ if (isSpecialPage) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: "footer",

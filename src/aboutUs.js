@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 let heroSection = gsap.timeline({ paused: true });
 let titleHero = document.querySelectorAll(
-  ".hero-text__wrapper p, hero-text__wrapper h1, .hero-text__wrapper span, .hero-text__wrapper .title-mobile"
+  ".hero-text__wrapper p, .hero-text__wrapper h1, .hero-text__wrapper span, .hero-text__wrapper .title-mobile"
 );
 
 const heroImage = document.querySelector(".hero-image__wrapper");
@@ -23,7 +23,7 @@ heroSection.fromTo(
   },
   {
     opacity: 1,
-    duration: 0.8,
+    duration: 0.5,
     ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
   }
 );
@@ -52,7 +52,7 @@ lines.forEach((line, index) => {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     },
     "<.2"
@@ -79,7 +79,7 @@ paragraphHero.forEach((line, index) => {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     },
     "<.2"
@@ -112,11 +112,11 @@ targetElements.forEach((el) => {
       { yPercent: 100 },
       {
         yPercent: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: line,
-          start: "top 50%",
+          start: "center 50%",
           toggleActions: "play none none none",
         },
       }
@@ -133,12 +133,12 @@ gridItems.forEach((item, index) => {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       delay: index * 0.2,
       scrollTrigger: {
         trigger: sectionRightChoiceHeadWrap,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -168,11 +168,11 @@ function transitionTitle(subhead, head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -184,12 +184,12 @@ function transitionTitle(subhead, head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.3,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -201,12 +201,12 @@ function transitionTitle(subhead, head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.6,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -223,25 +223,43 @@ let ourTeamitemsWrap = document.querySelector(
 );
 
 transitionItems(ourTeamItems, ourTeamitemsWrap);
-
 function transitionItems(item, trigger) {
   item.forEach((item, index) => {
-    gsap.fromTo(
-      item,
-      {
-        yPercent: 200,
-      },
-      {
-        yPercent: 0,
-        duration: 0.8,
-        ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
-        delay: index * 0.2,
-        scrollTrigger: {
-          trigger: trigger,
-          start: "top 90%",
+    if (window.innerWidth < 768) {
+      gsap.fromTo(
+        item,
+        {
+          yPercent: 200,
         },
-      }
-    );
+        {
+          yPercent: 0,
+          duration: 0.5,
+          ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
+          delay: index * 0.2,
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 90%",
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        item,
+        {
+          yPercent: 200,
+        },
+        {
+          yPercent: 0,
+          duration: 0.5,
+          ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
+          delay: index * 0.2,
+          scrollTrigger: {
+            trigger: trigger,
+            start: "center 90%",
+          },
+        }
+      );
+    }
   });
 }
 
@@ -273,11 +291,11 @@ function transitionOpenPosition(head, desc, button, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -289,12 +307,12 @@ function transitionOpenPosition(head, desc, button, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.3,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -306,12 +324,12 @@ function transitionOpenPosition(head, desc, button, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.6,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -330,20 +348,37 @@ sectionContactNow.forEach((el) => {
     line.parentNode.insertBefore(wrapper, line);
     wrapper.appendChild(line);
 
-    gsap.fromTo(
-      line,
-      { yPercent: 100 },
-      {
-        yPercent: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: line,
-          start: "top 90%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
+    if (window.innerWidth < 768) {
+      gsap.fromTo(
+        line,
+        { yPercent: 100 },
+        {
+          yPercent: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: line,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        line,
+        { yPercent: 100 },
+        {
+          yPercent: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: line,
+            start: "center 90%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
   });
 });
 
@@ -368,7 +403,7 @@ gsap.to(obj, {
   },
   scrollTrigger: {
     trigger: counter,
-    start: "top 90%",
+    start: "center 90%",
     toggleActions: "play none none none",
   },
 });
@@ -385,7 +420,7 @@ gsap.to(obj, {
   },
   scrollTrigger: {
     trigger: counter2,
-    start: "top 90%",
+    start: "center 90%",
     toggleActions: "play none none none",
   },
 });
@@ -420,11 +455,11 @@ imageTextWrap.forEach((el) => {
       { yPercent: 100 },
       {
         yPercent: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: line,
-          start: "top 90%",
+          start: "center 90%",
           toggleActions: "play none none none",
         },
       }
@@ -452,11 +487,11 @@ function transitionMultiButton(button1, button2, trigger) {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -468,12 +503,32 @@ function transitionMultiButton(button1, button2, trigger) {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
 }
+
+let image = document.querySelectorAll(".image-vision");
+
+image.forEach((img) => {
+  gsap.fromTo(
+    img,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.5,
+      ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
+      scrollTrigger: {
+        trigger: img,
+        start: "center 90%",
+      },
+    }
+  );
+});

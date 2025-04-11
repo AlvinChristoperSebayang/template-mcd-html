@@ -233,6 +233,10 @@ span {
   @apply flex md:flex-row flex-col gap-3;
 }
 
+.about-us .social-media ul {
+  @apply flex flex-row gap-3;
+}
+
 footer {
   @apply bg-[#0E1E5D] text-white md:p-16;
 }
@@ -479,7 +483,7 @@ button:hover a {
 }
 
 .line {
-  display: inline-block; /* atau bisa juga block, tergantung konteks */
+  display: inline-block;
   white-space: nowrap;
 }
 
@@ -487,6 +491,30 @@ button:hover a {
   @apply overflow-hidden;
 }
 
-.section-portofilio-item li {
+.section-portofilio-item li,
+.contact-list li {
   @apply overflow-hidden;
+}
+
+.line-wrapper,
+.line {
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.mobileHero-textContent p,
+.mobileHero-textContent h1,
+.mobileHero-textContent span,
+.desktopHero-textWrap p,
+.desktopHero-textWrap .secondline,
+.contact-list li * {
+  @apply overflow-hidden;
+}
+
+#loadingText {
+  @apply max-md:text-3xl;
+}
+
+#preloader .preload-logo {
+  @apply max-md:scale-150;
 }

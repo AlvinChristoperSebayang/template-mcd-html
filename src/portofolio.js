@@ -33,7 +33,7 @@ splitText.lines.forEach((line) => {
     },
     {
       xPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     },
     "<.2"
@@ -58,7 +58,7 @@ gsap.fromTo(
     ease: CustomEase.create("custom", "M0,0 C0.602,-0.003 0.503,1.001 1,1 "),
     scrollTrigger: {
       trigger: ".section-get-in",
-      start: "top 120%",
+      start: "center 120%",
       markers: false,
     },
   }
@@ -76,7 +76,7 @@ gsap.fromTo(
     ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     scrollTrigger: {
       trigger: ".section-get-in",
-      start: "top 120%",
+      start: "center 120%",
     },
   }
 );
@@ -111,11 +111,11 @@ function transitionTitle(subHead, head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -127,12 +127,12 @@ function transitionTitle(subHead, head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.3,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -144,12 +144,12 @@ function transitionTitle(subHead, head, desc, trigger) {
     },
     {
       yPercent: 0,
-      duration: 0.8,
+      duration: 0.5,
       delay: 0.3,
       ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
       scrollTrigger: {
         trigger: trigger,
-        start: "top 90%",
+        start: "center 90%",
       },
     }
   );
@@ -163,11 +163,11 @@ gsap.fromTo(
   },
   {
     yPercent: 0,
-    duration: 0.8,
+    duration: 0.5,
     ease: "cubic-bezier(0.36, 0, 0.66, -0.56)",
     scrollTrigger: {
       trigger: seeMoreButton,
-      start: "top 90%",
+      start: "center 90%",
     },
   }
 );
