@@ -8,7 +8,7 @@ let isMobile = window.innerWidth < 768;
 let heroSection = gsap.timeline({ paused: true });
 
 const splitElements = [
-  { selector: ".titleHero", type: "words" },
+  { selector: ".titleHero", type: "lines" },
   { selector: ".hero-description", type: "lines" },
 ];
 
@@ -24,30 +24,30 @@ splitElements.forEach((item) => {
 heroSection.fromTo(
   ".hero-section span",
   {
-    xPercent: -100,
+    yPercent: 100,
     opacity: 0,
   },
   {
-    xPercent: 0,
+    yPercent: 0,
     opacity: 1,
-    duration: 0.8,
-    ease: "power3.inOut",
+    duration: 0.5,
+    ease: "power2.out",
   }
 );
 
-let splitTextHero = document.querySelectorAll(".titleHero .word");
+let splitTextHero = document.querySelectorAll(".titleHero .line");
 splitTextHero.forEach((words, index) => {
   heroSection.fromTo(
     words,
     {
-      xPercent: -100,
+      yPercent: 100,
       opacity: 0,
     },
     {
-      xPercent: 0,
+      yPercent: 0,
       opacity: 1,
-      duration: 0.8,
-      ease: "power3.inOut",
+      duration: 0.5,
+      ease: "power2.out",
     },
     "<0.2"
   );
@@ -65,8 +65,8 @@ heroDescription.forEach((line) => {
     {
       yPercent: 0,
       opacity: 1,
-      duration: 0.8,
-      ease: "power3.inOut",
+      duration: 0.5,
+      ease: "power2.out",
     },
     "<0.2"
   );
@@ -84,8 +84,8 @@ if (isMobile) {
       {
         xPercent: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: "power3.inOut",
+        duration: 0.5,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: line,
           start: "top 90%",
@@ -107,8 +107,8 @@ if (isMobile) {
       {
         yPercent: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: "power3.inOut",
+        duration: 0.5,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: line,
           start: "top 90%",
@@ -132,8 +132,8 @@ if (isMobile) {
       {
         xPercent: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: "power3.inOut",
+        duration: 0.5,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: line,
           start: "top 90%",
@@ -144,82 +144,63 @@ if (isMobile) {
     );
   });
 } else {
-  let cardContent = document.querySelectorAll(".card-item ");
-  cardContent.forEach((line, index) => {
-    heroSection.fromTo(
-      line,
-      {
-        xPercent: -300,
-        opacity: 0,
-      },
-      {
-        xPercent: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: line,
-          start: "top 90%",
-          // markers: true,
-        },
-      },
-      "<0.2"
-    );
-  });
+  let cardContent = document.querySelectorAll(".card-item, content-form h2");
 
-  let textForm = document.querySelectorAll(".content-form h2, .content-form p");
-  textForm.forEach((line, index) => {
-    heroSection.fromTo(
-      line,
-      {
-        yPercent: 100,
-        opacity: 0,
+  heroSection.fromTo(
+    cardContent,
+    {
+      yPercent: 100,
+      opacity: 0,
+    },
+    {
+      yPercent: 0,
+      opacity: 1,
+      duration: 0.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: cardContent,
+        start: "top 90%",
+        // markers: true,
       },
-      {
-        yPercent: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: line,
-          start: "top 90%",
-          // markers: true,
-        },
-      },
-      "<0.2"
-    );
-  });
-
-  let inputForm = document.querySelectorAll(
-    ".content-form input, .content-form button"
+    },
+    "<0.2"
   );
-  inputForm.forEach((line) => {
-    heroSection.fromTo(
-      line,
-      {
-        xPercent: 300,
-        opacity: 0,
+
+  let contentForm = document.querySelectorAll(
+    ".content-form h2, .content-form p, .content-form input, .content-form button"
+  );
+  heroSection.fromTo(
+    contentForm,
+    {
+      yPercent: 100,
+      opacity: 0,
+    },
+    {
+      yPercent: 0,
+      opacity: 1,
+      duration: 0.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: contentForm,
+        start: "top 90%",
+        // markers: true,
       },
-      {
-        xPercent: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: line,
-          start: "top 90%",
-          // markers: true,
-        },
-      },
-      "<0.2"
-    );
-  });
+    },
+    "<0.2"
+  );
 }
 
 window.onload = function () {
   preloadTL.play();
   preloadTL.eventCallback("onComplete", function () {
     heroSection.play();
-    // console.log('done')
   });
 };
+
+let hamburgerButton = document.querySelector(".hamburger-bars");
+let mobileNav = document.querySelector(".mobileNav");
+hamburgerButton.addEventListener("click", function () {
+  hamburgerButton.classList.toggle("active");
+  mobileNav.classList.toggle("active");
+  console.log("active");
+});
