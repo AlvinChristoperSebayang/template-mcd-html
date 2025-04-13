@@ -3,6 +3,8 @@
 
 
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const textElement = document.querySelector("#typing p");
   const text = textElement.innerText;
