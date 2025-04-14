@@ -1,17 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/static/img/ico.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Terratani</title>
   </head>
   <body>
-    <header id="site-header"></header>
-    <main id="site-main">
+    <header id="site-header" class="absolute z-10 w-full">
+        <nav
+          class="flex justify-between items-center mx-auto max-w-screen-xl border-gray-300 border-b-2 px-3 md:px-5 mt-3 lg:px-6 "
+        >
+          <a href="/" class="flex items-center m-3 p-1 hover:animate-pulse">
+            <img
+              src="static/img/ico.png"
+              alt="ico"
+              class="mr-3 h-9 w-9 md:h-10 md:w-10 lg:h-10 lg:w-10"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap text-white"
+              >Terratani</span
+            >
+            <span class="text-xl text-center text-white ml-3">|</span>
+          </a>
+
+          <div
+            class="flex flex-1 items-center justify-end md:justify-between lg:justify-between text-gray-200"
+          >
+            <div class="hidden md:block lg:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a href="#" class="transition hover:text-white"> Home</a>
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-white"> About Us</a>
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-white"> Services</a>
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-white"> Event</a>
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-white"> Our work</a>
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-white"> Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="hidden md:flex lg:flex flex-row text-white transition hover:animate-pulse rounded-full border-solid border-white border-2 py-2 px-3 items-center text-center "
+          >
+            <svg width="5" class="mx-2" height="5">
+              <circle cx="2.5" cy="2.5" r="2.5" fill="white" stroke="none" />
+            </svg>
+            Contact Us
+          </button>
+          <a href=".">
+            <img src="static/img/menu.svg" alt="menu" class="block md:hidden lg:hidden h-6 w-6">
+          </a>
+        </nav>
+      </nav>
+    </header>
+
+    <main>
+      <!--Hero-->
+      <section class="w-full flex flex-col md:flex-row xl:flex-row justify-center min-h-screen max-w-full overflow-hidden relative">
+        <div class="absolute inset-0 -z-0">
+            <img src="static/img/bg.png" class="object-center object-cover w-full h-full" alt="img" >
+        </div>
+    </section>
 
     </main>
-    <footer id="site-footer"></footer>
+    <footer></footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
