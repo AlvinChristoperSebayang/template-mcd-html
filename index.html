@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html class="scroll-smooth">
+<!doctype html>
+<html class="scroll-smooth scroll-pt-[150px]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bumi agency</title>
-    <link rel="shortcut icon" href="./img/Vector (9).svg" type="image/svg+img" />
+    <link rel="icon" href="img/Vector (1).svg" type="image/svg+xml" />
+
     <!-- <link href="src/output.css" rel="stylesheet" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+
     <!-- <link rel="stylesheet" href="src/style.css" /> -->
     <link rel="stylesheet" href="src/input.css" />
-
-    <!-- swipper -->
-    <!-- Swiper CSS -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -20,23 +18,18 @@
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-    <!-- swipper -->
-    <!-- Swiper CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-
     <style>
       .swiper-wrapper {
-          display: flex;
-          transition-timing-function: linear !important;
+        display: flex;
+        transition-timing-function: linear !important;
       }
-  </style>
-
+    </style>
 
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
 
-  <body">
+  <body>
     <div
       class="relative top-0 mx-auto h-dvh w-full overflow-hidden bg-[url('../img/hero1.png')] bg-[length:100%_100%] bg-center bg-no-repeat md:h-[180vh] lg:h-[220vh]">
       <div class="container mx-auto max-w-[1440px]">
@@ -47,95 +40,196 @@
                 <img id="logo-img" src="../img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
               </div>
 
+              <!-- Dekstop  -->
               <div id="menu-container" class="flex w-full items-center justify-between">
                 <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
 
                 <!-- Desktop Menu -->
-                <nav id="desktop-menu" class="hidden items-center lg:flex">
+                <nav id="desktop-menu" class="lg:flex hidden items-center">
                   <ul class="flex items-center gap-4 text-sm text-white">
                     <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
+
                     <li class="font-bold">
                       <a href="#" class="nav-link hover:text-secondary transition-all">Home</a>
                     </li>
+
                     <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
                     <li><a href="#" class="nav-link hover:text-secondary transition-all">About</a></li>
                     <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                     <!-- Dropdown untuk Properties -->
-                    <li class="relative flex gap-4 items-center">
-                      <a href="#properties" class="nav-link hover:text-secondary transition-all">Properties</a>
-                      <img src="../img/Down.svg" alt="Toggle Dropdown" 
-                           class="nav-icon dropdown-toggle cursor-pointer group-hover:text-secondary" 
-                           data-dropdown="properties" />
-                      <ul id="dropdown-properties" class="absolute left-0 top-full mt-2 w-28 bg-white text-primary shadow-md hidden dropdown-menu rounded-lg">
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 1</a></li>
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 2</a></li>
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 3</a></li>
-                       
+                    <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
+                      <a href="#" class="nav-link hover:text-secondary transition-all">Properties</a>
+                      <img
+                        src="../img/Down.svg"
+                        alt="Toggle Dropdown"
+                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                        data-dropdown="properties" />
+
+                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                        <li><a href="#all" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">All</a></li>
+                        <li><a href="#residential" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Residential</a></li>
+                        <li><a href="#commercial" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Commercial</a></li>
+                        <li>
+                          <a href="#vacational" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block">Vacational</a>
+                        </li>
                       </ul>
                     </li>
+
                     <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                     <!-- Dropdown untuk Services -->
-                    <li class="relative flex gap-4 items-center">
+                    <li class="relative flex gap-4 items-center group">
                       <a href="#" class="nav-link hover:text-secondary transition-all">Services</a>
-                      <img src="../img/Down.svg" alt="Toggle Dropdown" 
-                           class="nav-icon dropdown-toggle cursor-pointer" 
-                           data-dropdown="services" />
-                      <ul id="dropdown-services" class="absolute left-0 top-full mt-2 w-28 bg-white text-primary shadow-md hidden dropdown-menu rounded-lg">
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 1</a></li>
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 2</a></li>
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 3</a></li>
-                       
+                      <img
+                        src="../img/Down.svg"
+                        alt="Toggle Dropdown"
+                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                        data-dropdown="services" />
+                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Option 1</a></li>
+                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Option 2</a></li>
+                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block">Option 3</a></li>
                       </ul>
                     </li>
                     <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                     <!-- Dropdown untuk Resources -->
-                    <li class="relative flex gap-4 items-center">
+                    <li class="relative flex gap-4 items-center group">
                       <a href="#" class="nav-link hover:text-secondary transition-all">Resources</a>
-                      <img src="../img/Down.svg" alt="Toggle Dropdown" 
-                           class="nav-icon dropdown-toggle cursor-pointer" 
-                           data-dropdown="resources" />
-                      <ul id="dropdown-resources" class="absolute left-0 top-full mt-2 w-28 bg-white text-primary shadow-md hidden dropdown-menu rounded-lg">
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 1</a></li>
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 2</a></li>
-                        <li class="p-2 hover:bg-blue-400 rounded-lg hover:text-white transition-all"><a href="#prop1">Option 3</a></li>
-                       
+                      <img
+                        src="../img/Down.svg"
+                        alt="Toggle Dropdown"
+                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                        data-dropdown="resources" />
+                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
+                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Option 1</a></li>
+                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Option 2</a></li>
+                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block">Option 3</a></li>
                       </ul>
                     </li>
+
                     <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                     <li><a href="#contact" class="nav-link hover:text-secondary transition-all">Contact Us</a></li>
                     <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                   </ul>
-                </nav>                
+                </nav>
               </div>
-              <!-- Mobile Menu Button & Dropdown -->
+
+              <!-- Mobile Menu Button & Humburger -->
               <div class="relative lg:hidden">
-                <button id="mobile-menu-button" class="fixed top-4 right-4 z-60 w-8 h-8 focus:outline-none">
+                <button id="mobile-menu-button" class="fixed top-4 right-4 z-60 w-8 h-8 focus:outline-none transition-all duration-300 ease-in-out">
                   <span class="burger-line"></span>
                   <span class="burger-line"></span>
                   <span class="burger-line"></span>
                 </button>
-                <!-- Mobile Dropdown Menu -->
 
+                <!-- Mobile  Menu -->
                 <div
                   id="mobile-menu"
-                  class="fixed inset-0 bg-blue-300 text-black transform translate-x-full opacity-0 transition-transform duration-300 ease-in-out z-50">
-                  <ul class="sm:h-full flex flex-col justify-center sm:items-center space-y-6 mt-16 ps-5">
-                    <li><a href="#" class="text-2xl hover:text-white">Home</a></li>
-                    <li><a href="#" class="text-2xl hover:text-white">About</a></li>
-                    <li><a href="#" class="text-2xl hover:text-white">Properties</a></li>
-                    <li><a href="#" class="text-2xl hover:text-white">Services</a></li>
-                    <li><a href="#" class="text-2xl hover:text-white">Resources</a></li>
-                    <li><a href="#" class="text-2xl hover:text-white">Contact</a></li>
+                  class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
+                  <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
+                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Home</a></li>
+                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">About</a></li>
+
+                    <!-- Properties -->
+                    <li class="w-[150px] group">
+                      <div class="flex gap-2 items-center justify-between">
+                        <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
+                        <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
+                          <svg
+                            class="arrow-icon transition-transform duration-300 ease-in-out"
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <!-- Opsi pilihan dropdown -->
+                      <ul
+                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                        <li><a href="#all" class="block px-4 py-2 hover:bg-gray-100">All</a></li>
+                        <li><a href="#residential" class="block px-4 py-2 hover:bg-gray-100">Residential</a></li>
+                        <li><a href="#commercial" class="block px-4 py-2 hover:bg-gray-100">Commercial</a></li>
+                        <li><a href="#vacational" class="block px-4 py-2 hover:bg-gray-100">Vacational</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Services -->
+                    <li class="w-[150px] group">
+                      <div class="flex gap-2 items-center justify-between">
+                        <a href="#" class="text-2xl hover:text-gray-700">Services</a>
+                        <button class="dropdown-toggle-mobile text-black">
+                          <svg
+                            class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <!-- Dropdown menu -->
+                      <ul
+                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Consulting</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Design</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Support</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Resources -->
+                    <li class="w-[150px] group">
+                      <div class="flex gap-2 items-center justify-between">
+                        <a href="#" class="text-2xl hover:text-gray-700">Resources</a>
+                        <button class="dropdown-toggle-mobile text-black">
+                          <svg
+                            class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <!-- Dropdown menu -->
+                      <ul
+                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Guides</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQs</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Contact</a></li>
                   </ul>
                 </div>
               </div>
-
             </div>
           </div>
         </header>
 
         <!-- herro -->
-        <section id="intro" class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-2">
+        <section class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-2">
           <div class="flex flex-col text-white sm:ml-[70px] md:ml-[73px] lg:ml-[120px]">
             <div class="md:w-[419px] lg:w-[825px]">
               <h1
@@ -148,88 +242,84 @@
             <div data-aos="fade-up" class="relative mt-56 hidden w-full grow justify-between lg:flex">
               <!-- Filter Container -->
               <div id="categoryContainer" class="flex w-full justify-between">
-                <!-- Category Filter -->
-                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+                <!-- CATEGORY -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
                   <p class="font-jakarta text-sm font-light">Category</p>
                   <div class="flex items-center justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold" id="selected-category">Rent/Buy</p>
-                    <img src="../img/Down.svg" alt="Toggle Category" 
-                         class="w-3.5 cursor-pointer dropdown-toggle" 
-                         data-dropdown="category" />
+                    <p class="font-jakarta text-2xl font-semibold">Rent/Buy</p>
+                    <img
+                      src="../img/Down.svg"
+                      alt="Toggle Category"
+                      class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
-                  <!-- Dropdown Menu for Category -->
-                  <ul id="dropdown-category" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 rounded-sm z-50 group-hover:pointer-events-auto">
                     <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
                     <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
                     <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
                   </ul>
                 </div>
-              
-                <!-- Type Filter -->
-                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+
+                <!-- TYPE -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
                   <p class="font-jakarta text-sm font-light">Type</p>
                   <div class="flex items-center justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold" id="selected-type">Residential</p>
-                    <img src="../img/Down.svg" alt="Toggle Type" 
-                         class="w-3.5 cursor-pointer dropdown-toggle" 
-                         data-dropdown="type" />
+                    <p class="font-jakarta text-2xl font-semibold">Residential</p>
+                    <img src="../img/Down.svg" alt="Toggle Type" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
-                  <!-- Dropdown Menu for Type -->
-                  <ul id="dropdown-type" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
-                  </ul>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">House</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Apartment</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Residential</a></li>
                   </ul>
                 </div>
-              
-                <!-- City Filter -->
-                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+
+                <!-- CITY -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
                   <p class="font-jakarta text-sm font-light">City</p>
                   <div class="flex items-center justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold" id="selected-city">Alabama</p>
-                    <img src="../img/Down.svg" alt="Toggle City" 
-                         class="w-3.5 cursor-pointer dropdown-toggle" 
-                         data-dropdown="city" />
+                    <p class="font-jakarta text-2xl font-semibold">Alabama</p>
+                    <img src="../img/Down.svg" alt="Toggle City" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
-                  <!-- Dropdown Menu for City -->
-                  <ul id="dropdown-city" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
-                  </ul>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Alabama</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">New York</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Chicago</a></li>
                   </ul>
                 </div>
-              
-                <!-- Price Filter -->
-                <div class="relative flex flex-1 flex-col justify-between border-l-2 border-white px-5">
+
+                <!-- PRICE -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
                   <p class="font-jakarta text-sm font-light">Price</p>
                   <div class="flex items-center justify-between py-4">
-                    <p class="font-jakarta text-2xl font-semibold" id="selected-price">$600k - $1000k</p>
-                    <img src="../img/Down.svg" alt="Toggle Price" 
-                         class="w-3.5 cursor-pointer dropdown-toggle" 
-                         data-dropdown="price" />
+                    <p class="font-jakarta text-2xl font-semibold">$600k - $1000k</p>
+                    <img
+                      src="../img/Down.svg"
+                      alt="Toggle Price"
+                      class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
-                  <!-- Dropdown Menu for Price -->
-                  <ul id="dropdown-price" class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md hidden dropdown-menu rounded-sm">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
-                  </ul>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">$200k - $400k</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">$400k - $600k</a></li>
+                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">$600k - $1000k</a></li>
                   </ul>
                 </div>
               </div>
-              
-              
-              <!-- Search Input and Button (optional) -->
+
+              <!-- Search Input and Button -->
               <input type="text" id="searchInput" class="hidden w-full rounded-md border p-4 focus:outline-none" placeholder="Cari sesuatu..." />
-               <div class="transition-all flex">
-                 <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 transition-all hover:scale-95">
-                   <img src="../img/search.svg" alt="Search" class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
-                 </button>
-               </div>
+              <div class="transition-all flex">
+                <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 transition-all hover:scale-95">
+                  <img
+                    src="../img/search.svg"
+                    alt="Search"
+                    class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
+                </button>
+              </div>
             </div>
-            
           </div>
           <div class="absolute top-44 md:top-64 flex w-full gap-5 md:gap-[48px] pe-4 sm:ps-20 lg:hidden">
             <input
@@ -253,55 +343,83 @@
               </h2>
             </div>
 
-            <div  class="mb-10 flex items-end px-1 md:w-[591px] lg:mb-0 xl:w-1/2">
+            <!-- button -->
+            <div class="mb-10 flex items-end px-1 md:w-[591px] lg:mb-0 xl:w-1/2">
               <ul class="flex w-full flex-wrap items-center md:justify-between gap-2">
                 <li data-aos="fade-up" data-aos-delay="0" class="">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl cursor-pointer hover:text-dark" data-category="All" data-aos="fade-up" data-aos-delay="100">All</button>
+                <button
+                  id="all"
+                  data-category="All"
+                  class="filter-btn text-lg font-semibold lg:text-2xl text-dark cursor-pointer hover:text-gray-600 transition-all duration-500 ease-in-out"
+                  data-aos="fade-up"
+                  data-aos-delay="100">
+                  All
+                </button>
                 <li data-aos="fade-up" data-aos-delay="100" class="flex-shrink-0">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl hover:text-dark cursor-pointer" data-category="Residential" data-aos="fade-up" data-aos-delay="300">Residential</button>
+                <button
+                  id="residential"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  data-category="Residential"
+                  data-aos="fade-up"
+                  data-aos-delay="300">
+                  Residential
+                </button>
                 <li data-aos="fade-up" data-aos-delay="200" class="flex-shrink-0">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl hover:text-dark cursor-pointer" data-category="Commercial" data-aos="fade-up" data-aos-delay="500">Commercial</button>
+                <button
+                  id="commercial"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  data-category="Commercial"
+                  data-aos="fade-up"
+                  data-aos-delay="500">
+                  Commercial
+                </button>
                 <li data-aos="fade-up" data-aos-delay="300" class="flex-shrink-0">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                <button class="filter-btn text-secondary text-lg font-semibold transition-colors duration-300 lg:text-2xl hover:text-dark cursor-pointer" data-category="Vacational" data-aos="fade-up" data-aos-delay="700">Vacational</button>
+                <button
+                  id="vacational"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  data-category="Vacational"
+                  data-aos="fade-up"
+                  data-aos-delay="700">
+                  Vacational
+                </button>
                 <li data-aos="fade-up" data-aos-delay="400" class="flex-shrink-0">
                   <img src="../img/vector.svg" alt="" />
                 </li>
-                
               </ul>
             </div>
           </div>
 
           <!-- Grid card -->
-          <div id="gallery"  class="grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-8 -translate-y-5 xl:-translate-y-10">
+          <div
+            id="gallery"
+            class="gallery-wrapper grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-8 -translate-y-5 xl:-translate-y-10">
+            <!-- card -->
             <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
-              <figure class="relative overflow-hidden lg:rounded-xl group">
+              <figure id="recidential-mobile" class="relative overflow-hidden lg:rounded-xl group">
                 <!-- Gambar -->
                 <img
                   src="img/Rectangle 2 (8).png"
                   alt="Explore"
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
-              
+
                 <!-- Overlay Gradient -->
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-70"></div>
-              
+
                 <!-- Overlay Text dengan Latar Belakang -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100 z-20">
-                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg backdrop-blur-md drop-shadow-lg">
-                    Explore
-                  </span>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100 z-20">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg backdrop-blur-md drop-shadow-lg"> Explore </span>
                 </div>
               </figure>
-              
+
               <div data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
                 <div class="font-light">
                   <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
@@ -326,11 +444,8 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
-                    Explore
-                  </span>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
                 </div>
               </figure>
               <div class="font-jakarta text-primary flex items-center justify-between">
@@ -357,11 +472,8 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
-                    Explore
-                  </span>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
                 </div>
               </figure>
               <div class="font-jakarta text-primary flex items-center justify-between">
@@ -388,11 +500,8 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
-                    Explore
-                  </span>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
                 </div>
               </figure>
               <div class="font-jakarta text-primary flex items-center justify-between">
@@ -419,11 +528,8 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
-                    Explore
-                  </span>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
                 </div>
               </figure>
               <div class="font-jakarta text-primary flex items-center justify-between">
@@ -450,11 +556,8 @@
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
                 <!-- Overlay Text -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
-                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg">
-                    Explore
-                  </span>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
                 </div>
               </figure>
               <div class="font-jakarta text-primary flex items-center justify-between">
@@ -506,6 +609,7 @@
         </div>
       </div>
     </section>
+    <!-- section parnert client end -->
 
     <!-- section partner -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
@@ -516,91 +620,89 @@
           <!-- card list -->
           <div class="relative mt-10 overflow-hidden">
             <div class="swiper">
-                <div class="swiper-wrapper flex">
-                    <!-- Card 1 -->
-                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                        <div class="flex items-center justify-center gap-4">
-                            <figure class="flex-shrink-0">
-                                <img src="../img/parter.svg" alt="" class="w-full h-11" />
-                            </figure>
-                            <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                        <div class="flex items-center justify-center gap-4">
-                            <figure class="flex-shrink-0">
-                                <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
-                            </figure>
-                            <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                        <div class="flex items-center justify-center gap-4">
-                            <figure class="flex-shrink-0">
-                                <img src="img/Group.svg" alt="" class="w-full h-11" />
-                            </figure>
-                            <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 4 -->
-                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                        <div class="flex items-center justify-center gap-4">
-                            <figure class="flex-shrink-0">
-                                <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
-                            </figure>
-                            <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 1 -->
-                    <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                      <div class="flex items-center justify-center gap-4">
-                          <figure class="flex-shrink-0">
-                              <img src="../img/parter.svg" alt="" class="w-full h-11" />
-                          </figure>
-                          <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                      </div>
+              <div class="swiper-wrapper flex">
+                <!-- Card 1 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="../img/parter.svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
                   </div>
-                  
-                  <!-- Card 2 -->
-                  <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                      <div class="flex items-center justify-center gap-4">
-                          <figure class="flex-shrink-0">
-                              <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
-                          </figure>
-                          <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                      </div>
-                  </div>
-                  
-                  <!-- Card 3 -->
-                  <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                      <div class="flex items-center justify-center gap-4">
-                          <figure class="flex-shrink-0">
-                              <img src="img/Group.svg" alt="" class="w-full h-11" />
-                          </figure>
-                          <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
-                      </div>
-                  </div>
-                  
-                  <!-- Card 4 -->
-                  <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
-                      <div class="flex items-center justify-center gap-4">
-                          <figure class="flex-shrink-0">
-                              <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
-                          </figure>
-                          <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
-                      </div>
-                  </div>
-
-
                 </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="img/Group.svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="../img/parter.svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="img/Group.svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="img/Vector (7).svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
           <!-- button -->
           <buttonc class="btn-primary">
             <span class="font-jakarta text-sm font-semibold">Become our partner</span>
@@ -609,6 +711,7 @@
         </div>
       </div>
     </section>
+    <!-- section partner end -->
 
     <!-- section our vision -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
@@ -617,75 +720,77 @@
           <h2 data-aos="fade-right" class="title w-full md:w-[601px]">Your Vision, Our Expertise.</h2>
 
           <!-- list card -->
+          <div class="flex flex-col md:flex-row w-full overflow-x-auto md:gap-0">
+            <!-- Card 1 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="0"
+              class="flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
+              <h3 class="font-gloock w-[260px] text-[32px]">Property Management</h3>
+              <p class="font-jakarta text-primary text-sm">
+                Comprehensive care for your investments, ensuring seamless operations and peace of mind.
+              </p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+              </button>
+            </div>
 
-          <div>
-            <div class="scrollbar-hide flex flex-col md:flex-row w-full overflow-x-auto md:gap-0">
-              <!-- Konten asli -->
-              <!-- Card 1 -->
-              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0"
-                   class=" flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
-                <h3 class="font-gloock w-[260px] text-[32px]">Property Management</h3>
-                <p class="font-jakarta text-primary text-sm">
-                  Comprehensive care for your investments, ensuring seamless operations and peace of mind.
-                </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
-                  <span class="view-text transition-colors duration-300">View Details</span>
-                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2 " src="../img/Vector (4).svg" alt="" />
-                </button>
-              </div>
-        
-              <!-- Card 2 -->
-              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150"
-                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-                <h3 class="font-gloock w-[260px] text-[32px]">Real Estate Consultation</h3>
-                <p class="font-jakarta text-primary text-sm">
-                  Expert guidance to help you navigate the complexities of buying, selling, or investing.
-                </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
-                  <span class="view-text transition-colors duration-300">View Details</span>
-                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-                </button>
-              </div>
-        
-              <!-- Card 3 -->
-              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300"
-                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-                <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
-                <p class="font-jakarta text-primary text-sm">
-                  Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
-                </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
-                  <span class="view-text transition-colors duration-300">View Details</span>
-                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-                </button>
-              </div>
-        
-              <!-- Card 4 -->
-              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="450"
-                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-                <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
-                <p class="font-jakarta text-primary text-sm">
-                  Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
-                </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
-                  <span class="view-text transition-colors duration-300">View Details</span>
-                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-                </button>
-              </div>
-        
-              <!-- Card 5 -->
-              <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600"
-                   class=" flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
-                <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
-                <p class="font-jakarta text-primary text-sm">
-                  Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.
-                </p>
-                <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
-                  <span class="view-text transition-colors duration-300">View Details</span>
-                  <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
-                </button>
-              </div>
+            <!-- Card 2 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="150"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Real Estate Consultation</h3>
+              <p class="font-jakarta text-primary text-sm">Expert guidance to help you navigate the complexities of buying, selling, or investing.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+              </button>
+            </div>
 
+            <!-- Card 3 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+              </button>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="450"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+              </button>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+              </button>
             </div>
           </div>
 
@@ -697,6 +802,7 @@
         </div>
       </div>
     </section>
+    <!-- section our vision end -->
 
     <!-- Section insaige -->
     <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
@@ -704,13 +810,17 @@
         <div class="flex flex-col gap-10 lg:gap-14">
           <div data-aos="fade-right" class="lg:[1280px] flex w-full flex-col items-end justify-between lg:flex-row">
             <h1 class="title lg:w-[710px]">Insights and Trends: Stay Updated with the Latest in Real Estate</h1>
+
             <div data-aos="fade-up" class="flex gap-2">
-              
               <!-- tombol slide -->
-              <button id="prevButton" class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all active:scale-95">
+              <button
+                id="prevButton"
+                class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all hover:border-gray-500 active:scale-95 cursor-pointer disabled:cursor-not-allowed disabled:border-gray-500">
                 <img src="../img/Icons (2).svg" alt="" class="" />
               </button>
-              <button id="nextButton" class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transitional-all active:scale-95">
+              <button
+                id="nextButton"
+                class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all hover:border-gray-500 active:scale-95 cursor-pointer disabled:cursor-not-allowed disabled:border-gray-500">
                 <img src="../img/Icons (3).svg" alt="" />
               </button>
             </div>
@@ -718,83 +828,86 @@
 
           <div class="relative w-full overflow-hidden">
             <div class="swiper-manual">
-                <div class="swiper-wrapper">
-                    <!-- Card 1 -->
-                    <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
-                        <figure class="flex flex-col gap-4">
-                            <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
-                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                            <p class="font-jakarta text-gray-400">We are a trusted property agency connecting you with the best opportunities in the market.</p>
-                        </figure>
-                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                    </div>
-    
-                    <!-- Card 2 -->
-                    <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
-                        <figure class="flex flex-col gap-4">
-                            <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
-                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                        </figure>
-                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                    </div>
-    
-                    <!-- Card 3 -->
-                    <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
-                        <figure class="flex flex-col gap-4">
-                            <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
-                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                        </figure>
-                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                    </div>
-    
-                    <!-- Card 4 -->
-                    <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
-                        <figure class="flex flex-col gap-4">
-                            <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
-                            <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                        </figure>
-                        <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                    </div>
-
-                    <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
-                      <figure class="flex flex-col gap-4">
-                          <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
-                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                          <p class="font-jakarta text-gray-400">We are a trusted property agency connecting you with the best opportunities in the market.</p>
-                      </figure>
-                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                  </div>
-  
-                  <!-- Card 2 -->
-                  <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
-                      <figure class="flex flex-col gap-4">
-                          <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
-                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                      </figure>
-                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                  </div>
-  
-                  <!-- Card 3 -->
-                  <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
-                      <figure class="flex flex-col gap-4">
-                          <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
-                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                      </figure>
-                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                  </div>
-  
-                  <!-- Card 4 -->
-                  <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
-                      <figure class="flex flex-col gap-4">
-                          <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
-                          <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
-                      </figure>
-                      <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
-                  </div>
+              <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                    <p class="font-jakarta text-gray-400">
+                      We are a trusted property agency connecting you with the best opportunities in the market.
+                    </p>
+                    <p class="font-afacad text-sm text-gray-400 text-start self-start g-amber-300">12 November 2024</p>
+                  </figure>
                 </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                    <p class="font-jakarta text-gray-400">
+                      We are a trusted property agency connecting you with the best opportunities in the market.
+                    </p>
+                  </figure>
+                  <p class="font-afacad text-sm text-start self-start text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+              </div>
             </div>
-           
-        </div>
+          </div>
           <button class="btn-primary">
             <span>Learn More</span>
             <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
@@ -811,24 +924,28 @@
             <h1 data-aos="fade-right" class="title md:w-[552px]">Stories of Trust, Growth, and Shared Success</h1>
 
             <!-- slider -->
-            <div data-aos="fade-right" class="mt-auto flex justify-end gap-2">
+            <div data-aos="fade-right" class="mt-4 md:mt-0 flex justify-end gap-2">
               <button
+                type="button"
                 id="newPrevButton"
-                class="border-dark rounded-full border p-2 transition duration-300 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4">
-                <img src="../img/Icons (2).svg" alt="" />
+                class="border-dark rounded-full border p-2 transition duration-300 hover:border-gray-500 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4 cursor-pointer focus:outline-none disabled:cursor-not-allowed">
+                <img src="../img/Icons (2).svg" alt="" class="pointer-events-none" />
               </button>
               <button
+                type="button"
                 id="newNextButton"
-                class="border-dark rounded-full border p-2 transition duration-300 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4">
-                <img src="../img/Icons (3).svg" alt="" />
+                class="border-dark rounded-full border p-2 transition duration-300 hover:border-gray-500 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4 cursor-pointer disabled:cursor-not-allowed">
+                <img src="../img/Icons (3).svg" alt="" class="pointer-events-none" />
               </button>
             </div>
           </div>
 
           <!-- card 1-->
-          <div id="newSlideContainer" class="scrollbar-hide flex sm:h-[434px] gap-2 overflow-x-auto md:gap-24 w-full px-1">
+          <div
+            id="newSlideContainer"
+            class="scrollbar-hide flex h-[250px] md:h-[434px] gap-2 overflow-x-hidden md:gap-24 w-full px-1 pointer-events-none">
             <!-- Card 1 -->
-            <div data-aos="fade-right" class="flex flex-col justify-between w-full md:w-[571px] flex-shrink-0">
+            <div data-aos="fade-right" class="flex flex-col justify-between w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
               <div class="flex flex-col gap-4 md:w-[571px]">
                 <div class="flex gap-2">
                   <figure>
@@ -852,7 +969,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0">
+            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
               <div class="flex flex-col gap-4 w-full md:w-[571px]">
                 <div class="flex gap-2">
                   <figure>
@@ -876,7 +993,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0">
+            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
               <div class="flex flex-col gap-4 w-full">
                 <div class="flex gap-2">
                   <figure>
@@ -900,7 +1017,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0">
+            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
               <div class="flex flex-col gap-4 w-full md:w-[571px]">
                 <div class="flex gap-2">
                   <figure>
@@ -924,10 +1041,24 @@
             </div>
           </div>
 
-          <div id="borderIndicator" class="w-[226px] border-2 border-gray-950 rounded-full"></div>
+          <!-- Container Progress Indicator -->
+          <div id="progressContainer" class="relative flex gap-2 w-full mt-6">
+            <!-- Segmen progress (responsif) -->
+            <div class="segment flex-grow border-2 rounded-full"></div>
+            <div class="segment flex-grow border-2 rounded-full"></div>
+            <div class="segment flex-grow border-2 rounded-full"></div>
+            <div class="segment flex-grow border-2 rounded-full"></div>
+
+            <!-- Indikator aktif (bergerak) -->
+            <div
+              id="activeIndicator"
+              class="absolute top-0 h-full bg-black rounded-full transition-all duration-300 z-10"
+              style="left: 0; width: 0"></div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- Section setories end -->
 
     <!-- contact -->
     <section id="contact" class="container mx-auto max-w-[1440px] py-10 md:py-24 lg:pe-10">
@@ -940,8 +1071,9 @@
             id="contact-btn"
             data-aos="zoom-in"
             data-aos-duration="1000"
-            class="bg-dark absolute top-1/2 right-1/2 flex w-[190px] translate-x-24 -translate-y-7 items-center justify-center rounded-full border p-3 sm:translate-x-20 md:p-4 lg:p-6">
-            <button class="flex items-center justify-center gap-2 text-sm text-white transition-transform duration-500 active:scale-90">
+            class="bg-dark absolute top-1/2 right-1/2 flex w-[190px] translate-x-24 -translate-y-7 items-center justify-center rounded-full border p-3 sm:translate-x-20 md:p-4 lg:p-6 cursor-pointer">
+            <button
+              class="flex items-center justify-center gap-2 text-sm text-white transition-transform duration-500 active:scale-90 cursor-pointer">
               Contact Us Now
               <img src="img/Icons (4).svg" alt="icon" />
             </button>
@@ -949,10 +1081,11 @@
         </div>
       </div>
     </section>
+    <!-- section contact end -->
 
     <!-- Popup -->
-    <div id="popup" class="popup-container">
-      <div class="popup-content">
+    <div id="popup" class="popup-container fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+      <div class="popup-content transform scale-90 opacity-0 bg-white rounded-lg shadow-xl p-6 transition-all duration-500 ease-in-out">
         <!-- Header -->
         <div class="flex items-center justify-between border-b pb-2">
           <h2 class="text-lg font-bold text-gray-800">Contact Us</h2>
@@ -976,17 +1109,17 @@
         </form>
       </div>
     </div>
-
+    <!-- pupup end -->
 
     <!-- footer -->
     <footer class="mx-auto max-w-[1440px] md:pb-2">
       <div class="flex flex-col gap-10 md:gap-24">
-        <figure data-aos="fade-up" class="w-full">
+        <figure data-aos="zoom-in" class="w-full -z-10">
           <img src="img/imageFooter.png" alt="" />
         </figure>
         <div class="flex w-full flex-col-reverse justify-between gap-10 px-4 md:gap-24 lg:flex-row">
           <div class="flex w-full flex-col items-center justify-between gap-10 md:gap-24 lg:flex-row lg:items-start">
-            <div data-aos="fade-up" class="flex h-full flex-col justify-between gap-10 md:gap-24">
+            <div data-aos="zoom-in" class="flex h-full flex-col justify-between gap-10 md:gap-24">
               <div class="flex justify-center gap-24 lg:justify-start">
                 <img src="img/Vector (5).svg" alt="" class="block w-[63px]" />
               </div>
@@ -1017,23 +1150,22 @@
 
           <div class="">
             <ul class="font-gloock flex h-[40] flex-col gap-6 items-center text-2xl leading-[120%] md:text-[64px] lg:text-right">
-              <li data-aos="fade-up" data-aos-delay="0" class="hover:text-dark w-fit">
+              <li data-aos="zoom-in" data-aos-delay="0" class="hover:text-dark w-fit">
                 <a href="">HOME</a>
               </li>
-              <li data-aos="fade-up" data-aos-delay="150">
+              <li data-aos="zoom-in" data-aos-delay="150">
                 <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">ABOUT</a>
               </li>
-              <li data-aos="fade-up" data-aos-delay="300">
+              <li data-aos="zoom-in" data-aos-delay="300">
                 <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">PROPERTIES</a>
               </li>
-              <li data-aos="fade-up" data-aos-delay="450">
+              <li data-aos="zoom-in" data-aos-delay="450">
                 <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">SERVICES</a>
               </li>
-              <li data-aos="fade-up" data-aos-delay="600">
+              <li data-aos="zoom-in" data-aos-delay="600">
                 <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">RESOURCES</a>
               </li>
-              <li data-aos="zoom in"
-              data-aos-anchor-placement="bottom-bottom" data-aos-delay="750">
+              <li data-aos="zoom in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="750">
                 <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">CONTACT</a>
               </li>
             </ul>
@@ -1041,78 +1173,76 @@
         </div>
       </div>
     </footer>
+    <!-- footer end -->
+
+    <script src="src/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- aos -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inisialisasi AOS
+        AOS.init({
+          duration: 1000,
+          easing: "ease-in-out",
+          once: true,
+          mirror: false,
+        });
+
+        const textElement = document.getElementById("title");
+        if (!textElement) return;
+
+        // Simpan teks asli dan sisipkan newline sebelum kata "today" dan "Perfect Home" (case-insensitive)
+        const fullText = textElement.innerHTML.trim();
+        const modifiedText = fullText.replace(/today/gi, "\ntoday").replace(/Perfect Home/gi, "\nPerfect Home");
+
+        // Kosongkan konten elemen
+        textElement.innerHTML = "";
+
+        // Buat span baru untuk efek mengetik
+        const textSpan = document.createElement("span");
+        textSpan.className = "text-content";
+        textElement.appendChild(textSpan);
+
+        let index = 0;
+        let lastTimestamp = 0;
+        const delay = 80; // Delay per karakter dalam ms
+
+        function typeEffect(timestamp) {
+          if (!lastTimestamp) lastTimestamp = timestamp;
+          const progress = timestamp - lastTimestamp;
+          if (progress >= delay && index < modifiedText.length) {
+            if (modifiedText[index] === "\n") {
+              textSpan.innerHTML += "<br>";
+            } else {
+              textSpan.innerHTML += modifiedText[index];
+            }
+            index++;
+            lastTimestamp = timestamp;
+          }
+          if (index < modifiedText.length) {
+            requestAnimationFrame(typeEffect);
+          } else {
+            addShimmerEffect();
+            if (typeof AOS !== "undefined" && AOS.refresh) {
+              AOS.refresh();
+            }
+          }
+        }
+
+        function addShimmerEffect() {
+          textSpan.classList.add("shimmer-effect");
+          setTimeout(() => {
+            textSpan.classList.remove("shimmer-effect");
+          }, 1500);
+        }
+
+        // Mulai efek mengetik setelah delay 500ms
+        setTimeout(() => {
+          requestAnimationFrame(typeEffect);
+        }, 500);
+      });
+    </script>
   </body>
-
-  <script src="src/script.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- aos -->
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  // Inisialisasi AOS
-  AOS.init({
-    duration: 800,
-    easing: "ease-in-out",
-    once: true,
-    mirror: false,
-  });
-
-  const textElement = document.getElementById("title");
-  if (!textElement) return;
-
-  // Simpan teks asli dan sisipkan newline sebelum kata "today" dan "Perfect Home" (case-insensitive)
-  const fullText = textElement.innerHTML.trim();
-  const modifiedText = fullText
-    .replace(/today/gi, "\ntoday")
-    .replace(/Perfect Home/gi, "\nPerfect Home");
-
-  // Kosongkan konten elemen
-  textElement.innerHTML = "";
-
-  // Buat span baru untuk efek mengetik
-  const textSpan = document.createElement("span");
-  textSpan.className = "text-content";
-  textElement.appendChild(textSpan);
-
-  let index = 0;
-  let lastTimestamp = 0;
-  const delay = 80; // Delay per karakter dalam ms
-
-  function typeEffect(timestamp) {
-    if (!lastTimestamp) lastTimestamp = timestamp;
-    const progress = timestamp - lastTimestamp;
-    if (progress >= delay && index < modifiedText.length) {
-      if (modifiedText[index] === "\n") {
-        textSpan.innerHTML += "<br>";
-      } else {
-        textSpan.innerHTML += modifiedText[index];
-      }
-      index++;
-      lastTimestamp = timestamp;
-    }
-    if (index < modifiedText.length) {
-      requestAnimationFrame(typeEffect);
-    } else {
-      addShimmerEffect();
-      if (typeof AOS !== "undefined" && AOS.refresh) {
-        AOS.refresh();
-      }
-    }
-  }
-
-  function addShimmerEffect() {
-    textSpan.classList.add("shimmer-effect");
-    setTimeout(() => {
-      textSpan.classList.remove("shimmer-effect");
-    }, 1500);
-  }
-
-  // Mulai efek mengetik setelah delay 500ms
-  setTimeout(() => {
-    requestAnimationFrame(typeEffect);
-  }, 500);
-});
-
- </script>
 </html>

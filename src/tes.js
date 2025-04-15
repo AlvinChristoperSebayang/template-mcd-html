@@ -3,38 +3,55 @@ const mobileMenu = document.getElementById("mobile-menu");
 const heroImg = document.querySelector("div.relative.top-0");
 let menuOpen = false;
 
-// Event scroll untuk cek posisi hamburger terhadap hero image
-window.addEventListener("scroll", () => {
-  const heroBottom = heroImg.offsetTop + heroImg.offsetHeight;
-  const buttonTop = mobileMenuButton.getBoundingClientRect().top + window.scrollY;
-
-  if (buttonTop < heroBottom) {
-    // Di atas hero image → ubah jadi hitam
-    mobileMenuButton.classList.add("text-black");
+mobileMenuButton.addEventListener("click", event => {
+  event.stopPropagation();
+  menuOpen = !menuOpen;
+  mobileMenuButton.classList.toggle("open", menuOpen);
+  if (menuOpen) {
+    mobileMenu.classList.remove("translate-x-full", "opacity-0");
+    mobileMenu.classList.add("translate-x-0", "opacity-100");
+    // Disable scrolling
+    document.body.style.overflow = "hidden";
   } else {
-    // Di luar hero image → bebas (misalnya tetap hitam atau balik ke putih)
-    mobileMenuButton.classList.remove("text-black");
+    closeMenu();
   }
 });
 
-// Event klik untuk buka/tutup menu
-mobileMenuButton.addEventListener("click", event => {
-  event.stopPropagation();
-  toggleMenu();
-});
-
+// Tutup menu jika klik di luar tombol dan menu
 document.addEventListener("click", event => {
   if (menuOpen && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
     closeMenu();
   }
 });
 
-function toggleMenu() {
+mobileMenuButton.addEventListener("click", event => {
+  event.stopPropagation();
   menuOpen = !menuOpen;
-
+  
+  // Menghapus kelas 'closed' saat menu dibuka
+  if (menuOpen) {
+    mobileMenuButton.classList.remove("closed");
+  } else {
+    mobileMenuButton.classList.add("closed");
+  }
+  
   mobileMenuButton.classList.toggle("open", menuOpen);
-  mobileMenuButton.classList.toggle("closed", !menuOpen);
+  if (menuOpen) {
+    mobileMenu.classList.remove("translate-x-full", "opacity-0");
+    mobileMenu.classList.add("translate-x-0", "opacity-100");
+    // Disable scrolling
+    document.body.style.overflow = "hidden";
+  } else {
+    closeMenu();
+  }
+});
 
+// ketika close humburger nya menjadi hitam
+mobileMenuButton.addEventListener("click", event => {
+  event.stopPropagation();
+  menuOpen = !menuOpen;
+  mobileMenuButton.classList.toggle("open", menuOpen);
+  
   if (menuOpen) {
     mobileMenu.classList.remove("translate-x-full", "opacity-0");
     mobileMenu.classList.add("translate-x-0", "opacity-100");
@@ -42,60 +59,50 @@ function toggleMenu() {
   } else {
     closeMenu();
   }
-}
+});
 
 function closeMenu() {
   menuOpen = false;
   mobileMenuButton.classList.remove("open");
-  mobileMenuButton.classList.add("closed");
-
-  // Geser keluar ke kanan dan fade-out
   mobileMenu.classList.remove("translate-x-0", "opacity-100");
   mobileMenu.classList.add("translate-x-full", "opacity-0");
-
   document.body.style.overflow = "";
 }
-window.dispatchEvent(new Event("scroll"));
-// humburger end
+
+
 
 // dropdown  menu mobile
 document.addEventListener("DOMContentLoaded", () => {
-  const toggles = document.querySelectorAll(".dropdown-toggle-mobile");
+  const toggles = document.querySelectorAll(".dropdown-toggle");
+  const menus = document.querySelectorAll(".dropdown-menu");
 
-  toggles.forEach(toggle => {
-    const menu = toggle.closest("li").querySelector(".dropdown-menu");
+  toggles.forEach((toggle, index) => {
+    const menu = menus[index];
     const arrow = toggle.querySelector("svg");
 
     toggle.addEventListener("click", e => {
       e.stopPropagation();
 
-      const isOpen = menu.classList.contains("visible");
+      const isOpen = menu.classList.contains("show");
 
-      document.querySelectorAll(".dropdown-menu").forEach(m => {
-        m.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
-        m.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
-      });
+      // Tutup semua dulu
+      menus.forEach(m => m.classList.remove("show"));
+      document.querySelectorAll(".dropdown-toggle svg").forEach(icon => icon.classList.remove("rotate"));
 
-      document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
-
+      // Buka kalau sebelumnya tertutup
       if (!isOpen) {
-        menu.classList.remove("max-h-0", "opacity-0", "invisible", "scale-y-95");
-        menu.classList.add("max-h-96", "opacity-100", "visible", "scale-y-100");
-        arrow.classList.add("rotate-180");
+        menu.classList.add("show");
+        arrow.classList.add("rotate");
       }
     });
   });
 
+  // Tutup kalau klik di luar
   document.addEventListener("click", () => {
-    document.querySelectorAll(".dropdown-menu").forEach(menu => {
-      menu.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
-      menu.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
-    });
-
-    document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
+    menus.forEach(menu => menu.classList.remove("show"));
+    document.querySelectorAll(".dropdown-toggle svg").forEach(icon => icon.classList.remove("rotate"));
   });
 });
-// end
 
 // Event scroll untuk mengubah warna hamburger setelah melewati hero
 window.addEventListener("scroll", () => {
@@ -108,6 +115,109 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+// menu dropdown *
+// 
+// Dropdown nav (desktop-menu)
+  function closeAllDropdowns(scopeSelector) {
+    document.querySelectorAll(`${scopeSelector} .dropdown-menu`).forEach(menu => {
+      menu.classList.add("hidden");
+    });
+    document.querySelectorAll(`${scopeSelector} .dropdown-toggle`).forEach(toggle => {
+      toggle.classList.remove("open");
+    });
+  }
+
+  document.querySelectorAll("#desktop-menu .dropdown-toggle").forEach(toggle => {
+    const dropdownName = toggle.getAttribute("data-dropdown");
+    const currentDropdown = document.getElementById(`dropdown-${dropdownName}`);
+    const parentItem = toggle.closest("li");
+
+    if (!currentDropdown || !parentItem) return;
+
+    parentItem.addEventListener("mouseenter", () => {
+      closeAllDropdowns("#desktop-menu");
+      currentDropdown.classList.remove("hidden");
+      toggle.classList.add("open");
+      currentDropdown.classList.add("animate-slideDown");
+      setTimeout(() => {
+        currentDropdown.classList.remove("animate-slideDown");
+      }, 300);
+    });
+
+    parentItem.addEventListener("mouseleave", (e) => {
+      const toElement = e.relatedTarget;
+
+      // Cek apakah benar-benar keluar dari li dan dropdown
+      if (!parentItem.contains(toElement)) {
+        currentDropdown.classList.add("hidden");
+        toggle.classList.remove("open");
+      }
+    });
+  });
+
+
+// Dropdown hover untuk nav
+document.querySelectorAll("#desktop-menu .dropdown-toggle").forEach(toggle => {
+  const dropdownName = toggle.getAttribute("data-dropdown");
+  const currentDropdown = document.getElementById(`dropdown-${dropdownName}`);
+  const parentItem = toggle.closest("li");
+
+  if (!currentDropdown || !parentItem) return;
+
+  // Saat pointer masuk ke <li>
+  parentItem.addEventListener("pointerenter", () => {
+    closeAllDropdowns("#desktop-menu");
+    currentDropdown.classList.remove("hidden");
+    toggle.classList.add("open");
+    currentDropdown.classList.add("animate-slideDown");
+    setTimeout(() => {
+      currentDropdown.classList.remove("animate-slideDown");
+    }, 300);
+  });
+
+  // Saat pointer benar-benar keluar dari <li> dan dropdown
+  parentItem.addEventListener("pointerleave", (e) => {
+    // Cek apakah benar-benar keluar dari area menu + dropdown
+    const related = e.relatedTarget;
+    if (!parentItem.contains(related)) {
+      currentDropdown.classList.add("hidden");
+      toggle.classList.remove("open");
+    }
+  });
+});
+
+
+// Dropdown untuk menu nav (hover)
+document.querySelectorAll("#desktop-menu .dropdown-toggle").forEach(toggle => {
+  const dropdownName = toggle.getAttribute("data-dropdown");
+  const currentDropdown = document.getElementById(`dropdown-${dropdownName}`);
+  const parentItem = toggle.closest("li");
+
+  if (!currentDropdown || !parentItem) return;
+
+  // Saat mouse masuk ke <li>
+  parentItem.addEventListener("mouseenter", () => {
+    closeAllDropdowns("#desktop-menu");
+    currentDropdown.classList.remove("hidden");
+    toggle.classList.add("open");
+    currentDropdown.classList.add("animate-slideDown");
+    setTimeout(() => {
+      currentDropdown.classList.remove("animate-slideDown");
+    }, 300);
+  });
+
+  // Saat mouse keluar dari <li>
+  parentItem.addEventListener("mouseleave", () => {
+    currentDropdown.classList.add("hidden");
+    toggle.classList.remove("open");
+  });
+});
+
+
+
+
+// dropdown section herro
 
 // Menu Mobile*
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,43 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Event listener untuk link di dropdown Properties Gallery & nav dekstop
-document.querySelectorAll("#desktop-menu-item ul li a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-
-    const targetId = link.getAttribute("href").substring(1);
-    const filterButton = document.getElementById(targetId);
-
-    if (filterButton) {
-      filterButton.click();
-
-      const category = filterButton.getAttribute("data-category");
-
-      setTimeout(() => {
-        if (category.toLowerCase() === "all") {
-          const galleryWrapper = document.querySelector(".gallery-wrapper");
-          if (galleryWrapper) {
-            galleryWrapper.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        } else {
-          const targetCard = document.querySelector(`.gallery-item[data-category="${category}"]`);
-          if (targetCard) {
-            targetCard.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        }
-      }, 300);
-    }
-  });
-});
-// end
-
 // button
 const buttons = document.querySelectorAll(".btn-primary");
 
@@ -204,17 +277,16 @@ buttons.forEach(button => {
 const popup = document.getElementById("popup");
 const closeBtn = document.getElementById("close-btn");
 const contactBtn = document.getElementById("contact-btn");
+const overlay = document.getElementById("popup-overlay");
 
 contactBtn.addEventListener("click", () => {
-  popup.classList.remove("hidden"); // Menampilkan popup
-  popup.classList.add("open"); // Menambahkan kelas open untuk mengaktifkan popup
-  document.body.classList.add("overflow-hidden"); // Menonaktifkan scroll
+  popup.classList.add("open");
+  overlay.style.display = "block"; // Aktifkan overlay
 });
 
 closeBtn.addEventListener("click", () => {
-  popup.classList.add("hidden"); // Menyembunyikan popup
-  popup.classList.remove("open"); // Menonaktifkan popup
-  document.body.classList.remove("overflow-hidden"); // Mengaktifkan kembali scroll
+  popup.classList.remove("open");
+  overlay.style.display = "none"; // Hilangkan overlay
 });
 
 // insight*
@@ -545,7 +617,7 @@ window.addEventListener(
       mobileMenuButton.classList.remove("after-hero");
     }
   },
-  { passive: true },
+  { passive: true }
 );
 
 // fillter galery*
@@ -568,48 +640,5 @@ document.querySelectorAll(".filter-btn").forEach(button => {
         item.style.display = "none";
       }
     });
-  });
-});
-
-// Fungsi smooth scroll dengan offset
-
-const targetElement = document.querySelector("#target");
-if (targetElement) {
-  targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-// navigasi mobile + gallery
-document.querySelectorAll(".dropdown-menu a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-
-    const targetId = link.getAttribute("href").substring(1);
-    const filterButton = document.getElementById(targetId);
-
-    if (filterButton) {
-      filterButton.click();
-
-      const category = filterButton.getAttribute("data-category");
-
-      // Tentukan offset sesuai lebar layar
-      const offsetTop = window.innerWidth >= 768 ? 300 : 200;
-
-      const scrollToWithOffset = element => {
-        const y = element.getBoundingClientRect().top + window.scrollY - offsetTop;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      };
-
-      if (category === "All") {
-        document.querySelectorAll(".gallery-item").forEach(item => {
-          item.style.display = "block";
-        });
-
-        const firstCard = document.querySelector(".gallery-item");
-        if (firstCard) scrollToWithOffset(firstCard);
-      } else {
-        const targetCard = document.querySelector(`.gallery-item[data-category="${category}"]`);
-        if (targetCard) scrollToWithOffset(targetCard);
-      }
-    }
   });
 });

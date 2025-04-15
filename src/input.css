@@ -4,17 +4,6 @@
 
 @import "tailwindcss";
 
-/* :root {
-  --font-gloock: "Gloock", serif;
-  --font-jakarta: "Plus Jakarta Sans", sans-serif;
-  --font-alexandria: "Alexandria", sans-serif;
-  --font-afacad: "Afacad", sans-serif;
-  --color-gray: #949494;
-  --color-secondary: #d1d1d1;
-  --color-primary: #888888;
-  --color-dark: #111111;
-} */
-
 @theme {
   --font-gloock: "Gloock", serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
@@ -25,13 +14,13 @@
   --color-primary: #888888;
   --color-Tertiary: #e7e7e7;
   --color-muted: #d1d1d1;
-  --color-second: #F6F6F6;
+  --color-second: #f6f6f6;
   --color-dark: #111111;
 }
 
 @layer components {
   .btn-primary {
-    @apply text-dark font-jakarta flex items-center gap-4 text-sm font-semibold transition-all active:text-gray-300 ps-5 sm:ps-0;
+    @apply text-dark font-jakarta flex items-center gap-4 text-sm font-semibold transition-all active:text-gray-300 ps-5 sm:ps-0 cursor-pointer;
   }
   .iconbtn {
     @apply transition-transform duration-500 ease-in-out;
@@ -102,14 +91,14 @@ nav ul li img {
   transition: background-color 0.3s ease;
 }
 
-/* class yang mengubah ikon jadi hitam */
+/* class yang mengubah ikon $ logo jadi hitam */
 .icon-black {
   filter: brightness(0) saturate(100%);
 }
 
-.nav-icon {
+/* .nav-icon {
   transition: filter 0.3s ease;
-}
+} */
 
 /* tombol menu humberger */
 .burger-line {
@@ -122,9 +111,15 @@ nav ul li img {
   transform-origin: center;
 }
 /* Posisi tiap garis */
-#mobile-menu-button span:nth-child(1) { top: 4px; }
-#mobile-menu-button span:nth-child(2) { top: 12px; }
-#mobile-menu-button span:nth-child(3) { top: 20px; }
+#mobile-menu-button span:nth-child(1) {
+  top: 4px;
+}
+#mobile-menu-button span:nth-child(2) {
+  top: 12px;
+}
+#mobile-menu-button span:nth-child(3) {
+  top: 20px;
+}
 
 /* Hamburger-to-X saat tombol open */
 #mobile-menu-button.open span:nth-child(1) {
@@ -140,7 +135,8 @@ nav ul li img {
 /* Saat tombol memiliki class after-hero, ubah warna garis menjadi hitam */
 #mobile-menu-button.after-hero .burger-line {
   background-color: black !important;
-}burger-line {
+}
+burger-line {
   position: absolute;
   left: 0;
   width: 100%;
@@ -149,30 +145,9 @@ nav ul li img {
   transition: all 0.5s ease-in-out;
   transform-origin: center;
 }
-/* Posisi tiap garis */
-#mobile-menu-button span:nth-child(1) { top: 4px; }
-#mobile-menu-button span:nth-child(2) { top: 12px; }
-#mobile-menu-button span:nth-child(3) { top: 20px; }
 
-/* Hamburger-to-X saat tombol open */
-#mobile-menu-button.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-#mobile-menu-button.open span:nth-child(2) {
-  opacity: 0;
-}
-#mobile-menu-button.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Ubah warna hamburger menjadi hitam saat sudah melewati hero */
-#mobile-menu-button.after-hero .burger-line {
-  background-color: black !important;
-}
-
-
- /* Animasi slideDown untuk dropdown menu*/
- @keyframes slideDown {
+/* Animasi slideDown untuk dropdown menu*/
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(-10px);
@@ -193,8 +168,8 @@ nav ul li img {
   transform: rotate(180deg);
 }
 
- /* Animasi slideDown untuk dropdown herro */
- @keyframes slideDown {
+/* Animasi slideDown untuk dropdown herro */
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(-10px);
@@ -222,7 +197,6 @@ nav ul li img {
   animation: slideDown 0.3s ease-out;
 }
 
-
 .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -237,7 +211,7 @@ nav ul li img {
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(5px); 
+  backdrop-filter: blur(100px);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -250,14 +224,16 @@ nav ul li img {
 
 /* Popup content */
 .popup-content {
-  width: 24rem; /* setara dengan w-96 */
+  width: 24rem;
   transform: scale(0.9);
-  border-radius: 0.5rem; /* setara dengan rounded-lg */
+  border-radius: 0.5rem;
   background: white;
-  padding: 1.5rem; /* setara dengan p-6 */
+  padding: 1.5rem;
   opacity: 0;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* setara dengan shadow-xl */
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
 
 /* Saat popup aktif, konten tampil penuh */
@@ -267,21 +243,23 @@ nav ul li img {
 }
 
 /* scroll header logo */
-/* Contoh definisi animasi fade */
 .fade-in {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .fade-out {
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
-
- /* animasi search hero */
+/* animasi search hero */
 .shimmer-effect {
   background: linear-gradient(120deg, #888888 30%, #a3d8ff 50%, #6fc3ff 70%);
   background-size: 200% 100%;
@@ -301,45 +279,43 @@ nav ul li img {
   }
 }
 
-/* mobile menu */
-#mobile-menu-button.open {
-  /* background-color: #ccc; */
+/* pop up contact */
+#popup {
+  position: fixed;
+  z-index: 9999;
 }
 
-/* Styling untuk mobile menu */
-#mobile-menu {
-  transition: transform 0.8s ease, opacity 0.8s ease;
+/* Rotasi ikon panah */
+.dropdown-toggle svg {
+  @apply transition-transform duration-300;
+}
+.dropdown-toggle svg.rotate {
+  @apply rotate-180;
 }
 
-
-.translate-x-full {
-  transform: translateX(100%);
+/* humburger menjadi hitam */
+#mobile-menu-button .burger-line {
+  background-color: white;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
-/* Kelas untuk menampilkan menu (di layar) */
-.translate-x-0 {
-  transform: translateX(0);
+/* Saat tombol dalam keadaan open (cross), ubah warnanya jadi hitam */
+#mobile-menu-button.open .burger-line {
+  background-color: black !important;
 }
 
-/* Kelas untuk menyembunyikan menu secara transparan */
-.opacity-0 {
+/* Contoh animasi sederhana: garis atas dan bawah berputar dan garis tengah menghilang */
+#mobile-menu-button.open .burger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu-button.open .burger-line:nth-child(2) {
   opacity: 0;
 }
 
-/* Kelas untuk menampilkan menu dengan opacity penuh */
-.opacity-100 {
-  opacity: 1;
+#mobile-menu-button.open .burger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
-
-/* pop up contact */
-#popup {
-  /* Properti yang sudah ada */
-  position: fixed;
-  /* properti lainnya */
-  z-index: 9999; /* Pastikan nilainya lebih tinggi dari gambar */
-}
-
-
-/* search button */
-
-
