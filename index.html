@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/static/img/ico.png" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terratani</title>
   </head>
-  <body>
+  <body class="font-darker">
+
     <header id="site-header" class="absolute z-10 w-full">
         <nav
-          class="flex justify-between items-center mx-auto max-w-screen-xl border-gray-300 border-b-2 px-3 md:px-5 mt-3 lg:px-6 "
+          class="flex space-x-3 items-center mx-auto max-w-screen-xl border-gray-300 border-b-2 px-3 md:px-5 mt-3 lg:px-6 "
         >
-          <a href="/" class="flex items-center m-3 p-1 hover:animate-pulse">
+          <a href="/" class="flex items-center my-3 py-1 hover:animate-pulse">
             <img
               src="static/img/ico.png"
               alt="ico"
-              class="mr-3 h-9 w-9 md:h-10 md:w-10 lg:h-10 lg:w-10"
+              class="mr-3 h-9 w-9 md:h-10 md:w-10 lg:h-10 lg:w-10 object-center"
             />
             <span
               class="self-center text-xl font-semibold whitespace-nowrap text-white"
@@ -54,7 +57,7 @@
 
           <button
             type="button"
-            class="hidden md:flex lg:flex flex-row text-white transition hover:animate-pulse rounded-full border-solid border-white border-2 py-2 px-3 items-center text-center "
+            class="hidden md:flex lg:flex flex-row text-white transition hover:animate-pulse rounded-full border-solid border-white border-2 py-2 px-3 items-center text-center"
           >
             <svg width="5" class="mx-2" height="5">
               <circle cx="2.5" cy="2.5" r="2.5" fill="white" stroke="none" />
@@ -65,19 +68,352 @@
             <img src="static/img/menu.svg" alt="menu" class="block md:hidden lg:hidden h-6 w-6">
           </a>
         </nav>
-      </nav>
     </header>
 
     <main>
-      <!--Hero-->
-      <section class="w-full flex flex-col md:flex-row xl:flex-row justify-center min-h-screen max-w-full overflow-hidden relative">
-        <div class="absolute inset-0 -z-0">
-            <img src="static/img/bg.png" class="object-center object-cover w-full h-full" alt="img" >
+<!--Hero-->
+<section class="relative w-full h-screen flex items-center p-8 bg-gray-200">
+  <div class="absolute inset-0 w-full h-full">
+    <img src="static/img/bg.png" alt="Hero Background" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div> <!-- Optional dark overlay -->
+  </div>
+
+  <div class="relative z-10 text-white text-start space-y-3">
+    <h1 class="text-7xl leading-tight font-semibold" data-aos="fade-up" >
+      Modern Farming,<br> Sustainable Living
+    </h1>
+  </div>
+  <div class="absolute bottom-4 px-8 flex flex-row justify-between w-full " data-aos="fade-up">
+
+    <p class="text-xs text-white">Transforming traditional farming into sustainable <br> solutions for a greener future.</p>
+    <p class="text-xs text-white">Transforming traditional farming into sustainable <br> solutions for a greener future.</p>
+    <p class="text-xs text-white">Transforming traditional farming into sustainable <br> solutions for a greener future.</p>
+
+    <div class="mx-10 flex flex-row items-center space-x-1">
+      <button type="button" class="bg-white rounded-3xl relative flex flex-row space-x-1 items-center p-3">
+        <p class="text-black text-center">Become a member</p>
+        <svg class="h-5 w-5 bg-[#3B3F28] rounded-full p-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7M7 7h10v10" />
+        </svg>
+      </button>
+      <p class="text-white">About Us</p>
+    </div>
+
+    </div>
+</section>
+
+
+      <!--Numbers section-->
+      <section class="min-h-screen max-w-full">
+        <div class="flex flex-col p-6">
+          <div class="flex flex-col justify-between  md:flex-col lg:flex-row px-6 mx-6 space-y-3" data-aos="flip-up">
+            <!--Item-->
+            <div class="flex flex-col text-center space-y-1">
+              <p class="text-black text-5xl font-bold">40+</p>
+              <p class="text-gray-500 text-xs font-light text-start">Success Projects</p>
+            </div>
+            <div class="flex flex-col text-center space-y-1">
+              <p class="text-black text-5xl font-bold">120+</p>
+              <p class="text-gray-500 text-xs font-light text-start">From world wide</p>
+            </div>
+            <div class="flex flex-col text-center space-y-1">
+              <p class="text-black text-5xl font-bold">320+</p>
+              <p class="text-gray-500 text-xs font-light text-start">Services & Trainings</p>
+            </div>
+            <div class="flex flex-col text-center space-y-1">
+              <p class="text-black text-5xl font-bold">$8+ Billion</p>
+              <p class="text-gray-500 text-xs font-light text-start">Value of farm increases</p>
+            </div>
+          </div>
+
+          <hr class="my-12 h-1 border-t-0 bg-gray-950 dark:bg-white/10" />
+
+          <div class="justify-center mx-48 space-y-5" data-aos="fade-up">
+            <p class="text-center text-2xl text-gray-600 tracking-wide ">Terratani is a modern farming community dedicated to</p>
+            <p class="text-3xl text-start text-pretty text-black ">empowering farmers with innovative techniques and sustainable <br> practices. <span class="text-gray-600">
+            Our mission is to</span> create a balance between <br>productivity and environmental stewardship, fostering a future <br> where farming contributes to the well-being of the planet.</p>
+            <button
+            type="button"
+            class="hidden md:flex lg:flex flex-row text-black transition hover:animate-pulse rounded-full border-solid border-black border-2 py-2 px-3 items-center text-center start-0 h-10 w-30 mt-3 text-sm"
+          >
+            <svg width="5" class="mx-2" height="5">
+              <circle cx="2.5" cy="2.5" r="2.5" fill="black" stroke="none" />
+            </svg>
+            Learn More 
+          </button>
+          </div>
+        
         </div>
-    </section>
+      </section>
+
+      <!--Farmers, Meet and greet Section-->
+      <section class="min-h-screen max-w-full space-y-8">
+        <div class="flex flex-row justify-between px-12"  data-aos="fade-up">
+          <p class="text-sm text-start align-text-top text-gray-400
+          ">What we do</p>
+
+          <p class="text-black text-3xl text-center tracking-wider font-semibold">Empowering Farmers, <br> Sustaining the Planet</p>
+
+          <p class="text-sm text-start align-text-top text-gray-400 max-w-80">At Terratani, we bridge the gap between innovation and agriculture to create sustainable farming solutions for everyone. Here’s how we’re making a difference:</p>
+        </div>
+        <div class="flex flex-col md:flex-row lg:flex-row items-center p-8 mx-3 space-x-3 font-semibold tracking-wide"  data-aos="fade-up">
+
+          <div class="items-center space-y-3">
+            <img src="static/img/farmer.png" alt="farmer" class="h-40 w-64 rounded-md">
+            <div class="flex flex-row justify-start space-x-3">
+              <img src="static/img/cricle.svg" class="h-10 w-10" alt="next">
+              <p>Crop <br> Consulting </p>
+            </div>
+          </div>
+
+          <div class="justify-center space-y-3">
+            <img src="static/img/farmer2.png" alt="farmer" class="h-40 w-64 rounded-md">
+            <div class="flex flex-row justify-start space-x-3">
+              <img src="static/img/cricle.svg" class="h-10 w-10" alt="next">
+              <p>Sustainable <br> Agriculture Practices  </p>
+            </div>
+          </div>
+
+          <div class="justify-center space-y-3">
+            <img src="static/img/farmer3.png" alt="farmer" class="h-40 w-64 rounded-md">
+            <div class="flex flex-row justify-start space-x-3">
+              <img src="static/img/cricle.svg" class="h-10 w-10" alt="next">
+              <p>Community <br> Collaboration </p>
+            </div>
+          </div>
+
+          <div class="justify-center space-y-3">
+            <img src="static/img/farmer4.png" alt="farmer" class="h-40 w-64 rounded-md">
+            <div class="flex flex-row justify-start space-x-3">
+              <img src="static/img/cricle.svg" class="h-10 w-10" alt="next">
+              <p>Education <br> and Training </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#ECECDB] min-h-100 flex flex-col p-8"  data-aos="fade-up">
+          <div class="flex flex-row justify-between items-center m-8 space-x-3">
+            <p class="text-3xl justify-start">Revolutionizing <br> Agriculture Together</p>
+            <p class="justify-end text-xs text-gray-400 tracking-wider">Join us for an inspiring event that brings together farmers, innovators, and <br> sustainability advocates to shape the future of agriculture.</p>
+          </div>
+          <div class="flex flex-col md:flex-row lg:flex-row space-x-3 space-y-3 p-8 items-center">
+
+            <div class="flex flex-col min-h-40 w-60 bg-white space-y-32 transition-all duration-300 hover:w-80">
+              <p class="text-xl justify-start text-black">Meet & Greet</p>
+              <div>
+                <p class="text-3xl justify-start text-gray-400">24 Jan</p>
+                <p class="text-xs justify-start text-gray-400">St. Grove 721</p>
+              </div>
+            </div>
+            <div class="flex flex-col min-h-40 w-60 bg-white space-y-32 transition-all duration-300 hover:w-80">
+              <p class="text-xl justify-start text-black">Meet & Greet</p>
+              <div>
+                <p class="text-3xl justify-start text-gray-400">24 Jan</p>
+                <p class="text-xs justify-start text-gray-400">St. Grove 721</p>
+              </div>
+            </div>
+            <div class="flex flex-col min-h-40 w-60 bg-white space-y-32 transition-all duration-300 hover:w-80">
+              <p class="text-xl justify-start text-black">Meet & Greet</p>
+              <div>
+                <p class="text-3xl justify-start text-gray-400">24 Jan</p>
+                <p class="text-xs justify-start text-gray-400">St. Grove 721</p>
+              </div>
+            </div>
+            <div class="flex flex-col min-h-40 w-60 bg-white space-y-32 transition-all duration-300 hover:w-80">
+              <p class="text-xl justify-start text-black">Meet & Greet</p>
+              <div>
+                <p class="text-3xl justify-start text-gray-400">24 Jan</p>
+                <p class="text-xs justify-start text-gray-400">St. Grove 721</p>
+              </div>
+            </div>
+            <div class="flex flex-col min-h-40 w-60 bg-white space-y-32 transition-all duration-300 hover:w-80">
+              <p class="text-xl justify-start text-black">Meet & Greet</p>
+              <div>
+                <p class="text-3xl justify-start text-gray-400">24 Jan</p>
+                <p class="text-xs justify-start text-gray-400">St. Grove 721</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Farm section-->
+
+      <section class="min-h-screen bg-[#1E2112]">
+        <div class="flex flex-col p-8 space-y-5">
+
+          <p class="text-white text-3xl my-20 self-end mr-20"  data-aos="fade-left"><span class="text-gray-600"><span class="mx-10"></span>At Terratani, we’re committed to </span> creating impactful <br> solutions that bridge the gap between traditional <br> farming and sustainable innovation.</p>
+          <div class="flex flex-col space-y-56">
+
+          <!--Card-->
+          <div class="w-80 m-8 overflow-hidden justify-start"  data-aos="fade-right">
+            <img src="static/img/farm1.png" alt="farm" class="object-cover w-full h-48">
+            <div class="flex justify-between items-start text-xs py-1 text-gray-400">
+              <div>
+                <p>24 Jan</p>
+                <p>St. Grove 721</p>
+              </div>
+              <p>24$</p>
+            </div>
+          </div>
+
+            <!--Card-->
+            <div class="w-72 m-8 overflow-hidden self-end"  data-aos="fade-left">
+              <img src="static/img/farm2.png" alt="farm" class="object-cover w-full h-40">
+              <div class="flex justify-between items-start text-xs py-1 text-gray-400">
+                <div>
+                  <p>24 Jan</p>
+                  <p>St. Grove 721</p>
+                </div>
+                <p>24$</p>
+              </div>
+            </div>
+
+          <!--Card-->
+          <div class="w-96 m-8 overflow-hidden self-center"  data-aos="fade-up">
+            <img src="static/img/farm3.png" alt="farm" class="object-cover w-full h-72">
+            <div class="flex justify-between items-start text-xs py-1 text-gray-400">
+              <div>
+                <p>24 Jan</p>
+                <p>St. Grove 721</p>
+              </div>
+              <p>24$</p>
+            </div>
+          </div>
+
+      </section>
+      
+      <!--Stay informed section-->
+      <section class="p-8" >
+        <p class="text-3xl tracking-wider text-gray-600 m-10"  data-aos="fade-right">
+          Stay informed and inspired with the latest updates from the <br> world of modern farming and sustainability, you’ll find valuable <br> insights to help you grow smarter and live greener.
+        </p>
+        <div class="flex flex-col md:flex-row lg:flex-row items-center space-x-3 space-y-3 min-h-[30rem]"  data-aos="flip-up">
+
+          <div class="flex flex-col h-60 w-80 hover:h-80 bg-gray-200 hover:bg-[#3B3F28] text-gray-800 hover:text-white py-5 px-4 transition-all duration-300 space-y-10 font-bold">
+          <p class="text-xl justify-start ">Revolutionizing Agriculture: How Modern Farming is Shaping the Future</p>
+            <div class="align-bottom overflow-hidden text-xs">
+              <p>20 Oct 2024 - 20 Oct 2024</p>
+              <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col h-60 w-80 hover:h-80 bg-gray-200 hover:bg-[#3B3F28] py-5 px-4 text-gray-800 hover:text-white transition-all duration-300 space-y-10 font-bold" >
+
+            <p class="text-xl justify-start">Smart Farming 101: Tools and Techniques for the Modern Farmer</p>
+            <div class="align-bottom overflow-hidden text-xs">
+              <p>20 Oct 2024 - 20 Oct 2024</p>
+              <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col h-60 hover:h-80 w-80 bg-gray-200 hover:bg-[#3B3F28] text-gray-800 hover:text-white py-5 px-4 transition-all duration-300 space-y-10 font-bold">
+
+            <p class="text-xl justify-start ">From Tradition to Innovation: Embracing Technology in Agriculture</p>
+            <div class="align-bottom overflow-hidden text-xs">
+              <p>20 Oct 2024 - 20 Oct 2024</p>
+              <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col h-60 hover:h-80 w-80 bg-gray-200 hover:bg-[#3B3F28] text-gray-800 hover:text-white py-5 px-4 transition-all duration-300 space-y-10 mb-10 font-bold">
+
+            <p class="text-xl justify-start">Water Conservation in Farming: Simple Steps for Big Impact</p>
+            <div class="align-bottom overflow-hidden">
+              <p>20 Oct 2024 - 20 Oct 2024</p>
+              <p>Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--Get in touch-->
+      <section class="relative w-full bg-gray-200 py-10">
+        <div class="absolute inset-0 w-full h-full">
+          <img src="static/img/getInTouch.jpg" alt="getInTouch" class="w-full h-96 object-cover brightness-50">
+        </div>
+
+        <div class="relative z-10 flex flex-col justify-center items-center text-white text-center space-y-3">
+          <h2 class="text-5xl font-bold mb-2"  data-aos="fade-up">Get the latest updates, tips, and stories on <br> modern farming and sustainability straight <br> to your inbox.</h2>
+
+          <div class="mx-10 flex flex-row items-center space-x-1"  data-aos="fade-up">
+            <div type="button" class="backdrop-blur-xl rounded-5xl relative flex flex-row justify-between items-center p-3 w-96">
+              <p class="text-white text-center">Become a member</p>
+              <div class="bg-white rounded-full p-2" >
+                <p class="text-black">Subscribe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
-    <footer></footer>
+    
+    <footer class="p-8 min-h-[22rem] divide-y dark:bg-white dark:text-gray-800 mt-10">
+      <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0"  data-aos="fade-up">
+        <div class="lg:w-1/3">
+          <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
+            <img src="static/img/ico.png" class="w-10 h-10" alt="ico">
+            <span class="self-center text-2xl font-semibold">Terratani</span>
+          </a>
+        </div>
+        <div class="grid self-end grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+          <div class="space-y-3 mt-0">
+            <h3 class="tracking-wide uppercase dark:text-gray-900">Product</h3>
+            <ul class="space-y-1">
+              <li>
+                <a rel="noopener noreferrer" href="#">Features</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">Integrations</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">Pricing</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="tracking-wide uppercase dark:text-gray-900">Company</h3>
+            <ul class="space-y-1">
+              <li>
+                <a rel="noopener noreferrer" href="#">Privacy</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="uppercase dark:text-gray-900">Developers</h3>
+            <ul class="space-y-1">
+              <li>
+                <a rel="noopener noreferrer" href="#">Public API</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">Documentation</a>
+              </li>
+              <li>
+                <a rel="noopener noreferrer" href="#">Guides</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="py-6 text-sm text-center dark:text-gray-600">© 1968 Company Co. All rights reserved.</div>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

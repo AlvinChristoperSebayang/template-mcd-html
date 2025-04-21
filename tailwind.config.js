@@ -1,11 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
+
+
 export default {
   content: [
     "./*.{html,js}",
     "./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        darker: ['"Darker Grotesque"', 'sans-serif'],
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
 }
 

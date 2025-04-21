@@ -3,3 +3,34 @@
 @tailwind utilities;
 
 
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+    margin-top: 0 !important;
+}
+
+
+/* CSS Code */
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+    }
+    .swiper-pagination-bullet {
+    background: #4F46E5;
+    }
+    .swiper-pagination-bullet-active {
+    background: #4F46E5 !important;
+    }
+    
