@@ -18,6 +18,11 @@
   a {
     @apply font-primary;
   }
+  form input:focus-visible,
+  form textarea:focus-visible {
+    @apply outline-none;
+
+  }
 }
 
 @layer components {
