@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[48px] max-md:font-normal;
+  }
+
+  h2 {
+    @apply text-[48px] max-md:font-normal;
+  }
+  h3 {
+    @apply text-[20px] font-semibold;
+  }
+  p {
+    @apply text-[#6a7182];
+  }
+}
+
+.section-Help .button {
+  @apply h-full;
+}
+
+.section-Help .card-wrap .card button {
+  @apply h-fit mt-auto max-md:mt-[24px];
+}
+
+.card-content {
+  @apply flex flex-col h-full;
+}
+
+#navbar.bg-contactPage a {
+  @apply text-black;
+}
+
+#navbar {
+  @apply bg-white;
+}

@@ -165,37 +165,6 @@
   transform: rotate(0deg);
 }
 
-/* .collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-.collapsible-content.open {
-  max-height: 200px;
-} */
-
-/* .collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-  }
-  .collapsible-content.open {
-    max-height: 500px; 
-    padding-top: 10px;
-    padding-bottom: 10px;
-  } */
-
-/* @layer components {
-  .collapsible-content {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: all 500ms ease;
-  }
-  .collapsible-content.open {
-    grid-template-rows: 1fr;
-  }
-} */
-
 @layer components {
   .collapsible-content {
     display: grid;
@@ -209,24 +178,7 @@
   .collapsible-content > div {
     overflow: hidden;
   }
-
-
-  
-  /* .btn{
-    @apply p-6 rounded-xl text-xl;
-    &.btn--primary{
-      @apply bg-transparent;
-      &:hover{
-
-      }
-    }
-    &.btn--secondary{
-
-    }
-  } */
 }
-
-
 
 @layer components {
   .caption-container {
@@ -245,22 +197,11 @@
   }
 }
 
-
 .button-active {
   background-color: #fff;
   color: #000;
 }
 
-/* @media (max-width: 1280px) {
-    .container {
-      padding-left: 14px;
-      padding-right: 14px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .container {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-  } */
+.page-container {
+  @apply px-[80px] max-md:px-[24px];
+}

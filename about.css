@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[48px] max-md:font-normal;
+  }
+
+  h2 {
+    @apply text-[48px] max-md:font-normal;
+  }
+  h3 {
+    @apply text-[20px] font-semibold;
+  }
+  p {
+    @apply text-[#6a7182];
+  }
+}
+
+.section-hero p {
+  @apply text-white text-base;
+}
+
+.section-hero {
+  @apply relative;
+}
+
+.item-description {
+  @apply text-base font-inter;
+}
+
+.item-title {
+  @apply text-xl;
+}
+
+.section-whyUs li p {
+  @apply mt-[20px];
+}

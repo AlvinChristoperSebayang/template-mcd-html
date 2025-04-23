@@ -26,6 +26,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="/about.css" />
   </head>
   <body>
     <header
@@ -38,17 +39,17 @@
         >
           <div class="flex items-center gap-10">
             <a
-              href="#"
+              href="/"
               class="text-3xl text-[20px] pr-20 md:text-[26px] lg:text-[30px] font-extrabold text-white font-montserrat"
               >Kayyon</a
             >
             <a
-              href="#"
+              href="/about.html"
               class="text-xl md:text-[18px] lg:text-[20px] px-2 text-white hidden md:inline lg:inline font-helvetica"
               >About us</a
             >
             <a
-              href="#"
+              href="/contact.html"
               class="text-xl md:text-[18px] lg:text-[20px] px-2 text-white hidden md:inline lg:inline font-helvetica"
               >Contact</a
             >
@@ -98,12 +99,12 @@
                 class="absolute hidden right-[-6px] mt-2 w-36 bg-white text-black rounded-md shadow-lg animate__animated animate__flipInY before:absolute before:top-[-8px] before:right-[14px] before:w-0 before:h-0 before:border-l-[8px] before:border-l-transparent before:border-r-[8px] before:border-r-transparent before:border-b-[8px] before:border-b-white"
               >
                 <a
-                  href="#"
+                  href="/about.html"
                   class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-t-md hover:rounded-t-md transition-colors duration-300"
                   >About us</a
                 >
                 <a
-                  href="#"
+                  href="/contact.html"
                   class="block px-4 py-2 text-sm hover:bg-gray-200 rounded-b-md hover:rounded-b-md transition-colors duration-300"
                   >Contact</a
                 >
@@ -2071,20 +2072,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      //element selalu di atas ketika pertama kali dan refresh start
-      document.addEventListener("DOMContentLoaded", function () {
-        window.scrollTo(0, 0);
-      });
-      //element selalu di atas ketika pertama kali dan refresh end
-
-      // dropdown mobile
-      function toggleDropdown(event) {
-        const dropdown = document.getElementById("dropdownMenu");
-
-        dropdown.classList.toggle("hidden");
-      }
-      // dropdown mobile end
-
       // Tutup dropdown jika klik di luar menu
       window.addEventListener("click", function (event) {
         const dropdown = document.getElementById("dropdownMenu");
@@ -2144,7 +2131,6 @@
       ];
       //data testimoni swipper end
 
-
       //testimoni swipper start
       let captionIndex = 2;
       let interval;
@@ -2190,16 +2176,7 @@
 
       init();
       //testimoni swipper end
-      
 
-      window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("bg-scrolled");
-        } else {
-          navbar.classList.remove("bg-scrolled");
-        }
-      });
       const swiper = new Swiper(".swiper", {
         direction: "horizontal",
         loop: true,
