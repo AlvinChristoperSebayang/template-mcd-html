@@ -4,17 +4,35 @@
 
 @layer base {
   h1 {
-    @apply text-[48px] max-md:font-normal;
+    @apply text-[48px] max-md:font-normal font-helvetica;
   }
 
   h2 {
-    @apply text-[48px] max-md:font-normal;
+    @apply text-[48px] max-md:font-normal font-helvetica;
   }
   h3 {
-    @apply text-[20px] font-semibold;
+    @apply text-[20px] font-semibold font-helvetica;
   }
   p {
-    @apply text-[#6a7182];
+    @apply text-[#6a7182] font-helvetica;
+  }
+  textarea {
+    @apply font-helvetica;
+  }
+  label {
+    @apply font-helvetica;
+  }
+  input {
+    @apply font-helvetica;
+  }
+  button {
+    @apply font-helvetica;
+  }
+  a {
+    @apply font-helvetica;
+  }
+  li {
+    @apply font-helvetica;
   }
 }
 

@@ -28,3 +28,9 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("bg-scrolled");
   }
 });
+
+const input = document.querySelectorAll("input");
+
+input.forEach((element) => {
+  element.classList.add("focus:outline-none");
+});

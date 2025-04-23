@@ -30,7 +30,7 @@
     id="navbar"
     class="z-10 fixed top-0 left-0 w-full bg-transpasrent mx-auto transition duration-300 ease-in-out"
   >
-    <div class="w-full max-w-[1440px] mx-auto page-container">
+    <div class="w-full container mx-auto">
       <nav
         class="flex justify-between items-center z-50 text-white pl-[20px] pr-[12px] py-[6px] lg:py-[20px]"
       >
@@ -118,40 +118,47 @@
     </div>
   </header>
   <main>
-    <section class="section-hero h-screen page-container relative">
+    <section class="section-hero h-screen relative">
       <div class="pt-[120px] lg:h-[949px]">
         <div class="absolute inset-0 w-full h-full z-0">
           <!-- home 1 -->
           <div class="">
-            <div class="w-full max-w-[1440px] mx-auto relatif">
+            <div class="w-full h-full mx-auto relative">
               <div
-                class="absolute max-lg:flex-col max-lg:top-[104px] flex page-container flex-row justify-between text-[22px] lg:text-[64px] font-helvetica z-30 bottom-[60px] lg:bottom-[40px]"
+                class="absolute max-lg:top-[104px] bottom-[60px] lg:bottom-[40px] z-30 w-full"
               >
                 <div
-                  class="text-content max-md:w-full w-3/4 flex flex-col lg:gap-[24px]"
+                  class="container max-lg:flex-col flex flex-row justify-between text-[22px] lg:text-[64px] font-helvetica h-full"
                 >
-                  <h1 data-aos="fade-up" class="text-white">
-                    Who We Are at Kayyon
-                  </h1>
-                  <p data-aos="fade-up" class="lg:leading-[28px] text-justify">
-                    At Kayyon, we believe that great design is more than just
-                    looks, it is also about creating harmony between aesthetics,
-                    functionality and everyday comfort. We are passionate about
-                    creating furniture that not only looks beautiful but also
-                    adapts to modern lifestyles, bringing warmth and simplicity
-                    to your living space.
-                  </p>
-                </div>
+                  <div
+                    class="text-content max-md:w-full w-3/4 flex flex-col lg:gap-[24px]"
+                  >
+                    <h1 data-aos="fade-up" class="text-white">
+                      Who We Are at Kayyon
+                    </h1>
+                    <p
+                      data-aos="fade-up"
+                      class="lg:leading-[28px] text-justify"
+                    >
+                      At Kayyon, we believe that great design is more than just
+                      looks, it is also about creating harmony between
+                      aesthetics, functionality and everyday comfort. We are
+                      passionate about creating furniture that not only looks
+                      beautiful but also adapts to modern lifestyles, bringing
+                      warmth and simplicity to your living space.
+                    </p>
+                  </div>
 
-                <button
-                  class="max-md:ml-auto mt-auto flex justify-center items-center w-16 h-16 md:w-16 md:h-16 border-2 border-white text-white max-md:text-[24px] text-[30px] font-bold rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
-                  onclick="scrollToOurStory()"
-                  aria-label="Auto Scroll Down"
-                  data-aos="fade-up"
-                  data-aos-anchor=".section-hero"
-                >
-                  &#8595;
-                </button>
+                  <button
+                    class="max-md:ml-auto mt-auto flex justify-center items-center w-16 h-16 md:w-16 md:h-16 border-2 border-white text-white max-md:text-[24px] text-[30px] font-bold rounded-full focus:outline-none transform transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black"
+                    onclick="scrollToOurStory()"
+                    aria-label="Auto Scroll Down"
+                    data-aos="fade-up"
+                    data-aos-anchor=".section-hero"
+                  >
+                    &#8595;
+                  </button>
+                </div>
               </div>
             </div>
             <div
@@ -166,266 +173,269 @@
         </div>
       </div>
     </section>
-    <section
-      id="ourStory"
-      class="section-ourStory page-container py-[100px] max-md:py-[40px]"
-    >
-      <div
-        class="content-wrapper max-md:flex-col flex flex-row md:gap-[40px] bg-[#efefef] rounded-3xl p-6 w-fit mx-auto"
-      >
-        <div class="image-wrapper">
-          <figure>
-            <img
-              class="h-[597px] max-md:aspect-square max-md:h-auto object-cover rounded-3xl"
-              src="./asset/meeting.png"
-              alt="Meeting"
-            />
-          </figure>
-        </div>
+    <section id="ourStory" class="section-ourStory py-[100px] max-md:py-[40px]">
+      <div class="container">
         <div
-          class="text-content max-md:text-center max-md:mt-6 max-md:w-fit w-[607px] overflow-hidden"
+          class="content-wrapper max-md:flex-col flex flex-row md:gap-[40px] bg-[#efefef] rounded-3xl p-6 w-fit mx-auto"
         >
-          <h2
-            data-aos="fade-left"
-            data-aos-duration="500"
-            data-aos-anchor=".section-ourStory"
-            data-aos-anchor-placement="center-bottom"
+          <div class="image-wrapper">
+            <figure>
+              <img
+                class="h-[597px] max-md:aspect-square max-md:h-auto object-cover rounded-3xl"
+                src="./asset/meeting.png"
+                alt="Meeting"
+              />
+            </figure>
+          </div>
+          <div
+            class="text-content max-md:text-center max-md:mt-6 max-md:w-fit w-[607px] overflow-hidden"
           >
-            Our Story
-          </h2>
-          <p
-            data-aos="fade-left"
-            data-aos-delay="100"
-            data-aos-duration="500"
-            data-aos-anchor=".section-ourStory"
-            data-aos-anchor-placement="center-bottom"
-            class="text-[20px] text-justify mt-6 max-h-[397px] overflow-hidden max-md:line-clamp-5"
-          >
-            It all started in a small garage on the corner of the city, where we
-            first made a dining table for a friend’s family. No fancy machines,
-            just simple tools and hands working with heart. From that small
-            project, we learned one important thing that furniture is not just
-            about form, but about relationships built from process and feeling.
-            <br />Since then, every piece we craft carries that same
-            spirit—honest work, meaningful connection, and thoughtful design. We
-            believe that furniture should not only fill a space, but also tell a
-            story: of the people who make it, the hands that use it, and the
-            moments it quietly witnesses in everyday life.
-          </p>
-          <button
-            data-aos="fade-left"
-            data-aos-delay="200"
-            data-aos-duration="500"
-            data-aos-anchor=".section-ourStory"
-            data-aos-anchor-placement="center-bottom"
-            class="mt-[40px] rounded-full px-6 py-3 border-2 border-black hover:bg-white hover:scale-105 duration-100"
-            aria-label="button load more"
-          >
-            Load More &#8594;
-          </button>
+            <h2
+              data-aos="fade-left"
+              data-aos-duration="500"
+              data-aos-anchor=".section-ourStory"
+              data-aos-anchor-placement="center-bottom"
+            >
+              Our Story
+            </h2>
+            <p
+              data-aos="fade-left"
+              data-aos-delay="100"
+              data-aos-duration="500"
+              data-aos-anchor=".section-ourStory"
+              data-aos-anchor-placement="center-bottom"
+              class="text-[20px] text-justify mt-6 max-h-[397px] overflow-hidden max-md:line-clamp-5"
+            >
+              It all started in a small garage on the corner of the city, where
+              we first made a dining table for a friend’s family. No fancy
+              machines, just simple tools and hands working with heart. From
+              that small project, we learned one important thing that furniture
+              is not just about form, but about relationships built from process
+              and feeling.
+              <br />Since then, every piece we craft carries that same
+              spirit—honest work, meaningful connection, and thoughtful design.
+              We believe that furniture should not only fill a space, but also
+              tell a story: of the people who make it, the hands that use it,
+              and the moments it quietly witnesses in everyday life.
+            </p>
+            <button
+              data-aos="fade-left"
+              data-aos-delay="200"
+              data-aos-duration="500"
+              data-aos-anchor=".section-ourStory"
+              data-aos-anchor-placement="center-bottom"
+              class="mt-[40px] rounded-full px-6 py-3 border-2 border-black hover:bg-white hover:scale-105 duration-100"
+              aria-label="button load more"
+            >
+              Load More &#8594;
+            </button>
+          </div>
         </div>
       </div>
     </section>
-    <section
-      class="section-highlight page-container py-[100px] max-md:py-[40px]"
-    >
-      <div class="content-wrap">
-        <div class="title-content text-center">
-          <h2 data-aos="fade-down">Best Service Quality Design</h2>
-        </div>
+    <section class="section-highlight py-[100px] max-md:py-[40px]">
+      <div class="container">
+        <div class="content-wrap">
+          <div class="title-content text-center">
+            <h2 data-aos="fade-down">Best Service Quality Design</h2>
+          </div>
 
-        <div class="list-items mt-[60px] max-md:mt-[24px]">
-          <ul class="flex max-md:flex-col flex-row gap-6">
-            <li
-              class="flex flex-col gap-2"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="500"
-            >
-              <figure class="icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="59"
-                    height="59"
-                    rx="29.5"
-                    stroke="#DADADA"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17.5 30C17.5 26.6848 18.817 23.5054 21.1612 21.1612C23.5054 18.817 26.6848 17.5 30 17.5C33.3152 17.5 36.4946 18.817 38.8388 21.1612C41.183 23.5054 42.5 26.6848 42.5 30C42.5 33.3152 41.183 36.4946 38.8388 38.8388C36.4946 41.183 33.3152 42.5 30 42.5C26.6848 42.5 23.5054 41.183 21.1612 38.8388C18.817 36.4946 17.5 33.3152 17.5 30ZM30 15C28.0302 15 26.0796 15.388 24.2597 16.1418C22.4399 16.8956 20.7863 18.0005 19.3934 19.3934C18.0005 20.7863 16.8956 22.4399 16.1418 24.2597C15.388 26.0796 15 28.0302 15 30C15 31.9698 15.388 33.9204 16.1418 35.7403C16.8956 37.5601 18.0005 39.2137 19.3934 40.6066C20.7863 41.9995 22.4399 43.1044 24.2597 43.8582C26.0796 44.612 28.0302 45 30 45C33.9782 45 37.7936 43.4196 40.6066 40.6066C43.4196 37.7936 45 33.9782 45 30C45 26.0218 43.4196 22.2064 40.6066 19.3934C37.7936 16.5804 33.9782 15 30 15ZM25.4167 27.5C25.9692 27.5 26.4991 27.2805 26.8898 26.8898C27.2805 26.4991 27.5 25.9692 27.5 25.4167C27.5 24.8641 27.2805 24.3342 26.8898 23.9435C26.4991 23.5528 25.9692 23.3333 25.4167 23.3333C24.8641 23.3333 24.3342 23.5528 23.9435 23.9435C23.5528 24.3342 23.3333 24.8641 23.3333 25.4167C23.3333 25.9692 23.5528 26.4991 23.9435 26.8898C24.3342 27.2805 24.8641 27.5 25.4167 27.5ZM36.6667 25.4167C36.6667 25.9692 36.4472 26.4991 36.0565 26.8898C35.6658 27.2805 35.1359 27.5 34.5833 27.5C34.0308 27.5 33.5009 27.2805 33.1102 26.8898C32.7195 26.4991 32.5 25.9692 32.5 25.4167C32.5 24.8641 32.7195 24.3342 33.1102 23.9435C33.5009 23.5528 34.0308 23.3333 34.5833 23.3333C35.1359 23.3333 35.6658 23.5528 36.0565 23.9435C36.4472 24.3342 36.6667 24.8641 36.6667 25.4167ZM24.5 32.8767L24.4933 32.8633C24.3638 32.5643 24.1226 32.3276 23.8211 32.2038C23.5197 32.08 23.1818 32.0789 22.8795 32.2006C22.5772 32.3223 22.3343 32.5572 22.2027 32.8554C22.0711 33.1535 22.0612 33.4913 22.175 33.7967L23.3333 33.3333C22.1733 33.7967 22.1733 33.7983 22.1733 33.8L22.175 33.8033L22.1783 33.81L22.185 33.8283C22.2171 33.9063 22.2521 33.983 22.29 34.0583C22.7079 34.8858 23.2535 35.6422 23.9067 36.3C25.14 37.5317 27.11 38.75 30 38.75C32.89 38.75 34.8617 37.5317 36.0917 36.3C36.5946 35.7985 37.034 35.2371 37.4 34.6283C37.5527 34.3693 37.6912 34.1023 37.815 33.8283L37.8217 33.81L37.825 33.8033V33.8C37.825 33.7983 37.8267 33.7967 36.6667 33.3333L37.8267 33.7967C37.9338 33.493 37.9197 33.1596 37.7871 32.8661C37.6545 32.5726 37.4138 32.3416 37.115 32.2212C36.8163 32.1009 36.4826 32.1005 36.1836 32.2201C35.8846 32.3397 35.6433 32.5702 35.51 32.8633L35.5033 32.8767L35.4617 32.9667C35.1653 33.544 34.7819 34.0724 34.325 34.5333C33.4717 35.385 32.1083 36.25 30 36.25C27.8917 36.25 26.5283 35.385 25.675 34.5333C25.2187 34.0723 24.8359 33.5439 24.54 32.9667L24.5 32.8767Z"
-                    fill="#050811"
-                  />
-                </svg>
-              </figure>
-              <h3 class="item-title">Customer Satisfaction</h3>
-              <p class="item-description">
-                We prioritize your comfort and happiness through exceptional
-                service and responsive support.
-              </p>
-            </li>
-            <li
-              class="flex flex-col gap-2"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="500"
-            >
-              <figure class="icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="59"
-                    height="59"
-                    rx="29.5"
-                    stroke="#DADADA"
-                  />
-                  <path
-                    d="M19.4887 27.4237C18.2619 28.6225 18.3325 30.2206 19.645 31.5187L22.4419 34.3437C20.9869 35.2712 18.1762 36.4125 16.835 37.7544C14.7375 39.8519 14.7519 42.6769 16.8912 44.8312C19.0462 46.9712 21.8712 47 23.9687 44.9025C25.3244 43.5469 26.4512 40.7362 27.3787 39.295L30.2325 42.1062C31.5312 43.39 33.115 43.4612 34.3275 42.2487L35.8544 40.6794C36.8244 39.6806 36.9812 38.4531 36.2825 37.3262C36.91 37.1694 37.495 36.8125 37.9512 36.3419L44.5862 29.6781C46.17 28.1094 46.1275 26.24 44.4862 24.5987L33.0012 13.1131C31.9731 12.1 30.5756 12 29.6194 12.9562C29.1912 13.3837 28.8631 13.9975 28.6919 14.825C27.9212 18.3637 26.3656 21.6594 24.5394 23.9856C24.2256 24.3994 24.0119 24.7981 23.9119 25.2125C22.9275 24.8125 21.8994 25.0269 21.0437 25.8687L19.4887 27.4237ZM35.9544 35.1575C35.3544 35.7425 34.7981 35.6994 34.1994 35.0862H34.185L26.5087 27.4094L26.5231 27.3956C25.9669 26.8531 25.7094 26.2537 26.5087 25.0981C28.1637 22.7156 29.8044 19.4481 30.775 15.8094C30.8319 15.6387 30.9031 15.4956 31.0312 15.3675C31.26 15.125 31.5737 15.0531 31.8875 15.3812L38.8219 22.3019C38.4512 24.6844 36.5531 27.0531 35.0981 28.5081C34.9556 28.6512 34.77 28.8506 34.9981 29.0794C35.7119 29.7925 39.9919 26.725 41.7331 25.2269L42.7456 26.2256C43.4306 26.9106 43.445 27.6525 42.8312 28.2656L35.9544 35.1575ZM21.415 28.7794L22.3994 27.8094C22.8419 27.3812 23.4269 27.3669 23.8831 27.8375L33.9 37.8687C34.3425 38.3394 34.3562 38.8812 33.9144 39.3237L32.9725 40.3081C32.5162 40.7644 31.9456 40.7506 31.4887 40.28L27.8931 36.6987C27.3937 36.185 26.8231 36.3844 26.3094 37.055C25.2681 38.5387 23.5131 42.2775 22.4719 43.305C21.2444 44.5031 19.6175 44.5312 18.405 43.3187C17.1925 42.1062 17.2062 40.465 18.4194 39.2525C19.4462 38.225 23.1844 36.4556 24.6831 35.4144C25.3394 34.9006 25.5531 34.33 25.025 33.8306L21.4437 30.2631C20.9875 29.8212 20.9731 29.2219 21.4156 28.7794M19.3606 42.3769C19.8319 42.8331 20.5169 42.8331 20.9731 42.3769C21.4294 41.8919 21.4156 41.2212 20.9731 40.7644C20.5025 40.3081 19.8031 40.2937 19.3606 40.7644C18.9331 41.25 18.9044 41.9062 19.3606 42.3769Z"
-                    fill="#050811"
-                  />
-                </svg>
-              </figure>
-              <h3 class="item-title">Design</h3>
-              <p class="item-description">
-                Thoughtfully created pieces that blend aesthetics, function, and
-                modern living.
-              </p>
-            </li>
-            <li
-              class="flex flex-col gap-2"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-duration="500"
-            >
-              <figure class="icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="59"
-                    height="59"
-                    rx="29.5"
-                    stroke="#DADADA"
-                  />
-                  <path
-                    d="M29.8575 38.2891L26.5242 41.6224L29.8575 44.9557"
-                    stroke="#050811"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M26.5241 41.6224H41.5241C42.0551 41.5951 42.5719 41.4411 43.0312 41.1733C43.4906 40.9055 43.8792 40.5317 44.1647 40.0831C44.4502 39.6345 44.6242 39.1242 44.6722 38.5946C44.7202 38.0651 44.6409 37.5317 44.4408 37.0391L43.5241 35.3724M24.0841 28.2891L22.8641 23.7358L18.3108 24.9558"
-                    stroke="#050811"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M22.8642 23.7358L15.3642 36.7258C15.1226 37.1992 14.9978 37.7236 15 38.2551C15.0023 38.7867 15.1317 39.3099 15.3773 39.7813C15.6229 40.2527 15.9777 40.6585 16.4121 40.9648C16.8464 41.2712 17.3478 41.4692 17.8742 41.5424L19.7759 41.5824M35.6309 28.2891L40.1842 29.5091L41.4042 24.9558"
-                    stroke="#050811"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M40.1841 29.5091L32.6841 16.5191C32.3948 16.0731 32.003 15.7029 31.5415 15.4391C31.08 15.1754 30.562 15.0259 30.031 15.0031C29.4999 14.9802 28.971 15.0848 28.4886 15.3079C28.0061 15.531 27.584 15.8663 27.2575 16.2858L26.2725 17.9124"
-                    stroke="#050811"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </figure>
-              <h3 class="item-title">Eco-Friendly Materials</h3>
-              <p class="item-description">
-                Sustainable and responsibly sourced materials for a healthier
-                planet.
-              </p>
-            </li>
-            <li
-              class="flex flex-col gap-2"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="500"
-            >
-              <figure class="icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="59"
-                    height="59"
-                    rx="29.5"
-                    stroke="#DADADA"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M45.316 19.6234L43.6097 19.2209L38.9985 23.8059L36.3866 21.1459L40.8841 16.4275L40.4903 14.695C39.5401 14.3763 38.5459 14.2081 37.5438 14.1962C36.4504 14.1769 35.3649 14.3855 34.3566 14.8087C33.3816 15.2486 32.5007 15.8725 31.7622 16.6462C30.9374 17.4244 30.2853 18.3671 29.8482 19.4134C29.003 21.4936 29.003 23.8214 29.8482 25.9016C25.2877 30.388 20.7861 34.9341 16.3447 39.5384C15.8853 40.14 15.6666 40.8903 15.7235 41.645C15.7453 42.047 15.8462 42.4407 16.0204 42.8037C16.1945 43.1667 16.4385 43.4917 16.7385 43.7603C17.0126 44.0593 17.3313 44.2984 17.6944 44.4778C18.0663 44.6419 18.4666 44.7359 18.8713 44.7556C19.5625 44.7425 20.2253 44.48 20.7394 44.0184C24.1257 40.8312 30.6138 34.2841 34.2997 30.4472C35.2994 30.8716 36.3735 31.0903 37.4585 31.0881C38.5506 31.0868 39.6313 30.8668 40.6371 30.4411C41.6428 30.0154 42.5531 29.3927 43.3144 28.6097C44.8745 27.0136 45.747 24.8697 45.7447 22.6378C45.7704 21.6162 45.6255 20.5974 45.316 19.6234ZM19.416 42.4675C19.3323 42.543 19.2306 42.5958 19.1207 42.6206C19.013 42.641 18.9024 42.641 18.7947 42.6206C18.6817 42.6031 18.5741 42.5605 18.4797 42.4959C18.3788 42.4365 18.2934 42.354 18.2303 42.2553C17.9241 41.9425 17.6375 41.3475 17.9241 41.0128C20.921 37.8256 27.0919 31.5956 30.9507 27.7872C31.1694 28.0774 31.4086 28.3516 31.6682 28.6097C31.9263 28.8795 32.2034 29.1281 32.4994 29.3556C28.7675 33.1837 22.6797 39.3394 19.416 42.4675ZM43.7366 22.6378C43.741 24.3112 43.0891 25.9191 41.9166 27.1178C40.7468 28.2661 39.1731 28.9094 37.5339 28.9094C35.8948 28.9094 34.321 28.2661 33.1513 27.1178C32.2933 26.2232 31.7072 25.1031 31.4613 23.8882C31.2153 22.6733 31.3197 21.4135 31.7622 20.2556C32.0567 19.4677 32.5131 18.7502 33.102 18.1496C33.6909 17.549 34.3993 17.0786 35.1813 16.7687C35.9246 16.4601 36.7214 16.3011 37.5263 16.3006H38.0819L34.1072 20.3978V21.9203L38.2525 26.0459H39.6963L43.7366 22.0734V22.6378ZM20.0875 26.63H23.4366L24.9788 28.1984L26.4619 26.7241L25.0072 25.2409V25.1469L25.1319 21.5397L24.6507 20.5837L18.3944 16.4669L17.1016 16.6112L15.2838 18.4684L15.1394 19.7787L19.16 26.1619L20.0875 26.63ZM18.0203 18.685L23.0822 22.0187L22.9969 24.4753H20.6432L17.3794 19.3084L18.0203 18.685ZM33.5625 33.91L35.0369 32.4378L41.8313 39.405C42.4031 40.0067 42.7219 40.8051 42.7219 41.6351C42.7219 42.4652 42.4031 43.2636 41.8313 43.8653C41.4016 44.3081 40.8482 44.6108 40.2436 44.7338C39.639 44.8568 39.0113 44.7942 38.4428 44.5544C38.0796 44.3939 37.7539 44.1592 37.4869 43.8653L30.6138 36.8587L32.0991 35.3756L38.9503 42.3625C39.0424 42.4642 39.157 42.5429 39.285 42.5922C39.5369 42.6938 39.8184 42.6938 40.0703 42.5922C40.1984 42.5429 40.313 42.4642 40.405 42.3625C40.5028 42.2693 40.5777 42.1548 40.6238 42.0278C40.6752 41.8998 40.7019 41.7632 40.7025 41.6253C40.6982 41.488 40.6724 41.3521 40.626 41.2228C40.5799 41.0959 40.505 40.9813 40.4072 40.8881L33.5625 33.91Z"
-                    fill="#050811"
-                  />
-                </svg>
-              </figure>
-              <h3 class="item-title">Craftsmanship</h3>
-              <p class="item-description">
-                Meticulously built by skilled artisans to ensure lasting quality
-                and timeless appeal.
-              </p>
-            </li>
-          </ul>
+          <div class="list-items mt-[60px] max-md:mt-[24px]">
+            <ul class="flex max-md:flex-col flex-row gap-6">
+              <li
+                class="flex flex-col gap-2"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="500"
+              >
+                <figure class="icon">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="59"
+                      height="59"
+                      rx="29.5"
+                      stroke="#DADADA"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.5 30C17.5 26.6848 18.817 23.5054 21.1612 21.1612C23.5054 18.817 26.6848 17.5 30 17.5C33.3152 17.5 36.4946 18.817 38.8388 21.1612C41.183 23.5054 42.5 26.6848 42.5 30C42.5 33.3152 41.183 36.4946 38.8388 38.8388C36.4946 41.183 33.3152 42.5 30 42.5C26.6848 42.5 23.5054 41.183 21.1612 38.8388C18.817 36.4946 17.5 33.3152 17.5 30ZM30 15C28.0302 15 26.0796 15.388 24.2597 16.1418C22.4399 16.8956 20.7863 18.0005 19.3934 19.3934C18.0005 20.7863 16.8956 22.4399 16.1418 24.2597C15.388 26.0796 15 28.0302 15 30C15 31.9698 15.388 33.9204 16.1418 35.7403C16.8956 37.5601 18.0005 39.2137 19.3934 40.6066C20.7863 41.9995 22.4399 43.1044 24.2597 43.8582C26.0796 44.612 28.0302 45 30 45C33.9782 45 37.7936 43.4196 40.6066 40.6066C43.4196 37.7936 45 33.9782 45 30C45 26.0218 43.4196 22.2064 40.6066 19.3934C37.7936 16.5804 33.9782 15 30 15ZM25.4167 27.5C25.9692 27.5 26.4991 27.2805 26.8898 26.8898C27.2805 26.4991 27.5 25.9692 27.5 25.4167C27.5 24.8641 27.2805 24.3342 26.8898 23.9435C26.4991 23.5528 25.9692 23.3333 25.4167 23.3333C24.8641 23.3333 24.3342 23.5528 23.9435 23.9435C23.5528 24.3342 23.3333 24.8641 23.3333 25.4167C23.3333 25.9692 23.5528 26.4991 23.9435 26.8898C24.3342 27.2805 24.8641 27.5 25.4167 27.5ZM36.6667 25.4167C36.6667 25.9692 36.4472 26.4991 36.0565 26.8898C35.6658 27.2805 35.1359 27.5 34.5833 27.5C34.0308 27.5 33.5009 27.2805 33.1102 26.8898C32.7195 26.4991 32.5 25.9692 32.5 25.4167C32.5 24.8641 32.7195 24.3342 33.1102 23.9435C33.5009 23.5528 34.0308 23.3333 34.5833 23.3333C35.1359 23.3333 35.6658 23.5528 36.0565 23.9435C36.4472 24.3342 36.6667 24.8641 36.6667 25.4167ZM24.5 32.8767L24.4933 32.8633C24.3638 32.5643 24.1226 32.3276 23.8211 32.2038C23.5197 32.08 23.1818 32.0789 22.8795 32.2006C22.5772 32.3223 22.3343 32.5572 22.2027 32.8554C22.0711 33.1535 22.0612 33.4913 22.175 33.7967L23.3333 33.3333C22.1733 33.7967 22.1733 33.7983 22.1733 33.8L22.175 33.8033L22.1783 33.81L22.185 33.8283C22.2171 33.9063 22.2521 33.983 22.29 34.0583C22.7079 34.8858 23.2535 35.6422 23.9067 36.3C25.14 37.5317 27.11 38.75 30 38.75C32.89 38.75 34.8617 37.5317 36.0917 36.3C36.5946 35.7985 37.034 35.2371 37.4 34.6283C37.5527 34.3693 37.6912 34.1023 37.815 33.8283L37.8217 33.81L37.825 33.8033V33.8C37.825 33.7983 37.8267 33.7967 36.6667 33.3333L37.8267 33.7967C37.9338 33.493 37.9197 33.1596 37.7871 32.8661C37.6545 32.5726 37.4138 32.3416 37.115 32.2212C36.8163 32.1009 36.4826 32.1005 36.1836 32.2201C35.8846 32.3397 35.6433 32.5702 35.51 32.8633L35.5033 32.8767L35.4617 32.9667C35.1653 33.544 34.7819 34.0724 34.325 34.5333C33.4717 35.385 32.1083 36.25 30 36.25C27.8917 36.25 26.5283 35.385 25.675 34.5333C25.2187 34.0723 24.8359 33.5439 24.54 32.9667L24.5 32.8767Z"
+                      fill="#050811"
+                    />
+                  </svg>
+                </figure>
+                <h3 class="item-title">Customer Satisfaction</h3>
+                <p class="item-description">
+                  We prioritize your comfort and happiness through exceptional
+                  service and responsive support.
+                </p>
+              </li>
+              <li
+                class="flex flex-col gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="500"
+              >
+                <figure class="icon">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="59"
+                      height="59"
+                      rx="29.5"
+                      stroke="#DADADA"
+                    />
+                    <path
+                      d="M19.4887 27.4237C18.2619 28.6225 18.3325 30.2206 19.645 31.5187L22.4419 34.3437C20.9869 35.2712 18.1762 36.4125 16.835 37.7544C14.7375 39.8519 14.7519 42.6769 16.8912 44.8312C19.0462 46.9712 21.8712 47 23.9687 44.9025C25.3244 43.5469 26.4512 40.7362 27.3787 39.295L30.2325 42.1062C31.5312 43.39 33.115 43.4612 34.3275 42.2487L35.8544 40.6794C36.8244 39.6806 36.9812 38.4531 36.2825 37.3262C36.91 37.1694 37.495 36.8125 37.9512 36.3419L44.5862 29.6781C46.17 28.1094 46.1275 26.24 44.4862 24.5987L33.0012 13.1131C31.9731 12.1 30.5756 12 29.6194 12.9562C29.1912 13.3837 28.8631 13.9975 28.6919 14.825C27.9212 18.3637 26.3656 21.6594 24.5394 23.9856C24.2256 24.3994 24.0119 24.7981 23.9119 25.2125C22.9275 24.8125 21.8994 25.0269 21.0437 25.8687L19.4887 27.4237ZM35.9544 35.1575C35.3544 35.7425 34.7981 35.6994 34.1994 35.0862H34.185L26.5087 27.4094L26.5231 27.3956C25.9669 26.8531 25.7094 26.2537 26.5087 25.0981C28.1637 22.7156 29.8044 19.4481 30.775 15.8094C30.8319 15.6387 30.9031 15.4956 31.0312 15.3675C31.26 15.125 31.5737 15.0531 31.8875 15.3812L38.8219 22.3019C38.4512 24.6844 36.5531 27.0531 35.0981 28.5081C34.9556 28.6512 34.77 28.8506 34.9981 29.0794C35.7119 29.7925 39.9919 26.725 41.7331 25.2269L42.7456 26.2256C43.4306 26.9106 43.445 27.6525 42.8312 28.2656L35.9544 35.1575ZM21.415 28.7794L22.3994 27.8094C22.8419 27.3812 23.4269 27.3669 23.8831 27.8375L33.9 37.8687C34.3425 38.3394 34.3562 38.8812 33.9144 39.3237L32.9725 40.3081C32.5162 40.7644 31.9456 40.7506 31.4887 40.28L27.8931 36.6987C27.3937 36.185 26.8231 36.3844 26.3094 37.055C25.2681 38.5387 23.5131 42.2775 22.4719 43.305C21.2444 44.5031 19.6175 44.5312 18.405 43.3187C17.1925 42.1062 17.2062 40.465 18.4194 39.2525C19.4462 38.225 23.1844 36.4556 24.6831 35.4144C25.3394 34.9006 25.5531 34.33 25.025 33.8306L21.4437 30.2631C20.9875 29.8212 20.9731 29.2219 21.4156 28.7794M19.3606 42.3769C19.8319 42.8331 20.5169 42.8331 20.9731 42.3769C21.4294 41.8919 21.4156 41.2212 20.9731 40.7644C20.5025 40.3081 19.8031 40.2937 19.3606 40.7644C18.9331 41.25 18.9044 41.9062 19.3606 42.3769Z"
+                      fill="#050811"
+                    />
+                  </svg>
+                </figure>
+                <h3 class="item-title">Design</h3>
+                <p class="item-description">
+                  Thoughtfully created pieces that blend aesthetics, function,
+                  and modern living.
+                </p>
+              </li>
+              <li
+                class="flex flex-col gap-2"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="500"
+              >
+                <figure class="icon">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="59"
+                      height="59"
+                      rx="29.5"
+                      stroke="#DADADA"
+                    />
+                    <path
+                      d="M29.8575 38.2891L26.5242 41.6224L29.8575 44.9557"
+                      stroke="#050811"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M26.5241 41.6224H41.5241C42.0551 41.5951 42.5719 41.4411 43.0312 41.1733C43.4906 40.9055 43.8792 40.5317 44.1647 40.0831C44.4502 39.6345 44.6242 39.1242 44.6722 38.5946C44.7202 38.0651 44.6409 37.5317 44.4408 37.0391L43.5241 35.3724M24.0841 28.2891L22.8641 23.7358L18.3108 24.9558"
+                      stroke="#050811"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22.8642 23.7358L15.3642 36.7258C15.1226 37.1992 14.9978 37.7236 15 38.2551C15.0023 38.7867 15.1317 39.3099 15.3773 39.7813C15.6229 40.2527 15.9777 40.6585 16.4121 40.9648C16.8464 41.2712 17.3478 41.4692 17.8742 41.5424L19.7759 41.5824M35.6309 28.2891L40.1842 29.5091L41.4042 24.9558"
+                      stroke="#050811"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M40.1841 29.5091L32.6841 16.5191C32.3948 16.0731 32.003 15.7029 31.5415 15.4391C31.08 15.1754 30.562 15.0259 30.031 15.0031C29.4999 14.9802 28.971 15.0848 28.4886 15.3079C28.0061 15.531 27.584 15.8663 27.2575 16.2858L26.2725 17.9124"
+                      stroke="#050811"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </figure>
+                <h3 class="item-title">Eco-Friendly Materials</h3>
+                <p class="item-description">
+                  Sustainable and responsibly sourced materials for a healthier
+                  planet.
+                </p>
+              </li>
+              <li
+                class="flex flex-col gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="500"
+              >
+                <figure class="icon">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="59"
+                      height="59"
+                      rx="29.5"
+                      stroke="#DADADA"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M45.316 19.6234L43.6097 19.2209L38.9985 23.8059L36.3866 21.1459L40.8841 16.4275L40.4903 14.695C39.5401 14.3763 38.5459 14.2081 37.5438 14.1962C36.4504 14.1769 35.3649 14.3855 34.3566 14.8087C33.3816 15.2486 32.5007 15.8725 31.7622 16.6462C30.9374 17.4244 30.2853 18.3671 29.8482 19.4134C29.003 21.4936 29.003 23.8214 29.8482 25.9016C25.2877 30.388 20.7861 34.9341 16.3447 39.5384C15.8853 40.14 15.6666 40.8903 15.7235 41.645C15.7453 42.047 15.8462 42.4407 16.0204 42.8037C16.1945 43.1667 16.4385 43.4917 16.7385 43.7603C17.0126 44.0593 17.3313 44.2984 17.6944 44.4778C18.0663 44.6419 18.4666 44.7359 18.8713 44.7556C19.5625 44.7425 20.2253 44.48 20.7394 44.0184C24.1257 40.8312 30.6138 34.2841 34.2997 30.4472C35.2994 30.8716 36.3735 31.0903 37.4585 31.0881C38.5506 31.0868 39.6313 30.8668 40.6371 30.4411C41.6428 30.0154 42.5531 29.3927 43.3144 28.6097C44.8745 27.0136 45.747 24.8697 45.7447 22.6378C45.7704 21.6162 45.6255 20.5974 45.316 19.6234ZM19.416 42.4675C19.3323 42.543 19.2306 42.5958 19.1207 42.6206C19.013 42.641 18.9024 42.641 18.7947 42.6206C18.6817 42.6031 18.5741 42.5605 18.4797 42.4959C18.3788 42.4365 18.2934 42.354 18.2303 42.2553C17.9241 41.9425 17.6375 41.3475 17.9241 41.0128C20.921 37.8256 27.0919 31.5956 30.9507 27.7872C31.1694 28.0774 31.4086 28.3516 31.6682 28.6097C31.9263 28.8795 32.2034 29.1281 32.4994 29.3556C28.7675 33.1837 22.6797 39.3394 19.416 42.4675ZM43.7366 22.6378C43.741 24.3112 43.0891 25.9191 41.9166 27.1178C40.7468 28.2661 39.1731 28.9094 37.5339 28.9094C35.8948 28.9094 34.321 28.2661 33.1513 27.1178C32.2933 26.2232 31.7072 25.1031 31.4613 23.8882C31.2153 22.6733 31.3197 21.4135 31.7622 20.2556C32.0567 19.4677 32.5131 18.7502 33.102 18.1496C33.6909 17.549 34.3993 17.0786 35.1813 16.7687C35.9246 16.4601 36.7214 16.3011 37.5263 16.3006H38.0819L34.1072 20.3978V21.9203L38.2525 26.0459H39.6963L43.7366 22.0734V22.6378ZM20.0875 26.63H23.4366L24.9788 28.1984L26.4619 26.7241L25.0072 25.2409V25.1469L25.1319 21.5397L24.6507 20.5837L18.3944 16.4669L17.1016 16.6112L15.2838 18.4684L15.1394 19.7787L19.16 26.1619L20.0875 26.63ZM18.0203 18.685L23.0822 22.0187L22.9969 24.4753H20.6432L17.3794 19.3084L18.0203 18.685ZM33.5625 33.91L35.0369 32.4378L41.8313 39.405C42.4031 40.0067 42.7219 40.8051 42.7219 41.6351C42.7219 42.4652 42.4031 43.2636 41.8313 43.8653C41.4016 44.3081 40.8482 44.6108 40.2436 44.7338C39.639 44.8568 39.0113 44.7942 38.4428 44.5544C38.0796 44.3939 37.7539 44.1592 37.4869 43.8653L30.6138 36.8587L32.0991 35.3756L38.9503 42.3625C39.0424 42.4642 39.157 42.5429 39.285 42.5922C39.5369 42.6938 39.8184 42.6938 40.0703 42.5922C40.1984 42.5429 40.313 42.4642 40.405 42.3625C40.5028 42.2693 40.5777 42.1548 40.6238 42.0278C40.6752 41.8998 40.7019 41.7632 40.7025 41.6253C40.6982 41.488 40.6724 41.3521 40.626 41.2228C40.5799 41.0959 40.505 40.9813 40.4072 40.8881L33.5625 33.91Z"
+                      fill="#050811"
+                    />
+                  </svg>
+                </figure>
+                <h3 class="item-title">Craftsmanship</h3>
+                <p class="item-description">
+                  Meticulously built by skilled artisans to ensure lasting
+                  quality and timeless appeal.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     <section
       data-aos="zoom-in"
-      class="section-vision page-container py-[100px] max-md:py-[40px] bg-bgChair bg-cover max-md:h-auto h-[850px] flex items-end bg-center"
+      class="section-vision py-[100px] max-md:py-[40px] bg-bgChair bg-cover max-md:h-auto h-[850px] flex items-end bg-center"
     >
-      <div
-        data-aos-duration="500"
-        data-aos="fade-up"
-        class="content-wrap max-md:text-center px-10 py-16 max-md:py-10 max-md:px-5 bg-white bg-opacity-80 rounded-2xl shadow-lg h-fit"
-      >
-        <h2 class="max-md:text-3xl max-md:font-semibold">
-          Driven by Clarity and Bold Ambition : To Lead Design-Forward living
-        </h2>
-        <p class="mt-[24px] leading-8 text-xl">
-          Kayyon is built on collaboration across disciplines—from design to
-          production and marketing—with one shared vision: to deliver furniture
-          that is beautiful, functional, and ready to use. We proudly serve a
-          wide range of clients, from small businesses to large corporations,
-          with total commitment to quality, detail, and efficiency.
-        </p>
+      <div class="container">
+        <div
+          data-aos-duration="500"
+          data-aos="fade-up"
+          class="content-wrap max-md:text-center px-10 py-16 max-md:py-10 max-md:px-5 bg-white bg-opacity-80 rounded-2xl shadow-lg h-fit"
+        >
+          <h2 class="max-md:text-3xl max-md:font-semibold">
+            Driven by Clarity and Bold Ambition : To Lead Design-Forward living
+          </h2>
+          <p class="mt-[24px] leading-8 text-xl">
+            Kayyon is built on collaboration across disciplines—from design to
+            production and marketing—with one shared vision: to deliver
+            furniture that is beautiful, functional, and ready to use. We
+            proudly serve a wide range of clients, from small businesses to
+            large corporations, with total commitment to quality, detail, and
+            efficiency.
+          </p>
+        </div>
       </div>
     </section>
-    <section class="section-whyUs page-container py-[100px] max-md:py-[40px]">
+    <section class="section-whyUs py-[100px] max-md:py-[40px] container">
       <div class="title-wrap text-center max-w-[727px] justify-self-center">
         <h2 data-aos-duration="500" data-aos="fade-down" class="text-pretty">
           6 Reasons Why Businesses Trust Kayyon
@@ -682,125 +692,131 @@
     </section>
   </main>
   <footer class="bg-[#F8F4F1]">
-    <div
-      class="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px] px-5 lg:px-6"
-    >
+    <div class="container">
       <div
-        class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left"
+        class="w-full mx-auto flex flex-col md:flex-row justify-between items-start md:items-center pt-[60px]"
       >
-        <h2
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-once="true"
-          class="text-[32px] font-extrabold text-#050811 font-montserrat"
+        <div
+          class="w-full lg:w-[342px] h-[190px] lg:mb-4 md:mb-0 text-center lg:text-left"
         >
-          Kayyon
-        </h2>
-        <p
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-once="true"
-          class="text-[#6A7182] mt-6 text-base lg:text-xl font-normal font-helvetica"
-        >
-          Our latest project offers a sleek, minimalist design that prioritizes
-          both elegance and functionality, ensuring a seamless user
-        </p>
-      </div>
-
-      <div class="w-full lg:w-[360px] flex flex-col lg:gap-[30px] md:items-end">
-        <div class="flex gap-4 ml-0 md:ml-6 mt-2 md:mt-0 justify-center">
-          <a
-            href="#"
-            data-aos="fade-up"
-            data-aos-delay="800"
-            data-aos-once="true"
-            class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
-          >
-            <img src="/facebook.svg" alt="Facebook" class="w-3 h-3" />
-          </a>
-          <a
-            href="#"
-            data-aos="fade-up"
-            data-aos-delay="600"
-            data-aos-once="true"
-            class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
-          >
-            <img src="/twitter.svg" alt="Twitter" class="w-3 h-3" />
-          </a>
-          <a
-            href="#"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-once="true"
-            class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
-          >
-            <img src="/instagram.svg" alt="Instagram" class="w-3 h-3" />
-          </a>
-          <a
-            href="#"
-            data-aos="fade-up"
+          <h2
+            data-aos="fade-right"
             data-aos-delay="200"
             data-aos-once="true"
-            class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            class="text-[32px] font-extrabold text-#050811 font-montserrat"
           >
-            <img src="/linkedin.svg" alt="LinkedIn" class="w-3 h-3" />
-          </a>
-        </div>
-        <div class="mt-[30px] w-full">
-          <h3
-            data-aos="fade-up"
-            data-aos-delay="300"
+            Kayyon
+          </h2>
+          <p
+            data-aos="fade-right"
+            data-aos-delay="200"
             data-aos-once="true"
-            class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica"
+            class="text-[#6A7182] mt-6 text-base lg:text-xl font-normal font-helvetica"
           >
-            Newsletter
-          </h3>
-          <form class="flex items-center mt-3 w-full">
-            <input
-              type="email"
-              placeholder="Your Email"
-              class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent"
-            />
-            <button
-              type="submit"
-              class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none"
-            >
-              →
-            </button>
-          </form>
+            Our latest project offers a sleek, minimalist design that
+            prioritizes both elegance and functionality, ensuring a seamless
+            user
+          </p>
         </div>
-      </div>
-    </div>
 
-    <div
-      class="w-full max-w-[1440px] mx-auto mt-10 px-5 lg:px-6 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
-    >
-      <div class="flex flex-col lg:flex-row items-center">
-        <p class="text-black text-xs lg:text-base font-normal font-helvetica">
-          &copy; 2024 Kayyon. All rights reserved.
-        </p>
-        <div class="flex space-x-3 ml-0 md:ml-6 mt-2 md:mt-0">
-          <a href="#" class="text-gray-500 hover:text-gray-700">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="text-gray-500 hover:text-gray-700">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="text-gray-500 hover:text-gray-700">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="text-gray-500 hover:text-gray-700">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="flex space-x-4 text-xs lg:text-base text-black font-inter">
-        <a href="#" class="hover:text-gray-700 font-normal"
-          >Customer Services</a
+        <div
+          class="w-full lg:w-[360px] flex flex-col lg:gap-[30px] md:items-end"
         >
-        <span>|</span>
-        <a href="#" class="hover:text-gray-700 font-normal">Privacy Policy</a>
+          <div class="flex gap-4 ml-0 md:ml-6 mt-2 md:mt-0 justify-center">
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="800"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/facebook.svg" alt="Facebook" class="w-3 h-3" />
+            </a>
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/twitter.svg" alt="Twitter" class="w-3 h-3" />
+            </a>
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/instagram.svg" alt="Instagram" class="w-3 h-3" />
+            </a>
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-once="true"
+              class="flex items-center justify-center p-2 bg-[#ABABAB] rounded-full hover:bg-gray-600 transition duration-200 ease-in-out"
+            >
+              <img src="/linkedin.svg" alt="LinkedIn" class="w-3 h-3" />
+            </a>
+          </div>
+          <div class="mt-[30px] w-full">
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-once="true"
+              class="text-lg lg:text-xl font-normal text-[#050811] font-helvetica"
+            >
+              Newsletter
+            </h3>
+            <form class="flex items-center mt-3 w-full">
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="border-b border-gray-400 focus:outline-none focus:border-gray-600 py-1 w-full text-black bg-transparent"
+              />
+              <button
+                aria-label="Submit Newsletter"
+                type="submit"
+                class="border-b border-gray-400 text-black bg-transparent py-1 focus:outline-none"
+              >
+                →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full mx-auto mt-10 border-t border-[#D5D5D5] pt-4 pb-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex flex-col lg:flex-row items-center">
+          <p class="text-black text-xs lg:text-base font-normal font-helvetica">
+            &copy; 2024 Kayyon. All rights reserved.
+          </p>
+          <div class="flex space-x-3 ml-0 md:ml-6 mt-2 md:mt-0">
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex space-x-4 text-xs lg:text-base text-black font-inter">
+          <a href="#" class="hover:text-gray-700 font-normal"
+            >Customer Services</a
+          >
+          <span>|</span>
+          <a href="#" class="hover:text-gray-700 font-normal">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </footer>
