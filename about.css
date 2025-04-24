@@ -55,3 +55,8 @@
 .section-whyUs li p {
   @apply mt-[20px];
 }
+
+#navbarContact.bg-scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease;
+}

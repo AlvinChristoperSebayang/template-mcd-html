@@ -1,3 +1,6 @@
+@import "./about.css";
+@import "./contact.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,6 +66,10 @@
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+#search-wrap .opened {
+  width: 100%;
 }
 /* humberger */
 
@@ -204,4 +211,8 @@
 
 .page-container {
   @apply px-[80px] max-md:px-[24px];
+}
+
+#search-wrap {
+  height: 36px;
 }

@@ -48,10 +48,13 @@
   @apply flex flex-col h-full;
 }
 
-#navbar.bg-contactPage a {
-  @apply text-black;
+#navbar.bg-scrolled.contact-nav .nav-items a,
+#navbar.bg-scrolled.contact-nav #search-wrap *,
+#navbar.bg-scrolled.contact-nav .menu-title,
+#navbar.bg-scrolled.contact-nav #btn-menu * {
+  @apply text-white;
 }
 
-#navbar {
-  @apply bg-white;
+#navbar.contact-nav * {
+  @apply text-black;
 }
