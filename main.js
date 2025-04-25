@@ -44,7 +44,7 @@ btnSearch.addEventListener("click", function (event) {
 
   if (!btnSearch.classList.contains("opened")) {
     btnSearch.classList.add("opened");
-    searchInput.classList.remove("hidden");
+    searchInput.classList.add("active-search");
     searchInput.focus();
     searchWrap.classList.add("border-b-2");
     btnSearch.setAttribute("aria-expanded", "true");
@@ -61,7 +61,7 @@ document.addEventListener("click", (event) => {
   if (!searchWrap.contains(event.target)) {
     btnSearch.classList.remove("opened");
     searchWrap.classList.remove("border-b-2");
-    searchInput.classList.add("hidden");
+    searchInput.classList.remove("active-search");
     btnSearch.setAttribute("aria-expanded", "false");
     if (window.innerWidth < 768) {
       pageIcon.classList.remove("hidden");

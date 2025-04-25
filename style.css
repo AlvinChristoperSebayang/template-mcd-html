@@ -67,10 +67,6 @@
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
-
-#search-wrap .opened {
-  width: 100%;
-}
 /* humberger */
 
 @font-face {
@@ -215,4 +211,13 @@
 
 #search-wrap {
   height: 36px;
+}
+
+#search-input {
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#search-input.active-search {
+  width: 100%;
 }
