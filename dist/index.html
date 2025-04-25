@@ -1,0 +1,1482 @@
+<!doctype html>
+<html class="scroll-smooth scroll-pt-[150px]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bumi agency</title>
+    <link rel="icon" href="/assets/Vector%20(1)-CJswLCb2.svg" type="image/svg+xml" />
+
+    <!-- <link href="src/output.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="src/style.css" /> -->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+      .swiper-wrapper {
+        display: flex;
+        transition-timing-function: linear !important;
+      }
+    </style>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/input-C21riZml.css">
+  </head>
+
+  <body>
+    <div
+      class="relative top-0 mx-auto h-dvh w-full overflow-hidden bg-[url('../img/hero1.png')] lg:bg-[length:100%_100%] bg-cover bg-center bg-no-repeat md:h-[180vh] lg:h-[207.11vh]">
+      <div class="container mx-auto max-w-[1440px]">
+
+        <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+          <div class="container mx-auto max-w-[1440px] px-4 md:px-2 sm:pe-5 lg:pe-10">
+            <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
+              <div id="logo-container">
+                <img id="logo-img" src="data:image/svg+xml,%3csvg%20width='48'%20height='38'%20viewBox='0%200%2048%2038'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M47.24%200H24.85C24.29%200%2023.75%200.17%2023.29%200.48L0.34%2015.91C0.13%2016.05%200%2016.29%200%2016.54V23.24C0%2023.66%200.34%2024%200.76%2024H6.74C7.44%2024%207.72%2024.91%207.14%2025.3L0.34%2029.87C0.13%2030.01%200%2030.25%200%2030.5V37.2C0%2037.62%200.34%2037.96%200.76%2037.96H23.15C23.71%2037.96%2024.25%2037.79%2024.71%2037.48L47.67%2022.04C47.88%2021.9%2048.01%2021.66%2048.01%2021.41V14.71C48.01%2014.29%2047.67%2013.95%2047.25%2013.95H41.27C40.57%2013.95%2040.29%2013.04%2040.87%2012.65L47.67%208.08C47.88%207.94%2048.01%207.7%2048.01%207.45V0.76C48.01%200.34%2047.67%200%2047.25%200H47.24ZM11.13%2022.66L23.31%2014.47C23.76%2014.17%2024.29%2014.01%2024.83%2014.01H36.47C37.17%2014.01%2037.45%2014.92%2036.87%2015.31L24.69%2023.5C24.24%2023.8%2023.71%2023.96%2023.17%2023.96H11.53C10.83%2023.96%2010.55%2023.05%2011.13%2022.66Z'%20fill='white'/%3e%3c/svg%3e" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
+              </div>
+
+              <!-- Dekstop  -->
+              <div id="menu-container" class="flex w-full items-center justify-between">
+                <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
+
+                <!-- Desktop Menu -->
+                <nav id="desktop-menu" class="lg:flex hidden items-center">
+                  <ul class="flex items-center gap-4 text-sm text-white">
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='%23FFFFF'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+
+                    <li class="font-bold">
+                      <a href="index.html" class="nav-link hover:text-secondary transition-all">Home</a>
+                    </li>
+
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='%23FFFFF'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+                    <li><a href="src/html/about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+                    <!-- Dropdown untuk Properties -->
+                    <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
+                      <a href="#" class="nav-link hover:text-secondary transition-all">Properties</a>
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e"
+                        alt="Toggle Dropdown"
+                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                        data-dropdown="properties" />
+
+                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                        <li>
+                          <a href="src/html/properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                            >properites</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                            >Searched</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a
+                            href="#"
+                            class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                            >Investment Opportunities</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+                    <!-- Dropdown untuk Services -->
+                    <li class="relative flex gap-4 items-center group">
+                      <a href="" class="nav-link hover:text-secondary transition-all">Services</a>
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e"
+                        alt="Toggle Dropdown"
+                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                        data-dropdown="services" />
+                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                        <li>
+                          <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                            >Services</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                            >Management</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a
+                            href="#"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Mortgage Calculator</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                            >Buyer Guide</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a
+                            href="#"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Selling Guide</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+
+                    <!-- Dropdown untuk Resources -->
+                    <li class="relative flex gap-4 items-center group">
+                      <a href="src/html/services.html" class="nav-link hover:text-secondary transition-all">Resources</a>
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e"
+                        alt="Toggle Dropdown"
+                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                        data-dropdown="resources" />
+                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
+                        <li>
+                          <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                            >Resources</a
+                          >
+                        </li>
+                        <li class="group">
+                          <a
+                            href=""
+                            onclick="event.preventDefault()"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                            >Market Trends</a
+                          >
+                        </li>
+                        <li class="group">
+                          <a
+                            href=""
+                            onclick="event.preventDefault()"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Bloge</a
+                          >
+                        </li>
+                        <li class="group">
+                          <a
+                            href=""
+                            onclick="event.preventDefault()"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Detail Bloge</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+                    <li class="bg-red-600">
+                      <a href="src/html/contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a>
+                    </li>
+                    <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" class="nav-icon" /></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <!-- Mobile Menu Button & Humburger -->
+              <div class="relative lg:hidden">
+                <!-- Tombol Hamburger -->
+                <button
+                  id="mobile-menu-button"
+                  class="fixed top-4 right-4 z-50 w-8 h-8 focus:outline-none transition-all duration-300 ease-in-out group after-hero:!bg-black">
+                  <!-- Garis 1 -->
+                  <span
+                    class="burger-line absolute left-0 w-full h-[2px] bg-white transition-all duration-500 ease-in-out origin-center top-[4px] group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black">
+                  </span>
+
+                  <!-- Garis 2 -->
+                  <span
+                    class="burger-line absolute left-0 w-full h-[2px] bg-white transition-all duration-500 ease-in-out origin-center top-[12px] group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black">
+                  </span>
+
+                  <!-- Garis 3 -->
+                  <span
+                    class="burger-line absolute left-0 w-full h-[2px] bg-white transition-all duration-500 ease-in-out origin-center top-[20px] group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black">
+                  </span>
+                </button>
+
+                <!-- Mobile  Menu -->
+                <div
+                  id="mobile-menu"
+                  class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
+                  <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
+                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Home</a></li>
+                    <li class="w-[150px]"><a href="src/html/about.html" class="text-2xl hover:text-white">About</a></li>
+
+                    <!-- Properties -->
+                    <li class="w-[150px] group">
+                      <div class="flex gap-2 items-center justify-between">
+                        <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
+                        <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
+                          <svg
+                            class="arrow-icon transition-transform duration-300 ease-in-out"
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <!-- Opsi pilihan dropdown -->
+                      <ul
+                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                        <li><a href="src/html/properties.html" class="block px-4 py-2 hover:bg-gray-100">Properties</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Detail</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Searched</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Investment opportunities</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Services -->
+                    <li class="w-[150px] group">
+                      <div class="flex gap-2 items-center justify-between">
+                        <a href="#" class="text-2xl hover:text-gray-700">Services</a>
+                        <button class="dropdown-toggle-mobile text-black">
+                          <svg
+                            class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <!-- Dropdown menu -->
+                      <ul
+                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                        <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Services</a></li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="group-hover:cursor-not-allowed block px-4 py-2 hover:bg-gray-100">Mortgage Calculator</a>
+                        </li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Buyer Guide</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Selling Guide</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Resources -->
+                    <li class="w-[150px] group">
+                      <div class="flex gap-2 items-center justify-between">
+                        <a href="src/html/services.html" class="text-2xl hover:text-gray-700">Resources</a>
+                        <button class="dropdown-toggle-mobile text-black">
+                          <svg
+                            class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                            width="16"
+                            height="8"
+                            viewBox="0 0 16 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <!-- Dropdown menu -->
+                      <ul
+                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                        <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Reources</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Market Trends</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bloge</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Detail Bloge</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="w-[150px]"><a href="src/html/contact.html" class="text-2xl hover:text-primary">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- herro -->
+        <section class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-4 md:px-2">
+          <div class="flex flex-col text-white sm:ml-[70px] md:ml-[73px] lg:ml-[120px]">
+            <div class="md:w-[419px] lg:w-[825px]">
+              <h1
+                id="title"
+                class="typing-container font-gloock sm:h-[202px] text-3xl sm:text-5xl md:text-[64px] md:leading-[120%] lg:h-[402px] lg:text-9xl">
+                Find Your Perfect Home Today.
+              </h1>
+            </div>
+
+            <div data-aos="fade-up" class="relative mt-56 hidden w-full grow justify-between lg:flex">
+              <!-- Filter Container -->
+              <div id="categoryContainer" class="flex w-full justify-between">
+                <!-- CATEGORY -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
+                  <p class="font-jakarta text-sm font-light">Category</p>
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold">Rent/Buy</p>
+                    <img
+                      src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e"
+                      alt="Toggle Category"
+                      class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                  </div>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 rounded-sm z-50 group-hover:pointer-events-auto">
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Rent</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Buy</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
+                  </ul>
+                </div>
+
+                <!-- TYPE -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
+                  <p class="font-jakarta text-sm font-light">Type</p>
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold">Residential</p>
+                    <img src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="Toggle Type" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                  </div>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">House</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Apartment</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Residential</a></li>
+                  </ul>
+                </div>
+
+                <!-- CITY -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
+                  <p class="font-jakarta text-sm font-light">City</p>
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold">Alabama</p>
+                    <img src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="Toggle City" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                  </div>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Alabama</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">New York</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Chicago</a></li>
+                  </ul>
+                </div>
+
+                <!-- PRICE -->
+                <div class="relative flex flex-1 flex-col border-l-2 border-white px-5 cursor-pointer group dropdown">
+                  <p class="font-jakarta text-sm font-light">Price</p>
+                  <div class="flex items-center justify-between py-4">
+                    <p class="font-jakarta text-2xl font-semibold">$600k - $1000k</p>
+                    <img src="data:image/svg+xml,%3csvg%20width='16'%20height='8'%20viewBox='0%200%2016%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%200.97998L8.78095%206.3106C8.33156%206.69578%207.66844%206.69578%207.21905%206.3106L1%200.97998'%20stroke='white'%20stroke-opacity='0.5'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="Toggle Price" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                  </div>
+                  <ul
+                    class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">$200k - $400k</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">$400k - $600k</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">$600k - $1000k</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Search Input and Button -->
+              <input type="text" id="searchInput" class="hidden w-full rounded-md border p-4 focus:outline-none" placeholder="Cari sesuatu..." />
+              <div class="transition-all flex">
+                <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 transition-all hover:scale-95">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='11'%20cy='11'%20r='8'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.5%2016.958L21.5%2021.958'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                    alt="Search"
+                    class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="absolute top-44 md:top-64 flex w-full gap-4 md:gap-[48px] pe-4 sm:ps-20 lg:hidden -translate-x-3">
+            <input
+              type="text"
+              placeholder="Search Please"
+              class="font-jakarta w-full border-b border-white text-lg font-normal text-white focus:outline-none" />
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='11'%20cy='11'%20r='8'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.5%2016.958L21.5%2021.958'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" class="h-12 flex-shrink-0 rounded-full bg-white p-4" />
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- section properties -->
+    <section id="properties" class="container mx-auto max-w-[1440px] px-4 md:px-2 py-24">
+      <div class="flex flex-col md:pe-2 sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="flex flex-col justify-between xl:gap-24">
+          <div class="flex w-full flex-col justify-between gap-10 md:gap-y-16 xl:flex-row">
+            <div class="flex items-end md:w-[552px] xl:w-1/2">
+              <h2 data-aos="fade-right" class="font-gloock text-dark w-full text-2xl leading-[120%] tracking-[2%] md:text-5xl">
+                Explore our handpicked collection of properties tailored just for you.
+              </h2>
+            </div>
+
+            <!-- button -->
+            <div class="mb-10 flex items-end px-1 md:w-[591px] lg:mb-0 xl:w-1/2">
+              <ul class="flex w-full flex-wrap items-center md:justify-between gap-2">
+                <li data-aos="fade-up" data-aos-delay="0" class="">
+                  <img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2017L9%201'%20stroke='%23D1D1D1'/%3e%3c/svg%3e" alt="" />
+                </li>
+                <button
+                  id="all"
+                  data-category="All"
+                  class="filter-btn text-lg font-semibold lg:text-2xl text-dark cursor-pointer hover:text-gray-600 transition duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay="100">
+                  All
+                </button>
+                <li data-aos="fade-up" data-aos-delay="100" class="flex-shrink-0">
+                  <img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2017L9%201'%20stroke='%23D1D1D1'/%3e%3c/svg%3e" alt="" />
+                </li>
+                <button
+                  id="residential"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition duration-300 cursor-pointer"
+                  data-category="Residential"
+                  data-aos="fade-up"
+                  data-aos-delay="300">
+                  Residential
+                </button>
+                <li data-aos="fade-up" data-aos-delay="200" class="flex-shrink-0">
+                  <img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2017L9%201'%20stroke='%23D1D1D1'/%3e%3c/svg%3e" alt="" />
+                </li>
+                <button
+                  id="commercial"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition duration-300 cursor-pointer"
+                  data-category="Commercial"
+                  data-aos="fade-up"
+                  data-aos-delay="500">
+                  Commercial
+                </button>
+                <li data-aos="fade-up" data-aos-delay="300" class="flex-shrink-0">
+                  <img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2017L9%201'%20stroke='%23D1D1D1'/%3e%3c/svg%3e" alt="" />
+                </li>
+                <button
+                  id="vacational"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition duration-300 cursor-pointer"
+                  data-category="Vacational"
+                  data-aos="fade-up"
+                  data-aos-delay="700">
+                  Vacational
+                </button>
+                <li data-aos="fade-up" data-aos-delay="400" class="flex-shrink-0">
+                  <img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2017L9%201'%20stroke='%23D1D1D1'/%3e%3c/svg%3e" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Grid card -->
+          <div
+            id="gallery"
+            class="gallery-wrapper grid grid-cols-1 gap-8 gap-x-5 sm:grid-cols-2 lg:gap-y-[72px] lg:mt-8 -translate-y-5 xl:-translate-y-10">
+            <!-- card -->
+            <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
+              <figure id="recidential-mobile" class="relative overflow-hidden lg:rounded-xl group">
+                <!-- Gambar -->
+                <img
+                  src="/assets/Rectangle%202%20(8)-C3X8Tlhi.png"
+                  alt="Explore"
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
+
+                <!-- Overlay Gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-70"></div>
+
+                <!-- Overlay Text dengan Latar Belakang -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100 z-20">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg backdrop-blur-md drop-shadow-lg"> Explore </span>
+                </div>
+              </figure>
+
+              <div data-aos-duration="1000" class="font-jakarta text-primary flex items-center justify-between">
+                <div class="font-light">
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
+                  <p>Cibuntu, Sukabumi</p>
+                  <p>House</p>
+                </div>
+                <div class="text-right font-light">
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 810K</p>
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 1k / Month</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 1 -->
+            <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
+              <figure class="relative overflow-hidden lg:rounded-xl">
+                <img
+                  src="/assets/Rectangle%202%20(9)-LCQE3MWe.png"
+                  alt=""
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
+                <!-- Overlay Gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
+                <!-- Overlay Text -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
+                </div>
+              </figure>
+              <div class="font-jakarta text-primary flex items-center justify-between">
+                <div class="font-light">
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
+                  <p>Cibuntu, Sukabumi</p>
+                  <p>House</p>
+                </div>
+                <div class="text-right font-light">
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 810K</p>
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 1k / Month</p>
+                </div>
+              </div>
+            </div>
+
+            <!--card 2  -->
+            <div data-category="Commercial" class="gallery-item group flex flex-col gap-4">
+              <figure class="relative overflow-hidden lg:rounded-xl">
+                <img
+                  src="/assets/Rectangle%202%20(10)-ezc-Q3Ez.png"
+                  alt=""
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
+                <!-- Overlay Gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
+                <!-- Overlay Text -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
+                </div>
+              </figure>
+              <div class="font-jakarta text-primary flex items-center justify-between">
+                <div class="font-light">
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
+                  <p>Cibuntu, Sukabumi</p>
+                  <p>House</p>
+                </div>
+                <div class="text-right font-light">
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 810K</p>
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 1k / Month</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div data-category="Commercial" class="gallery-item group flex flex-col gap-4">
+              <figure class="relative overflow-hidden lg:rounded-xl">
+                <img
+                  src="/assets/Rectangle%202%20(11)-CztuePBG.png"
+                  alt=""
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
+                <!-- Overlay Gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
+                <!-- Overlay Text -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
+                </div>
+              </figure>
+              <div class="font-jakarta text-primary flex items-center justify-between">
+                <div class="font-light">
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
+                  <p>Cibuntu, Sukabumi</p>
+                  <p>House</p>
+                </div>
+                <div class="text-right font-light">
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 810K</p>
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 1k / Month</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div data-category="Residential" class="gallery-item group flex flex-col gap-4">
+              <figure class="relative overflow-hidden lg:rounded-xl">
+                <img
+                  src="/assets/Rectangle%202%20(13)-QCwL2qUg.png"
+                  alt=""
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
+                <!-- Overlay Gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
+                <!-- Overlay Text -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
+                </div>
+              </figure>
+              <div class="font-jakarta text-primary flex items-center justify-between">
+                <div class="font-light">
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
+                  <p>Cibuntu, Sukabumi</p>
+                  <p>House</p>
+                </div>
+                <div class="text-right font-light">
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 810K</p>
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 1k / Month</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 5 -->
+            <div data-category="Residential" class="gallery-item group flex flex-col gap-4">
+              <figure class="relative overflow-hidden lg:rounded-xl">
+                <img
+                  src="/assets/Rectangle%202%20(15)-Bt2jr6mp.png"
+                  alt=""
+                  class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
+                <!-- Overlay Gradient -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-50"></div>
+                <!-- Overlay Text -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <span class="text-2xl font-bold text-white bg-black/50 px-4 py-2 rounded-lg hover:backdrop-blur-sm drop-shadow-lg"> Explore </span>
+                </div>
+              </figure>
+              <div class="font-jakarta text-primary flex items-center justify-between">
+                <div class="font-light">
+                  <h3 class="text-dark font-semibold transition-colors duration-700 group-hover:text-blue-500"><a href="">Villa House</a></h3>
+                  <p>Cibuntu, Sukabumi</p>
+                  <p>House</p>
+                </div>
+                <div class="text-right font-light">
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 810K</p>
+                  <p class="transition-colors duration-700 group-hover:text-blue-500">$ 1k / Month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- grid card end -->
+
+          <button class="btn-primary mt-20 lg:mt-0">
+            <span>Learn More</span>
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.8284%2013.4142L14.8284%2010.1716C14.8284%209.61929%2014.3807%209.17157%2013.8284%209.17157L10.5858%209.17157M14.1213%209.87868L9.17157%2014.8284M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- section properties end -->
+
+    <!-- section parnert client -->
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
+      <div class="flex flex-col-reverse justify-between gap-10 sm:pl-[70px] md:pl-[73px] lg:flex-row lg:pl-[120px]">
+        <div class="font-gloock flex w-full flex-col justify-between gap-y-8 lg:w-1/2">
+          <h1 data-aos="fade-right" class="text-dark text-4xl leading-[120%] font-normal tracking-[2%] md:text-5xl">
+            Your Partner in Every Step of the Journey
+          </h1>
+          <p data-aos="fade-right" class="font-jakarta text-primary text-sm leading-[190%] font-light">
+            We are a trusted property agency connecting you with the best opportunities in the market. With years of experience, we are ready to guide
+            you through every step of buying, selling, or investing in real estate.
+          </p>
+
+          <button class="btn-primary">
+            <span>Learn More</span>
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.8284%2013.4142L14.8284%2010.1716C14.8284%209.61929%2014.3807%209.17157%2013.8284%209.17157L10.5858%209.17157M14.1213%209.87868L9.17157%2014.8284M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+          </button>
+        </div>
+
+        <div class="mt-6 lg:mt-0 lg:w-1/2">
+          <figure class="">
+            <img src="/assets/client-BzUGQxmu.png" alt="" class="w-full" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- section parnert client end -->
+
+    <!-- section partner -->
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="flex max-w-[1282px] flex-col gap-8 md:gap-24">
+          <h2 data-aos="fade-right" class="title w-full md:w-[525px]">We can’t go this far without great partner</h2>
+
+          <!-- card list -->
+          <div class="relative mt-10 overflow-hidden">
+            <div class="swiper">
+              <div class="swiper-wrapper flex">
+                <!-- Card 1 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="data:image/svg+xml,%3csvg%20width='43'%20height='43'%20viewBox='0%200%2043%2043'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M42.75%2014.5998H28.35V0.299805H14.55C14.55%208.1998%208.15%2014.5998%200.25%2014.5998V28.3998H14.55V42.6998H28.35C28.35%2034.7998%2034.85%2028.3998%2042.75%2028.3998V14.5998Z'%20fill='%23111111'/%3e%3c/svg%3e" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="data:image/svg+xml,%3csvg%20width='33'%20height='53'%20viewBox='0%200%2033%2053'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.0004%2012.4004H0.400391V22.1004H12.2004C13.3004%2022.1004%2013.7004%2023.6004%2012.7004%2024.1004L10.4004%2025.2004C7.30039%2026.7004%204.2004%2027.5004%201.0004%2027.5004H0.400391V37.2004H11.9004C13.0004%2037.2004%2013.4004%2038.7004%2012.4004%2039.2004L10.0004%2040.3004C7.1004%2041.7004%204.0004%2042.4004%201.0004%2042.4004H0.400391V52.1004H11.9004L13.2004%2050.5004C18.8004%2044.0004%2025.3004%2040.6004%2032.1004%2040.6004H32.6004V30.9004H21.1004C20.0004%2030.9004%2019.6004%2029.4004%2020.6004%2028.9004L23.0004%2027.8004C25.9004%2026.4004%2029.0004%2025.7004%2032.0004%2025.7004H32.5004V16.0004H20.8004C19.7004%2016.0004%2019.3004%2014.5004%2020.3004%2014.0004L22.6004%2012.9004C25.7004%2011.4004%2028.8004%2010.6004%2032.0004%2010.6004H32.5004V0.900391H21.0004L19.7004%202.5004C14.3004%209.0004%207.7004%2012.4004%201.0004%2012.4004Z'%20fill='%23111111'/%3e%3c/svg%3e" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="/assets/Group-DedCpRsf.svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="data:image/svg+xml,%3csvg%20width='33'%20height='53'%20viewBox='0%200%2033%2053'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.0004%2012.4004H0.400391V22.1004H12.2004C13.3004%2022.1004%2013.7004%2023.6004%2012.7004%2024.1004L10.4004%2025.2004C7.30039%2026.7004%204.2004%2027.5004%201.0004%2027.5004H0.400391V37.2004H11.9004C13.0004%2037.2004%2013.4004%2038.7004%2012.4004%2039.2004L10.0004%2040.3004C7.1004%2041.7004%204.0004%2042.4004%201.0004%2042.4004H0.400391V52.1004H11.9004L13.2004%2050.5004C18.8004%2044.0004%2025.3004%2040.6004%2032.1004%2040.6004H32.6004V30.9004H21.1004C20.0004%2030.9004%2019.6004%2029.4004%2020.6004%2028.9004L23.0004%2027.8004C25.9004%2026.4004%2029.0004%2025.7004%2032.0004%2025.7004H32.5004V16.0004H20.8004C19.7004%2016.0004%2019.3004%2014.5004%2020.3004%2014.0004L22.6004%2012.9004C25.7004%2011.4004%2028.8004%2010.6004%2032.0004%2010.6004H32.5004V0.900391H21.0004L19.7004%202.5004C14.3004%209.0004%207.7004%2012.4004%201.0004%2012.4004Z'%20fill='%23111111'/%3e%3c/svg%3e" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="data:image/svg+xml,%3csvg%20width='43'%20height='43'%20viewBox='0%200%2043%2043'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M42.75%2014.5998H28.35V0.299805H14.55C14.55%208.1998%208.15%2014.5998%200.25%2014.5998V28.3998H14.55V42.6998H28.35C28.35%2034.7998%2034.85%2028.3998%2042.75%2028.3998V14.5998Z'%20fill='%23111111'/%3e%3c/svg%3e" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="data:image/svg+xml,%3csvg%20width='33'%20height='53'%20viewBox='0%200%2033%2053'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.0004%2012.4004H0.400391V22.1004H12.2004C13.3004%2022.1004%2013.7004%2023.6004%2012.7004%2024.1004L10.4004%2025.2004C7.30039%2026.7004%204.2004%2027.5004%201.0004%2027.5004H0.400391V37.2004H11.9004C13.0004%2037.2004%2013.4004%2038.7004%2012.4004%2039.2004L10.0004%2040.3004C7.1004%2041.7004%204.0004%2042.4004%201.0004%2042.4004H0.400391V52.1004H11.9004L13.2004%2050.5004C18.8004%2044.0004%2025.3004%2040.6004%2032.1004%2040.6004H32.6004V30.9004H21.1004C20.0004%2030.9004%2019.6004%2029.4004%2020.6004%2028.9004L23.0004%2027.8004C25.9004%2026.4004%2029.0004%2025.7004%2032.0004%2025.7004H32.5004V16.0004H20.8004C19.7004%2016.0004%2019.3004%2014.5004%2020.3004%2014.0004L22.6004%2012.9004C25.7004%2011.4004%2028.8004%2010.6004%2032.0004%2010.6004H32.5004V0.900391H21.0004L19.7004%202.5004C14.3004%209.0004%207.7004%2012.4004%201.0004%2012.4004Z'%20fill='%23111111'/%3e%3c/svg%3e" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="/assets/Group-DedCpRsf.svg" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Flows Properties</p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
+                  <div class="flex items-center justify-center gap-4">
+                    <figure class="flex-shrink-0">
+                      <img src="data:image/svg+xml,%3csvg%20width='33'%20height='53'%20viewBox='0%200%2033%2053'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.0004%2012.4004H0.400391V22.1004H12.2004C13.3004%2022.1004%2013.7004%2023.6004%2012.7004%2024.1004L10.4004%2025.2004C7.30039%2026.7004%204.2004%2027.5004%201.0004%2027.5004H0.400391V37.2004H11.9004C13.0004%2037.2004%2013.4004%2038.7004%2012.4004%2039.2004L10.0004%2040.3004C7.1004%2041.7004%204.0004%2042.4004%201.0004%2042.4004H0.400391V52.1004H11.9004L13.2004%2050.5004C18.8004%2044.0004%2025.3004%2040.6004%2032.1004%2040.6004H32.6004V30.9004H21.1004C20.0004%2030.9004%2019.6004%2029.4004%2020.6004%2028.9004L23.0004%2027.8004C25.9004%2026.4004%2029.0004%2025.7004%2032.0004%2025.7004H32.5004V16.0004H20.8004C19.7004%2016.0004%2019.3004%2014.5004%2020.3004%2014.0004L22.6004%2012.9004C25.7004%2011.4004%2028.8004%2010.6004%2032.0004%2010.6004H32.5004V0.900391H21.0004L19.7004%202.5004C14.3004%209.0004%207.7004%2012.4004%201.0004%2012.4004Z'%20fill='%23111111'/%3e%3c/svg%3e" alt="" class="w-full h-11" />
+                    </figure>
+                    <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- button -->
+          <buttonc class="btn-primary">
+            <span class="font-jakarta text-sm font-semibold">Become our partner</span>
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.8284%2013.4142L14.8284%2010.1716C14.8284%209.61929%2014.3807%209.17157%2013.8284%209.17157L10.5858%209.17157M14.1213%209.87868L9.17157%2014.8284M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+          </buttonc>
+        </div>
+      </div>
+    </section>
+    <!-- section partner end -->
+
+    <!-- section our vision -->
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="flex flex-col gap-14 md:gap-24">
+          <h2 data-aos="fade-right" class="title w-full md:w-[601px]">Your Vision, Our Expertise.</h2>
+
+          <!-- list card -->
+          <div class="overflow-x-auto custom-scrollbar flex flex-col md:flex-row w-full md:gap-0">
+            <!-- Card 1 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="0"
+              class="flex w-full flex-col gap-8 border border-gray-200 md:min-w-[422px] px-6">
+              <h3 class="font-gloock w-[260px] text-[32px]">Property Management</h3>
+              <p class="font-jakarta text-primary text-sm">
+                Comprehensive care for your investments, ensuring seamless operations and peace of mind.
+              </p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="data:image/svg+xml,%3csvg%20width='17'%20height='10'%20viewBox='0%200%2017%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.333%209L15.6259%205.70711C16.0164%205.31658%2016.0164%204.68342%2015.6259%204.29289L12.333%201M15.333%205L1.33301%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" />
+              </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="150"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Real Estate Consultation</h3>
+              <p class="font-jakarta text-primary text-sm">Expert guidance to help you navigate the complexities of buying, selling, or investing.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="data:image/svg+xml,%3csvg%20width='17'%20height='10'%20viewBox='0%200%2017%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.333%209L15.6259%205.70711C16.0164%205.31658%2016.0164%204.68342%2015.6259%204.29289L12.333%201M15.333%205L1.33301%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" />
+              </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="data:image/svg+xml,%3csvg%20width='17'%20height='10'%20viewBox='0%200%2017%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.333%209L15.6259%205.70711C16.0164%205.31658%2016.0164%204.68342%2015.6259%204.29289L12.333%201M15.333%205L1.33301%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" />
+              </button>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="450"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="data:image/svg+xml,%3csvg%20width='17'%20height='10'%20viewBox='0%200%2017%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.333%209L15.6259%205.70711C16.0164%205.31658%2016.0164%204.68342%2015.6259%204.29289L12.333%201M15.333%205L1.33301%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" />
+              </button>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+              class="flex w-full flex-col gap-8 border border-gray-200 px-6 md:w-[422px] md:min-w-[422px]">
+              <h3 class="font-gloock w-[260px] text-[32px]">Invest Opportunities</h3>
+              <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
+              <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
+                <span class="view-text transition-colors duration-300">View Details</span>
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="data:image/svg+xml,%3csvg%20width='17'%20height='10'%20viewBox='0%200%2017%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.333%209L15.6259%205.70711C16.0164%205.31658%2016.0164%204.68342%2015.6259%204.29289L12.333%201M15.333%205L1.33301%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <!-- button -->
+          <button class="btn-primary">
+            <span>Learn More</span>
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.8284%2013.4142L14.8284%2010.1716C14.8284%209.61929%2014.3807%209.17157%2013.8284%209.17157L10.5858%209.17157M14.1213%209.87868L9.17157%2014.8284M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- section our vision end -->
+
+    <!-- Section insaige -->
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="flex flex-col gap-10 lg:gap-14">
+          <div data-aos="fade-right" class="lg:[1280px] flex w-full flex-col items-end justify-between lg:flex-row">
+            <h1 class="title lg:w-[710px]">Insights and Trends: Stay Updated with the Latest in Real Estate</h1>
+
+            <div data-aos="fade-up" class="flex gap-2">
+              <!-- tombol slide -->
+              <button
+                id="prevButton"
+                class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all hover:border-gray-500 active:scale-95 cursor-pointer disabled:cursor-not-allowed disabled:border-gray-500">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2019L9.66939%2012.7809C9.2842%2012.3316%209.2842%2011.6684%209.66939%2011.2191L15%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="" />
+              </button>
+              <button
+                id="nextButton"
+                class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all hover:border-gray-500 active:scale-95 cursor-pointer disabled:cursor-not-allowed disabled:border-gray-500">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9%205L14.3306%2011.2191C14.7158%2011.6684%2014.7158%2012.3316%2014.3306%2012.7809L9%2019'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="relative w-full overflow-hidden">
+            <div class="swiper-manual">
+              <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2011-D97PElBD.png" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                    <p class="font-jakarta text-gray-400">
+                      We are a trusted property agency connecting you with the best opportunities in the market.
+                    </p>
+                    <p class="font-afacad text-sm text-gray-400 text-start self-start">12 November 2024</p>
+                  </figure>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2013-BNJ03dq4.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2014-CPTIQGcO.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2015-7r14YAv-.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2011-D97PElBD.png" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                    <p class="font-jakarta text-gray-400">
+                      We are a trusted property agency connecting you with the best opportunities in the market.
+                    </p>
+                  </figure>
+                  <p class="font-afacad text-sm text-start self-start text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2013-BNJ03dq4.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2014-CPTIQGcO.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
+                  <figure class="flex flex-col gap-4">
+                    <img src="/assets/Rectangle%2015-7r14YAv-.svg" alt="" class="rounded-lg" />
+                    <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
+                  </figure>
+                  <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary">
+            <span>Learn More</span>
+            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.8284%2013.4142L14.8284%2010.1716C14.8284%209.61929%2014.3807%209.17157%2013.8284%209.17157L10.5858%209.17157M14.1213%209.87868L9.17157%2014.8284M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- section setories -->
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 md:py-24 lg:pe-10">
+      <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="flex flex-col justify-between gap-10 md:gap-24">
+          <div class="flex flex-col items-start justify-between md:flex-row md:items-center">
+            <h1 data-aos="fade-right" class="title md:w-[552px]">Stories of Trust, Growth, and Shared Success</h1>
+
+            <!-- slider -->
+            <div data-aos="fade-right" class="mt-4 md:mt-0 flex justify-end gap-2">
+              <button
+                type="button"
+                id="newPrevButton"
+                class="border-dark rounded-full border p-2 transition duration-300 hover:border-gray-500 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4 cursor-pointer focus:outline-none disabled:cursor-not-allowed">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2019L9.66939%2012.7809C9.2842%2012.3316%209.2842%2011.6684%209.66939%2011.2191L15%205'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="pointer-events-none" />
+              </button>
+              <button
+                type="button"
+                id="newNextButton"
+                class="border-dark rounded-full border p-2 transition duration-300 hover:border-gray-500 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4 cursor-pointer disabled:cursor-not-allowed">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9%205L14.3306%2011.2191C14.7158%2011.6684%2014.7158%2012.3316%2014.3306%2012.7809L9%2019'%20stroke='%23111111'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="" class="pointer-events-none" />
+              </button>
+            </div>
+          </div>
+
+          <!-- card 1-->
+          <div
+            id="newSlideContainer"
+            class="scrollbar-hide flex h-[250px] md:h-[434px] gap-2 overflow-x-hidden md:gap-24 w-full px-1 pointer-events-none">
+            <!-- Card 1 -->
+            <div data-aos="fade-right" class="flex flex-col justify-between w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
+              <div class="flex flex-col gap-4 md:w-[571px]">
+                <div class="flex gap-2">
+                  <figure>
+                    <img src="/assets/persoon-5L4rmMiq.svg" alt="" />
+                  </figure>
+                  <div class="text-gray-400">
+                    <h3 class="font-jakarta text-dark text-2xl font-semibold">John Doe</h3>
+                    <div class="font-jakarta text-primary flex gap-2 text-sm">
+                      <p>New Jersey</p>
+                      <img src="data:image/svg+xml,%3csvg%20width='6'%20height='6'%20viewBox='0%200%206%206'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%23888888'/%3e%3c/svg%3e" alt="icon" />
+                      <p>USA</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-gloock text-1xl leading-[120%] md:text-[32px]">
+                  Bumi made finding our dream home stress-free and enjoyable! Working with Bumi was an absolute pleasure. They understood exactly what
+                  we were looking for and went above and beyond to make the process seamless.
+                </p>
+              </div>
+              <p class="font-afacad text-primary mt-5 sm:mt-0">2024</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
+              <div class="flex flex-col gap-4 w-full md:w-[571px]">
+                <div class="flex gap-2">
+                  <figure>
+                    <img src="/assets/persoon-5L4rmMiq.svg" alt="" class="opacity-50" />
+                  </figure>
+                  <div>
+                    <h3 class="font-jakarta text-2xl font-semibold">John Doe</h3>
+                    <div class="font-jakarta flex gap-2 text-sm">
+                      <p>New Jersey</p>
+                      <img src="data:image/svg+xml,%3csvg%20width='6'%20height='6'%20viewBox='0%200%206%206'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%23888888'/%3e%3c/svg%3e" alt="icon" class="opacity-50" />
+                      <p>USA</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-gloock text-1xl leading-[120%] text-gray-100 md:text-[32px]">
+                  Bumi made finding our dream home stress-free and enjoyable! Working with Bumi was an absolute pleasure. They understood exactly what
+                  we were looking for and went above and beyond to make the process seamless.
+                </p>
+              </div>
+              <p class="font-afacad text-primary">2024</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
+              <div class="flex flex-col gap-4 w-full">
+                <div class="flex gap-2">
+                  <figure>
+                    <img src="/assets/persoon-5L4rmMiq.svg" alt="" class="opacity-50" />
+                  </figure>
+                  <div>
+                    <h3 class="font-jakarta text-2xl font-semibold">John Doe</h3>
+                    <div class="font-jakarta flex gap-2 text-sm">
+                      <p>New Jersey</p>
+                      <img src="data:image/svg+xml,%3csvg%20width='6'%20height='6'%20viewBox='0%200%206%206'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%23888888'/%3e%3c/svg%3e" alt="icon" class="opacity-50" />
+                      <p>USA</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-gloock text-1xl leading-[120%] text-gray-100 md:text-[32px]">
+                  Bumi made finding our dream home stress-free and enjoyable! Working with Bumi was an absolute pleasure. They understood exactly what
+                  we were looking for and went above and beyond to make the process seamless.
+                </p>
+              </div>
+              <p class="font-afacad text-primary">2024</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div data-aos="fade-left" class="flex flex-col justify-between text-gray-100 w-full md:w-[571px] flex-shrink-0 pointer-events-auto">
+              <div class="flex flex-col gap-4 w-full md:w-[571px]">
+                <div class="flex gap-2">
+                  <figure>
+                    <img src="/assets/persoon-5L4rmMiq.svg" alt="" class="opacity-50" />
+                  </figure>
+                  <div>
+                    <h3 class="font-jakarta text-2xl font-semibold">John Doe</h3>
+                    <div class="font-jakarta flex gap-2 text-sm">
+                      <p>New Jersey</p>
+                      <img src="data:image/svg+xml,%3csvg%20width='6'%20height='6'%20viewBox='0%200%206%206'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%23888888'/%3e%3c/svg%3e" alt="icon" class="opacity-50" />
+                      <p>USA</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-gloock text-1xl leading-[120%] text-gray-100 md:text-[32px]">
+                  Bumi made finding our dream home stress-free and enjoyable! Working with Bumi was an absolute pleasure. They understood exactly what
+                  we were looking for and went above and beyond to make the process seamless.
+                </p>
+              </div>
+              <p class="font-afacad text-primary">2024</p>
+            </div>
+          </div>
+
+          <!-- Container Progress Indicator -->
+          <div id="progressContainer" class="relative flex gap-2 w-full mt-6">
+            <!-- Segmen progress (responsif) -->
+            <div class="segment flex-grow border-2 rounded-full"></div>
+            <div class="segment flex-grow border-2 rounded-full"></div>
+            <div class="segment flex-grow border-2 rounded-full"></div>
+            <div class="segment flex-grow border-2 rounded-full"></div>
+
+            <!-- Indikator aktif (bergerak) -->
+            <div
+              id="activeIndicator"
+              class="absolute top-0 h-full bg-black rounded-full transition-all duration-300 z-10"
+              style="left: 0; width: 0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section setories end -->
+
+    <!-- contact -->
+    <section id="contact" class="container mx-auto max-w-[1440px] py-10 md:py-24 lg:pe-10">
+      <div class="w-full px-1 sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
+        <div class="relative">
+          <h2 data-aos="zoom-in" class="font-gloock text-center text-5xl leading-[120%] text-Tertiary lg:text-9xl">
+            Ready to Find Your Perfect Property?
+          </h2>
+          <div
+            id="contact-btn"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="bg-dark absolute top-1/2 right-1/2 flex w-[190px] translate-x-24 -translate-y-7 items-center justify-center rounded-full border p-3 sm:translate-x-20 md:p-4 lg:p-6 cursor-pointer group">
+            <button class="flex items-center justify-center gap-2 text-sm text-white group-hover:text-primary transition duration-500">
+              Contact Us Now
+              <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.8284%2013.4142L14.8284%2010.1716C14.8284%209.61929%2014.3807%209.17157%2013.8284%209.17157L10.5858%209.17157M14.1213%209.87868L9.17157%2014.8284M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z'%20stroke='white'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="icon" class="group-hover:rotate-45 transition duration-500" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section contact end -->
+
+    <!-- Popup -->
+    <div id="popup" class="popup-container fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+      <div class="popup-content transform scale-90 opacity-0 bg-white rounded-lg shadow-xl p-6 transition-all duration-500 ease-in-out">
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b pb-2">
+          <h2 class="text-lg font-bold text-gray-800">Contact Us</h2>
+          <button id="close-btn" class="text-2xl text-gray-600 hover:text-red-500">&times;</button>
+        </div>
+
+        <!-- Content -->
+        <p class="mt-3 text-gray-700">We’d love to hear from you! Reach out with any questions or feedback.</p>
+
+        <!-- Form -->
+        <form class="mt-3">
+          <input type="text" placeholder="Your Name" class="w-full rounded-md border p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="mt-2 w-full rounded-md border p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+          <textarea
+            placeholder="Your Message"
+            class="mt-2 w-full rounded-md border p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+          <button type="submit" class="mt-3 w-full rounded-md bg-blue-600 py-2 text-white transition hover:bg-blue-700">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <!-- pupup end -->
+
+    <!-- footer -->
+    <footer class="mx-auto max-w-[1440px] md:pb-2">
+      <div class="flex flex-col gap-10 md:gap-24">
+        <figure data-aos="zoom-in" class="w-full -z-10">
+          <img src="/assets/ImgFtrAbout-D1YzMi3X.png" alt="" />
+        </figure>
+        <div class="flex w-full flex-col-reverse justify-between gap-10 px-4 md:gap-24 lg:flex-row">
+          <div class="flex w-full flex-col items-center justify-between gap-10 md:gap-24 lg:flex-row lg:items-start">
+            <div data-aos="zoom-in" class="flex h-full flex-col justify-between gap-10 md:gap-24">
+              <div class="flex justify-center gap-24 lg:justify-start">
+                <img src="data:image/svg+xml,%3csvg%20width='65'%20height='50'%20viewBox='0%200%2065%2050'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M63.0025%201H33.6156C32.8806%201%2032.1719%201.21502%2031.5681%201.60711L1.44625%2021.1233C1.17063%2021.3004%201%2021.604%201%2021.9202V30.3945C1%2030.9257%201.44625%2031.3557%201.9975%2031.3557H9.84625C10.765%2031.3557%2011.1325%2032.5067%2010.3712%2033L1.44625%2038.7802C1.17063%2038.9573%201%2039.2609%201%2039.5771V48.0514C1%2048.5826%201.44625%2049.0127%201.9975%2049.0127H31.3844C32.1194%2049.0127%2032.8281%2048.7976%2033.4319%2048.4055L63.5669%2028.8767C63.8425%2028.6996%2064.0131%2028.396%2064.0131%2028.0798V19.6055C64.0131%2019.0743%2063.5669%2018.6443%2063.0156%2018.6443H55.1669C54.2481%2018.6443%2053.8806%2017.4933%2054.6419%2017L63.5669%2011.2198C63.8425%2011.0427%2064.0131%2010.7391%2064.0131%2010.4229V1.96126C64.0131%201.43004%2063.5669%201%2063.0156%201H63.0025ZM15.6081%2029.6609L31.5944%2019.302C32.185%2018.9225%2032.8806%2018.7202%2033.5894%2018.7202H48.8669C49.7856%2018.7202%2050.1531%2019.8711%2049.3919%2020.3644L33.4056%2030.7233C32.815%2031.1028%2032.1194%2031.3051%2031.4106%2031.3051H16.1331C15.2144%2031.3051%2014.8469%2030.1542%2015.6081%2029.6609Z'%20stroke='%23111111'%20stroke-width='1.5'/%3e%3c/svg%3e" alt="" class="block w-[63px]" />
+              </div>
+              <div class="font-jakarta text-muted flex flex-col justify-between gap-4 text-center text-sm md:gap-6 lg:text-start">
+                <div>
+                  <p class="hover:text-dark">(406) 555-0120</p>
+                </div>
+                <div>
+                  <p class="hover:text-dark">Hello@Bumi.Com</p>
+                </div>
+                <div class="leading-[190%]">
+                  <p class="hover:text-dark">4517 Washington Ave. Manchester, Kentucky 39495</p>
+                </div>
+              </div>
+            </div>
+            <div data-aos="zoom-in" class="flex h-full flex-grow flex-col items-center">
+              <ul class="mt-auto flex gap-2 text-muted md:items-center lg:items-end">
+                <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" /></li>
+                <li class="hover:text-dark"><a href="">Medium</a></li>
+                <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" /></li>
+                <li class="hover:text-dark"><a href="">Instagram</a></li>
+                <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" /></li>
+                <li class="hover:text-dark"><a href="">X</a></li>
+                <li><img src="data:image/svg+xml,%3csvg%20width='10'%20height='18'%20viewBox='0%200%2010%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2016.98L9%200.97998'%20stroke='white'%20stroke-opacity='0.5'/%3e%3c/svg%3e" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="">
+            <ul class="font-gloock flex h-[40] flex-col gap-6 items-center leading-[120%] text-5xl md:text-[64px] lg:text-right">
+              <li data-aos="zoom-in" data-aos-delay="0" class="hover:text-dark w-fit">
+                <a href="">HOME</a>
+              </li>
+              <li data-aos="zoom-in" data-aos-delay="150">
+                <a href="src/html/about.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">ABOUT</a>
+              </li>
+              <li data-aos="zoom-in" data-aos-delay="300">
+                <a href="src/html/properties.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">PROPERTIES</a>
+              </li>
+              <li data-aos="zoom-in" data-aos-delay="450">
+                <a href="src/html/services.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">SERVICES</a>
+              </li>
+              <li data-aos="zoom-in" data-aos-delay="600">
+                <a href="src/html/services.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">RESOURCES</a>
+              </li>
+              <li data-aos="zoom in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="750">
+                <a href="src/html/contact.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="src/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const textElement = document.getElementById("title");
+        if (!textElement) return;
+
+        // Simpan teks asli dan sisipkan newline sebelum kata "today" dan "Perfect Home" (case-insensitive)
+        const fullText = textElement.innerHTML.trim();
+        const modifiedText = fullText.replace(/today/gi, "\ntoday").replace(/Perfect Home/gi, "\nPerfect Home");
+
+        // Kosongkan konten elemen
+        textElement.innerHTML = "";
+
+        // Buat span baru untuk efek mengetik
+        const textSpan = document.createElement("span");
+        textSpan.className = "text-content";
+        textElement.appendChild(textSpan);
+
+        let index = 0;
+        let lastTimestamp = 0;
+        const delay = 40; // Delay per karakter dalam ms
+
+        function typeEffect(timestamp) {
+          if (!lastTimestamp) lastTimestamp = timestamp;
+          const progress = timestamp - lastTimestamp;
+          if (progress >= delay && index < modifiedText.length) {
+            if (modifiedText[index] === "\n") {
+              textSpan.innerHTML += "<br>";
+            } else {
+              textSpan.innerHTML += modifiedText[index];
+            }
+            index++;
+            lastTimestamp = timestamp;
+          }
+          if (index < modifiedText.length) {
+            requestAnimationFrame(typeEffect);
+          } else {
+            addShimmerEffect();
+            if (typeof AOS !== "undefined" && AOS.refresh) {
+              AOS.refresh();
+            }
+          }
+        }
+
+        function addShimmerEffect() {
+          textSpan.classList.add("shimmer-effect");
+          setTimeout(() => {
+            textSpan.classList.remove("shimmer-effect");
+          }, 1500);
+        }
+
+        // Mulai efek mengetik setelah delay 500ms
+        setTimeout(() => {
+          requestAnimationFrame(typeEffect);
+        }, 500);
+      });
+
+      // slider section stories*
+      document.addEventListener("DOMContentLoaded", function () {
+        const slideContainer = document.getElementById("newSlideContainer");
+        const cards = document.querySelectorAll("#newSlideContainer > div");
+
+        const progressContainer = document.getElementById("progressContainer");
+        const segments = progressContainer.querySelectorAll(".segment");
+        const activeIndicator = document.getElementById("activeIndicator");
+
+        const prevButton = document.getElementById("newPrevButton");
+        const nextButton = document.getElementById("newNextButton");
+
+        let currentIndex = 0;
+        let isScrolling = false;
+
+        // Fungsi untuk mendapatkan lebar card
+        function getCardWidth() {
+          const gap = parseInt(getComputedStyle(slideContainer).gap) || 0;
+          return cards[0].offsetWidth + gap;
+        }
+
+        let cardWidth = getCardWidth();
+
+        // Fungsi untuk memperbarui card aktif
+        function updateActiveCard() {
+          cards.forEach((card, index) => {
+            if (index === currentIndex) {
+              card.querySelectorAll("h3, p").forEach(el => {
+                el.classList.remove("text-gray-400", "text-gray-100");
+                el.classList.add("text-black");
+              });
+              card.querySelectorAll("img").forEach(img => {
+                img.classList.remove("opacity-50");
+              });
+            } else {
+              card.querySelectorAll("h3, p").forEach(el => {
+                el.classList.remove("text-black");
+                el.classList.add("text-gray-400");
+              });
+              card.querySelectorAll("img").forEach(img => {
+                if (!img.classList.contains("opacity-50")) {
+                  img.classList.add("opacity-50");
+                }
+              });
+            }
+          });
+        }
+
+        // Fungsi untuk memperbarui indikator progress
+        function updateProgressIndicator() {
+          const containerRect = progressContainer.getBoundingClientRect();
+          const activeSegment = segments[currentIndex];
+          if (!activeSegment) return;
+
+          segments.forEach(seg => {
+            seg.classList.remove("border-black");
+            seg.classList.add("border-gray-400");
+          });
+
+          activeSegment.classList.remove("border-gray-400");
+          activeSegment.classList.add("border-black");
+
+          const segmentRect = activeSegment.getBoundingClientRect();
+          const leftOffset = segmentRect.left - containerRect.left;
+
+          activeIndicator.style.left = `${leftOffset}px`;
+
+          if (currentIndex === 0 && segmentRect.width > 400) {
+            activeIndicator.style.width = `400px`;
+            setTimeout(() => {
+              activeIndicator.style.width = `${segmentRect.width}px`;
+            }, 300);
+          } else {
+            activeIndicator.style.width = `${segmentRect.width}px`;
+          }
+        }
+
+        // Fungsi untuk berpindah ke slide berikutnya
+        function moveNext() {
+          if (currentIndex < cards.length - 1 && !isScrolling) {
+            isScrolling = true;
+            currentIndex++;
+            slideContainer.scrollTo({
+              left: currentIndex * cardWidth,
+              behavior: "smooth",
+            });
+            updateActiveCard();
+            updateProgressIndicator();
+            updateNavigationButtons(); // Update tombol navigasi
+            setTimeout(() => {
+              isScrolling = false;
+            }, 400);
+          }
+        }
+
+        // Fungsi untuk berpindah ke slide sebelumnya
+        function movePrev() {
+          if (currentIndex > 0 && !isScrolling) {
+            isScrolling = true;
+            currentIndex--;
+            slideContainer.scrollTo({
+              left: currentIndex * cardWidth,
+              behavior: "smooth",
+            });
+            updateActiveCard();
+            updateProgressIndicator();
+            updateNavigationButtons(); // Update tombol navigasi
+            setTimeout(() => {
+              isScrolling = false;
+            }, 400);
+          }
+        }
+
+        // Fungsi untuk memperbarui status tombol navigasi
+        function updateNavigationButtons() {
+          // Tombol Previous
+          if (currentIndex === 0) {
+            prevButton.classList.add("opacity-50", "cursor-not-allowed");
+            prevButton.disabled = true;
+          } else {
+            prevButton.classList.remove("opacity-50", "cursor-not-allowed");
+            prevButton.disabled = false;
+          }
+
+          // Tombol Next
+          if (currentIndex === cards.length - 1) {
+            nextButton.classList.add("opacity-50", "cursor-not-allowed");
+            nextButton.disabled = true;
+          } else {
+            nextButton.classList.remove("opacity-50", "cursor-not-allowed");
+            nextButton.disabled = false;
+          }
+        }
+
+        // Menangani perubahan ukuran layar
+        window.addEventListener("resize", () => {
+          cardWidth = getCardWidth();
+        });
+
+        // Inisialisasi tampilan awal
+        updateActiveCard();
+        updateProgressIndicator();
+        updateNavigationButtons(); // Update status tombol di awal
+
+        // Menambahkan event listener untuk tombol navigasi
+        if (nextButton && prevButton) {
+          nextButton.addEventListener("click", moveNext);
+          prevButton.addEventListener("click", movePrev);
+        }
+      });
+    </script>
+  </body>
+</html>
