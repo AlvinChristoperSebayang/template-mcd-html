@@ -31,13 +31,14 @@
 
   <body>
     <div
-      class="relative top-0 mx-auto h-dvh w-full overflow-hidden bg-[url('../img/hero1.png')] bg-[length:100%_100%] bg-center bg-no-repeat md:h-[180vh] lg:h-[220vh]">
+      class="relative top-0 mx-auto h-dvh w-full overflow-hidden bg-[url('../img/hero1.png')] lg:bg-[length:100%_100%] bg-cover bg-center bg-no-repeat md:h-[180vh] lg:h-[207.11vh]">
       <div class="container mx-auto max-w-[1440px]">
+
         <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
-          <div class="container mx-auto max-w-[1440px] ps-3 pe-3 sm:pe-5 lg:pe-10">
+          <div class="container mx-auto max-w-[1440px] px-4 md:px-2 sm:pe-5 lg:pe-10">
             <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
               <div id="logo-container">
-                <img id="logo-img" src="../img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
+                <img id="logo-img" src="img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
               </div>
 
               <!-- Dekstop  -->
@@ -47,78 +48,161 @@
                 <!-- Desktop Menu -->
                 <nav id="desktop-menu" class="lg:flex hidden items-center">
                   <ul class="flex items-center gap-4 text-sm text-white">
-                    <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
+                    <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
 
                     <li class="font-bold">
-                      <a href="#" class="nav-link hover:text-secondary transition-all">Home</a>
+                      <a href="index.html" class="nav-link hover:text-secondary transition-all">Home</a>
                     </li>
 
-                    <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
-                    <li><a href="#" class="nav-link hover:text-secondary transition-all">About</a></li>
-                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
+                    <li><a href="src/html/about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
+                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
                     <!-- Dropdown untuk Properties -->
                     <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
                       <a href="#" class="nav-link hover:text-secondary transition-all">Properties</a>
                       <img
-                        src="../img/Down.svg"
+                        src="img/Down.svg"
                         alt="Toggle Dropdown"
                         class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
                         data-dropdown="properties" />
 
                       <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
-                        <li><a href="#all" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">All</a></li>
-                        <li><a href="#residential" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Residential</a></li>
-                        <li><a href="#commercial" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Commercial</a></li>
                         <li>
-                          <a href="#vacational" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block">Vacational</a>
+                          <a href="src/html/properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                            >properites</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                            >Searched</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a
+                            href="#"
+                            class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                            >Investment Opportunities</a
+                          >
                         </li>
                       </ul>
                     </li>
 
-                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
                     <!-- Dropdown untuk Services -->
                     <li class="relative flex gap-4 items-center group">
-                      <a href="#" class="nav-link hover:text-secondary transition-all">Services</a>
+                      <a href="" class="nav-link hover:text-secondary transition-all">Services</a>
                       <img
-                        src="../img/Down.svg"
+                        src="img/Down.svg"
                         alt="Toggle Dropdown"
                         class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
                         data-dropdown="services" />
                       <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
-                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Option 1</a></li>
-                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Option 2</a></li>
-                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block">Option 3</a></li>
+                        <li>
+                          <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                            >Services</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                            >Management</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a
+                            href="#"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Mortgage Calculator</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                            >Buyer Guide</a
+                          >
+                        </li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a
+                            href="#"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Selling Guide</a
+                          >
+                        </li>
                       </ul>
                     </li>
-                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+
                     <!-- Dropdown untuk Resources -->
                     <li class="relative flex gap-4 items-center group">
-                      <a href="#" class="nav-link hover:text-secondary transition-all">Resources</a>
+                      <a href="src/html/services.html" class="nav-link hover:text-secondary transition-all">Resources</a>
                       <img
-                        src="../img/Down.svg"
+                        src="img/Down.svg"
                         alt="Toggle Dropdown"
                         class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
                         data-dropdown="resources" />
                       <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
-                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Option 1</a></li>
-                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Option 2</a></li>
-                        <li><a href="#prop1" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block">Option 3</a></li>
+                        <li>
+                          <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                            >Resources</a
+                          >
+                        </li>
+                        <li class="group">
+                          <a
+                            href=""
+                            onclick="event.preventDefault()"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                            >Market Trends</a
+                          >
+                        </li>
+                        <li class="group">
+                          <a
+                            href=""
+                            onclick="event.preventDefault()"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Bloge</a
+                          >
+                        </li>
+                        <li class="group">
+                          <a
+                            href=""
+                            onclick="event.preventDefault()"
+                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                            >Detail Bloge</a
+                          >
+                        </li>
                       </ul>
                     </li>
 
-                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
-                    <li><a href="#contact" class="nav-link hover:text-secondary transition-all">Contact Us</a></li>
-                    <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                    <li class="bg-red-600">
+                      <a href="src/html/contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a>
+                    </li>
+                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
                   </ul>
                 </nav>
               </div>
 
               <!-- Mobile Menu Button & Humburger -->
               <div class="relative lg:hidden">
-                <button id="mobile-menu-button" class="fixed top-4 right-4 z-60 w-8 h-8 focus:outline-none transition-all duration-300 ease-in-out">
-                  <span class="burger-line"></span>
-                  <span class="burger-line"></span>
-                  <span class="burger-line"></span>
+                <!-- Tombol Hamburger -->
+                <button
+                  id="mobile-menu-button"
+                  class="fixed top-4 right-4 z-50 w-8 h-8 focus:outline-none transition-all duration-300 ease-in-out group after-hero:!bg-black">
+                  <!-- Garis 1 -->
+                  <span
+                    class="burger-line absolute left-0 w-full h-[2px] bg-white transition-all duration-500 ease-in-out origin-center top-[4px] group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black">
+                  </span>
+
+                  <!-- Garis 2 -->
+                  <span
+                    class="burger-line absolute left-0 w-full h-[2px] bg-white transition-all duration-500 ease-in-out origin-center top-[12px] group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black">
+                  </span>
+
+                  <!-- Garis 3 -->
+                  <span
+                    class="burger-line absolute left-0 w-full h-[2px] bg-white transition-all duration-500 ease-in-out origin-center top-[20px] group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black">
+                  </span>
                 </button>
 
                 <!-- Mobile  Menu -->
@@ -127,7 +211,7 @@
                   class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
                   <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
                     <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Home</a></li>
-                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">About</a></li>
+                    <li class="w-[150px]"><a href="src/html/about.html" class="text-2xl hover:text-white">About</a></li>
 
                     <!-- Properties -->
                     <li class="w-[150px] group">
@@ -153,10 +237,10 @@
                       <!-- Opsi pilihan dropdown -->
                       <ul
                         class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                        <li><a href="#all" class="block px-4 py-2 hover:bg-gray-100">All</a></li>
-                        <li><a href="#residential" class="block px-4 py-2 hover:bg-gray-100">Residential</a></li>
-                        <li><a href="#commercial" class="block px-4 py-2 hover:bg-gray-100">Commercial</a></li>
-                        <li><a href="#vacational" class="block px-4 py-2 hover:bg-gray-100">Vacational</a></li>
+                        <li><a href="src/html/properties.html" class="block px-4 py-2 hover:bg-gray-100">Properties</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Detail</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Searched</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Investment opportunities</a></li>
                       </ul>
                     </li>
 
@@ -184,16 +268,19 @@
                       <!-- Dropdown menu -->
                       <ul
                         class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Consulting</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Design</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Support</a></li>
+                        <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Services</a></li>
+                        <li class="group" onclick="event.preventDefault()">
+                          <a href="#" class="group-hover:cursor-not-allowed block px-4 py-2 hover:bg-gray-100">Mortgage Calculator</a>
+                        </li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Buyer Guide</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Selling Guide</a></li>
                       </ul>
                     </li>
 
                     <!-- Resources -->
                     <li class="w-[150px] group">
                       <div class="flex gap-2 items-center justify-between">
-                        <a href="#" class="text-2xl hover:text-gray-700">Resources</a>
+                        <a href="src/html/services.html" class="text-2xl hover:text-gray-700">Resources</a>
                         <button class="dropdown-toggle-mobile text-black">
                           <svg
                             class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
@@ -214,13 +301,14 @@
                       <!-- Dropdown menu -->
                       <ul
                         class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Guides</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQs</a></li>
+                        <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Reources</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Market Trends</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bloge</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Detail Bloge</a></li>
                       </ul>
                     </li>
 
-                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Contact</a></li>
+                    <li class="w-[150px]"><a href="src/html/contact.html" class="text-2xl hover:text-primary">Contact</a></li>
                   </ul>
                 </div>
               </div>
@@ -229,7 +317,7 @@
         </header>
 
         <!-- herro -->
-        <section class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-2">
+        <section class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-4 md:px-2">
           <div class="flex flex-col text-white sm:ml-[70px] md:ml-[73px] lg:ml-[120px]">
             <div class="md:w-[419px] lg:w-[825px]">
               <h1
@@ -248,15 +336,15 @@
                   <div class="flex items-center justify-between py-4">
                     <p class="font-jakarta text-2xl font-semibold">Rent/Buy</p>
                     <img
-                      src="../img/Down.svg"
+                      src="img/Down.svg"
                       alt="Toggle Category"
                       class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
                   <ul
                     class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 rounded-sm z-50 group-hover:pointer-events-auto">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Buy</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Rent</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Buy</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Rent/Buy</a></li>
                   </ul>
                 </div>
 
@@ -265,13 +353,13 @@
                   <p class="font-jakarta text-sm font-light">Type</p>
                   <div class="flex items-center justify-between py-4">
                     <p class="font-jakarta text-2xl font-semibold">Residential</p>
-                    <img src="../img/Down.svg" alt="Toggle Type" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                    <img src="img/Down.svg" alt="Toggle Type" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
                   <ul
                     class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">House</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Apartment</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Residential</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">House</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Apartment</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Residential</a></li>
                   </ul>
                 </div>
 
@@ -280,13 +368,13 @@
                   <p class="font-jakarta text-sm font-light">City</p>
                   <div class="flex items-center justify-between py-4">
                     <p class="font-jakarta text-2xl font-semibold">Alabama</p>
-                    <img src="../img/Down.svg" alt="Toggle City" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                    <img src="img/Down.svg" alt="Toggle City" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
                   <ul
                     class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Alabama</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">New York</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">Chicago</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Alabama</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">New York</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">Chicago</a></li>
                   </ul>
                 </div>
 
@@ -295,16 +383,13 @@
                   <p class="font-jakarta text-sm font-light">Price</p>
                   <div class="flex items-center justify-between py-4">
                     <p class="font-jakarta text-2xl font-semibold">$600k - $1000k</p>
-                    <img
-                      src="../img/Down.svg"
-                      alt="Toggle Price"
-                      class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                    <img src="img/Down.svg" alt="Toggle Price" class="w-3.5 transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                   </div>
                   <ul
                     class="absolute left-0 top-full mt-2 w-full bg-white text-primary shadow-md opacity-0 scale-95 translate-y-2 pointer-events group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 rounded-sm z-50">
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">$200k - $400k</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">$400k - $600k</a></li>
-                    <li class="p-2 hover:bg-blue-400 hover:text-white rounded-sm transition-all"><a href="#">$600k - $1000k</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">$200k - $400k</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">$400k - $600k</a></li>
+                    <li class="p-2 hover:bg-secondary hover:text-dark rounded-sm transition-all"><a href="#">$600k - $1000k</a></li>
                   </ul>
                 </div>
               </div>
@@ -314,26 +399,26 @@
               <div class="transition-all flex">
                 <button id="searchButton" class="ml-4 flex items-center rounded-full p-2 transition-all hover:scale-95">
                   <img
-                    src="../img/search.svg"
+                    src="img/search.svg"
                     alt="Search"
                     class="rounded-full bg-white p-4 transition-all duration-300 active:bg-gradient-to-b active:from-gray-200 active:to-gray-500" />
                 </button>
               </div>
             </div>
           </div>
-          <div class="absolute top-44 md:top-64 flex w-full gap-5 md:gap-[48px] pe-4 sm:ps-20 lg:hidden">
+          <div class="absolute top-44 md:top-64 flex w-full gap-4 md:gap-[48px] pe-4 sm:ps-20 lg:hidden -translate-x-3">
             <input
               type="text"
               placeholder="Search Please"
               class="font-jakarta w-full border-b border-white text-lg font-normal text-white focus:outline-none" />
-            <img src="../img/search.svg" alt="" class="h-12 flex-shrink-0 rounded-full bg-white p-4" />
+            <img src="img/search.svg" alt="" class="h-12 flex-shrink-0 rounded-full bg-white p-4" />
           </div>
         </section>
       </div>
     </div>
 
     <!-- section properties -->
-    <section id="properties" class="container mx-auto max-w-[1440px] px-2 py-24">
+    <section id="properties" class="container mx-auto max-w-[1440px] px-4 md:px-2 py-24">
       <div class="flex flex-col md:pe-2 sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col justify-between xl:gap-24">
           <div class="flex w-full flex-col justify-between gap-10 md:gap-y-16 xl:flex-row">
@@ -347,51 +432,51 @@
             <div class="mb-10 flex items-end px-1 md:w-[591px] lg:mb-0 xl:w-1/2">
               <ul class="flex w-full flex-wrap items-center md:justify-between gap-2">
                 <li data-aos="fade-up" data-aos-delay="0" class="">
-                  <img src="../img/vector.svg" alt="" />
+                  <img src="img/vector.svg" alt="" />
                 </li>
                 <button
                   id="all"
                   data-category="All"
-                  class="filter-btn text-lg font-semibold lg:text-2xl text-dark cursor-pointer hover:text-gray-600 transition-all duration-500 ease-in-out"
+                  class="filter-btn text-lg font-semibold lg:text-2xl text-dark cursor-pointer hover:text-gray-600 transition duration-300"
                   data-aos="fade-up"
                   data-aos-delay="100">
                   All
                 </button>
                 <li data-aos="fade-up" data-aos-delay="100" class="flex-shrink-0">
-                  <img src="../img/vector.svg" alt="" />
+                  <img src="img/vector.svg" alt="" />
                 </li>
                 <button
                   id="residential"
-                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition duration-300 cursor-pointer"
                   data-category="Residential"
                   data-aos="fade-up"
                   data-aos-delay="300">
                   Residential
                 </button>
                 <li data-aos="fade-up" data-aos-delay="200" class="flex-shrink-0">
-                  <img src="../img/vector.svg" alt="" />
+                  <img src="img/vector.svg" alt="" />
                 </li>
                 <button
                   id="commercial"
-                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition duration-300 cursor-pointer"
                   data-category="Commercial"
                   data-aos="fade-up"
                   data-aos-delay="500">
                   Commercial
                 </button>
                 <li data-aos="fade-up" data-aos-delay="300" class="flex-shrink-0">
-                  <img src="../img/vector.svg" alt="" />
+                  <img src="img/vector.svg" alt="" />
                 </li>
                 <button
                   id="vacational"
-                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  class="filter-btn text-secondary text-lg font-semibold lg:text-2xl hover:text-gray-600 transition duration-300 cursor-pointer"
                   data-category="Vacational"
                   data-aos="fade-up"
                   data-aos-delay="700">
                   Vacational
                 </button>
                 <li data-aos="fade-up" data-aos-delay="400" class="flex-shrink-0">
-                  <img src="../img/vector.svg" alt="" />
+                  <img src="img/vector.svg" alt="" />
                 </li>
               </ul>
             </div>
@@ -437,7 +522,7 @@
             <div data-category="Vacational" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
-                  src="../img/Rectangle 2 (9).png"
+                  src="img/Rectangle 2 (9).png"
                   alt=""
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
                 <!-- Overlay Gradient -->
@@ -465,7 +550,7 @@
             <div data-category="Commercial" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
-                  src="../img/Rectangle 2 (10).png"
+                  src="img/Rectangle 2 (10).png"
                   alt=""
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
                 <!-- Overlay Gradient -->
@@ -493,7 +578,7 @@
             <div data-category="Commercial" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
-                  src="../img/Rectangle 2 (11).png"
+                  src="img/Rectangle 2 (11).png"
                   alt=""
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
                 <!-- Overlay Gradient -->
@@ -521,7 +606,7 @@
             <div data-category="Residential" class="gallery-item group flex flex-col gap-4">
               <figure class="relative overflow-hidden lg:rounded-xl">
                 <img
-                  src="../img/Rectangle 2 (13).png"
+                  src="img/Rectangle 2 (13).png"
                   alt=""
                   class="w-full transform transition-transform rounded-lg duration-700 group-hover:scale-110 group-hover:brightness-125 lg:rounded-xl" />
                 <!-- Overlay Gradient -->
@@ -577,7 +662,7 @@
 
           <button class="btn-primary mt-20 lg:mt-0">
             <span>Learn More</span>
-            <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+            <img src="img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
           </button>
         </div>
       </div>
@@ -585,7 +670,7 @@
     <!-- section properties end -->
 
     <!-- section parnert client -->
-    <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
       <div class="flex flex-col-reverse justify-between gap-10 sm:pl-[70px] md:pl-[73px] lg:flex-row lg:pl-[120px]">
         <div class="font-gloock flex w-full flex-col justify-between gap-y-8 lg:w-1/2">
           <h1 data-aos="fade-right" class="text-dark text-4xl leading-[120%] font-normal tracking-[2%] md:text-5xl">
@@ -598,13 +683,13 @@
 
           <button class="btn-primary">
             <span>Learn More</span>
-            <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+            <img src="img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
           </button>
         </div>
 
         <div class="mt-6 lg:mt-0 lg:w-1/2">
           <figure class="">
-            <img src="../img/client.png" alt="" class="w-full" />
+            <img src="img/client.png" alt="" class="w-full" />
           </figure>
         </div>
       </div>
@@ -612,7 +697,7 @@
     <!-- section parnert client end -->
 
     <!-- section partner -->
-    <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
       <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex max-w-[1282px] flex-col gap-8 md:gap-24">
           <h2 data-aos="fade-right" class="title w-full md:w-[525px]">We can’t go this far without great partner</h2>
@@ -625,7 +710,7 @@
                 <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
                   <div class="flex items-center justify-center gap-4">
                     <figure class="flex-shrink-0">
-                      <img src="../img/parter.svg" alt="" class="w-full h-11" />
+                      <img src="img/parter.svg" alt="" class="w-full h-11" />
                     </figure>
                     <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
                   </div>
@@ -665,7 +750,7 @@
                 <div class="swiper-slide flex h-[157px] w-[307px] items-center justify-center bg-second rounded-lg px-[58px] py-[57px]">
                   <div class="flex items-center justify-center gap-4">
                     <figure class="flex-shrink-0">
-                      <img src="../img/parter.svg" alt="" class="w-full h-11" />
+                      <img src="img/parter.svg" alt="" class="w-full h-11" />
                     </figure>
                     <p class="w-[128px] text-sm md:text-2xl">Xarse Contractor</p>
                   </div>
@@ -706,7 +791,7 @@
           <!-- button -->
           <buttonc class="btn-primary">
             <span class="font-jakarta text-sm font-semibold">Become our partner</span>
-            <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+            <img src="img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
           </buttonc>
         </div>
       </div>
@@ -714,13 +799,13 @@
     <!-- section partner end -->
 
     <!-- section our vision -->
-    <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
       <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col gap-14 md:gap-24">
           <h2 data-aos="fade-right" class="title w-full md:w-[601px]">Your Vision, Our Expertise.</h2>
 
           <!-- list card -->
-          <div class="flex flex-col md:flex-row w-full overflow-x-auto md:gap-0">
+          <div class="overflow-x-auto custom-scrollbar flex flex-col md:flex-row w-full md:gap-0">
             <!-- Card 1 -->
             <div
               data-aos="fade-left"
@@ -733,7 +818,7 @@
               </p>
               <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                 <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="img/Vector (4).svg" alt="" />
               </button>
             </div>
 
@@ -747,7 +832,7 @@
               <p class="font-jakarta text-primary text-sm">Expert guidance to help you navigate the complexities of buying, selling, or investing.</p>
               <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                 <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="img/Vector (4).svg" alt="" />
               </button>
             </div>
 
@@ -761,7 +846,7 @@
               <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
               <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                 <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="img/Vector (4).svg" alt="" />
               </button>
             </div>
 
@@ -775,7 +860,7 @@
               <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
               <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                 <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="img/Vector (4).svg" alt="" />
               </button>
             </div>
 
@@ -789,7 +874,7 @@
               <p class="font-jakarta text-primary text-sm">Unlock lucrative real estate opportunities designed to grow your wealth and portfolio.</p>
               <button class="view-button group flex items-center justify-between gap-2 p-2 cursor-pointer">
                 <span class="view-text transition-colors duration-300">View Details</span>
-                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="../img/Vector (4).svg" alt="" />
+                <img class="arrow-icon transition-all duration-300 ease-in-out group-hover:-translate-x-2" src="img/Vector (4).svg" alt="" />
               </button>
             </div>
           </div>
@@ -797,7 +882,7 @@
           <!-- button -->
           <button class="btn-primary">
             <span>Learn More</span>
-            <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+            <img src="img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
           </button>
         </div>
       </div>
@@ -805,7 +890,7 @@
     <!-- section our vision end -->
 
     <!-- Section insaige -->
-    <section class="container mx-auto max-w-[1440px] px-3 py-10 sm:pe-5 md:py-24 lg:pe-10">
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 sm:pe-5 md:py-24 lg:pe-10">
       <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col gap-10 lg:gap-14">
           <div data-aos="fade-right" class="lg:[1280px] flex w-full flex-col items-end justify-between lg:flex-row">
@@ -816,12 +901,12 @@
               <button
                 id="prevButton"
                 class="swiper-button-prev border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all hover:border-gray-500 active:scale-95 cursor-pointer disabled:cursor-not-allowed disabled:border-gray-500">
-                <img src="../img/Icons (2).svg" alt="" class="" />
+                <img src="img/Icons (2).svg" alt="" class="" />
               </button>
               <button
                 id="nextButton"
                 class="swiper-button-next border-dark rounded-full border p-2 sm:p-4 hover:bg-gray-100 transition-all hover:border-gray-500 active:scale-95 cursor-pointer disabled:cursor-not-allowed disabled:border-gray-500">
-                <img src="../img/Icons (3).svg" alt="" />
+                <img src="img/Icons (3).svg" alt="" />
               </button>
             </div>
           </div>
@@ -832,19 +917,19 @@
                 <!-- Card 1 -->
                 <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 11.png" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                     <p class="font-jakarta text-gray-400">
                       We are a trusted property agency connecting you with the best opportunities in the market.
                     </p>
-                    <p class="font-afacad text-sm text-gray-400 text-start self-start g-amber-300">12 November 2024</p>
+                    <p class="font-afacad text-sm text-gray-400 text-start self-start">12 November 2024</p>
                   </figure>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 13.svg" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                   </figure>
                   <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
@@ -853,7 +938,7 @@
                 <!-- Card 3 -->
                 <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 14.svg" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                   </figure>
                   <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
@@ -862,7 +947,7 @@
                 <!-- Card 4 -->
                 <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 15.svg" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                   </figure>
                   <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
@@ -870,7 +955,7 @@
 
                 <div class="swiper-slide flex w-[316px] md:w-[572px] shrink-0 flex-col justify-between">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 11.png" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 11.png" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                     <p class="font-jakarta text-gray-400">
                       We are a trusted property agency connecting you with the best opportunities in the market.
@@ -882,7 +967,7 @@
                 <!-- Card 2 -->
                 <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 13.svg" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 13.svg" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                   </figure>
                   <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
@@ -891,7 +976,7 @@
                 <!-- Card 3 -->
                 <div class="swiper-slide flex w-[217px] shrink-0 flex-col justify-between gap-5">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 14.svg" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 14.svg" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                   </figure>
                   <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
@@ -900,7 +985,7 @@
                 <!-- Card 4 -->
                 <div class="swiper-slide flex w-[218px] shrink-0 flex-col justify-between gap-5">
                   <figure class="flex flex-col gap-4">
-                    <img src="../img/Rectangle 15.svg" alt="" class="rounded-lg" />
+                    <img src="img/Rectangle 15.svg" alt="" class="rounded-lg" />
                     <h3 class="font-jakarta font-semibold">This is an article title, don’t expect too much on this</h3>
                   </figure>
                   <p class="font-afacad text-sm text-gray-400">12 November 2024</p>
@@ -910,14 +995,14 @@
           </div>
           <button class="btn-primary">
             <span>Learn More</span>
-            <img src="../img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
+            <img src="img/Icons (1).svg" alt="" class="iconbtn transition-transform duration-500 ease-in-out" />
           </button>
         </div>
       </div>
     </section>
 
     <!-- section setories -->
-    <section class="container mx-auto max-w-[1440px] px-3 py-10 md:py-24 lg:pe-10">
+    <section class="container mx-auto max-w-[1440px] px-4 md:px-2 py-10 md:py-24 lg:pe-10">
       <div class="w-full sm:pl-[70px] md:pl-[73px] lg:pl-[120px]">
         <div class="flex flex-col justify-between gap-10 md:gap-24">
           <div class="flex flex-col items-start justify-between md:flex-row md:items-center">
@@ -929,13 +1014,13 @@
                 type="button"
                 id="newPrevButton"
                 class="border-dark rounded-full border p-2 transition duration-300 hover:border-gray-500 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4 cursor-pointer focus:outline-none disabled:cursor-not-allowed">
-                <img src="../img/Icons (2).svg" alt="" class="pointer-events-none" />
+                <img src="img/Icons (2).svg" alt="" class="pointer-events-none" />
               </button>
               <button
                 type="button"
                 id="newNextButton"
                 class="border-dark rounded-full border p-2 transition duration-300 hover:border-gray-500 hover:bg-gray-300 hover:text-white active:scale-90 md:p-4 cursor-pointer disabled:cursor-not-allowed">
-                <img src="../img/Icons (3).svg" alt="" class="pointer-events-none" />
+                <img src="img/Icons (3).svg" alt="" class="pointer-events-none" />
               </button>
             </div>
           </div>
@@ -949,13 +1034,13 @@
               <div class="flex flex-col gap-4 md:w-[571px]">
                 <div class="flex gap-2">
                   <figure>
-                    <img src="../img/persoon.svg" alt="" />
+                    <img src="img/persoon.svg" alt="" />
                   </figure>
                   <div class="text-gray-400">
                     <h3 class="font-jakarta text-dark text-2xl font-semibold">John Doe</h3>
                     <div class="font-jakarta text-primary flex gap-2 text-sm">
                       <p>New Jersey</p>
-                      <img src="../img/Ellipse 1 (1).svg" alt="icon" />
+                      <img src="img/Ellipse 1 (1).svg" alt="icon" />
                       <p>USA</p>
                     </div>
                   </div>
@@ -973,13 +1058,13 @@
               <div class="flex flex-col gap-4 w-full md:w-[571px]">
                 <div class="flex gap-2">
                   <figure>
-                    <img src="../img/persoon.svg" alt="" class="opacity-50" />
+                    <img src="img/persoon.svg" alt="" class="opacity-50" />
                   </figure>
                   <div>
                     <h3 class="font-jakarta text-2xl font-semibold">John Doe</h3>
                     <div class="font-jakarta flex gap-2 text-sm">
                       <p>New Jersey</p>
-                      <img src="../img/Ellipse 1 (1).svg" alt="icon" class="opacity-50" />
+                      <img src="img/Ellipse 1 (1).svg" alt="icon" class="opacity-50" />
                       <p>USA</p>
                     </div>
                   </div>
@@ -997,13 +1082,13 @@
               <div class="flex flex-col gap-4 w-full">
                 <div class="flex gap-2">
                   <figure>
-                    <img src="../img/persoon.svg" alt="" class="opacity-50" />
+                    <img src="img/persoon.svg" alt="" class="opacity-50" />
                   </figure>
                   <div>
                     <h3 class="font-jakarta text-2xl font-semibold">John Doe</h3>
                     <div class="font-jakarta flex gap-2 text-sm">
                       <p>New Jersey</p>
-                      <img src="../img/Ellipse 1 (1).svg" alt="icon" class="opacity-50" />
+                      <img src="img/Ellipse 1 (1).svg" alt="icon" class="opacity-50" />
                       <p>USA</p>
                     </div>
                   </div>
@@ -1021,13 +1106,13 @@
               <div class="flex flex-col gap-4 w-full md:w-[571px]">
                 <div class="flex gap-2">
                   <figure>
-                    <img src="../img/persoon.svg" alt="" class="opacity-50" />
+                    <img src="img/persoon.svg" alt="" class="opacity-50" />
                   </figure>
                   <div>
                     <h3 class="font-jakarta text-2xl font-semibold">John Doe</h3>
                     <div class="font-jakarta flex gap-2 text-sm">
                       <p>New Jersey</p>
-                      <img src="../img/Ellipse 1 (1).svg" alt="icon" class="opacity-50" />
+                      <img src="img/Ellipse 1 (1).svg" alt="icon" class="opacity-50" />
                       <p>USA</p>
                     </div>
                   </div>
@@ -1071,11 +1156,10 @@
             id="contact-btn"
             data-aos="zoom-in"
             data-aos-duration="1000"
-            class="bg-dark absolute top-1/2 right-1/2 flex w-[190px] translate-x-24 -translate-y-7 items-center justify-center rounded-full border p-3 sm:translate-x-20 md:p-4 lg:p-6 cursor-pointer">
-            <button
-              class="flex items-center justify-center gap-2 text-sm text-white transition-transform duration-500 active:scale-90 cursor-pointer">
+            class="bg-dark absolute top-1/2 right-1/2 flex w-[190px] translate-x-24 -translate-y-7 items-center justify-center rounded-full border p-3 sm:translate-x-20 md:p-4 lg:p-6 cursor-pointer group">
+            <button class="flex items-center justify-center gap-2 text-sm text-white group-hover:text-primary transition duration-500">
               Contact Us Now
-              <img src="img/Icons (4).svg" alt="icon" />
+              <img src="img/Icons (4).svg" alt="icon" class="group-hover:rotate-45 transition duration-500" />
             </button>
           </div>
         </div>
@@ -1115,7 +1199,7 @@
     <footer class="mx-auto max-w-[1440px] md:pb-2">
       <div class="flex flex-col gap-10 md:gap-24">
         <figure data-aos="zoom-in" class="w-full -z-10">
-          <img src="img/imageFooter.png" alt="" />
+          <img src="img/ImgFtrAbout.png" alt="" />
         </figure>
         <div class="flex w-full flex-col-reverse justify-between gap-10 px-4 md:gap-24 lg:flex-row">
           <div class="flex w-full flex-col items-center justify-between gap-10 md:gap-24 lg:flex-row lg:items-start">
@@ -1149,24 +1233,24 @@
           </div>
 
           <div class="">
-            <ul class="font-gloock flex h-[40] flex-col gap-6 items-center text-2xl leading-[120%] md:text-[64px] lg:text-right">
+            <ul class="font-gloock flex h-[40] flex-col gap-6 items-center leading-[120%] text-5xl md:text-[64px] lg:text-right">
               <li data-aos="zoom-in" data-aos-delay="0" class="hover:text-dark w-fit">
                 <a href="">HOME</a>
               </li>
               <li data-aos="zoom-in" data-aos-delay="150">
-                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">ABOUT</a>
+                <a href="src/html/about.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">ABOUT</a>
               </li>
               <li data-aos="zoom-in" data-aos-delay="300">
-                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">PROPERTIES</a>
+                <a href="src/html/properties.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">PROPERTIES</a>
               </li>
               <li data-aos="zoom-in" data-aos-delay="450">
-                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">SERVICES</a>
+                <a href="src/html/services.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">SERVICES</a>
               </li>
               <li data-aos="zoom-in" data-aos-delay="600">
-                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">RESOURCES</a>
+                <a href="src/html/services.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">RESOURCES</a>
               </li>
               <li data-aos="zoom in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="750">
-                <a href="" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">CONTACT</a>
+                <a href="src/html/contact.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-ou">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -1176,20 +1260,19 @@
     <!-- footer end -->
 
     <script src="src/script.js"></script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- aos -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Inisialisasi AOS
-        AOS.init({
-          duration: 1000,
-          easing: "ease-in-out",
-          once: true,
-          mirror: false,
-        });
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+      });
 
+      document.addEventListener("DOMContentLoaded", function () {
         const textElement = document.getElementById("title");
         if (!textElement) return;
 
@@ -1207,7 +1290,7 @@
 
         let index = 0;
         let lastTimestamp = 0;
-        const delay = 80; // Delay per karakter dalam ms
+        const delay = 40; // Delay per karakter dalam ms
 
         function typeEffect(timestamp) {
           if (!lastTimestamp) lastTimestamp = timestamp;
@@ -1242,6 +1325,157 @@
         setTimeout(() => {
           requestAnimationFrame(typeEffect);
         }, 500);
+      });
+
+      // slider section stories*
+      document.addEventListener("DOMContentLoaded", function () {
+        const slideContainer = document.getElementById("newSlideContainer");
+        const cards = document.querySelectorAll("#newSlideContainer > div");
+
+        const progressContainer = document.getElementById("progressContainer");
+        const segments = progressContainer.querySelectorAll(".segment");
+        const activeIndicator = document.getElementById("activeIndicator");
+
+        const prevButton = document.getElementById("newPrevButton");
+        const nextButton = document.getElementById("newNextButton");
+
+        let currentIndex = 0;
+        let isScrolling = false;
+
+        // Fungsi untuk mendapatkan lebar card
+        function getCardWidth() {
+          const gap = parseInt(getComputedStyle(slideContainer).gap) || 0;
+          return cards[0].offsetWidth + gap;
+        }
+
+        let cardWidth = getCardWidth();
+
+        // Fungsi untuk memperbarui card aktif
+        function updateActiveCard() {
+          cards.forEach((card, index) => {
+            if (index === currentIndex) {
+              card.querySelectorAll("h3, p").forEach(el => {
+                el.classList.remove("text-gray-400", "text-gray-100");
+                el.classList.add("text-black");
+              });
+              card.querySelectorAll("img").forEach(img => {
+                img.classList.remove("opacity-50");
+              });
+            } else {
+              card.querySelectorAll("h3, p").forEach(el => {
+                el.classList.remove("text-black");
+                el.classList.add("text-gray-400");
+              });
+              card.querySelectorAll("img").forEach(img => {
+                if (!img.classList.contains("opacity-50")) {
+                  img.classList.add("opacity-50");
+                }
+              });
+            }
+          });
+        }
+
+        // Fungsi untuk memperbarui indikator progress
+        function updateProgressIndicator() {
+          const containerRect = progressContainer.getBoundingClientRect();
+          const activeSegment = segments[currentIndex];
+          if (!activeSegment) return;
+
+          segments.forEach(seg => {
+            seg.classList.remove("border-black");
+            seg.classList.add("border-gray-400");
+          });
+
+          activeSegment.classList.remove("border-gray-400");
+          activeSegment.classList.add("border-black");
+
+          const segmentRect = activeSegment.getBoundingClientRect();
+          const leftOffset = segmentRect.left - containerRect.left;
+
+          activeIndicator.style.left = `${leftOffset}px`;
+
+          if (currentIndex === 0 && segmentRect.width > 400) {
+            activeIndicator.style.width = `400px`;
+            setTimeout(() => {
+              activeIndicator.style.width = `${segmentRect.width}px`;
+            }, 300);
+          } else {
+            activeIndicator.style.width = `${segmentRect.width}px`;
+          }
+        }
+
+        // Fungsi untuk berpindah ke slide berikutnya
+        function moveNext() {
+          if (currentIndex < cards.length - 1 && !isScrolling) {
+            isScrolling = true;
+            currentIndex++;
+            slideContainer.scrollTo({
+              left: currentIndex * cardWidth,
+              behavior: "smooth",
+            });
+            updateActiveCard();
+            updateProgressIndicator();
+            updateNavigationButtons(); // Update tombol navigasi
+            setTimeout(() => {
+              isScrolling = false;
+            }, 400);
+          }
+        }
+
+        // Fungsi untuk berpindah ke slide sebelumnya
+        function movePrev() {
+          if (currentIndex > 0 && !isScrolling) {
+            isScrolling = true;
+            currentIndex--;
+            slideContainer.scrollTo({
+              left: currentIndex * cardWidth,
+              behavior: "smooth",
+            });
+            updateActiveCard();
+            updateProgressIndicator();
+            updateNavigationButtons(); // Update tombol navigasi
+            setTimeout(() => {
+              isScrolling = false;
+            }, 400);
+          }
+        }
+
+        // Fungsi untuk memperbarui status tombol navigasi
+        function updateNavigationButtons() {
+          // Tombol Previous
+          if (currentIndex === 0) {
+            prevButton.classList.add("opacity-50", "cursor-not-allowed");
+            prevButton.disabled = true;
+          } else {
+            prevButton.classList.remove("opacity-50", "cursor-not-allowed");
+            prevButton.disabled = false;
+          }
+
+          // Tombol Next
+          if (currentIndex === cards.length - 1) {
+            nextButton.classList.add("opacity-50", "cursor-not-allowed");
+            nextButton.disabled = true;
+          } else {
+            nextButton.classList.remove("opacity-50", "cursor-not-allowed");
+            nextButton.disabled = false;
+          }
+        }
+
+        // Menangani perubahan ukuran layar
+        window.addEventListener("resize", () => {
+          cardWidth = getCardWidth();
+        });
+
+        // Inisialisasi tampilan awal
+        updateActiveCard();
+        updateProgressIndicator();
+        updateNavigationButtons(); // Update status tombol di awal
+
+        // Menambahkan event listener untuk tombol navigasi
+        if (nextButton && prevButton) {
+          nextButton.addEventListener("click", moveNext);
+          prevButton.addEventListener("click", movePrev);
+        }
       });
     </script>
   </body>

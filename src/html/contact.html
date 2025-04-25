@@ -1,0 +1,625 @@
+<!doctype html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bumi agency</title>
+    <link rel="icon" href="img/Vector (1).svg" type="image/svg+xml" />
+
+    <!-- <link href="src/output.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="src/style.css" /> -->
+    <link rel="stylesheet" href="../input.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+      .swiper-wrapper {
+        display: flex;
+        transition-timing-function: linear !important;
+      }
+    </style>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+
+  <body>
+    <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+      <div class="container mx-auto max-w-[1440px] ps-3 pe-3 sm:pe-5 lg:pe-10">
+        <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
+          <div id="logo-container">
+            <svg
+              id="logo-img"
+              class="w-[42px] lg:w-[48px] opacity-100 translate-y-0 scale-100 transition-all duration-500 ease-in-out"
+              width="48"
+              height="38"
+              viewBox="0 0 48 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M47.24 0H24.85C24.29 0 23.75 0.17 23.29 0.48L0.34 15.91C0.13 16.05 0 16.29 0 16.54V23.24C0 23.66 0.34 24 0.76 24H6.74C7.44 24 7.72 24.91 7.14 25.3L0.34 29.87C0.13 30.01 0 30.25 0 30.5V37.2C0 37.62 0.34 37.96 0.76 37.96H23.15C23.71 37.96 24.25 37.79 24.71 37.48L47.67 22.04C47.88 21.9 48.01 21.66 48.01 21.41V14.71C48.01 14.29 47.67 13.95 47.25 13.95H41.27C40.57 13.95 40.29 13.04 40.87 12.65L47.67 8.08C47.88 7.94 48.01 7.7 48.01 7.45V0.76C48.01 0.34 47.67 0 47.25 0H47.24ZM11.13 22.66L23.31 14.47C23.76 14.17 24.29 14.01 24.83 14.01H36.47C37.17 14.01 37.45 14.92 36.87 15.31L24.69 23.5C24.24 23.8 23.71 23.96 23.17 23.96H11.53C10.83 23.96 10.55 23.05 11.13 22.66Z"
+                fill="black" />
+            </svg>
+          </div>
+
+          <!-- Dekstop  -->
+          <div
+            id="menu-links"
+            class="flex w-full items-center justify-between topacity-100 translate-y-0 scale-100 transition-all duration-500 ease-in-out">
+            <h2 id="site-title" class="font-gloock text-xl font-normal text-black sm:text-2xl lg:text-[32px]">Bumi.</h2>
+
+            <!-- Desktop Menu -->
+            <nav id="desktop-menu" class="lg:flex hidden items-center">
+              <ul class="flex items-center gap-4 text-sm text-black fill-black">
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <li class="font-bold">
+                  <a href="../../index.html" class="nav-link hover:text-secondary transition-all">Home</a>
+                </li>
+
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <li><a href="about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <!-- Dropdown untuk Properties -->
+                <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
+                  <a href="properties.html" class="nav-link hover:text-secondary transition-all">Properties</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 8"
+                    fill="none"
+                    width="16"
+                    height="8"
+                    alt="Toggle Dropdown"
+                    class="cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                    data-dropdown="properties">
+                    <path
+                      d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
+
+                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                    <li>
+                      <a href="properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">properites</a>
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Searched</a>
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                        >Investment Opportunities</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <li class="relative flex gap-4 items-center group">
+                  <a href="services.html" class="nav-link hover:text-secondary transition-all">Services</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 8"
+                    fill="none"
+                    width="16"
+                    height="8"
+                    alt="Toggle Dropdown"
+                    class="cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                    data-dropdown="properties">
+                    <path
+                      d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
+                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                    <li>
+                      <a href="services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Services</a>
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Management</a>
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Mortgage Calculator</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                        >Buyer Guide</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Selling Guide</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <li class="relative flex gap-4 items-center group">
+                  <a href="Resources.html" class="nav-link hover:text-secondary transition-all">Resources</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 8"
+                    fill="none"
+                    width="16"
+                    height="8"
+                    alt="Toggle Dropdown"
+                    class="cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                    data-dropdown="properties">
+                    <path
+                      d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
+
+                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
+                    <li>
+                      <a href="Resources.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Resources</a>
+                    </li>
+                    <li class="group">
+                      <a
+                        href=""
+                        onclick="event.preventDefault()"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                        >Market Trends</a
+                      >
+                    </li>
+                    <li class="group">
+                      <a
+                        href=""
+                        onclick="event.preventDefault()"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Bloge</a
+                      >
+                    </li>
+                    <li class="group">
+                      <a
+                        href=""
+                        onclick="event.preventDefault()"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Detail Bloge</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <li><a href="src/html/contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a></li>
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Mobile Menu Button & Humburger -->
+          <div id="humburger" class="relative lg:hidden">
+            <!-- Tombol Hamburger -->
+            <button
+              id="mobile-menu-button"
+              class="group after-hero:bg-white fixed top-4 right-4 z-60 w-8 h-8 transition-all duration-300 ease-in-out">
+              <!-- Garis 1 -->
+              <span
+                class="burger-line bg-black group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[4px] transition-all duration-500 ease-in-out origin-center group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+
+              <!-- Garis 2 -->
+              <span
+                class="burger-line bg-black group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[12px] transition-all duration-500 ease-in-out origin-center group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+
+              <!-- Garis 3 -->
+              <span
+                class="burger-line bg-black group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[20px] transition-all duration-500 ease-in-out origin-center group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+            </button>
+
+            <!-- Mobile  Menu -->
+            <div
+              id="mobile-menu"
+              class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
+              <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
+                <li class="w-[150px]"><a href="index.html" class="text-2xl hover:text-white">Home</a></li>
+                <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">About</a></li>
+
+                <!-- Properties -->
+                <li class="w-[150px] group">
+                  <div class="flex gap-2 items-center justify-between">
+                    <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
+                    <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
+                      <svg
+                        class="arrow-icon transition-transform duration-300 ease-in-out"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Opsi pilihan dropdown -->
+                  <ul
+                    class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                    <li><a href="properties.html" class="block px-4 py-2 hover:bg-gray-100">Properties</a></li>
+                    <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Detail</a></li>
+                    <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Searched</a></li>
+                    <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Investment opportunities</a></li>
+                  </ul>
+                </li>
+
+                <!-- Services -->
+                <li class="w-[150px] group">
+                  <div class="flex gap-2 items-center justify-between">
+                    <a href="#" class="text-2xl hover:text-gray-700">Services</a>
+                    <button class="dropdown-toggle-mobile text-black">
+                      <svg
+                        class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Dropdown menu -->
+                  <ul
+                    class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-100">Services</a></li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed block px-4 py-2 hover:bg-gray-100">Mortgage Calculator</a>
+                    </li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Buyer Guide</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Selling Guide</a></li>
+                  </ul>
+                </li>
+
+                <!-- Resources -->
+                <li class="w-[150px] group">
+                  <div class="flex gap-2 items-center justify-between">
+                    <a href="#" class="text-2xl hover:text-gray-700">Resources</a>
+                    <button class="dropdown-toggle-mobile text-black">
+                      <svg
+                        class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Dropdown menu -->
+                  <ul
+                    class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                    <li><a href="Resources.html" class="block px-4 py-2 hover:bg-gray-100">Reources</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Market Trends</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bloge</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Detail Bloge</a></li>
+                  </ul>
+                </li>
+
+                <li class="w-[150px]"><a href="contact.html" class="text-2xl hover:text-primary">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="target" class="container max-w-[1440px] mx-auto py-[200px] ps-5 px-5 mt-20">
+      <div class="flex flex-col lg:flex-row justify-between md:ml-[82px] lg:ml-[138px] gap-16">
+        <h2 class="font-gloock text-6xl md:text-9xl md:w-[447px] text-dark">Get in Touch with Us</h2>
+        <p class="md:w-[377px] flex flex-col justify-end text-primary">
+          Whether you’re buying, selling, or exploring investment opportunities, our team is ready to assist you every step of the way. Fill out the
+          form below, or reach out to us directly through the contact details provided. Let’s make your property journey smooth and successful!
+        </p>
+      </div>
+    </section>
+
+    <section id="target" class="container max-w-[1440px] mx-auto py-[100px] ps-5 px-5">
+      <div class="flex flex-col lg:flex-row justify-between md:pl-[82px] lg:pl-[138px] gap-16 w-full">
+        <div class="flex flex-col gap-24 w-full">
+          <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name" class="w-full border-b border-grayFrom text-grayFrom py-6" />
+
+            <input type="email" id="fullname" name="fullname" placeholder="Email Adress" class="w-full border-b border-grayFrom text-grayFrom py-6" />
+
+            <input
+              type="number"
+              id="phoneNamber"
+              name="phoneNamber"
+              placeholder="Phone Number"
+              class="w-full border-b border-grayFrom text-grayFrom py-6" />
+
+            <input type="text" id="subjek" name="subjek" placeholder="Subcjek" class="w-full border-b border-grayFrom text-grayFrom py-6" />
+
+            <input
+              type="text"
+              id="massage"
+              name="massage"
+              placeholder="Your Massager"
+              class="w-full border-b border-grayFrom text-grayFrom py-6 lg:col-span-2" />
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-6 md:gap-24">
+            <a
+              href="#"
+              class="px-6 py-3 rounded-3xl lg:rounded-full bg-dark text-white flex gap-2 justify-center items-center hover:scale-95 transition duration-300 w-fit group">
+              <span class="whitespace-nowrap group-hover:text-primary transition duration-500">Send Result</span>
+              <img src="../../img/panah.svg" alt="" class="w-4 h-4 group-hover:rotate-45 transition duration-500" />
+            </a>
+
+            <p class="lg:w-[424px]">
+              We value your time and trust. Whether you need advice, guidance, or support, our dedicated team is here to help you make informed
+              property decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="site-footer" class="container max-w-[1440px] mx-auto pb-24">
+      <div class="flex flex-col gap-24">
+        <figure>
+          <img src="../../img/ImgFtrAbout.png" alt="" />
+        </figure>
+
+        <div class="flex flex-col lg:flex-row justify-between px-4 gap-10 lg:gap-0">
+          <div class="flex flex-col justify-between gap-10 order-2 lg:order-1">
+            <figure class="flex lg:justify-start justify-center">
+              <img src="../../img/Vector (1).svg" alt="" />
+            </figure>
+            <div>
+              <ul class="flex flex-col gap-6 text-muted text-center lg:text-start">
+                <li><a href="" class="hover:text-dark transition duration-500">(406) 555-0120</a></li>
+                <li><a href="" class="hover:text-dark transition duration-500">Hello@Bumi.Com</a></li>
+                <li><a href="" class="hover:text-dark transition duration-500">4517 Washington Ave. Manchester,</a></li>
+                <li><a href="" class="hover:text-dark transition duration-500"> Kentucky 39495</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col justify-end order-3 lg:order-2">
+            <ul class="flex gap-2 font-jakarta text-muted justify-center items-center lg:justify-start">
+              <li><img src="../../img/Vector 31.svg" alt="" /></li>
+              <li><a href="" class="hover:text-dark transition duration-500">Meidum</a></li>
+              <li><img src="../../img/Vector 31.svg" alt="" /></li>
+              <li><a href="" class="hover:text-dark transition duration-500">Instagram</a></li>
+              <li><img src="../../img/Vector 31.svg" alt="" /></li>
+              <li><a href="" class="hover:text-dark transition duration-500">Youtube</a></li>
+              <li><img src="../../img/Vector 31.svg" alt="" /></li>
+              <li><a href="" class="hover:text-dark transition duration-500">X</a></li>
+              <li><img src="../../img/Vector 31.svg" alt="" /></li>
+            </ul>
+          </div>
+
+          <div class="order-1 lg:order-3">
+            <ul class="flex flex-col gap-6 font-gloock text-5xl md:text-[64px] leading-[120%] tracking-[2%] text-Tertiary text-center lg:text-right">
+              <li><a href="index.html" class="text-dark">Home</a></li>
+              <li><a href="about.html" class="hover:text-dark transition duration-500">about</a></li>
+              <li><a href="services.html" class="hover:text-dark transition duration-500">services</a></li>
+              <li><a href="Resources.html" class="hover:text-dark transition duration-500">resources</a></li>
+              <li><a href="contact.html" class="hover:text-dark transition duration-500">contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.getElementById("site-header");
+        const menuLinks = document.getElementById("menu-links");
+        const logoImg = document.getElementById("logo-img");
+        const target = document.getElementById("target");
+        const footer = document.getElementById("site-footer");
+        const hamburgerBtn = document.getElementById("mobile-menu-button");
+
+        if (!header || !menuLinks || !logoImg || !target || !footer || !hamburgerBtn) {
+          console.error("Pastikan semua elemen dengan ID yang disebut ada di HTML");
+          return;
+        }
+
+        [menuLinks, logoImg].forEach(el => {
+          el.classList.add("transition-all", "duration-500", "ease-in-out");
+        });
+
+        const show = el => {
+          el.classList.remove("opacity-0", "-translate-y-4");
+          el.classList.add("opacity-100", "translate-y-0");
+        };
+
+        const hide = el => {
+          el.classList.remove("opacity-100", "translate-y-0");
+          el.classList.add("opacity-0", "-translate-y-4");
+        };
+
+        function isFooterAtTop(el) {
+          return el.getBoundingClientRect().top <= 10;
+        }
+
+        function onScroll() {
+          const pastHero = window.scrollY > target.offsetTop;
+          const footerReachedTop = isFooterAtTop(footer);
+          const isMobile = window.innerWidth <= 767;
+
+          if (footerReachedTop) {
+            if (isMobile) show(logoImg);
+            show(menuLinks);
+            header.classList.add("text-black");
+            logoImg.classList.remove("filter", "invert");
+            hamburgerBtn.classList.remove("after-hero");
+          } else if (pastHero) {
+            if (isMobile) hide(logoImg);
+            hide(menuLinks);
+            header.classList.remove("text-black");
+            hamburgerBtn.classList.add("after-hero");
+          } else {
+            if (isMobile) show(logoImg);
+            show(menuLinks);
+            header.classList.remove("text-black");
+            hamburgerBtn.classList.remove("after-hero");
+          }
+        }
+
+        window.addEventListener("scroll", onScroll);
+        window.addEventListener("resize", onScroll);
+        onScroll();
+      });
+
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const heroImg = document.querySelector("div.relative.top-0");
+      let menuOpen = false;
+
+      // Event scroll untuk cek posisi hamburger terhadap hero image
+      window.addEventListener("scroll", () => {
+        if (!heroImg || !mobileMenuButton) return;
+
+        const heroBottom = heroImg.offsetTop + heroImg.offsetHeight;
+        const buttonTop = mobileMenuButton.getBoundingClientRect().top + window.scrollY;
+
+        if (buttonTop < heroBottom) {
+          mobileMenuButton.classList.add("text-black");
+        } else {
+          mobileMenuButton.classList.remove("text-black");
+        }
+      });
+
+      mobileMenuButton.addEventListener("click", event => {
+        event.stopPropagation();
+        toggleMenu();
+      });
+
+      document.addEventListener("click", event => {
+        if (menuOpen && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      function toggleMenu() {
+        menuOpen = !menuOpen;
+
+        mobileMenuButton.classList.toggle("open", menuOpen);
+        mobileMenuButton.classList.toggle("closed", !menuOpen);
+
+        if (menuOpen) {
+          mobileMenu.classList.remove("translate-x-full", "opacity-0");
+          mobileMenu.classList.add("translate-x-0", "opacity-100");
+          document.body.style.overflow = "hidden";
+        } else {
+          closeMenu();
+        }
+      }
+
+      function closeMenu() {
+        menuOpen = false;
+        mobileMenuButton.classList.remove("open");
+        mobileMenuButton.classList.add("closed");
+
+        mobileMenu.classList.remove("translate-x-0", "opacity-100");
+        mobileMenu.classList.add("translate-x-full", "opacity-0");
+
+        document.body.style.overflow = "";
+      }
+
+      window.dispatchEvent(new Event("scroll"));
+
+      // dropdown menu mobile
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggles = document.querySelectorAll(".dropdown-toggle-mobile");
+
+        toggles.forEach(toggle => {
+          const menu = toggle.closest("li").querySelector(".dropdown-menu");
+          const arrow = toggle.querySelector("svg");
+
+          toggle.addEventListener("click", e => {
+            e.stopPropagation();
+
+            const isOpen = menu.classList.contains("visible");
+
+            document.querySelectorAll(".dropdown-menu").forEach(m => {
+              m.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
+              m.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
+            });
+
+            document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
+
+            if (!isOpen) {
+              menu.classList.remove("max-h-0", "opacity-0", "invisible", "scale-y-95");
+              menu.classList.add("max-h-96", "opacity-100", "visible", "scale-y-100");
+              arrow.classList.add("rotate-180");
+            }
+          });
+        });
+
+        document.addEventListener("click", () => {
+          document.querySelectorAll(".dropdown-menu").forEach(menu => {
+            menu.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
+            menu.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
+          });
+
+          document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
+        });
+      });
+    </script>
+  </body>
+</html>
