@@ -97,6 +97,11 @@ body {
   }
 }
 
+@media (min-width: 900px) {
+  .shopify-p{
+    width: 220px !important;
+  }
+}
 
 /* Efek hover dengan neon */
 .nav-style a::before {
