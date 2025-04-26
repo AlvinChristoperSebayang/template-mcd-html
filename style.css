@@ -97,7 +97,7 @@ body {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 866px) {
   .shopify-p{
     width: 220px !important;
   }
