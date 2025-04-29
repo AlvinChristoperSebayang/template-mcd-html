@@ -84,19 +84,6 @@
   border-bottom-right-radius: 50%;
 }
 
-/* Kelas yang mengatur rotasi ke atas (180 derajat) */
-/* .rotate-up {
-  transform: rotate(-180deg);
-}
-
-/* animasi section your vision */
-/* .move-back {
-  transform: translateX(20px) rotate(-0deg);
-} */
-
-/* #logo-img {
-  transition: filter 0.3s ease;
-} */
 .logo-black {
   filter: brightness(0) saturate(100%);
 }
@@ -110,14 +97,6 @@
 .icon-black {
   filter: brightness(0) saturate(100%);
 }
-
-/* .nav-icon {
-  transition: filter 0.3s ease;
-} */
-
-/* tombol menu humberger */
-
-/* Animasi slideDown untuk dropdown menu*/
 
 .swiper-slide {
   display: flex;
