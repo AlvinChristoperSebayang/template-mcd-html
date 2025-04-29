@@ -30,288 +30,289 @@
   </head>
 
   <body>
+    <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+      <div class="container mx-auto max-w-[1440px] px-4 md:px-2 sm:pe-5 lg:pe-10">
+        <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
+          <div id="logo-container">
+            <img id="logo-img" src="img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
+          </div>
+
+          <!-- Dekstop  -->
+          <div id="menu-container" class="flex w-full items-center justify-between">
+            <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
+
+            <!-- Desktop Menu -->
+            <nav id="desktop-menu" class="lg:flex hidden items-center">
+              <ul class="flex items-center gap-4 text-sm text-white">
+                <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
+
+                <li class="font-bold">
+                  <a href="index.html" class="nav-link hover:text-secondary transition-all">Home</a>
+                </li>
+
+                <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
+                <li><a href="src/html/about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <!-- Dropdown untuk Properties -->
+                <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
+                  <a href="#" class="nav-link hover:text-secondary transition-all">Properties</a>
+                  <img
+                    src="img/Down.svg"
+                    alt="Toggle Dropdown"
+                    class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                    data-dropdown="properties" />
+
+                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                    <li>
+                      <a href="src/html/properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                        >properites</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                        >Searched</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a
+                        href="#"
+                        class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
+                        >Investment Opportunities</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <!-- Dropdown untuk Services -->
+                <li class="relative flex gap-4 items-center group">
+                  <a href="" class="nav-link hover:text-secondary transition-all">Services</a>
+                  <img
+                    src="img/Down.svg"
+                    alt="Toggle Dropdown"
+                    class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                    data-dropdown="services" />
+                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                    <li>
+                      <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                        >Services</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                        >Management</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a
+                        href="#"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Mortgage Calculator</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                        >Buyer Guide</a
+                      >
+                    </li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a
+                        href="#"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Selling Guide</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+
+                <!-- Dropdown untuk Resources -->
+                <li class="relative flex gap-4 items-center group">
+                  <a href="src/html/services.html" class="nav-link hover:text-secondary transition-all">Resources</a>
+                  <img
+                    src="img/Down.svg"
+                    alt="Toggle Dropdown"
+                    class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                    data-dropdown="resources" />
+                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
+                    <li>
+                      <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                        >Resources</a
+                      >
+                    </li>
+                    <li class="group">
+                      <a
+                        href=""
+                        onclick="event.preventDefault()"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
+                        >Market Trends</a
+                      >
+                    </li>
+                    <li class="group">
+                      <a
+                        href=""
+                        onclick="event.preventDefault()"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Bloge</a
+                      >
+                    </li>
+                    <li class="group">
+                      <a
+                        href=""
+                        onclick="event.preventDefault()"
+                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
+                        >Detail Bloge</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <li>
+                  <a href="src/html/contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a>
+                </li>
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Mobile Menu Button & Humburger -->
+          <div class="relative lg:hidden">
+            <!-- Tombol Hamburger -->
+            <button
+            id="mobile-menu-button"
+            class="group after-hero:bg-white fixed top-4 right-4 z-60 w-8 h-8 transition-all duration-300 ease-in-out">
+            <!-- Garis 1 -->
+            <span
+              class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[4px] transition-all duration-500 ease-in-out origin-center group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+
+            <!-- Garis 2 -->
+            <span
+              class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[12px] transition-all duration-500 ease-in-out origin-center group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+
+            <!-- Garis 3 -->
+            <span
+              class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[20px] transition-all duration-500 ease-in-out origin-center group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+          </button>
+
+            <!-- Mobile  Menu -->
+            <div
+              id="mobile-menu"
+              class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
+              <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
+                <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Home</a></li>
+                <li class="w-[150px]"><a href="src/html/about.html" class="text-2xl hover:text-white">About</a></li>
+
+                <!-- Properties -->
+                <li class="w-[150px] group">
+                  <div class="flex gap-2 items-center justify-between">
+                    <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
+                    <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
+                      <svg
+                        class="arrow-icon transition-transform duration-300 ease-in-out"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Opsi pilihan dropdown -->
+                  <ul
+                    class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                    <li><a href="src/html/properties.html" class="block px-4 py-2 hover:bg-gray-100">Properties</a></li>
+                    <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Detail</a></li>
+                    <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Searched</a></li>
+                    <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Investment opportunities</a></li>
+                  </ul>
+                </li>
+
+                <!-- Services -->
+                <li class="w-[150px] group">
+                  <div class="flex gap-2 items-center justify-between">
+                    <a href="#" class="text-2xl hover:text-gray-700">Services</a>
+                    <button class="dropdown-toggle-mobile text-black">
+                      <svg
+                        class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Dropdown menu -->
+                  <ul
+                    class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                    <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Services</a></li>
+                    <li class="group" onclick="event.preventDefault()">
+                      <a href="#" class="group-hover:cursor-not-allowed block px-4 py-2 hover:bg-gray-100">Mortgage Calculator</a>
+                    </li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Buyer Guide</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Selling Guide</a></li>
+                  </ul>
+                </li>
+
+                <!-- Resources -->
+                <li class="w-[150px] group">
+                  <div class="flex gap-2 items-center justify-between">
+                    <a href="src/html/services.html" class="text-2xl hover:text-gray-700">Resources</a>
+                    <button class="dropdown-toggle-mobile text-black">
+                      <svg
+                        class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
+                        width="16"
+                        height="8"
+                        viewBox="0 0 16 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Dropdown menu -->
+                  <ul
+                    class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                    <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Reources</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Market Trends</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bloge</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Detail Bloge</a></li>
+                  </ul>
+                </li>
+
+                <li class="w-[150px]"><a href="src/html/contact.html" class="text-2xl hover:text-primary">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <div
       class="relative top-0 mx-auto h-dvh w-full overflow-hidden bg-[url('../img/hero1.png')] lg:bg-[length:100%_100%] bg-cover bg-center bg-no-repeat md:h-[180vh] lg:h-[207.11vh]">
       <div class="container mx-auto max-w-[1440px]">
-        <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
-          <div class="container mx-auto max-w-[1440px] px-4 md:px-2 sm:pe-5 lg:pe-10">
-            <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
-              <div id="logo-container">
-                <img id="logo-img" src="img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
-              </div>
-
-              <!-- Dekstop  -->
-              <div id="menu-container" class="flex w-full items-center justify-between">
-                <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
-
-                <!-- Desktop Menu -->
-                <nav id="desktop-menu" class="lg:flex hidden items-center">
-                  <ul class="flex items-center gap-4 text-sm text-white">
-                    <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
-
-                    <li class="font-bold">
-                      <a href="index.html" class="nav-link hover:text-secondary transition-all">Home</a>
-                    </li>
-
-                    <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
-                    <li><a href="src/html/about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
-                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
-                    <!-- Dropdown untuk Properties -->
-                    <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
-                      <a href="#" class="nav-link hover:text-secondary transition-all">Properties</a>
-                      <img
-                        src="img/Down.svg"
-                        alt="Toggle Dropdown"
-                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
-                        data-dropdown="properties" />
-
-                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
-                        <li>
-                          <a href="src/html/properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
-                            >properites</a
-                          >
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
-                            >Searched</a
-                          >
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a
-                            href="#"
-                            class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
-                            >Investment Opportunities</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
-                    <!-- Dropdown untuk Services -->
-                    <li class="relative flex gap-4 items-center group">
-                      <a href="" class="nav-link hover:text-secondary transition-all">Services</a>
-                      <img
-                        src="img/Down.svg"
-                        alt="Toggle Dropdown"
-                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
-                        data-dropdown="services" />
-                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
-                        <li>
-                          <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
-                            >Services</a
-                          >
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
-                            >Management</a
-                          >
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a
-                            href="#"
-                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                            >Mortgage Calculator</a
-                          >
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
-                            >Buyer Guide</a
-                          >
-                        </li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a
-                            href="#"
-                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                            >Selling Guide</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
-
-                    <!-- Dropdown untuk Resources -->
-                    <li class="relative flex gap-4 items-center group">
-                      <a href="src/html/services.html" class="nav-link hover:text-secondary transition-all">Resources</a>
-                      <img
-                        src="img/Down.svg"
-                        alt="Toggle Dropdown"
-                        class="nav-icon cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
-                        data-dropdown="resources" />
-                      <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
-                        <li>
-                          <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
-                            >Resources</a
-                          >
-                        </li>
-                        <li class="group">
-                          <a
-                            href=""
-                            onclick="event.preventDefault()"
-                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
-                            >Market Trends</a
-                          >
-                        </li>
-                        <li class="group">
-                          <a
-                            href=""
-                            onclick="event.preventDefault()"
-                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                            >Bloge</a
-                          >
-                        </li>
-                        <li class="group">
-                          <a
-                            href=""
-                            onclick="event.preventDefault()"
-                            class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                            >Detail Bloge</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
-                    <li>
-                      <a href="src/html/contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a>
-                    </li>
-                    <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
-                  </ul>
-                </nav>
-              </div>
-
-              <!-- Mobile Menu Button & Humburger -->
-              <div class="relative lg:hidden">
-                <!-- Tombol Hamburger -->
-                <button
-                id="mobile-menu-button"
-                class="group after-hero:bg-white fixed top-4 right-4 z-60 w-8 h-8 transition-all duration-300 ease-in-out">
-                <!-- Garis 1 -->
-                <span
-                  class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[4px] transition-all duration-500 ease-in-out origin-center group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
-
-                <!-- Garis 2 -->
-                <span
-                  class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[12px] transition-all duration-500 ease-in-out origin-center group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
-
-                <!-- Garis 3 -->
-                <span
-                  class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[20px] transition-all duration-500 ease-in-out origin-center group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
-              </button>
-
-                <!-- Mobile  Menu -->
-                <div
-                  id="mobile-menu"
-                  class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
-                  <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
-                    <li class="w-[150px]"><a href="#" class="text-2xl hover:text-white">Home</a></li>
-                    <li class="w-[150px]"><a href="src/html/about.html" class="text-2xl hover:text-white">About</a></li>
-
-                    <!-- Properties -->
-                    <li class="w-[150px] group">
-                      <div class="flex gap-2 items-center justify-between">
-                        <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
-                        <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
-                          <svg
-                            class="arrow-icon transition-transform duration-300 ease-in-out"
-                            width="16"
-                            height="8"
-                            viewBox="0 0 16 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
-                              stroke="currentColor"
-                              stroke-width="1.5"
-                              stroke-linecap="round" />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <!-- Opsi pilihan dropdown -->
-                      <ul
-                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                        <li><a href="src/html/properties.html" class="block px-4 py-2 hover:bg-gray-100">Properties</a></li>
-                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Detail</a></li>
-                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Searched</a></li>
-                        <li><a href="" class="block px-4 py-2 hover:bg-gray-100">Investment opportunities</a></li>
-                      </ul>
-                    </li>
-
-                    <!-- Services -->
-                    <li class="w-[150px] group">
-                      <div class="flex gap-2 items-center justify-between">
-                        <a href="#" class="text-2xl hover:text-gray-700">Services</a>
-                        <button class="dropdown-toggle-mobile text-black">
-                          <svg
-                            class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
-                            width="16"
-                            height="8"
-                            viewBox="0 0 16 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
-                              stroke="currentColor"
-                              stroke-width="1.5"
-                              stroke-linecap="round" />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <!-- Dropdown menu -->
-                      <ul
-                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                        <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Services</a></li>
-                        <li class="group" onclick="event.preventDefault()">
-                          <a href="#" class="group-hover:cursor-not-allowed block px-4 py-2 hover:bg-gray-100">Mortgage Calculator</a>
-                        </li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Buyer Guide</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Selling Guide</a></li>
-                      </ul>
-                    </li>
-
-                    <!-- Resources -->
-                    <li class="w-[150px] group">
-                      <div class="flex gap-2 items-center justify-between">
-                        <a href="src/html/services.html" class="text-2xl hover:text-gray-700">Resources</a>
-                        <button class="dropdown-toggle-mobile text-black">
-                          <svg
-                            class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
-                            width="16"
-                            height="8"
-                            viewBox="0 0 16 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
-                              stroke="currentColor"
-                              stroke-width="1.5"
-                              stroke-linecap="round" />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <!-- Dropdown menu -->
-                      <ul
-                        class="dropdown-menu max-h-0 opacity-0 invisible scale-y-95 transition-all duration-500 ease-in-out overflow-hidden flex flex-col mt-2 space-y-2 group-hover:max-h-96 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                        <li><a href="src/html/services.html" class="block px-4 py-2 hover:bg-gray-100">Reources</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Market Trends</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Bloge</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Detail Bloge</a></li>
-                      </ul>
-                    </li>
-
-                    <li class="w-[150px]"><a href="src/html/contact.html" class="text-2xl hover:text-primary">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-
+        
         <!-- herro -->
         <section class="relative top-26 md:top-[200px] container mx-auto max-w-[1440px] px-4 md:px-2">
           <div class="flex flex-col text-white sm:ml-[70px] md:ml-[73px] lg:ml-[120px]">
