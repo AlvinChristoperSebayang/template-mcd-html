@@ -338,39 +338,3 @@ if (targetElement) {
   targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// navigasi mobile + gallery
-// document.querySelectorAll(".dropdown-menu a").forEach(link => {
-//   link.addEventListener("click", e => {
-//     e.preventDefault();
-
-//     const targetId = link.getAttribute("href").substring(1);
-//     const filterButton = document.getElementById(targetId);
-
-//     if (filterButton) {
-//       filterButton.click();
-
-//       const category = filterButton.getAttribute("data-category");
-
-//       // Tentukan offset sesuai lebar layar
-//       const offsetTop = window.innerWidth >= 768 ? 300 : 200;
-
-//       const scrollToWithOffset = element => {
-//         const y = element.getBoundingClientRect().top + window.scrollY - offsetTop;
-//         window.scrollTo({ top: y, behavior: "smooth" });
-//       };
-
-//       if (category === "All") {
-//         document.querySelectorAll(".gallery-item").forEach(item => {
-//           item.style.display = "block";
-//         });
-
-//         const firstCard = document.querySelector(".gallery-item");
-//         if (firstCard) scrollToWithOffset(firstCard);
-//       } else {
-//         const targetCard = document.querySelector(`.gallery-item[data-category="${category}"]`);
-//         if (targetCard) scrollToWithOffset(targetCard);
-//       }
-//     }
-//   });
-// });
-
