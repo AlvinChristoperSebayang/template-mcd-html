@@ -26,7 +26,7 @@
 
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/input-BmR12jzV.css">
+    <link rel="stylesheet" crossorigin href="/assets/input-0GH8Oa6U.css">
   </head>
 
   <body>
@@ -265,7 +265,7 @@
                 <!-- Properties -->
                 <li class="w-[150px] group">
                   <div class="flex gap-2 items-center justify-between">
-                    <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
+                    <a href="properties.html" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
                     <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
                       <svg
                         class="arrow-icon transition-transform duration-300 ease-in-out"
@@ -296,7 +296,7 @@
                 <!-- Services -->
                 <li class="w-[150px] group">
                   <div class="flex gap-2 items-center justify-between">
-                    <a href="#" class="text-2xl hover:text-gray-700">Services</a>
+                    <a href="services.html" class="text-2xl hover:text-gray-700">Services</a>
                     <button class="dropdown-toggle-mobile text-black">
                       <svg
                         class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
@@ -329,7 +329,7 @@
                 <!-- Resources -->
                 <li class="w-[150px] group">
                   <div class="flex gap-2 items-center justify-between">
-                    <a href="#" class="text-2xl hover:text-gray-700">Resources</a>
+                    <a href="Resources.html" class="text-2xl hover:text-gray-700">Resources</a>
                     <button class="dropdown-toggle-mobile text-black">
                       <svg
                         class="transition-transform duration-300 ease-in-out group-hover:rotate-180"
@@ -562,7 +562,7 @@
           <div class="">
             <ul class="font-gloock flex h-[40] flex-col gap-6 items-center text-5xl leading-[120%] md:text-[64px] lg:text-right">
               <li class="hover:text-dark w-fit">
-                <a href="index.html">HOME</a>
+                <a href="../../index.html">HOME</a>
               </li>
               <li>
                 <a href="about.html" class="hover:text-dark text-Tertiary w-fit transition duration-300 ease-in-out">ABOUT</a>
@@ -586,7 +586,6 @@
     </footer>
     <!-- footer end -->
 
-
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const header = document.getElementById("site-header");
@@ -595,35 +594,35 @@
         const target = document.getElementById("target");
         const footer = document.getElementById("site-footer");
         const hamburgerBtn = document.getElementById("mobile-menu-button");
-    
+
         if (!header || !menuLinks || !logoImg || !target || !footer || !hamburgerBtn) {
           console.error("Pastikan semua elemen dengan ID yang disebut ada di HTML");
           return;
         }
-    
+
         [menuLinks, logoImg].forEach(el => {
           el.classList.add("transition-all", "duration-500", "ease-in-out");
         });
-    
+
         const show = el => {
           el.classList.remove("opacity-0", "-translate-y-4");
           el.classList.add("opacity-100", "translate-y-0");
         };
-    
+
         const hide = el => {
           el.classList.remove("opacity-100", "translate-y-0");
           el.classList.add("opacity-0", "-translate-y-4");
         };
-    
+
         function isFooterAtTop(el) {
           return el.getBoundingClientRect().top <= 10;
         }
-    
+
         function onScroll() {
           const pastHero = window.scrollY > target.offsetTop;
           const footerReachedTop = isFooterAtTop(footer);
           const isMobile = window.innerWidth <= 767;
-    
+
           if (footerReachedTop) {
             if (isMobile) show(logoImg);
             show(menuLinks);
@@ -642,48 +641,48 @@
             hamburgerBtn.classList.remove("after-hero");
           }
         }
-    
+
         window.addEventListener("scroll", onScroll);
         window.addEventListener("resize", onScroll);
         onScroll();
       });
-    
+
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
       const heroImg = document.querySelector("div.relative.top-0");
       let menuOpen = false;
-    
+
       // Event scroll untuk cek posisi hamburger terhadap hero image
       window.addEventListener("scroll", () => {
         if (!heroImg || !mobileMenuButton) return;
-    
+
         const heroBottom = heroImg.offsetTop + heroImg.offsetHeight;
         const buttonTop = mobileMenuButton.getBoundingClientRect().top + window.scrollY;
-    
+
         if (buttonTop < heroBottom) {
           mobileMenuButton.classList.add("text-black");
         } else {
           mobileMenuButton.classList.remove("text-black");
         }
       });
-    
+
       mobileMenuButton.addEventListener("click", event => {
         event.stopPropagation();
         toggleMenu();
       });
-    
+
       document.addEventListener("click", event => {
         if (menuOpen && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
           closeMenu();
         }
       });
-    
+
       function toggleMenu() {
         menuOpen = !menuOpen;
-    
+
         mobileMenuButton.classList.toggle("open", menuOpen);
         mobileMenuButton.classList.toggle("closed", !menuOpen);
-    
+
         if (menuOpen) {
           mobileMenu.classList.remove("translate-x-full", "opacity-0");
           mobileMenu.classList.add("translate-x-0", "opacity-100");
@@ -692,40 +691,40 @@
           closeMenu();
         }
       }
-    
+
       function closeMenu() {
         menuOpen = false;
         mobileMenuButton.classList.remove("open");
         mobileMenuButton.classList.add("closed");
-    
+
         mobileMenu.classList.remove("translate-x-0", "opacity-100");
         mobileMenu.classList.add("translate-x-full", "opacity-0");
-    
+
         document.body.style.overflow = "";
       }
-    
+
       window.dispatchEvent(new Event("scroll"));
-    
+
       // dropdown menu mobile
       document.addEventListener("DOMContentLoaded", () => {
         const toggles = document.querySelectorAll(".dropdown-toggle-mobile");
-    
+
         toggles.forEach(toggle => {
           const menu = toggle.closest("li").querySelector(".dropdown-menu");
           const arrow = toggle.querySelector("svg");
-    
+
           toggle.addEventListener("click", e => {
             e.stopPropagation();
-    
+
             const isOpen = menu.classList.contains("visible");
-    
+
             document.querySelectorAll(".dropdown-menu").forEach(m => {
               m.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
               m.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
             });
-    
+
             document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
-    
+
             if (!isOpen) {
               menu.classList.remove("max-h-0", "opacity-0", "invisible", "scale-y-95");
               menu.classList.add("max-h-96", "opacity-100", "visible", "scale-y-100");
@@ -733,18 +732,16 @@
             }
           });
         });
-    
+
         document.addEventListener("click", () => {
           document.querySelectorAll(".dropdown-menu").forEach(menu => {
             menu.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
             menu.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
           });
-    
+
           document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
         });
       });
     </script>
-    
-    
   </body>
 </html>
