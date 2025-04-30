@@ -246,15 +246,15 @@
               class="group after-hero:bg-white fixed top-4 right-4 z-60 w-8 h-8 transition-all duration-300 ease-in-out">
               <!-- Garis 1 -->
               <span
-                class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[4px] transition-all duration-500 ease-in-out origin-center group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+                class="burger-line bg-white absolute left-0 w-full h-[2px] top-[4px] transition-all duration-500 ease-in-out origin-center group-[.open]:translate-y-2 group-[.open]:rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
 
               <!-- Garis 2 -->
               <span
-                class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[12px] transition-all duration-500 ease-in-out origin-center group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+                class="burger-line bg-white absolute left-0 w-full h-[2px] top-[12px] transition-all duration-500 ease-in-out origin-center group-[.open]:opacity-0 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
 
               <!-- Garis 3 -->
               <span
-                class="burger-line bg-white group-[.after-hero]:bg-black] absolute left-0 w-full h-[2px] top-[20px] transition-all duration-500 ease-in-out origin-center group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
+                class="burger-line bg-white absolute left-0 w-full h-[2px] top-[20px] transition-all duration-500 ease-in-out origin-center group-[.open]:-translate-y-2 group-[.open]:-rotate-45 group-[.open]:bg-black group-[.after-hero]:bg-black"></span>
             </button>
 
             <!-- Mobile  Menu -->
@@ -551,6 +551,7 @@
             show(menuLinks);
             header.classList.add("text-black");
             path.classList.add("fill-black");
+            
 
             icon.forEach(i => {
               i.classList.add("stroke-black");
@@ -558,7 +559,7 @@
             });
 
             logoImg.classList.remove("filter", "invert");
-            hamburgerBtn.classList.remove("after-hero");
+            // hamburgerBtn.classList.remove("after-hero");
             menuLinks.classList.remove("text-white");
             menuLinks.classList.add("text-black");
           } else if (pastHero) {
