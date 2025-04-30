@@ -1,7 +1,7 @@
 
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
-const heroImg = document.querySelector("div.relative.top-0");
+const heroImg = document.querySelector("section.relative.top-0");
 let menuOpen = false;
 
 // Event scroll untuk cek posisi hamburger terhadap hero image
@@ -205,7 +205,7 @@ window.addEventListener("scroll", function () {
   const menuContainer = document.getElementById("menu-container");
   const logoImg = document.getElementById("logo-img");
   const siteTitle = document.getElementById("site-title");
-  const heroSection = document.querySelector("div.relative.top-0");
+  const heroSection = document.querySelector("section.relative.top-0");
   const footer = document.querySelector("footer");
 
   if (!menuContainer || !siteTitle || !heroSection || !footer) return;
@@ -291,7 +291,7 @@ window.addEventListener("scroll", function () {
 });
 
 // scroll*
-const heroImge = document.querySelector("div.relative.top-0");
+const heroImge = document.querySelector("section.relative.top-0");
 let heroHeight = heroImg ? heroImg.offsetHeight : 0;
 
 // Gunakan passive event listener untuk scroll
