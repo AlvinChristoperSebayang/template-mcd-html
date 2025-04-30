@@ -5,11 +5,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        about: "src/html/about.html",
-        properties: "src/html/properties.html",
-        resources: "src/html/properties.html",
-        services: "src/html/services.html",
-        contanct: "src/html/contact.html",
+        about: "about.html",
+        properties: "properties.html",
+        resources: "properties.html",
+        services: "services.html",
+        contanct: "contact.html",
       },
     },
   },
