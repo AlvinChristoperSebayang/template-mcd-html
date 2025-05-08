@@ -1,15 +1,104 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-#site-header .navigation-wrapper{
-  @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
+@reference "./app.css";
+
+@theme {
+  /* color */
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-primary : #924398;
+  /* font */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* container settings */
+  --container-*:initial; 
+  --container-2xl: 1536px;
+  --container-xl: 1280px; 
+  --container-lg: 1024px; 
+  --container-sm: 640px;
+  --container-md: 768px;
+
+  /* breakpoint */
+  --breakpoint-mobile: 640px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1280px;
+  --breakpoint-desktop: 1536px;
+
 }
 
-#site-main {
-  min-height: calc(100vh - 240px);
+
+@utility container {
+  @apply mx-auto px-[10px];
+
+  @variant sm {
+    max-width: var(--container-sm);
+  }
+  @variant md {
+    max-width: var(--container-md);
+  }
+  @variant lg {
+    max-width: var(--container-lg);
+  }
+  @variant xl {
+    max-width: var(--container-xl);
+  }
+  @variant 2xl {
+    max-width: var(--container-2xl);
+  }
+  @variant @min-md {
+    max-width: 768px;
+  }
 }
 
-#site-footer .footer-wrapper{
-  @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
+@layer base {
+ 
+  body {
+    @apply font-sans leading-normal tracking-normal;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  p {
+    @apply mb-4;
+  }
 }
+@layer components {
+  .btn {
+    @apply  text-white font-bold py-2 px-4 rounded;
+    @variant dark {
+      @variant hover {
+        background: black;
+      }
+    }
+  }
+}
+@layer utilities {
+  #site-header .navigation-wrapper{
+    @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
+  }
+  
+  #site-main {
+    min-height: calc(100vh - 240px);
+  }
+  
+  #site-footer .footer-wrapper{
+    @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
+  }
+  .btn{
+    @apply  text-white font-bold py-2 px-4 rounded;
+  }
+}
+@utility btn {
+  @apply  text-white font-bold py-2 px-4 rounded;
+}
+@utility btn-primary {
+  @apply bg-sky-500 text-white font-bold py-2 px-4 rounded;
+}
+@utility btn-secondary {
+  @apply bg-sky-700 text-white font-bold py-2 px-4 rounded;
+}
+@utility btn-tertiary {
+  @apply bg-sky-900 text-white font-bold py-2 px-4 rounded;
+}
+
