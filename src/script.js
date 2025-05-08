@@ -1,4 +1,3 @@
-
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
 const heroImg = document.querySelector("section.relative.top-0");
@@ -201,14 +200,46 @@ document.querySelectorAll(".view-button").forEach(button => {
 });
 
 // header scroll
+let lastScrollY = window.scrollY;
+
+window.addEventListener("load", function () {
+  const menuContainer = document.getElementById("menu-container");
+  const siteTitle = document.getElementById("site-title");
+  const logoImg = document.getElementById("logo-img");
+  const navLinks = document.querySelectorAll("#desktop-menu .nav-link");
+  const navIcons = document.querySelectorAll(".nav-icon");
+
+  // Inisialisasi menu dan logo saat halaman dimuat
+  if (menuContainer) {
+    menuContainer.classList.add("text-white", "fade-in");
+  }
+
+  if (siteTitle) {
+    siteTitle.classList.add("text-white", "fade-in");
+  }
+
+  if (logoImg) {
+    logoImg.style.filter = "brightness(1) saturate(100%)";
+    logoImg.classList.add("fade-in");
+  }
+
+  navLinks.forEach(link => {
+    link.classList.add("text-white");
+  });
+
+  navIcons.forEach(icon => {
+    icon.style.filter = "brightness(1) saturate(100%)";
+  });
+});
+
 window.addEventListener("scroll", function () {
   const menuContainer = document.getElementById("menu-container");
-  const logoImg = document.getElementById("logo-img");
   const siteTitle = document.getElementById("site-title");
   const heroSection = document.querySelector("section.relative.top-0");
   const footer = document.querySelector("footer");
+  const logoImg = document.getElementById("logo-img");
 
-  if (!menuContainer || !siteTitle || !heroSection || !footer) return;
+  if (!menuContainer || !siteTitle || !heroSection || !footer || !logoImg) return;
 
   const heroHeight = heroSection.offsetHeight;
   const currentScrollY = window.scrollY;
@@ -222,7 +253,7 @@ window.addEventListener("scroll", function () {
   const navIcons = document.querySelectorAll(".nav-icon");
 
   if (isAtFooter) {
-    // Footer terlihat
+    // Footer terlihat, logo dan menu jadi gelap
     menuContainer.classList.remove("fade-out", "text-white");
     menuContainer.classList.add("fade-in", "text-black");
 
@@ -234,46 +265,83 @@ window.addEventListener("scroll", function () {
       link.classList.add("text-black");
     });
 
+    logoImg.style.filter = "brightness(0) saturate(100%)";
     logoImg.classList.remove("fade-out");
     logoImg.classList.add("fade-in");
 
     navIcons.forEach(icon => {
-      icon.style.filter = "brightness(0) saturate(100%)"; // hitam
+      icon.style.filter = "brightness(0) saturate(100%)";
     });
 
     return;
   }
 
   if (isPastHero) {
-    // Sudah melewati hero, tapi belum sampai footer
-    menuContainer.classList.remove("fade-in", "text-black");
-    menuContainer.classList.add("fade-out", "text-white");
+    if (currentScrollY > lastScrollY) {
+      // Scroll ke bawah, sembunyikan menu dan logo
+      menuContainer.classList.remove("fade-in");
+      menuContainer.classList.add("fade-out", "text-white");
 
-    siteTitle.classList.remove("fade-in", "text-black");
-    siteTitle.classList.add("fade-out", "text-white");
+      siteTitle.classList.remove("fade-in");
+      siteTitle.classList.add("fade-out", "text-white");
 
-    navLinks.forEach(link => {
-      link.classList.remove("text-black");
-      link.classList.add("text-white");
-    });
+      navLinks.forEach(link => {
+        link.classList.add("text-white");
+      });
 
-    if (isMobile) {
-      logoImg.classList.remove("fade-in", "icon-black");
-      logoImg.classList.add("fade-out");
-    } else {
-      logoImg.classList.remove("fade-out");
-      logoImg.classList.add("fade-in", "icon-black");
+      navIcons.forEach(icon => {
+        icon.style.filter = "brightness(0) saturate(100%)";
+      });
+
+      if (isMobile) {
+        // Sembunyikan logo dan site title bersamaan pada mobile
+        logoImg.classList.remove("fade-in");
+        logoImg.classList.add("fade-out");
+
+        siteTitle.classList.remove("fade-in");
+        siteTitle.classList.add("fade-out");
+
+        // Sembunyikan menu bersamaan pada mobile
+        menuContainer.classList.remove("fade-in");
+        menuContainer.classList.add("fade-out");
+      }
+
+    } else if (currentScrollY < lastScrollY) {
+      // Scroll ke atas, munculkan kembali menu dan logo
+      menuContainer.classList.remove("fade-out");
+      menuContainer.classList.add("fade-in", "text-black");
+
+      siteTitle.classList.remove("fade-out");
+      siteTitle.classList.add("fade-in", "text-black");
+
+      navLinks.forEach(link => {
+        link.classList.remove("text-white");
+        link.classList.add("text-black");
+      });
+
+      navIcons.forEach(icon => {
+        icon.style.filter = "brightness(0) saturate(100%)";
+      });
+
+      if (isMobile) {
+        // Tampilkan logo dan site title bersamaan pada mobile
+        logoImg.classList.remove("fade-out");
+        logoImg.classList.add("fade-in");
+
+        siteTitle.classList.remove("fade-out");
+        siteTitle.classList.add("fade-in");
+
+        // Tampilkan menu bersamaan pada mobile
+        menuContainer.classList.remove("fade-out");
+        menuContainer.classList.add("fade-in");
+      }
     }
-
-    navIcons.forEach(icon => {
-      icon.style.filter = ""; // reset
-    });
   } else {
-    // Masih di hero section
-    menuContainer.classList.remove("fade-out", "text-black");
+    // Masih di hero section, tampilkan logo dan menu putih
+    menuContainer.classList.remove("fade-out", "text-white");
     menuContainer.classList.add("fade-in", "text-white");
 
-    siteTitle.classList.remove("fade-out", "text-black");
+    siteTitle.classList.remove("fade-out", "text-white");
     siteTitle.classList.add("fade-in", "text-white");
 
     navLinks.forEach(link => {
@@ -281,14 +349,18 @@ window.addEventListener("scroll", function () {
       link.classList.add("text-white");
     });
 
-    logoImg.classList.remove("fade-out", "icon-black");
+    logoImg.style.filter = "brightness(1) saturate(100%)";
+    logoImg.classList.remove("fade-out");
     logoImg.classList.add("fade-in");
 
     navIcons.forEach(icon => {
-      icon.style.filter = ""; // reset
+      icon.style.filter = "brightness(1) saturate(100%)";
     });
   }
+
+  lastScrollY = currentScrollY;
 });
+
 
 // scroll*
 const heroImge = document.querySelector("section.relative.top-0");
@@ -332,45 +404,220 @@ document.querySelectorAll(".filter-btn").forEach(button => {
 });
 
 // Fungsi smooth scroll dengan offset
-
 const targetElement = document.querySelector("#target");
 if (targetElement) {
   targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// navigasi mobile + gallery
-// document.querySelectorAll(".dropdown-menu a").forEach(link => {
-//   link.addEventListener("click", e => {
-//     e.preventDefault();
+AOS.init({
+  duration: 1000,
+  easing: "ease-in-out",
+  once: true,
+  mirror: false,
+});
 
-//     const targetId = link.getAttribute("href").substring(1);
-//     const filterButton = document.getElementById(targetId);
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.getElementById("title");
+  if (!textElement) return;
 
-//     if (filterButton) {
-//       filterButton.click();
+  // Simpan teks asli dan sisipkan newline sebelum kata "today" dan "Perfect Home" (case-insensitive)
+  const fullText = textElement.innerHTML.trim();
+  const modifiedText = fullText.replace(/today/gi, "\ntoday").replace(/Perfect Home/gi, "\nPerfect Home");
 
-//       const category = filterButton.getAttribute("data-category");
+  // Kosongkan konten elemen
+  textElement.innerHTML = "";
 
-//       // Tentukan offset sesuai lebar layar
-//       const offsetTop = window.innerWidth >= 768 ? 300 : 200;
+  // Buat span baru untuk efek mengetik
+  const textSpan = document.createElement("span");
+  textSpan.className = "text-content";
+  textElement.appendChild(textSpan);
 
-//       const scrollToWithOffset = element => {
-//         const y = element.getBoundingClientRect().top + window.scrollY - offsetTop;
-//         window.scrollTo({ top: y, behavior: "smooth" });
-//       };
+  let index = 0;
+  let lastTimestamp = 0;
+  const delay = 40; // Delay per karakter dalam ms
 
-//       if (category === "All") {
-//         document.querySelectorAll(".gallery-item").forEach(item => {
-//           item.style.display = "block";
-//         });
+  function typeEffect(timestamp) {
+    if (!lastTimestamp) lastTimestamp = timestamp;
+    const progress = timestamp - lastTimestamp;
+    if (progress >= delay && index < modifiedText.length) {
+      if (modifiedText[index] === "\n") {
+        textSpan.innerHTML += "<br>";
+      } else {
+        textSpan.innerHTML += modifiedText[index];
+      }
+      index++;
+      lastTimestamp = timestamp;
+    }
+    if (index < modifiedText.length) {
+      requestAnimationFrame(typeEffect);
+    } else {
+      addShimmerEffect();
+      if (typeof AOS !== "undefined" && AOS.refresh) {
+        AOS.refresh();
+      }
+    }
+  }
 
-//         const firstCard = document.querySelector(".gallery-item");
-//         if (firstCard) scrollToWithOffset(firstCard);
-//       } else {
-//         const targetCard = document.querySelector(`.gallery-item[data-category="${category}"]`);
-//         if (targetCard) scrollToWithOffset(targetCard);
-//       }
-//     }
-//   });
-// });
+  function addShimmerEffect() {
+    textSpan.classList.add("shimmer-effect");
+    setTimeout(() => {
+      textSpan.classList.remove("shimmer-effect");
+    }, 1500);
+  }
 
+  // Mulai efek mengetik setelah delay 500ms
+  setTimeout(() => {
+    requestAnimationFrame(typeEffect);
+  }, 500);
+});
+
+// slider section stories*
+document.addEventListener("DOMContentLoaded", function () {
+  const slideContainer = document.getElementById("newSlideContainer");
+  const cards = document.querySelectorAll("#newSlideContainer > div");
+
+  const progressContainer = document.getElementById("progressContainer");
+  const segments = progressContainer.querySelectorAll(".segment");
+  const activeIndicator = document.getElementById("activeIndicator");
+
+  const prevButton = document.getElementById("newPrevButton");
+  const nextButton = document.getElementById("newNextButton");
+
+  let currentIndex = 0;
+  let isScrolling = false;
+
+  // Fungsi untuk mendapatkan lebar card
+  function getCardWidth() {
+    const gap = parseInt(getComputedStyle(slideContainer).gap) || 0;
+    return cards[0].offsetWidth + gap;
+  }
+
+  let cardWidth = getCardWidth();
+
+  // Fungsi untuk memperbarui card aktif
+  function updateActiveCard() {
+    cards.forEach((card, index) => {
+      if (index === currentIndex) {
+        card.querySelectorAll("h3, p").forEach(el => {
+          el.classList.remove("text-gray-400", "text-gray-100");
+          el.classList.add("text-black");
+        });
+        card.querySelectorAll("img").forEach(img => {
+          img.classList.remove("opacity-50");
+        });
+      } else {
+        card.querySelectorAll("h3, p").forEach(el => {
+          el.classList.remove("text-black");
+          el.classList.add("text-gray-400");
+        });
+        card.querySelectorAll("img").forEach(img => {
+          if (!img.classList.contains("opacity-50")) {
+            img.classList.add("opacity-50");
+          }
+        });
+      }
+    });
+  }
+
+  // Fungsi untuk memperbarui indikator progress
+  function updateProgressIndicator() {
+    const containerRect = progressContainer.getBoundingClientRect();
+    const activeSegment = segments[currentIndex];
+    if (!activeSegment) return;
+
+    segments.forEach(seg => {
+      seg.classList.remove("border-black");
+      seg.classList.add("border-gray-400");
+    });
+
+    activeSegment.classList.remove("border-gray-400");
+    activeSegment.classList.add("border-black");
+
+    const segmentRect = activeSegment.getBoundingClientRect();
+    const leftOffset = segmentRect.left - containerRect.left;
+
+    activeIndicator.style.left = `${leftOffset}px`;
+
+    if (currentIndex === 0 && segmentRect.width > 400) {
+      activeIndicator.style.width = `400px`;
+      setTimeout(() => {
+        activeIndicator.style.width = `${segmentRect.width}px`;
+      }, 300);
+    } else {
+      activeIndicator.style.width = `${segmentRect.width}px`;
+    }
+  }
+
+  // Fungsi untuk berpindah ke slide berikutnya
+  function moveNext() {
+    if (currentIndex < cards.length - 1 && !isScrolling) {
+      isScrolling = true;
+      currentIndex++;
+      slideContainer.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: "smooth",
+      });
+      updateActiveCard();
+      updateProgressIndicator();
+      updateNavigationButtons(); // Update tombol navigasi
+      setTimeout(() => {
+        isScrolling = false;
+      }, 400);
+    }
+  }
+
+  // Fungsi untuk berpindah ke slide sebelumnya
+  function movePrev() {
+    if (currentIndex > 0 && !isScrolling) {
+      isScrolling = true;
+      currentIndex--;
+      slideContainer.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: "smooth",
+      });
+      updateActiveCard();
+      updateProgressIndicator();
+      updateNavigationButtons(); // Update tombol navigasi
+      setTimeout(() => {
+        isScrolling = false;
+      }, 400);
+    }
+  }
+
+  // Fungsi untuk memperbarui status tombol navigasi
+  function updateNavigationButtons() {
+    // Tombol Previous
+    if (currentIndex === 0) {
+      prevButton.classList.add("opacity-50", "cursor-not-allowed");
+      prevButton.disabled = true;
+    } else {
+      prevButton.classList.remove("opacity-50", "cursor-not-allowed");
+      prevButton.disabled = false;
+    }
+
+    // Tombol Next
+    if (currentIndex === cards.length - 1) {
+      nextButton.classList.add("opacity-50", "cursor-not-allowed");
+      nextButton.disabled = true;
+    } else {
+      nextButton.classList.remove("opacity-50", "cursor-not-allowed");
+      nextButton.disabled = false;
+    }
+  }
+
+  // Menangani perubahan ukuran layar
+  window.addEventListener("resize", () => {
+    cardWidth = getCardWidth();
+  });
+
+  // Inisialisasi tampilan awal
+  updateActiveCard();
+  updateProgressIndicator();
+  updateNavigationButtons(); // Update status tombol di awal
+
+  // Menambahkan event listener untuk tombol navigasi
+  if (nextButton && prevButton) {
+    nextButton.addEventListener("click", moveNext);
+    prevButton.addEventListener("click", movePrev);
+  }
+});

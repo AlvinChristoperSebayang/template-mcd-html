@@ -30,32 +30,31 @@
   </head>
 
   <body>
-    <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+    <header id="site-header" class="transition-all duration-300 ease-in-out fixed top-0 left-0 z-50 w-full">
       <div class="container mx-auto max-w-[1440px] px-4 md:px-2 sm:pe-5 lg:pe-10">
         <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
-          <div id="logo-container">
+          <div id="logo-container" class="flex gap-5 md:gap-6 lg:gap-[70px]">
             <img id="logo-img" src="img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
+            <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
           </div>
 
           <!-- Dekstop  -->
-          <div id="menu-container" class="flex w-full items-center justify-between">
-            <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
-
+          <div id="menu-container" class="flex w-full items-center justify-end">
             <!-- Desktop Menu -->
             <nav id="desktop-menu" class="lg:flex hidden items-center">
               <ul class="flex items-center gap-4 text-sm text-white">
                 <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
 
-                <li class="font-bold">
-                  <a href="index.html" class="nav-link hover:text-secondary transition-all">Home</a>
+                <li class="">
+                  <a href="index.html" class="nav-icon hover:text-secondary transition-all">Home</a>
                 </li>
 
                 <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
-                <li><a href="src/html/about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
+                <li><a href="src/html/about.html" class="nav-icon hover:text-secondary transition-all">About</a></li>
                 <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
                 <!-- Dropdown untuk Properties -->
                 <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
-                  <a href="#" class="nav-link hover:text-secondary transition-all">Properties</a>
+                  <a href="#" class="nav-icon hover:text-secondary transition-all">Properties</a>
                   <img
                     src="img/Down.svg"
                     alt="Toggle Dropdown"
@@ -85,7 +84,7 @@
                 <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
                 <!-- Dropdown untuk Services -->
                 <li class="relative flex gap-4 items-center group">
-                  <a href="" class="nav-link hover:text-secondary transition-all">Services</a>
+                  <a href="" class="nav-icon hover:text-secondary transition-all">Services</a>
                   <img
                     src="img/Down.svg"
                     alt="Toggle Dropdown"
@@ -121,7 +120,7 @@
 
                 <!-- Dropdown untuk Resources -->
                 <li class="relative flex gap-4 items-center group">
-                  <a href="src/html/services.html" class="nav-link hover:text-secondary transition-all">Resources</a>
+                  <a href="src/html/services.html" class="nav-icon hover:text-secondary transition-all">Resources</a>
                   <img
                     src="img/Down.svg"
                     alt="Toggle Dropdown"
@@ -162,7 +161,7 @@
 
                 <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
                 <li>
-                  <a href="src/html/contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a>
+                  <a href="src/html/contact.html" class="nav-icon hover:text-secondary transition-all">Contact Us</a>
                 </li>
                 <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
               </ul>
@@ -1190,11 +1189,11 @@
         <figure data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
           <img src="img/ImgFtrAbout.png" alt="" />
         </figure>
-    
+
         <div class="flex flex-col lg:flex-row justify-between px-4 gap-10 lg:gap-0">
           <div class="flex flex-col justify-between gap-10 order-2 lg:order-1" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
             <figure class="flex lg:justify-start justify-center">
-              <img src="img/logo-rink-black.svg" alt="">
+              <img src="img/logo-rink-black.svg" alt="" />
             </figure>
             <div>
               <ul class="flex flex-col gap-6 text-muted text-center lg:text-start">
@@ -1205,7 +1204,7 @@
               </ul>
             </div>
           </div>
-    
+
           <div class="flex flex-col justify-end order-3 lg:order-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
             <ul class="flex gap-2 font-jakarta text-muted justify-center lg:justify-start">
               <li><img src="../../img/Vector 31.svg" alt="" /></li>
@@ -1219,7 +1218,7 @@
               <li><img src="../../img/Vector 31.svg" alt="" /></li>
             </ul>
           </div>
-    
+
           <div class="order-1 lg:order-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="450">
             <ul class="flex flex-col gap-6 font-gloock text-5xl md:text-[64px] leading-[120%] tracking-[2%] text-Tertiary text-center lg:text-right">
               <li><a href="index.html" class="text-dark">Home</a></li>
@@ -1232,227 +1231,12 @@
         </div>
       </div>
     </footer>
-    
+
     <!-- footer end -->
 
     <script type="module" src="./src/script.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        mirror: false,
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const textElement = document.getElementById("title");
-        if (!textElement) return;
-
-        // Simpan teks asli dan sisipkan newline sebelum kata "today" dan "Perfect Home" (case-insensitive)
-        const fullText = textElement.innerHTML.trim();
-        const modifiedText = fullText.replace(/today/gi, "\ntoday").replace(/Perfect Home/gi, "\nPerfect Home");
-
-        // Kosongkan konten elemen
-        textElement.innerHTML = "";
-
-        // Buat span baru untuk efek mengetik
-        const textSpan = document.createElement("span");
-        textSpan.className = "text-content";
-        textElement.appendChild(textSpan);
-
-        let index = 0;
-        let lastTimestamp = 0;
-        const delay = 40; // Delay per karakter dalam ms
-
-        function typeEffect(timestamp) {
-          if (!lastTimestamp) lastTimestamp = timestamp;
-          const progress = timestamp - lastTimestamp;
-          if (progress >= delay && index < modifiedText.length) {
-            if (modifiedText[index] === "\n") {
-              textSpan.innerHTML += "<br>";
-            } else {
-              textSpan.innerHTML += modifiedText[index];
-            }
-            index++;
-            lastTimestamp = timestamp;
-          }
-          if (index < modifiedText.length) {
-            requestAnimationFrame(typeEffect);
-          } else {
-            addShimmerEffect();
-            if (typeof AOS !== "undefined" && AOS.refresh) {
-              AOS.refresh();
-            }
-          }
-        }
-
-        function addShimmerEffect() {
-          textSpan.classList.add("shimmer-effect");
-          setTimeout(() => {
-            textSpan.classList.remove("shimmer-effect");
-          }, 1500);
-        }
-
-        // Mulai efek mengetik setelah delay 500ms
-        setTimeout(() => {
-          requestAnimationFrame(typeEffect);
-        }, 500);
-      });
-
-      // slider section stories*
-      document.addEventListener("DOMContentLoaded", function () {
-        const slideContainer = document.getElementById("newSlideContainer");
-        const cards = document.querySelectorAll("#newSlideContainer > div");
-
-        const progressContainer = document.getElementById("progressContainer");
-        const segments = progressContainer.querySelectorAll(".segment");
-        const activeIndicator = document.getElementById("activeIndicator");
-
-        const prevButton = document.getElementById("newPrevButton");
-        const nextButton = document.getElementById("newNextButton");
-
-        let currentIndex = 0;
-        let isScrolling = false;
-
-        // Fungsi untuk mendapatkan lebar card
-        function getCardWidth() {
-          const gap = parseInt(getComputedStyle(slideContainer).gap) || 0;
-          return cards[0].offsetWidth + gap;
-        }
-
-        let cardWidth = getCardWidth();
-
-        // Fungsi untuk memperbarui card aktif
-        function updateActiveCard() {
-          cards.forEach((card, index) => {
-            if (index === currentIndex) {
-              card.querySelectorAll("h3, p").forEach(el => {
-                el.classList.remove("text-gray-400", "text-gray-100");
-                el.classList.add("text-black");
-              });
-              card.querySelectorAll("img").forEach(img => {
-                img.classList.remove("opacity-50");
-              });
-            } else {
-              card.querySelectorAll("h3, p").forEach(el => {
-                el.classList.remove("text-black");
-                el.classList.add("text-gray-400");
-              });
-              card.querySelectorAll("img").forEach(img => {
-                if (!img.classList.contains("opacity-50")) {
-                  img.classList.add("opacity-50");
-                }
-              });
-            }
-          });
-        }
-
-        // Fungsi untuk memperbarui indikator progress
-        function updateProgressIndicator() {
-          const containerRect = progressContainer.getBoundingClientRect();
-          const activeSegment = segments[currentIndex];
-          if (!activeSegment) return;
-
-          segments.forEach(seg => {
-            seg.classList.remove("border-black");
-            seg.classList.add("border-gray-400");
-          });
-
-          activeSegment.classList.remove("border-gray-400");
-          activeSegment.classList.add("border-black");
-
-          const segmentRect = activeSegment.getBoundingClientRect();
-          const leftOffset = segmentRect.left - containerRect.left;
-
-          activeIndicator.style.left = `${leftOffset}px`;
-
-          if (currentIndex === 0 && segmentRect.width > 400) {
-            activeIndicator.style.width = `400px`;
-            setTimeout(() => {
-              activeIndicator.style.width = `${segmentRect.width}px`;
-            }, 300);
-          } else {
-            activeIndicator.style.width = `${segmentRect.width}px`;
-          }
-        }
-
-        // Fungsi untuk berpindah ke slide berikutnya
-        function moveNext() {
-          if (currentIndex < cards.length - 1 && !isScrolling) {
-            isScrolling = true;
-            currentIndex++;
-            slideContainer.scrollTo({
-              left: currentIndex * cardWidth,
-              behavior: "smooth",
-            });
-            updateActiveCard();
-            updateProgressIndicator();
-            updateNavigationButtons(); // Update tombol navigasi
-            setTimeout(() => {
-              isScrolling = false;
-            }, 400);
-          }
-        }
-
-        // Fungsi untuk berpindah ke slide sebelumnya
-        function movePrev() {
-          if (currentIndex > 0 && !isScrolling) {
-            isScrolling = true;
-            currentIndex--;
-            slideContainer.scrollTo({
-              left: currentIndex * cardWidth,
-              behavior: "smooth",
-            });
-            updateActiveCard();
-            updateProgressIndicator();
-            updateNavigationButtons(); // Update tombol navigasi
-            setTimeout(() => {
-              isScrolling = false;
-            }, 400);
-          }
-        }
-
-        // Fungsi untuk memperbarui status tombol navigasi
-        function updateNavigationButtons() {
-          // Tombol Previous
-          if (currentIndex === 0) {
-            prevButton.classList.add("opacity-50", "cursor-not-allowed");
-            prevButton.disabled = true;
-          } else {
-            prevButton.classList.remove("opacity-50", "cursor-not-allowed");
-            prevButton.disabled = false;
-          }
-
-          // Tombol Next
-          if (currentIndex === cards.length - 1) {
-            nextButton.classList.add("opacity-50", "cursor-not-allowed");
-            nextButton.disabled = true;
-          } else {
-            nextButton.classList.remove("opacity-50", "cursor-not-allowed");
-            nextButton.disabled = false;
-          }
-        }
-
-        // Menangani perubahan ukuran layar
-        window.addEventListener("resize", () => {
-          cardWidth = getCardWidth();
-        });
-
-        // Inisialisasi tampilan awal
-        updateActiveCard();
-        updateProgressIndicator();
-        updateNavigationButtons(); // Update status tombol di awal
-
-        // Menambahkan event listener untuk tombol navigasi
-        if (nextButton && prevButton) {
-          nextButton.addEventListener("click", moveNext);
-          prevButton.addEventListener("click", movePrev);
-        }
-      });
-    </script>
   </body>
 </html>

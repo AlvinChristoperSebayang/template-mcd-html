@@ -580,35 +580,41 @@
         const target = document.getElementById("target");
         const footer = document.getElementById("site-footer");
         const hamburgerBtn = document.getElementById("mobile-menu-button");
-
+    
         if (!header || !menuLinks || !logoImg || !target || !footer || !hamburgerBtn) {
           console.error("Pastikan semua elemen dengan ID yang disebut ada di HTML");
           return;
         }
-
+    
         [menuLinks, logoImg].forEach(el => {
           el.classList.add("transition-all", "duration-500", "ease-in-out");
         });
-
+    
         const show = el => {
           el.classList.remove("opacity-0", "-translate-y-4");
           el.classList.add("opacity-100", "translate-y-0");
         };
-
+    
         const hide = el => {
           el.classList.remove("opacity-100", "translate-y-0");
           el.classList.add("opacity-0", "-translate-y-4");
         };
-
+    
         function isFooterAtTop(el) {
           return el.getBoundingClientRect().top <= 10;
         }
-
+    
+        let lastScrollY = window.scrollY;
+    
         function onScroll() {
-          const pastHero = window.scrollY > target.offsetTop;
+          const currentScrollY = window.scrollY;
+          const scrollingUp = currentScrollY < lastScrollY;
+          lastScrollY = currentScrollY;
+    
+          const pastHero = currentScrollY > target.offsetTop;
           const footerReachedTop = isFooterAtTop(footer);
           const isMobile = window.innerWidth <= 767;
-
+    
           if (footerReachedTop) {
             if (isMobile) show(logoImg);
             show(menuLinks);
@@ -616,10 +622,18 @@
             logoImg.classList.remove("filter", "invert");
             hamburgerBtn.classList.remove("after-hero");
           } else if (pastHero) {
-            if (isMobile) hide(logoImg);
-            hide(menuLinks);
-            header.classList.remove("text-black");
-            hamburgerBtn.classList.add("after-hero");
+            if (scrollingUp) {
+              if (isMobile) show(logoImg);
+              show(menuLinks);
+              header.classList.add("text-black");
+              logoImg.classList.remove("filter", "invert");
+              hamburgerBtn.classList.remove("after-hero");
+            } else {
+              if (isMobile) hide(logoImg);
+              hide(menuLinks);
+              header.classList.remove("text-black");
+              hamburgerBtn.classList.add("after-hero");
+            }
           } else {
             if (isMobile) show(logoImg);
             show(menuLinks);
@@ -627,48 +641,47 @@
             hamburgerBtn.classList.remove("after-hero");
           }
         }
-
+    
         window.addEventListener("scroll", onScroll);
         window.addEventListener("resize", onScroll);
         onScroll();
       });
-
+    
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
       const heroImg = document.querySelector("div.relative.top-0");
       let menuOpen = false;
-
-      // Event scroll untuk cek posisi hamburger terhadap hero image
+    
       window.addEventListener("scroll", () => {
         if (!heroImg || !mobileMenuButton) return;
-
+    
         const heroBottom = heroImg.offsetTop + heroImg.offsetHeight;
         const buttonTop = mobileMenuButton.getBoundingClientRect().top + window.scrollY;
-
+    
         if (buttonTop < heroBottom) {
           mobileMenuButton.classList.add("text-black");
         } else {
           mobileMenuButton.classList.remove("text-black");
         }
       });
-
+    
       mobileMenuButton.addEventListener("click", event => {
         event.stopPropagation();
         toggleMenu();
       });
-
+    
       document.addEventListener("click", event => {
         if (menuOpen && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
           closeMenu();
         }
       });
-
+    
       function toggleMenu() {
         menuOpen = !menuOpen;
-
+    
         mobileMenuButton.classList.toggle("open", menuOpen);
         mobileMenuButton.classList.toggle("closed", !menuOpen);
-
+    
         if (menuOpen) {
           mobileMenu.classList.remove("translate-x-full", "opacity-0");
           mobileMenu.classList.add("translate-x-0", "opacity-100");
@@ -677,40 +690,40 @@
           closeMenu();
         }
       }
-
+    
       function closeMenu() {
         menuOpen = false;
         mobileMenuButton.classList.remove("open");
         mobileMenuButton.classList.add("closed");
-
+    
         mobileMenu.classList.remove("translate-x-0", "opacity-100");
         mobileMenu.classList.add("translate-x-full", "opacity-0");
-
+    
         document.body.style.overflow = "";
       }
-
+    
       window.dispatchEvent(new Event("scroll"));
-
+    
       // dropdown menu mobile
       document.addEventListener("DOMContentLoaded", () => {
         const toggles = document.querySelectorAll(".dropdown-toggle-mobile");
-
+    
         toggles.forEach(toggle => {
           const menu = toggle.closest("li").querySelector(".dropdown-menu");
           const arrow = toggle.querySelector("svg");
-
+    
           toggle.addEventListener("click", e => {
             e.stopPropagation();
-
+    
             const isOpen = menu.classList.contains("visible");
-
+    
             document.querySelectorAll(".dropdown-menu").forEach(m => {
               m.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
               m.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
             });
-
+    
             document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
-
+    
             if (!isOpen) {
               menu.classList.remove("max-h-0", "opacity-0", "invisible", "scale-y-95");
               menu.classList.add("max-h-96", "opacity-100", "visible", "scale-y-100");
@@ -718,16 +731,17 @@
             }
           });
         });
-
+    
         document.addEventListener("click", () => {
           document.querySelectorAll(".dropdown-menu").forEach(menu => {
             menu.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
             menu.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
           });
-
+    
           document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
         });
       });
     </script>
+    
   </body>
 </html>

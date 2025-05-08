@@ -34,29 +34,28 @@
     <header id="site-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
       <div class="container mx-auto max-w-[1440px] ps-3 pe-3 sm:pe-5 lg:pe-10">
         <div class="flex max-w-[1400px] gap-4 py-[20px] sm:gap-7 lg:gap-[70px]">
-          <div id="logo-container">
+          <div id="logo-container" class="flex gap-5 md:gap-6 lg:gap-[70px]" >
             <img id="logo-img" src="../../img/Vector (1).svg" alt="Logo" class="nav-icon w-[42px] lg:w-[48px]" />
+            <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal sm:text-2xl lg:text-[32px]">Bumi.</h2>
           </div>
 
           <!-- Dekstop  -->
-          <div id="menu-container" class="flex w-full items-center justify-between">
-            <h2 id="site-title" class="nav-icon font-gloock text-xl font-normal text-white sm:text-2xl lg:text-[32px]">Bumi.</h2>
-
+          <div id="menu-container" class="flex w-full items-center justify-end">
             <!-- Desktop Menu -->
             <nav id="desktop-menu" class="lg:flex hidden items-center">
               <ul class="flex items-center gap-4 text-sm text-white">
-                <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
+                <li><img src="img/Vector 35.svg" alt="" class="nav-icon" /></li>
 
-                <li>
-                  <a href="../../index.html" class="nav-link hover:text-secondary transition-all">Home</a>
+                <li class="">
+                  <a href="index.html" class="nav-icon hover:text-secondary transition-all">Home</a>
                 </li>
 
-                <li><img src="../img/Vector 35.svg" alt="" class="nav-icon" /></li>
-                <li><a href="about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
-                <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <li><img src="../../img/Vector 35.svg" alt="" class="nav-icon" /></li>
+                <li><a href="src/html/about.html" class="nav-icon hover:text-secondary transition-all">About</a></li>
+                <li><img src="../../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                 <!-- Dropdown untuk Properties -->
                 <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
-                  <a href="properties.html" class="nav-link hover:text-secondary transition-all">Properties</a>
+                  <a href="#" class="nav-icon hover:text-secondary transition-all">Properties</a>
                   <img
                     src="../../img/Down.svg"
                     alt="Toggle Dropdown"
@@ -65,7 +64,9 @@
 
                   <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
                     <li>
-                      <a href="properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">properites</a>
+                      <a href="src/html/properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                        >properites</a
+                      >
                     </li>
                     <li class="group" onclick="event.preventDefault()">
                       <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
@@ -81,10 +82,10 @@
                   </ul>
                 </li>
 
-                <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <li><img src="../../img/Vector 31.svg" alt="" class="nav-icon" /></li>
                 <!-- Dropdown untuk Services -->
                 <li class="relative flex gap-4 items-center group">
-                  <a href="" class="nav-link hover:text-secondary transition-all">Services</a>
+                  <a href="" class="nav-icon hover:text-secondary transition-all">Services</a>
                   <img
                     src="../../img/Down.svg"
                     alt="Toggle Dropdown"
@@ -92,7 +93,9 @@
                     data-dropdown="services" />
                   <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
                     <li>
-                      <a href="services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Services</a>
+                      <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                        >Services</a
+                      >
                     </li>
                     <li class="group" onclick="event.preventDefault()">
                       <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Management</a>
@@ -114,11 +117,11 @@
                     </li>
                   </ul>
                 </li>
-                <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <li><img src="../../img/Vector 31.svg" alt="" class="nav-icon" /></li>
 
                 <!-- Dropdown untuk Resources -->
                 <li class="relative flex gap-4 items-center group">
-                  <a href="" class="nav-link hover:text-secondary transition-all">Resources</a>
+                  <a href="src/html/services.html" class="nav-icon hover:text-secondary transition-all">Resources</a>
                   <img
                     src="../../img/Down.svg"
                     alt="Toggle Dropdown"
@@ -126,7 +129,9 @@
                     data-dropdown="resources" />
                   <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
                     <li>
-                      <a href="Resources.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Resources</a>
+                      <a href="src/html/services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block"
+                        >Resources</a
+                      >
                     </li>
                     <li class="group">
                       <a
@@ -155,9 +160,11 @@
                   </ul>
                 </li>
 
-                <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
-                <li><a href="contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a></li>
-                <li><img src="../img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
+                <li>
+                  <a href="src/html/contact.html" class="nav-icon hover:text-secondary transition-all">Contact Us</a>
+                </li>
+                <li><img src="img/Vector 31.svg" alt="" class="nav-icon" /></li>
               </ul>
             </nav>
           </div>
@@ -709,7 +716,7 @@
     <footer id="site-footer" class="container max-w-[1440px] mx-auto pb-24">
       <div class="flex flex-col gap-24">
         <figure>
-          <img src="img/ImgFtrAbout.png" alt="" />
+          <img src="../../img/ImgFtrAbout.png" alt="" />
         </figure>
 
         <div class="flex flex-col lg:flex-row justify-between px-4 gap-10 lg:gap-0">

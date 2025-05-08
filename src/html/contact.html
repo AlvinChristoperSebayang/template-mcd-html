@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bumi agency</title>
-    <link rel="icon" href="img/Vector (1).svg" type="image/svg+xml" />
+
+    <link rel="icon" href="../../img/Vector (1).svg" type="image/svg+xml" />
 
     <!-- <link href="src/output.css" rel="stylesheet" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
@@ -379,25 +380,25 @@
       <div class="flex flex-col lg:flex-row justify-between md:pl-[82px] lg:pl-[138px] gap-16 w-full">
         <div class="flex flex-col gap-24 w-full">
           <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
-            <input type="text" id="fullname" name="fullname" placeholder="Full Name" class="w-full border-b border-grayFrom text-grayFrom py-6" />
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name" class="w-full border-b border-grayFrom py-6 px-2 text-gray-700 outline-none" />
 
-            <input type="email" id="fullname" name="fullname" placeholder="Email Adress" class="w-full border-b border-grayFrom text-grayFrom py-6" />
+            <input type="email" id="fullname" name="fullname" placeholder="Email Adress" class="w-full border-b border-grayFrom text-gray-700 py-6" />
 
             <input
               type="number"
               id="phoneNamber"
               name="phoneNamber"
               placeholder="Phone Number"
-              class="w-full border-b border-grayFrom text-grayFrom py-6" />
+              class="w-full border-b border-grayFrom py-6 px-2 text-gray-800 outline-none" />
 
-            <input type="text" id="subjek" name="subjek" placeholder="Subcjek" class="w-full border-b border-grayFrom text-grayFrom py-6" />
+            <input type="text" id="subjek" name="subjek" placeholder="Subcjek" class="w-full border-b border-grayFrom  py-6 px-2 text-gray-700 outline-none" />
 
             <input
               type="text"
               id="massage"
               name="massage"
               placeholder="Your Massager"
-              class="w-full border-b border-grayFrom text-grayFrom py-6 lg:col-span-2" />
+              class="w-full border-b border-grayFrom text-gray-700 py-6 lg:col-span-2" />
           </div>
 
           <div class="flex flex-col md:flex-row gap-6 md:gap-24">
@@ -438,7 +439,7 @@
             </div>
           </div>
           <div class="flex flex-col justify-end order-3 lg:order-2">
-            <ul class="flex gap-2 font-jakarta text-muted justify-center items-center lg:justify-start">
+            <ul class="flex gap-2 font-jakarta text-muted justify-center lg:justify-start">
               <li><img src="../../img/Vector 31.svg" alt="" /></li>
               <li><a href="" class="hover:text-dark transition duration-500">Meidum</a></li>
               <li><img src="../../img/Vector 31.svg" alt="" /></li>
@@ -454,10 +455,10 @@
           <div class="order-1 lg:order-3">
             <ul class="flex flex-col gap-6 font-gloock text-5xl md:text-[64px] leading-[120%] tracking-[2%] text-Tertiary text-center lg:text-right">
               <li><a href="../../index.html" class="text-dark">Home</a></li>
-              <li><a href="about.html" class="hover:text-dark transition duration-500">about</a></li>
-              <li><a href="services.html" class="hover:text-dark transition duration-500">services</a></li>
-              <li><a href="Resources.html" class="hover:text-dark transition duration-500">resources</a></li>
-              <li><a href="contact.html" class="hover:text-dark transition duration-500">contact</a></li>
+              <li><a href="about.html" class="hover:text-dark transition duration-500">About</a></li>
+              <li><a href="services.html" class="hover:text-dark transition duration-500">Services</a></li>
+              <li><a href="Resources.html" class="hover:text-dark transition duration-500">Resources</a></li>
+              <li><a href="contact.html" class="hover:text-dark transition duration-500">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -472,35 +473,41 @@
         const target = document.getElementById("target");
         const footer = document.getElementById("site-footer");
         const hamburgerBtn = document.getElementById("mobile-menu-button");
-
+    
         if (!header || !menuLinks || !logoImg || !target || !footer || !hamburgerBtn) {
           console.error("Pastikan semua elemen dengan ID yang disebut ada di HTML");
           return;
         }
-
+    
         [menuLinks, logoImg].forEach(el => {
           el.classList.add("transition-all", "duration-500", "ease-in-out");
         });
-
+    
         const show = el => {
           el.classList.remove("opacity-0", "-translate-y-4");
           el.classList.add("opacity-100", "translate-y-0");
         };
-
+    
         const hide = el => {
           el.classList.remove("opacity-100", "translate-y-0");
           el.classList.add("opacity-0", "-translate-y-4");
         };
-
+    
         function isFooterAtTop(el) {
           return el.getBoundingClientRect().top <= 10;
         }
-
+    
+        let lastScrollY = window.scrollY;
+    
         function onScroll() {
-          const pastHero = window.scrollY > target.offsetTop;
+          const currentScrollY = window.scrollY;
+          const scrollingUp = currentScrollY < lastScrollY;
+          lastScrollY = currentScrollY;
+    
+          const pastHero = currentScrollY > target.offsetTop;
           const footerReachedTop = isFooterAtTop(footer);
           const isMobile = window.innerWidth <= 767;
-
+    
           if (footerReachedTop) {
             if (isMobile) show(logoImg);
             show(menuLinks);
@@ -508,10 +515,18 @@
             logoImg.classList.remove("filter", "invert");
             hamburgerBtn.classList.remove("after-hero");
           } else if (pastHero) {
-            if (isMobile) hide(logoImg);
-            hide(menuLinks);
-            header.classList.remove("text-black");
-            hamburgerBtn.classList.add("after-hero");
+            if (scrollingUp) {
+              if (isMobile) show(logoImg);
+              show(menuLinks);
+              header.classList.add("text-black");
+              logoImg.classList.remove("filter", "invert");
+              hamburgerBtn.classList.remove("after-hero");
+            } else {
+              if (isMobile) hide(logoImg);
+              hide(menuLinks);
+              header.classList.remove("text-black");
+              hamburgerBtn.classList.add("after-hero");
+            }
           } else {
             if (isMobile) show(logoImg);
             show(menuLinks);
@@ -519,48 +534,47 @@
             hamburgerBtn.classList.remove("after-hero");
           }
         }
-
+    
         window.addEventListener("scroll", onScroll);
         window.addEventListener("resize", onScroll);
         onScroll();
       });
-
+    
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
       const heroImg = document.querySelector("div.relative.top-0");
       let menuOpen = false;
-
-      // Event scroll untuk cek posisi hamburger terhadap hero image
+    
       window.addEventListener("scroll", () => {
         if (!heroImg || !mobileMenuButton) return;
-
+    
         const heroBottom = heroImg.offsetTop + heroImg.offsetHeight;
         const buttonTop = mobileMenuButton.getBoundingClientRect().top + window.scrollY;
-
+    
         if (buttonTop < heroBottom) {
           mobileMenuButton.classList.add("text-black");
         } else {
           mobileMenuButton.classList.remove("text-black");
         }
       });
-
+    
       mobileMenuButton.addEventListener("click", event => {
         event.stopPropagation();
         toggleMenu();
       });
-
+    
       document.addEventListener("click", event => {
         if (menuOpen && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
           closeMenu();
         }
       });
-
+    
       function toggleMenu() {
         menuOpen = !menuOpen;
-
+    
         mobileMenuButton.classList.toggle("open", menuOpen);
         mobileMenuButton.classList.toggle("closed", !menuOpen);
-
+    
         if (menuOpen) {
           mobileMenu.classList.remove("translate-x-full", "opacity-0");
           mobileMenu.classList.add("translate-x-0", "opacity-100");
@@ -569,40 +583,40 @@
           closeMenu();
         }
       }
-
+    
       function closeMenu() {
         menuOpen = false;
         mobileMenuButton.classList.remove("open");
         mobileMenuButton.classList.add("closed");
-
+    
         mobileMenu.classList.remove("translate-x-0", "opacity-100");
         mobileMenu.classList.add("translate-x-full", "opacity-0");
-
+    
         document.body.style.overflow = "";
       }
-
+    
       window.dispatchEvent(new Event("scroll"));
-
+    
       // dropdown menu mobile
       document.addEventListener("DOMContentLoaded", () => {
         const toggles = document.querySelectorAll(".dropdown-toggle-mobile");
-
+    
         toggles.forEach(toggle => {
           const menu = toggle.closest("li").querySelector(".dropdown-menu");
           const arrow = toggle.querySelector("svg");
-
+    
           toggle.addEventListener("click", e => {
             e.stopPropagation();
-
+    
             const isOpen = menu.classList.contains("visible");
-
+    
             document.querySelectorAll(".dropdown-menu").forEach(m => {
               m.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
               m.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
             });
-
+    
             document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
-
+    
             if (!isOpen) {
               menu.classList.remove("max-h-0", "opacity-0", "invisible", "scale-y-95");
               menu.classList.add("max-h-96", "opacity-100", "visible", "scale-y-100");
@@ -610,16 +624,18 @@
             }
           });
         });
-
+    
         document.addEventListener("click", () => {
           document.querySelectorAll(".dropdown-menu").forEach(menu => {
             menu.classList.remove("max-h-96", "opacity-100", "visible", "scale-y-100");
             menu.classList.add("max-h-0", "opacity-0", "invisible", "scale-y-95");
           });
-
+    
           document.querySelectorAll(".dropdown-toggle-mobile svg").forEach(icon => icon.classList.remove("rotate-180"));
         });
       });
     </script>
+    
+    
   </body>
 </html>
