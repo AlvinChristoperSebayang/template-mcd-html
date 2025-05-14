@@ -3,7 +3,7 @@ export default {
   content: ["./*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
     screens: {
-      ss: "250px",
+      ss: "411px",
       default: "472px",
       sm: "640px",
       md: "768px",
@@ -24,8 +24,14 @@ export default {
       },
     },
 
-    extend: {},
+    extend: {
+      backgroundImage: {
+        aboutBg: "url('/asset/chatting.jpg')",
+      },
+      fontFamily: {
+        helvetica: "Helvetica",
+      },
+    },
   },
   plugins: [],
 };
-

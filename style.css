@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Helvetica";
+  src: url("./asset/font/helvetica-255/Helvetica.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "Satoshi", sans-serif;
 }
@@ -98,7 +105,7 @@ body {
 }
 
 @media (min-width: 866px) {
-  .shopify-p{
+  .shopify-p {
     width: 220px !important;
   }
 }
@@ -379,4 +386,12 @@ body {
   .bottom-custom2 {
     top: -240px;
   }
+}
+
+.light-purple {
+  @apply absolute w-[641px] h-[416px] bg-[#854cff42] blur-[100px] rounded-full z-[-1];
+}
+
+.light-blue {
+  @apply absolute w-[508px] h-[227px] lg:w-[641px] lg:h-[287px] bg-[#504cff59] blur-[100px] rounded-full z-[-1];
 }
