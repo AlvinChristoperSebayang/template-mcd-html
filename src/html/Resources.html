@@ -64,7 +64,11 @@
                 </li>
 
                 <li>
-                  <a href="../../index.html" class="nav-link hover:text-secondary transition-all">Home</a>
+                  <a href="../../index.html" class="nav-link relative group block text-dark transition-all"
+                    >Home
+                    <span
+                      class="absolute -bottom-1 left-1/2 h-[2px] w-0 bg-dark group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
                 </li>
 
                 <li>
@@ -73,7 +77,15 @@
                   </svg>
                 </li>
 
-                <li><a href="about.html" class="nav-link hover:text-secondary transition-all">About</a></li>
+                <!-- about -->
+                <li>
+                  <a href="about.html" class="nav-link relative group block text-dark transition-all"
+                    >About
+                    <span
+                      class="absolute -bottom-1 left-1/2 h-[2px] w-0 bg-dark group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
+                </li>
+
                 <li>
                   <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
@@ -81,8 +93,64 @@
                 </li>
 
                 <!-- Dropdown untuk Properties -->
-                <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
-                  <a href="properties.html" class="nav-link hover:text-secondary transition-all">Properties</a>
+                <li class="relative group">
+                  <!-- Trigger (link dan icon) -->
+                  <div class="flex gap-4 items-center">
+                    <a href="properties.html" class="nav-icon relative text-dark transition-all">
+                      Properties
+                      <span
+                        class="absolute -bottom-1 left-1/2 h-[2px] w-0 bg-dark group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                    </a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 8"
+                      fill="none"
+                      width="16"
+                      height="8"
+                      alt="Toggle Dropdown"
+                      class="cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
+                      data-dropdown="properties">
+                      <path
+                        d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round" />
+                    </svg>
+                  </div>
+
+                  <!-- Submenu -->
+                  <ul
+                    class="absolute -translate-x-5 left-0 top-full mt-2 w-28 bg-white text-gray-700 shadow-md rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <li>
+                      <a href="properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-dark transition-all block"> Properties </a>
+                    </li>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block cursor-not-allowed">Detail</a>
+                    </li>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block cursor-not-allowed">Searched</a>
+                    </li>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block cursor-not-allowed">
+                        Investment Opportunities
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
+                  </svg>
+                </li>
+
+                <!-- Services -->
+                <li class="relative group flex gap-4 items-center">
+                  <a href="services.html" class="nav-icon relative text-dark transition-all"
+                    >Services
+                    <span
+                      class="absolute -bottom-1 left-1/2 h-[2px] w-full bg-dark group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 8"
@@ -99,20 +167,22 @@
                       stroke-linecap="round" />
                   </svg>
 
-                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                  <ul
+                    class="absolute -translate-x-5 left-0 top-full text-gray-700 mt-2 w-28 bg-white shadow-lg rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <li>
-                      <a href="properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">properites</a>
+                      <a href="services.html" class="p-2 hover:text-dark hover:bg-gray-300 rounded-t-md transition-all block">Services</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Detail</a>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 transition-all block cursor-not-allowed">Management</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block group-hover:cursor-not-allowed">Searched</a>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 transition-all block cursor-not-allowed">Mortgage Calculator</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block group-hover:cursor-not-allowed"
-                        >Investment Opportunities</a
-                      >
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 transition-all block cursor-not-allowed">Buyer Guide</a>
+                    </li>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 rounded-b-md transition-all block cursor-not-allowed">Selling Guide</a>
                     </li>
                   </ul>
                 </li>
@@ -123,55 +193,14 @@
                   </svg>
                 </li>
 
-                <li class="relative flex gap-4 items-center group">
-                  <a href="services.html" class="nav-link hover:text-secondary transition-all">Services</a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 8"
-                    fill="none"
-                    width="16"
-                    height="8"
-                    alt="Toggle Dropdown"
-                    class="cursor-pointer transition-transform duration-700 ease-[cubic-bezier(0.4, 0, 0.2, 1)] transform group-hover:rotate-180"
-                    data-dropdown="properties">
-                    <path
-                      d="M15 0.97998L8.78095 6.3106C8.33156 6.69578 7.66844 6.69578 7.21905 6.3106L1 0.97998"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-linecap="round" />
-                  </svg>
-                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
-                    <li>
-                      <a href="services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Services</a>
-                    </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block">Management</a>
-                    </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                        >Mortgage Calculator</a
-                      >
-                    </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
-                        >Buyer Guide</a
-                      >
-                    </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                        >Selling Guide</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
-                  </svg>
-                </li>
+                <!-- Resources -->
+                <li class="relative group flex gap-4 items-center">
+                  <a href="Resources.html" class="nav-icon relative group block text-dark">
+                    Resources
+                    <span
+                      class="absolute -bottom-1 left-1/2 h-[2px] w-0 bg-dark group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
 
-                <li class="relative flex gap-4 items-center group">
-                  <a href="Resources.html" class="nav-link hover:text-secondary transition-all">Resources</a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 8"
@@ -188,33 +217,34 @@
                       stroke-linecap="round" />
                   </svg>
 
-                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
+                  <ul
+                    class="absolute -translate-x-5 left-0 top-full mt-2 w-30 bg-white text-gray-700 shadow-lg rounded-md z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <li>
-                      <a href="Resources.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 transition-all block">Resources</a>
+                      <a href="Resources.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-dark transition-all block"> Resources </a>
                     </li>
-                    <li class="group">
+                    <li>
                       <a
-                        href=""
+                        href="#"
                         onclick="event.preventDefault()"
-                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block"
-                        >Market Trends</a
-                      >
+                        class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block cursor-not-allowed">
+                        Market Trends
+                      </a>
                     </li>
-                    <li class="group">
+                    <li>
                       <a
-                        href=""
+                        href="#"
                         onclick="event.preventDefault()"
-                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                        >Bloge</a
-                      >
+                        class="p-2 hover:bg-gray-300 hover:text-gray-700 transition-all block cursor-not-allowed">
+                        Bloge
+                      </a>
                     </li>
-                    <li class="group">
+                    <li>
                       <a
-                        href=""
+                        href="#"
                         onclick="event.preventDefault()"
-                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block"
-                        >Detail Bloge</a
-                      >
+                        class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 transition-all block cursor-not-allowed">
+                        Detail Bloge
+                      </a>
                     </li>
                   </ul>
                 </li>
@@ -225,7 +255,13 @@
                   </svg>
                 </li>
 
-                <li><a href="contact.html" class="nav-link hover:text-secondary transition-all">Contact Us</a></li>
+                <li>
+                  <a href="contact.html" class="nav-link relative group block text-dark transition-all"
+                    >Contact Us
+                    <span
+                      class="absolute -bottom-1 left-1/2 h-[2px] w-0 bg-dark group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
+                </li>
                 <li>
                   <svg class="" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 16.98L9 0.97998" stroke="black" stroke-opacity="0.5" />
@@ -329,7 +365,7 @@
                 <!-- Resources -->
                 <li class="w-[150px] group">
                   <div class="flex gap-2 items-center justify-between">
-                    <a href="Resources.html" class="text-2xl hover:text-gray-700">Resources</a>
+                    <a href="Resources.html" class="text-2xl hover:text-gray-700 font-semibold">Resources</a>
                     <button class="dropdown-toggle-mobile text-black">
                       <svg
                         class="transition-transform duration-300 ease-in-out group-hover:rotate-180"

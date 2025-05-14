@@ -62,7 +62,12 @@
                 </li>
 
                 <li>
-                  <a href="../../index.html" class="nav-link hover:text-secondary">Home</a>
+                  <a href="../../index.html" class="group relative block text-white hover:text-secondary transition-all">
+                    Home
+                    <span
+                      class="menu-underline absolute -bottom-1 left-1/2 h-[2px] w-0 bg-secondary group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2 group-[.active-section]:bg-black">
+                    </span>
+                  </a>
                 </li>
 
                 <li>
@@ -71,7 +76,15 @@
                   </svg>
                 </li>
 
-                <li><a href="about.html" class="nav-link hover:text-secondary">About</a></li>
+                <li>
+                  <a href="about.html" class="nav-link relative group block text-white hover:text-secondary transition-all active:text-secondary">
+                    About
+                    <span
+                      class="menu-underline menuLinks absolute -bottom-1 left-1/2 h-[2px] w-full bg-secondary group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2 active:bg-secondary">
+                    </span>
+                  </a>
+                </li>
+
                 <li>
                   <svg class="icon" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 16.98L9 0.97998" stroke="white" stroke-opacity="0.5" />
@@ -79,8 +92,12 @@
                 </li>
 
                 <!-- Dropdown untuk Properties -->
-                <li class="relative flex gap-4 items-center group" id="desktop-menu-item">
-                  <a href="properties.html" class="nav-link hover:text-secondary">Properties</a>
+                <li class="relative group flex gap-4 items-center" id="desktop-menu-item">
+                  <a href="properties.html" class="nav-link relative group block text-white hover:text-secondary transition-all"
+                    >Properties
+                    <span
+                      class="menu-underline absolute -bottom-1 left-1/2 h-[2px] w-0 bg-secondary group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 8"
@@ -97,18 +114,19 @@
                       stroke-linecap="round" />
                   </svg>
 
-                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+                  <ul
+                    class="absolute -translate-x-5 left-0 top-full mt-2 w-28 bg-white !text-gray-700 shadow-md rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <li>
-                      <a href="properties.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 block">properites</a>
+                      <a href="properties.html" class="p-2 hover:bg-gray-300 rounded-t-lg !text-gray-700 hover:!text-dark block">Properties</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 block group-hover:cursor-not-allowed">Detail</a>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 !text-gray-700 block cursor-not-allowed">Detail</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 block group-hover:cursor-not-allowed">Searched</a>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 hover:text-gray-700 !text-gray-700 block cursor-not-allowed">Searched</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 block group-hover:cursor-not-allowed"
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 rounded-b-lg hover:text-gray-700 !text-gray-700 block cursor-not-allowed"
                         >Investment Opportunities</a
                       >
                     </li>
@@ -121,8 +139,13 @@
                   </svg>
                 </li>
 
-                <li class="relative flex gap-4 items-center group">
-                  <a href="services.html" class="nav-link hover:text-secondary">Services</a>
+                <!-- services -->
+                <li class="relative group flex gap-4 items-center" id="desktop-menu-item">
+                  <a href="services.html" class="nav-link relative group block text-white hover:text-secondary transition-all"
+                    >Properties
+                    <span
+                      class="menu-underline absolute -bottom-1 left-1/2 h-[2px] w-0 bg-secondary group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 8"
@@ -138,36 +161,39 @@
                       stroke-width="1.5"
                       stroke-linecap="round" />
                   </svg>
-                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-lg z-50">
+
+                  <ul
+                    class="absolute -translate-x-5 left-0 top-full mt-2 w-28 bg-white shadow-md rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <li>
-                      <a href="services.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 block">Services</a>
+                      <a href="services.html" class="p-2 !text-gray-700 hover:bg-gray-300 rounded-t-lg hover:!text-dark block">Properties</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 block">Management</a>
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 !text-gray-700 hover:text-gray-700 block cursor-not-allowed">Management</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 block"
-                        >Mortgage Calculator</a
-                      >
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 !text-gray-700 hover:text-gray-700 block cursor-not-allowed">Buyer Guide</a>
                     </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 block">Buyer Guide</a>
-                    </li>
-                    <li class="group" onclick="event.preventDefault()">
-                      <a href="#" class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 block"
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 !text-gray-700 rounded-b-lg hover:text-gray-700 block cursor-not-allowed"
                         >Selling Guide</a
                       >
                     </li>
                   </ul>
                 </li>
+
                 <li>
                   <svg class="icon" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 16.98L9 0.97998" stroke="white" stroke-opacity="0.5" />
                   </svg>
                 </li>
 
-                <li class="relative flex gap-4 items-center group">
-                  <a href="Resources.html" class="nav-link hover:text-secondary">Resources</a>
+                <!-- Resources -->
+                <li class="relative group flex gap-4 items-center" id="desktop-menu-item">
+                  <a href="Resources.html" class="nav-link relative group block text-white hover:text-secondary transition-all"
+                    >Resources
+                    <span
+                      class="menu-underline absolute -bottom-1 left-1/2 h-[2px] w-0 bg-secondary group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 8"
@@ -184,32 +210,20 @@
                       stroke-linecap="round" />
                   </svg>
 
-                  <ul class="absolute left-0 top-full mt-0.5 w-28 bg-white text-primary shadow-md hidden group-hover:block rounded-md">
+                  <ul
+                    class="absolute -translate-x-5 left-0 top-full mt-2 w-28 bg-white shadow-md rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <li>
-                      <a href="Resources.html" class="p-2 hover:bg-gray-300 rounded-t-md hover:text-gray-700 block">Resources</a>
+                      <a href="Resources.html" class="p-2 !text-gray-700 hover:bg-gray-300 rounded-t-lg hover:!text-dark block">Resources</a>
                     </li>
-                    <li class="group">
-                      <a
-                        href=""
-                        onclick="event.preventDefault()"
-                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 hover:text-gray-700 block"
-                        >Market Trends</a
-                      >
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 !text-gray-700 hover:text-gray-700 block cursor-not-allowed">Bloge</a>
                     </li>
-                    <li class="group">
-                      <a
-                        href=""
-                        onclick="event.preventDefault()"
-                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 block"
-                        >Bloge</a
-                      >
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 !text-gray-700 hover:text-gray-700 block cursor-not-allowed">Detail Bloge</a>
                     </li>
-                    <li class="group">
-                      <a
-                        href=""
-                        onclick="event.preventDefault()"
-                        class="group-hover:cursor-not-allowed p-2 hover:bg-gray-300 rounded-b-md hover:text-gray-700 block"
-                        >Detail Bloge</a
+                    <li onclick="event.preventDefault()">
+                      <a href="#" class="p-2 hover:bg-gray-300 !text-gray-700 rounded-b-lg hover:text-gray-700 block cursor-not-allowed"
+                        >Selling Guide</a
                       >
                     </li>
                   </ul>
@@ -221,7 +235,13 @@
                   </svg>
                 </li>
 
-                <li><a href="contact.html" class="nav-link hover:text-secondary">Contact Us</a></li>
+                <li>
+                  <a href="contact.html" class="nav-link relative group block text-white hover:text-secondary transition-all"
+                    >Contact Us
+                    <span
+                      class="menu-underline absolute -bottom-1 left-1/2 h-[2px] w-0 bg-secondary group-hover:w-full transition-all duration-300 origin-center -translate-x-1/2"></span>
+                  </a>
+                </li>
                 <li>
                   <svg class="icon" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 16.98L9 0.97998" stroke="white" stroke-opacity="0.5" />
@@ -256,12 +276,12 @@
               class="fixed inset-0 bg-white text-black transform translate-x-full opacity-0 transition-all duration-500 ease-in-out z-50">
               <ul class="sm:h-full flex flex-col space-y-6 mt-16 ps-5 -translate-y-1.5">
                 <li class="w-[150px]"><a href="../../index.html" class="text-2xl hover:text-white">Home</a></li>
-                <li class="w-[150px]"><a href="about.html" class="text-2xl hover:text-white">About</a></li>
+                <li class="w-[150px]"><a href="about.html" class="font-semibold text-2xl hover:text-white">About</a></li>
 
                 <!-- Properties -->
                 <li class="w-[150px] group">
                   <div class="flex gap-2 items-center justify-between">
-                    <a href="#" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
+                    <a href="properties.html" class="text-2xl text-black hover:text-gray-700 group-hover:text-gray-700 group"> Properties </a>
                     <button class="dropdown-toggle-mobile text-black group-hover:rotate-180 transition-transform duration-300 ease-in-out">
                       <svg
                         class="arrow-icon transition-transform duration-300 ease-in-out"
@@ -362,7 +382,7 @@
     </header>
 
     <section
-      class="relative top-0 mx-auto h-screen w-full overflow-hidden bg-[url('../img/heroAbout.png')]  transition-all bg-cover bg-center bg-no-repeat"></section>
+      class="relative top-0 mx-auto h-screen w-full overflow-hidden bg-[url('../img/heroAbout.png')] transition-all bg-cover bg-center bg-no-repeat"></section>
 
     <section id="target" class="container max-w-[1440px] mx-auto py-24 md:py-[130px] lg:py-[208px] h-[679px] md:h-[861px] border-b border-gray-400">
       <div class="px-4 flex flex-col gap-10">
@@ -501,6 +521,7 @@
     </footer>
 
     <script>
+      // Ambil elemen-elemen penting
       const header = document.getElementById("site-header");
       const menuLinks = document.getElementById("menu-links");
       const logoImg = document.getElementById("logo-img");
@@ -511,146 +532,150 @@
       const icon = document.querySelectorAll(".icon path");
       const sections = document.querySelectorAll("section");
 
+      // Ambil semua underline span
+      const underlines = document.querySelectorAll(".menu-underline");
+
+      // Fungsi untuk update warna underline
+      // isBlack = true → bg-black, else bg-secondary
+      function updateUnderlineColor(isBlack) {
+        underlines.forEach(span => {
+          span.classList.toggle("bg-secondary", !isBlack);
+          span.classList.toggle("bg-black", isBlack);
+        });
+      }
+
+      // Fungsi untuk update warna teks/menu (sudah ada)
+      function updateMenuTextColor(isWhite) {
+        menuLinks.classList.remove("text-white", "text-black");
+        menuLinks.classList.add(isWhite ? "text-white" : "text-black");
+
+        menuLinks.querySelectorAll("a, span").forEach(el => {
+          el.classList.remove("text-white", "text-black");
+          el.classList.add(isWhite ? "text-white" : "text-black");
+          el.style.color = isWhite ? "#ffffff" : "black";
+        });
+      }
+
+      // Utility show/hide dengan animation classes
+      const show = el => {
+        el.classList.remove("opacity-0", "-translate-y-4");
+        el.classList.add("opacity-100", "translate-y-0", "transition-all", "duration-400", "ease-in-out");
+      };
+      const hide = el => {
+        el.classList.remove("opacity-100", "translate-y-0");
+        el.classList.add("opacity-0", "-translate-y-4", "transition-all", "duration-400", "ease-in-out");
+      };
+
+      // Helpers untuk scroll
+      function isFooterAtTop(el) {
+        return el.getBoundingClientRect().top <= 10;
+      }
+      function isPastSection(section) {
+        return window.scrollY > section.offsetTop + section.offsetHeight - 50;
+      }
+
+      let lastScrollY = window.scrollY;
+      let isMenuHidden = false;
+
+      function onScroll() {
+        const currentScroll = window.scrollY;
+        const pastHero = currentScroll > target.offsetTop;
+        const footerReachedTop = isFooterAtTop(footer);
+        const isMobile = window.innerWidth <= 767;
+        const scrollingDown = currentScroll > lastScrollY;
+        const scrollingUp = currentScroll < lastScrollY;
+        const pastSection = Array.from(sections).some(section => isPastSection(section));
+
+        // Jika sudah ke footer
+        if (footerReachedTop) {
+          if (isMobile) show(logoImg);
+          show(menuLinks);
+
+          // Icon & logo jadi hitam
+          header.classList.add("text-black");
+          path.classList.replace("fill-white", "fill-black");
+          icon.forEach(i => i.classList.replace("stroke-white", "stroke-black"));
+          logoImg.classList.remove("filter", "invert");
+
+          updateMenuTextColor(false);
+          updateUnderlineColor(true);
+
+          // Scroll turun melewati hero
+        } else if (pastHero && scrollingDown) {
+          if (isMobile) hide(logoImg);
+          hide(menuLinks);
+          header.classList.remove("text-black");
+          hamburgerBtn.classList.add("after-hero");
+          isMenuHidden = true;
+
+          // Scroll naik kembali
+        } else if (scrollingUp && isMenuHidden && currentScroll < lastScrollY - 10) {
+          if (isMobile) show(logoImg);
+          show(menuLinks);
+
+          header.classList.add("text-black");
+          path.classList.replace("fill-white", "fill-black");
+          icon.forEach(i => i.classList.replace("stroke-white", "stroke-black"));
+
+          updateMenuTextColor(false);
+          updateUnderlineColor(true);
+          isMenuHidden = false;
+
+          // Kembali di atas hero
+        } else if (!pastHero) {
+          if (isMobile) show(logoImg);
+          show(menuLinks);
+
+          header.classList.remove("text-black");
+          hamburgerBtn.classList.remove("after-hero");
+          path.classList.replace("fill-black", "fill-white");
+          icon.forEach(i => i.classList.replace("stroke-black", "stroke-white"));
+
+          updateMenuTextColor(true);
+          updateUnderlineColor(false);
+        }
+
+        // Terlewat section manapun?
+        if (pastSection) {
+          path.classList.replace("fill-white", "fill-black");
+          icon.forEach(i => i.classList.replace("stroke-white", "stroke-black"));
+          updateMenuTextColor(false);
+          updateUnderlineColor(true);
+        } else {
+          path.classList.replace("fill-black", "fill-white");
+          icon.forEach(i => i.classList.replace("stroke-black", "stroke-white"));
+          updateMenuTextColor(true);
+          updateUnderlineColor(false);
+        }
+
+        lastScrollY = currentScroll;
+      }
+
+      // Inisialisasi
       if (!header || !menuLinks || !logoImg || !target || !footer || !hamburgerBtn) {
         console.error("Pastikan semua elemen dengan ID yang disebut ada di HTML");
       } else {
-        [menuLinks, logoImg].forEach(el => {
-          // el.classList.add("transition-all", "duration-500", "ease-in-out");
-        });
-
+        // Set default icon & logo
         path.classList.add("fill-white");
         icon.forEach(i => i.classList.add("stroke-white"));
-
-        const show = el => {
-          el.classList.remove("opacity-0", "-translate-y-4");
-          el.classList.add("opacity-100", "translate-y-0", "transition-all", "duration-400", "ease-in-out");
-        };
-
-        const hide = el => {
-          el.classList.remove("opacity-100", "translate-y-0");
-          el.classList.add("opacity-0", "-translate-y-4", "transition-all", "duration-400", "ease-in-out");
-        };
-
-        function isFooterAtTop(el) {
-          return el.getBoundingClientRect().top <= 10;
-        }
-
-        function isPastSection(section) {
-          return window.scrollY > section.offsetTop + section.offsetHeight - 50;
-        }
-
-        let lastScrollY = window.scrollY;
-        let isMenuHidden = false;
-
-        function onScroll() {
-          const currentScroll = window.scrollY;
-          const pastHero = currentScroll > target.offsetTop;
-          const footerReachedTop = isFooterAtTop(footer);
-          const isMobile = window.innerWidth <= 767;
-          const scrollingDown = currentScroll > lastScrollY;
-          const scrollingUp = currentScroll < lastScrollY;
-
-          const pastSection = Array.from(sections).some(section => isPastSection(section));
-
-          // Saat footer terlihat
-          if (footerReachedTop) {
-            if (isMobile) show(logoImg);
-            show(menuLinks);
-            header.classList.add("text-black");
-            path.classList.remove("fill-white");
-            path.classList.add("fill-black");
-            icon.forEach(i => {
-              i.classList.remove("stroke-white");
-              i.classList.add("stroke-black");
-            });
-            logoImg.classList.remove("filter", "invert");
-            menuLinks.classList.remove("text-white");
-            menuLinks.classList.add("text-black");
-          }
-          // Saat scroll ke bawah
-          else if (pastHero && scrollingDown) {
-            if (isMobile) hide(logoImg);
-            hide(menuLinks);
-            header.classList.remove("text-black");
-            hamburgerBtn.classList.add("after-hero");
-            isMenuHidden = true;
-          }
-          // Saat scroll ke atas
-          else if (scrollingUp && isMenuHidden && currentScroll < lastScrollY - 10) {
-            if (isMobile) show(logoImg);
-            show(menuLinks);
-            header.classList.add("text-black");
-            path.classList.remove("fill-white");
-            path.classList.add("fill-black");
-            icon.forEach(i => {
-              i.classList.remove("stroke-white");
-              i.classList.add("stroke-black");
-            });
-            menuLinks.classList.remove("text-white");
-            menuLinks.classList.add("text-black");
-            isMenuHidden = false;
-          }
-          // Saat masih di hero
-          else if (!pastHero) {
-            if (isMobile) show(logoImg);
-            show(menuLinks);
-            header.classList.remove("text-black");
-            hamburgerBtn.classList.remove("after-hero");
-            path.classList.remove("fill-black");
-            path.classList.add("fill-white");
-            icon.forEach(i => {
-              i.classList.add("stroke-white");
-              i.classList.remove("stroke-black");
-            });
-            menuLinks.classList.remove("text-black");
-            menuLinks.classList.add("text-white");
-          }
-
-          // Deteksi apakah sudah melewati section tertentu
-          if (pastSection) {
-            path.classList.remove("fill-white");
-            path.classList.add("fill-black");
-            icon.forEach(i => {
-              i.classList.remove("stroke-white");
-              i.classList.add("stroke-black");
-            });
-            menuLinks.classList.remove("text-white");
-            menuLinks.classList.add("text-black");
-          } else {
-            path.classList.add("fill-white");
-            path.classList.remove("fill-black");
-            icon.forEach(i => {
-              i.classList.add("stroke-white");
-              i.classList.remove("stroke-black");
-            });
-            menuLinks.classList.remove("text-black");
-            menuLinks.classList.add("text-white");
-          }
-
-          lastScrollY = currentScroll;
-        }
 
         window.addEventListener("scroll", onScroll);
         window.addEventListener("resize", onScroll);
         onScroll();
       }
 
+      // Tambah kelas active pada link yang di-klik
+      document.querySelectorAll("a").forEach(item => {
+        item.addEventListener("click", function () {
+          document.querySelectorAll("a").forEach(link => link.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+
       // Mobile menu toggle
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
-      const heroImg = document.querySelector("div.relative.top-0");
       let menuOpen = false;
-
-      // window.addEventListener("scroll", () => {
-      //   // const heroBottom = heroImg.offsetTop + heroImg.offsetHeight;
-      //   const buttonTop = mobileMenuButton.getBoundingClientRect().top + window.scrollY;
-      //   if (buttonTop < heroBottom) {
-      //     mobileMenuButton.classList.add("text-black");
-      //   } else {
-      //     mobileMenuButton.classList.remove("text-white");
-      //     mobileMenuButton.classList.add("text-black");
-      //   }
-      // });
 
       mobileMenuButton.addEventListener("click", event => {
         event.stopPropagation();
@@ -671,6 +696,7 @@
           mobileMenu.classList.remove("translate-x-full", "opacity-0");
           mobileMenu.classList.add("translate-x-0", "opacity-100");
           document.body.style.overflow = "hidden";
+          onScroll();
         } else {
           closeMenu();
         }
@@ -684,8 +710,6 @@
         mobileMenu.classList.add("translate-x-full", "opacity-0");
         document.body.style.overflow = "";
       }
-
-      window.dispatchEvent(new Event("scroll"));
 
       // Dropdown menu mobile
       document.addEventListener("DOMContentLoaded", () => {
