@@ -228,7 +228,7 @@
           ></div>
 
           <div
-            class="absolute w-[427px] h-[190px] md:w-[450px] md:h-[287px] bg-[#854CFF] blur-[100px] hidden md:block md:right-[5%] top-[100px] md:top-[20%]"
+            class="absolute w-[427px] h-[190px] z-20 md:w-[450px] md:h-[287px] bg-[#854CFF] blur-[100px] hidden md:block md:right-[5%] top-[100px] md:top-[20%]"
           ></div>
 
           <div
@@ -280,7 +280,7 @@
               </div>
 
               <div class="form-content">
-                <label for="service  type">Name</label>
+                <label for="project-type">Project Type</label>
 
                 <div class="flex flex-row flex-wrap gap-[16px] mt-[16px]">
                   <label
@@ -318,14 +318,14 @@
                     </div>
                   </label>
                   <label
-                    for="Shopify"
+                    for="shopify"
                     class="flex items-center gap-2 cursor-pointer"
                   >
                     <input
                       type="radio"
                       name="service"
                       id="shopify"
-                      value="Shopify"
+                      value="shopify"
                       class="sr-only peer"
                     />
                     <div
@@ -335,7 +335,7 @@
                     </div>
                   </label>
                   <label
-                    for="Branding"
+                    for="branding"
                     class="flex items-center gap-2 cursor-pointer"
                   >
                     <input
@@ -371,7 +371,7 @@
                   </div>
                 </div>
                 <div class="flex flex-col mt-[16px]">
-                  <label for="price range">Name</label>
+                  <label for="price range">Pricing</label>
                   <div
                     class="radio-items-wrap flex flex-row gap-[16px] mt-[16px]"
                   >
@@ -381,7 +381,7 @@
                     >
                       <input
                         type="radio"
-                        name="service"
+                        name="price"
                         id="under5k"
                         value="under5k"
                         class="sr-only peer"
@@ -393,13 +393,13 @@
                       </div>
                     </label>
                     <label
-                      for="10-15k"
+                      for="10k15k"
                       class="flex items-center gap-2 cursor-pointer"
                     >
                       <input
                         type="radio"
-                        name="10-15k"
-                        id="10_to_15k"
+                        name="price"
+                        id="10k15k"
                         value="10-15k"
                         class="sr-only peer"
                       />
@@ -410,13 +410,13 @@
                       </div>
                     </label>
                     <label
-                      for="15k-20k"
+                      for="15k20k"
                       class="flex items-center gap-2 cursor-pointer"
                     >
                       <input
                         type="radio"
-                        name="15k-20k"
-                        id="15k_to_20k"
+                        name="price"
+                        id="15k20k"
                         value="15k-20k"
                         class="sr-only peer"
                       />
@@ -432,7 +432,7 @@
                     >
                       <input
                         type="radio"
-                        name="20k"
+                        name="price"
                         id="20k"
                         value="20k"
                         class="sr-only peer"
