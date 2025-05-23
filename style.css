@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-  font-size: 16px;
+  --primary: #7240ff;
+  --primary-btn: #050810;
+  --primary-dark: #050810;
 }
 
 #site-header .navigation-wrapper {
@@ -18,12 +20,27 @@
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
 
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 80px;
+  /* justify-content: center; */
+}
+
 h1,
 h2,
+h3,
+h4,
 p,
 span {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: normal;
+  font-weight: 400;
+}
+
+p {
+  color: #c7cad1;
 }
 
 h2 {
@@ -46,14 +63,19 @@ h2 {
 }
 
 button {
-  padding: 12px 24px;
   border-radius: 100px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-section {
+/* section {
   padding-left: 5rem;
   padding-right: 5rem;
-}
+} */
 
 @media (max-width: 1024px) {
   section {
@@ -126,7 +148,7 @@ header li {
 }
 
 .headBackgroundSize {
-  background-size: 100% 100%;
+  background-size: 140% 100%;
   background-position: center;
 }
 
@@ -157,12 +179,10 @@ header li {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-.faq-header:hover img {
+/* .faq-header:hover img {
   transform: rotate(180deg);
-  /* Ikon berputar saat hover */
   transition: transform 0.3s ease-in-out;
-  /* Transisi lebih smooth */
-}
+} */
 
 .faq-header {
   cursor: pointer;
@@ -280,4 +300,196 @@ header li {
 
 footer li a {
   @apply hover:text-white duration-150;
+}
+
+/* button card list */
+.btn-list {
+  display: flex;
+  border: 1px solid #c7cad1;
+  padding: 4px 12px;
+  gap: 4px;
+  border-radius: 100px;
+  color: #747b8b;
+}
+
+.card-download{
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 240, 255, 1),
+    rgba(244, 240, 255, 0)
+  );
+}
+
+/* about css */
+.card-team {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 240, 255, 1),
+    rgba(244, 240, 255, 0)
+  );
+  width: 100%;
+  max-width: 302px;
+  height: 100%;
+  max-height: 338px;
+  border-radius: 14px;
+  border: 1px solid #d9ccff;
+}
+
+.card-team img {
+  width: 100%;
+  max-width: 302px;
+  height: 100%;
+  max-height: 367px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-team img:hover {
+  transform: scale(1.05);
+}
+
+.card-car-product {
+  transition: transform 0.3s ease;
+}
+
+.card-cover:hover .card-car-product {
+  transform: scale(0.95);
+}
+
+/* .text-team{
+  position: relative;
+  bottom: 95px;
+  margin: auto;
+  width: 100%;
+  max-width: 258px;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+} */
+
+.text-team {
+  position: relative;
+  bottom: 95px;
+  margin: auto;
+  width: 100%;
+  max-width: 258px;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+
+  /* Tambahan efek */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.text-team:active {
+  transform: scale(0.96);
+}
+
+.text-team::before,
+.text-team::after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+.card-team:hover .text-team::before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+.card-team:hover .text-team::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.text-team h5 {
+  font-size: 24px;
+  line-height: 32px;
+  color: rgba(5, 8, 16, 1);
+  letter-spacing: -0.6px;
+}
+
+.text-team p {
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(116, 123, 139, 1);
+}
+/* about css */
+
+/* range */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 0;
+  height: 0;
 }

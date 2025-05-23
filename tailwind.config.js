@@ -25,13 +25,9 @@ export default {
       },
       container: {
         center: true,
-        padding: "0rem",
-        screens: {
-          sm: "640px",
-          md: "768px",
-          lg: "1024px",
-          xl: "1200px",
-        },
+        width: "100%",
+        maxWidth: "1440px",
+        paddingInline: "80px",
       },
     },
   },
