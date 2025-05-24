@@ -357,7 +357,9 @@
 
         <!-- use map start -->
         <section class="container py-[80px] flex flex-row gap-[60px]">
-          <img src="/map.png" alt="banner goal" />
+          <a href="map.png" data-fslightbox="gallery">
+          <img class="hover:scale-105 transition-all duration-300" src="/map.png" alt="banner goal"  />
+        </a>
           <ul class="flex flex-col gap-6 items-start justify-center">
             <li class="w-full max-w-[639px] text-[64px] leading-[72px] text-[#050810]">We have provided many routes for you, and you just have to use them.</li>
             <li class="w-full max-w-[639px] text-[20px] leading-8 text-[#8C8C8C]">
@@ -578,6 +580,7 @@
 
    <!-- footer start -->
    <footer id="site-footer" class="bg-[#050810] relative overflow-hidden">
+    <div class="container">
     <div class="absolute max-xl:scale-150 max-md:top-[6px] md:max-xl:top-[16px]">
      <img src="./Light.png" alt="light">
     </div>
@@ -637,12 +640,13 @@
          <li class="pl-6"><a href="">Provicy Policie</a></li>
        </ul>
      </div>
- 
+    </div>
    </footer>
   <!-- footer end -->
 
     <script type="module" src="main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
     <script>
       const imageSlider = new Swiper(".imageSlider", {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -11,435 +12,558 @@
     />
     <title>Document</title>
   </head>
-  <body>
-    <section class="bg-[var(--primary)]">
-      <div class="flex flex-row">
+  <body class="bg-[var(--primary)]">
+    <section class="bg-[var(--primary)] w-full">
+      <div class="flex flex-col-reverse md:flex-row">
         <div
-          class="w-full px-[121px] pb-[141px] max-w-[720px] pt-[70px] bg-white"
+          class="bg-register md:bottom-0 w-full h-full max-h-[420px] md:max-h-full px-6 md:min-w-[524px] md:px-8 xl:px-[121px] pb-0 md:pb-[141px] max-w-full md:max-w-[720px] pt-[70px] bg-white"
         >
-          <img
-            class="flex justify-center m-auto pb-[70px]"
-            src="/logo-in-regis.svg"
-            alt=""
-          />
-          <div class="w-full max-w-[462px] flex gap-6 flex-col">
-            <div class="flex flex-row w-fit items-center gap-1">
-              <img src="/back-arrow.svg" alt="" />
-              <p>Back</p>
-            </div>
-            <div class="w-full max-w-[462px] flex gap-4 flex-col">
-              <h2 class="text-[48px] leading-[1.1] ctext-[var(--primary-dark)]">
-                Create you Account
-              </h2>
-              <p class="text-[20px] text-[#696F7D] leading-[1.6]">
-                Many Car in our Company clean and comfortable
-              </p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <form class="flex flex-col gap-4" action="submit">
-                <div
-                  class="flex items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] px-4 py-[14px] gap-[10px]"
+          <div
+            class="img-register z-30 px-4 flex flex-col justify-end mx-auto rounded-[24px] md:rounded-none items-center md:px-0 bg-white"
+          >
+            <img
+              class="flex justify-center m-auto pb-[70px]"
+              src="/logo-in-regis.svg"
+              alt=""
+              data-aos="fade-down"
+              data-aos-delay="700"
+              data-aos-duration="900"
+            />
+            <div class="w-full max-w-[462px] flex gap-6 flex-col">
+              <div
+                class="flex flex-row w-fit items-center gap-1 cursor-pointer"
+              >
+                <img
+                  data-aos="fade-down"
+                  data-aos-delay="450"
+                  data-aos-duration="600"
+                  src="/back-arrow.svg"
+                  alt=""
+                />
+                <p
+                class="text-[var(--primary-dark)] text-[16px] "
+                  data-aos="fade-down"
+                  data-aos-delay="450"
+                  data-aos-duration="600"
                 >
-                  <img src="/form-name.svg" alt="icon" class="w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    class="flex-1 outline-none border-none bg-transparent placeholder:text-[#9CA3AF]"
-                  />
-                </div>
-                <div
-                  class="flex items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] px-4 py-[14px] gap-[10px]"
+                  Back
+                </p>
+              </div>
+              <div class="w-full max-w-[462px] flex gap-4 flex-col">
+                <h2
+                  class="text-[24px] md:text-[32px] lg:text-[48px] leading-[1.1] ctext-[var(--primary-dark)]"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                  data-aos-duration="600"
                 >
-                  <img src="/input-email.svg" alt="icon" class="w-5 h-5" />
-                  <input
-                    type="email"
-                    placeholder="name@example.com"
-                    class="flex-1 outline-none border-none bg-transparent placeholder:text-[#9CA3AF]"
-                  />
-                </div>
-                <div class="relative">
+                  Create you Account
+                </h2>
+                <p
+                  class="text-[16px] md:text-[20px] text-[#696F7D] leading-[1.6]"
+                  data-aos="fade-down"
+                  data-aos-delay="200"
+                  data-aos-duration="500"
+                >
+                  Many Car in our Company clean and comfortable
+                </p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <form class="flex flex-col gap-4" action="submit">
                   <div
-                    class="flex items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] pr-4 gap-[10px]"
-                  >
-                    <!-- Select Negara -->
-                    <div
-                      id="phone-select"
-                      class="flex items-center rounded-l-full h-[30px] !py-[24px] px-4 bg-gray-100 cursor-pointer"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/id.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <img class="w-fit" src="/arrow_bottom.svg" alt="" />
-                      <span class="text-[#9CA3AF]">+62</span>
-                    </div>
-
-                    <!-- Input Nomor -->
-                    <input
-                      type="tel"
-                      class="flex-1 outline-none border-none bg-transparent placeholder:text-[#9CA3AF]"
-                      placeholder="000 000 000"
-                    />
-                  </div>
-
-                  <!-- Dropdown kode negara -->
-                  <div
-                    id="dropdown-phone"
-                    class="hidden absolute z-50 bg-white border rounded-md shadow-md mt-2 w-60"
-                  >
-                    <div
-                      class="flex items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] px-4 py-[14px] gap-[10px]"
-                      data-code="+62"
-                      data-flag="id"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/id.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Indonesia (+62)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+1"
-                      data-flag="us"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/us.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">USA (+1)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+44"
-                      data-flag="gb"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/gb.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">United Kingdom (+44)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+61"
-                      data-flag="au"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/au.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Australia (+61)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+91"
-                      data-flag="in"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/in.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">India (+91)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+81"
-                      data-flag="jp"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/jp.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Japan (+81)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+86"
-                      data-flag="cn"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/cn.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">China (+86)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+49"
-                      data-flag="de"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/de.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Germany (+49)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+33"
-                      data-flag="fr"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/fr.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">France (+33)</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-code="+82"
-                      data-flag="kr"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/kr.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">South Korea (+82)</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Location Input -->
-                <div class="relative w-full">
-                  <div
-                    id="location-select"
                     class="flex items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] px-4 py-[14px] gap-[10px]"
                   >
                     <img
-                      src="https://flagcdn.com/w40/id.png"
-                      class="w-5 h-5 rounded-full"
+                      src="/form-name.svg"
+                      alt="icon"
+                      class="w-5 h-5"
+                      data-aos="zoom-in"
+                      data-aos-delay="300"
+                      data-aos-duration="500"
                     />
-                    <span class="text-gray-500">Indonesia</span>
-                    <svg
-                      class="ml-auto w-4 h-4 text-black"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                    <input
+                      data-aos="zoom-in"
+                      data-aos-delay="300"
+                      data-aos-duration="500"
+                      type="text"
+                      placeholder="Your Name"
+                      class="flex-1 outline-none border-none bg-transparent placeholder:text-[16px] placeholder:text-[#9CA3AF]"
+                    />
+                  </div>
+                  <div
+                    class="flex items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] px-4 py-[14px] gap-[10px]"
+                  >
+                    <img
+                      src="/input-email.svg"
+                      alt="icon"
+                      class="w-5 h-5"
+                      data-aos="zoom-in"
+                      data-aos-delay="700"
+                      data-aos-duration="800"
+                    />
+                    <input
+                      data-aos="zoom-in"
+                      data-aos-delay="600"
+                      data-aos-duration="700"
+                      type="email"
+                      placeholder="name@example.com"
+                      class="flex-1 outline-none border-none bg-transparent placeholder:text-[16px] placeholder:text-[#9CA3AF]"
+                    />
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="flex cursor-pointer items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] pr-4 gap-[10px]"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
+                      <!-- Select Negara -->
+                      <div
+                        id="phone-select"
+                        class="flex items-center rounded-l-full h-[30px] !py-[24px] px-4 bg-gray-100 cursor-pointer gap-2 border-r border-[#E3E5E8]"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/id.png"
+                          class="w-5 h-5 rounded-full"
+                          data-aos="zoom-in"
+                          data-aos-delay="550"
+                          data-aos-duration="650"
+                        />
+                        <img
+                          data-aos="zoom-in"
+                          data-aos-delay="550"
+                          data-aos-duration="650"
+                          id="input-arrow"
+                          class="w-fit"
+                          src="/arrow_bottom2.svg"
+                          alt=""
+                        />
+                        <span
+                          data-aos="zoom-in"
+                          data-aos-delay="550"
+                          data-aos-duration="650"
+                          class="text-[#9CA3AF]"
+                          >+62</span
+                        >
+                      </div>
+
+                      <!-- Input Nomor -->
+                      <input
+                        data-aos="zoom-in"
+                        data-aos-delay="500"
+                        data-aos-duration="600"
+                        type="tel"
+                        class="flex-1 outline-none border-none bg-transparent placeholder:text-[#9CA3AF]"
+                        placeholder="000 000 000"
+                        class="placeholder:text-[16px]"
                       />
-                    </svg>
+                    </div>
+
+                    <!-- Dropdown kode negara -->
+                    <div
+                      id="dropdown-phone"
+                      class="hidden cursor-pointer absolute z-50 bg-white border rounded-md shadow-md mt-2 w-60"
+                    >
+                      <div
+                        class="flex items-center w-full max-w-[462px] cursor-pointer hover:bg-gray-100 px-4 py-2"
+                        data-code="+62"
+                        data-flag="id"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/id.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Indonesia (+62)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+1"
+                        data-flag="us"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/us.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">USA (+1)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+44"
+                        data-flag="gb"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/gb.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">United Kingdom (+44)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+61"
+                        data-flag="au"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/au.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Australia (+61)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+91"
+                        data-flag="in"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/in.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">India (+91)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+81"
+                        data-flag="jp"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/jp.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Japan (+81)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+86"
+                        data-flag="cn"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/cn.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">China (+86)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+49"
+                        data-flag="de"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/de.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Germany (+49)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+33"
+                        data-flag="fr"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/fr.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">France (+33)</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-code="+82"
+                        data-flag="kr"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/kr.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">South Korea (+82)</span>
+                      </div>
+                    </div>
                   </div>
 
-                  <!-- Dropdown list negara -->
-                  <div
-                    id="dropdown-location"
-                    class="hidden absolute z-50 bg-white border rounded-md shadow-md mt-2 w-full"
-                  >
+                  <!-- Location Input -->
+                  <div class="relative w-full">
                     <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="Indonesia"
-                      data-flag="id"
+                      id="location-select"
+                      class="flex cursor-pointer items-center w-full max-w-[462px] rounded-full border border-[#E3E5E8] px-4 py-[14px] gap-[10px]"
                     >
                       <img
+                        data-aos="zoom-in"
+                        data-aos-delay="550"
+                        data-aos-duration="650"
                         src="https://flagcdn.com/w40/id.png"
                         class="w-5 h-5 rounded-full"
                       />
-                      <span class="ml-2">Indonesia</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="United States"
-                      data-flag="us"
-                    >
+                      <span
+                        data-aos="zoom-in"
+                        data-aos-delay="550"
+                        data-aos-duration="650"
+                        class="text-gray-500"
+                        >Indonesia</span
+                      >
                       <img
-                        src="https://flagcdn.com/w40/us.png"
-                        class="w-5 h-5 rounded-full"
+                      data-aos="zoom-in"
+                      data-aos-delay="550"
+                      data-aos-duration="650"
+                        id="input2-arrow"
+                        class="w-fit ml-auto"
+                        src="/arrow_bottom2.svg"
+                        alt=""
                       />
-                      <span class="ml-2">United States</span>
                     </div>
+
+                    <!-- Dropdown list negara -->
                     <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="United Kingdom"
-                      data-flag="gb"
+                      id="dropdown-location"
+                      class="hidden absolute z-50 bg-white border rounded-md shadow-md mt-2 w-full"
                     >
-                      <img
-                        src="https://flagcdn.com/w40/gb.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">United Kingdom</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="Australia"
-                      data-flag="au"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/au.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Australia</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="India"
-                      data-flag="in"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/in.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">India</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="Japan"
-                      data-flag="jp"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/jp.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Japan</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="China"
-                      data-flag="cn"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/cn.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">China</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="Germany"
-                      data-flag="de"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/de.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">Germany</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="France"
-                      data-flag="fr"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/fr.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">France</span>
-                    </div>
-                    <div
-                      class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
-                      data-country="South Korea"
-                      data-flag="kr"
-                    >
-                      <img
-                        src="https://flagcdn.com/w40/kr.png"
-                        class="w-5 h-5 rounded-full"
-                      />
-                      <span class="ml-2">South Korea</span>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="Indonesia"
+                        data-flag="id"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/id.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Indonesia</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="United States"
+                        data-flag="us"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/us.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">United States</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="United Kingdom"
+                        data-flag="gb"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/gb.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">United Kingdom</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="Australia"
+                        data-flag="au"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/au.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Australia</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="India"
+                        data-flag="in"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/in.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">India</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="Japan"
+                        data-flag="jp"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/jp.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Japan</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="China"
+                        data-flag="cn"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/cn.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">China</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="Germany"
+                        data-flag="de"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/de.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">Germany</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="France"
+                        data-flag="fr"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/fr.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">France</span>
+                      </div>
+                      <div
+                        class="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100"
+                        data-country="South Korea"
+                        data-flag="kr"
+                      >
+                        <img
+                          src="https://flagcdn.com/w40/kr.png"
+                          class="w-5 h-5 rounded-full"
+                        />
+                        <span class="ml-2">South Korea</span>
+                      </div>
                     </div>
                   </div>
+                </form>
+                <div
+                  class="w-full max-w-[462px] h-[201px] flex flex-col gap-4 rounded-lg border border-[#E3E5E8] justify-center p-[14px] items-center"
+                >
+                  <img
+                    class="w-full max-w-9 h-full max-h-9 cursor-pointer"
+                    src="/upload.svg"
+                    alt=""
+                  />
+                  <p class="text-[16px] leading-[1.3] text-[#747B8B]">
+                    Upload your Driving Licency
+                  </p>
                 </div>
-              </form>
-              <div
-                class="w-full max-w-[462px] h-[201px] flex flex-col gap-4 rounded-lg border border-[#E3E5E8] justify-center p-[14px] items-center"
-              >
-                <img
-                  class="w-full max-w-9 h-full max-h-9 cursor-pointer"
-                  src="/upload.svg"
-                  alt=""
-                />
-                <p class="text-[16px] leading-[1.3] text-[#747B8B]">
-                  Upload your Driving Licency
-                </p>
-              </div>
 
-              <a
-                class="bg-[var(--primary)] text-center text-white w-full max-w-[462px] px-6 py-3 rounded-[31px] text-[16px] leading-[1.6]"
-                href="home.html"
-              >
-                Create Account
-              </a>
+                <a
+                  class="bg-[var(--primary)] text-center text-white w-full max-w-[462px] px-6 py-3 rounded-[31px] text-[16px] leading-[1.6]"
+                  href="home.html"
+                >
+                  Create Account
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="w-full px-[62px] pt-[66px] flex flex-col mx-auto">
+        <div
+          class="relative w-full md:px-[12px] xl:px-[62px] pt-[30px] md:pt-[66px] flex flex-col mx-auto "
+        >
           <div
-            class="swiper mySwiper w-full max-w-[600px] flex flex-col gap-4 relative"
+            class="relative swiper mySwiper w-full max-w-[600px] flex flex-col gap-4 "
           >
+          <div class="swiper-pagination absolute bottom-[200px]"></div>
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide flex flex-col">
                 <div
-                  class="w-full max-w-[600px] flex flex-col gap-4 pb-[118px]"
+                  class="w-full max-w-[600px] flex flex-col gap-4 px-5 md:px-0 pb-[40px] md:pb-[105px] lg:pb-[120px]"
                 >
-                  <h2 class="text-[40px] leading-[1.2] text-white">
+                  <h2
+                    class="text-[32px] lg:text-[40px] leading-[1.2] text-white"
+                    data-aos="fade-down"
+                    data-aos-delay="700"
+                    data-aos-duration="900"
+                  >
                     Laporan Penjualan Yang Evisien
                   </h2>
-                  <p class="text-[16px] leading-[1.6] text-[#E3E3E3]">
+                  <p
+                    class="text-[14px] lg:text-[16px] leading-[1.6] text-[#E3E3E3]"
+                    data-aos="fade-down"
+                    data-aos-delay="500"
+                    data-aos-duration="700"
+                  >
                     Kami menyediakan Berbagaimacam Report Laporan untuk Akhir
                     bulan dan bisa anda dapatkan di Versi Gratis!
                   </p>
                 </div>
-                <img src="/banner-register.png" alt="" />
+                <img
+                  src="/banner-register.png"
+                  class="w-full max-w-[326px] mx-auto md:mx-0 md:max-w-[500px] xl:max-w-full"
+                  alt=""
+                />
               </div>
-
               <!-- Slide 2 -->
               <div class="swiper-slide flex flex-col">
                 <div
-                  class="w-full max-w-[600px] flex flex-col gap-4 pb-[118px]"
+                  class="w-full max-w-[600px] flex flex-col gap-4 px-5 md:px-0 pb-[40px] md:pb-[105px] lg:pb-[120px]"
                 >
-                  <h2 class="text-[40px] leading-[1.2] text-white">
-                    Pantau Mobil Favoritmu
+                  <h2
+                    class="text-[32px] lg:text-[40px] leading-[1.2] text-white"
+                    data-aos="fade-down"
+                    data-aos-delay="700"
+                    data-aos-duration="900"
+                  >
+                  Pantau Mobil Favoritmu
                   </h2>
-                  <p class="text-[16px] leading-[1.6] text-[#E3E3E3]">
-                    Dengan sistem kami, Anda bisa mengecek mobil sewa dengan
-                    cepat. efisien, nyaman dan mudah!
+                  <p
+                    class="text-[14px] lg:text-[16px] leading-[1.6] text-[#E3E3E3]"
+                    data-aos="fade-down"
+                    data-aos-delay="500"
+                    data-aos-duration="700"
+                  >
+                  Dengan sistem kami, Anda bisa mengecek mobil sewa dengan
+                  cepat. efisien, nyaman dan mudah!
                   </p>
                 </div>
-                <img src="/banner-register.png" alt="" />
+                <img
+                  src="/banner-register.png"
+                  class="w-full max-w-[326px] mx-auto md:mx-0 md:max-w-[500px] xl:max-w-full"
+                  alt=""
+                />
               </div>
-
               <!-- Slide 3 -->
               <div class="swiper-slide flex flex-col">
                 <div
-                  class="w-full max-w-[600px] flex flex-col gap-4 pb-[118px]"
+                  class="w-full max-w-[600px] flex flex-col gap-4 px-5 md:px-0 pb-[40px] md:pb-[105px] lg:pb-[120px]"
                 >
-                  <h2 class="text-[40px] leading-[1.2] text-white">
-                    Layanan Terpercaya
+                  <h2
+                    class="text-[32px] lg:text-[40px] leading-[1.2] text-white"
+                    data-aos="fade-down"
+                    data-aos-delay="700"
+                    data-aos-duration="900"
+                  >
+                  Layanan Terpercaya
                   </h2>
-                  <p class="text-[16px] leading-[1.6] text-[#E3E3E3]">
-                    Kami menyediakan mobil dengan kualitas terbaik di antara
-                    yang terbaik dan harga bersaing.
+                  <p
+                    class="text-[14px] lg:text-[16px] leading-[1.6] text-[#E3E3E3]"
+                    data-aos="fade-down"
+                    data-aos-delay="500"
+                    data-aos-duration="700"
+                  >
+                  Kami menyediakan mobil dengan kualitas terbaik di antara
+                  yang terbaik dan harga bersaing.
                   </p>
                 </div>
-                <img src="/banner-register.png" alt="" />
+                <img
+                  src="/banner-register.png"
+                  class="w-full max-w-[326px] mx-auto md:mx-0 md:max-w-[500px] xl:max-w-full"
+                  alt=""
+                />
               </div>
             </div>
-
-            <!-- Pagination: letaknya setelah .swiper-wrapper -->
-            <!-- <div class="swiper-pagination absolute left-20 mt-2"></div> -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- Swiper JS -->
+    <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script>
       const swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: {
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination ",
           clickable: true,
         },
       });
@@ -449,6 +573,16 @@
       // Toggle phone dropdown
       document.getElementById("phone-select").onclick = () => {
         document.getElementById("dropdown-phone").classList.toggle("hidden");
+      };
+
+      const phoneSelect = document.getElementById("phone-select");
+      const dropdownPhone = document.getElementById("dropdown-phone");
+      const inputArrow = document.getElementById("input-arrow");
+
+      phoneSelect.onclick = (e) => {
+        dropdownPhone.classList.toggle("hidden");
+        inputArrow.classList.toggle("rotate-180");
+        e.stopPropagation();
       };
 
       // Handle country code selection
@@ -464,9 +598,29 @@
         };
       });
 
+      document.addEventListener("click", (e) => {
+        if (
+          !phoneSelect.contains(e.target) &&
+          !dropdownPhone.contains(e.target)
+        ) {
+          dropdownPhone.classList.add("hidden");
+          inputArrow.classList.remove("rotate-180");
+        }
+      });
+
       // Toggle location dropdown
       document.getElementById("location-select").onclick = () => {
         document.getElementById("dropdown-location").classList.toggle("hidden");
+      };
+
+      const locationSelect = document.getElementById("location-select");
+      const dropdownLocation = document.getElementById("dropdown-location");
+      const input2Arrow = document.getElementById("input2-arrow");
+
+      locationSelect.onclick = (e) => {
+        dropdownLocation.classList.toggle("hidden");
+        input2Arrow.classList.toggle("rotate-180");
+        e.stopPropagation();
       };
 
       // Handle country name selection
@@ -483,6 +637,16 @@
             `;
           document.getElementById("dropdown-location").classList.add("hidden");
         };
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          !locationSelect.contains(e.target) &&
+          !dropdownLocation.contains(e.target)
+        ) {
+          dropdownLocation.classList.add("hidden");
+          input2Arrow.classList.remove("rotate-180");
+        }
       });
     </script>
   </body>

@@ -77,18 +77,122 @@ button {
   padding-right: 5rem;
 } */
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   section {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+} */
+
+.img-register{
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 768px){
+  .img-register{
+    bottom:292px;
+  }
+}
+
+@media (max-width: 600px){
+  .img-register{
+    bottom:270px;
+  }
+}
+
+@media (max-width: 500px){
+  .img-register{
+    bottom:240px;
+  }
+}
+
+@media (max-width: 400px){
+  .img-register{
+    bottom:210px;
+  }
+}
+
+@media (max-width: 380px){
+  .img-register{
+    bottom:200px;
+  }
+}
+
+@media (max-width: 180px){
+  .img-register{
+    bottom:260px;
+  }
+}
+
+/* bgform */
+.bg-register{
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 768px){
+  .bg-register{
+    bottom:500px;
+  }
+}
+
+@media (max-width: 600px){
+  .bg-register{
+    bottom:430px;
+  }
+}
+
+@media (max-width: 500px){
+  .bg-register{
+    bottom:400px;
+  }
+}
+
+@media (max-width: 400px){
+  .bg-register{
+    bottom:350px;
+  }
+}
+
+@media (max-width: 380px){
+  .bg-register{
+    bottom:310px;
+  }
+}
+
+@media (max-width: 180px){
+  .bg-register{
+    bottom:270px;
+  }
+}
+/* bgform */
+
+
+.swiper-pagination-bullet {
+  position: relative;
+  left: -270px;
+  bottom: 800px;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  z-index:999;
+  opacity: 0.4;
+  border-radius: 9999px; /* full rounded */
+  margin: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 25px;
 }
 
 footer p,

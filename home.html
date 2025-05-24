@@ -108,21 +108,21 @@
         <div class="flex flex-row gap-[48px] ">
           <div class="flex flex-col gap-[16px] w-[151px] items-start">
             <div class="flex flex-row text-white">
-              <h3 class="text-[64px] leading-[72px]">8</h3>
+              <h3 class="text-[64px] counter leading-[72px]" data-target="8">0</h3>
               <span class="flex relative top-4 leading-[48px] text-[48px]">+</span>
             </div>
             <p class="text-[20px] leading-[32px]">Experience </p>
           </div>
           <div class="flex flex-col gap-[16px] w-[151px] items-start">
             <div class="flex flex-row text-white">
-              <h3 class="text-[64px] leading-[72px]">72</h3>
+              <h3 class="text-[64px] counter leading-[72px]" data-target="72">0</h3>
               <span class="flex relative top-4 leading-[48px] text-[48px]">+</span>
             </div>
             <p class="text-[20px] leading-[32px]">Premium Car</p>
           </div>
           <div class="flex flex-col gap-[16px] w-[151px] items-start">
             <div class="flex flex-row text-white">
-              <h3 class="text-[64px] leading-[72px]">99</h3>
+              <h3 class="text-[64px] counter leading-[72px]" data-target="90">0</h3>
               <span class="flex relative top-4 leading-[48px] text-[48px]">%</span>
             </div>
             <p class="text-[20px] leading-[32px]">Trusted Parter </p>
@@ -1198,6 +1198,36 @@
   <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".counter");
+      const duration = 2000; // durasi animasi dalam milidetik (2 detik)
+  
+      counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const startTime = performance.now();
+  
+        const update = (currentTime) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const currentValue = Math.floor(progress * target);
+  
+          counter.innerText = currentValue;
+  
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = target; // pastikan tepat
+          }
+        };
+  
+        requestAnimationFrame(update);
+      });
+    });
+  </script>
+  
+  
   <script>
 
 function myFunction(x) {
