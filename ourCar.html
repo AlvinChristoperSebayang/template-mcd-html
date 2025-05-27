@@ -15,13 +15,15 @@
         id="mobile-menu"
         class="mobile-menu flex flex-col justify-between w-screen h-screen md:hidden z-30 bg-[#6d3df4] py-8"
       >
-      <ul  class="flex  flex-col gap-8 text-center">
-        <li class="text-white"><a href="home.html">Home</a></li>
-        <li class="text-white"><a href="about.html">About</a></li>
-        <li class="text-white"><a href="ourCar">Our Car</a></li>
-        <li class="text-white"><a href="faq.html">FAQ</a></li>
-        <li class="text-white"><a href="downloadCar.html">Download App</a></li>
-      </ul>
+        <ul class="flex flex-col gap-8 text-center">
+          <li class="text-white"><a href="home.html">Home</a></li>
+          <li class="text-white"><a href="about.html">About</a></li>
+          <li class="text-white"><a href="ourCar">Our Car</a></li>
+          <li class="text-white"><a href="faq.html">FAQ</a></li>
+          <li class="text-white">
+            <a href="downloadCar.html">Download App</a>
+          </li>
+        </ul>
         <div
           class="logo-gasrent flex justify-center flex-row gap-2 items-center"
         >
@@ -137,11 +139,11 @@
         <ul
           class="flex flex-row md:max-xl:gap-[34px] xl:gap-[50px] list-disc ml-[10px] xl:ml-[70px]"
         >
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="ourCar.html">Our Car</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="downloadCar.html">Download App</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ourCar.html">Our Car</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="downloadCar.html">Download App</a></li>
         </ul>
         <button
           class="text-white bg-black hover:bg-white hover:text-black duration-150 rounded-full px-2 xl:px-6 py-4"
@@ -151,14 +153,14 @@
       </nav>
       <!-- hero about -->
       <section
-        class="container pt-10 pb-40 flex flex-row w-full max-w-[1220px]"
+        class="sm:container pt-10 pb-40 flex flex-row w-full max-w-[1220px]"
       >
         <div
-          class="container w-full max-w-[980px] flex flex-col gap-6 items-center justify-center"
+          class="sm:container flex flex-col gap-6 items-center justify-center"
         >
-          <h1 class="text-[64px] text-white">List Car</h1>
+          <h1 class="text-[32px] sm:text-[48px] lg:text-[64px] text-white">List Car</h1>
           <p
-            class="text-[24px] leading-8 items-center justify-center flex text-center"
+            class="text-[16px] sm:text-[20px] lg:text-[24px] leading-8 items-center justify-center flex text-center w-full max-w-[327px] sm:max-w-[757px]"
           >
             This is our Team, we can discuss the problems when you use our App
             and what difficulties you are experiencing with our app.
@@ -170,8 +172,8 @@
     <!-- list car start-->
     <section class="container py-[80px] flex flex-col gap-[32px] bg-white">
       <div class="w-full max-w-[746px] gap-4 flex flex-col">
-        <h5 class="text-[64px] leading-[72px]">Search your Rental Car</h5>
-        <p class="text-[20px] leading-8">
+        <h5 class="text-[32px] leading-[1.2] sm:text-[40px] lg:text-[64px] lg:leading-[1.1]">Search your Rental Car</h5>
+        <p class="text-[16px] leading-[1.6] sm:text-[20px] sm:leading-[1.6]">
           Many Car in our Company clean and comfortable
         </p>
       </div>
@@ -183,7 +185,7 @@
             <li class="text-[16px] leading-[26px]">Clear all</li>
           </ul>
           <div class="flex flex-col !gap-[14px]">
-            <li class="text-[20px] text-[#050810] list-none">Search</li>
+            <li class="text-[18px] sm:text-[20px] leading-[100%] sm:leading-[1.6] text-[#050810] list-none">Search</li>
             <div
               class="border border-[#C7CAD1] focus-within:border-blue-500 w-fit py-[14px] px-6 flex flex-row rounded-full gap-[10px]"
             >
@@ -264,39 +266,42 @@
           </div>
         </div>
         <div class="flex flex-col gap-6 w-full">
-            <div class="flex flex-row justify-end gap-8">
-          <ul class="flex flex-row gap-3 justify-end items-center">
-            <li class="text-[20px] text-[var(--primary-dark)]">Show</li>
-            <li
-              class="border flex flex-row justify-between items-center border-[#F0F0F0] px-4 py-2 rounded-[50px] text-[16px] cursor-pointer"
-            >
-              12 Result per page <img src="/arrow_bottom.svg" alt="" />
-            </li>
+          <div class="flex flex-row justify-end gap-8">
+            <ul class="flex flex-row gap-3 justify-end items-center">
+              <li class="text-[20px] text-[var(--primary-dark)]">Show</li>
+              <li
+                class="border flex flex-row justify-between items-center border-[#F0F0F0] px-4 py-2 rounded-[50px] text-[16px] cursor-pointer"
+              >
+                12 Result per page <img src="/arrow_bottom.svg" alt="" />
+              </li>
             </ul>
             <ul class="flex flex-row gap-3 justify-end items-center">
-
-            <li class="text-[20px] text-[var(--primary-dark)]">Ordering</li>
-            <li
-              class="border flex flex-row justify-between items-center border-[#F0F0F0] px-4 py-2 rounded-[50px] text-[16px] cursor-pointer"
-            >
-              New Car <img src="/arrow_bottom.svg" alt="" />
-            </li>
-          </ul>
-        </div>
+              <li class="text-[20px] text-[var(--primary-dark)]">Ordering</li>
+              <li
+                class="border flex flex-row justify-between items-center border-[#F0F0F0] px-4 py-2 rounded-[50px] text-[16px] cursor-pointer"
+              >
+                New Car <img src="/arrow_bottom.svg" alt="" />
+              </li>
+            </ul>
+          </div>
           <div
             class="card-container grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-[2px] sm:gap-[24px] md:gap-[14px] xl:gap-[24px]"
           >
             <!-- Card 1 -->
-            <div class="overflow-hidden card-cover mitsubishi ">
+            <div class="overflow-hidden card-cover mitsubishi">
               <li class="list-none">
-                <a href="mitsubushi.png" class="block" data-fslightbox="gallery" >
+                <a
+                  href="mitsubushi.png"
+                  class="block"
+                  data-fslightbox="gallery"
+                >
                   <img
                     src="mitsubushi.png"
                     alt="Mitsubishi"
                     class="card-car-product rounded-[15px] w-full h-48 object-cover"
                   />
                 </a>
-                <div class="py-4 ">
+                <div class="py-4">
                   <div class="mb-4">
                     <h3
                       class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -353,13 +358,13 @@
             <!-- Card 2 -->
             <div class="overflow-hidden card-cover range">
               <a href="rangeRover.png" data-fslightbox="gallery">
-              <img
-                src="rangeRover.png"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="rangeRover.png"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -413,13 +418,13 @@
             <!-- Card 3 -->
             <div class="overflow-hidden card-cover ertiga">
               <a href="ertiga.png" data-fslightbox="gallery">
-              <img
-                src="ertiga.png"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="ertiga.png"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -473,13 +478,13 @@
             <!-- Card 4 -->
             <div class="overflow-hidden card-cover miniCopper">
               <a href="miniCooper.png" data-fslightbox="gallery">
-              <img
-                src="miniCooper.png"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="miniCooper.png"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -533,13 +538,13 @@
             <!-- Card 5 -->
             <div class="overflow-hidden card-cover bmw">
               <a href="bmw.png" data-fslightbox="gallery">
-              <img
-                src="bmw.png"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="bmw.png"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -593,13 +598,13 @@
             <!-- Card 6 -->
             <div class="overflow-hidden card-cover mercedes">
               <a href="marcedes2.jpg" data-fslightbox="gallery">
-              <img
-                src="marcedes2.jpg"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="marcedes2.jpg"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -653,13 +658,13 @@
             <!-- Card 7 -->
             <div class="overflow-hidden card-cover hyundai">
               <a href="hyundai.png" data-fslightbox="gallery">
-              <img
-                src="hyundai.png"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="hyundai.png"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[217px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -713,13 +718,13 @@
             <!-- Card 8-->
             <div class="overflow-hidden card-cover kia">
               <a href="kia.png" data-fslightbox="gallery">
-              <img
-                src="kia.png"
-                alt="Mitsubishi"
-                class="card-car-product rounded-[15px] w-full h-48 object-cover"
-              />
-            </a>
-              <div class="py-4 ">
+                <img
+                  src="kia.png"
+                  alt="Mitsubishi"
+                  class="card-car-product rounded-[15px] w-full h-48 object-cover"
+                />
+              </a>
+              <div class="py-4">
                 <div class="mb-4">
                   <h3
                     class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[213px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
@@ -878,95 +883,98 @@
 
     <!-- footer start -->
     <footer id="site-footer" class="bg-[#050810] relative overflow-hidden">
-      <div
-        class="absolute max-xl:scale-150 max-md:top-[6px] md:max-xl:top-[16px]"
-      >
-        <img src="./Light.png" alt="light" />
-      </div>
-      <div
-        class="footer-wrap flex flex-col max-md:gap-16 md:flex-row justify-between px-8 pt-20"
-      >
-        <div class="title-wrap md:w-72">
-          <div class="logo-gasrent flex flex-row gap-2">
-            <svg
-              width="40"
-              height="30"
-              viewBox="0 0 40 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.08773 21.6146C0.686605 25.2434 -0.013958 27.0578 0.86176 28.335C1.73748 29.6123 3.68241 29.6129 7.57226 29.6141L18.0437 29.6172L29.4834 29.6172L32.8352 20.5097C32.8358 20.5081 32.8346 20.5064 32.8329 20.5064C32.8312 20.5064 32.83 20.5047 32.8306 20.5031L34.3075 16.4818C34.455 16.0802 34.1591 15.654 33.7329 15.654H23.5987C23.3422 15.654 23.1128 15.8145 23.0241 16.0562L21.1338 21.3221C21.045 21.5638 20.8157 21.7244 20.5591 21.7244C20.1435 21.7244 18.9755 21.7241 17.5632 21.7236C14.1617 21.7226 12.461 21.722 11.6615 20.606C10.8621 19.4899 11.4087 17.8795 12.5021 14.6587L12.9925 13.2142C13.584 11.4717 13.8798 10.6005 14.5737 10.1006C15.2677 9.60071 16.1856 9.59617 18.0214 9.5871C23.4863 9.56007 33.234 9.51407 36.2559 9.51407C36.5123 9.51407 36.7415 9.35372 36.8304 9.11224L39.7307 1.23148C39.8785 0.829858 39.5826 0.403249 39.1562 0.403249H20.2482C20.2439 0.403249 20.2409 0.398938 20.2424 0.394862C20.2439 0.390786 20.2409 0.386475 20.2365 0.386475C19.3033 0.386475 18.1027 0.387813 16.8603 0.389733C13.6763 0.394655 12.0843 0.397116 10.8566 1.24051C9.62893 2.08389 9.05491 3.57052 7.90688 6.54378L2.08773 21.6146Z"
-                fill="#7240FF"
-                stroke="url(#paint0_linear_155_2128)"
-                stroke-width="0.198527"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_155_2128"
-                  x1="22.27"
-                  y1="-7.47276"
-                  x2="48.2725"
-                  y2="30.8542"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="white" />
-                  <stop offset="1" stop-color="white" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
+      <div class="container">
+        <div
+          class="absolute max-xl:scale-150 max-md:top-[6px] md:max-xl:top-[16px]"
+        >
+          <img src="./Light.png" alt="light" />
+        </div>
+        <div
+          class="footer-wrap flex flex-col max-md:gap-16 md:flex-row justify-between px-8 pt-20"
+        >
+          <div class="title-wrap md:w-72">
+            <div class="logo-gasrent flex flex-row gap-2">
+              <svg
+                width="40"
+                height="30"
+                viewBox="0 0 40 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.08773 21.6146C0.686605 25.2434 -0.013958 27.0578 0.86176 28.335C1.73748 29.6123 3.68241 29.6129 7.57226 29.6141L18.0437 29.6172L29.4834 29.6172L32.8352 20.5097C32.8358 20.5081 32.8346 20.5064 32.8329 20.5064C32.8312 20.5064 32.83 20.5047 32.8306 20.5031L34.3075 16.4818C34.455 16.0802 34.1591 15.654 33.7329 15.654H23.5987C23.3422 15.654 23.1128 15.8145 23.0241 16.0562L21.1338 21.3221C21.045 21.5638 20.8157 21.7244 20.5591 21.7244C20.1435 21.7244 18.9755 21.7241 17.5632 21.7236C14.1617 21.7226 12.461 21.722 11.6615 20.606C10.8621 19.4899 11.4087 17.8795 12.5021 14.6587L12.9925 13.2142C13.584 11.4717 13.8798 10.6005 14.5737 10.1006C15.2677 9.60071 16.1856 9.59617 18.0214 9.5871C23.4863 9.56007 33.234 9.51407 36.2559 9.51407C36.5123 9.51407 36.7415 9.35372 36.8304 9.11224L39.7307 1.23148C39.8785 0.829858 39.5826 0.403249 39.1562 0.403249H20.2482C20.2439 0.403249 20.2409 0.398938 20.2424 0.394862C20.2439 0.390786 20.2409 0.386475 20.2365 0.386475C19.3033 0.386475 18.1027 0.387813 16.8603 0.389733C13.6763 0.394655 12.0843 0.397116 10.8566 1.24051C9.62893 2.08389 9.05491 3.57052 7.90688 6.54378L2.08773 21.6146Z"
+                  fill="#7240FF"
+                  stroke="url(#paint0_linear_155_2128)"
+                  stroke-width="0.198527"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_155_2128"
+                    x1="22.27"
+                    y1="-7.47276"
+                    x2="48.2725"
+                    y2="30.8542"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
 
-            <h3 class="text-white font-bold">Gasrent Car</h3>
+              <h3 class="text-white font-bold">Gasrent Car</h3>
+            </div>
+
+            <p class="text-[#989EA9] text-base font-helvetica-neue mt-10">
+              Exploring the Unmatched Features and Benefits of Choosing Gasren
+              for Your Next Car Rental
+            </p>
           </div>
 
-          <p class="text-[#989EA9] text-base font-helvetica-neue mt-10">
-            Exploring the Unmatched Features and Benefits of Choosing Gasren for
-            Your Next Car Rental
-          </p>
+          <div
+            class="list-wrap max-md:gap-6 md:gap-14 flex flex-col md:flex-row justify-between pb-10"
+          >
+            <div class="first-list">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Car</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Download</a></li>
+              </ul>
+            </div>
+
+            <div class="second-list">
+              <h4>User</h4>
+              <ul>
+                <li><a href="#">Create Account</a></li>
+              </ul>
+            </div>
+
+            <div class="third-list">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Forums</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div
-          class="list-wrap max-md:gap-6 md:gap-14 flex flex-col md:flex-row justify-between pb-10"
+          class="footer-bottom px-8 flex flex-col max-md:gap-2 max-md:items-center md:flex-row md:justify-between py-3"
         >
-          <div class="first-list">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Car</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Download</a></li>
-            </ul>
-          </div>
-
-          <div class="second-list">
-            <h4>User</h4>
-            <ul>
-              <li><a href="#">Create Account</a></li>
-            </ul>
-          </div>
-
-          <div class="third-list">
-            <h4>Support</h4>
-            <ul>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Forums</a></li>
-            </ul>
-          </div>
+          <p class="text-white">© 2024 gasrentar. All rights reserved.</p>
+          <ul class="flex flex-row">
+            <li class="border-r-2 pr-6"><a href="">Customer Service</a></li>
+            <li class="pl-6"><a href="">Provicy Policie</a></li>
+          </ul>
         </div>
-      </div>
-
-      <div
-        class="footer-bottom px-8 flex flex-col max-md:gap-2 max-md:items-center md:flex-row md:justify-between py-3"
-      >
-        <p class="text-white">© 2024 gasrentar. All rights reserved.</p>
-        <ul class="flex flex-row">
-          <li class="border-r-2 pr-6"><a href="">Customer Service</a></li>
-          <li class="pl-6"><a href="">Provicy Policie</a></li>
-        </ul>
       </div>
     </footer>
     <!-- footer end -->
+
     <script type="module" src="/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
     <script>

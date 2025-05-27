@@ -20,12 +20,25 @@
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
 
-
 .container {
   width: 100%;
   max-width: 1440px;
   padding-inline: 80px;
-  /* justify-content: center; */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 1024px;
+    padding-inline: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    padding-inline: 24px;
+  }
 }
 
 h1,
@@ -90,50 +103,231 @@ button {
     padding-right: 1.5rem;
   }
 } */
+@media (max-width: 1374px) {
+  .card-map-many {
+    left: 38%;
+  }
+}
 
-.img-register{
+@media (max-width: 1274px) {
+  .card-map-many {
+    left: 32%;
+  }
+}
+
+@media (max-width: 1242px) {
+  .card-map-many {
+    left: 32%;
+    top: 130px;
+  }
+}
+
+@media (max-width: 1176px) {
+  .card-map-many {
+    left: 26%;
+    top: 100px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .card-map-many {
+    left: 24%;
+    top: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-map-many {
+    left: 34%;
+    top: 100px;
+  }
+}
+
+@media (max-width: 967px) {
+  .card-map-many {
+    left: 32%;
+  }
+}
+
+@media (max-width: 904px) {
+  .card-map-many {
+    left: 28%;
+  }
+}
+
+@media (max-width: 730px) {
+  .card-map-many {
+    left: 62%;
+    top:170px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-map-many {
+    left: 59%;
+    top:168px;
+  }
+}
+
+@media (max-width: 497px) {
+  .card-map-many {
+    left: 51%;
+    top:118px;
+  }
+}
+
+@media (max-width: 444px) {
+  .card-map-many {
+    left: 46%;
+    top:135px;
+  }
+}
+
+@media (max-width: 553px) {
+  .card-map-many {
+    left: 41%;
+    top:105px;
+  }
+}
+
+
+
+/* and */
+
+@media (max-width: 1374px) {
+  .card-car-many {
+    left: 62%;
+    top: 320px;
+  }
+}
+
+@media (max-width: 1274px) {
+  .card-car-many {
+    left: 68%;
+    top: 280px;
+  }
+}
+
+@media (max-width: 1242px) {
+  .card-car-many {
+    left: 70%;
+    top: 260px;
+  }
+}
+
+@media (max-width: 1176px) {
+  .card-car-many {
+    left: 75%;
+    top: 220px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .card-car-many {
+    left: 78%;
+    top: 170px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-car-many {
+    left: 66%;
+    top: 240px;
+  }
+}
+
+@media (max-width: 967px) {
+  .card-car-many {
+    left: 68%;
+    top: 200px;
+  }
+}
+
+@media (max-width: 904px) {
+  .card-car-many {
+    left: 72%;
+    top: 180px;
+  }
+}
+
+@media (max-width: 730px) {
+  .card-car-many {
+    left: 38%;
+    top: 430px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-car-many {
+    left: 40%;
+    top: 400px;
+  }
+}
+
+@media (max-width: 553px) {
+  .card-car-many {
+    left: 50%;
+    top: 300px;
+  }
+}
+
+@media (max-width: 444px) {
+  .card-car-many {
+    left: 56%;
+    top: 230px;
+  }
+}
+
+@media (max-width: 397px) {
+  .card-car-many {
+    left: 58%;
+    top: 220px;
+  }
+}
+
+.img-register {
   position: relative;
   bottom: 0;
 }
 
-@media (max-width: 768px){
-  .img-register{
-    bottom:292px;
+@media (max-width: 768px) {
+  .img-register {
+    bottom: 292px;
   }
 }
 
-@media (max-width: 600px){
-  .img-register{
-    bottom:270px;
+@media (max-width: 600px) {
+  .img-register {
+    bottom: 270px;
   }
 }
 
-@media (max-width: 500px){
-  .img-register{
-    bottom:240px;
+@media (max-width: 500px) {
+  .img-register {
+    bottom: 240px;
   }
 }
 
-@media (max-width: 400px){
-  .img-register{
-    bottom:210px;
+@media (max-width: 400px) {
+  .img-register {
+    bottom: 210px;
   }
 }
 
-@media (max-width: 380px){
-  .img-register{
-    bottom:200px;
+@media (max-width: 380px) {
+  .img-register {
+    bottom: 200px;
   }
 }
 
-@media (max-width: 180px){
-  .img-register{
-    bottom:260px;
+@media (max-width: 180px) {
+  .img-register {
+    bottom: 260px;
   }
 }
 
 /* bgform */
-.bg-register{
+/* .bg-register{
   position: relative;
   bottom: 0;
 }
@@ -172,9 +366,26 @@ button {
   .bg-register{
     bottom:270px;
   }
-}
+} */
 /* bgform */
 
+@media (max-width: 500px) {
+  .bg-register {
+    position: relative;
+    bottom: 80px;
+  }
+}
+
+.lang-en {
+  background-color: var(--var-primary);
+  position: relative !important;
+}
+
+@media (max-width: 767px) {
+  .lang-en {
+    background-color: white;
+  }
+}
 
 .swiper-pagination-bullet {
   position: relative;
@@ -183,7 +394,7 @@ button {
   width: 6px;
   height: 6px;
   background-color: #fff;
-  z-index:999;
+  z-index: 999;
   opacity: 0.4;
   border-radius: 9999px; /* full rounded */
   margin: 2px;
@@ -252,8 +463,16 @@ header li {
 }
 
 .headBackgroundSize {
-  background-size: 140% 100%;
+  position: relative;
+  padding-bottom: 20px;
+  background-size: 150% 100%;
   background-position: center;
+}
+
+@media (max-width: 420px) {
+  .headBackgroundSize {
+    padding-bottom: 80px;
+  }
 }
 
 .FooterBackgroundSize {
@@ -416,7 +635,7 @@ footer li a {
   color: #747b8b;
 }
 
-.card-download{
+.card-download {
   background: linear-gradient(
     to bottom,
     rgba(244, 240, 255, 1),
@@ -478,7 +697,7 @@ footer li a {
 
 .text-team {
   position: relative;
-  bottom: 95px;
+  margin-top: -100px !important;
   margin: auto;
   width: 100%;
   max-width: 258px;
@@ -487,10 +706,52 @@ footer li a {
   gap: 4px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
-
-  /* Tambahan efek */
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.text-team h5 {
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  color: #050810;
+}
+
+.text-team p {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: -0.6px;
+  color: #747b8b;
+}
+
+@media (max-width: 1024px) {
+  .text-team h5 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .text-team p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .text-team {
+    max-width: 198px;
+  }
+}
+
+@media (max-width: 648px) {
+  .text-team h5 {
+    font-size: 14px !important;
+    line-height: 25px !important;
+  }
+  .text-team p {
+    font-size: 14px !important;
+    line-height: 25px !important;
+  }
+  .text-team {
+    max-width: 139px;
+    padding: 6px;
+    margin-top: -70px !important;
+  }
 }
 
 .text-team:active {

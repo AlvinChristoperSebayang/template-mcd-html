@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,23 +12,33 @@
     />
     <title>Document</title>
   </head>
-  <body class="bg-[var(--primary)]">
+  <body class=" ">
     <section class="bg-[var(--primary)] w-full">
-      <div class="flex flex-col-reverse md:flex-row">
+      <div class="flex flex-col-reverse md:flex-row bg-white">
         <div
-          class="bg-register md:bottom-0 w-full h-full max-h-[420px] md:max-h-full px-6 md:min-w-[524px] md:px-8 xl:px-[121px] pb-0 md:pb-[141px] max-w-full md:max-w-[720px] pt-[70px] bg-white"
+          class="bg-register md:bottom-0 md:pb-4 lg:pb-0 w-full h-full max-h-[420px] md:max-h-full px-6 md:px-0 md:min-w-[490px] lg:min-w-[574px] pb-0 max-w-full md:max-w-[760px] pt-[70px] bg-white"
         >
           <div
-            class="img-register z-30 px-4 flex flex-col justify-end mx-auto rounded-[24px] md:rounded-none items-center md:px-0 bg-white"
+            class="img-register py-6 md:!py-0 z-30 px-4 flex flex-col justify-end mx-auto rounded-[24px] md:rounded-none items-center md:px-0 bg-white"
           >
             <img
-              class="flex justify-center m-auto pb-[70px]"
+              class="hidden md:flex self-start md:self-center pb-[16px] md:pb-[70px]"
               src="/logo-in-regis.svg"
               alt=""
               data-aos="fade-down"
               data-aos-delay="700"
               data-aos-duration="900"
             />
+            <div class="flex md:hidden w-full max-w-[462px] gap-6 flex-col">
+              <img
+                class="flex self-start md:self-center pb-[26px] md:pb-[70px]"
+                src="/logo-in-regis.svg"
+                alt=""
+                data-aos="fade-down"
+                data-aos-delay="700"
+                data-aos-duration="900"
+              />
+            </div>
             <div class="w-full max-w-[462px] flex gap-6 flex-col">
               <div
                 class="flex flex-row w-fit items-center gap-1 cursor-pointer"
@@ -41,7 +51,7 @@
                   alt=""
                 />
                 <p
-                class="text-[var(--primary-dark)] text-[16px] "
+                  class="text-[var(--primary-dark)] text-[16px]"
                   data-aos="fade-down"
                   data-aos-delay="450"
                   data-aos-duration="600"
@@ -116,7 +126,7 @@
                       <!-- Select Negara -->
                       <div
                         id="phone-select"
-                        class="flex items-center rounded-l-full h-[30px] !py-[24px] px-4 bg-gray-100 cursor-pointer gap-2 border-r border-[#E3E5E8]"
+                        class="flex items-center rounded-l-full h-[30px] !py-[24px] pl-4 pr-8 sm:pl-4 sm:pr-4 bg-gray-100 cursor-pointer gap-2 border-r border-[#E3E5E8]"
                       >
                         <img
                           src="https://flagcdn.com/w40/id.png"
@@ -294,9 +304,9 @@
                         >Indonesia</span
                       >
                       <img
-                      data-aos="zoom-in"
-                      data-aos-delay="550"
-                      data-aos-duration="650"
+                        data-aos="zoom-in"
+                        data-aos-delay="550"
+                        data-aos-duration="650"
                         id="input2-arrow"
                         class="w-fit ml-auto"
                         src="/arrow_bottom2.svg"
@@ -447,12 +457,12 @@
         </div>
 
         <div
-          class="relative w-full md:px-[12px] xl:px-[62px] pt-[30px] md:pt-[66px] flex flex-col mx-auto "
+          class="relative w-full md:px-[12px] xl:px-[62px] pt-[30px] md:pt-[66px] flex flex-col mx-auto bg-[var(--primary)]"
         >
           <div
-            class="relative swiper mySwiper w-full max-w-[600px] flex flex-col gap-4 "
+            class="relative swiper mySwiper w-full max-w-[600px] flex flex-col gap-4"
           >
-          <div class="swiper-pagination absolute bottom-[200px]"></div>
+            <div class="swiper-pagination absolute bottom-[200px]"></div>
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide flex flex-col">
@@ -494,7 +504,7 @@
                     data-aos-delay="700"
                     data-aos-duration="900"
                   >
-                  Pantau Mobil Favoritmu
+                    Pantau Mobil Favoritmu
                   </h2>
                   <p
                     class="text-[14px] lg:text-[16px] leading-[1.6] text-[#E3E3E3]"
@@ -502,8 +512,8 @@
                     data-aos-delay="500"
                     data-aos-duration="700"
                   >
-                  Dengan sistem kami, Anda bisa mengecek mobil sewa dengan
-                  cepat. efisien, nyaman dan mudah!
+                    Dengan sistem kami, Anda bisa mengecek mobil sewa dengan
+                    cepat. efisien, nyaman dan mudah!
                   </p>
                 </div>
                 <img
@@ -523,7 +533,7 @@
                     data-aos-delay="700"
                     data-aos-duration="900"
                   >
-                  Layanan Terpercaya
+                    Layanan Terpercaya
                   </h2>
                   <p
                     class="text-[14px] lg:text-[16px] leading-[1.6] text-[#E3E3E3]"
@@ -531,8 +541,8 @@
                     data-aos-delay="500"
                     data-aos-duration="700"
                   >
-                  Kami menyediakan mobil dengan kualitas terbaik di antara
-                  yang terbaik dan harga bersaing.
+                    Kami menyediakan mobil dengan kualitas terbaik di antara
+                    yang terbaik dan harga bersaing.
                   </p>
                 </div>
                 <img
