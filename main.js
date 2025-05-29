@@ -16,6 +16,36 @@ function raf(time) {
 requestAnimationFrame(raf);
 // Lenis scrolling end
 
+// path active
+const links = document.querySelectorAll("nav ul li a");
+const currentPage = window.location.pathname.split("/").pop();
+let activeLink = null;
+
+// Tandai link aktif di awal
+links.forEach((link) => {
+  const href = link.getAttribute("href");
+  if (href === currentPage) {
+    link.classList.add("text-white");
+    activeLink = link;
+  }
+});
+
+// Scroll handler
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+
+  if (activeLink) {
+    if (scrollTop > 100) {
+      activeLink.classList.remove("text-white");
+      activeLink.classList.add("text-blue");
+    } else {
+      activeLink.classList.remove("text-blue");
+      activeLink.classList.add("text-white");
+    }
+  }
+});
+// path active
+
 // toggle dropdown mobile start
 function toggleDropdown() {
   const dropdown = document.getElementById("dropdownMenu");

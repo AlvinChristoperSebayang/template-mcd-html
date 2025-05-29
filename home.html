@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;600&display=swap"
       rel="stylesheet"
@@ -16,7 +17,7 @@
     <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
     <title>Vite App</title>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <header
       id="site-header"
       class="overflow-hidden md:bg-header bg-mobileHeader headBackgroundSize bg-bottom font-helvetica-neue"
@@ -111,81 +112,101 @@
           <div class="bar3"></div>
         </div>
       </nav>
-
       <nav
-        class="flex desktop max-md:hidden flex-row justify-between items-center container py-5 md:max-xl:text-[0.8rem]"
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition all duration-300"
       >
-        <div class="logo-gasrent flex flex-row gap-2 items-center">
-          <svg
-            width="40"
-            height="30"
-            viewBox="0 0 40 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.08773 21.6146C0.686605 25.2434 -0.013958 27.0578 0.86176 28.335C1.73748 29.6123 3.68241 29.6129 7.57226 29.6141L18.0437 29.6172L29.4834 29.6172L32.8352 20.5097C32.8358 20.5081 32.8346 20.5064 32.8329 20.5064C32.8312 20.5064 32.83 20.5047 32.8306 20.5031L34.3075 16.4818C34.455 16.0802 34.1591 15.654 33.7329 15.654H23.5987C23.3422 15.654 23.1128 15.8145 23.0241 16.0562L21.1338 21.3221C21.045 21.5638 20.8157 21.7244 20.5591 21.7244C20.1435 21.7244 18.9755 21.7241 17.5632 21.7236C14.1617 21.7226 12.461 21.722 11.6615 20.606C10.8621 19.4899 11.4087 17.8795 12.5021 14.6587L12.9925 13.2142C13.584 11.4717 13.8798 10.6005 14.5737 10.1006C15.2677 9.60071 16.1856 9.59617 18.0214 9.5871C23.4863 9.56007 33.234 9.51407 36.2559 9.51407C36.5123 9.51407 36.7415 9.35372 36.8304 9.11224L39.7307 1.23148C39.8785 0.829858 39.5826 0.403249 39.1562 0.403249H20.2482C20.2439 0.403249 20.2409 0.398938 20.2424 0.394862C20.2439 0.390786 20.2409 0.386475 20.2365 0.386475C19.3033 0.386475 18.1027 0.387813 16.8603 0.389733C13.6763 0.394655 12.0843 0.397116 10.8566 1.24051C9.62893 2.08389 9.05491 3.57052 7.90688 6.54378L2.08773 21.6146Z"
-              fill="white"
-              stroke="url(#paint0_linear_155_2128)"
-              stroke-width="0.198527"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_155_2128"
-                x1="22.27"
-                y1="-7.47276"
-                x2="48.2725"
-                y2="30.8542"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="white" />
-                <stop offset="1" stop-color="white" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
+        <div
+          class="flex desktop max-md:hidden flex-row justify-between items-center container py-5 md:max-xl:text-[0.8rem]"
+        >
+          <div class="logo-gasrent flex flex-row gap-2 items-center">
+            <svg
+              width="40"
+              height="30"
+              viewBox="0 0 40 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.08773 21.6146C0.686605 25.2434 -0.013958 27.0578 0.86176 28.335C1.73748 29.6123 3.68241 29.6129 7.57226 29.6141L18.0437 29.6172L29.4834 29.6172L32.8352 20.5097C32.8358 20.5081 32.8346 20.5064 32.8329 20.5064C32.8312 20.5064 32.83 20.5047 32.8306 20.5031L34.3075 16.4818C34.455 16.0802 34.1591 15.654 33.7329 15.654H23.5987C23.3422 15.654 23.1128 15.8145 23.0241 16.0562L21.1338 21.3221C21.045 21.5638 20.8157 21.7244 20.5591 21.7244C20.1435 21.7244 18.9755 21.7241 17.5632 21.7236C14.1617 21.7226 12.461 21.722 11.6615 20.606C10.8621 19.4899 11.4087 17.8795 12.5021 14.6587L12.9925 13.2142C13.584 11.4717 13.8798 10.6005 14.5737 10.1006C15.2677 9.60071 16.1856 9.59617 18.0214 9.5871C23.4863 9.56007 33.234 9.51407 36.2559 9.51407C36.5123 9.51407 36.7415 9.35372 36.8304 9.11224L39.7307 1.23148C39.8785 0.829858 39.5826 0.403249 39.1562 0.403249H20.2482C20.2439 0.403249 20.2409 0.398938 20.2424 0.394862C20.2439 0.390786 20.2409 0.386475 20.2365 0.386475C19.3033 0.386475 18.1027 0.387813 16.8603 0.389733C13.6763 0.394655 12.0843 0.397116 10.8566 1.24051C9.62893 2.08389 9.05491 3.57052 7.90688 6.54378L2.08773 21.6146Z"
+                fill="white"
+                stroke="url(#paint0_linear_155_2128)"
+                stroke-width="0.198527"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_155_2128"
+                  x1="22.27"
+                  y1="-7.47276"
+                  x2="48.2725"
+                  y2="30.8542"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+            </svg>
 
-          <h3 class="text-white font-bold">Gasrent Car</h3>
+            <h3 class="text-white font-bold">Gasrent Car</h3>
+          </div>
+          <ul
+            class="flex flex-row md:max-xl:gap-[34px] xl:gap-[50px] list-disc ml-[10px] xl:ml-[70px]"
+          >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ourCar.html">Our Car</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="downloadCar.html">Download App</a></li>
+          </ul>
+          <button
+            class="text-white max-h-[50px] bg-black hover:bg-white hover:!text-black duration-150 rounded-full px-2 xl:px-6 py-4"
+          >
+            Create Account Now
+          </button>
         </div>
-        <ul
-          class="flex flex-row md:max-xl:gap-[34px] xl:gap-[50px] list-disc ml-[10px] xl:ml-[70px]"
-        >
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="ourCar.html">Our Car</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="downloadCar.html">Download App</a></li>
-        </ul>
-        <button
-          class="h-full max-h-[50px] flex items-center text-white bg-black hover:bg-white hover:text-black duration-150 rounded-[50px] px-3 xl:px-6 py-4"
-        >
-          Create Account Now
-        </button>
       </nav>
       <div
-        class="container justify-between h-[1100px] md:h-auto lg:h-screen pt-10 pb-40 flex flex-col gap-[40px] md:gap-2 md:flex-row w-full max-w-[1220px]"
+        class="container md:mt-[100px] justify-between h-[1100px] md:h-auto lg:h-screen pt-10 pb-40 flex flex-col gap-[40px] md:gap-2 md:flex-row w-full max-w-[1220px]"
       >
         <div
           class="flex flex-col w-full justify-between md:max-w-[757px] gap-[30px]"
         >
           <div class="flex flex-col gap-6 md:gap-[30px] lg:gap-[16px]">
             <button
-              class="rounded-custom bg-transparent px-4 py-2 border border-[#BF60FA] text-white w-fit m-auto sm:m-0"
+              class="rounded-custom bg-transparent hover:bg-black transition-colors duration-300 px-4 py-2 border border-[#BF60FA] hover:border-[#000] text-white w-fit m-auto sm:m-0"
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="900"
+              data-aos-offset="100"
             >
               Gasrent Car Application
             </button>
             <h1
               class="text-[32px] md:text-[64px] text-center sm:text-start lg:text-[86px] leading-[1] tracking-[-0.6px] text-white w-full md:max-w-[757px]"
+              data-aos="fade-right"
+              data-aos-delay="500"
+              data-aos-duration="900"
+              data-aos-offset="100"
             >
               Different Experience with Gasrent Car
             </h1>
             <p
               class="w-full md:max-w-[757px] text-[16px] md:text-[20px] leading-[1.2] text-center sm:text-start"
+              data-aos="fade-right"
+              data-aos-delay="700"
+              data-aos-duration="900"
+              data-aos-offset="100"
             >
               Exploring the Unmatched Features and Benefits of Choosing Gasren
               for Your Next Car Rental
             </p>
             <div class="flex flex-row gap-[24px]">
               <button
+              data-aos="fade-right"
+              data-aos-delay="1100"
+              data-aos-duration="1000"
+              data-aos-offset="100"
                 class="flex flex-row items-center px-6 py-2 gap-[10px] bg-[var(--primary-btn)] w-[162px]"
               >
                 <img src="/apple.svg" alt="" />
@@ -195,6 +216,10 @@
                 </div>
               </button>
               <button
+              data-aos="fade-right"
+              data-aos-delay="900"
+              data-aos-duration="1000"
+              data-aos-offset="100"
                 class="flex flex-row items-center px-6 py-2 gap-[10px] bg-[var(--primary-btn)] w-[162px]"
               >
                 <img src="/playstore.svg" alt="" />
@@ -258,6 +283,9 @@
           </div>
         </div>
         <img
+        data-aos="zoom-in"
+        data-aos-delay="800"
+        data-aos-duration="700"
           class="relative right-2 sm:right-0 mx-auto md:mx-0 max-w-[326px] md:max-w-[300px] lg:max-w-[380px] h-full max-h-[840px]"
           src="/herocar.png"
           alt=""
@@ -271,11 +299,19 @@
       >
         <div class="text-center flex flex-col mb-12 gap-[12px]">
           <h2
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="text-[32px] md:text-[40px] lg:text-[64px] xl:text-[64px] w-[327px] h-[80px] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[72px] xl:leading-[72px] text-[#050810] text-center"
           >
             Why Choose Gasrent Car
           </h2>
           <p
+          data-aos="fade-right"
+          data-aos-delay="600"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="text-[16px] md:text-[16px] xl:text-[20px] w-[327px] h-[52px] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[32px] xl:leading-[32px] text-center text-[#747B8B]"
           >
             Discover the Advantages That Set Gasrent Apart for Your Next Car
@@ -288,6 +324,10 @@
         >
           <!-- Card 1 -->
           <div
+          data-aos="fade-right"
+          data-aos-delay="1000"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-full h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%] rounded-[24px] p-[24px] text-start"
           >
             <div class="mb-[1rem]">
@@ -329,6 +369,10 @@
 
           <!-- Card 2 -->
           <div
+          data-aos="fade-right"
+          data-aos-delay="800"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-full h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%] rounded-[24px] p-[24px] text-start"
           >
             <div class="mb-[1rem]">
@@ -384,6 +428,10 @@
 
           <!-- Card 3 -->
           <div
+          data-aos="fade-right"
+          data-aos-delay="700"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-full h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%] rounded-[24px] p-[24px] text-start"
           >
             <div class="mb-[1rem]">
@@ -453,6 +501,10 @@
 
           <!-- Card 4 -->
           <div
+          data-aos="fade-right"
+          data-aos-delay="600"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="bg-gradient-to-b from-[#F4F0FF] to-[#FFFFFF] border border-[#D9CCFF] w-full h-[276px] sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[100%] xl:w-[100%] xl:h-[100%] rounded-[24px] p-[24px] text-start"
           >
             <div class="mb-[1rem]">
@@ -620,11 +672,19 @@
                 class="text-center flex flex-col mb-[6rem] sm:mb-[8rem] md:mb-[9rem] xl:mb-[12rem] gap-[12px] md:gap-[8px] lg:gap-[12px] xl:gap-[12px] xl:pt-[0.2rem]"
               >
                 <h2
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="900"
+                data-aos-offset="100"
                   class="text-[30px] sm:text-[30px] md:text-[31px] lg:text-[45px] xl:text-[64px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[50%] font-normal leading-[40px] md:leading-[48px] xl:leading-[72px] text-[#050810] text-center"
                 >
                   Acura NSX Honda Civic Type R 4
                 </h2>
                 <p
+                data-aos="fade-right"
+                data-aos-delay="500"
+                data-aos-duration="900"
+                data-aos-offset="100"
                   class="text-[14px] sm:text-[14px] md:text-[16px] xl:text-[20px] w-[100%] h-[10%] md:w-[100%] md:h-[48%] xl:w-[100%] xl:h-[48%] font-normal leading-[26px] md:leading-[20px] xl:leading-[32px] text-center text-[#747B8B]"
                 >
                   Many Car in our Company clean and comfortable
@@ -632,6 +692,10 @@
               </div>
               <div class="relative">
                 <img
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                data-aos-duration="900"
+                data-aos-offset="50"
                   src="ellipse.svg"
                   alt="Ellipse Decoration"
                   class="mx-auto w-[100%] sm:w-[90%] md:w-[75%] xl:w-[65%] object-cover"
@@ -758,9 +822,7 @@
         </div>
 
         <div class="swiper thumbnail-swiper mt-6">
-          <div
-            class="swiper-wrapper flex justify-center gap-[2px] xl:gap-[40px] md:gap-0 mt-[2rem] xl:mt-[5rem]"
-          >
+          <div class="swiper-wrapper mt-[2rem] xl:mt-[5rem]">
             <!-- hyundai -->
             <div class="swiper-slide">
               <svg
@@ -892,31 +954,40 @@
       </section>
 
       <!-- section 3 -->
-      <section
-        class="container w-full h-auto mx-auto py-[60px] sm:py-[35px] md:py-[6rem] lg:py-[8rem] xl:py-[8rem]"
-      >
-        <ul>
+      <section class="container w-full h-auto mx-auto py-[40px] lg:py-[80px]">
+        <ul class="flex flex-col gap-[32px]">
           <div
-            class="mx-auto text-center flex flex-col gap-[45px] sm:gap-[50px] md:gap-0 xl:gap-[20px]"
+            class="w-full mx-auto text-center flex flex-col gap-[45px] sm:gap-[50px] md:gap-0 xl:gap-[20px]"
           >
             <div
               class="flex flex-col md:flex-row gap-0 sm:gap-[20px] md:gap-[102px] xl:gap-[9%] justify-between"
             >
               <div
-                class="text-start flex flex-col mb-12 sm:mb-0 md:mb-[2rem] xl:mb-12 sm:gap[12px] md:gap-[12px] lg:gap-[20px] xl:gap-[12px]"
+                class="text-start flex flex-col sm:gap[12px] md:gap-[12px] lg:gap-[20px] xl:gap-[12px]"
               >
                 <h2
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-duration="900"
+                data-aos-offset="50"
                   class="text-[32px] md:text-[30px] lg:text-[64px] xl:text-[64px] w-[100%] h-[50%] md:w-[100%] md:h-[50%] lg:w-[75%] lg:h-[70%] xl:w-[60%] xl:h-[80%] font-normal leading-[40px] md:leading-[72px] xl:leading-[72px] text-[#050810] text-start"
                 >
                   Line up luxury Gasrent Car
                 </h2>
                 <p
+                data-aos="fade-right"
+                data-aos-delay="600"
+                data-aos-duration="900"
+                data-aos-offset="50"
                   class="text-[14px] md:text-[14px] lg:text-[16px] xl:text-[20px] w-[100%] h-[50%] md:w-[100%] md:h-[48%] lg:w-[60%] xl:w-[60%] xl:h-[48%] font-normal leading-[26px] md:leading-[32px] xl:leading-[32px] text-start text-[#747B8B]"
                 >
                   Many Car in our Company clean and comfortable
                 </p>
               </div>
-              <div class="relative md:pt-[8%] xl:pt-[12%]">
+              <div   data-aos="fade-left"
+              data-aos-delay="600"
+              data-aos-duration="900"
+              data-aos-offset="50" class="relative md:pt-[8%] xl:pt-[12%]">
                 <img
                   src="/search.svg"
                   alt=""
@@ -941,6 +1012,10 @@
               >
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="100"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#all"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full bg-[#7C3AED] text-white font-normal text-sm sm:text-base hover:bg-[#7240FF] hover:text-white transition-all duration-200"
                     onclick="showCard('all')"
@@ -950,6 +1025,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#acura"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -958,6 +1037,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#mercedes"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -966,6 +1049,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#range"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -974,6 +1061,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="500"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#tesla"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -982,6 +1073,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="600"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#bmw"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -990,6 +1085,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="700"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#kia"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -998,6 +1097,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="800"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#mitsubishi"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -1006,6 +1109,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="900"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#audi"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -1014,6 +1121,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="1000"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#hyundai"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -1022,6 +1133,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="1100"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#miniCopper"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -1030,6 +1145,10 @@
                 </li>
                 <li>
                   <a
+                  data-aos="fade-right"
+                  data-aos-delay="1000"
+                  data-aos-duration="900"
+                  data-aos-offset="50"
                     href="#ertiga"
                     class="px-4 py-2 sm:px-6 sm:py-2 md:px-6 md:py-2 xl:px-[20px] xl:py-[6px] rounded-full border border-[#E3E5E8] text-[#696F7D] font-normal text-sm sm:text-base md:text-[text-12px] xl:text-[16px] hover:bg-[#7240FF] hover:text-white hover:border-[#7240FF] transition-all duration-200"
                   >
@@ -1044,13 +1163,17 @@
           >
             <!-- Card 1 -->
             <div class="overflow-hidden card-cover mitsubishi">
-              <li>
+              <li  data-aos="fade-right"
+              data-aos-delay="1000"
+              data-aos-duration="900"
+              data-aos-offset="50">
                 <a
                   href="mitsubushi.png"
                   data-fslightbox="gallery"
                   class="block"
                 >
                   <img
+                   
                     src="mitsubushi.png"
                     alt="Mitsubishi"
                     class="card-car-product cursor-pointer rounded-[15px] w-full h-48 object-cover"
@@ -1111,7 +1234,10 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="overflow-hidden card-cover range">
+            <div  data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover range">
               <a href="rangeRover.png" data-fslightbox="gallery">
                 <img
                   src="rangeRover.png"
@@ -1171,9 +1297,12 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="overflow-hidden card-cover ertiga">
+            <div  data-aos="fade-right"
+            data-aos-delay="600"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover ertiga">
               <a href="ertiga.png" data-fslightbox="gallery">
-                <img
+                <img            
                   src="ertiga.png"
                   alt="Mitsubishi"
                   class="card-car-product cursor-pointer rounded-[15px] w-full h-48 object-cover"
@@ -1231,9 +1360,12 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="overflow-hidden card-cover miniCopper">
+            <div  data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover miniCopper">
               <a href="miniCooper.png" data-fslightbox="gallery">
-                <img
+                <img          
                   src="miniCooper.png"
                   alt="Mitsubishi"
                   class="card-car-product cursor-pointer rounded-[15px] w-full h-48 object-cover"
@@ -1291,7 +1423,10 @@
             </div>
 
             <!-- Card 5 -->
-            <div class="overflow-hidden card-cover bmw">
+            <div  data-aos="fade-right"
+            data-aos-delay="1200"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover bmw">
               <a href="bmw.png" data-fslightbox="gallery">
                 <img
                   src="bmw.png"
@@ -1351,7 +1486,10 @@
             </div>
 
             <!-- Card 6 -->
-            <div class="overflow-hidden card-cover mercedes">
+            <div  data-aos="fade-right"
+            data-aos-delay="1000"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover mercedes">
               <a href="marcedes2.jpg" data-fslightbox="gallery">
                 <img
                   src="marcedes2.jpg"
@@ -1411,7 +1549,10 @@
             </div>
 
             <!-- Card 7 -->
-            <div class="overflow-hidden card-cover hyundai">
+            <div  data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover hyundai">
               <a href="hyundai.png" data-fslightbox="gallery">
                 <img
                   src="hyundai.png"
@@ -1422,7 +1563,7 @@
               <div class="py-4">
                 <div class="mb-4">
                   <h3
-                    class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-[100%] sm:w-[100%] md:w-[217px] lg:w-[241px] xl:w-[290px] font-normal mb-1"
+                    class="text-[#050810] text-[20px] sm:text-[20px] md:text-[17px] lg:text-[20px] xl:text-[24px] w-full font-normal mb-1"
                   >
                     Hyundai Car - Latest model
                   </h3>
@@ -1471,7 +1612,10 @@
             </div>
 
             <!-- Card 8-->
-            <div class="overflow-hidden card-cover kia">
+            <div  data-aos="fade-right"
+            data-aos-delay="600"
+            data-aos-duration="900"
+            data-aos-offset="50" class="overflow-hidden card-cover kia">
               <a href="kia.png" data-fslightbox="gallery">
                 <img
                   src="kia.png"
@@ -1531,10 +1675,12 @@
             </div>
           </div>
 
-          <div
-            class="w-full mx-auto flex justify-center items-center mt-[2rem]"
-          >
+          <div class="w-full mx-auto flex justify-center items-center">
             <button
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="900"
+            data-aos-offset="50"
               class="bg-[#7240FF] hover:bg-black duration-150 text-white rounded-[31px] text-[12px] md:text-[15px] xl:text-[16px] px-[24px] py-[12px] font-normal w-fit"
             >
               View All Car
@@ -1550,7 +1696,7 @@
         <div class="flex flex-col relative group items-center">
           <!-- Tooltip Kanan (Maps Feature) -->
           <div
-            class="card-map-many flex flex-col gap-1 sm:gap-2 lg:gap-3 shadow-[0_26px_40px_-10px_rgba(0,0,0,0.05)] bg-white py-2 sm:py-4 lg:py-6 px-[15px] rounded-[13px] sm:rounded-[19px] lg:rounded-[24px] w-full max-w-[113px] sm:max-w-[165px] lg:max-w-[202px] h-full max-h-[98px] sm:max-h-[136px] lg:max-h-[166px] absolute top-[160px] left-[43%] translate-x-[60%] mt-4 opacity-0 pointer-events-none translate-y-3 transition-all duration-500 delay-100 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+            class="card-map-many z-50 flex flex-col gap-1 sm:gap-2 lg:gap-3 shadow-[0_26px_40px_-10px_rgba(0,0,0,0.05)] bg-white py-2 sm:py-4 lg:py-6 px-[15px] rounded-[13px] sm:rounded-[19px] lg:rounded-[24px] w-full max-w-[113px] sm:max-w-[165px] lg:max-w-[202px] h-full max-h-[98px] sm:max-h-[136px] lg:max-h-[166px] absolute top-[160px] left-[43%] translate-x-[60%] mt-4 opacity-0 pointer-events-none translate-y-3 transition-all duration-500 delay-100 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
           >
             <img src="/map-feature.svg" alt="" class="w-full max-w-[32px]" />
             <h4 class="text-[10px] sm:text-[14px] lg:text-[18px]">
@@ -1565,7 +1711,10 @@
           <figure
             class="bg-[#F3F3F3] pt-[32px] px-[40px] sm:px-[60px] lg:px-[77px] rounded-[13px] sm:rounded-[19px] lg:rounded-[24px]"
           >
-            <img class=" " src="/banner-feature.png" alt="" />
+            <img class=" "    data-aos="zoom-in"
+            data-aos-delay="400"
+            data-aos-duration="900"
+            data-aos-offset="50" src="/banner-feature.png" alt="" />
           </figure>
 
           <!-- Tooltip Kiri (Sport Cars) -->
@@ -1584,11 +1733,19 @@
 
         <ul class="flex flex-col gap-6 items-start justify-center">
           <li
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="w-full max-w-[639px] text-[32px] sm:text-[48px] lg:text-[64px] text-[#050810] leading-[1.2]"
           >
             Many Features and easy to use by many people
           </li>
           <li
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-duration="900"
+          data-aos-offset="50"
             class="w-full max-w-[639px] text-[16px] sm:text-[20px] leading-[1.6] text-[#8C8C8C]"
           >
             There are many features that we can use in the Gasrent Car App, and
@@ -1598,6 +1755,10 @@
           </li>
           <li>
             <button
+            data-aos="fade-left"
+            data-aos-delay="600"
+            data-aos-duration="900"
+            data-aos-offset="50"
               class="bg-[#7240FF] hover:bg-black duration-150 text-white rounded-[31px] text-[12px] md:text-[15px] xl:text-[16px] px-[24px] py-[12px] font-normal w-fit"
             >
               Create Account Now
@@ -1614,11 +1775,19 @@
         <div class="mb-8 md:mb-0 md:px-0">
           <div class="text-[#050810] text-left md:w-[96%] xl:w-[110%]">
             <h1
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="900"
+            data-aos-offset="50"
               class="text-[32px] md:text-[28px] xl:text-[64px] w-[90%] md:w-[90%] xl:w-[90%] font-normal leading-[40px] md:leading-[35px] lg:leading-[60px] xl:leading-[72px]"
             >
               Frequently Asked Question (FAQ)
             </h1>
             <p
+            data-aos="fade-right"
+            data-aos-delay="600"
+            data-aos-duration="900"
+            data-aos-offset="50"
               class="text-[20px] lg:text-[20px] sm:text-[20px] md:text-[16px] xl:text-[20px] text-[#6A7182] w-[90%] md:w-[96%] xl:w-[102%] mt-[10px] lg:mt-[24px] leading-[32px] md:leading-[23px] xl:leading-[32px]"
             >
               Experience a wealth of powerful features that are designed to be
@@ -1635,7 +1804,10 @@
             <div
               class="faq-header max-h-[30px] mb-2 flex justify-between items-center w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] cursor-pointer"
             >
-              <h3 class="text-[20px] sm:text-[24px]">What is GasRent Car?</h3>
+              <h3    data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="900"
+              data-aos-offset="10" class="text-[20px] sm:text-[24px]">What is GasRent Car?</h3>
               <img
                 src="btnScrool.svg"
                 alt="Expand"
@@ -1654,7 +1826,10 @@
             <div
               class="faq-header max-h-[30px] mb-2 flex justify-between items-center w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] cursor-pointer"
             >
-              <h3 class="text-[20px] sm:text-[24px]">
+              <h3  data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="900"
+              data-aos-offset="10" class="text-[20px] sm:text-[24px]">
                 How do I place an order with GasRent Car?
               </h3>
               <img
@@ -1675,7 +1850,10 @@
             <div
               class="faq-header max-h-[30px] mb-2 flex justify-between items-center w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] cursor-pointer"
             >
-              <h3 class="text-[20px] sm:text-[24px]">
+              <h3  data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="900"
+              data-aos-offset="10" class="text-[20px] sm:text-[24px]">
                 What features does GasRent Car have?
               </h3>
               <img
@@ -1696,7 +1874,10 @@
             <div
               class="faq-header max-h-[30px] mb-2 flex justify-between items-center w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] cursor-pointer"
             >
-              <h3 class="text-[20px] sm:text-[24px]">
+              <h3  data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="900"
+              data-aos-offset="10" class="text-[20px] sm:text-[24px]">
                 Is this app for worldwide?
               </h3>
               <img
@@ -1717,7 +1898,10 @@
             <div
               class="faq-header max-h-[30px] mb-2 flex justify-between items-center w-full text-[24px] md:text-[14px] xl:text-[24px] font-normal text-[#050811] cursor-pointer"
             >
-              <h3 class="text-[20px] sm:text-[24px]">
+              <h3  data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-duration="900"
+              data-aos-offset="10" class="text-[20px] sm:text-[24px]">
                 Why choose GasRent Car?
               </h3>
               <img
@@ -1789,25 +1973,27 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       From this application we get a lot of features and you
                       don't need to exit the application when you need Maps to
                       reach a location, a unique application 👍🏻
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Nugraha</p>
                     <div class="country flex flex-row center">
                       <figure class="country-flag">
                         <img src="./Flag.svg" alt="Country Flag" />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       "I recently purchased a product from this store, and I
                       couldn't be happier! The quality exceeded my expectations,
                       and the customer service was outstanding. I highly
@@ -1816,111 +2002,124 @@
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Rizwan Gusnajmi</p>
                     <div class="country flex flex-row">
                       <figure class="country-flag">
                         <img src="./Flag.svg" alt="Country Flag" />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       "Amazing experience! The service was fast, and the team
                       was very responsive to my questions. I will definitely buy
                       again."
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Purwa Adi Twingkiwingki</p>
                     <div class="country flex flex-row">
                       <figure class="country-flag">
                         <img src="./Flag.svg" alt="Country Flag" />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
-                      "I was skeptical at first, but this product turned out to
-                      be exactly what I needed. Great value for money!"
-                    </p>
-                  </div>
-                  <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
-                    <div class="country flex flex-row">
-                      <figure class="country-flag">
-                        <img src="./Flag.svg" alt="Country Flag" />
-                      </figure>
-                      <p>Based in Indonesia</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       "The customer support was fantastic. They guided me
                       through the process and made sure I got what I wanted.
                       Thank you!"
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Yuda Ananda</p>
                     <div class="country flex flex-row center">
                       <figure class="country-flag">
                         <img src="./Flag.svg" alt="Country Flag" />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
+                      "The customer support was fantastic. They guided me
+                      through the process and made sure I got what I wanted.
+                      Thank you!"
+                    </p>
+                  </div>
+                  <div class="testimonials-author">
+                    <p class="text-[20px] text-[]">Alvin Sebayang</p>
+                    <div class="country flex flex-row center">
+                      <figure class="country-flag">
+                        <img src="./Flag.svg" alt="Country Flag" />
+                      </figure>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonials-content">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       "I love how easy it was to order. The product arrived on
                       time and in perfect condition. Five stars!"
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Michael Jorda</p>
                     <div class="country flex flex-row">
                       <figure class="country-flag">
                         <img src="./Flag.svg" alt="Country Flag" />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       "This is my second purchase, and I’m just as impressed as
                       the first time. Highly recommend!"
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Samasul Afroy</p>
                     <div class="country flex flex-row">
                       <figure class="country-flag">
                         <img src="./Flag.svg" alt="Country Flag" />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="testimonials-content">
-                    <p class="text-4xl leading-10 mt-16">
+                    <p class="text-[#070C17] text-4xl leading-10 mt-16">
                       "Superb quality and excellent customer service. I will
                       definitely be recommending this to my friends!"
                     </p>
                   </div>
                   <div class="testimonials-author">
-                    <p class="text-xl">Michael Jorda</p>
+                    <p class="text-[20px] text-[]">Gilang Nugroho</p>
                     <div class="country flex flex-row">
                       <figure class="country-flag">
                         <img
@@ -1929,7 +2128,9 @@
                           alt="Country Flag"
                         />
                       </figure>
-                      <p>Based in Indonesia</p>
+                      <p class="text-[14px] text-[#070C17]">
+                        Based in Indonesia
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1944,14 +2145,23 @@
         <div
           class="container md:pt-40 py-10 md:pb-28 text-center flex flex-col gap-6 justify-center items-center"
         >
-          <h2 class="text-white text-4xl md:text-6xl">
+          <h2  data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="900"
+          data-aos-offset="10" class="text-white text-4xl md:text-6xl">
             Download Gasrent Car App
           </h2>
-          <p class="text-[#ACB0B9] text-xl">
+          <p  data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="900"
+          data-aos-offset="10" class="text-[#ACB0B9] text-xl">
             Let’s rental car for your activity in your live
           </p>
           <div class="button-wrap flex flex-row gap-6">
-            <button class="button-appStore p-0">
+            <button  data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="900"
+            data-aos-offset="10" class="button-appStore p-0">
               <svg
                 width="162"
                 height="47"
@@ -1992,7 +2202,10 @@
                 </defs>
               </svg>
             </button>
-            <button class="button-playStore p-0">
+            <button  data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="900"
+            data-aos-offset="10" class="button-playStore p-0">
               <svg
                 width="162"
                 height="47"
@@ -2040,17 +2253,20 @@
 
     <!-- footer start -->
     <footer id="site-footer" class="bg-[#050810] relative overflow-hidden">
-      <div class="container">
+      <div class="container relative">
         <div
-          class="absolute max-xl:scale-150 max-md:top-[6px] md:max-xl:top-[16px]"
+          class="absolute max-xl:scale-150 max-md:top-[6px] md:max-xl:top-[16px] right-[20px]"
         >
           <img src="./Light.png" alt="light" />
         </div>
         <div
-          class="footer-wrap flex flex-col max-md:gap-16 md:flex-row justify-between  pt-20"
+          class="footer-wrap flex flex-col max-md:gap-16 md:flex-row justify-between pt-20"
         >
           <div class="title-wrap md:w-72">
-            <div class="logo-gasrent flex flex-row gap-2">
+            <div  data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="900"
+            data-aos-offset="10" class="logo-gasrent flex flex-row gap-2">
               <svg
                 width="40"
                 height="30"
@@ -2082,7 +2298,10 @@
               <h3 class="text-white font-bold">Gasrent Car</h3>
             </div>
 
-            <p class="text-[#989EA9] text-base font-helvetica-neue mt-10">
+            <p  data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="900"
+            data-aos-offset="10" class="text-[#989EA9] hover:text-white transition-colors duration-500 text-base font-helvetica-neue mt-10">
               Exploring the Unmatched Features and Benefits of Choosing Gasren
               for Your Next Car Rental
             </p>
@@ -2092,40 +2311,82 @@
             class="list-wrap max-md:gap-6 md:gap-14 flex flex-col md:flex-row justify-between pb-10"
           >
             <div class="first-list">
-              <h4>Company</h4>
+              <h4  data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+              data-aos-offset="10">Company</h4>
               <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Car</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Download</a></li>
+                <li><a  data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-duration="1000"
+                  data-aos-offset="10" href="#">About Us</a></li>
+                <li><a  data-aos="fade-up"
+                  data-aos-delay="700"
+                  data-aos-duration="1000"
+                  data-aos-offset="10" href="#">Our Car</a></li>
+                <li><a  data-aos="fade-up"
+                  data-aos-delay="1000"
+                  data-aos-duration="1000"
+                  data-aos-offset="10" href="#">FAQ</a></li>
+                <li><a  data-aos="fade-up"
+                  data-aos-delay="1000"
+                  data-aos-duration="1000"
+                  data-aos-offset="10" href="#">Download</a></li>
               </ul>
             </div>
 
             <div class="second-list">
-              <h4>User</h4>
+              <h4 data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+              data-aos-offset="10">User</h4>
               <ul>
-                <li><a href="#">Create Account</a></li>
+                <li><a data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-duration="1000"
+                  data-aos-offset="10" href="#">Create Account</a></li>
               </ul>
             </div>
 
             <div class="third-list">
-              <h4>Support</h4>
+              <h4 data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1100"
+              data-aos-offset="10">Support</h4>
               <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Forums</a></li>
+                <li><a data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-duration="1100"
+                  data-aos-offset="10" href="#">Help Center</a></li>
+                <li><a data-aos="fade-up"
+                  data-aos-delay="700"
+                  data-aos-duration="1100"
+                  data-aos-offset="10" href="#">FAQ</a></li>
+                <li><a data-aos="fade-up"
+                  data-aos-delay="900"
+                  data-aos-duration="1100"
+                  data-aos-offset="10" href="#">Forums</a></li>
               </ul>
             </div>
           </div>
         </div>
 
         <div
-          class="footer-bottom flex flex-col max-md:gap-2 max-md:items-center md:flex-row md:justify-between py-3"
+          class="footer-bottom flex flex-col max-md:gap-2 items-baseline max-md:items-baseline md:flex-row md:justify-between py-3"
         >
-          <p class="text-white">© 2024 gasrentar. All rights reserved.</p>
+          <p  data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="900"
+          data-aos-offset="10" class="text-white">© 2024 gasrentar. All rights reserved.</p>
           <ul class="flex flex-row">
-            <li class="border-r-2 pr-6"><a href="">Customer Service</a></li>
-            <li class="pl-6"><a href="">Provicy Policie</a></li>
+            <li  data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="900"
+            data-aos-offset="10" class="border-r-2 pr-6"><a href="">Customer Service</a></li>
+            <li  data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="900"
+            data-aos-offset="10" class="pl-6"><a href="">Provicy Policie</a></li>
           </ul>
         </div>
       </div>
@@ -2134,8 +2395,53 @@
 
     <script type="module" src="/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
-
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true
+      });
+    </script>
+    <script>
+      const navbar = document.getElementById("navbar");
+      const menu = document.querySelectorAll("nav ul li a");
+      let scrollTimeout;
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+
+        if (scrollTop > 100) {
+          menu.forEach((link) => {
+            link.classList.add("text-white");
+          });
+          navbar.classList.add("nav-black", "shadow-lg");
+        } else {
+          menu.forEach((link) => {
+            link.classList.remove("text-white");
+          });
+          navbar.classList.remove("nav-black", "shadow-lg");
+
+          // Jika di atas 50px, navbar harus tetap tampil
+          navbar.classList.add("navbar-visible");
+          navbar.classList.remove("navbar-hidden");
+          return; // keluar agar tidak lanjut ke logika hide/show
+        }
+
+        // Saat scroll aktif (ke atas atau ke bawah), navbar muncul
+        navbar.classList.add("navbar-visible");
+        navbar.classList.remove("navbar-hidden");
+
+        // Reset sembunyikan navbar setelah scroll berhenti
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          // Sembunyikan hanya jika posisi scroll > 50
+          if (window.scrollY > 50) {
+            navbar.classList.remove("navbar-visible");
+            navbar.classList.add("navbar-hidden");
+          }
+        }, 2000);
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -2162,6 +2468,128 @@
 
           requestAnimationFrame(update);
         });
+      });
+    </script>
+
+    <script>
+      const imageSlider = new Swiper(".imageSlider", {
+        loop: true,
+        slidesPerView: 5,
+        centeredSlides: true,
+        initialSlide: 2,
+        effect: "slide",
+        spaceBetween: 10,
+        slideActiveClass: "swiper-slide-active",
+      });
+
+      const textSlider = new Swiper(".textSlider", {
+        loop: true,
+        slidesPerView: 1,
+        effect: "fade",
+        fadeEffect: { crossFade: true },
+        initialSlide: 2,
+      });
+
+      // Connect both sliders
+      imageSlider.controller.control = textSlider;
+      textSlider.controller.control = imageSlider;
+
+      // Manual slide on click
+      document
+        .querySelectorAll(".imageSlider .swiper-slide")
+        .forEach((slide) => {
+          slide.addEventListener("click", function () {
+            const index = Number(this.getAttribute("data-swiper-slide-index"));
+            imageSlider.slideToLoop(index);
+          });
+        });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Thumbnail Swiper
+        const thumbnailSwiper = new Swiper(".thumbnail-swiper", {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          centeredSlides: true,
+          loop: true,
+          slideToClickedSlide: false,
+          initialSlide: 3,
+          loopedSlides: 7,
+          breakpoints: {
+            640: {
+              slidesPerView: 5,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 7,
+              spaceBetween: 10,
+            },
+          },
+        });
+
+        // Main Swiper
+        const mainSwiper = new Swiper(".main-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+          speed: 600,
+          loopedSlides: 7,
+          autoHeight: true,
+          initialSlide: 3,
+          navigation: {
+            nextEl: ".nav-button-right",
+            prevEl: ".nav-button-left",
+          },
+        });
+
+        // Sinkronisasi dua swiper
+        mainSwiper.controller.control = thumbnailSwiper;
+        thumbnailSwiper.controller.control = mainSwiper;
+
+        // CSS tambahan
+        document.styleSheets[1].insertRule(
+          `
+  .thumbnail-swiper .swiper-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+`,
+          document.styleSheets[1].cssRules.length
+        );
+
+        // Warna thumbnail
+        const updateThumbnailColors = () => {
+          document
+            .querySelectorAll(".thumbnail-swiper .swiper-slide svg path")
+            .forEach((path, index) => {
+              if (
+                thumbnailSwiper.slides[index].classList.contains(
+                  "swiper-slide-active"
+                )
+              ) {
+                path.style.fill = "black";
+              } else {
+                path.style.fill = "none";
+              }
+            });
+        };
+
+        // Event ketika slide di mainSwiper berubah
+        mainSwiper.on("slideChangeTransitionEnd", () => {
+          const activeIndex = mainSwiper.realIndex;
+          thumbnailSwiper.slideToLoop(activeIndex); // Update thumbnail sesuai slide aktif
+          updateThumbnailColors();
+        });
+
+        // Event ketika thumbnail diklik
+        thumbnailSwiper.on("click", (swiper) => {
+          const clickedIndex = swiper.clickedIndex;
+          if (typeof clickedIndex !== "undefined") {
+            mainSwiper.slideToLoop(clickedIndex); // Slide utama berubah sesuai thumbnail yang diklik
+            updateThumbnailColors();
+          }
+        });
+
+        updateThumbnailColors();
       });
     </script>
 
@@ -2207,94 +2635,6 @@
             img.classList.add("rotate-0");
           }
         });
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        // Thumbnail Swiper
-        const thumbnailSwiper = new Swiper(".thumbnail-swiper", {
-          slidesPerView: 3,
-          spaceBetween: 10,
-          centeredSlides: true,
-          loop: true,
-          slideToClickedSlide: true,
-          initialSlide: 3,
-          loopedSlides: 7,
-          breakpoints: {
-            640: {
-              slidesPerView: 5,
-              spaceBetween: 15,
-            },
-            1024: {
-              slidesPerView: 7,
-              spaceBetween: 10,
-            },
-          },
-        });
-
-        // Main Swiper
-        const mainSwiper = new Swiper(".main-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          loop: true,
-          speed: 600,
-          loopedSlides: 7,
-          autoHeight: true,
-          initialSlide: 3,
-          navigation: {
-            nextEl: ".nav-button-right",
-            prevEl: ".nav-button-left",
-          },
-        });
-
-        // Sinkronisasi dua swiper
-        mainSwiper.controller.control = thumbnailSwiper;
-        thumbnailSwiper.controller.control = mainSwiper;
-
-        // CSS tambahan
-        document.styleSheets[0].insertRule(
-          `
-  .thumbnail-swiper .swiper-wrapper {
-    justify-content: center;
-    align-items: center;
-  }
-`,
-          document.styleSheets[0].cssRules.length
-        );
-
-        // Warna thumbnail
-        const updateThumbnailColors = () => {
-          document
-            .querySelectorAll(".thumbnail-swiper .swiper-slide svg path")
-            .forEach((path, index) => {
-              if (
-                thumbnailSwiper.slides[index].classList.contains(
-                  "swiper-slide-active"
-                )
-              ) {
-                path.style.fill = "black";
-              } else {
-                path.style.fill = "none";
-              }
-            });
-        };
-
-        // Event ketika slide di mainSwiper berubah
-        mainSwiper.on("slideChangeTransitionEnd", () => {
-          const activeIndex = mainSwiper.realIndex;
-          thumbnailSwiper.slideToLoop(activeIndex); // Update thumbnail sesuai slide aktif
-          updateThumbnailColors();
-        });
-
-        // Event ketika thumbnail diklik
-        thumbnailSwiper.on("click", (swiper) => {
-          const clickedIndex = swiper.clickedIndex;
-          if (typeof clickedIndex !== "undefined") {
-            mainSwiper.slideToLoop(clickedIndex); // Slide utama berubah sesuai thumbnail yang diklik
-            updateThumbnailColors();
-          }
-        });
-
-        updateThumbnailColors();
       });
 
       // nav2
@@ -2379,34 +2719,6 @@
       });
 
       console.log("test");
-
-      const imageSlider = new Swiper(".imageSlider", {
-        loop: true,
-        slidesPerView: 5,
-        centeredSlides: true,
-        initialSlide: 2,
-        effect: "slide",
-        spaceBetween: 10,
-        slideActiveClass: "swiper-slide-active",
-      });
-
-      const textSlider = new Swiper(".textSlider", {
-        loop: true,
-        slidesPerView: 1,
-        effect: "fade",
-        fadeEffect: { crossFade: true },
-        initialSlide: 2,
-      });
-
-      imageSlider.controller.control = textSlider;
-      textSlider.controller.control = imageSlider;
-
-      document.querySelectorAll(".swiper-slide").forEach((slide) => {
-        slide.addEventListener("click", function () {
-          const index = this.getAttribute("data-swiper-slide-index");
-          imageSlider.slideToLoop(index);
-        });
-      });
     </script>
   </body>
 </html>

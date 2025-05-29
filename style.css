@@ -6,7 +6,12 @@
   --primary: #7240ff;
   --primary-btn: #050810;
   --primary-dark: #050810;
+  --primary-paragraph: #6A7182;
+  --secondary-paragraph: #6A7182;
+  --secondary-paragraph-card: #747B8B;
 }
+
+
 
 #site-header .navigation-wrapper {
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
@@ -19,6 +24,55 @@
 #site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
 }
+
+#navbar {
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  transform: translateY(0);
+}
+
+.text-blue{
+  color:#7240FF !important;
+}
+
+.text-white{
+  color:#fff !important;
+}
+
+.nav-black {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px); /* untuk Safari */
+}
+
+.sub-header {
+  @apply text-[32px] leading-[1.2] text-[var(--primary-btn)];
+}
+
+@media (min-width: 640px) {
+  .sub-header {
+    @apply text-[40px];
+  }
+}
+
+@media (min-width: 768px) {
+  .sub-header {
+    @apply text-[48px];
+  }
+}
+
+@media (min-width: 1024px) {
+  .sub-header {
+    @apply text-[64px] leading-[1.1];
+  }
+}
+
 
 .container {
   width: 100%;
@@ -158,39 +212,37 @@ button {
 @media (max-width: 730px) {
   .card-map-many {
     left: 62%;
-    top:170px;
+    top: 170px;
   }
 }
 
 @media (max-width: 575px) {
   .card-map-many {
     left: 59%;
-    top:168px;
+    top: 168px;
   }
 }
 
 @media (max-width: 497px) {
   .card-map-many {
     left: 51%;
-    top:118px;
+    top: 118px;
   }
 }
 
 @media (max-width: 444px) {
   .card-map-many {
     left: 46%;
-    top:135px;
+    top: 135px;
   }
 }
 
 @media (max-width: 553px) {
   .card-map-many {
     left: 41%;
-    top:105px;
+    top: 105px;
   }
 }
-
-
 
 /* and */
 
