@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#site-header .navigation-wrapper{
+#site-header .navigation-wrapper {
   @apply h-20 bg-sky-500 flex items-center justify-center text-3xl font-bold text-white;
 }
 
@@ -10,6 +12,48 @@
   min-height: calc(100vh - 240px);
 }
 
-#site-footer .footer-wrapper{
+#site-footer .footer-wrapper {
   @apply h-40 bg-sky-700 flex items-center justify-center text-3xl font-bold text-white;
+}
+
+.playfair {
+  font-family: "Playfair", serif;
+}
+
+#product .card-container h2 {
+  @apply line-clamp-1;
+}
+
+#product .card-container p {
+  @apply line-clamp-2;
+}
+
+#product .card-container img {
+  @apply w-full;
+}
+
+#product .card-container img::before {
+  @apply w-1/2 h-1/2 bg-[#bee3b1];
+}
+
+#product .card-container .bg-primary {
+  @apply h-full;
+}
+
+.card-item {
+  height: 300px !important;
+}
+
+#product .card-container .bg-primary > * {
+  margin-top: unset !important;
+  margin-bottom: 1rem !important;
+}
+
+#product .card-container .bg-primary div:last-child {
+  margin-top: auto !important;
+  font-size: 2rem;
+}
+
+#product .card-container .bg-primary div:last-child > p {
+  font-size: 2rem;
 }
