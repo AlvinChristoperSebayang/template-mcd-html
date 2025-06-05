@@ -577,8 +577,8 @@
           />
         </div>
 
-        <div class="swiper main-swiper">
-          <div class="swiper-wrapper">
+        <div class="swiper main-swiper ">
+          <div class="swiper-wrapper ">
             <!-- hyundai -->
             <div class="swiper-slide">
               <div
@@ -822,7 +822,7 @@
         </div>
 
         <div class="swiper thumbnail-swiper mt-6">
-          <div class="swiper-wrapper mt-[2rem] xl:mt-[5rem]">
+          <div class="swiper-wrapper mt-[2rem] xl:mt-[5rem] items-center flex">
             <!-- hyundai -->
             <div class="swiper-slide">
               <svg
@@ -2613,7 +2613,7 @@
 
     <script>
       const imageSlider = new Swiper(".imageSlider", {
-        loop: true,
+        loop: false,
         slidesPerView: 5,
         centeredSlides: true,
         initialSlide: 2,
@@ -2650,7 +2650,7 @@
           slidesPerView: 3,
           spaceBetween: 10,
           centeredSlides: true,
-          loop: true,
+          loop: false,
           slideToClickedSlide: false,
           initialSlide: 3,
           loopedSlides: 7,
@@ -2670,7 +2670,7 @@
         const mainSwiper = new Swiper(".main-swiper", {
           slidesPerView: 1,
           spaceBetween: 10,
-          loop: true,
+          loop: false,
           speed: 600,
           loopedSlides: 7,
           autoHeight: true,
